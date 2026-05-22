@@ -1,0 +1,8 @@
+PF Interface: eno1np0
+PF PCI: 0000:05:00.0
+VF Assignments:
+  O-RU VF 0 (U-plane): 0000:06:02.0 MAC=00:11:22:33:64:66 VLAN=3 (uio_pci_generic)
+  O-RU VF 1 (C-plane): 0000:06:02.1 MAC=00:11:22:33:64:67 VLAN=4 (uio_pci_generic)
+  gNB  VF 2 (U-plane): 0000:06:02.2 MAC=00:11:22:33:64:68 VLAN=3 (uio_pci_generic)
+  gNB  VF 3 (C-plane): 0000:06:02.3 MAC=00:11:22:33:64:69 VLAN=4 (uio_pci_generic)
+  Capture VF 4       : 0000:06:02.4 MAC=00:11:22:33:64:70 VLAN=3 (iavf)

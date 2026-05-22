@@ -1,0 +1,2190 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260521_134740_pid396397.log
+RU cores: 10,11,12,13,14,20
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:      2048 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    number of L1 instances 0, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[32m[PHY]    ORU threadpool cores: 14,
+[0m[UTIL]   threadCreate() for Tpool0_14: creating thread with affinity e, priority 97
+[0m[NR_PHY] Set RU frame type to TDD, N_RB_DL 106, N_RB_UL 106, mu 1
+[0m[PHY]    Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=2048
+[0m[PHY]    fp->nb_prefix_samples0=176
+[0m[PHY]    fp->nb_prefix_samples=144
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=57344
+[0m[PHY]    fp->samples_per_frame_wCP=573440
+[0m[PHY]    fp->samples_per_subframe=61440
+[0m[PHY]    fp->samples_per_frame=614400
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=1412
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=106
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[NR_PHY] nb_tx_streams 1, nb_rx_streams 1, num_Beams_period 1
+[0m[PHY]    Setting RF config for N_RB 106, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 61440000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[32m[PHY]    PRACH configuration index 159
+[0m[32m[PHY]    PRACH format 65460 start_symbol 0 duration 12
+[0m[32m[PHY]    Initializing XRAN layer as O-RU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000001000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000001c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000001000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000001c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+ ... done
+Port 0 Link Up - speed 4294967295 Mbps - full-duplex
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m ... done
+Port 1 Link Up - speed 4294967295 Mbps - full-duplex
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 11
+  nULFftSize 11
+  nDLRBs 106
+  nULRBs 106
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 350
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -1272
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7fff08b17e70
+  tx_up_eAxC2Vf 0x7fff08b18a70
+  rx_cp_eAxC2Vf 0x7fff08b19670
+  rx_up_eAxC2Vf 0x7fff08b1a270
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 396411]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 2
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+xran_generic_worker_thread [CPU 12] [PID: 396411]
+spawn worker 0 core 12
+xran_open [CPU 10] [PID: 396411]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x75e3d8f95040
+xran_sector_get_instances [0]: CC 0 handle 0x5ddb5955b4c0
+Handle: 0x75e402b41be8 Instance: 0x5ddb5955b4c0
+-> hInstance 0x5ddb5955b4c0
+ru_0_cc_0_idx_0: [ handle 0x5ddb5955b4c0 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x5ddb5955b4c0 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284763240 
+xran_bm_init() hInstance 0x5ddb5955b4c0 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x5ddb5955b4c0 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x5ddb5955b4c0 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5ddb5955b4c0 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284765dc0 
+xran_bm_init() hInstance 0x5ddb5955b4c0 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x5ddb5955b4c0 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x5ddb5955b[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     Enqueued 1023 elements to uplane_data_ring
+[0m[HW]     Installing 2 callbacks 9 symbols before OTA
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    starting vrtsim
+[0m[HW]     Running as server: waiting for client to connect
+[0m[HW]     VRTSIM: UE 0 - 1x1 antennas, Model 0 (TDL-A), DS 10.0ns, Speed 1.5m/s
+[0m[HW]     VRTSIM: UE 0 - TX: 1 antennas (offset 0), RX: 1 antennas (offset 0)
+[0m[HW]     VRTSIM: Total streams - UL: 1, DL: 1
+[0m[UTIL]   threadCreate() for vrtsim_timing: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for north_read_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for south_read_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for oru_sync_thread: creating thread with affinity ffffffff, priority 97
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=1
+[0m[HW]     [ORU] symbol_callback called, count=1, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=2, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=3, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=4, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=5, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=6, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=7, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=8, first_call_set=0
+[0m[HW]     [ORU] symbol_callback called, count=9, first_call_set=0
+[0m[HW]     [ORU] process_ru_uplane called, count=1
+[0m[HW]     [ORU] process_ru_uplane called, count=2
+[0m[HW]     [ORU] process_ru_uplane called, count=3
+[0m[HW]     [ORU] process_ru_uplane called, count=4
+[0m[HW]     [ORU] process_ru_uplane called, count=5
+[0m[HW]     [ORU] process_ru_uplane called, count=6
+[0m[HW]     [ORU] process_ru_uplane called, count=7
+[0m[HW]     [ORU] process_ru_uplane called, count=8
+[0m[HW]     [ORU] process_ru_uplane called, count=9
+[0m[HW]     [ORU] process_ru_uplane called, count=10
+[0m[HW]     first_call set from phy cb
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=0 slot_in_frame=10 symbol=12 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263328, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=0 slot_in_frame=10 symbol=13 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263329, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=0 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263330, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=1 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263331, first_call_set=1
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=10, symbol=7, count=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=2 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=10, symbol=7, num_symbols=7
+[0m[HW]     [ORU] symbol_callback called, count=263332, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=3 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263333, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=4 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263334, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=5 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU north] No packets for frame=0, slot=10, symbol=7 (count=1)
+[0m[HW]     [ORU north] No packets for frame=0, slot=10, symbol=8 (count=2)
+[0m[HW]     [ORU north] No packets for frame=0, slot=10, symbol=9 (count=3)
+[0m[HW]     [ORU north] No packets for frame=0, slot=10, symbol=10 (count=4)
+[0m[HW]     [ORU] symbol_callback called, count=263335, first_call_set=1
+[0m[HW]     [ORU north] No packets for frame=0, slot=10, symbol=11 (count=5)
+[0m[HW]     [ORU north] Symbol 12 has 1 packets (total symbols: 6, with packets: 1)
+[0m[HW]     [ORU DL RX] sym=12, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 7, with packets: 2)
+[0m[HW]     [ORU DL RX] sym=13, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=6 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=2
+[0m[HW]     [ORU] symbol_callback called, count=263336, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=7 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] symbol_callback called, count=263337, first_call_set=1
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=8 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=11, symbol=0, count=2
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=11, symbol=0, num_symbols=7
+[0m[HW]     [ORU north] Symbol 0 has 1 packets (total symbols: 8, with packets: 3)
+[0m[HW]     [ORU DL RX] sym=0, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=9 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 9, with packets: 4)
+[0m[HW]     [ORU DL RX] sym=1, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 2 has 1 packets (total symbols: 10, with packets: 5)
+[0m[HW]     [ORU DL RX] sym=2, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 11, with packets: 6)
+[0m[HW]     [ORU DL RX] sym=3, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 4 has 1 packets (total symbols: 12, with packets: 7)
+[0m[HW]     [ORU DL RX] sym=4, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 13, with packets: 8)
+[0m[HW]     [ORU DL RX] sym=5, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU north] Symbol 6 has 1 packets (total symbols: 14, with packets: 9)
+[0m[HW]     [ORU DL RX] sym=6, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[PHY]    RU synchronized: frame, slot 0.11, symbol 0, sample: 6199409000
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=10 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[32m[PHY]    ORU North read thread started at frame 0, slot 11, symbol 0
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=3
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=11 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[PHY]    Sychronizing to frame slot 0.11, sample 6199409000 next_sample 669795000 diff -5529614000
+[0m[PHY]    Thrashing 5529614000 samples to sync to slot 11, frame 0
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=12 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=5 slot=1 slot_in_frame=11 symbol=13 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=6 slot=0 slot_in_frame=12 symbol=0 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=6 slot=0 slot_in_frame=12 symbol=1 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=11, symbol=7, count=3
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=11, symbol=7, num_symbols=7
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 15, with packets: 10)
+[0m[HW]     [ORU DL RX] sym=7, packet 0/1: comp_meth=0, iq_width=0, start_prb=0, num_prb=106
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=6 slot=0 slot_in_frame=12 symbol=2 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 11, sym 7, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[HW]     [ORU] U-plane parsed: port=0 frame=0 subframe=6 slot=0 slot_in_frame=12 symbol=3 ant=0 start_prb=0 num_prb=106 ret=5088
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 11
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=4
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=12, symbol=0, count=4
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=12, symbol=0, num_symbols=7
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 12, sym 0, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 12
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=5
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=12, symbol=7, count=5
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=12, symbol=7, num_symbols=7
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 12, sym 7, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 12
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=6
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=13, symbol=0, count=6
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=13, symbol=0, num_symbols=7
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=6 (count=6)
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 13, sym 0, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 13
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=7
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=13, symbol=7, count=7
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=13, symbol=7, num_symbols=7
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=7 (count=7)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=8 (count=8)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=9 (count=9)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=10 (count=10)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=11 (count=11)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=12 (count=12)
+[0m[HW]     [ORU north] No packets for frame=0, slot=13, symbol=13 (count=13)
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 13, sym 7, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 13
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=8
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=14, symbol=0, count=8
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=14, symbol=0, num_symbols=7
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=0 (count=14)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=1 (count=15)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=2 (count=16)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=3 (count=17)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=4 (count=18)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=5 (count=19)
+[0m[HW]     [ORU north] No packets for frame=0, slot=14, symbol=6 (count=20)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=9
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=14, symbol=7, count=9
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=14, symbol=7, num_symbols=7
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=10
+[0m[HW]     [ORU] Pushing DL sync to FIFO: frame=0, slot=15, symbol=0, count=10
+[0m[HW]     [ORU north] Read from FIFO: frame=0, slot=15, symbol=0, num_symbols=7
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 15, sym 0, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 15
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 15, sym 7, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 15
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 16, sym 0, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 16
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 16, sym 7, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 16
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[PHY]    [ORU] oru_downlink_processing ENTER: frame 0, slot 17, sym 0, num_sym 7
+[0m[PHY]    [ORU] Scheduling 2 tasks (1 antennas x 2 workers)
+[0m[PHY]    [ORU] Tasks scheduled, joining...
+[0m[PHY]    [ORU] Tasks completed, calling tx_rf_symbols for frame 0, slot 17
+[0m[PHY]    [ORU] tx_rf_symbols returned
+[0m[PHY]    [VRTSIM WRITE] frame 1, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 1, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 149, with packets: 100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 293, with packets: 200)
+[0m[PHY]    [VRTSIM WRITE] frame 2, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 2, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 437, with packets: 300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 581, with packets: 400)
+[0m[PHY]    [VRTSIM WRITE] frame 3, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 3, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 725, with packets: 500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 869, with packets: 600)
+[0m[PHY]    [VRTSIM WRITE] frame 4, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 4, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 1013, with packets: 700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 1157, with packets: 800)
+[0m[PHY]    [VRTSIM WRITE] frame 5, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 5, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 1301, with packets: 900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 1467, with packets: 1000)
+[0m[PHY]    [VRTSIM WRITE] frame 6, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 6, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 1611, with packets: 1100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 1755, with packets: 1200)
+[0m[PHY]    [VRTSIM WRITE] frame 7, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 7, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 1899, with packets: 1300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 2043, with packets: 1400)
+[0m[PHY]    [VRTSIM WRITE] frame 8, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 8, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 2187, with packets: 1500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 2331, with packets: 1600)
+[0m[PHY]    [VRTSIM WRITE] frame 9, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 9, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 2475, with packets: 1700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 2619, with packets: 1800)
+[0m[PHY]    [VRTSIM WRITE] frame 10, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [VRTSIM WRITE] frame 10, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 2763, with packets: 1900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 2907, with packets: 2000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 3051, with packets: 2100)
+[0m[HW]     [ORU north] No packets for frame=11, slot=18, symbol=10 (count=1000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 3217, with packets: 2200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 3361, with packets: 2300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 3505, with packets: 2400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 3649, with packets: 2500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 3793, with packets: 2600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 3937, with packets: 2700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 4081, with packets: 2800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 4225, with packets: 2900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 4369, with packets: 3000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 4513, with packets: 3100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 4657, with packets: 3200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 4801, with packets: 3300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 4967, with packets: 3400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 5111, with packets: 3500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 5255, with packets: 3600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 5399, with packets: 3700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 5543, with packets: 3800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 5687, with packets: 3900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 5831, with packets: 4000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 5975, with packets: 4100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 6119, with packets: 4200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 6263, with packets: 4300)
+[0m[HW]     [ORU north] No packets for frame=23, slot=4, symbol=6 (count=2000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 6407, with packets: 4400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 6551, with packets: 4500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 6717, with packets: 4600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 6861, with packets: 4700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=1000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 7005, with packets: 4800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 7149, with packets: 4900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 7293, with packets: 5000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 7437, with packets: 5100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 7581, with packets: 5200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 7725, with packets: 5300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 7869, with packets: 5400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 8013, with packets: 5500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 8157, with packets: 5600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 8301, with packets: 5700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 8467, with packets: 5800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 8611, with packets: 5900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 8755, with packets: 6000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 8899, with packets: 6100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 9043, with packets: 6200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 9187, with packets: 6300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 9331, with packets: 6400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 9475, with packets: 6500)
+[0m[HW]     [ORU north] No packets for frame=34, slot=13, symbol=8 (count=3000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 9619, with packets: 6600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 9763, with packets: 6700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 9907, with packets: 6800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 10051, with packets: 6900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 10217, with packets: 7000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 10361, with packets: 7100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 10505, with packets: 7200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 10649, with packets: 7300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 10793, with packets: 7400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 10937, with packets: 7500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 11081, with packets: 7600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 11225, with packets: 7700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 11369, with packets: 7800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 11513, with packets: 7900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 11657, with packets: 8000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 11801, with packets: 8100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 11967, with packets: 8200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 12111, with packets: 8300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 12255, with packets: 8400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 12399, with packets: 8500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 12543, with packets: 8600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 12687, with packets: 8700)
+[0m[HW]     [ORU north] No packets for frame=45, slot=19, symbol=4 (count=4000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 12831, with packets: 8800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 12975, with packets: 8900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 13119, with packets: 9000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 13263, with packets: 9100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 13407, with packets: 9200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 13551, with packets: 9300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 13717, with packets: 9400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 13861, with packets: 9500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=2000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 14005, with packets: 9600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 14149, with packets: 9700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 14293, with packets: 9800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 14437, with packets: 9900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 14581, with packets: 10000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 14725, with packets: 10100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 14869, with packets: 10200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 15013, with packets: 10300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 15157, with packets: 10400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 15301, with packets: 10500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 15467, with packets: 10600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 15611, with packets: 10700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 15755, with packets: 10800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 15899, with packets: 10900)
+[0m[HW]     [ORU north] No packets for frame=57, slot=8, symbol=6 (count=5000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 16043, with packets: 11000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 16187, with packets: 11100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 16331, with packets: 11200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 16475, with packets: 11300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 16619, with packets: 11400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 16763, with packets: 11500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 16907, with packets: 11600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 17051, with packets: 11700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 17217, with packets: 11800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 17361, with packets: 11900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 17505, with packets: 12000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 17649, with packets: 12100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 17793, with packets: 12200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 17937, with packets: 12300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 18081, with packets: 12400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 18225, with packets: 12500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 18369, with packets: 12600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 18513, with packets: 12700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 18657, with packets: 12800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 18801, with packets: 12900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 18967, with packets: 13000)
+[0m[HW]     [ORU north] No packets for frame=68, slot=14, symbol=2 (count=6000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 19111, with packets: 13100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 19255, with packets: 13200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 19399, with packets: 13300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 19543, with packets: 13400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 19687, with packets: 13500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 19831, with packets: 13600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 19975, with packets: 13700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 20119, with packets: 13800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 20263, with packets: 13900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 20407, with packets: 14000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 20551, with packets: 14100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 20717, with packets: 14200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 20861, with packets: 14300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=3000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 21005, with packets: 14400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 21149, with packets: 14500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 21293, with packets: 14600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 21437, with packets: 14700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 21581, with packets: 14800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 21725, with packets: 14900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 21869, with packets: 15000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 22013, with packets: 15100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 22157, with packets: 15200)
+[0m[HW]     [ORU north] No packets for frame=79, slot=19, symbol=12 (count=7000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 22301, with packets: 15300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 22467, with packets: 15400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 22611, with packets: 15500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 22755, with packets: 15600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 22899, with packets: 15700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 23043, with packets: 15800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 23187, with packets: 15900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 23331, with packets: 16000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 23475, with packets: 16100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 23619, with packets: 16200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 23763, with packets: 16300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 23907, with packets: 16400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 24051, with packets: 16500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 24217, with packets: 16600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 24361, with packets: 16700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 24505, with packets: 16800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 24649, with packets: 16900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 24793, with packets: 17000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 24937, with packets: 17100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 25081, with packets: 17200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 25225, with packets: 17300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 25369, with packets: 17400)
+[0m[HW]     [ORU north] No packets for frame=91, slot=9, symbol=0 (count=8000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 25513, with packets: 17500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 25657, with packets: 17600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 25801, with packets: 17700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 25967, with packets: 17800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 26111, with packets: 17900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 26255, with packets: 18000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 26399, with packets: 18100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 26543, with packets: 18200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 26687, with packets: 18300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 26831, with packets: 18400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 26975, with packets: 18500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 27119, with packets: 18600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 27263, with packets: 18700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 27407, with packets: 18800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 27551, with packets: 18900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 27717, with packets: 19000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 27861, with packets: 19100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=4000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 28005, with packets: 19200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 28149, with packets: 19300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 28293, with packets: 19400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 28437, with packets: 19500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 28581, with packets: 19600)
+[0m[HW]     [ORU north] No packets for frame=102, slot=14, symbol=10 (count=9000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 28725, with packets: 19700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 28869, with packets: 19800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 29013, with packets: 19900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 29157, with packets: 20000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 29301, with packets: 20100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 29467, with packets: 20200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 29611, with packets: 20300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 29755, with packets: 20400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 29899, with packets: 20500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 30043, with packets: 20600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 30187, with packets: 20700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 30331, with packets: 20800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 30475, with packets: 20900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 30619, with packets: 21000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 30763, with packets: 21100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 30907, with packets: 21200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 31051, with packets: 21300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 31217, with packets: 21400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 31361, with packets: 21500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 31505, with packets: 21600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 31649, with packets: 21700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 31793, with packets: 21800)
+[0m[HW]     [ORU north] No packets for frame=114, slot=3, symbol=12 (count=10000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 31937, with packets: 21900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 32081, with packets: 22000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 32225, with packets: 22100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 32369, with packets: 22200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 32513, with packets: 22300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 32657, with packets: 22400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 32801, with packets: 22500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 32967, with packets: 22600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 33111, with packets: 22700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 33255, with packets: 22800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 33399, with packets: 22900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 33543, with packets: 23000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 33687, with packets: 23100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 33831, with packets: 23200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 33975, with packets: 23300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 34119, with packets: 23400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 34263, with packets: 23500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 34407, with packets: 23600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 34551, with packets: 23700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 34717, with packets: 23800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 34861, with packets: 23900)
+[0m[HW]     [ORU north] No packets for frame=125, slot=9, symbol=8 (count=11000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=5000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 35005, with packets: 24000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 35149, with packets: 24100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 35293, with packets: 24200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 35437, with packets: 24300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 35581, with packets: 24400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 35725, with packets: 24500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 35869, with packets: 24600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 36013, with packets: 24700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 36157, with packets: 24800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 36301, with packets: 24900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 36467, with packets: 25000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 36611, with packets: 25100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 36755, with packets: 25200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 36899, with packets: 25300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 37043, with packets: 25400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 37187, with packets: 25500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 37331, with packets: 25600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 37475, with packets: 25700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 37619, with packets: 25800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 37763, with packets: 25900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 37907, with packets: 26000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 38051, with packets: 26100)
+[0m[HW]     [ORU north] No packets for frame=136, slot=18, symbol=10 (count=12000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 38217, with packets: 26200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 38361, with packets: 26300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 38505, with packets: 26400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 38649, with packets: 26500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 38793, with packets: 26600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 38937, with packets: 26700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 39081, with packets: 26800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 39225, with packets: 26900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 39369, with packets: 27000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 39513, with packets: 27100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 39657, with packets: 27200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 39801, with packets: 27300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 39967, with packets: 27400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 40111, with packets: 27500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 40255, with packets: 27600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 40399, with packets: 27700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 40543, with packets: 27800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 40687, with packets: 27900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 40831, with packets: 28000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 40975, with packets: 28100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 41119, with packets: 28200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 41263, with packets: 28300)
+[0m[HW]     [ORU north] No packets for frame=148, slot=4, symbol=6 (count=13000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 41407, with packets: 28400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 41551, with packets: 28500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 41717, with packets: 28600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 41861, with packets: 28700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=6000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 42005, with packets: 28800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 42149, with packets: 28900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 42293, with packets: 29000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 42437, with packets: 29100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 42581, with packets: 29200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 42725, with packets: 29300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 42869, with packets: 29400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 43013, with packets: 29500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 43157, with packets: 29600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 43301, with packets: 29700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 43467, with packets: 29800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 43611, with packets: 29900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 43755, with packets: 30000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 43899, with packets: 30100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 44043, with packets: 30200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 44187, with packets: 30300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 44331, with packets: 30400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 44475, with packets: 30500)
+[0m[HW]     [ORU north] No packets for frame=159, slot=13, symbol=8 (count=14000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 44619, with packets: 30600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 44763, with packets: 30700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 44907, with packets: 30800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 45051, with packets: 30900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 45217, with packets: 31000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 45361, with packets: 31100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 45505, with packets: 31200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 45649, with packets: 31300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 45793, with packets: 31400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 45937, with packets: 31500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 46081, with packets: 31600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 46225, with packets: 31700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 46369, with packets: 31800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 46513, with packets: 31900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 46657, with packets: 32000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 46801, with packets: 32100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 46967, with packets: 32200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 47111, with packets: 32300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 47255, with packets: 32400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 47399, with packets: 32500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 47543, with packets: 32600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 47687, with packets: 32700)
+[0m[HW]     [ORU north] No packets for frame=170, slot=19, symbol=4 (count=15000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 47831, with packets: 32800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 47975, with packets: 32900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 48119, with packets: 33000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 48263, with packets: 33100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 48407, with packets: 33200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 48551, with packets: 33300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 48717, with packets: 33400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 48861, with packets: 33500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=7000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 49005, with packets: 33600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 49149, with packets: 33700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 49293, with packets: 33800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 49437, with packets: 33900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 49581, with packets: 34000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 49725, with packets: 34100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 49869, with packets: 34200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 50013, with packets: 34300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 50157, with packets: 34400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 50301, with packets: 34500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 50467, with packets: 34600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 50611, with packets: 34700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 50755, with packets: 34800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 50899, with packets: 34900)
+[0m[HW]     [ORU north] No packets for frame=182, slot=8, symbol=6 (count=16000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 51043, with packets: 35000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 51187, with packets: 35100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 51331, with packets: 35200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 51475, with packets: 35300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 51619, with packets: 35400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 51763, with packets: 35500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 51907, with packets: 35600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 52051, with packets: 35700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 52217, with packets: 35800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 52361, with packets: 35900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 52505, with packets: 36000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 52649, with packets: 36100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 52793, with packets: 36200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 52937, with packets: 36300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 53081, with packets: 36400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 53225, with packets: 36500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 53369, with packets: 36600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 53513, with packets: 36700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 53657, with packets: 36800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 53801, with packets: 36900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 53967, with packets: 37000)
+[0m[HW]     [ORU north] No packets for frame=193, slot=14, symbol=2 (count=17000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 54111, with packets: 37100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 54255, with packets: 37200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 54399, with packets: 37300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 54543, with packets: 37400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 54687, with packets: 37500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 54831, with packets: 37600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 54975, with packets: 37700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 55119, with packets: 37800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 55263, with packets: 37900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 55407, with packets: 38000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 55551, with packets: 38100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 55717, with packets: 38200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 55861, with packets: 38300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=8000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 56005, with packets: 38400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 56149, with packets: 38500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 56293, with packets: 38600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 56437, with packets: 38700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 56581, with packets: 38800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 56725, with packets: 38900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 56869, with packets: 39000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 57013, with packets: 39100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 57157, with packets: 39200)
+[0m[HW]     [ORU north] No packets for frame=204, slot=19, symbol=12 (count=18000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 57301, with packets: 39300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 57467, with packets: 39400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 57611, with packets: 39500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 57755, with packets: 39600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 57899, with packets: 39700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 58043, with packets: 39800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 58187, with packets: 39900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 58331, with packets: 40000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 58475, with packets: 40100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 58619, with packets: 40200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 58763, with packets: 40300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 58907, with packets: 40400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 59051, with packets: 40500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 59217, with packets: 40600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 59361, with packets: 40700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 59505, with packets: 40800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 59649, with packets: 40900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 59793, with packets: 41000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 59937, with packets: 41100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 60081, with packets: 41200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 60225, with packets: 41300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 60369, with packets: 41400)
+[0m[HW]     [ORU north] No packets for frame=216, slot=9, symbol=0 (count=19000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 60513, with packets: 41500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 60657, with packets: 41600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 60801, with packets: 41700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 60967, with packets: 41800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 61111, with packets: 41900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 61255, with packets: 42000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 61399, with packets: 42100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 61543, with packets: 42200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 61687, with packets: 42300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 61831, with packets: 42400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 61975, with packets: 42500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 62119, with packets: 42600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 62263, with packets: 42700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 62407, with packets: 42800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 62551, with packets: 42900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 62717, with packets: 43000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 62861, with packets: 43100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=9000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 63005, with packets: 43200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 63149, with packets: 43300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 63293, with packets: 43400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 63437, with packets: 43500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 63581, with packets: 43600)
+[0m[HW]     [ORU north] No packets for frame=227, slot=14, symbol=10 (count=20000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 63725, with packets: 43700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 63869, with packets: 43800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 64013, with packets: 43900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 64157, with packets: 44000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 64301, with packets: 44100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 64467, with packets: 44200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 64611, with packets: 44300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 64755, with packets: 44400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 64899, with packets: 44500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 65043, with packets: 44600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 65187, with packets: 44700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 65331, with packets: 44800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 65475, with packets: 44900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 65619, with packets: 45000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 65763, with packets: 45100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 65907, with packets: 45200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 66051, with packets: 45300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 66217, with packets: 45400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 66361, with packets: 45500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 66505, with packets: 45600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 66649, with packets: 45700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 66793, with packets: 45800)
+[0m[HW]     [ORU north] No packets for frame=239, slot=3, symbol=12 (count=21000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 66937, with packets: 45900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 67081, with packets: 46000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 67225, with packets: 46100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 67369, with packets: 46200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 67513, with packets: 46300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 67657, with packets: 46400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 67801, with packets: 46500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 67967, with packets: 46600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 68111, with packets: 46700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 68255, with packets: 46800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 68399, with packets: 46900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 68543, with packets: 47000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 68687, with packets: 47100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 68831, with packets: 47200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 68975, with packets: 47300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 69119, with packets: 47400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 69263, with packets: 47500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 69407, with packets: 47600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 69551, with packets: 47700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 69717, with packets: 47800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 69861, with packets: 47900)
+[0m[HW]     [ORU north] No packets for frame=250, slot=9, symbol=8 (count=22000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=10000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 70005, with packets: 48000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 70149, with packets: 48100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 70293, with packets: 48200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 70437, with packets: 48300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 70581, with packets: 48400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 70725, with packets: 48500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 70869, with packets: 48600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 71013, with packets: 48700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 71157, with packets: 48800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 71301, with packets: 48900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 71467, with packets: 49000)
+[0m[HW]     RU: packets received 49053
+[0m[HW]     RU: packets processed 49044
+[0m[HW]     RU: packets dropped 0
+[0m[PHY]    [RU_thread] read data: frame 256, slot 0, start_symbol 0, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 256, slot 0, symbol 0-6: wrote 15376 samples, energy=66.01 dB, first_samples[0]=-1372+1529i [1]=-1276+2299i [2]=-525+2321i, txs_ret=15376
+[0m[PHY]    [RU_thread] read data: frame 256, slot 0, start_symbol 7, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 256, slot 0, symbol 7-13: wrote 15344 samples, energy=62.60 dB, first_samples[0]=-44+505i [1]=342+326i [2]=452+-105i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 71611, with packets: 49100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 71755, with packets: 49200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 71899, with packets: 49300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 72043, with packets: 49400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 72187, with packets: 49500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 72331, with packets: 49600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 72475, with packets: 49700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 72619, with packets: 49800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 72763, with packets: 49900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 72907, with packets: 50000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 73051, with packets: 50100)
+[0m[HW]     [ORU north] No packets for frame=261, slot=18, symbol=10 (count=23000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 73217, with packets: 50200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 73361, with packets: 50300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 73505, with packets: 50400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 73649, with packets: 50500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 73793, with packets: 50600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 73937, with packets: 50700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 74081, with packets: 50800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 74225, with packets: 50900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 74369, with packets: 51000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 74513, with packets: 51100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 74657, with packets: 51200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 74801, with packets: 51300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 74967, with packets: 51400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 75111, with packets: 51500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 75255, with packets: 51600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 75399, with packets: 51700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 75543, with packets: 51800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 75687, with packets: 51900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 75831, with packets: 52000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 75975, with packets: 52100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 76119, with packets: 52200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 76263, with packets: 52300)
+[0m[HW]     [ORU north] No packets for frame=273, slot=4, symbol=6 (count=24000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 76407, with packets: 52400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 76551, with packets: 52500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 76717, with packets: 52600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 76861, with packets: 52700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=11000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 77005, with packets: 52800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 77149, with packets: 52900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 77293, with packets: 53000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 77437, with packets: 53100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 77581, with packets: 53200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 77725, with packets: 53300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 77869, with packets: 53400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 78013, with packets: 53500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 78157, with packets: 53600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 78301, with packets: 53700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 78467, with packets: 53800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 78611, with packets: 53900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 78755, with packets: 54000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 78899, with packets: 54100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 79043, with packets: 54200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 79187, with packets: 54300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 79331, with packets: 54400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 79475, with packets: 54500)
+[0m[HW]     [ORU north] No packets for frame=284, slot=13, symbol=8 (count=25000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 79619, with packets: 54600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 79763, with packets: 54700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 79907, with packets: 54800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 80051, with packets: 54900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 80217, with packets: 55000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 80361, with packets: 55100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 80505, with packets: 55200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 80649, with packets: 55300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 80793, with packets: 55400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 80937, with packets: 55500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 81081, with packets: 55600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 81225, with packets: 55700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 81369, with packets: 55800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 81513, with packets: 55900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 81657, with packets: 56000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 81801, with packets: 56100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 81967, with packets: 56200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 82111, with packets: 56300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 82255, with packets: 56400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 82399, with packets: 56500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 82543, with packets: 56600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 82687, with packets: 56700)
+[0m[HW]     [ORU north] No packets for frame=295, slot=19, symbol=4 (count=26000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 82831, with packets: 56800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 82975, with packets: 56900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 83119, with packets: 57000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 83263, with packets: 57100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 83407, with packets: 57200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 83551, with packets: 57300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 83717, with packets: 57400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 83861, with packets: 57500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=12000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 84005, with packets: 57600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 84149, with packets: 57700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 84293, with packets: 57800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 84437, with packets: 57900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 84581, with packets: 58000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 84725, with packets: 58100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 84869, with packets: 58200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 85013, with packets: 58300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 85157, with packets: 58400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 85301, with packets: 58500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 85467, with packets: 58600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 85611, with packets: 58700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 85755, with packets: 58800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 85899, with packets: 58900)
+[0m[HW]     [ORU north] No packets for frame=307, slot=8, symbol=6 (count=27000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 86043, with packets: 59000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 86187, with packets: 59100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 86331, with packets: 59200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 86475, with packets: 59300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 86619, with packets: 59400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 86763, with packets: 59500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 86907, with packets: 59600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 87051, with packets: 59700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 87217, with packets: 59800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 87361, with packets: 59900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 87505, with packets: 60000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 87649, with packets: 60100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 87793, with packets: 60200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 87937, with packets: 60300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 88081, with packets: 60400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 88225, with packets: 60500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 88369, with packets: 60600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 88513, with packets: 60700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 88657, with packets: 60800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 88801, with packets: 60900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 88967, with packets: 61000)
+[0m[HW]     [ORU north] No packets for frame=318, slot=14, symbol=2 (count=28000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 89111, with packets: 61100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 89255, with packets: 61200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 89399, with packets: 61300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 89543, with packets: 61400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 89687, with packets: 61500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 89831, with packets: 61600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 89975, with packets: 61700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 90119, with packets: 61800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 90263, with packets: 61900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 90407, with packets: 62000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 90551, with packets: 62100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 90717, with packets: 62200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 90861, with packets: 62300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=13000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 91005, with packets: 62400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 91149, with packets: 62500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 91293, with packets: 62600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 91437, with packets: 62700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 91581, with packets: 62800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 91725, with packets: 62900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 91869, with packets: 63000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 92013, with packets: 63100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 92157, with packets: 63200)
+[0m[HW]     [ORU north] No packets for frame=329, slot=19, symbol=12 (count=29000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 92301, with packets: 63300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 92467, with packets: 63400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 92611, with packets: 63500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 92755, with packets: 63600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 92899, with packets: 63700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 93043, with packets: 63800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 93187, with packets: 63900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 93331, with packets: 64000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 93475, with packets: 64100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 93619, with packets: 64200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 93763, with packets: 64300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 93907, with packets: 64400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 94051, with packets: 64500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 94217, with packets: 64600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 94361, with packets: 64700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 94505, with packets: 64800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 94649, with packets: 64900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 94793, with packets: 65000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 94937, with packets: 65100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 95081, with packets: 65200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 95225, with packets: 65300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 95369, with packets: 65400)
+[0m[HW]     [ORU north] No packets for frame=341, slot=9, symbol=0 (count=30000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 95513, with packets: 65500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 95657, with packets: 65600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 95801, with packets: 65700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 95967, with packets: 65800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 96111, with packets: 65900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 96255, with packets: 66000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 96399, with packets: 66100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 96543, with packets: 66200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 96687, with packets: 66300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 96831, with packets: 66400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 96975, with packets: 66500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 97119, with packets: 66600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 97263, with packets: 66700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 97407, with packets: 66800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 97551, with packets: 66900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 97717, with packets: 67000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 97861, with packets: 67100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=14000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 98005, with packets: 67200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 98149, with packets: 67300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 98293, with packets: 67400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 98437, with packets: 67500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 98581, with packets: 67600)
+[0m[HW]     [ORU north] No packets for frame=352, slot=14, symbol=10 (count=31000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 98725, with packets: 67700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 98869, with packets: 67800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 99013, with packets: 67900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 99157, with packets: 68000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 99301, with packets: 68100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 99467, with packets: 68200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 99611, with packets: 68300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 99755, with packets: 68400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 99899, with packets: 68500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 100043, with packets: 68600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 100187, with packets: 68700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 100331, with packets: 68800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 100475, with packets: 68900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 100619, with packets: 69000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 100763, with packets: 69100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 100907, with packets: 69200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 101051, with packets: 69300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 101217, with packets: 69400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 101361, with packets: 69500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 101505, with packets: 69600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 101649, with packets: 69700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 101793, with packets: 69800)
+[0m[HW]     [ORU north] No packets for frame=364, slot=3, symbol=12 (count=32000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 101937, with packets: 69900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 102081, with packets: 70000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 102225, with packets: 70100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 102369, with packets: 70200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 102513, with packets: 70300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 102657, with packets: 70400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 102801, with packets: 70500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 102967, with packets: 70600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 103111, with packets: 70700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 103255, with packets: 70800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 103399, with packets: 70900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 103543, with packets: 71000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 103687, with packets: 71100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 103831, with packets: 71200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 103975, with packets: 71300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 104119, with packets: 71400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 104263, with packets: 71500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 104407, with packets: 71600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 104551, with packets: 71700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 104717, with packets: 71800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 104861, with packets: 71900)
+[0m[HW]     [ORU north] No packets for frame=375, slot=9, symbol=8 (count=33000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=15000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 105005, with packets: 72000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 105149, with packets: 72100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 105293, with packets: 72200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 105437, with packets: 72300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 105581, with packets: 72400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 105725, with packets: 72500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 105869, with packets: 72600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 106013, with packets: 72700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 106157, with packets: 72800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 106301, with packets: 72900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 106467, with packets: 73000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 106611, with packets: 73100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 106755, with packets: 73200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 106899, with packets: 73300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 107043, with packets: 73400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 107187, with packets: 73500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 107331, with packets: 73600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 107475, with packets: 73700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 107619, with packets: 73800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 107763, with packets: 73900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 107907, with packets: 74000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 108051, with packets: 74100)
+[0m[HW]     [ORU north] No packets for frame=386, slot=18, symbol=10 (count=34000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 108217, with packets: 74200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 108361, with packets: 74300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 108505, with packets: 74400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 108649, with packets: 74500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 108793, with packets: 74600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 108937, with packets: 74700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 109081, with packets: 74800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 109225, with packets: 74900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 109369, with packets: 75000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 109513, with packets: 75100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 109657, with packets: 75200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 109801, with packets: 75300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 109967, with packets: 75400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 110111, with packets: 75500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 110255, with packets: 75600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 110399, with packets: 75700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 110543, with packets: 75800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 110687, with packets: 75900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 110831, with packets: 76000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 110975, with packets: 76100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 111119, with packets: 76200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 111263, with packets: 76300)
+[0m[HW]     [ORU north] No packets for frame=398, slot=4, symbol=6 (count=35000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 111407, with packets: 76400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 111551, with packets: 76500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 111717, with packets: 76600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 111861, with packets: 76700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=16000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 112005, with packets: 76800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 112149, with packets: 76900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 112293, with packets: 77000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 112437, with packets: 77100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 112581, with packets: 77200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 112725, with packets: 77300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 112869, with packets: 77400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 113013, with packets: 77500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 113157, with packets: 77600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 113301, with packets: 77700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 113467, with packets: 77800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 113611, with packets: 77900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 113755, with packets: 78000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 113899, with packets: 78100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 114043, with packets: 78200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 114187, with packets: 78300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 114331, with packets: 78400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 114475, with packets: 78500)
+[0m[HW]     [ORU north] No packets for frame=409, slot=13, symbol=8 (count=36000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 114619, with packets: 78600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 114763, with packets: 78700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 114907, with packets: 78800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 115051, with packets: 78900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 115217, with packets: 79000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 115361, with packets: 79100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 115505, with packets: 79200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 115649, with packets: 79300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 115793, with packets: 79400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 115937, with packets: 79500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 116081, with packets: 79600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 116225, with packets: 79700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 116369, with packets: 79800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 116513, with packets: 79900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 116657, with packets: 80000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 116801, with packets: 80100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 116967, with packets: 80200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 117111, with packets: 80300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 117255, with packets: 80400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 117399, with packets: 80500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 117543, with packets: 80600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 117687, with packets: 80700)
+[0m[HW]     [ORU north] No packets for frame=420, slot=19, symbol=4 (count=37000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 117831, with packets: 80800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 117975, with packets: 80900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 118119, with packets: 81000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 118263, with packets: 81100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 118407, with packets: 81200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 118551, with packets: 81300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 118717, with packets: 81400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 118861, with packets: 81500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=17000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 119005, with packets: 81600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 119149, with packets: 81700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 119293, with packets: 81800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 119437, with packets: 81900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 119581, with packets: 82000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 119725, with packets: 82100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 119869, with packets: 82200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 120013, with packets: 82300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 120157, with packets: 82400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 120301, with packets: 82500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 120467, with packets: 82600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 120611, with packets: 82700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 120755, with packets: 82800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 120899, with packets: 82900)
+[0m[HW]     [ORU north] No packets for frame=432, slot=8, symbol=6 (count=38000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 121043, with packets: 83000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 121187, with packets: 83100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 121331, with packets: 83200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 121475, with packets: 83300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 121619, with packets: 83400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 121763, with packets: 83500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 121907, with packets: 83600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 122051, with packets: 83700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 122217, with packets: 83800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 122361, with packets: 83900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 122505, with packets: 84000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 122649, with packets: 84100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 122793, with packets: 84200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 122937, with packets: 84300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 123081, with packets: 84400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 123225, with packets: 84500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 123369, with packets: 84600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 123513, with packets: 84700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 123657, with packets: 84800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 123801, with packets: 84900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 123967, with packets: 85000)
+[0m[HW]     [ORU north] No packets for frame=443, slot=14, symbol=2 (count=39000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 124111, with packets: 85100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 124255, with packets: 85200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 124399, with packets: 85300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 124543, with packets: 85400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 124687, with packets: 85500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 124831, with packets: 85600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 124975, with packets: 85700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 125119, with packets: 85800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 125263, with packets: 85900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 125407, with packets: 86000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 125551, with packets: 86100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 125717, with packets: 86200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 125861, with packets: 86300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=18000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 126005, with packets: 86400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 126149, with packets: 86500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 126293, with packets: 86600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 126437, with packets: 86700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 126581, with packets: 86800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 126725, with packets: 86900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 126869, with packets: 87000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 127013, with packets: 87100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 127157, with packets: 87200)
+[0m[HW]     [ORU north] No packets for frame=454, slot=19, symbol=12 (count=40000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 127301, with packets: 87300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 127467, with packets: 87400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 127611, with packets: 87500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 127755, with packets: 87600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 127899, with packets: 87700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 128043, with packets: 87800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 128187, with packets: 87900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 128331, with packets: 88000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 128475, with packets: 88100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 128619, with packets: 88200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 128763, with packets: 88300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 128907, with packets: 88400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 129051, with packets: 88500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 129217, with packets: 88600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 129361, with packets: 88700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 129505, with packets: 88800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 129649, with packets: 88900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 129793, with packets: 89000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 129937, with packets: 89100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 130081, with packets: 89200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 130225, with packets: 89300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 130369, with packets: 89400)
+[0m[HW]     [ORU north] No packets for frame=466, slot=9, symbol=0 (count=41000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 130513, with packets: 89500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 130657, with packets: 89600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 130801, with packets: 89700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 130967, with packets: 89800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 131111, with packets: 89900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 131255, with packets: 90000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 131399, with packets: 90100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 131543, with packets: 90200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 131687, with packets: 90300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 131831, with packets: 90400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 131975, with packets: 90500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 132119, with packets: 90600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 132263, with packets: 90700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 132407, with packets: 90800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 132551, with packets: 90900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 132717, with packets: 91000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 132861, with packets: 91100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=19000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 133005, with packets: 91200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 133149, with packets: 91300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 133293, with packets: 91400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 133437, with packets: 91500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 133581, with packets: 91600)
+[0m[HW]     [ORU north] No packets for frame=477, slot=14, symbol=10 (count=42000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 133725, with packets: 91700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 133869, with packets: 91800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 134013, with packets: 91900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 134157, with packets: 92000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 134301, with packets: 92100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 134467, with packets: 92200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 134611, with packets: 92300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 134755, with packets: 92400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 134899, with packets: 92500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 135043, with packets: 92600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 135187, with packets: 92700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 135331, with packets: 92800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 135475, with packets: 92900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 135619, with packets: 93000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 135763, with packets: 93100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 135907, with packets: 93200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 136051, with packets: 93300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 136217, with packets: 93400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 136361, with packets: 93500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 136505, with packets: 93600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 136649, with packets: 93700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 136793, with packets: 93800)
+[0m[HW]     [ORU north] No packets for frame=489, slot=3, symbol=12 (count=43000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 136937, with packets: 93900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 137081, with packets: 94000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 137225, with packets: 94100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 137369, with packets: 94200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 137513, with packets: 94300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 137657, with packets: 94400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 137801, with packets: 94500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 137967, with packets: 94600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 138111, with packets: 94700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 138255, with packets: 94800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 138399, with packets: 94900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 138543, with packets: 95000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 138687, with packets: 95100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 138831, with packets: 95200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 138975, with packets: 95300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 139119, with packets: 95400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 139263, with packets: 95500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 139407, with packets: 95600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 139551, with packets: 95700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 139717, with packets: 95800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 139861, with packets: 95900)
+[0m[HW]     [ORU north] No packets for frame=500, slot=9, symbol=8 (count=44000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=20000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 140005, with packets: 96000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 140149, with packets: 96100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 140293, with packets: 96200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 140437, with packets: 96300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 140581, with packets: 96400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 140725, with packets: 96500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 140869, with packets: 96600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 141013, with packets: 96700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 141157, with packets: 96800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 141301, with packets: 96900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 141467, with packets: 97000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 141611, with packets: 97100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 141755, with packets: 97200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 141899, with packets: 97300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 142043, with packets: 97400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 142187, with packets: 97500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 142331, with packets: 97600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 142475, with packets: 97700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 142619, with packets: 97800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 142763, with packets: 97900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 142907, with packets: 98000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 143051, with packets: 98100)
+[0m[HW]     [ORU north] No packets for frame=511, slot=18, symbol=10 (count=45000)
+[0m[HW]     RU: packets received 98205
+[0m[HW]     RU: packets processed 98196
+[0m[HW]     RU: packets dropped 0
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 143217, with packets: 98200)
+[0m[PHY]    [RU_thread] read data: frame 512, slot 0, start_symbol 0, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 512, slot 0, symbol 0-6: wrote 15376 samples, energy=66.00 dB, first_samples[0]=-1372+1529i [1]=-1276+2299i [2]=-525+2321i, txs_ret=15376
+[0m[PHY]    [RU_thread] read data: frame 512, slot 0, start_symbol 7, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 512, slot 0, symbol 7-13: wrote 15344 samples, energy=62.60 dB, first_samples[0]=-44+505i [1]=342+326i [2]=452+-105i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 143361, with packets: 98300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 143505, with packets: 98400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 143649, with packets: 98500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 143793, with packets: 98600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 143937, with packets: 98700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 144081, with packets: 98800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 144225, with packets: 98900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 144369, with packets: 99000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 144513, with packets: 99100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 144657, with packets: 99200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 144801, with packets: 99300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 144967, with packets: 99400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 145111, with packets: 99500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 145255, with packets: 99600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 145399, with packets: 99700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 145543, with packets: 99800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 145687, with packets: 99900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 145831, with packets: 100000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 145975, with packets: 100100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 146119, with packets: 100200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 146263, with packets: 100300)
+[0m[HW]     [ORU north] No packets for frame=523, slot=4, symbol=6 (count=46000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 146407, with packets: 100400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 146551, with packets: 100500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 146717, with packets: 100600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 146861, with packets: 100700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=21000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 147005, with packets: 100800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 147149, with packets: 100900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 147293, with packets: 101000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 147437, with packets: 101100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 147581, with packets: 101200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 147725, with packets: 101300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 147869, with packets: 101400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 148013, with packets: 101500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 148157, with packets: 101600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 148301, with packets: 101700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 148467, with packets: 101800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 148611, with packets: 101900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 148755, with packets: 102000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 148899, with packets: 102100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 149043, with packets: 102200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 149187, with packets: 102300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 149331, with packets: 102400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 149475, with packets: 102500)
+[0m[HW]     [ORU north] No packets for frame=534, slot=13, symbol=8 (count=47000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 149619, with packets: 102600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 149763, with packets: 102700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 149907, with packets: 102800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 150051, with packets: 102900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 150217, with packets: 103000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 150361, with packets: 103100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 150505, with packets: 103200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 150649, with packets: 103300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 150793, with packets: 103400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 150937, with packets: 103500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 151081, with packets: 103600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 151225, with packets: 103700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 151369, with packets: 103800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 151513, with packets: 103900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 151657, with packets: 104000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 151801, with packets: 104100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 151967, with packets: 104200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 152111, with packets: 104300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 152255, with packets: 104400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 152399, with packets: 104500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 152543, with packets: 104600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 152687, with packets: 104700)
+[0m[HW]     [ORU north] No packets for frame=545, slot=19, symbol=4 (count=48000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 152831, with packets: 104800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 152975, with packets: 104900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 153119, with packets: 105000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 153263, with packets: 105100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 153407, with packets: 105200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 153551, with packets: 105300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 153717, with packets: 105400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 153861, with packets: 105500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=22000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 154005, with packets: 105600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 154149, with packets: 105700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 154293, with packets: 105800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 154437, with packets: 105900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 154581, with packets: 106000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 154725, with packets: 106100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 154869, with packets: 106200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 155013, with packets: 106300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 155157, with packets: 106400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 155301, with packets: 106500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 155467, with packets: 106600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 155611, with packets: 106700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 155755, with packets: 106800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 155899, with packets: 106900)
+[0m[HW]     [ORU north] No packets for frame=557, slot=8, symbol=6 (count=49000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 156043, with packets: 107000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 156187, with packets: 107100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 156331, with packets: 107200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 156475, with packets: 107300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 156619, with packets: 107400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 156763, with packets: 107500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 156907, with packets: 107600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 157051, with packets: 107700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 157217, with packets: 107800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 157361, with packets: 107900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 157505, with packets: 108000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 157649, with packets: 108100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 157793, with packets: 108200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 157937, with packets: 108300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 158081, with packets: 108400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 158225, with packets: 108500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 158369, with packets: 108600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 158513, with packets: 108700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 158657, with packets: 108800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 158801, with packets: 108900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 158967, with packets: 109000)
+[0m[HW]     [ORU north] No packets for frame=568, slot=14, symbol=2 (count=50000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 159111, with packets: 109100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 159255, with packets: 109200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 159399, with packets: 109300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 159543, with packets: 109400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 159687, with packets: 109500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 159831, with packets: 109600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 159975, with packets: 109700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 160119, with packets: 109800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 160263, with packets: 109900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 160407, with packets: 110000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 160551, with packets: 110100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 160717, with packets: 110200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 160861, with packets: 110300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=23000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 161005, with packets: 110400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 161149, with packets: 110500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 161293, with packets: 110600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 161437, with packets: 110700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 161581, with packets: 110800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 161725, with packets: 110900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 161869, with packets: 111000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 162013, with packets: 111100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 162157, with packets: 111200)
+[0m[HW]     [ORU north] No packets for frame=579, slot=19, symbol=12 (count=51000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 162301, with packets: 111300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 162467, with packets: 111400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 162611, with packets: 111500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 162755, with packets: 111600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 162899, with packets: 111700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 163043, with packets: 111800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 163187, with packets: 111900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 163331, with packets: 112000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 163475, with packets: 112100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 163619, with packets: 112200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 163763, with packets: 112300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 163907, with packets: 112400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 164051, with packets: 112500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 164217, with packets: 112600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 164361, with packets: 112700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 164505, with packets: 112800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 164649, with packets: 112900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 164793, with packets: 113000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 164937, with packets: 113100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 165081, with packets: 113200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 165225, with packets: 113300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 165369, with packets: 113400)
+[0m[HW]     [ORU north] No packets for frame=591, slot=9, symbol=0 (count=52000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 165513, with packets: 113500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 165657, with packets: 113600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 165801, with packets: 113700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 165967, with packets: 113800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 166111, with packets: 113900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 166255, with packets: 114000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 166399, with packets: 114100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 166543, with packets: 114200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 166687, with packets: 114300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 166831, with packets: 114400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 166975, with packets: 114500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 167119, with packets: 114600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 167263, with packets: 114700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 167407, with packets: 114800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 167551, with packets: 114900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 167717, with packets: 115000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 167861, with packets: 115100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=24000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 168005, with packets: 115200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 168149, with packets: 115300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 168293, with packets: 115400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 168437, with packets: 115500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 168581, with packets: 115600)
+[0m[HW]     [ORU north] No packets for frame=602, slot=14, symbol=10 (count=53000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 168725, with packets: 115700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 168869, with packets: 115800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 169013, with packets: 115900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 169157, with packets: 116000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 169301, with packets: 116100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 169467, with packets: 116200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 169611, with packets: 116300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 169755, with packets: 116400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 169899, with packets: 116500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 170043, with packets: 116600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 170187, with packets: 116700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 170331, with packets: 116800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 170475, with packets: 116900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 170619, with packets: 117000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 170763, with packets: 117100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 170907, with packets: 117200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 171051, with packets: 117300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 171217, with packets: 117400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 171361, with packets: 117500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 171505, with packets: 117600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 171649, with packets: 117700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 171793, with packets: 117800)
+[0m[HW]     [ORU north] No packets for frame=614, slot=3, symbol=12 (count=54000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 171937, with packets: 117900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 172081, with packets: 118000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 172225, with packets: 118100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 172369, with packets: 118200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 172513, with packets: 118300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 172657, with packets: 118400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 172801, with packets: 118500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 172967, with packets: 118600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 173111, with packets: 118700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 173255, with packets: 118800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 173399, with packets: 118900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 173543, with packets: 119000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 173687, with packets: 119100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 173831, with packets: 119200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 173975, with packets: 119300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 174119, with packets: 119400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 174263, with packets: 119500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 174407, with packets: 119600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 174551, with packets: 119700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 174717, with packets: 119800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 174861, with packets: 119900)
+[0m[HW]     [ORU north] No packets for frame=625, slot=9, symbol=8 (count=55000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=25000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 175005, with packets: 120000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 175149, with packets: 120100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 175293, with packets: 120200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 175437, with packets: 120300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 175581, with packets: 120400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 175725, with packets: 120500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 175869, with packets: 120600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 176013, with packets: 120700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 176157, with packets: 120800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 176301, with packets: 120900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 176467, with packets: 121000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 176611, with packets: 121100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 176755, with packets: 121200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 176899, with packets: 121300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 177043, with packets: 121400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 177187, with packets: 121500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 177331, with packets: 121600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 177475, with packets: 121700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 177619, with packets: 121800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 177763, with packets: 121900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 177907, with packets: 122000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 178051, with packets: 122100)
+[0m[HW]     [ORU north] No packets for frame=636, slot=18, symbol=10 (count=56000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 178217, with packets: 122200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 178361, with packets: 122300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 178505, with packets: 122400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 178649, with packets: 122500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 178793, with packets: 122600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 178937, with packets: 122700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 179081, with packets: 122800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 179225, with packets: 122900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 179369, with packets: 123000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 179513, with packets: 123100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 179657, with packets: 123200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 179801, with packets: 123300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 179967, with packets: 123400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 180111, with packets: 123500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 180255, with packets: 123600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 180399, with packets: 123700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 180543, with packets: 123800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 180687, with packets: 123900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 180831, with packets: 124000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 180975, with packets: 124100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 181119, with packets: 124200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 181263, with packets: 124300)
+[0m[HW]     [ORU north] No packets for frame=648, slot=4, symbol=6 (count=57000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 181407, with packets: 124400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 181551, with packets: 124500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 181717, with packets: 124600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 181861, with packets: 124700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=26000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 182005, with packets: 124800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 182149, with packets: 124900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 182293, with packets: 125000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 182437, with packets: 125100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 182581, with packets: 125200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 182725, with packets: 125300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 182869, with packets: 125400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 183013, with packets: 125500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 183157, with packets: 125600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 183301, with packets: 125700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 183467, with packets: 125800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 183611, with packets: 125900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 183755, with packets: 126000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 183899, with packets: 126100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 184043, with packets: 126200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 184187, with packets: 126300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 184331, with packets: 126400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 184475, with packets: 126500)
+[0m[HW]     [ORU north] No packets for frame=659, slot=13, symbol=8 (count=58000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 184619, with packets: 126600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 184763, with packets: 126700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 184907, with packets: 126800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 185051, with packets: 126900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 185217, with packets: 127000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 185361, with packets: 127100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 185505, with packets: 127200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 185649, with packets: 127300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 185793, with packets: 127400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 185937, with packets: 127500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 186081, with packets: 127600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 186225, with packets: 127700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 186369, with packets: 127800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 186513, with packets: 127900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 186657, with packets: 128000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 186801, with packets: 128100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 186967, with packets: 128200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 187111, with packets: 128300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 187255, with packets: 128400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 187399, with packets: 128500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 187543, with packets: 128600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 187687, with packets: 128700)
+[0m[HW]     [ORU north] No packets for frame=670, slot=19, symbol=4 (count=59000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 187831, with packets: 128800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 187975, with packets: 128900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 188119, with packets: 129000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 188263, with packets: 129100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 188407, with packets: 129200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 188551, with packets: 129300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 188717, with packets: 129400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 188861, with packets: 129500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=27000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 189005, with packets: 129600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 189149, with packets: 129700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 189293, with packets: 129800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 189437, with packets: 129900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 189581, with packets: 130000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 189725, with packets: 130100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 189869, with packets: 130200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 190013, with packets: 130300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 190157, with packets: 130400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 190301, with packets: 130500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 190467, with packets: 130600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 190611, with packets: 130700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 190755, with packets: 130800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 190899, with packets: 130900)
+[0m[HW]     [ORU north] No packets for frame=682, slot=8, symbol=6 (count=60000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 191043, with packets: 131000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 191187, with packets: 131100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 191331, with packets: 131200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 191475, with packets: 131300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 191619, with packets: 131400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 191763, with packets: 131500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 191907, with packets: 131600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 192051, with packets: 131700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 192217, with packets: 131800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 192361, with packets: 131900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 192505, with packets: 132000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 192649, with packets: 132100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 192793, with packets: 132200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 192937, with packets: 132300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 193081, with packets: 132400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 193225, with packets: 132500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 193369, with packets: 132600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 193513, with packets: 132700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 193657, with packets: 132800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 193801, with packets: 132900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 193967, with packets: 133000)
+[0m[HW]     [ORU north] No packets for frame=693, slot=14, symbol=2 (count=61000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 194111, with packets: 133100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 194255, with packets: 133200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 194399, with packets: 133300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 194543, with packets: 133400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 194687, with packets: 133500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 194831, with packets: 133600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 194975, with packets: 133700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 195119, with packets: 133800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 195263, with packets: 133900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 195407, with packets: 134000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 195551, with packets: 134100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 195717, with packets: 134200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 195861, with packets: 134300)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=28000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 196005, with packets: 134400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 196149, with packets: 134500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 196293, with packets: 134600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 196437, with packets: 134700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 196581, with packets: 134800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 196725, with packets: 134900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 196869, with packets: 135000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 197013, with packets: 135100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 197157, with packets: 135200)
+[0m[HW]     [ORU north] No packets for frame=704, slot=19, symbol=12 (count=62000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 197301, with packets: 135300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 197467, with packets: 135400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 197611, with packets: 135500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 197755, with packets: 135600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 197899, with packets: 135700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 198043, with packets: 135800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 198187, with packets: 135900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 198331, with packets: 136000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 198475, with packets: 136100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 198619, with packets: 136200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 198763, with packets: 136300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 198907, with packets: 136400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 199051, with packets: 136500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 199217, with packets: 136600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 199361, with packets: 136700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 199505, with packets: 136800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 199649, with packets: 136900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 199793, with packets: 137000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 199937, with packets: 137100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 200081, with packets: 137200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 200225, with packets: 137300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 200369, with packets: 137400)
+[0m[HW]     [ORU north] No packets for frame=716, slot=9, symbol=0 (count=63000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 200513, with packets: 137500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 200657, with packets: 137600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 200801, with packets: 137700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 200967, with packets: 137800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 201111, with packets: 137900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 201255, with packets: 138000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 201399, with packets: 138100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 201543, with packets: 138200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 201687, with packets: 138300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 201831, with packets: 138400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 201975, with packets: 138500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 202119, with packets: 138600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 202263, with packets: 138700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 202407, with packets: 138800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 202551, with packets: 138900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 202717, with packets: 139000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 202861, with packets: 139100)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=29000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 203005, with packets: 139200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 203149, with packets: 139300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 203293, with packets: 139400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 203437, with packets: 139500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 203581, with packets: 139600)
+[0m[HW]     [ORU north] No packets for frame=727, slot=14, symbol=10 (count=64000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 203725, with packets: 139700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 203869, with packets: 139800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 204013, with packets: 139900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 204157, with packets: 140000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 204301, with packets: 140100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 204467, with packets: 140200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 204611, with packets: 140300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 204755, with packets: 140400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 204899, with packets: 140500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 205043, with packets: 140600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 205187, with packets: 140700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 205331, with packets: 140800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 205475, with packets: 140900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 205619, with packets: 141000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 205763, with packets: 141100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 205907, with packets: 141200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 206051, with packets: 141300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 206217, with packets: 141400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 206361, with packets: 141500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 206505, with packets: 141600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 206649, with packets: 141700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 206793, with packets: 141800)
+[0m[HW]     [ORU north] No packets for frame=739, slot=3, symbol=12 (count=65000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 206937, with packets: 141900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 207081, with packets: 142000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 207225, with packets: 142100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 207369, with packets: 142200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 207513, with packets: 142300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 207657, with packets: 142400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 207801, with packets: 142500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 207967, with packets: 142600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 208111, with packets: 142700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 208255, with packets: 142800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 208399, with packets: 142900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 208543, with packets: 143000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 208687, with packets: 143100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 208831, with packets: 143200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 208975, with packets: 143300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 209119, with packets: 143400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 209263, with packets: 143500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 209407, with packets: 143600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 209551, with packets: 143700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 209717, with packets: 143800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 209861, with packets: 143900)
+[0m[HW]     [ORU north] No packets for frame=750, slot=9, symbol=8 (count=66000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=30000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 210005, with packets: 144000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 210149, with packets: 144100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 210293, with packets: 144200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 210437, with packets: 144300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 210581, with packets: 144400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 210725, with packets: 144500)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 210869, with packets: 144600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 211013, with packets: 144700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 211157, with packets: 144800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 211301, with packets: 144900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 211467, with packets: 145000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 211611, with packets: 145100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 211755, with packets: 145200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 211899, with packets: 145300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 212043, with packets: 145400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 212187, with packets: 145500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 212331, with packets: 145600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 212475, with packets: 145700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 212619, with packets: 145800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 212763, with packets: 145900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 212907, with packets: 146000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 213051, with packets: 146100)
+[0m[HW]     [ORU north] No packets for frame=761, slot=18, symbol=10 (count=67000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 213217, with packets: 146200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 213361, with packets: 146300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 213505, with packets: 146400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 213649, with packets: 146500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 213793, with packets: 146600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 213937, with packets: 146700)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 214081, with packets: 146800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 214225, with packets: 146900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 214369, with packets: 147000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 214513, with packets: 147100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 214657, with packets: 147200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 214801, with packets: 147300)
+[0m[HW]     RU: packets received 147357
+[0m[HW]     RU: packets processed 147348
+[0m[HW]     RU: packets dropped 0
+[0m[PHY]    [RU_thread] read data: frame 768, slot 0, start_symbol 0, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 768, slot 0, symbol 0-6: wrote 15376 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15376
+[0m[PHY]    [RU_thread] read data: frame 768, slot 0, start_symbol 7, num_symbols 7
+[0m[PHY]    [VRTSIM WRITE] frame 768, slot 0, symbol 7-13: wrote 15344 samples, energy=0.00 dB, first_samples[0]=0+0i [1]=0+0i [2]=0+0i, txs_ret=15344
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 214967, with packets: 147400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 215111, with packets: 147500)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 215255, with packets: 147600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 215399, with packets: 147700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 215543, with packets: 147800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 215687, with packets: 147900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 215831, with packets: 148000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 215975, with packets: 148100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 216119, with packets: 148200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 216263, with packets: 148300)
+[0m[HW]     [ORU north] No packets for frame=773, slot=4, symbol=6 (count=68000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 216407, with packets: 148400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 216551, with packets: 148500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 216717, with packets: 148600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 216861, with packets: 148700)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=31000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 217005, with packets: 148800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 217149, with packets: 148900)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 217293, with packets: 149000)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 217437, with packets: 149100)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 217581, with packets: 149200)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 217725, with packets: 149300)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 217869, with packets: 149400)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 218013, with packets: 149500)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 218157, with packets: 149600)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 218301, with packets: 149700)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 218467, with packets: 149800)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 218611, with packets: 149900)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 218755, with packets: 150000)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 218899, with packets: 150100)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 219043, with packets: 150200)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 219187, with packets: 150300)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 219331, with packets: 150400)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 219475, with packets: 150500)
+[0m[HW]     [ORU north] No packets for frame=784, slot=13, symbol=8 (count=69000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 219619, with packets: 150600)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 219763, with packets: 150700)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 219907, with packets: 150800)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 220051, with packets: 150900)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 220217, with packets: 151000)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 220361, with packets: 151100)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 220505, with packets: 151200)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 220649, with packets: 151300)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 220793, with packets: 151400)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 220937, with packets: 151500)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 221081, with packets: 151600)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 221225, with packets: 151700)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 221369, with packets: 151800)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 221513, with packets: 151900)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 221657, with packets: 152000)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 221801, with packets: 152100)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 221967, with packets: 152200)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 222111, with packets: 152300)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 222255, with packets: 152400)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 222399, with packets: 152500)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 222543, with packets: 152600)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 222687, with packets: 152700)
+[0m[HW]     [ORU north] No packets for frame=795, slot=19, symbol=4 (count=70000)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 222831, with packets: 152800)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 222975, with packets: 152900)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 223119, with packets: 153000)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 223263, with packets: 153100)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 223407, with packets: 153200)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 223551, with packets: 153300)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 223717, with packets: 153400)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 223861, with packets: 153500)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=32000
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 224005, with packets: 153600)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 224149, with packets: 153700)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 224293, with packets: 153800)
+[0m[HW]     [ORU north] Symbol 9 has 1 packets (total symbols: 224437, with packets: 153900)
+[0m[HW]     [ORU north] Symbol 13 has 1 packets (total symbols: 224581, with packets: 154000)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 224725, with packets: 154100)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 224869, with packets: 154200)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 225013, with packets: 154300)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 225157, with packets: 154400)
+[0m[HW]     [ORU north] Symbol 5 has 1 packets (total symbols: 225301, with packets: 154500)
+[0m[HW]     [ORU north] Symbol 3 has 1 packets (total symbols: 225467, with packets: 154600)
+[0m[HW]     [ORU north] Symbol 7 has 1 packets (total symbols: 225611, with packets: 154700)
+[0m[HW]     [ORU north] Symbol 11 has 1 packets (total symbols: 225755, with packets: 154800)
+[0m[HW]     [ORU north] Symbol 1 has 1 packets (total symbols: 225899, with packets: 154900)
+[0m[HW]     [ORU north] No packets for frame=807, slot=6, symbol=3 (count=71000)
+[0m[HW]     [ORU north] No packets for frame=810, slot=17, symbol=9 (count=72000)
+[0m[HW]     [ORU north] No packets for frame=814, slot=9, symbol=1 (count=73000)
+[0m[HW]     [ORU north] No packets for frame=818, slot=0, symbol=7 (count=74000)
+[0m[HW]     [ORU north] No packets for frame=821, slot=11, symbol=13 (count=75000)
+[0m[HW]     [ORU north] No packets for frame=825, slot=3, symbol=5 (count=76000)
+[0m[HW]     [ORU north] xran_oru_tx_read_slot called, count=33000
+[0m[HW]     [ORU north] No packets for frame=828, slot=14, symbol=11 (count=77000)
+[0m[HW]     [ORU north] No packets for frame=832, slot=6, symbol=3 (count=78000)
+[0m

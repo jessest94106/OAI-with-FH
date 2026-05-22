@@ -1,0 +1,202 @@
+﻿Running DU, RU, and UE with O-RAN 7.2 Split Using xRAN, DPDK, and OAI
+This guide describes how to build and run an O-RAN 7.2 split setup using the oru-k branch of OpenAirInterface, the O-RAN SC xRAN library, and DPDK on a single Ubuntu 22.04 server with SR-IOV loopback. The setup brings up the O-RU, DU/gNB, and UE in separate terminals after building the required software components and updating the RU and DU configuration files with the VF PCI addresses and MAC addresses configured below. Demo https://asciinema.org/a/yxCkSyfBzMJIlE6p
+O-RAN 7.2 Split Setup Guide (oru-k Branch)
+System: Ubuntu 22.04, SR-IOV capable NIC, Single-server loopback
+Prerequisites
+sudo apt-get update
+sudo apt-get install -y git cmake ninja-build build-essential \
+  libconfig++-dev libyaml-dev libsctp-dev python3-dev python3-pip meson \
+  pkg-config libssl-dev libnuma-dev pciutils net-tools iproute2
+
+
+export TEST_DIR=$HOME/test_dir
+mkdir -p $TEST_DIR
+
+
+Step 1: Install DPDK 23.11
+cd $TEST_DIR
+wget http://fast.dpdk.org/rel/dpdk-23.11.1.tar.xz
+tar xf dpdk-23.11.1.tar.xz
+cd dpdk-stable-23.11.1
+
+
+export DPDK_K_INST=$TEST_DIR/dpdk-stable-23.11.1
+
+
+meson setup --prefix=$DPDK_K_INST build
+ninja -C build
+sudo ninja -C build install
+
+
+Step 2: Clone XRAN K Release
+cd $TEST_DIR
+git clone https://gerrit.o-ran-sc.org/r/o-du/phy.git phy-k
+cd phy-k
+git checkout oran_k_release_v1.0
+Step 3: Clone OAI
+cd $HOME
+git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git
+cd openairinterface5g
+git checkout oru-k
+
+
+Step 4: Apply XRAN Patches
+cd $TEST_DIR/phy-k
+git apply $HOME/openairinterface5g/cmake_targets/tools/oran_fhi_integration_patches/K/hook.patch
+git apply $HOME/openairinterface5g/cmake_targets/tools/oran_fhi_integration_patches/K/oaioran_K.patch
+
+
+Step 5: Build XRAN
+cd $TEST_DIR/phy-k/fhi_lib/lib
+
+
+export RTE_SDK=$DPDK_K_INST
+export XRAN_DIR=$TEST_DIR/phy-k/fhi_lib
+export TARGET=x86
+export WIRELESS_SDK_TOOLCHAIN=gcc
+
+
+make clean
+make XRAN_LIB_SO=1 -j$(nproc)
+
+
+Step 6: Create Environment File
+cat > $HOME/testenv << 'EOF'
+#!/usr/bin/env bash
+
+
+export TEST_DIR=$HOME/test_dir
+export DPDK_K_INST=$TEST_DIR/dpdk-stable-23.11.1
+export PKG_CONFIG_PATH=$DPDK_K_INST/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=$DPDK_K_INST/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=$DPDK_K_INST/include
+
+
+export RTE_SDK=$DPDK_K_INST
+export XRAN_DIR=$TEST_DIR/phy-k/fhi_lib
+export TARGET=x86
+export WIRELESS_SDK_TOOLCHAIN=gcc
+EOF
+
+
+chmod +x $HOME/testenv
+
+
+Step 7: Build OAI
+cd $HOME/openairinterface5g/cmake_targets
+source $HOME/testenv
+
+
+mkdir -p build
+cd build
+
+
+cmake ../.. -GNinja \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DOAI_FHI72=ON \
+  -Dxran_LOCATION=$TEST_DIR/phy-k/fhi_lib/lib \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+
+cmake --build . \
+  --target vrtsim oainr_ru nr-softmodem nr-uesoftmodem \
+           ldpc params_libconfig params_yaml oran_fhlib_5g \
+  -j$(nproc)
+
+
+ln -sf liboran_fhlib_5g.so liboai_transpro.so
+
+
+Step 8: Setup SR-IOV
+cat > $HOME/setup_sriov_4vf.sh << 'EOF'
+#!/bin/bash
+
+
+PF="enp1s0f0"
+
+
+echo 0 | sudo tee /sys/class/net/$PF/device/sriov_numvfs
+echo 4 | sudo tee /sys/class/net/$PF/device/sriov_numvfs
+
+
+for vf in 0000:01:01.{0,1,2,3}; do
+    sudo dpdk-devbind.py -b vfio-pci $vf
+done
+EOF
+
+
+chmod +x $HOME/setup_sriov_4vf.sh
+$HOME/setup_sriov_4vf.sh
+
+
+sudo ip link set enp1s0f0 vf 0 mac 2a:6a:9d:a3:0c:c8
+sudo ip link set enp1s0f0 vf 1 mac 9e:c8:bf:2b:b7:85
+sudo ip link set enp1s0f0 vf 2 mac 12:5b:92:a3:e4:67
+sudo ip link set enp1s0f0 vf 3 mac ea:d0:99:f8:b8:d8
+
+
+
+
+
+
+Step 9: Update the RU and DU Configuration Files
+Update the O-RU and DU config files directly in:
+* $HOME/openairinterface5g/doc/tutorial_resources/oru/ru.2x2.conf
+* $HOME/openairinterface5g/doc/tutorial_resources/oru/du.2x2.conf
+Use the following replacements:
+File
+	Replace this
+	Replace with
+	ru.2x2.conf
+	dpdk_devices = ("0000:05:02.0", "0000:05:02.1");
+	dpdk_devices = ("0000:01:01.2", "0000:01:01.3");
+	ru.2x2.conf
+	du_addr = ("00:11:22:33:64:68", "00:11:22:33:64:69");
+	du_addr = ("2a:6a:9d:a3:0c:c8", "9e:c8:bf:2b:b7:85");
+	du.2x2.conf
+	dpdk_devices = ("0000:05:02.2", "0000:05:02.3");
+	dpdk_devices = ("0000:01:01.0", "0000:01:01.1");
+	du.2x2.conf
+	ru_addr = ("00:11:22:33:64:66", "00:11:22:33:64:67");
+	ru_addr = ("12:5b:92:a3:e4:67", "ea:d0:99:f8:b8:d8");
+	
+
+Running the System
+Make sure to use the config files from their actual location under doc/tutorial_resources/oru/.
+Terminal 1: O-RU
+cd ~/openairinterface5g/cmake_targets/build
+source ~/testenv
+
+
+export LD_LIBRARY_PATH=$DPDK_K_INST/lib/x86_64-linux-gnu:.:$LD_LIBRARY_PATH
+
+
+sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./oainr_ru \
+  -O $HOME/openairinterface5g/doc/tutorial_resources/oru/ru.2x2.conf \
+  --vrtsim.role server
+
+
+Terminal 2: gNB / DU
+cd ~/openairinterface5g/cmake_targets/build
+source ~/testenv
+
+
+export LD_LIBRARY_PATH=$DPDK_K_INST/lib/x86_64-linux-gnu:.:$LD_LIBRARY_PATH
+
+
+sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./nr-softmodem \
+  -O $HOME/openairinterface5g/doc/tutorial_resources/oru/du.2x2.conf \
+  --gNBs.[0].min_rxtxtime 6
+
+
+Terminal 3: UE
+cd ~/openairinterface5g/cmake_targets/build
+
+
+sudo ./nr-uesoftmodem \
+  -C 4049760000 \
+  -r 106 \
+  --numerology 1 \
+  --ssb 516 \
+  --band 77 \
+  --device.name vrtsim

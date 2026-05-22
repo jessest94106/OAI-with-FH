@@ -1,0 +1,1335 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ue/run_ue_20260521_142001_pid427108.log
+UE cores: 16,17,18,19
+VRTSIM shared memory is ready; starting UE without waiting for non-zero DL samples.
+CMDLINE: "./nr-uesoftmodem" "-C" "4049760000" "-r" "106" "--numerology" "1" "--band" "77" "--ssb" "516" "--device.name" "vrtsim" "--vrtsim.role" "client" "--ue-nb-ant-tx" "1" "--ue-nb-ant-rx" "1" 
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[OPT]    OPT disabled
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[NR_RRC] create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[SIM]    UICC simulation: IMSI=2089900007487, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=c42449363bbad02b66d16bc975d77cc1
+[0m[NR_MAC] [UE0] Initializing MAC
+[0m[NR_MAC] Initializing dl and ul config_request. num_slots = 20
+[0m[RLC]    Activated srb0 for UE 0
+[0m[UTIL]   threadCreate() for time source realtime: creating thread with affinity ffffffff, priority 2
+[0m[UTIL]   time manager configuration: [time source: reatime] [mode: standalone] [server IP: 127.0.0.1} [server port: 7374] (server IP/port not used)
+[0m[PHY]    Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ofdm_offset_divisor 8
+[0m[PHY]    SA init parameters. DL freq 4049760000 UL offset 0 SSB numerology 1 N_RB_DL 106
+[0m[PHY]    Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[93m[PHY]    samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]    Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0, chest-time 0
+[0m[UTIL]   threadCreate() for SYNC__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[PHY]    Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]    prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]    HW: Configuring ru_id 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_freq 4049760000 Hz, rx_freq 4049760000 Hz, tune_offset 0
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[UTIL]   threadCreate() for ru_start_thread: creating thread with affinity ffffffff, priority 97
+[0m[HW]     Running as client: will connect to a vrtsim server
+[0m[HW]     [RAU] has loaded RFSIMULATOR device.
+[0m[HW]     VRTSIM: UE 0/1 - 1x1 antennas, UL offset=0, DL offset=0
+[0m[PHY]    Intializing UE Threads for instance 0 ...
+[0m[UTIL]   threadCreate() for UEthread_0: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats_0: creating thread with affinity ffffffff, priority 1
+[0m[HW]     [VRTSIM UE RX] call=1 ant=0 global_dl_ant=0 ts=336524690 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2 ant=0 global_dl_ant=0 ts=336555410 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=3 ant=0 global_dl_ant=0 ts=336586130 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4 ant=0 global_dl_ant=0 ts=336616850 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5 ant=0 global_dl_ant=0 ts=336647570 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=6 ant=0 global_dl_ant=0 ts=336678290 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7 ant=0 global_dl_ant=0 ts=336709010 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8 ant=0 global_dl_ant=0 ts=336739730 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9 ant=0 global_dl_ant=0 ts=336770450 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10 ant=0 global_dl_ant=0 ts=336801170 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=11 ant=0 global_dl_ant=0 ts=336831890 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12 ant=0 global_dl_ant=0 ts=336862610 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13 ant=0 global_dl_ant=0 ts=336893330 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=14 ant=0 global_dl_ant=0 ts=336924050 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15 ant=0 global_dl_ant=0 ts=336954770 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16 ant=0 global_dl_ant=0 ts=336985490 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17 ant=0 global_dl_ant=0 ts=337016210 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18 ant=0 global_dl_ant=0 ts=337046930 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=19 ant=0 global_dl_ant=0 ts=337077650 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20 ant=0 global_dl_ant=0 ts=337108370 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21 ant=0 global_dl_ant=0 ts=337139090 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=22 ant=0 global_dl_ant=0 ts=337169810 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23 ant=0 global_dl_ant=0 ts=337200530 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24 ant=0 global_dl_ant=0 ts=337231250 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25 ant=0 global_dl_ant=0 ts=337261970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26 ant=0 global_dl_ant=0 ts=337292690 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=27 ant=0 global_dl_ant=0 ts=337323410 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28 ant=0 global_dl_ant=0 ts=337354130 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29 ant=0 global_dl_ant=0 ts=337384850 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=30 ant=0 global_dl_ant=0 ts=337415570 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31 ant=0 global_dl_ant=0 ts=337446290 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32 ant=0 global_dl_ant=0 ts=337477010 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=100 ant=0 global_dl_ant=0 ts=339565970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=200 ant=0 global_dl_ant=0 ts=342637970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=300 ant=0 global_dl_ant=0 ts=345709970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=400 ant=0 global_dl_ant=0 ts=348781970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=500 ant=0 global_dl_ant=0 ts=351853970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=600 ant=0 global_dl_ant=0 ts=354925970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=700 ant=0 global_dl_ant=0 ts=357997970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=800 ant=0 global_dl_ant=0 ts=361069970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=900 ant=0 global_dl_ant=0 ts=364141970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1000 ant=0 global_dl_ant=0 ts=367213970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1100 ant=0 global_dl_ant=0 ts=370285970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1200 ant=0 global_dl_ant=0 ts=373357970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1300 ant=0 global_dl_ant=0 ts=376429970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1400 ant=0 global_dl_ant=0 ts=379501970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1500 ant=0 global_dl_ant=0 ts=382573970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1600 ant=0 global_dl_ant=0 ts=385645970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1700 ant=0 global_dl_ant=0 ts=388717970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1800 ant=0 global_dl_ant=0 ts=391789970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=1900 ant=0 global_dl_ant=0 ts=394861970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2000 ant=0 global_dl_ant=0 ts=397933970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=2100 ant=0 global_dl_ant=0 ts=401005970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2200 ant=0 global_dl_ant=0 ts=404077970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2300 ant=0 global_dl_ant=0 ts=407149970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=2400 ant=0 global_dl_ant=0 ts=410221970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2500 ant=0 global_dl_ant=0 ts=413293970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2600 ant=0 global_dl_ant=0 ts=416365970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=2700 ant=0 global_dl_ant=0 ts=419437970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2800 ant=0 global_dl_ant=0 ts=422509970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=2900 ant=0 global_dl_ant=0 ts=425581970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=3000 ant=0 global_dl_ant=0 ts=428653970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=3100 ant=0 global_dl_ant=0 ts=431725970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=3200 ant=0 global_dl_ant=0 ts=434797970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=3300 ant=0 global_dl_ant=0 ts=437869970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=3400 ant=0 global_dl_ant=0 ts=440941970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=3500 ant=0 global_dl_ant=0 ts=444013970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=3600 ant=0 global_dl_ant=0 ts=447085970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=3700 ant=0 global_dl_ant=0 ts=450157970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=3800 ant=0 global_dl_ant=0 ts=453229970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=3900 ant=0 global_dl_ant=0 ts=456301970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=4000 ant=0 global_dl_ant=0 ts=459373970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4100 ant=0 global_dl_ant=0 ts=462445970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4200 ant=0 global_dl_ant=0 ts=465517970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=4300 ant=0 global_dl_ant=0 ts=468589970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4400 ant=0 global_dl_ant=0 ts=471661970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4500 ant=0 global_dl_ant=0 ts=474733970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=4600 ant=0 global_dl_ant=0 ts=477805970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=4700 ant=0 global_dl_ant=0 ts=480877970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=4800 ant=0 global_dl_ant=0 ts=483949970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=4900 ant=0 global_dl_ant=0 ts=487021970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=5000 ant=0 global_dl_ant=0 ts=490093970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5100 ant=0 global_dl_ant=0 ts=493165970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=5200 ant=0 global_dl_ant=0 ts=496237970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=5300 ant=0 global_dl_ant=0 ts=499309970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5400 ant=0 global_dl_ant=0 ts=502381970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5500 ant=0 global_dl_ant=0 ts=505453970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=5600 ant=0 global_dl_ant=0 ts=508525970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5700 ant=0 global_dl_ant=0 ts=511597970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=5800 ant=0 global_dl_ant=0 ts=514669970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=5900 ant=0 global_dl_ant=0 ts=517741970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=6000 ant=0 global_dl_ant=0 ts=520813970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=6100 ant=0 global_dl_ant=0 ts=523885970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=6200 ant=0 global_dl_ant=0 ts=526957970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=6300 ant=0 global_dl_ant=0 ts=530029970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=6400 ant=0 global_dl_ant=0 ts=533101970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=6500 ant=0 global_dl_ant=0 ts=536173970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=6600 ant=0 global_dl_ant=0 ts=539245970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=6700 ant=0 global_dl_ant=0 ts=542317970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=6800 ant=0 global_dl_ant=0 ts=545389970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=6900 ant=0 global_dl_ant=0 ts=548461970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7000 ant=0 global_dl_ant=0 ts=551533970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7100 ant=0 global_dl_ant=0 ts=554605970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=7200 ant=0 global_dl_ant=0 ts=557677970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7300 ant=0 global_dl_ant=0 ts=560749970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7400 ant=0 global_dl_ant=0 ts=563821970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=7500 ant=0 global_dl_ant=0 ts=566893970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7600 ant=0 global_dl_ant=0 ts=569965970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=7700 ant=0 global_dl_ant=0 ts=573037970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=7800 ant=0 global_dl_ant=0 ts=576109970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=7900 ant=0 global_dl_ant=0 ts=579181970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8000 ant=0 global_dl_ant=0 ts=582253970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=8100 ant=0 global_dl_ant=0 ts=585325970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=8200 ant=0 global_dl_ant=0 ts=588397970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8300 ant=0 global_dl_ant=0 ts=591469970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=8400 ant=0 global_dl_ant=0 ts=594541970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=8500 ant=0 global_dl_ant=0 ts=597613970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8600 ant=0 global_dl_ant=0 ts=600685970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8700 ant=0 global_dl_ant=0 ts=603757970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=8800 ant=0 global_dl_ant=0 ts=606829970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=8900 ant=0 global_dl_ant=0 ts=609901970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9000 ant=0 global_dl_ant=0 ts=612973970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=9100 ant=0 global_dl_ant=0 ts=616045970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9200 ant=0 global_dl_ant=0 ts=619117970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9300 ant=0 global_dl_ant=0 ts=622189970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=9400 ant=0 global_dl_ant=0 ts=625261970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=9500 ant=0 global_dl_ant=0 ts=628333970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9600 ant=0 global_dl_ant=0 ts=631405970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=9700 ant=0 global_dl_ant=0 ts=634477970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=9800 ant=0 global_dl_ant=0 ts=637549970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=9900 ant=0 global_dl_ant=0 ts=640621970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=10000 ant=0 global_dl_ant=0 ts=643693970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=10100 ant=0 global_dl_ant=0 ts=646765970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10200 ant=0 global_dl_ant=0 ts=649837970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10300 ant=0 global_dl_ant=0 ts=652909970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=10400 ant=0 global_dl_ant=0 ts=655981970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10500 ant=0 global_dl_ant=0 ts=659053970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10600 ant=0 global_dl_ant=0 ts=662125970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=10700 ant=0 global_dl_ant=0 ts=665197970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10800 ant=0 global_dl_ant=0 ts=668269970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=10900 ant=0 global_dl_ant=0 ts=671341970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=11000 ant=0 global_dl_ant=0 ts=674413970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=11100 ant=0 global_dl_ant=0 ts=677485970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=11200 ant=0 global_dl_ant=0 ts=680557970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=11300 ant=0 global_dl_ant=0 ts=683629970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=11400 ant=0 global_dl_ant=0 ts=686701970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=11500 ant=0 global_dl_ant=0 ts=689773970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=11600 ant=0 global_dl_ant=0 ts=692845970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=11700 ant=0 global_dl_ant=0 ts=695917970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=11800 ant=0 global_dl_ant=0 ts=698989970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=11900 ant=0 global_dl_ant=0 ts=702061970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=12000 ant=0 global_dl_ant=0 ts=705133970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12100 ant=0 global_dl_ant=0 ts=708205970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12200 ant=0 global_dl_ant=0 ts=711277970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=12300 ant=0 global_dl_ant=0 ts=714349970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12400 ant=0 global_dl_ant=0 ts=717421970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12500 ant=0 global_dl_ant=0 ts=720493970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=12600 ant=0 global_dl_ant=0 ts=723565970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=12700 ant=0 global_dl_ant=0 ts=726637970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=12800 ant=0 global_dl_ant=0 ts=729709970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=12900 ant=0 global_dl_ant=0 ts=732781970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=13000 ant=0 global_dl_ant=0 ts=735853970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13100 ant=0 global_dl_ant=0 ts=738925970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=13200 ant=0 global_dl_ant=0 ts=741997970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=13300 ant=0 global_dl_ant=0 ts=745069970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13400 ant=0 global_dl_ant=0 ts=748141970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13500 ant=0 global_dl_ant=0 ts=751213970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=13543 ant=0 global_dl_ant=0 ts=752534930 nsamps=30720 ret=0 energy=14565970376 nonzero=5724 peak=3948 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13544 ant=0 global_dl_ant=0 ts=752565650 nsamps=30720 ret=0 energy=13367217301 nonzero=5236 peak=4340 first_samples[0]=1510+1368i [1]=1961+70i [2]=1400+-1022i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=27933187677 nonzero=10960 peak=4340 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=13600 ant=0 global_dl_ant=0 ts=754285970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13700 ant=0 global_dl_ant=0 ts=757357970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=13800 ant=0 global_dl_ant=0 ts=760429970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=78 pss_avg=48 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=13900 ant=0 global_dl_ant=0 ts=763501970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=14000 ant=0 global_dl_ant=0 ts=766573970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=14100 ant=0 global_dl_ant=0 ts=769645970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=14200 ant=0 global_dl_ant=0 ts=772717970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=14300 ant=0 global_dl_ant=0 ts=775789970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=14400 ant=0 global_dl_ant=0 ts=778861970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=14500 ant=0 global_dl_ant=0 ts=781933970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=14600 ant=0 global_dl_ant=0 ts=785005970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=14700 ant=0 global_dl_ant=0 ts=788077970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=14800 ant=0 global_dl_ant=0 ts=791149970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=14900 ant=0 global_dl_ant=0 ts=794221970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15000 ant=0 global_dl_ant=0 ts=797293970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15100 ant=0 global_dl_ant=0 ts=800365970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=15200 ant=0 global_dl_ant=0 ts=803437970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15300 ant=0 global_dl_ant=0 ts=806509970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15400 ant=0 global_dl_ant=0 ts=809581970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=15500 ant=0 global_dl_ant=0 ts=812653970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15600 ant=0 global_dl_ant=0 ts=815725970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=15700 ant=0 global_dl_ant=0 ts=818797970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=15800 ant=0 global_dl_ant=0 ts=821869970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=15900 ant=0 global_dl_ant=0 ts=824941970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16000 ant=0 global_dl_ant=0 ts=828013970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=16100 ant=0 global_dl_ant=0 ts=831085970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=16200 ant=0 global_dl_ant=0 ts=834157970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16300 ant=0 global_dl_ant=0 ts=837229970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=16400 ant=0 global_dl_ant=0 ts=840301970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=16500 ant=0 global_dl_ant=0 ts=843373970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16600 ant=0 global_dl_ant=0 ts=846445970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16700 ant=0 global_dl_ant=0 ts=849517970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=16800 ant=0 global_dl_ant=0 ts=852589970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=16900 ant=0 global_dl_ant=0 ts=855661970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17000 ant=0 global_dl_ant=0 ts=858733970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=17100 ant=0 global_dl_ant=0 ts=861805970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17200 ant=0 global_dl_ant=0 ts=864877970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17300 ant=0 global_dl_ant=0 ts=867949970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=17400 ant=0 global_dl_ant=0 ts=871021970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=17500 ant=0 global_dl_ant=0 ts=874093970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17600 ant=0 global_dl_ant=0 ts=877165970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=17700 ant=0 global_dl_ant=0 ts=880237970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=17800 ant=0 global_dl_ant=0 ts=883309970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=17900 ant=0 global_dl_ant=0 ts=886381970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=18000 ant=0 global_dl_ant=0 ts=889453970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=18100 ant=0 global_dl_ant=0 ts=892525970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18200 ant=0 global_dl_ant=0 ts=895597970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18300 ant=0 global_dl_ant=0 ts=898669970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=18400 ant=0 global_dl_ant=0 ts=901741970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18500 ant=0 global_dl_ant=0 ts=904813970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18600 ant=0 global_dl_ant=0 ts=907885970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=18700 ant=0 global_dl_ant=0 ts=910957970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18800 ant=0 global_dl_ant=0 ts=914029970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=18900 ant=0 global_dl_ant=0 ts=917101970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=19000 ant=0 global_dl_ant=0 ts=920173970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=19100 ant=0 global_dl_ant=0 ts=923245970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=19200 ant=0 global_dl_ant=0 ts=926317970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=19300 ant=0 global_dl_ant=0 ts=929389970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=19400 ant=0 global_dl_ant=0 ts=932461970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=19500 ant=0 global_dl_ant=0 ts=935533970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=19600 ant=0 global_dl_ant=0 ts=938605970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=19700 ant=0 global_dl_ant=0 ts=941677970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=19800 ant=0 global_dl_ant=0 ts=944749970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=19900 ant=0 global_dl_ant=0 ts=947821970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=20000 ant=0 global_dl_ant=0 ts=950893970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20100 ant=0 global_dl_ant=0 ts=953965970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20200 ant=0 global_dl_ant=0 ts=957037970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=20300 ant=0 global_dl_ant=0 ts=960109970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20400 ant=0 global_dl_ant=0 ts=963181970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20500 ant=0 global_dl_ant=0 ts=966253970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=20600 ant=0 global_dl_ant=0 ts=969325970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=20700 ant=0 global_dl_ant=0 ts=972397970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=20800 ant=0 global_dl_ant=0 ts=975469970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=20900 ant=0 global_dl_ant=0 ts=978541970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=21000 ant=0 global_dl_ant=0 ts=981613970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21100 ant=0 global_dl_ant=0 ts=984685970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=21200 ant=0 global_dl_ant=0 ts=987757970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=21300 ant=0 global_dl_ant=0 ts=990829970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21400 ant=0 global_dl_ant=0 ts=993901970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21500 ant=0 global_dl_ant=0 ts=996973970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=21600 ant=0 global_dl_ant=0 ts=1000045970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21700 ant=0 global_dl_ant=0 ts=1003117970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=21800 ant=0 global_dl_ant=0 ts=1006189970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=21900 ant=0 global_dl_ant=0 ts=1009261970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=22000 ant=0 global_dl_ant=0 ts=1012333970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=22100 ant=0 global_dl_ant=0 ts=1015405970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=22200 ant=0 global_dl_ant=0 ts=1018477970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=22300 ant=0 global_dl_ant=0 ts=1021549970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=22400 ant=0 global_dl_ant=0 ts=1024621970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=22500 ant=0 global_dl_ant=0 ts=1027693970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=22600 ant=0 global_dl_ant=0 ts=1030765970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=22700 ant=0 global_dl_ant=0 ts=1033837970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=22800 ant=0 global_dl_ant=0 ts=1036909970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=22900 ant=0 global_dl_ant=0 ts=1039981970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23000 ant=0 global_dl_ant=0 ts=1043053970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23100 ant=0 global_dl_ant=0 ts=1046125970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=23200 ant=0 global_dl_ant=0 ts=1049197970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23300 ant=0 global_dl_ant=0 ts=1052269970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23400 ant=0 global_dl_ant=0 ts=1055341970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=23500 ant=0 global_dl_ant=0 ts=1058413970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23600 ant=0 global_dl_ant=0 ts=1061485970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=23700 ant=0 global_dl_ant=0 ts=1064557970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=23800 ant=0 global_dl_ant=0 ts=1067629970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=23900 ant=0 global_dl_ant=0 ts=1070701970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24000 ant=0 global_dl_ant=0 ts=1073773970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=24100 ant=0 global_dl_ant=0 ts=1076845970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=24200 ant=0 global_dl_ant=0 ts=1079917970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24300 ant=0 global_dl_ant=0 ts=1082989970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=24400 ant=0 global_dl_ant=0 ts=1086061970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=24500 ant=0 global_dl_ant=0 ts=1089133970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24600 ant=0 global_dl_ant=0 ts=1092205970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24700 ant=0 global_dl_ant=0 ts=1095277970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=24800 ant=0 global_dl_ant=0 ts=1098349970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=24900 ant=0 global_dl_ant=0 ts=1101421970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25000 ant=0 global_dl_ant=0 ts=1104493970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=25100 ant=0 global_dl_ant=0 ts=1107565970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25200 ant=0 global_dl_ant=0 ts=1110637970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25300 ant=0 global_dl_ant=0 ts=1113709970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=25400 ant=0 global_dl_ant=0 ts=1116781970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=25500 ant=0 global_dl_ant=0 ts=1119853970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25600 ant=0 global_dl_ant=0 ts=1122925970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=25700 ant=0 global_dl_ant=0 ts=1125997970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=25800 ant=0 global_dl_ant=0 ts=1129069970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=25900 ant=0 global_dl_ant=0 ts=1132141970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=26000 ant=0 global_dl_ant=0 ts=1135213970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=26100 ant=0 global_dl_ant=0 ts=1138285970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26200 ant=0 global_dl_ant=0 ts=1141357970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26300 ant=0 global_dl_ant=0 ts=1144429970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=26400 ant=0 global_dl_ant=0 ts=1147501970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26500 ant=0 global_dl_ant=0 ts=1150573970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26600 ant=0 global_dl_ant=0 ts=1153645970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=26700 ant=0 global_dl_ant=0 ts=1156717970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26800 ant=0 global_dl_ant=0 ts=1159789970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=26900 ant=0 global_dl_ant=0 ts=1162861970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=27000 ant=0 global_dl_ant=0 ts=1165933970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=27100 ant=0 global_dl_ant=0 ts=1169005970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=27200 ant=0 global_dl_ant=0 ts=1172077970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=27300 ant=0 global_dl_ant=0 ts=1175149970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=27400 ant=0 global_dl_ant=0 ts=1178221970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=27500 ant=0 global_dl_ant=0 ts=1181293970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=27600 ant=0 global_dl_ant=0 ts=1184365970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=27700 ant=0 global_dl_ant=0 ts=1187437970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=27800 ant=0 global_dl_ant=0 ts=1190509970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=27900 ant=0 global_dl_ant=0 ts=1193581970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=28000 ant=0 global_dl_ant=0 ts=1196653970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28100 ant=0 global_dl_ant=0 ts=1199725970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28200 ant=0 global_dl_ant=0 ts=1202797970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=28300 ant=0 global_dl_ant=0 ts=1205869970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28400 ant=0 global_dl_ant=0 ts=1208941970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28500 ant=0 global_dl_ant=0 ts=1212013970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=28600 ant=0 global_dl_ant=0 ts=1215085970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=28700 ant=0 global_dl_ant=0 ts=1218157970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=28800 ant=0 global_dl_ant=0 ts=1221229970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=28900 ant=0 global_dl_ant=0 ts=1224301970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=29000 ant=0 global_dl_ant=0 ts=1227373970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29100 ant=0 global_dl_ant=0 ts=1230445970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=29200 ant=0 global_dl_ant=0 ts=1233517970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=29300 ant=0 global_dl_ant=0 ts=1236589970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29400 ant=0 global_dl_ant=0 ts=1239661970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29500 ant=0 global_dl_ant=0 ts=1242733970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=29600 ant=0 global_dl_ant=0 ts=1245805970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29700 ant=0 global_dl_ant=0 ts=1248877970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=29800 ant=0 global_dl_ant=0 ts=1251949970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=29900 ant=0 global_dl_ant=0 ts=1255021970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=30000 ant=0 global_dl_ant=0 ts=1258093970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=30100 ant=0 global_dl_ant=0 ts=1261165970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=30200 ant=0 global_dl_ant=0 ts=1264237970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=30300 ant=0 global_dl_ant=0 ts=1267309970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=30400 ant=0 global_dl_ant=0 ts=1270381970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=30500 ant=0 global_dl_ant=0 ts=1273453970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=30600 ant=0 global_dl_ant=0 ts=1276525970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=30700 ant=0 global_dl_ant=0 ts=1279597970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=30800 ant=0 global_dl_ant=0 ts=1282669970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=30900 ant=0 global_dl_ant=0 ts=1285741970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31000 ant=0 global_dl_ant=0 ts=1288813970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31100 ant=0 global_dl_ant=0 ts=1291885970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=31200 ant=0 global_dl_ant=0 ts=1294957970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31300 ant=0 global_dl_ant=0 ts=1298029970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31400 ant=0 global_dl_ant=0 ts=1301101970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=31500 ant=0 global_dl_ant=0 ts=1304173970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31600 ant=0 global_dl_ant=0 ts=1307245970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=31700 ant=0 global_dl_ant=0 ts=1310317970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=31800 ant=0 global_dl_ant=0 ts=1313389970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=31900 ant=0 global_dl_ant=0 ts=1316461970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32000 ant=0 global_dl_ant=0 ts=1319533970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=32100 ant=0 global_dl_ant=0 ts=1322605970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=32200 ant=0 global_dl_ant=0 ts=1325677970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32300 ant=0 global_dl_ant=0 ts=1328749970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=32400 ant=0 global_dl_ant=0 ts=1331821970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=32500 ant=0 global_dl_ant=0 ts=1334893970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32600 ant=0 global_dl_ant=0 ts=1337965970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32700 ant=0 global_dl_ant=0 ts=1341037970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=32800 ant=0 global_dl_ant=0 ts=1344109970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=32900 ant=0 global_dl_ant=0 ts=1347181970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=33000 ant=0 global_dl_ant=0 ts=1350253970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=33100 ant=0 global_dl_ant=0 ts=1353325970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=33200 ant=0 global_dl_ant=0 ts=1356397970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=33300 ant=0 global_dl_ant=0 ts=1359469970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=33400 ant=0 global_dl_ant=0 ts=1362541970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=33500 ant=0 global_dl_ant=0 ts=1365613970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=33600 ant=0 global_dl_ant=0 ts=1368685970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=33700 ant=0 global_dl_ant=0 ts=1371757970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=33800 ant=0 global_dl_ant=0 ts=1374829970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=33900 ant=0 global_dl_ant=0 ts=1377901970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0m[HW]     [VRTSIM UE RX] call=34000 ant=0 global_dl_ant=0 ts=1380973970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] [UE INITIAL SYNC RXDATA] gscn_index=0 antennas=1 samples_per_ant=1228800 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[HW]     [VRTSIM UE RX] call=34100 ant=0 global_dl_ant=0 ts=1384045970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[HW]     [VRTSIM UE RX] call=34200 ant=0 global_dl_ant=0 ts=1387117970 nsamps=30720 ret=0 energy=0 nonzero=0 peak=0 first_samples[0]=0+0i [1]=0+0i [2]=0+0i
+[0m[NR_PHY] [UE INITIAL SYNC RESULT] gscn_index=0 gscn=0 detected=0 nid_cell=0 ssb_offset=0 rx_offset=0 frame_id=1 pss_peak=-90 pss_avg=-90 freq_offset=0 symbol_offset=0 ssb_index=0 half_frame=0
+[0m[PHY]    [UE SYNCH DEBUG] initial_sync returned detected=0 rx_offset=0 frame_id=0 freq_offset=0 symbol_offset=0 ssb_index=0 nid_cell=0
+[0m[1;31m[PHY]    synch Failed: 
+[0mError: Timed out waiting for samples.

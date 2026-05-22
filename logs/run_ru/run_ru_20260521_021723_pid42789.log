@@ -1,0 +1,20 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260521_021723_pid42789.log
+RU cores: 5,6,7,10,11,12
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:      2048 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    number of L1 instances 0, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[32m[PHY]    ORU threadpool cores: 9,
+[0m[UTIL]   threadCreate() for Tpool0_9: creating thread with affinity 9, priority 97
+[0m
