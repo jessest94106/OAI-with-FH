@@ -1,0 +1,25 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260523_145024_pid580845.log
+DU cores: 4,5,6,7,8,9,15,20,21,22
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    149504 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" 
+[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4039860000 Hz, UL frequency 4039860000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 51, Ncp 0
+[0m[PHY]    Init: N_RB_DL 51, first_carrier_offset 718, nb_prefix_samples 72,nb_prefix_samples0 88, ofdm_symbol_size 1024
+[0m
+Assertion (type0_PDCCH_CSS_config->cset_start_rb + type0_PDCCH_CSS_config->num_rbs <= grid_size) failed!
+In get_type0_PDCCH_CSS_config_parameters() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/NR_MAC_COMMON/nr_mac_common.c:3888
+Invalid combination of start PRB 29 and size 48 of CSET0. Exceeds full BW 51
+
+Exiting execution
+[CONFIG] function config_libconfig_init returned 0
+/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/NR_MAC_COMMON/nr_mac_common.c:3888 get_type0_PDCCH_CSS_config_parameters() Exiting OAI softmodem: _Assert_Exit_

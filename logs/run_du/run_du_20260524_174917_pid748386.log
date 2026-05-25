@@ -1,0 +1,25 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260524_174917_pid748386.log
+DU cores: 4,5,6,7,8,9,17,18
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    327680 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" 
+[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m
+Assertion (type0_PDCCH_CSS_config->cset_start_rb >= 0) failed!
+In get_type0_PDCCH_CSS_config_parameters() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/NR_MAC_COMMON/nr_mac_common.c:3883
+Invalid CSET0 start PRB -12 SSB offset point A 2 RB offset 14
+
+Exiting execution
+[CONFIG] function config_libconfig_init returned 0
+/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/NR_MAC_COMMON/nr_mac_common.c:3883 get_type0_PDCCH_CSS_config_parameters() Exiting OAI softmodem: _Assert_Exit_

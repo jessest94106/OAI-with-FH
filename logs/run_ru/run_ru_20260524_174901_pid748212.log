@@ -1,0 +1,1171 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260524_174901_pid748212.log
+RU cores: 10,11,12,13,14,15,16
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    327680 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDGGGGUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7ffe63642f70
+  tx_up_eAxC2Vf 0x7ffe63643b70
+  rx_cp_eAxC2Vf 0x7ffe63644770
+  rx_up_eAxC2Vf 0x7ffe63645370
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 748223]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 12] [PID: 748223]
+spawn worker 0 core 12
+xran_generic_worker_thread [CPU 13] [PID: 748223]
+spawn worker 1 core 13
+xran_open [CPU 10] [PID: 748223]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7c9290f95040
+xran_sector_get_instances [0]: CC 0 handle 0x5abf87e70940
+Handle: 0x7c92c1ea6b68 Instance: 0x5abf87e70940
+-> hInstance 0x5abf87e70940
+ru_0_cc_0_idx_0: [ handle 0x5abf87e70940 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x5abf87e70940 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284763240 
+xran_bm_init() hInstance 0x5abf87e70940 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x5abf87e70940 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x5abf87e70940 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5abf87e70940 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284765dc0 
+xran_bm_init() hInstance 0x5abf87e70940 poolIdx 1 elements 511 size 497[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     Enqueued 1023 elements to uplane_data_ring
+[0m[HW]     Installing 2 callbacks 5 symbols before OTA
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[HW]     VRTSIM: TX sample advance 4096 samples
+[0m[HW]     Running as server: waiting for client to connect
+[0m[HW]     VRTSIM: UE 0 - 1x1 antennas, Model 0 (TDL-A), DS 10.0ns, Speed 1.5m/s
+[0m[HW]     VRTSIM: UE 0 - TX: 1 antennas (offset 0), RX: 1 antennas (offset 0)
+[0m[HW]     VRTSIM: Total streams - UL: 1, DL: 1
+[0m[HW]     first_call set from phy cb
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 0, slot 12, symbol 10, aarx 0
+[0m[HW]     ORU PRACH frame adjust 0 frame(s)
+[0m[93m[HW]     PRACH was not configured for frame.slot 0.19 adjusted 0.19 frame8 0: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 8, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 16, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 23, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 31, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 39, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 47, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 55, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 63, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 70, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 78, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 83.19 adjusted 83.19 frame8 83: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 86, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 94, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 102, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 109, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 117, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 125, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 133, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 141, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 148, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 156, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 164, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 166.19 adjusted 166.19 frame8 166: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 172, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 180, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 188, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 195, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 203, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 211, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 219, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 227, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 234, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 242, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 250, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 250.19 adjusted 250.19 frame8 250: no C-plane config cached
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 258, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 266, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 273, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 281, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 289, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 297, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 305, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 313, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 320, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 328, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 333.19 adjusted 333.19 frame8 77: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 336, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 344, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 352, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 359, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 367, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 375, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 383, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 391, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 398, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 406, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 414, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 416.19 adjusted 416.19 frame8 160: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 422, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 430, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 438, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 445, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 453, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 461, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 469, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 477, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 484, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 492, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 500, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 500.19 adjusted 500.19 frame8 244: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 508, slot 8, symbol 4, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 516, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 523, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 531, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 539, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 547, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 555, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 563, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 570, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 578, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 583.19 adjusted 583.19 frame8 71: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 586, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 594, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 602, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 609, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 617, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 625, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 633, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 641, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 648, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 656, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 664, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 666.19 adjusted 666.19 frame8 154: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 672, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 680, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 688, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 695, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 703, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 711, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 719, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 727, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 734, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 742, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 750, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 750.19 adjusted 750.19 frame8 238: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 758, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 766, slot 3, symbol 12, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 773, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 781, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 789, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 797, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 805, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 813, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 820, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 828, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 833.19 adjusted 833.19 frame8 65: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 836, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 844, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 852, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 859, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 867, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 875, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 883, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 891, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 898, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 906, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 914, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 916.19 adjusted 916.19 frame8 148: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 922, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 930, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 938, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 945, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 953, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 961, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 969, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 977, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 984, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 992, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1000, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 1000.19 adjusted 1000.19 frame8 232: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1008, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1016, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1023, slot 19, symbol 6, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 7, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 15, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 23, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 31, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 39, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 46, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 54, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 59.19 adjusted 59.19 frame8 59: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 62, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 70, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 78, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 85, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 93, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 101, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 109, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 117, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 124, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 132, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 140, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 142.19 adjusted 142.19 frame8 142: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 148, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 156, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 164, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 171, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 179, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 187, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 195, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 203, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 210, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 218, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 226, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 226.19 adjusted 226.19 frame8 226: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 234, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 242, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 249, slot 19, symbol 6, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 257, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 265, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 273, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 281, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 289, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 296, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 304, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 309.19 adjusted 309.19 frame8 53: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 312, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 320, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 328, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 335, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 343, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 351, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 359, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 367, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 374, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 382, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 390, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 392.19 adjusted 392.19 frame8 136: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 398, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 406, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 414, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 421, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 429, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 437, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 445, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 453, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 460, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 468, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 476, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 476.19 adjusted 476.19 frame8 220: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 484, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 492, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 499, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 507, slot 17, symbol 10, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 515, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 523, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 531, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 539, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 546, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 554, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 559.19 adjusted 559.19 frame8 47: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 562, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 570, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 578, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 585, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 593, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 601, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 609, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 617, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 624, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 632, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 640, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 642.19 adjusted 642.19 frame8 130: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 648, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 656, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 664, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 671, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 679, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 687, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 695, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 703, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 710, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 718, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 726, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 726.19 adjusted 726.19 frame8 214: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 734, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 742, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 749, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 757, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 765, slot 13, symbol 4, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 773, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 781, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 789, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 796, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 804, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 809.19 adjusted 809.19 frame8 41: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 812, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 820, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 828, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 835, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 843, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 851, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 859, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 867, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 874, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 882, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 890, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 892.19 adjusted 892.19 frame8 124: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 898, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 906, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 914, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 921, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 929, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 937, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 945, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 953, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 960, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 968, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 976, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 976.19 adjusted 976.19 frame8 208: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 984, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 992, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 999, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1007, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1015, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1023, slot 8, symbol 12, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 7, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 15, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 22, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 30, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 35.19 adjusted 35.19 frame8 35: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 38, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 46, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 54, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 61, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 69, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 77, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 85, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 93, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 100, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 108, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 116, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 118.19 adjusted 118.19 frame8 118: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 124, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 132, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 140, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 147, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 155, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 163, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 171, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 179, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 186, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 194, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 202, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 202.19 adjusted 202.19 frame8 202: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 210, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 218, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 225, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 233, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 241, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 249, slot 8, symbol 12, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 257, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 265, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 272, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 280, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 285.19 adjusted 285.19 frame8 29: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 288, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 296, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 304, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 311, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 319, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 327, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 335, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 343, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 350, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 358, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 366, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 368.19 adjusted 368.19 frame8 112: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 374, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 382, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 390, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 397, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 405, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 413, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 421, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 429, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 436, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 444, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 452, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 452.19 adjusted 452.19 frame8 196: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 460, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 468, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 475, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 483, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 491, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 499, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 507, slot 4, symbol 6, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 515, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 522, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 530, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 535.19 adjusted 535.19 frame8 23: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 538, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 546, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 554, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 561, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 569, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 577, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 585, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 593, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 600, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 608, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 616, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 618.19 adjusted 618.19 frame8 106: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 624, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 632, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 640, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 647, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 655, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 663, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 671, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 679, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 686, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 694, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 702, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 702.19 adjusted 702.19 frame8 190: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 710, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 718, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 725, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 733, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 741, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 749, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 757, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 765, slot 2, symbol 10, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 772, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 780, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 785.19 adjusted 785.19 frame8 17: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 788, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 796, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 804, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 811, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 819, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 827, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 835, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 843, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 850, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 858, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 866, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 868.19 adjusted 868.19 frame8 100: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 874, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 882, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 890, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 897, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 905, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 913, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 921, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 929, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 936, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 944, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 952, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 952.19 adjusted 952.19 frame8 184: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 960, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 968, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 975, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 983, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 991, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 999, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1007, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1015, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1022, slot 18, symbol 4, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 6, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 11.19 adjusted 11.19 frame8 11: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 14, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 22, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 30, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 37, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 45, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 53, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 61, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 69, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 76, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 84, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 92, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 94.19 adjusted 94.19 frame8 94: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 100, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 108, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 116, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 123, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 131, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 139, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 147, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 155, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 162, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 170, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 178, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 178.19 adjusted 178.19 frame8 178: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 186, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 194, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 201, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 209, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 217, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 225, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 233, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 241, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 248, slot 18, symbol 4, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 256, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 261.19 adjusted 261.19 frame8 5: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 264, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 272, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 280, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 287, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 295, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 303, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 311, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 319, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 326, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 334, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 342, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 344.19 adjusted 344.19 frame8 88: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 350, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 358, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 366, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 373, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 381, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 389, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 397, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 405, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 412, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 420, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 428, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 428.19 adjusted 428.19 frame8 172: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 436, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 444, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 451, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 459, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 467, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 475, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 483, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 491, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 498, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 506, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 511.19 adjusted 511.19 frame8 255: no C-plane config cached
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 514, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 522, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 530, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 537, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 545, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 553, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 561, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 569, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 576, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 584, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 592, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 594.19 adjusted 594.19 frame8 82: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 600, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 608, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 616, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 623, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 631, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 639, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 647, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 655, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 662, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 670, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 678, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 678.19 adjusted 678.19 frame8 166: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 686, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 694, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 701, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 709, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 717, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 725, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 733, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 741, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 748, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 756, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 761.19 adjusted 761.19 frame8 249: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 764, slot 9, symbol 6, aarx 0
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 772, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 780, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 787, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 795, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 803, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 811, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 819, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 826, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 834, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 842, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 844.19 adjusted 844.19 frame8 76: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 850, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 858, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 866, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 873, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 881, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 889, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 897, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 905, slot 3, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 912, slot 18, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 920, slot 14, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 928, slot 12, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 928.19 adjusted 928.19 frame8 160: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 936, slot 8, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 944, slot 3, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 951, slot 19, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 959, slot 17, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 967, slot 13, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 975, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 983, slot 4, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 991, slot 2, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 998, slot 18, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1006, slot 13, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 1011.19 adjusted 1011.19 frame8 243: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1014, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1022, slot 7, symbol 10, aarx 0
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[HW]     RU: packets received 13
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 2
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 34830
+[0m[HW]     RU: packets processed 24576
+[0m[HW]     RU: packets dropped 10242
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 69646
+[0m[HW]     RU: packets processed 49152
+[0m[HW]     RU: packets dropped 20482
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 104462
+[0m[HW]     RU: packets processed 73728
+[0m[HW]     RU: packets dropped 30722
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 139278
+[0m[HW]     RU: packets processed 98304
+[0m[HW]     RU: packets dropped 40962
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 174094
+[0m[HW]     RU: packets processed 122880
+[0m[HW]     RU: packets dropped 51202
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 208910
+[0m[HW]     RU: packets processed 147456
+[0m[HW]     RU: packets dropped 61442
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 243726
+[0m[HW]     RU: packets processed 172032
+[0m[HW]     RU: packets dropped 71682
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 278542
+[0m[HW]     RU: packets processed 196608
+[0m[HW]     RU: packets dropped 81922
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 313358
+[0m[HW]     RU: packets processed 221184
+[0m[HW]     RU: packets dropped 92162
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10243
+[0m[HW]     RU: packets received 348174
+[0m[HW]     RU: packets processed 245757
+[0m[HW]     RU: packets dropped 102405
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 382990
+[0m[HW]     RU: packets processed 270333
+[0m[HW]     RU: packets dropped 112645
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 417806
+[0m[HW]     RU: packets processed 294909
+[0m[HW]     RU: packets dropped 122885
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 452622
+[0m[HW]     RU: packets processed 319485
+[0m[HW]     RU: packets dropped 133125
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 487438
+[0m[HW]     RU: packets processed 344061
+[0m[HW]     RU: packets dropped 143365
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 522253
+[0m[HW]     RU: packets processed 368637
+[0m[HW]     RU: packets dropped 153605
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 557070
+[0m[HW]     RU: packets processed 393213
+[0m[HW]     RU: packets dropped 163845
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 591886
+[0m[HW]     RU: packets processed 417789
+[0m[HW]     RU: packets dropped 174085
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 626702
+[0m[HW]     RU: packets processed 442365
+[0m[HW]     RU: packets dropped 184325
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 661518
+[0m[HW]     RU: packets processed 466941
+[0m[HW]     RU: packets dropped 194565
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 696334
+[0m[HW]     RU: packets processed 491517
+[0m[HW]     RU: packets dropped 204805
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 731150
+[0m[HW]     RU: packets processed 516093
+[0m[HW]     RU: packets dropped 215045
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 765966
+[0m[HW]     RU: packets processed 540669
+[0m[HW]     RU: packets dropped 225285
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 800782
+[0m[HW]     RU: packets processed 565245
+[0m[HW]     RU: packets dropped 235525
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 835598
+[0m[HW]     RU: packets processed 589821
+[0m[HW]     RU: packets dropped 245765
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 870414
+[0m[HW]     RU: packets processed 614397
+[0m[HW]     RU: packets dropped 256005
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 905230
+[0m[HW]     RU: packets processed 638973
+[0m[HW]     RU: packets dropped 266245
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 940046
+[0m[HW]     RU: packets processed 663549
+[0m[HW]     RU: packets dropped 276485
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 974862
+[0m[HW]     RU: packets processed 688125
+[0m[HW]     RU: packets dropped 286725
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1009678
+[0m[HW]     RU: packets processed 712701
+[0m[HW]     RU: packets dropped 296965
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1044494
+[0m[HW]     RU: packets processed 737277
+[0m[HW]     RU: packets dropped 307205
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1079310
+[0m[HW]     RU: packets processed 761853
+[0m[HW]     RU: packets dropped 317445
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1114126
+[0m[HW]     RU: packets processed 786429
+[0m[HW]     RU: packets dropped 327685
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1148942
+[0m[HW]     RU: packets processed 811005
+[0m[HW]     RU: packets dropped 337925
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1183758
+[0m[HW]     RU: packets processed 835581
+[0m[HW]     RU: packets dropped 348165
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1218574
+[0m[HW]     RU: packets processed 860157
+[0m[HW]     RU: packets dropped 358405
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1253390
+[0m[HW]     RU: packets processed 884733
+[0m[HW]     RU: packets dropped 368645
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1288206
+[0m[HW]     RU: packets processed 909309
+[0m[HW]     RU: packets dropped 378885
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1323022
+[0m[HW]     RU: packets processed 933885
+[0m[HW]     RU: packets dropped 389125
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1357838
+[0m[HW]     RU: packets processed 958461
+[0m[HW]     RU: packets dropped 399365
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1392653
+[0m[HW]     RU: packets processed 983037
+[0m[HW]     RU: packets dropped 409605
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1427470
+[0m[HW]     RU: packets processed 1007613
+[0m[HW]     RU: packets dropped 419845
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1462286
+[0m[HW]     RU: packets processed 1032189
+[0m[HW]     RU: packets dropped 430085
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1497102
+[0m[HW]     RU: packets processed 1056765
+[0m[HW]     RU: packets dropped 440325
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1531918
+[0m[HW]     RU: packets processed 1081341
+[0m[HW]     RU: packets dropped 450565
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 10240
+[0m[HW]     RU: packets received 1566734
+[0m[HW]     RU: packets processed 1105917
+[0m[HW]     RU: packets dropped 460805
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 9358
+[0m[HW]     RU: packets received 1598544
+[0m[HW]     RU: packets processed 1128381
+[0m[HW]     RU: packets dropped 470163
+[0m[HW]     RU: packets received 1598544
+[0m[HW]     RU: packets processed 1128381
+[0m[HW]     RU: packets dropped 470163
+[0m[HW]     RU: packets received 1598544
+[0m[HW]     RU: packets processed 1128381
+[0m[HW]     RU: packets dropped 470163
+[0m[HW]     RU: packets received 1598544
+[0m[HW]     RU: packets processed 1128381
+[0m[HW]     RU: packets dropped 470163
+[0m[HW]     VRTSIM: Realtime issues: TX 0.00%, RX 0.00%
+[0m[HW]     VRTSIM: Read/write too early (suspected radio implementaton error) TX: 0, RX: 0
+[0m[HW]     VRTSIM: Average TX budget 364.455 uS (more is better)
+[0m[HW]     VRTSIM: TX budget histogram: 332818 samples
+[0m[HW]     Bin 0	[0.0 - 100.0uS]:		0
+[0m[HW]     Bin 1	[100.0 - 200.0uS]:		0
+[0m[HW]     Bin 2	[200.0 - 300.0uS]:		3
+[0m[HW]     Bin 3	[300.0 - 400.0uS]:		332712
+[0m[HW]     Bin 4	[400.0 - 500.0uS]:		4
+[0m[HW]     Bin 5	[500.0 - 600.0uS]:		0
+[0m[HW]     Bin 6	[600.0 - 700.0uS]:		0
+[0m[HW]     Bin 7	[700.0 - 800.0uS]:		0
+[0m[HW]     Bin 8	[800.0 - 900.0uS]:		0
+[0m[HW]     Bin 9	[900.0 - 1000.0uS]:		0
+[0m[HW]     Bin 10	[1000.0 - 1100.0uS]:		0
+[0m[HW]     Bin 11	[1100.0 - 1200.0uS]:		0
+[0m[HW]     Bin 12	[1200.0 - 1300.0uS]:		0
+[0m[HW]     Bin 13	[1300.0 - 1400.0uS]:		0
+[0m[HW]     Bin 14	[1400.0 - 1500.0uS]:		0
+[0m[HW]     Bin 15	[1500.0 - 1600.0uS]:		0
+[0m[HW]     Bin 16	[1600.0 - 1700.0uS]:		0
+[0m[HW]     Bin 17	[1700.0 - 1800.0uS]:		0
+[0m[HW]     Bin 18	[1800.0 - 1900.0uS]:		0
+[0m[HW]     Bin 19	[1900.0 - 2000.0uS]:		0
+[0m[HW]     Bin 20	[2000.0 - 2100.0uS]:		0
+[0m[HW]     Bin 21	[2100.0 - 2200.0uS]:		0
+[0m[HW]     Bin 22	[2200.0 - 2300.0uS]:		0
+[0m[HW]     Bin 23	[2300.0 - 2400.0uS]:		0
+[0m[HW]     Bin 24	[2400.0 - 2500.0uS]:		0
+[0m[HW]     Bin 25	[2500.0 - 2600.0uS]:		0
+[0m[HW]     Bin 26	[2600.0 - 2700.0uS]:		0
+[0m[HW]     Bin 27	[2700.0 - 2800.0uS]:		0
+[0m[HW]     Bin 28	[2800.0 - 2900.0uS]:		0
+[0m[HW]     Bin 29	[2900.0 - 3000.0uS]:		0
+[0m[32m[HW]     Removed connection descriptor file /tmp/vrtsim_connection
+[0m6
+xran_bm_allocate_buffer() hInstance 0x5abf87e70940 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x5abf87e70940 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x5abf87e70940 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284765a00 
+xran_bm_init() hInstance 0x5abf87e70940 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x5abf87e70940 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x5abf87e70940 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5abf87e70940 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284765640 
+xran_bm_init() hInstance 0x5abf87e70940 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x5abf87e70940 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x5abf87e70940 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x5abf87e70940 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284765280 
+xran_bm_init() hInstance 0x5abf87e70940 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x5abf87e70940 poolIdx 4 count 280
+requested symb 0 OTA coresponds to symb 0 OTA time
+requested symb 1 OTA coresponds to symb 1 OTA time
+requested symb 2 OTA coresponds to symb 2 OTA time
+requested symb 3 OTA coresponds to symb 3 OTA time
+requested symb 4 OTA coresponds to symb 4 OTA time
+requested symb 5 OTA coresponds to symb 5 OTA time
+requested symb 6 OTA coresponds to symb 6 OTA time
+requested symb 7 OTA coresponds to symb 7 OTA time
+requested symb 8 OTA coresponds to symb 8 OTA time
+requested symb 9 OTA coresponds to symb 9 OTA time
+requested symb 10 OTA coresponds to symb 10 OTA time
+requested symb 11 OTA coresponds to symb 11 OTA time
+requested symb 12 OTA coresponds to symb 12 OTA time
+requested symb 13 OTA coresponds to symb 13 OTA time
+ORAN: trx_oran_start
+O-RU: XRAN start time: 05/25/26 00:49:04.101051819 UTC [500]
+Start ORAN. Done
+Initializing random number generator, seed 5020835246621705212
+RU: thread_run start time: 05/25/26 00:49:05.000000017 UTC [500]
+O-RU: thread_run start time: 05/25/26 00:49:06.000000002 UTC [500]
+/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/executables/main_nr_ru.c:84 stop_ru() Exiting OAI softmodem: interrupted
+ORAN: trx_oran_stop
+ORAN: trx_oran_end
+fh_cp_gen-13 worker thread finished on core 13 [worker id 1]
+fh_rx_bbdev-12 worker thread finished on core 12 [worker id 0]
+Closing timing source thread...
+Bye.

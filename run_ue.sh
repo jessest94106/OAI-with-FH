@@ -6,8 +6,8 @@ TEST_DIR="${BASE_DIR}/oaicicd/test_dir"
 DPDK_INST="${TEST_DIR}/dpdk-stable-20.11.9"
 OAI_DIR="${TEST_DIR}/openairinterface5g"
 BUILD_DIR="${OAI_DIR}/build"
-UE_CORES="16,17,18,19"
-UE_SSB="${RUN_UE_SSB:-516}"
+UE_CORES="20,21,22,23"
+UE_SSB="${RUN_UE_SSB:-24}"
 
 SCRIPT_NAME="$(basename "$0" .sh)"
 LOG_DIR="${BASE_DIR}/logs/${SCRIPT_NAME}"
@@ -48,7 +48,7 @@ exec sudo -E taskset -c "${UE_CORES}" env \
   ASAN_OPTIONS="${ASAN_OPTIONS}" \
   ./nr-uesoftmodem \
     -C 4049760000 \
-    -r 106 \
+    -r 24 \
     --numerology 1 \
     --band 77 \
     --ssb "${UE_SSB}" \

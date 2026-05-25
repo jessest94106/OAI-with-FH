@@ -1,0 +1,898 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260522_171613_pid33557.log
+RU cores: 10,11,12,13,14
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:      2048 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000001000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000001c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000001000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000001c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+ ... done
+Port 0 Link Up - speed 4294967295 Mbps - full-duplex
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m ... done
+Port 1 Link Up - speed 4294967295 Mbps - full-duplex
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 11
+  nULFftSize 11
+  nDLRBs 106
+  nULRBs 106
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -1272
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7fffae5f35b0
+  tx_up_eAxC2Vf 0x7fffae5f41b0
+  rx_cp_eAxC2Vf 0x7fffae5f4db0
+  rx_up_eAxC2Vf 0x7fffae5f59b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID:  33571]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 2
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+xran_generic_worker_thread [CPU 12] [PID:  33571]
+spawn worker 0 core 12
+xran_open [CPU 10] [PID:  33571]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7480c4f95040
+xran_sector_get_instances [0]: CC 0 handle 0x55663404c4c0
+Handle: 0x7480ee4d0b68 Instance: 0x55663404c4c0
+-> hInstance 0x55663404c4c0
+ru_0_cc_0_idx_0: [ handle 0x55663404c4c0 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x55663404c4c0 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284765c40 
+xran_bm_init() hInstance 0x55663404c4c0 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x55663404c4c0 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x55663404c4c0 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x55663404c4c0 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284765880 
+xran_bm_init() hInstance 0x55663404c4c0 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x55663404c4c0 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x55663404c[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     Enqueued 1023 elements to uplane_data_ring
+[0m[HW]     Installing 2 callbacks 5 symbols before OTA
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[HW]     VRTSIM: TX sample advance 4096 samples
+[0m[HW]     Running as server: waiting for client to connect
+[0m[HW]     VRTSIM: UE 0 - 1x1 antennas, Model 0 (TDL-A), DS 10.0ns, Speed 1.5m/s
+[0m[HW]     VRTSIM: UE 0 - TX: 1 antennas (offset 0), RX: 1 antennas (offset 0)
+[0m[HW]     VRTSIM: Total streams - UL: 1, DL: 1
+[0m[HW]     first_call set from phy cb
+[0m[HW]     ORU PRACH frame adjust 0 frame(s)
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14306
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 49057
+[0m[HW]     RU: packets processed 34740
+[0m[HW]     RU: packets dropped 14307
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 98209
+[0m[HW]     RU: packets processed 69556
+[0m[HW]     RU: packets dropped 28643
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 147361
+[0m[HW]     RU: packets processed 104372
+[0m[HW]     RU: packets dropped 42979
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 196513
+[0m[HW]     RU: packets processed 139188
+[0m[HW]     RU: packets dropped 57315
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14338
+[0m[HW]     RU: packets received 245665
+[0m[HW]     RU: packets processed 174002
+[0m[HW]     RU: packets dropped 71653
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 294817
+[0m[HW]     RU: packets processed 208818
+[0m[HW]     RU: packets dropped 85989
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 343969
+[0m[HW]     RU: packets processed 243634
+[0m[HW]     RU: packets dropped 100325
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 393121
+[0m[HW]     RU: packets processed 278450
+[0m[HW]     RU: packets dropped 114662
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 442273
+[0m[HW]     RU: packets processed 313266
+[0m[HW]     RU: packets dropped 128998
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14338
+[0m[HW]     RU: packets received 491425
+[0m[HW]     RU: packets processed 348080
+[0m[HW]     RU: packets dropped 143336
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 540577
+[0m[HW]     RU: packets processed 382896
+[0m[HW]     RU: packets dropped 157672
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 589729
+[0m[HW]     RU: packets processed 417712
+[0m[HW]     RU: packets dropped 172008
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 638881
+[0m[HW]     RU: packets processed 452528
+[0m[HW]     RU: packets dropped 186345
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 688033
+[0m[HW]     RU: packets processed 487344
+[0m[HW]     RU: packets dropped 200682
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 737185
+[0m[HW]     RU: packets processed 522160
+[0m[HW]     RU: packets dropped 215019
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 786337
+[0m[HW]     RU: packets processed 556976
+[0m[HW]     RU: packets dropped 229355
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 835489
+[0m[HW]     RU: packets processed 591792
+[0m[HW]     RU: packets dropped 243691
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 884641
+[0m[HW]     RU: packets processed 626608
+[0m[HW]     RU: packets dropped 258027
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 933793
+[0m[HW]     RU: packets processed 661424
+[0m[HW]     RU: packets dropped 272364
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 982945
+[0m[HW]     RU: packets processed 696240
+[0m[HW]     RU: packets dropped 286700
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14339
+[0m[HW]     RU: packets received 1032097
+[0m[HW]     RU: packets processed 731053
+[0m[HW]     RU: packets dropped 301039
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1081249
+[0m[HW]     RU: packets processed 765869
+[0m[HW]     RU: packets dropped 315375
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1130401
+[0m[HW]     RU: packets processed 800685
+[0m[HW]     RU: packets dropped 329711
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1179553
+[0m[HW]     RU: packets processed 835501
+[0m[HW]     RU: packets dropped 344047
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1228705
+[0m[HW]     RU: packets processed 870317
+[0m[HW]     RU: packets dropped 358384
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1277857
+[0m[HW]     RU: packets processed 905133
+[0m[HW]     RU: packets dropped 372720
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1327009
+[0m[HW]     RU: packets processed 939949
+[0m[HW]     RU: packets dropped 387056
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1376161
+[0m[HW]     RU: packets processed 974765
+[0m[HW]     RU: packets dropped 401392
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1425313
+[0m[HW]     RU: packets processed 1009581
+[0m[HW]     RU: packets dropped 415728
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1474465
+[0m[HW]     RU: packets processed 1044397
+[0m[HW]     RU: packets dropped 430065
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14341
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1523617
+[0m[HW]     RU: packets processed 1079208
+[0m[HW]     RU: packets dropped 444407
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1572769
+[0m[HW]     RU: packets processed 1114024
+[0m[HW]     RU: packets dropped 458743
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1621921
+[0m[HW]     RU: packets processed 1148840
+[0m[HW]     RU: packets dropped 473080
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1671073
+[0m[HW]     RU: packets processed 1183656
+[0m[HW]     RU: packets dropped 487416
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1720225
+[0m[HW]     RU: packets processed 1218472
+[0m[HW]     RU: packets dropped 501752
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1769377
+[0m[HW]     RU: packets processed 1253288
+[0m[HW]     RU: packets dropped 516088
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1818529
+[0m[HW]     RU: packets processed 1288104
+[0m[HW]     RU: packets dropped 530425
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1867681
+[0m[HW]     RU: packets processed 1322920
+[0m[HW]     RU: packets dropped 544761
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1916833
+[0m[HW]     RU: packets processed 1357736
+[0m[HW]     RU: packets dropped 559097
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 1965985
+[0m[HW]     RU: packets processed 1392552
+[0m[HW]     RU: packets dropped 573433
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14340
+[0m[HW]     RU: packets received 2015137
+[0m[HW]     RU: packets processed 1427364
+[0m[HW]     RU: packets dropped 587773
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2064289
+[0m[HW]     RU: packets processed 1462180
+[0m[HW]     RU: packets dropped 602109
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2113441
+[0m[HW]     RU: packets processed 1496996
+[0m[HW]     RU: packets dropped 616446
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2162593
+[0m[HW]     RU: packets processed 1531812
+[0m[HW]     RU: packets dropped 630782
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2211745
+[0m[HW]     RU: packets processed 1566628
+[0m[HW]     RU: packets dropped 645118
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2260897
+[0m[HW]     RU: packets processed 1601444
+[0m[HW]     RU: packets dropped 659454
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2310049
+[0m[HW]     RU: packets processed 1636260
+[0m[HW]     RU: packets dropped 673790
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2359201
+[0m[HW]     RU: packets processed 1671076
+[0m[HW]     RU: packets dropped 688127
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2408353
+[0m[HW]     RU: packets processed 1705892
+[0m[HW]     RU: packets dropped 702464
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2457505
+[0m[HW]     RU: packets processed 1740708
+[0m[HW]     RU: packets dropped 716800
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2506657
+[0m[HW]     RU: packets processed 1775524
+[0m[HW]     RU: packets dropped 731137
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2555809
+[0m[HW]     RU: packets processed 1810340
+[0m[HW]     RU: packets dropped 745473
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2604961
+[0m[HW]     RU: packets processed 1845156
+[0m[HW]     RU: packets dropped 759809
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2654113
+[0m[HW]     RU: packets processed 1879972
+[0m[HW]     RU: packets dropped 774146
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2703265
+[0m[HW]     RU: packets processed 1914788
+[0m[HW]     RU: packets dropped 788482
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2752417
+[0m[HW]     RU: packets processed 1949604
+[0m[HW]     RU: packets dropped 802818
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2801569
+[0m[HW]     RU: packets processed 1984420
+[0m[HW]     RU: packets dropped 817154
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2850721
+[0m[HW]     RU: packets processed 2019236
+[0m[HW]     RU: packets dropped 831490
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2899873
+[0m[HW]     RU: packets processed 2054052
+[0m[HW]     RU: packets dropped 845826
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 2949025
+[0m[HW]     RU: packets processed 2088868
+[0m[HW]     RU: packets dropped 860162
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=106 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 2998177
+[0m[HW]     RU: packets processed 2123684
+[0m[HW]     RU: packets dropped 874499
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3047329
+[0m[HW]     RU: packets processed 2158500
+[0m[HW]     RU: packets dropped 888835
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3096481
+[0m[HW]     RU: packets processed 2193316
+[0m[HW]     RU: packets dropped 903171
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3145633
+[0m[HW]     RU: packets processed 2228132
+[0m[HW]     RU: packets dropped 917507
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3194785
+[0m[HW]     RU: packets processed 2262948
+[0m[HW]     RU: packets dropped 931843
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3243937
+[0m[HW]     RU: packets processed 2297764
+[0m[HW]     RU: packets dropped 946179
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3293089
+[0m[HW]     RU: packets processed 2332580
+[0m[HW]     RU: packets dropped 960515
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3342241
+[0m[HW]     RU: packets processed 2367396
+[0m[HW]     RU: packets dropped 974851
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3391393
+[0m[HW]     RU: packets processed 2402212
+[0m[HW]     RU: packets dropped 989187
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3440545
+[0m[HW]     RU: packets processed 2437028
+[0m[HW]     RU: packets dropped 1003523
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3489697
+[0m[HW]     RU: packets processed 2471844
+[0m[HW]     RU: packets dropped 1017859
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3538849
+[0m[HW]     RU: packets processed 2506660
+[0m[HW]     RU: packets dropped 1032195
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3588001
+[0m[HW]     RU: packets processed 2541476
+[0m[HW]     RU: packets dropped 1046531
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3637153
+[0m[HW]     RU: packets processed 2576292
+[0m[HW]     RU: packets dropped 1060867
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3686305
+[0m[HW]     RU: packets processed 2611108
+[0m[HW]     RU: packets dropped 1075203
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3735457
+[0m[HW]     RU: packets processed 2645924
+[0m[HW]     RU: packets dropped 1089539
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3784609
+[0m[HW]     RU: packets processed 2680740
+[0m[HW]     RU: packets dropped 1103875
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3833761
+[0m[HW]     RU: packets processed 2715556
+[0m[HW]     RU: packets dropped 1118211
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3882913
+[0m[HW]     RU: packets processed 2750372
+[0m[HW]     RU: packets dropped 1132547
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3932065
+[0m[HW]     RU: packets processed 2785188
+[0m[HW]     RU: packets dropped 1146883
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 3981217
+[0m[HW]     RU: packets processed 2820004
+[0m[HW]     RU: packets dropped 1161219
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14337
+[0m[HW]     RU: packets received 4030369
+[0m[HW]     RU: packets processed 2854819
+[0m[HW]     RU: packets dropped 1175556
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4079521
+[0m[HW]     RU: packets processed 2889635
+[0m[HW]     RU: packets dropped 1189892
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4128673
+[0m[HW]     RU: packets processed 2924451
+[0m[HW]     RU: packets dropped 1204228
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4177825
+[0m[HW]     RU: packets processed 2959267
+[0m[HW]     RU: packets dropped 1218564
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4226977
+[0m[HW]     RU: packets processed 2994083
+[0m[HW]     RU: packets dropped 1232900
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4276129
+[0m[HW]     RU: packets processed 3028899
+[0m[HW]     RU: packets dropped 1247236
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4325281
+[0m[HW]     RU: packets processed 3063715
+[0m[HW]     RU: packets dropped 1261572
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4374433
+[0m[HW]     RU: packets processed 3098531
+[0m[HW]     RU: packets dropped 1275908
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4423585
+[0m[HW]     RU: packets processed 3133347
+[0m[HW]     RU: packets dropped 1290244
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14338
+[0m[HW]     RU: packets received 4472737
+[0m[HW]     RU: packets processed 3168161
+[0m[HW]     RU: packets dropped 1304582
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4521889
+[0m[HW]     RU: packets processed 3202977
+[0m[HW]     RU: packets dropped 1318918
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4571041
+[0m[HW]     RU: packets processed 3237793
+[0m[HW]     RU: packets dropped 1333254
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4620193
+[0m[HW]     RU: packets processed 3272609
+[0m[HW]     RU: packets dropped 1347590
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4669345
+[0m[HW]     RU: packets processed 3307425
+[0m[HW]     RU: packets dropped 1361926
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4718497
+[0m[HW]     RU: packets processed 3342241
+[0m[HW]     RU: packets dropped 1376262
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4767649
+[0m[HW]     RU: packets processed 3377057
+[0m[HW]     RU: packets dropped 1390598
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4816801
+[0m[HW]     RU: packets processed 3411873
+[0m[HW]     RU: packets dropped 1404934
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4865953
+[0m[HW]     RU: packets processed 3446689
+[0m[HW]     RU: packets dropped 1419270
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 4915105
+[0m[HW]     RU: packets processed 3481505
+[0m[HW]     RU: packets dropped 1433606
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14339
+[0m[HW]     RU: packets received 4964257
+[0m[HW]     RU: packets processed 3516318
+[0m[HW]     RU: packets dropped 1447945
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5013409
+[0m[HW]     RU: packets processed 3551134
+[0m[HW]     RU: packets dropped 1462281
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5062561
+[0m[HW]     RU: packets processed 3585950
+[0m[HW]     RU: packets dropped 1476617
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5111713
+[0m[HW]     RU: packets processed 3620766
+[0m[HW]     RU: packets dropped 1490953
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5160865
+[0m[HW]     RU: packets processed 3655582
+[0m[HW]     RU: packets dropped 1505289
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5210017
+[0m[HW]     RU: packets processed 3690398
+[0m[HW]     RU: packets dropped 1519625
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5259169
+[0m[HW]     RU: packets processed 3725214
+[0m[HW]     RU: packets dropped 1533961
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5308321
+[0m[HW]     RU: packets processed 3760030
+[0m[HW]     RU: packets dropped 1548297
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5357473
+[0m[HW]     RU: packets processed 3794846
+[0m[HW]     RU: packets dropped 1562633
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5406625
+[0m[HW]     RU: packets processed 3829662
+[0m[HW]     RU: packets dropped 1576969
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14338
+[0m[HW]     RU: packets received 5455777
+[0m[HW]     RU: packets processed 3864476
+[0m[HW]     RU: packets dropped 1591307
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5504929
+[0m[HW]     RU: packets processed 3899292
+[0m[HW]     RU: packets dropped 1605643
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5554081
+[0m[HW]     RU: packets processed 3934108
+[0m[HW]     RU: packets dropped 1619979
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5603233
+[0m[HW]     RU: packets processed 3968924
+[0m[HW]     RU: packets dropped 1634315
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5652385
+[0m[HW]     RU: packets processed 4003740
+[0m[HW]     RU: packets dropped 1648651
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5701537
+[0m[HW]     RU: packets processed 4038556
+[0m[HW]     RU: packets dropped 1662987
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5750689
+[0m[HW]     RU: packets processed 4073372
+[0m[HW]     RU: packets dropped 1677323
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5799841
+[0m[HW]     RU: packets processed 4108188
+[0m[HW]     RU: packets dropped 1691659
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5848993
+[0m[HW]     RU: packets processed 4143004
+[0m[HW]     RU: packets dropped 1705995
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5898145
+[0m[HW]     RU: packets processed 4177820
+[0m[HW]     RU: packets dropped 1720331
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14338
+[0m[HW]     RU: packets received 5947297
+[0m[HW]     RU: packets processed 4212634
+[0m[HW]     RU: packets dropped 1734669
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 5996449
+[0m[HW]     RU: packets processed 4247450
+[0m[HW]     RU: packets dropped 1749005
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6045601
+[0m[HW]     RU: packets processed 4282266
+[0m[HW]     RU: packets dropped 1763341
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6094753
+[0m[HW]     RU: packets processed 4317082
+[0m[HW]     RU: packets dropped 1777677
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6143905
+[0m[HW]     RU: packets processed 4351898
+[0m[HW]     RU: packets dropped 1792013
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6193057
+[0m[HW]     RU: packets processed 4386714
+[0m[HW]     RU: packets dropped 1806349
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6242209
+[0m[HW]     RU: packets processed 4421530
+[0m[HW]     RU: packets dropped 1820685
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6291361
+[0m[HW]     RU: packets processed 4456346
+[0m[HW]     RU: packets dropped 1835021
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6340513
+[0m[HW]     RU: packets processed 4491162
+[0m[HW]     RU: packets dropped 1849357
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6389665
+[0m[HW]     RU: packets processed 4525978
+[0m[HW]     RU: packets dropped 1863693
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6438817
+[0m[HW]     RU: packets processed 4560794
+[0m[HW]     RU: packets dropped 1878029
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6487969
+[0m[HW]     RU: packets processed 4595610
+[0m[HW]     RU: packets dropped 1892365
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6537121
+[0m[HW]     RU: packets processed 4630426
+[0m[HW]     RU: packets dropped 1906701
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6586273
+[0m[HW]     RU: packets processed 4665242
+[0m[HW]     RU: packets dropped 1921037
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6635425
+[0m[HW]     RU: packets processed 4700058
+[0m[HW]     RU: packets dropped 1935373
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6684577
+[0m[HW]     RU: packets processed 4734874
+[0m[HW]     RU: packets dropped 1949709
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6733729
+[0m[HW]     RU: packets processed 4769690
+[0m[HW]     RU: packets dropped 1964045
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6782881
+[0m[HW]     RU: packets processed 4804506
+[0m[HW]     RU: packets dropped 1978381
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6832033
+[0m[HW]     RU: packets processed 4839322
+[0m[HW]     RU: packets dropped 1992717
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6881185
+[0m[HW]     RU: packets processed 4874138
+[0m[HW]     RU: packets dropped 2007053
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6930337
+[0m[HW]     RU: packets processed 4908954
+[0m[HW]     RU: packets dropped 2021389
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 14336
+[0m[HW]     RU: packets received 6979489
+[0m[HW]     RU: packets processed 4943770
+[0m[HW]     RU: packets dropped 2035725
+[0m

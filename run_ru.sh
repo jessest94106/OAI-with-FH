@@ -7,9 +7,10 @@ DPDK_INST="${TEST_DIR}/dpdk-stable-20.11.9"
 OAI_DIR="${TEST_DIR}/openairinterface5g"
 BUILD_DIR="${OAI_DIR}/build"
 RU_CONF="${BASE_DIR}/ru_test.conf"
-RU_CORES="${RU_CORES:-10,11,12,13,14}"
+RU_CORES="${RU_CORES:-10,11,12,13,14,15,16}"
 DPDK_DRIVER="${DPDK_DRIVER:-uio_pci_generic}"
 ORU_PRACH_FRAME_ADJUST="${ORU_PRACH_FRAME_ADJUST:-0}"
+RU_NUMEROLOGY="${RU_NUMEROLOGY:-1}"
 
 SCRIPT_NAME="$(basename "$0" .sh)"
 LOG_DIR="${BASE_DIR}/logs/${SCRIPT_NAME}"
@@ -19,6 +20,7 @@ exec > >(tee -a "${LOG_FILE}") 2>&1
 
 echo "Logging terminal output to ${LOG_FILE}"
 echo "RU cores: ${RU_CORES}"
+echo "RU numerology: ${RU_NUMEROLOGY}"
 echo "ORU PRACH frame adjust: ${ORU_PRACH_FRAME_ADJUST}"
 
 for path in "${BUILD_DIR}/nr-oru" "${BUILD_DIR}/libvrtsim.so" "${RU_CONF}" "${DPDK_INST}/usertools/dpdk-devbind.py"; do
@@ -86,6 +88,7 @@ export TEST_DIR DPDK_INST
 export C_INCLUDE_PATH="${DPDK_INST}/include"
 export LD_LIBRARY_PATH="/usr/local/lib/x86_64-linux-gnu:${BUILD_DIR}:${DPDK_INST}/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH:-}"
 export ASAN_OPTIONS="${ASAN_OPTIONS:-detect_odr_violation=0}"
+export XRAN_SKIP_LINK_CHECK="${XRAN_SKIP_LINK_CHECK:-1}"
 RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 
 REQUIRED_HUGEPAGES="${REQUIRED_HUGEPAGES:-8192}"
@@ -106,11 +109,13 @@ sudo rm -rf /var/run/dpdk/ru 2>/dev/null || true
 sudo rm -f /tmp/vrtsim_connection /dev/shm/vrtsim* 2>/dev/null || true
 
 cd "${BUILD_DIR}"
-exec sudo -E taskset -c "${RU_CORES}" env \
+exec sudo -E chrt -f 95 taskset -c "${RU_CORES}" env \
   XDG_RUNTIME_DIR="${RUNTIME_DIR}" \
   LD_LIBRARY_PATH="${LD_LIBRARY_PATH}" \
   ASAN_OPTIONS="${ASAN_OPTIONS}" \
+  XRAN_SKIP_LINK_CHECK="${XRAN_SKIP_LINK_CHECK}" \
   ORU_PRACH_FRAME_ADJUST="${ORU_PRACH_FRAME_ADJUST}" \
   ./nr-oru \
     -O "${RU_CONF}" \
-    --vrtsim.role server
+    --vrtsim.role server \
+    --numerology "${RU_NUMEROLOGY}"

@@ -1,0 +1,386 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260522_002715_pid127257.log
+DU cores: 1,2,3,4,5,6,7,8,9,15
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:   1265664 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "1,2,3,4" 
+[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000008000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000008300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000008000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000008300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+ ... done
+Port 0 Link Up - speed 4294967295 Mbps - full-duplex
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0m ... done
+Port 1 Link Up - speed 4294967295 Mbps - full-duplex
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 11
+  nULFftSize 11
+  nDLRBs 106
+  nULRBs 106
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 429
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -1272
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x739018fdd4b0
+  tx_up_eAxC2Vf 0x739018fde0b0
+  rx_cp_eAxC2Vf 0x739018fdecb0
+  rx_up_eAxC2Vf 0x739018fdf8b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 127268]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=71,     sym_cp_ul=2,     ul_offset_sym=12
+O-XU      0
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=0, offset_num_slots_up_ul=0
+HW        0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Num cores 2
+Start C-plane UL 71 us after TTI  [trigger on sym 2]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+xran_generic_worker_thread [CPU 15] [PID: 127268]
+spawn worker 0 core 15
+xran_open [CPU  7] [PID: 127268]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x738fd8f95040
+xran_sector_get_instances [0]: CC 0 handle 0x738ffc17a700
+Handle: 0x7390205a2b68 Instance: 0x738ffc17a700
+-> hInstance 0x738ffc17a700
+ru_0_cc_0_idx_0: [ handle 0x738ffc17a700 0 0 ] [nPoolIndex 0] nNumberOfB[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0muffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x738ffc17a700 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284765e80 
+xran_bm_init() hInstance 0x738ffc17a700 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x738ffc17a700 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x738ffc17a700 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x738ffc17a700 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284765b80 
+xran_bm_init() hInstance 0x738ffc17a700 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x738ffc17a700 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x738ffc17a700 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x738ffc17a700 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x2847657c0 
+xran_bm_init() hInstance 0x738ffc17a700 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x738ffc17a700 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x738ffc17a700 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x738ffc17a700 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284765400 
+xran_bm_init() hInstance 0x738ffc17a700 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x738ffc17a700 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x738ffc17a700 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x738ffc17a700 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284767e80 
+xran_bm_init() hInstance 0x738ffc17a700 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x738ffc17a700 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/22/26 07:27:19.446657823 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[HW]     first_call set from phy cb
+[0m[HW]     before adjusting, OAI: frame=0 slot=0, XRAN: frame=0 slot=9
+[0m[HW]     After adjusting, OAI: frame=0 slot=9, XRAN: frame=0 slot=9
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=2, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=3, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=4, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=5, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[HW]     [TX PRB ELM] frame=2, slot=0, sym=2, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=106
+[0m[HW]     [o-du 0][rx   10453 pps   10453 kbps   95159][tx   31915 pps   31915 kbps  252296][Total Msgs_Rcvd 10453]
+[0m[HW]     [o_du0][pusch0    9208 prach0    1245]
+[0m[HW]     [o-du 0][rx   20912 pps   10459 kbps  298429][tx   63787 pps   31872 kbps  786891][Total Msgs_Rcvd 20912]
+[0m[HW]     [o_du0][pusch0   18424 prach0    2488]
+[0m[HW]     [o-du 0][rx   31664 pps   10752 kbps  299234][tx   95659 pps   31872 kbps  786891][Total Msgs_Rcvd 31664]
+[0m[HW]     [o_du0][pusch0   27640 prach0    4024]
+[0m[HW]     [o-du 0][rx   42416 pps   10752 kbps  299481][tx  127531 pps   31872 kbps  786891][Total Msgs_Rcvd 42416]
+[0m[HW]     [o_du0][pusch0   36856 prach0    5560]
+[0m[HW]     [o-du 0][rx   53168 pps   10752 kbps  299481][tx  159403 pps   31872 kbps  786891][Total Msgs_Rcvd 53168]
+[0m[HW]     [o_du0][pusch0   46072 prach0    7096]
+[0m[HW]     [o-du 0][rx   63920 pps   10752 kbps  299481][tx  191275 pps   31872 kbps  786891][Total Msgs_Rcvd 63920]
+[0m[HW]     [o_du0][pusch0   55288 prach0    8632]
+[0m[HW]     [o-du 0][rx   74672 pps   10752 kbps  299481][tx  223147 pps   31872 kbps  786891][Total Msgs_Rcvd 74672]
+[0m[HW]     [o_du0][pusch0   64504 prach0   10168]
+[0m[HW]     [o-du 0][rx   85424 pps   10752 kbps  299481][tx  255019 pps   31872 kbps  786891][Total Msgs_Rcvd 85424]
+[0m[HW]     [o_du0][pusch0   73720 prach0   11704]
+[0m[HW]     [o-du 0][rx   96176 pps   10752 kbps  299481][tx  286891 pps   31872 kbps  786891][Total Msgs_Rcvd 96176]
+[0m[HW]     [o_du0][pusch0   82936 prach0   13240]
+[0m[HW]     [o-du 0][rx  106928 pps   10752 kbps  299481][tx  318763 pps   31872 kbps  786891][Total Msgs_Rcvd 106928]
+[0m[HW]     [o_du0][pusch0   92152 prach0   14776]
+[0m[HW]     [o-du 0][rx  117680 pps   10752 kbps  299481][tx  350635 pps   31872 kbps  786891][Total Msgs_Rcvd 117680]
+[0m[HW]     [o_du0][pusch0  101368 prach0   16312]
+[0m[HW]     [o-du 0][rx  128432 pps   10752 kbps  299481][tx  382507 pps   31872 kbps  786891][Total Msgs_Rcvd 128432]
+[0m[HW]     [o_du0][pusch0  110584 prach0   17848]
+[0m[HW]     [o-du 0][rx  139184 pps   10752 kbps  299481][tx  414379 pps   31872 kbps  786891][Total Msgs_Rcvd 139184]
+[0m[HW]     [o_du0][pusch0  119800 prach0   19384]
+[0m[HW]     [o-du 0][rx  149936 pps   10752 kbps  299481][tx  446251 pps   31872 kbps  786891][Total Msgs_Rcvd 149936]
+[0m[HW]     [o_du0][pusch0  129016 prach0   20920]
+[0m[HW]     [o-du 0][rx  160688 pps   10752 kbps  299481][tx  478123 pps   31872 kbps  786891][Total Msgs_Rcvd 160688]
+[0m[HW]     [o_du0][pusch0  138232 prach0   22456]
+[0m[HW]     [o-du 0][rx  171440 pps   10752 kbps  299481][tx  509995 pps   31872 kbps  786891][Total Msgs_Rcvd 171440]
+[0m[HW]     [o_du0][pusch0  147448 prach0   23992]
+[0m[HW]     [o-du 0][rx  182192 pps   10752 kbps  299481][tx  541867 pps   31872 kbps  786891][Total Msgs_Rcvd 182192]
+[0m[HW]     [o_du0][pusch0  156664 prach0   25528]
+[0m[HW]     [o-du 0][rx  192944 pps   10752 kbps  299481][tx  573739 pps   31872 kbps  786891][Total Msgs_Rcvd 192944]
+[0m[HW]     [o_du0][pusch0  165880 prach0   27064]
+[0m[HW]     [o-du 0][rx  203696 pps   10752 kbps  299481][tx  605611 pps   31872 kbps  786891][Total Msgs_Rcvd 203696]
+[0m[HW]     [o_du0][pusch0  175096 prach0   28600]
+[0m[HW]     [o-du 0][rx  214448 pps   10752 kbps  299481][tx  637483 pps   31872 kbps  786891][Total Msgs_Rcvd 214448]
+[0m[HW]     [o_du0][pusch0  184312 prach0   30136]
+[0m[HW]     [o-du 0][rx  225200 pps   10752 kbps  299481][tx  669355 pps   31872 kbps  786891][Total Msgs_Rcvd 225200]
+[0m[HW]     [o_du0][pusch0  193528 prach0   31672]
+[0m[HW]     [o-du 0][rx  235952 pps   10752 kbps  299481][tx  701227 pps   31872 kbps  786891][Total Msgs_Rcvd 235952]
+[0m[HW]     [o_du0][pusch0  202744 prach0   33208]
+[0m[HW]     [o-du 0][rx  246704 pps   10752 kbps  299481][tx  733099 pps   31872 kbps  786891][Total Msgs_Rcvd 246704]
+[0m[HW]     [o_du0][pusch0  211960 prach0   34744]
+[0m[HW]     [o-du 0][rx  257456 pps   10752 kbps  299481][tx  764971 pps   31872 kbps  786891][Total Msgs_Rcvd 257456]
+[0m[HW]     [o_du0][pusch0  221176 prach0   36280]
+[0m[HW]     [o-du 0][rx  268208 pps   10752 kbps  299481][tx  796843 pps   31872 kbps  786891][Total Msgs_Rcvd 268208]
+[0m[HW]     [o_du0][pusch0  230392 prach0   37816]
+[0m[HW]     [o-du 0][rx  278960 pps   10752 kbps  299481][tx  828715 pps   31872 kbps  786891][Total Msgs_Rcvd 278960]
+[0m[HW]     [o_du0][pusch0  239608 prach0   39352]
+[0m[HW]     [o-du 0][rx  289712 pps   10752 kbps  299481][tx  860587 pps   31872 kbps  786891][Total Msgs_Rcvd 289712]
+[0m[HW]     [o_du0][pusch0  248824 prach0   40888]
+[0m[HW]     [o-du 0][rx  300464 pps   10752 kbps  299481][tx  892459 pps   31872 kbps  786891][Total Msgs_Rcvd 300464]
+[0m[HW]     [o_du0][pusch0  258040 prach0   42424]
+[0m[HW]     [o-du 0][rx  311216 pps   10752 kbps  299481][tx  924331 pps   31872 kbps  786891][Total Msgs_Rcvd 311216]
+[0m[HW]     [o_du0][pusch0  267256 prach0   43960]
+[0m[HW]     [o-du 0][rx  321968 pps   10752 kbps  299481][tx  956203 pps   31872 kbps  786891][Total Msgs_Rcvd 321968]
+[0m[HW]     [o_du0][pusch0  276472 prach0   45496]
+[0m[HW]     [o-du 0][rx  332720 pps   10752 kbps  299481][tx  988075 pps   31872 kbps  786891][Total Msgs_Rcvd 332720]
+[0m[HW]     [o_du0][pusch0  285688 prach0   47032]
+[0m[HW]     [o-du 0][rx  343472 pps   10752 kbps  299481][tx 1019947 pps   31872 kbps  786891][Total Msgs_Rcvd 343472]
+[0m[HW]     [o_du0][pusch0  294904 prach0   48568]
+[0m[HW]     [o-du 0][rx  354224 pps   10752 kbps  299481][tx 1051819 pps   31872 kbps  786891][Total Msgs_Rcvd 354224]
+[0m[HW]     [o_du0][pusch0  304120 prach0   50104]
+[0m[HW]     [o-du 0][rx  364976 pps   10752 kbps  299481][tx 1083691 pps   31872 kbps  786891][Total Msgs_Rcvd 364976]
+[0m[HW]     [o_du0][pusch0  313336 prach0   51640]
+[0m[HW]     [o-du 0][rx  375728 pps   10752 kbps  299481][tx 1115563 pps   31872 kbps  786891][Total Msgs_Rcvd 375728]
+[0m[HW]     [o_du0][pusch0  322552 prach0   53176]
+[0m[HW]     [o-du 0][rx  386480 pps   10752 kbps  299481][tx 1147435 pps   31872 kbps  786891][Total Msgs_Rcvd 386480]
+[0m[HW]     [o_du0][pusch0  331768 prach0   54712]
+[0m[HW]     [o-du 0][rx  386904 pps     424 kbps       0][tx 1179307 pps   31872 kbps  786891][Total Msgs_Rcvd 386904]
+[0m[HW]     [o_du0][pusch0  332132 prach0   54772]
+[0m[HW]     [o-du 0][rx  386904 pps       0 kbps       0][tx 1211179 pps   31872 kbps  786891][Total Msgs_Rcvd 386904]
+[0m[HW]     [o_du0][pusch0  332132 prach0   54772]
+[0m[HW]     [o-du 0][rx  386904 pps       0 kbps       0][tx 1243051 pps   31872 kbps  786891][Total Msgs_Rcvd 386904]
+[0m[HW]     [o_du0][pusch0  332132 prach0   54772]
+[0m

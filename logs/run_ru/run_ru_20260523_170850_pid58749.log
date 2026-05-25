@@ -1,0 +1,26 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260523_170850_pid58749.log
+RU cores: 10,11,12,13,14,15
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:      2048 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m
+Assertion (0==1) failed!
+In get_samplerate_and_bw() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/common/utils/nr/nr_common.c:940
+N_RB 38 not yet supported for numerology 1
+
+Exiting execution
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
