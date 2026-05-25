@@ -1,0 +1,1261 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260524_212015_pid914590.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    329728 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 4
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7e12bb7e24b0
+  tx_up_eAxC2Vf 0x7e12bb7e30b0
+  rx_cp_eAxC2Vf 0x7e12bb7e3cb0
+  rx_up_eAxC2Vf 0x7e12bb7e48b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 914614]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 914614]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 914614]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 914614]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7e1280f95040
+xran_sector_get_instances [0]: CC 0 handle 0x7e12a816c740
+Handle: 0x7e12c81b0b68 Instance: 0x7e[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0m12a816c740
+-> hInstance 0x7e12a816c740
+ru_0_cc_0_idx_0: [ handle 0x7e12a816c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x7e12a816c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284770e80 
+xran_bm_init() hInstance 0x7e12a816c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x7e12a816c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x7e12a816c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7e12a816c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284770a00 
+xran_bm_init() hInstance 0x7e12a816c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x7e12a816c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x7e12a816c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x7e12a816c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284770640 
+xran_bm_init() hInstance 0x7e12a816c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x7e12a816c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x7e12a816c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7e12a816c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284770280 
+xran_bm_init() hInstance 0x7e12a816c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x7e12a816c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x7e12a816c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x7e12a816c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284772d00 
+xran_bm_init() hInstance 0x7e12a816c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x7e12a816c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/25/26 04:20:19.291050539 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     first_call set from phy cb
+[0m[HW]     before adjusting, OAI: frame=0 slot=0, XRAN: frame=0 slot=9
+[0m[HW]     After adjusting, OAI: frame=0 slot=9, XRAN: frame=0 slot=9
+[0m[PHY]    [MAC SCHED] frame 1, slot 0: DL_req has 0 PDUs
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=2, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=3, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=4, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [TX PRB ELM] frame=1, slot=0, sym=5, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[PHY]    [MAC SCHED] frame 2, slot 0: DL_req has 0 PDUs
+[0m[HW]     [TX PRB ELM] frame=2, slot=0, sym=2, ant=0, idxElm=0: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[PHY]    [MAC SCHED] frame 3, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 4, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 5, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 6, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 7, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 8, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 9, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 10, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 11, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 12, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 13, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 14, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 15, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 16, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 17, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 18, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 19, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 20, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 21, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 22, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 23, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 24, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 25, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 26, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 27, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 28, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 29, slot 0: DL_req has 0 PDUs
+[0m[PHY]    [MAC SCHED] frame 30, slot 0: DL_req has 0 PDUs
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     [o-du 0][rx   10752 pps   10752 kbps   72960][tx   31916 pps   31916 kbps  182321][Total Msgs_Rcvd 10752]
+[0m[HW]     [o_du0][pusch0    9216 prach0    1536]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx   21504 pps   10752 kbps   72960][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 21504]
+[0m[HW]     [o_du0][pusch0   18432 prach0    3072]
+[0m[HW]     [o-du 0][rx   32256 pps   10752 kbps   72960][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 32256]
+[0m[HW]     [o_du0][pusch0   27648 prach0    4608]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx   43008 pps   10752 kbps   72960][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 43008]
+[0m[HW]     [o_du0][pusch0   36864 prach0    6144]
+[0m[HW]     [o-du 0][rx   53760 pps   10752 kbps   72960][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 53760]
+[0m[HW]     [o_du0][pusch0   46080 prach0    7680]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx   64512 pps   10752 kbps   72960][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 64512]
+[0m[HW]     [o_du0][pusch0   55296 prach0    9216]
+[0m[HW]     [o-du 0][rx   75264 pps   10752 kbps   72960][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 75264]
+[0m[HW]     [o_du0][pusch0   64512 prach0   10752]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx   86016 pps   10752 kbps   72960][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 86016]
+[0m[HW]     [o_du0][pusch0   73728 prach0   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx   96768 pps   10752 kbps   72960][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 96768]
+[0m[HW]     [o_du0][pusch0   82944 prach0   13824]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  107520 pps   10752 kbps   72960][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 107520]
+[0m[HW]     [o_du0][pusch0   92160 prach0   15360]
+[0m[HW]     [o-du 0][rx  118272 pps   10752 kbps   72960][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 118272]
+[0m[HW]     [o_du0][pusch0  101376 prach0   16896]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  129024 pps   10752 kbps   72960][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 129024]
+[0m[HW]     [o_du0][pusch0  110592 prach0   18432]
+[0m[HW]     [o-du 0][rx  139776 pps   10752 kbps   72960][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 139776]
+[0m[HW]     [o_du0][pusch0  119808 prach0   19968]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  150528 pps   10752 kbps   72960][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 150528]
+[0m[HW]     [o_du0][pusch0  129024 prach0   21504]
+[0m[HW]     [o-du 0][rx  161280 pps   10752 kbps   72960][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 161280]
+[0m[HW]     [o_du0][pusch0  138240 prach0   23040]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  172032 pps   10752 kbps   72960][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 172032]
+[0m[HW]     [o_du0][pusch0  147456 prach0   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  182784 pps   10752 kbps   72960][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 182784]
+[0m[HW]     [o_du0][pusch0  156672 prach0   26112]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  193536 pps   10752 kbps   72960][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 193536]
+[0m[HW]     [o_du0][pusch0  165888 prach0   27648]
+[0m[HW]     [o-du 0][rx  204288 pps   10752 kbps   72960][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 204288]
+[0m[HW]     [o_du0][pusch0  175104 prach0   29184]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  215040 pps   10752 kbps   72960][tx  637484 pps   31872 kbps  182321][Total Msgs_Rcvd 215040]
+[0m[HW]     [o_du0][pusch0  184320 prach0   30720]
+[0m[HW]     [o-du 0][rx  225792 pps   10752 kbps   72960][tx  669356 pps   31872 kbps  182321][Total Msgs_Rcvd 225792]
+[0m[HW]     [o_du0][pusch0  193536 prach0   32256]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  236544 pps   10752 kbps   72960][tx  701228 pps   31872 kbps  182321][Total Msgs_Rcvd 236544]
+[0m[HW]     [o_du0][pusch0  202752 prach0   33792]
+[0m[HW]     [o-du 0][rx  247296 pps   10752 kbps   72960][tx  733100 pps   31872 kbps  182321][Total Msgs_Rcvd 247296]
+[0m[HW]     [o_du0][pusch0  211968 prach0   35328]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  258048 pps   10752 kbps   72960][tx  764972 pps   31872 kbps  182321][Total Msgs_Rcvd 258048]
+[0m[HW]     [o_du0][pusch0  221184 prach0   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  268800 pps   10752 kbps   72960][tx  796844 pps   31872 kbps  182321][Total Msgs_Rcvd 268800]
+[0m[HW]     [o_du0][pusch0  230400 prach0   38400]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  279552 pps   10752 kbps   72960][tx  828716 pps   31872 kbps  182321][Total Msgs_Rcvd 279552]
+[0m[HW]     [o_du0][pusch0  239616 prach0   39936]
+[0m[HW]     [o-du 0][rx  290304 pps   10752 kbps   72960][tx  860588 pps   31872 kbps  182321][Total Msgs_Rcvd 290304]
+[0m[HW]     [o_du0][pusch0  248832 prach0   41472]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  301056 pps   10752 kbps   72960][tx  892460 pps   31872 kbps  182321][Total Msgs_Rcvd 301056]
+[0m[HW]     [o_du0][pusch0  258048 prach0   43008]
+[0m[HW]     [o-du 0][rx  311808 pps   10752 kbps   72960][tx  924332 pps   31872 kbps  182321][Total Msgs_Rcvd 311808]
+[0m[HW]     [o_du0][pusch0  267264 prach0   44544]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  322560 pps   10752 kbps   72960][tx  956204 pps   31872 kbps  182321][Total Msgs_Rcvd 322560]
+[0m[HW]     [o_du0][pusch0  276480 prach0   46080]
+[0m[HW]     [o-du 0][rx  333312 pps   10752 kbps   72960][tx  988076 pps   31872 kbps  182321][Total Msgs_Rcvd 333312]
+[0m[HW]     [o_du0][pusch0  285696 prach0   47616]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  344064 pps   10752 kbps   72960][tx 1019948 pps   31872 kbps  182321][Total Msgs_Rcvd 344064]
+[0m[HW]     [o_du0][pusch0  294912 prach0   49152]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  354817 pps   10753 kbps   72962][tx 1051820 pps   31872 kbps  182321][Total Msgs_Rcvd 354817]
+[0m[HW]     [o_du0][pusch0  304128 prach0   50688]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  365569 pps   10752 kbps   72960][tx 1083692 pps   31872 kbps  182321][Total Msgs_Rcvd 365569]
+[0m[HW]     [o_du0][pusch0  313344 prach0   52224]
+[0m[HW]     [o-du 0][rx  376321 pps   10752 kbps   72960][tx 1115564 pps   31872 kbps  182321][Total Msgs_Rcvd 376321]
+[0m[HW]     [o_du0][pusch0  322560 prach0   53760]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  387074 pps   10753 kbps   72962][tx 1147436 pps   31872 kbps  182321][Total Msgs_Rcvd 387074]
+[0m[HW]     [o_du0][pusch0  331776 prach0   55296]
+[0m[HW]     [o-du 0][rx  397826 pps   10752 kbps   72960][tx 1179308 pps   31872 kbps  182321][Total Msgs_Rcvd 397826]
+[0m[HW]     [o_du0][pusch0  340992 prach0   56832]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  408578 pps   10752 kbps   72960][tx 1211180 pps   31872 kbps  182321][Total Msgs_Rcvd 408578]
+[0m[HW]     [o_du0][pusch0  350208 prach0   58368]
+[0m[HW]     [o-du 0][rx  419330 pps   10752 kbps   72960][tx 1243052 pps   31872 kbps  182321][Total Msgs_Rcvd 419330]
+[0m[HW]     [o_du0][pusch0  359424 prach0   59904]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  430083 pps   10753 kbps   72962][tx 1274924 pps   31872 kbps  182321][Total Msgs_Rcvd 430083]
+[0m[HW]     [o_du0][pusch0  368640 prach0   61440]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  440835 pps   10752 kbps   72960][tx 1306796 pps   31872 kbps  182321][Total Msgs_Rcvd 440835]
+[0m[HW]     [o_du0][pusch0  377856 prach0   62976]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  451587 pps   10752 kbps   72960][tx 1338668 pps   31872 kbps  182321][Total Msgs_Rcvd 451587]
+[0m[HW]     [o_du0][pusch0  387072 prach0   64512]
+[0m[HW]     [o-du 0][rx  462339 pps   10752 kbps   72960][tx 1370540 pps   31872 kbps  182321][Total Msgs_Rcvd 462339]
+[0m[HW]     [o_du0][pusch0  396288 prach0   66048]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  473091 pps   10752 kbps   72960][tx 1402412 pps   31872 kbps  182321][Total Msgs_Rcvd 473091]
+[0m[HW]     [o_du0][pusch0  405504 prach0   67584]
+[0m[HW]     [o-du 0][rx  483843 pps   10752 kbps   72960][tx 1434284 pps   31872 kbps  182321][Total Msgs_Rcvd 483843]
+[0m[HW]     [o_du0][pusch0  414720 prach0   69120]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  494595 pps   10752 kbps   72960][tx 1466156 pps   31872 kbps  182321][Total Msgs_Rcvd 494595]
+[0m[HW]     [o_du0][pusch0  423936 prach0   70656]
+[0m[HW]     [o-du 0][rx  505348 pps   10753 kbps   72962][tx 1498028 pps   31872 kbps  182321][Total Msgs_Rcvd 505348]
+[0m[HW]     [o_du0][pusch0  433152 prach0   72192]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  516100 pps   10752 kbps   72960][tx 1529900 pps   31872 kbps  182321][Total Msgs_Rcvd 516100]
+[0m[HW]     [o_du0][pusch0  442368 prach0   73728]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  526852 pps   10752 kbps   72960][tx 1561772 pps   31872 kbps  182321][Total Msgs_Rcvd 526852]
+[0m[HW]     [o_du0][pusch0  451584 prach0   75264]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  537604 pps   10752 kbps   72960][tx 1593644 pps   31872 kbps  182321][Total Msgs_Rcvd 537604]
+[0m[HW]     [o_du0][pusch0  460800 prach0   76800]
+[0m[HW]     [o-du 0][rx  548356 pps   10752 kbps   72960][tx 1625516 pps   31872 kbps  182321][Total Msgs_Rcvd 548356]
+[0m[HW]     [o_du0][pusch0  470016 prach0   78336]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  559108 pps   10752 kbps   72960][tx 1657388 pps   31872 kbps  182321][Total Msgs_Rcvd 559108]
+[0m[HW]     [o_du0][pusch0  479232 prach0   79872]
+[0m[HW]     [o-du 0][rx  569860 pps   10752 kbps   72960][tx 1689260 pps   31872 kbps  182321][Total Msgs_Rcvd 569860]
+[0m[HW]     [o_du0][pusch0  488448 prach0   81408]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  580612 pps   10752 kbps   72960][tx 1721132 pps   31872 kbps  182321][Total Msgs_Rcvd 580612]
+[0m[HW]     [o_du0][pusch0  497664 prach0   82944]
+[0m[HW]     [o-du 0][rx  591364 pps   10752 kbps   72960][tx 1753004 pps   31872 kbps  182321][Total Msgs_Rcvd 591364]
+[0m[HW]     [o_du0][pusch0  506880 prach0   84480]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  602116 pps   10752 kbps   72960][tx 1784876 pps   31872 kbps  182321][Total Msgs_Rcvd 602116]
+[0m[HW]     [o_du0][pusch0  516096 prach0   86016]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  612868 pps   10752 kbps   72960][tx 1816748 pps   31872 kbps  182321][Total Msgs_Rcvd 612868]
+[0m[HW]     [o_du0][pusch0  525312 prach0   87552]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  623620 pps   10752 kbps   72960][tx 1848620 pps   31872 kbps  182321][Total Msgs_Rcvd 623620]
+[0m[HW]     [o_du0][pusch0  534528 prach0   89088]
+[0m[HW]     [o-du 0][rx  634373 pps   10753 kbps   72960][tx 1880492 pps   31872 kbps  182321][Total Msgs_Rcvd 634373]
+[0m[HW]     [o_du0][pusch0  543744 prach0   90624]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  645125 pps   10752 kbps   72962][tx 1912364 pps   31872 kbps  182321][Total Msgs_Rcvd 645125]
+[0m[HW]     [o_du0][pusch0  552960 prach0   92160]
+[0m[HW]     [o-du 0][rx  655877 pps   10752 kbps   72960][tx 1944236 pps   31872 kbps  182321][Total Msgs_Rcvd 655877]
+[0m[HW]     [o_du0][pusch0  562176 prach0   93696]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  666629 pps   10752 kbps   72960][tx 1976108 pps   31872 kbps  182321][Total Msgs_Rcvd 666629]
+[0m[HW]     [o_du0][pusch0  571392 prach0   95232]
+[0m[HW]     [o-du 0][rx  677381 pps   10752 kbps   72960][tx 2007980 pps   31872 kbps  182321][Total Msgs_Rcvd 677381]
+[0m[HW]     [o_du0][pusch0  580608 prach0   96768]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  688133 pps   10752 kbps   72960][tx 2039852 pps   31872 kbps  182321][Total Msgs_Rcvd 688133]
+[0m[HW]     [o_du0][pusch0  589824 prach0   98304]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  698885 pps   10752 kbps   72960][tx 2071724 pps   31872 kbps  182321][Total Msgs_Rcvd 698885]
+[0m[HW]     [o_du0][pusch0  599040 prach0   99840]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  709637 pps   10752 kbps   72960][tx 2103596 pps   31872 kbps  182321][Total Msgs_Rcvd 709637]
+[0m[HW]     [o_du0][pusch0  608256 prach0  101376]
+[0m[HW]     [o-du 0][rx  720389 pps   10752 kbps   72960][tx 2135468 pps   31872 kbps  182321][Total Msgs_Rcvd 720389]
+[0m[HW]     [o_du0][pusch0  617472 prach0  102912]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  731141 pps   10752 kbps   72960][tx 2167340 pps   31872 kbps  182321][Total Msgs_Rcvd 731141]
+[0m[HW]     [o_du0][pusch0  626688 prach0  104448]
+[0m[HW]     [o-du 0][rx  741894 pps   10753 kbps   72960][tx 2199212 pps   31872 kbps  182321][Total Msgs_Rcvd 741894]
+[0m[HW]     [o_du0][pusch0  635904 prach0  105984]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  752647 pps   10753 kbps   72962][tx 2231084 pps   31872 kbps  182321][Total Msgs_Rcvd 752647]
+[0m[HW]     [o_du0][pusch0  645120 prach0  107520]
+[0m[HW]     [o-du 0][rx  763399 pps   10752 kbps   72960][tx 2262956 pps   31872 kbps  182321][Total Msgs_Rcvd 763399]
+[0m[HW]     [o_du0][pusch0  654336 prach0  109056]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  774151 pps   10752 kbps   72960][tx 2294828 pps   31872 kbps  182321][Total Msgs_Rcvd 774151]
+[0m[HW]     [o_du0][pusch0  663552 prach0  110592]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  784903 pps   10752 kbps   72960][tx 2326700 pps   31872 kbps  182321][Total Msgs_Rcvd 784903]
+[0m[HW]     [o_du0][pusch0  672768 prach0  112128]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  795656 pps   10753 kbps   72962][tx 2358572 pps   31872 kbps  182321][Total Msgs_Rcvd 795656]
+[0m[HW]     [o_du0][pusch0  681984 prach0  113664]
+[0m[HW]     [o-du 0][rx  806408 pps   10752 kbps   72960][tx 2390444 pps   31872 kbps  182321][Total Msgs_Rcvd 806408]
+[0m[HW]     [o_du0][pusch0  691200 prach0  115200]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  817160 pps   10752 kbps   72960][tx 2422316 pps   31872 kbps  182321][Total Msgs_Rcvd 817160]
+[0m[HW]     [o_du0][pusch0  700416 prach0  116736]
+[0m[HW]     [o-du 0][rx  827912 pps   10752 kbps   72960][tx 2454188 pps   31872 kbps  182321][Total Msgs_Rcvd 827912]
+[0m[HW]     [o_du0][pusch0  709632 prach0  118272]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  838664 pps   10752 kbps   72960][tx 2486060 pps   31872 kbps  182321][Total Msgs_Rcvd 838664]
+[0m[HW]     [o_du0][pusch0  718848 prach0  119808]
+[0m[HW]     [o-du 0][rx  849416 pps   10752 kbps   72960][tx 2517932 pps   31872 kbps  182321][Total Msgs_Rcvd 849416]
+[0m[HW]     [o_du0][pusch0  728064 prach0  121344]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  860168 pps   10752 kbps   72960][tx 2549804 pps   31872 kbps  182321][Total Msgs_Rcvd 860168]
+[0m[HW]     [o_du0][pusch0  737280 prach0  122880]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  870921 pps   10753 kbps   72962][tx 2581676 pps   31872 kbps  182321][Total Msgs_Rcvd 870921]
+[0m[HW]     [o_du0][pusch0  746496 prach0  124416]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  881673 pps   10752 kbps   72960][tx 2613548 pps   31872 kbps  182321][Total Msgs_Rcvd 881673]
+[0m[HW]     [o_du0][pusch0  755712 prach0  125952]
+[0m[HW]     [o-du 0][rx  892425 pps   10752 kbps   72960][tx 2645420 pps   31872 kbps  182321][Total Msgs_Rcvd 892425]
+[0m[HW]     [o_du0][pusch0  764928 prach0  127488]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  903177 pps   10752 kbps   72960][tx 2677292 pps   31872 kbps  182321][Total Msgs_Rcvd 903177]
+[0m[HW]     [o_du0][pusch0  774144 prach0  129024]
+[0m[HW]     [o-du 0][rx  913929 pps   10752 kbps   72960][tx 2709164 pps   31872 kbps  182321][Total Msgs_Rcvd 913929]
+[0m[HW]     [o_du0][pusch0  783360 prach0  130560]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  924681 pps   10752 kbps   72960][tx 2741036 pps   31872 kbps  182321][Total Msgs_Rcvd 924681]
+[0m[HW]     [o_du0][pusch0  792576 prach0  132096]
+[0m[HW]     [o-du 0][rx  935433 pps   10752 kbps   72960][tx 2772908 pps   31872 kbps  182321][Total Msgs_Rcvd 935433]
+[0m[HW]     [o_du0][pusch0  801792 prach0  133632]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  946185 pps   10752 kbps   72960][tx 2804780 pps   31872 kbps  182321][Total Msgs_Rcvd 946185]
+[0m[HW]     [o_du0][pusch0  811008 prach0  135168]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  956937 pps   10752 kbps   72960][tx 2836652 pps   31872 kbps  182321][Total Msgs_Rcvd 956937]
+[0m[HW]     [o_du0][pusch0  820224 prach0  136704]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  967689 pps   10752 kbps   72960][tx 2868524 pps   31872 kbps  182321][Total Msgs_Rcvd 967689]
+[0m[HW]     [o_du0][pusch0  829440 prach0  138240]
+[0m[HW]     [o-du 0][rx  978441 pps   10752 kbps   72960][tx 2900396 pps   31872 kbps  182321][Total Msgs_Rcvd 978441]
+[0m[HW]     [o_du0][pusch0  838656 prach0  139776]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx  989193 pps   10752 kbps   72960][tx 2932268 pps   31872 kbps  182321][Total Msgs_Rcvd 989193]
+[0m[HW]     [o_du0][pusch0  847872 prach0  141312]
+[0m[HW]     [o-du 0][rx  999946 pps   10753 kbps   72960][tx 2964140 pps   31872 kbps  182321][Total Msgs_Rcvd 999946]
+[0m[HW]     [o_du0][pusch0  857088 prach0  142848]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1010698 pps   10752 kbps   72960][tx 2996012 pps   31872 kbps  182321][Total Msgs_Rcvd 1010698]
+[0m[HW]     [o_du0][pusch0  866304 prach0  144384]
+[0m[HW]     [o-du 0][rx 1021450 pps   10752 kbps   72960][tx 3027884 pps   31872 kbps  182321][Total Msgs_Rcvd 1021450]
+[0m[HW]     [o_du0][pusch0  875520 prach0  145920]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1032202 pps   10752 kbps   72960][tx 3059756 pps   31872 kbps  182321][Total Msgs_Rcvd 1032202]
+[0m[HW]     [o_du0][pusch0  884736 prach0  147456]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1042954 pps   10752 kbps   72960][tx 3091628 pps   31872 kbps  182321][Total Msgs_Rcvd 1042954]
+[0m[HW]     [o_du0][pusch0  893952 prach0  148992]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1053706 pps   10752 kbps   72960][tx 3123500 pps   31872 kbps  182321][Total Msgs_Rcvd 1053706]
+[0m[HW]     [o_du0][pusch0  903168 prach0  150528]
+[0m[HW]     [o-du 0][rx 1064458 pps   10752 kbps   72960][tx 3155372 pps   31872 kbps  182321][Total Msgs_Rcvd 1064458]
+[0m[HW]     [o_du0][pusch0  912384 prach0  152064]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1075210 pps   10752 kbps   72960][tx 3187244 pps   31872 kbps  182321][Total Msgs_Rcvd 1075210]
+[0m[HW]     [o_du0][pusch0  921600 prach0  153600]
+[0m[HW]     [o-du 0][rx 1085962 pps   10752 kbps   72960][tx 3219116 pps   31872 kbps  182321][Total Msgs_Rcvd 1085962]
+[0m[HW]     [o_du0][pusch0  930816 prach0  155136]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1096714 pps   10752 kbps   72960][tx 3250988 pps   31872 kbps  182321][Total Msgs_Rcvd 1096714]
+[0m[HW]     [o_du0][pusch0  940032 prach0  156672]
+[0m[HW]     [o-du 0][rx 1107466 pps   10752 kbps   72960][tx 3282860 pps   31872 kbps  182321][Total Msgs_Rcvd 1107466]
+[0m[HW]     [o_du0][pusch0  949248 prach0  158208]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1118219 pps   10753 kbps   72962][tx 3314732 pps   31872 kbps  182321][Total Msgs_Rcvd 1118219]
+[0m[HW]     [o_du0][pusch0  958464 prach0  159744]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1128971 pps   10752 kbps   72960][tx 3346604 pps   31872 kbps  182321][Total Msgs_Rcvd 1128971]
+[0m[HW]     [o_du0][pusch0  967680 prach0  161280]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1139724 pps   10753 kbps   72962][tx 3378476 pps   31872 kbps  182321][Total Msgs_Rcvd 1139724]
+[0m[HW]     [o_du0][pusch0  976896 prach0  162816]
+[0m[HW]     [o-du 0][rx 1150476 pps   10752 kbps   72960][tx 3410348 pps   31872 kbps  182321][Total Msgs_Rcvd 1150476]
+[0m[HW]     [o_du0][pusch0  986112 prach0  164352]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1161228 pps   10752 kbps   72960][tx 3442220 pps   31872 kbps  182321][Total Msgs_Rcvd 1161228]
+[0m[HW]     [o_du0][pusch0  995328 prach0  165888]
+[0m[HW]     [o-du 0][rx 1171980 pps   10752 kbps   72960][tx 3474092 pps   31872 kbps  182321][Total Msgs_Rcvd 1171980]
+[0m[HW]     [o_du0][pusch0 1004544 prach0  167424]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1182733 pps   10753 kbps   72962][tx 3505964 pps   31872 kbps  182321][Total Msgs_Rcvd 1182733]
+[0m[HW]     [o_du0][pusch0 1013760 prach0  168960]
+[0m[HW]     [o-du 0][rx 1193485 pps   10752 kbps   72960][tx 3537836 pps   31872 kbps  182321][Total Msgs_Rcvd 1193485]
+[0m[HW]     [o_du0][pusch0 1022976 prach0  170496]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1204237 pps   10752 kbps   72960][tx 3569708 pps   31872 kbps  182321][Total Msgs_Rcvd 1204237]
+[0m[HW]     [o_du0][pusch0 1032192 prach0  172032]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1214989 pps   10752 kbps   72960][tx 3601580 pps   31872 kbps  182321][Total Msgs_Rcvd 1214989]
+[0m[HW]     [o_du0][pusch0 1041408 prach0  173568]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1225741 pps   10752 kbps   72960][tx 3633452 pps   31872 kbps  182321][Total Msgs_Rcvd 1225741]
+[0m[HW]     [o_du0][pusch0 1050624 prach0  175104]
+[0m[HW]     [o-du 0][rx 1236493 pps   10752 kbps   72960][tx 3665324 pps   31872 kbps  182321][Total Msgs_Rcvd 1236493]
+[0m[HW]     [o_du0][pusch0 1059840 prach0  176640]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1247246 pps   10753 kbps   72960][tx 3697196 pps   31872 kbps  182321][Total Msgs_Rcvd 1247246]
+[0m[HW]     [o_du0][pusch0 1069056 prach0  178176]
+[0m[HW]     [o-du 0][rx 1257998 pps   10752 kbps   72962][tx 3729068 pps   31872 kbps  182321][Total Msgs_Rcvd 1257998]
+[0m[HW]     [o_du0][pusch0 1078272 prach0  179712]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1268750 pps   10752 kbps   72960][tx 3760940 pps   31872 kbps  182321][Total Msgs_Rcvd 1268750]
+[0m[HW]     [o_du0][pusch0 1087488 prach0  181248]
+[0m[HW]     [o-du 0][rx 1279502 pps   10752 kbps   72960][tx 3792812 pps   31872 kbps  182321][Total Msgs_Rcvd 1279502]
+[0m[HW]     [o_du0][pusch0 1096704 prach0  182784]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1290254 pps   10752 kbps   72960][tx 3824684 pps   31872 kbps  182321][Total Msgs_Rcvd 1290254]
+[0m[HW]     [o_du0][pusch0 1105920 prach0  184320]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1301006 pps   10752 kbps   72960][tx 3856556 pps   31872 kbps  182321][Total Msgs_Rcvd 1301006]
+[0m[HW]     [o_du0][pusch0 1115136 prach0  185856]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1311758 pps   10752 kbps   72960][tx 3888428 pps   31872 kbps  182321][Total Msgs_Rcvd 1311758]
+[0m[HW]     [o_du0][pusch0 1124352 prach0  187392]
+[0m[HW]     [o-du 0][rx 1322510 pps   10752 kbps   72960][tx 3920300 pps   31872 kbps  182321][Total Msgs_Rcvd 1322510]
+[0m[HW]     [o_du0][pusch0 1133568 prach0  188928]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1333262 pps   10752 kbps   72960][tx 3952172 pps   31872 kbps  182321][Total Msgs_Rcvd 1333262]
+[0m[HW]     [o_du0][pusch0 1142784 prach0  190464]
+[0m[HW]     [o-du 0][rx 1344014 pps   10752 kbps   72960][tx 3984044 pps   31872 kbps  182321][Total Msgs_Rcvd 1344014]
+[0m[HW]     [o_du0][pusch0 1152000 prach0  192000]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1354766 pps   10752 kbps   72960][tx 4015916 pps   31872 kbps  182321][Total Msgs_Rcvd 1354766]
+[0m[HW]     [o_du0][pusch0 1161216 prach0  193536]
+[0m[HW]     [o-du 0][rx 1365518 pps   10752 kbps   72960][tx 4047788 pps   31872 kbps  182321][Total Msgs_Rcvd 1365518]
+[0m[HW]     [o_du0][pusch0 1170432 prach0  195072]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1376270 pps   10752 kbps   72960][tx 4079660 pps   31872 kbps  182321][Total Msgs_Rcvd 1376270]
+[0m[HW]     [o_du0][pusch0 1179648 prach0  196608]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1387023 pps   10753 kbps   72960][tx 4111532 pps   31872 kbps  182321][Total Msgs_Rcvd 1387023]
+[0m[HW]     [o_du0][pusch0 1188864 prach0  198144]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1397775 pps   10752 kbps   72960][tx 4143404 pps   31872 kbps  182321][Total Msgs_Rcvd 1397775]
+[0m[HW]     [o_du0][pusch0 1198080 prach0  199680]
+[0m[HW]     [o-du 0][rx 1408527 pps   10752 kbps   72960][tx 4175276 pps   31872 kbps  182321][Total Msgs_Rcvd 1408527]
+[0m[HW]     [o_du0][pusch0 1207296 prach0  201216]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1419279 pps   10752 kbps   72960][tx 4207148 pps   31872 kbps  182321][Total Msgs_Rcvd 1419279]
+[0m[HW]     [o_du0][pusch0 1216512 prach0  202752]
+[0m[HW]     [o-du 0][rx 1430031 pps   10752 kbps   72960][tx 4239020 pps   31872 kbps  182321][Total Msgs_Rcvd 1430031]
+[0m[HW]     [o_du0][pusch0 1225728 prach0  204288]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1440783 pps   10752 kbps   72960][tx 4270892 pps   31872 kbps  182321][Total Msgs_Rcvd 1440783]
+[0m[HW]     [o_du0][pusch0 1234944 prach0  205824]
+[0m[HW]     [o-du 0][rx 1451535 pps   10752 kbps   72960][tx 4302764 pps   31872 kbps  182321][Total Msgs_Rcvd 1451535]
+[0m[HW]     [o_du0][pusch0 1244160 prach0  207360]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1462287 pps   10752 kbps   72960][tx 4334636 pps   31872 kbps  182321][Total Msgs_Rcvd 1462287]
+[0m[HW]     [o_du0][pusch0 1253376 prach0  208896]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1473039 pps   10752 kbps   72960][tx 4366508 pps   31872 kbps  182321][Total Msgs_Rcvd 1473039]
+[0m[HW]     [o_du0][pusch0 1262592 prach0  210432]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1483791 pps   10752 kbps   72960][tx 4398380 pps   31872 kbps  182321][Total Msgs_Rcvd 1483791]
+[0m[HW]     [o_du0][pusch0 1271808 prach0  211968]
+[0m[HW]     [o-du 0][rx 1494544 pps   10753 kbps   72962][tx 4430252 pps   31872 kbps  182321][Total Msgs_Rcvd 1494544]
+[0m[HW]     [o_du0][pusch0 1281024 prach0  213504]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1505296 pps   10752 kbps   72960][tx 4462124 pps   31872 kbps  182321][Total Msgs_Rcvd 1505296]
+[0m[HW]     [o_du0][pusch0 1290240 prach0  215040]
+[0m[HW]     [o-du 0][rx 1516049 pps   10753 kbps   72962][tx 4493996 pps   31872 kbps  182321][Total Msgs_Rcvd 1516049]
+[0m[HW]     [o_du0][pusch0 1299456 prach0  216576]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1526801 pps   10752 kbps   72960][tx 4525868 pps   31872 kbps  182321][Total Msgs_Rcvd 1526801]
+[0m[HW]     [o_du0][pusch0 1308672 prach0  218112]
+[0m[HW]     [o-du 0][rx 1537553 pps   10752 kbps   72960][tx 4557740 pps   31872 kbps  182321][Total Msgs_Rcvd 1537553]
+[0m[HW]     [o_du0][pusch0 1317888 prach0  219648]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1548305 pps   10752 kbps   72960][tx 4589612 pps   31872 kbps  182321][Total Msgs_Rcvd 1548305]
+[0m[HW]     [o_du0][pusch0 1327104 prach0  221184]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1559058 pps   10753 kbps   72962][tx 4621484 pps   31872 kbps  182321][Total Msgs_Rcvd 1559058]
+[0m[HW]     [o_du0][pusch0 1336320 prach0  222720]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1569810 pps   10752 kbps   72960][tx 4653356 pps   31872 kbps  182321][Total Msgs_Rcvd 1569810]
+[0m[HW]     [o_du0][pusch0 1345536 prach0  224256]
+[0m[HW]     [o-du 0][rx 1580562 pps   10752 kbps   72960][tx 4685228 pps   31872 kbps  182321][Total Msgs_Rcvd 1580562]
+[0m[HW]     [o_du0][pusch0 1354752 prach0  225792]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1591314 pps   10752 kbps   72960][tx 4717100 pps   31872 kbps  182321][Total Msgs_Rcvd 1591314]
+[0m[HW]     [o_du0][pusch0 1363968 prach0  227328]
+[0m[HW]     [o-du 0][rx 1602066 pps   10752 kbps   72960][tx 4748972 pps   31872 kbps  182321][Total Msgs_Rcvd 1602066]
+[0m[HW]     [o_du0][pusch0 1373184 prach0  228864]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1612818 pps   10752 kbps   72960][tx 4780844 pps   31872 kbps  182321][Total Msgs_Rcvd 1612818]
+[0m[HW]     [o_du0][pusch0 1382400 prach0  230400]
+[0m[HW]     [o-du 0][rx 1623571 pps   10753 kbps   72962][tx 4812716 pps   31872 kbps  182321][Total Msgs_Rcvd 1623571]
+[0m[HW]     [o_du0][pusch0 1391616 prach0  231936]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1634323 pps   10752 kbps   72960][tx 4844588 pps   31872 kbps  182321][Total Msgs_Rcvd 1634323]
+[0m[HW]     [o_du0][pusch0 1400832 prach0  233472]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1645075 pps   10752 kbps   72960][tx 4876460 pps   31872 kbps  182321][Total Msgs_Rcvd 1645075]
+[0m[HW]     [o_du0][pusch0 1410048 prach0  235008]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1655827 pps   10752 kbps   72960][tx 4908332 pps   31872 kbps  182321][Total Msgs_Rcvd 1655827]
+[0m[HW]     [o_du0][pusch0 1419264 prach0  236544]
+[0m[HW]     [o-du 0][rx 1666579 pps   10752 kbps   72960][tx 4940204 pps   31872 kbps  182321][Total Msgs_Rcvd 1666579]
+[0m[HW]     [o_du0][pusch0 1428480 prach0  238080]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1677331 pps   10752 kbps   72960][tx 4972076 pps   31872 kbps  182321][Total Msgs_Rcvd 1677331]
+[0m[HW]     [o_du0][pusch0 1437696 prach0  239616]
+[0m[HW]     [o-du 0][rx 1688083 pps   10752 kbps   72960][tx 5003948 pps   31872 kbps  182321][Total Msgs_Rcvd 1688083]
+[0m[HW]     [o_du0][pusch0 1446912 prach0  241152]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1698835 pps   10752 kbps   72960][tx 5035820 pps   31872 kbps  182321][Total Msgs_Rcvd 1698835]
+[0m[HW]     [o_du0][pusch0 1456128 prach0  242688]
+[0m[HW]     [o-du 0][rx 1709587 pps   10752 kbps   72960][tx 5067692 pps   31872 kbps  182321][Total Msgs_Rcvd 1709587]
+[0m[HW]     [o_du0][pusch0 1465344 prach0  244224]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1720339 pps   10752 kbps   72960][tx 5099564 pps   31872 kbps  182321][Total Msgs_Rcvd 1720339]
+[0m[HW]     [o_du0][pusch0 1474560 prach0  245760]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1731091 pps   10752 kbps   72960][tx 5131436 pps   31872 kbps  182321][Total Msgs_Rcvd 1731091]
+[0m[HW]     [o_du0][pusch0 1483776 prach0  247296]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1741843 pps   10752 kbps   72960][tx 5163308 pps   31872 kbps  182321][Total Msgs_Rcvd 1741843]
+[0m[HW]     [o_du0][pusch0 1492992 prach0  248832]
+[0m[HW]     [o-du 0][rx 1752595 pps   10752 kbps   72960][tx 5195180 pps   31872 kbps  182321][Total Msgs_Rcvd 1752595]
+[0m[HW]     [o_du0][pusch0 1502208 prach0  250368]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1763348 pps   10753 kbps   72962][tx 5227052 pps   31872 kbps  182321][Total Msgs_Rcvd 1763348]
+[0m[HW]     [o_du0][pusch0 1511424 prach0  251904]
+[0m[HW]     [o-du 0][rx 1774100 pps   10752 kbps   72960][tx 5258924 pps   31872 kbps  182321][Total Msgs_Rcvd 1774100]
+[0m[HW]     [o_du0][pusch0 1520640 prach0  253440]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1784852 pps   10752 kbps   72960][tx 5290796 pps   31872 kbps  182321][Total Msgs_Rcvd 1784852]
+[0m[HW]     [o_du0][pusch0 1529856 prach0  254976]
+[0m[HW]     [o-du 0][rx 1795604 pps   10752 kbps   72960][tx 5322668 pps   31872 kbps  182321][Total Msgs_Rcvd 1795604]
+[0m[HW]     [o_du0][pusch0 1539072 prach0  256512]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1806356 pps   10752 kbps   72960][tx 5354540 pps   31872 kbps  182321][Total Msgs_Rcvd 1806356]
+[0m[HW]     [o_du0][pusch0 1548288 prach0  258048]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1817108 pps   10752 kbps   72960][tx 5386412 pps   31872 kbps  182321][Total Msgs_Rcvd 1817108]
+[0m[HW]     [o_du0][pusch0 1557504 prach0  259584]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1827860 pps   10752 kbps   72960][tx 5418284 pps   31872 kbps  182321][Total Msgs_Rcvd 1827860]
+[0m[HW]     [o_du0][pusch0 1566720 prach0  261120]
+[0m[HW]     [o-du 0][rx 1838612 pps   10752 kbps   72960][tx 5450156 pps   31872 kbps  182321][Total Msgs_Rcvd 1838612]
+[0m[HW]     [o_du0][pusch0 1575936 prach0  262656]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1849364 pps   10752 kbps   72960][tx 5482028 pps   31872 kbps  182321][Total Msgs_Rcvd 1849364]
+[0m[HW]     [o_du0][pusch0 1585152 prach0  264192]
+[0m[HW]     [o-du 0][rx 1860116 pps   10752 kbps   72960][tx 5513900 pps   31872 kbps  182321][Total Msgs_Rcvd 1860116]
+[0m[HW]     [o_du0][pusch0 1594368 prach0  265728]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1870868 pps   10752 kbps   72960][tx 5545772 pps   31872 kbps  182321][Total Msgs_Rcvd 1870868]
+[0m[HW]     [o_du0][pusch0 1603584 prach0  267264]
+[0m[HW]     [o-du 0][rx 1881620 pps   10752 kbps   72960][tx 5577644 pps   31872 kbps  182321][Total Msgs_Rcvd 1881620]
+[0m[HW]     [o_du0][pusch0 1612800 prach0  268800]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1892372 pps   10752 kbps   72960][tx 5609516 pps   31872 kbps  182321][Total Msgs_Rcvd 1892372]
+[0m[HW]     [o_du0][pusch0 1622016 prach0  270336]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1903124 pps   10752 kbps   72960][tx 5641388 pps   31872 kbps  182321][Total Msgs_Rcvd 1903124]
+[0m[HW]     [o_du0][pusch0 1631232 prach0  271872]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1913876 pps   10752 kbps   72960][tx 5673260 pps   31872 kbps  182321][Total Msgs_Rcvd 1913876]
+[0m[HW]     [o_du0][pusch0 1640448 prach0  273408]
+[0m[HW]     [o-du 0][rx 1924628 pps   10752 kbps   72960][tx 5705132 pps   31872 kbps  182321][Total Msgs_Rcvd 1924628]
+[0m[HW]     [o_du0][pusch0 1649664 prach0  274944]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1935380 pps   10752 kbps   72960][tx 5737004 pps   31872 kbps  182321][Total Msgs_Rcvd 1935380]
+[0m[HW]     [o_du0][pusch0 1658880 prach0  276480]
+[0m[HW]     [o-du 0][rx 1946132 pps   10752 kbps   72960][tx 5768876 pps   31872 kbps  182321][Total Msgs_Rcvd 1946132]
+[0m[HW]     [o_du0][pusch0 1668096 prach0  278016]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1956884 pps   10752 kbps   72960][tx 5800748 pps   31872 kbps  182321][Total Msgs_Rcvd 1956884]
+[0m[HW]     [o_du0][pusch0 1677312 prach0  279552]
+[0m[HW]     [o-du 0][rx 1967636 pps   10752 kbps   72960][tx 5832620 pps   31872 kbps  182321][Total Msgs_Rcvd 1967636]
+[0m[HW]     [o_du0][pusch0 1686528 prach0  281088]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1978388 pps   10752 kbps   72960][tx 5864492 pps   31872 kbps  182321][Total Msgs_Rcvd 1978388]
+[0m[HW]     [o_du0][pusch0 1695744 prach0  282624]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1989140 pps   10752 kbps   72960][tx 5896364 pps   31872 kbps  182321][Total Msgs_Rcvd 1989140]
+[0m[HW]     [o_du0][pusch0 1704960 prach0  284160]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 1999892 pps   10752 kbps   72960][tx 5928236 pps   31872 kbps  182321][Total Msgs_Rcvd 1999892]
+[0m[HW]     [o_du0][pusch0 1714176 prach0  285696]
+[0m[HW]     [o-du 0][rx 2010644 pps   10752 kbps   72960][tx 5960108 pps   31872 kbps  182321][Total Msgs_Rcvd 2010644]
+[0m[HW]     [o_du0][pusch0 1723392 prach0  287232]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2021396 pps   10752 kbps   72960][tx 5991980 pps   31872 kbps  182321][Total Msgs_Rcvd 2021396]
+[0m[HW]     [o_du0][pusch0 1732608 prach0  288768]
+[0m[HW]     [o-du 0][rx 2032148 pps   10752 kbps   72960][tx 6023852 pps   31872 kbps  182321][Total Msgs_Rcvd 2032148]
+[0m[HW]     [o_du0][pusch0 1741824 prach0  290304]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2042900 pps   10752 kbps   72960][tx 6055724 pps   31872 kbps  182321][Total Msgs_Rcvd 2042900]
+[0m[HW]     [o_du0][pusch0 1751040 prach0  291840]
+[0m[HW]     [o-du 0][rx 2053652 pps   10752 kbps   72960][tx 6087596 pps   31872 kbps  182321][Total Msgs_Rcvd 2053652]
+[0m[HW]     [o_du0][pusch0 1760256 prach0  293376]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2064404 pps   10752 kbps   72960][tx 6119468 pps   31872 kbps  182321][Total Msgs_Rcvd 2064404]
+[0m[HW]     [o_du0][pusch0 1769472 prach0  294912]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2075156 pps   10752 kbps   72960][tx 6151340 pps   31872 kbps  182321][Total Msgs_Rcvd 2075156]
+[0m[HW]     [o_du0][pusch0 1778688 prach0  296448]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2085908 pps   10752 kbps   72960][tx 6183212 pps   31872 kbps  182321][Total Msgs_Rcvd 2085908]
+[0m[HW]     [o_du0][pusch0 1787904 prach0  297984]
+[0m[HW]     [o-du 0][rx 2096660 pps   10752 kbps   72960][tx 6215084 pps   31872 kbps  182321][Total Msgs_Rcvd 2096660]
+[0m[HW]     [o_du0][pusch0 1797120 prach0  299520]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2107412 pps   10752 kbps   72960][tx 6246956 pps   31872 kbps  182321][Total Msgs_Rcvd 2107412]
+[0m[HW]     [o_du0][pusch0 1806336 prach0  301056]
+[0m[HW]     [o-du 0][rx 2118164 pps   10752 kbps   72960][tx 6278828 pps   31872 kbps  182321][Total Msgs_Rcvd 2118164]
+[0m[HW]     [o_du0][pusch0 1815552 prach0  302592]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2128916 pps   10752 kbps   72960][tx 6310700 pps   31872 kbps  182321][Total Msgs_Rcvd 2128916]
+[0m[HW]     [o_du0][pusch0 1824768 prach0  304128]
+[0m[HW]     [o-du 0][rx 2139668 pps   10752 kbps   72960][tx 6342572 pps   31872 kbps  182321][Total Msgs_Rcvd 2139668]
+[0m[HW]     [o_du0][pusch0 1833984 prach0  305664]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2150420 pps   10752 kbps   72960][tx 6374444 pps   31872 kbps  182321][Total Msgs_Rcvd 2150420]
+[0m[HW]     [o_du0][pusch0 1843200 prach0  307200]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2161172 pps   10752 kbps   72960][tx 6406316 pps   31872 kbps  182321][Total Msgs_Rcvd 2161172]
+[0m[HW]     [o_du0][pusch0 1852416 prach0  308736]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2171924 pps   10752 kbps   72960][tx 6438188 pps   31872 kbps  182321][Total Msgs_Rcvd 2171924]
+[0m[HW]     [o_du0][pusch0 1861632 prach0  310272]
+[0m[HW]     [o-du 0][rx 2182676 pps   10752 kbps   72960][tx 6470060 pps   31872 kbps  182321][Total Msgs_Rcvd 2182676]
+[0m[HW]     [o_du0][pusch0 1870848 prach0  311808]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2193428 pps   10752 kbps   72960][tx 6501932 pps   31872 kbps  182321][Total Msgs_Rcvd 2193428]
+[0m[HW]     [o_du0][pusch0 1880064 prach0  313344]
+[0m[HW]     [o-du 0][rx 2204180 pps   10752 kbps   72960][tx 6533804 pps   31872 kbps  182321][Total Msgs_Rcvd 2204180]
+[0m[HW]     [o_du0][pusch0 1889280 prach0  314880]
+[0m[PHY]    [MAC SCHED] frame 768, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2214932 pps   10752 kbps   72960][tx 6565676 pps   31872 kbps  182321][Total Msgs_Rcvd 2214932]
+[0m[HW]     [o_du0][pusch0 1898496 prach0  316416]
+[0m[HW]     [o-du 0][rx 2225684 pps   10752 kbps   72960][tx 6597548 pps   31872 kbps  182321][Total Msgs_Rcvd 2225684]
+[0m[HW]     [o_du0][pusch0 1907712 prach0  317952]
+[0m[PHY]    [MAC SCHED] frame 0, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2236436 pps   10752 kbps   72960][tx 6629420 pps   31872 kbps  182321][Total Msgs_Rcvd 2236436]
+[0m[HW]     [o_du0][pusch0 1916928 prach0  319488]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2247188 pps   10752 kbps   72960][tx 6661292 pps   31872 kbps  182321][Total Msgs_Rcvd 2247188]
+[0m[HW]     [o_du0][pusch0 1926144 prach0  321024]
+[0m[PHY]    [MAC SCHED] frame 256, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2257940 pps   10752 kbps   72960][tx 6693164 pps   31872 kbps  182321][Total Msgs_Rcvd 2257940]
+[0m[HW]     [o_du0][pusch0 1935360 prach0  322560]
+[0m[HW]     [o-du 0][rx 2264882 pps    6942 kbps   72960][tx 6725036 pps   31872 kbps  182321][Total Msgs_Rcvd 2264882]
+[0m[HW]     [o_du0][pusch0 1941318 prach0  323544]
+[0m[PHY]    [MAC SCHED] frame 512, slot 0: DL_req has 3 PDUs
+[0m[PHY]    [MAC SCHED]   PDU[0]: type=SSB (3)
+[0m[PHY]    [MAC SCHED]   PDU[1]: type=PDCCH (0)
+[0m[PHY]    [MAC SCHED]   PDU[2]: type=PDSCH (1)
+[0m[HW]     [o-du 0][rx 2264882 pps       0 kbps       0][tx 6756908 pps   31872 kbps  182321][Total Msgs_Rcvd 2264882]
+[0m[HW]     [o_du0][pusch0 1941318 prach0  323544]
+[0m

@@ -1,0 +1,1730 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260524_191406_pid820254.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    329728 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" "--numerology" "1" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7ffe27f46850
+  tx_up_eAxC2Vf 0x7ffe27f47450
+  rx_cp_eAxC2Vf 0x7ffe27f48050
+  rx_up_eAxC2Vf 0x7ffe27f48c50
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 820268]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 12] [PID: 820268]
+spawn worker 0 core 12
+xran_generic_worker_thread [CPU 13] [PID: 820268]
+spawn worker 1 core 13
+xran_open [CPU 10] [PID: 820268]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x78c1e8f95040
+xran_sector_get_instances [0]: CC 0 handle 0x5985c1f65ac0
+Handle: 0x78c21b534b68 Instance: 0x5985c1f65ac0
+-> hInstance 0x5985c1f65ac0
+ru_0_cc_0_idx_0: [ handle 0x5985c1f65ac0 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x5985c1f65ac0 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284763240 
+xran_bm_init() hInstance 0x5985c1f65ac0 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x5985c1f65ac0 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x5985c1f65ac0 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5985c1f65ac0 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284765dc0 
+xran_bm_init() hInstance 0x5985c1f65ac0 poolIdx 1 elements 511 size 497[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=1, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=0: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     [PRB MAP INIT] ant=0, slot=1: After xran_init, dir=0, nPrbElm=1
+[0m[HW]     [PRB MAP INIT]   prbMap[0]: compMethod=0, iqWidth=16, nRBStart=0, nRBSize=24
+[0m[HW]     Enqueued 1023 elements to uplane_data_ring
+[0m[HW]     Installing 14 callbacks 5 symbols before OTA
+[0m[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[HW]     VRTSIM: TX sample advance 4096 samples
+[0m[HW]     Running as server: waiting for client to connect
+[0m[HW]     VRTSIM: UE 0 - 1x1 antennas, Model 0 (TDL-A), DS 10.0ns, Speed 1.5m/s
+[0m[HW]     VRTSIM: UE 0 - TX: 1 antennas (offset 0), RX: 1 antennas (offset 0)
+[0m[HW]     VRTSIM: Total streams - UL: 1, DL: 1
+[0m[HW]     first_call set from phy cb
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 0, slot 13, symbol 10, aarx 0
+[0m[HW]     ORU PRACH frame adjust 0 frame(s)
+[0m[93m[HW]     PRACH was not configured for frame.slot 0.19 adjusted 0.19 frame8 0: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 14, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 28, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 42, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 56, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 69, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 83, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 83.19 adjusted 83.19 frame8 83: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 97, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 111, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 125, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 139, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 153, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 166.19 adjusted 166.19 frame8 166: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 167, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 181, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 194, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 208, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 222, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 236, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 250, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 250.19 adjusted 250.19 frame8 250: no C-plane config cached
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 264, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 278, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 292, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 306, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 319, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 333, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 333.19 adjusted 333.19 frame8 77: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 347, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 361, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 375, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 389, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 403, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 416.19 adjusted 416.19 frame8 160: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 417, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 431, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 444, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 458, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 472, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 486, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 500, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 500.19 adjusted 500.19 frame8 244: no C-plane config cached
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 514, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 528, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 542, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 556, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 569, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 583, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 583.19 adjusted 583.19 frame8 71: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 597, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 611, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 625, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 639, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 653, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 666.19 adjusted 666.19 frame8 154: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 667, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 681, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 694, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 708, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 722, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 736, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 750, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 750.19 adjusted 750.19 frame8 238: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 764, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 0
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 1
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 778, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 792, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 806, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 819, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 833, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 833.19 adjusted 833.19 frame8 65: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 847, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 861, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 875, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 889, slot 9, symbol 6, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 903, slot 8, symbol 12, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 916.19 adjusted 916.19 frame8 148: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 917, slot 4, symbol 8, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 931, slot 4, symbol 0, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 944, slot 19, symbol 10, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 958, slot 19, symbol 2, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 972, slot 14, symbol 12, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 986, slot 14, symbol 4, aarx 0
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1000, slot 13, symbol 10, aarx 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 1000.19 adjusted 1000.19 frame8 232: no C-plane config cached
+[0m[93m[HW]     PUSCH was not yet configured by the O-DU frame 1014, slot 9, symbol 6, aarx 0
+[0m[HW]     RU: packets received 7
+[0m[HW]     RU: packets processed 0
+[0m[HW]     RU: packets dropped 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 125.19 adjusted 125.19 frame8 125: no C-plane config cached
+[0m[HW]     RU: packets received 49159
+[0m[HW]     RU: packets processed 49152
+[0m[HW]     RU: packets dropped 1
+[0m[HW]     RU: packets received 98311
+[0m[HW]     RU: packets processed 98304
+[0m[HW]     RU: packets dropped 1
+[0m[HW]     RU: packets received 147463
+[0m[HW]     RU: packets processed 147456
+[0m[HW]     RU: packets dropped 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 196616
+[0m[HW]     RU: packets processed 196608
+[0m[HW]     RU: packets dropped 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 245768
+[0m[HW]     RU: packets processed 245760
+[0m[HW]     RU: packets dropped 3
+[0m[HW]     RU: packets received 294919
+[0m[HW]     RU: packets processed 294912
+[0m[HW]     RU: packets dropped 3
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 344072
+[0m[HW]     RU: packets processed 344064
+[0m[HW]     RU: packets dropped 4
+[0m[HW]     RU: packets received 393223
+[0m[HW]     RU: packets processed 393216
+[0m[HW]     RU: packets dropped 4
+[0m[HW]     RU: packets received 442375
+[0m[HW]     RU: packets processed 442368
+[0m[HW]     RU: packets dropped 4
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 491528
+[0m[HW]     RU: packets processed 491520
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 540679
+[0m[HW]     RU: packets processed 540672
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 589831
+[0m[HW]     RU: packets processed 589824
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 638983
+[0m[HW]     RU: packets processed 638976
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 688135
+[0m[HW]     RU: packets processed 688128
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 737287
+[0m[HW]     RU: packets processed 737280
+[0m[HW]     RU: packets dropped 5
+[0m[HW]     RU: packets received 786439
+[0m[HW]     RU: packets processed 786432
+[0m[HW]     RU: packets dropped 5
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 835592
+[0m[HW]     RU: packets processed 835584
+[0m[HW]     RU: packets dropped 6
+[0m[HW]     RU: packets received 884743
+[0m[HW]     RU: packets processed 884736
+[0m[HW]     RU: packets dropped 6
+[0m[HW]     RU: packets received 933895
+[0m[HW]     RU: packets processed 933888
+[0m[HW]     RU: packets dropped 6
+[0m[HW]     RU: packets received 983047
+[0m[HW]     RU: packets processed 983040
+[0m[HW]     RU: packets dropped 6
+[0m[HW]     RU: packets received 1032199
+[0m[HW]     RU: packets processed 1032192
+[0m[HW]     RU: packets dropped 6
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1081352
+[0m[HW]     RU: packets processed 1081344
+[0m[HW]     RU: packets dropped 7
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1130504
+[0m[HW]     RU: packets processed 1130496
+[0m[HW]     RU: packets dropped 8
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1179656
+[0m[HW]     RU: packets processed 1179648
+[0m[HW]     RU: packets dropped 9
+[0m[HW]     RU: packets received 1228807
+[0m[HW]     RU: packets processed 1228800
+[0m[HW]     RU: packets dropped 9
+[0m[HW]     RU: packets received 1277959
+[0m[HW]     RU: packets processed 1277952
+[0m[HW]     RU: packets dropped 9
+[0m[HW]     RU: packets received 1327111
+[0m[HW]     RU: packets processed 1327104
+[0m[HW]     RU: packets dropped 9
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1376264
+[0m[HW]     RU: packets processed 1376256
+[0m[HW]     RU: packets dropped 10
+[0m[HW]     RU: packets received 1425415
+[0m[HW]     RU: packets processed 1425408
+[0m[HW]     RU: packets dropped 10
+[0m[HW]     RU: packets received 1474567
+[0m[HW]     RU: packets processed 1474560
+[0m[HW]     RU: packets dropped 10
+[0m[HW]     RU: packets received 1523719
+[0m[HW]     RU: packets processed 1523712
+[0m[HW]     RU: packets dropped 10
+[0m[HW]     RU: packets received 1572871
+[0m[HW]     RU: packets processed 1572864
+[0m[HW]     RU: packets dropped 10
+[0m[HW]     RU: packets received 1622023
+[0m[HW]     RU: packets processed 1622016
+[0m[HW]     RU: packets dropped 10
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 1671176
+[0m[HW]     RU: packets processed 1671165
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1720327
+[0m[HW]     RU: packets processed 1720317
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1769479
+[0m[HW]     RU: packets processed 1769469
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1818631
+[0m[HW]     RU: packets processed 1818621
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1867783
+[0m[HW]     RU: packets processed 1867773
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1916935
+[0m[HW]     RU: packets processed 1916925
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 1966087
+[0m[HW]     RU: packets processed 1966077
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2015239
+[0m[HW]     RU: packets processed 2015229
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2064391
+[0m[HW]     RU: packets processed 2064381
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2113543
+[0m[HW]     RU: packets processed 2113533
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2162695
+[0m[HW]     RU: packets processed 2162685
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2211847
+[0m[HW]     RU: packets processed 2211837
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2260999
+[0m[HW]     RU: packets processed 2260989
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2310151
+[0m[HW]     RU: packets processed 2310141
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2359303
+[0m[HW]     RU: packets processed 2359293
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2408455
+[0m[HW]     RU: packets processed 2408445
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2457607
+[0m[HW]     RU: packets processed 2457597
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2506759
+[0m[HW]     RU: packets processed 2506749
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2555911
+[0m[HW]     RU: packets processed 2555901
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2605063
+[0m[HW]     RU: packets processed 2605053
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2654215
+[0m[HW]     RU: packets processed 2654205
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2703367
+[0m[HW]     RU: packets processed 2703357
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2752519
+[0m[HW]     RU: packets processed 2752509
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2801671
+[0m[HW]     RU: packets processed 2801661
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2850824
+[0m[HW]     RU: packets processed 2850813
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2899975
+[0m[HW]     RU: packets processed 2899965
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2949127
+[0m[HW]     RU: packets processed 2949117
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 2998279
+[0m[HW]     RU: packets processed 2998269
+[0m[HW]     RU: packets dropped 14
+[0m[HW]     RU: packets received 3047431
+[0m[HW]     RU: packets processed 3047421
+[0m[HW]     RU: packets dropped 14
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[HW]     RU: packets received 3096584
+[0m[HW]     RU: packets processed 3096572
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3145735
+[0m[HW]     RU: packets processed 3145724
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3194887
+[0m[HW]     RU: packets processed 3194876
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3244039
+[0m[HW]     RU: packets processed 3244028
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3293191
+[0m[HW]     RU: packets processed 3293180
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3342343
+[0m[HW]     RU: packets processed 3342332
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3391495
+[0m[HW]     RU: packets processed 3391484
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3440647
+[0m[HW]     RU: packets processed 3440636
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3489799
+[0m[HW]     RU: packets processed 3489788
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3538951
+[0m[HW]     RU: packets processed 3538940
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3588103
+[0m[HW]     RU: packets processed 3588092
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3637255
+[0m[HW]     RU: packets processed 3637244
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3686407
+[0m[HW]     RU: packets processed 3686396
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3735559
+[0m[HW]     RU: packets processed 3735548
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3784711
+[0m[HW]     RU: packets processed 3784700
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3833863
+[0m[HW]     RU: packets processed 3833852
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3883015
+[0m[HW]     RU: packets processed 3883004
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3932167
+[0m[HW]     RU: packets processed 3932156
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 3981319
+[0m[HW]     RU: packets processed 3981308
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4030471
+[0m[HW]     RU: packets processed 4030460
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4079623
+[0m[HW]     RU: packets processed 4079612
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4128775
+[0m[HW]     RU: packets processed 4128764
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4177927
+[0m[HW]     RU: packets processed 4177916
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4227079
+[0m[HW]     RU: packets processed 4227068
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4276231
+[0m[HW]     RU: packets processed 4276220
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4325383
+[0m[HW]     RU: packets processed 4325372
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4374535
+[0m[HW]     RU: packets processed 4374524
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4423687
+[0m[HW]     RU: packets processed 4423676
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4472839
+[0m[HW]     RU: packets processed 4472828
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4521991
+[0m[HW]     RU: packets processed 4521980
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4571143
+[0m[HW]     RU: packets processed 4571132
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4620295
+[0m[HW]     RU: packets processed 4620284
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4669447
+[0m[HW]     RU: packets processed 4669436
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4718599
+[0m[HW]     RU: packets processed 4718588
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4767751
+[0m[HW]     RU: packets processed 4767740
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4816903
+[0m[HW]     RU: packets processed 4816892
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4866055
+[0m[HW]     RU: packets processed 4866044
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4915207
+[0m[HW]     RU: packets processed 4915196
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 4964359
+[0m[HW]     RU: packets processed 4964348
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5013511
+[0m[HW]     RU: packets processed 5013500
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5062663
+[0m[HW]     RU: packets processed 5062652
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5111815
+[0m[HW]     RU: packets processed 5111804
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5160967
+[0m[HW]     RU: packets processed 5160956
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5210119
+[0m[HW]     RU: packets processed 5210108
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5259271
+[0m[HW]     RU: packets processed 5259260
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5308423
+[0m[HW]     RU: packets processed 5308412
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5357575
+[0m[HW]     RU: packets processed 5357564
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5406727
+[0m[HW]     RU: packets processed 5406716
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5455879
+[0m[HW]     RU: packets processed 5455868
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5505031
+[0m[HW]     RU: packets processed 5505020
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5554183
+[0m[HW]     RU: packets processed 5554172
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5603335
+[0m[HW]     RU: packets processed 5603324
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5652487
+[0m[HW]     RU: packets processed 5652476
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5701639
+[0m[HW]     RU: packets processed 5701628
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5750791
+[0m[HW]     RU: packets processed 5750780
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5799943
+[0m[HW]     RU: packets processed 5799932
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5849095
+[0m[HW]     RU: packets processed 5849084
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5898247
+[0m[HW]     RU: packets processed 5898236
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5947399
+[0m[HW]     RU: packets processed 5947388
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 5996551
+[0m[HW]     RU: packets processed 5996540
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6045703
+[0m[HW]     RU: packets processed 6045692
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6094855
+[0m[HW]     RU: packets processed 6094844
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6144007
+[0m[HW]     RU: packets processed 6143996
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6193159
+[0m[HW]     RU: packets processed 6193148
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6242311
+[0m[HW]     RU: packets processed 6242300
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6291463
+[0m[HW]     RU: packets processed 6291452
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6340615
+[0m[HW]     RU: packets processed 6340604
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6389767
+[0m[HW]     RU: packets processed 6389756
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6438919
+[0m[HW]     RU: packets processed 6438908
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6488071
+[0m[HW]     RU: packets processed 6488060
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6537223
+[0m[HW]     RU: packets processed 6537212
+[0m[HW]     RU: packets dropped 15
+[0m[HW]     RU: packets received 6586375
+[0m[HW]     RU: packets processed 6586364
+[0m[HW]     RU: packets dropped 15
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[HW]     RU: packets received 6635528
+[0m[HW]     RU: packets processed 6635514
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6684679
+[0m[HW]     RU: packets processed 6684666
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6733831
+[0m[HW]     RU: packets processed 6733818
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6782983
+[0m[HW]     RU: packets processed 6782970
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6832135
+[0m[HW]     RU: packets processed 6832122
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6881287
+[0m[HW]     RU: packets processed 6881274
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6930439
+[0m[HW]     RU: packets processed 6930426
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 6979591
+[0m[HW]     RU: packets processed 6979578
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7028743
+[0m[HW]     RU: packets processed 7028730
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7077895
+[0m[HW]     RU: packets processed 7077882
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7127047
+[0m[HW]     RU: packets processed 7127034
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7176199
+[0m[HW]     RU: packets processed 7176186
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7225351
+[0m[HW]     RU: packets processed 7225338
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7274503
+[0m[HW]     RU: packets processed 7274490
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7323655
+[0m[HW]     RU: packets processed 7323642
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7372807
+[0m[HW]     RU: packets processed 7372794
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7421959
+[0m[HW]     RU: packets processed 7421946
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7471111
+[0m[HW]     RU: packets processed 7471098
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7520263
+[0m[HW]     RU: packets processed 7520250
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7569415
+[0m[HW]     RU: packets processed 7569402
+[0m[HW]     RU: packets dropped 17
+[0m[HW]     RU: packets received 7618567
+[0m[HW]     RU: packets processed 7618554
+[0m[HW]     RU: packets dropped 17
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 7667720
+[0m[HW]     RU: packets processed 7667706
+[0m[HW]     RU: packets dropped 18
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 7716872
+[0m[HW]     RU: packets processed 7716858
+[0m[HW]     RU: packets dropped 19
+[0m[HW]     RU: packets received 7766023
+[0m[HW]     RU: packets processed 7766010
+[0m[HW]     RU: packets dropped 19
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 7815176
+[0m[HW]     RU: packets processed 7815162
+[0m[HW]     RU: packets dropped 20
+[0m[HW]     RU: packets received 7864327
+[0m[HW]     RU: packets processed 7864314
+[0m[HW]     RU: packets dropped 20
+[0m[HW]     RU: packets received 7913479
+[0m[HW]     RU: packets processed 7913466
+[0m[HW]     RU: packets dropped 20
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 7962632
+[0m[HW]     RU: packets processed 7962618
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8011783
+[0m[HW]     RU: packets processed 8011770
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8060935
+[0m[HW]     RU: packets processed 8060922
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8110087
+[0m[HW]     RU: packets processed 8110074
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8159239
+[0m[HW]     RU: packets processed 8159226
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8208392
+[0m[HW]     RU: packets processed 8208378
+[0m[HW]     RU: packets dropped 21
+[0m[HW]     RU: packets received 8257543
+[0m[HW]     RU: packets processed 8257530
+[0m[HW]     RU: packets dropped 21
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 8306696
+[0m[HW]     RU: packets processed 8306682
+[0m[HW]     RU: packets dropped 22
+[0m[HW]     RU: packets received 8355847
+[0m[HW]     RU: packets processed 8355834
+[0m[HW]     RU: packets dropped 22
+[0m[HW]     RU: packets received 8404999
+[0m[HW]     RU: packets processed 8404986
+[0m[HW]     RU: packets dropped 22
+[0m[HW]     RU: packets received 8454151
+[0m[HW]     RU: packets processed 8454138
+[0m[HW]     RU: packets dropped 22
+[0m[HW]     RU: packets received 8503303
+[0m[HW]     RU: packets processed 8503290
+[0m[HW]     RU: packets dropped 22
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 8552456
+[0m[HW]     RU: packets processed 8552442
+[0m[HW]     RU: packets dropped 23
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 8601608
+[0m[HW]     RU: packets processed 8601594
+[0m[HW]     RU: packets dropped 24
+[0m[HW]     RU: packets received 8650759
+[0m[HW]     RU: packets processed 8650746
+[0m[HW]     RU: packets dropped 24
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 8699912
+[0m[HW]     RU: packets processed 8699898
+[0m[HW]     RU: packets dropped 25
+[0m[HW]     RU: packets received 8749063
+[0m[HW]     RU: packets processed 8749050
+[0m[HW]     RU: packets dropped 25
+[0m[HW]     RU: packets received 8798215
+[0m[HW]     RU: packets processed 8798202
+[0m[HW]     RU: packets dropped 25
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 8847368
+[0m[HW]     RU: packets processed 8847354
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 8896519
+[0m[HW]     RU: packets processed 8896506
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 8945671
+[0m[HW]     RU: packets processed 8945658
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 8994823
+[0m[HW]     RU: packets processed 8994810
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 9043975
+[0m[HW]     RU: packets processed 9043962
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 9093127
+[0m[HW]     RU: packets processed 9093114
+[0m[HW]     RU: packets dropped 26
+[0m[HW]     RU: packets received 9142279
+[0m[HW]     RU: packets processed 9142266
+[0m[HW]     RU: packets dropped 26
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 9191432
+[0m[HW]     RU: packets processed 9191418
+[0m[HW]     RU: packets dropped 27
+[0m[HW]     RU: packets received 9240583
+[0m[HW]     RU: packets processed 9240570
+[0m[HW]     RU: packets dropped 27
+[0m[HW]     RU: packets received 9289735
+[0m[HW]     RU: packets processed 9289722
+[0m[HW]     RU: packets dropped 27
+[0m[HW]     RU: packets received 9338887
+[0m[HW]     RU: packets processed 9338874
+[0m[HW]     RU: packets dropped 27
+[0m[HW]     RU: packets received 9388039
+[0m[HW]     RU: packets processed 9388026
+[0m[HW]     RU: packets dropped 27
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 9437192
+[0m[HW]     RU: packets processed 9437178
+[0m[HW]     RU: packets dropped 28
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 9486344
+[0m[HW]     RU: packets processed 9486330
+[0m[HW]     RU: packets dropped 29
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 9535496
+[0m[HW]     RU: packets processed 9535482
+[0m[HW]     RU: packets dropped 30
+[0m[HW]     RU: packets received 9584647
+[0m[HW]     RU: packets processed 9584634
+[0m[HW]     RU: packets dropped 30
+[0m[HW]     RU: packets received 9633799
+[0m[HW]     RU: packets processed 9633786
+[0m[HW]     RU: packets dropped 30
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 9682952
+[0m[HW]     RU: packets processed 9682938
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9732103
+[0m[HW]     RU: packets processed 9732090
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9781255
+[0m[HW]     RU: packets processed 9781242
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9830407
+[0m[HW]     RU: packets processed 9830394
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9879559
+[0m[HW]     RU: packets processed 9879546
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9928711
+[0m[HW]     RU: packets processed 9928698
+[0m[HW]     RU: packets dropped 31
+[0m[HW]     RU: packets received 9977863
+[0m[HW]     RU: packets processed 9977850
+[0m[HW]     RU: packets dropped 31
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10027016
+[0m[HW]     RU: packets processed 10027002
+[0m[HW]     RU: packets dropped 32
+[0m[HW]     RU: packets received 10076167
+[0m[HW]     RU: packets processed 10076154
+[0m[HW]     RU: packets dropped 32
+[0m[HW]     RU: packets received 10125319
+[0m[HW]     RU: packets processed 10125306
+[0m[HW]     RU: packets dropped 32
+[0m[HW]     RU: packets received 10174471
+[0m[HW]     RU: packets processed 10174458
+[0m[HW]     RU: packets dropped 32
+[0m[HW]     RU: packets received 10223623
+[0m[HW]     RU: packets processed 10223610
+[0m[HW]     RU: packets dropped 32
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10272776
+[0m[HW]     RU: packets processed 10272762
+[0m[HW]     RU: packets dropped 33
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10321928
+[0m[HW]     RU: packets processed 10321914
+[0m[HW]     RU: packets dropped 34
+[0m[HW]     RU: packets received 10371079
+[0m[HW]     RU: packets processed 10371066
+[0m[HW]     RU: packets dropped 34
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10420232
+[0m[HW]     RU: packets processed 10420218
+[0m[HW]     RU: packets dropped 35
+[0m[HW]     RU: packets received 10469383
+[0m[HW]     RU: packets processed 10469370
+[0m[HW]     RU: packets dropped 35
+[0m[HW]     RU: packets received 10518535
+[0m[HW]     RU: packets processed 10518522
+[0m[HW]     RU: packets dropped 35
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10567688
+[0m[HW]     RU: packets processed 10567674
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10616839
+[0m[HW]     RU: packets processed 10616826
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10665991
+[0m[HW]     RU: packets processed 10665978
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10715143
+[0m[HW]     RU: packets processed 10715130
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10764295
+[0m[HW]     RU: packets processed 10764282
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10813447
+[0m[HW]     RU: packets processed 10813434
+[0m[HW]     RU: packets dropped 36
+[0m[HW]     RU: packets received 10862599
+[0m[HW]     RU: packets processed 10862586
+[0m[HW]     RU: packets dropped 36
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 10911752
+[0m[HW]     RU: packets processed 10911738
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 10960903
+[0m[HW]     RU: packets processed 10960890
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11010055
+[0m[HW]     RU: packets processed 11010042
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11059207
+[0m[HW]     RU: packets processed 11059194
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11108359
+[0m[HW]     RU: packets processed 11108346
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11157511
+[0m[HW]     RU: packets processed 11157498
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11206663
+[0m[HW]     RU: packets processed 11206650
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11255815
+[0m[HW]     RU: packets processed 11255802
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11304967
+[0m[HW]     RU: packets processed 11304954
+[0m[HW]     RU: packets dropped 37
+[0m[HW]     RU: packets received 11354119
+[0m[HW]     RU: packets processed 11354106
+[0m[HW]     RU: packets dropped 37
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[HW]     RU: packets received 11403272
+[0m[HW]     RU: packets processed 11403257
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11452423
+[0m[HW]     RU: packets processed 11452409
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11501575
+[0m[HW]     RU: packets processed 11501561
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11550727
+[0m[HW]     RU: packets processed 11550713
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11599879
+[0m[HW]     RU: packets processed 11599865
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11649031
+[0m[HW]     RU: packets processed 11649017
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11698183
+[0m[HW]     RU: packets processed 11698169
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11747335
+[0m[HW]     RU: packets processed 11747321
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11796487
+[0m[HW]     RU: packets processed 11796473
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11845639
+[0m[HW]     RU: packets processed 11845625
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11894791
+[0m[HW]     RU: packets processed 11894777
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11943943
+[0m[HW]     RU: packets processed 11943929
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 11993095
+[0m[HW]     RU: packets processed 11993081
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12042247
+[0m[HW]     RU: packets processed 12042233
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12091399
+[0m[HW]     RU: packets processed 12091385
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12140551
+[0m[HW]     RU: packets processed 12140537
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12189703
+[0m[HW]     RU: packets processed 12189689
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12238855
+[0m[HW]     RU: packets processed 12238841
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12288007
+[0m[HW]     RU: packets processed 12287993
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12337159
+[0m[HW]     RU: packets processed 12337145
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12386311
+[0m[HW]     RU: packets processed 12386297
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12435463
+[0m[HW]     RU: packets processed 12435449
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12484615
+[0m[HW]     RU: packets processed 12484601
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12533767
+[0m[HW]     RU: packets processed 12533753
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12582919
+[0m[HW]     RU: packets processed 12582905
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12632071
+[0m[HW]     RU: packets processed 12632057
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12681223
+[0m[HW]     RU: packets processed 12681209
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12730375
+[0m[HW]     RU: packets processed 12730361
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12779527
+[0m[HW]     RU: packets processed 12779513
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12828679
+[0m[HW]     RU: packets processed 12828665
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12877831
+[0m[HW]     RU: packets processed 12877817
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12926983
+[0m[HW]     RU: packets processed 12926969
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 12976135
+[0m[HW]     RU: packets processed 12976121
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13025287
+[0m[HW]     RU: packets processed 13025273
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13074439
+[0m[HW]     RU: packets processed 13074425
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13123591
+[0m[HW]     RU: packets processed 13123577
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13172743
+[0m[HW]     RU: packets processed 13172729
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13221895
+[0m[HW]     RU: packets processed 13221881
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13271047
+[0m[HW]     RU: packets processed 13271033
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13320199
+[0m[HW]     RU: packets processed 13320185
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13369351
+[0m[HW]     RU: packets processed 13369337
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13418503
+[0m[HW]     RU: packets processed 13418489
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13467655
+[0m[HW]     RU: packets processed 13467641
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13516807
+[0m[HW]     RU: packets processed 13516793
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13565959
+[0m[HW]     RU: packets processed 13565945
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13615111
+[0m[HW]     RU: packets processed 13615097
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13664263
+[0m[HW]     RU: packets processed 13664249
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13713415
+[0m[HW]     RU: packets processed 13713401
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13762567
+[0m[HW]     RU: packets processed 13762553
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13811719
+[0m[HW]     RU: packets processed 13811705
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13860871
+[0m[HW]     RU: packets processed 13860857
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13910023
+[0m[HW]     RU: packets processed 13910009
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 13959175
+[0m[HW]     RU: packets processed 13959161
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14008327
+[0m[HW]     RU: packets processed 14008313
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14057479
+[0m[HW]     RU: packets processed 14057465
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14106631
+[0m[HW]     RU: packets processed 14106617
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14155783
+[0m[HW]     RU: packets processed 14155769
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14204935
+[0m[HW]     RU: packets processed 14204921
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14254087
+[0m[HW]     RU: packets processed 14254073
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14303239
+[0m[HW]     RU: packets processed 14303225
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14352391
+[0m[HW]     RU: packets processed 14352377
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14401543
+[0m[HW]     RU: packets processed 14401529
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14450695
+[0m[HW]     RU: packets processed 14450681
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14499847
+[0m[HW]     RU: packets processed 14499833
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14548999
+[0m[HW]     RU: packets processed 14548985
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14598151
+[0m[HW]     RU: packets processed 14598137
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14647303
+[0m[HW]     RU: packets processed 14647289
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14696455
+[0m[HW]     RU: packets processed 14696441
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14745607
+[0m[HW]     RU: packets processed 14745593
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14794759
+[0m[HW]     RU: packets processed 14794745
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14843911
+[0m[HW]     RU: packets processed 14843897
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14893063
+[0m[HW]     RU: packets processed 14893049
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14942215
+[0m[HW]     RU: packets processed 14942201
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 14991367
+[0m[HW]     RU: packets processed 14991353
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15040519
+[0m[HW]     RU: packets processed 15040505
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15089671
+[0m[HW]     RU: packets processed 15089657
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15138823
+[0m[HW]     RU: packets processed 15138809
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15187975
+[0m[HW]     RU: packets processed 15187961
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15237127
+[0m[HW]     RU: packets processed 15237113
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15286279
+[0m[HW]     RU: packets processed 15286265
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15335431
+[0m[HW]     RU: packets processed 15335417
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15384583
+[0m[HW]     RU: packets processed 15384569
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15433735
+[0m[HW]     RU: packets processed 15433721
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15482887
+[0m[HW]     RU: packets processed 15482873
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15532039
+[0m[HW]     RU: packets processed 15532025
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15581191
+[0m[HW]     RU: packets processed 15581177
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15630343
+[0m[HW]     RU: packets processed 15630329
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15679495
+[0m[HW]     RU: packets processed 15679481
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15728647
+[0m[HW]     RU: packets processed 15728633
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15777799
+[0m[HW]     RU: packets processed 15777785
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15826951
+[0m[HW]     RU: packets processed 15826937
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15876103
+[0m[HW]     RU: packets processed 15876089
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15925255
+[0m[HW]     RU: packets processed 15925241
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 15974407
+[0m[HW]     RU: packets processed 15974393
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16023559
+[0m[HW]     RU: packets processed 16023545
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16072711
+[0m[HW]     RU: packets processed 16072697
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16121863
+[0m[HW]     RU: packets processed 16121849
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16171016
+[0m[HW]     RU: packets processed 16171001
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16220167
+[0m[HW]     RU: packets processed 16220153
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16269319
+[0m[HW]     RU: packets processed 16269305
+[0m[HW]     RU: packets dropped 38
+[0m[HW]     RU: packets received 16318471
+[0m[HW]     RU: packets processed 16318457
+[0m[HW]     RU: packets dropped 38
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[HW]     RU: packets received 16367624
+[0m[HW]     RU: packets processed 16367607
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16416776
+[0m[HW]     RU: packets processed 16416759
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16465927
+[0m[HW]     RU: packets processed 16465911
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16515079
+[0m[HW]     RU: packets processed 16515063
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16564231
+[0m[HW]     RU: packets processed 16564215
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16613383
+[0m[HW]     RU: packets processed 16613367
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16662535
+[0m[HW]     RU: packets processed 16662519
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16711687
+[0m[HW]     RU: packets processed 16711671
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16760839
+[0m[HW]     RU: packets processed 16760823
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16809991
+[0m[HW]     RU: packets processed 16809975
+[0m[HW]     RU: packets dropped 40
+[0m[HW]     RU: packets received 16859143
+[0m[HW]     RU: packets processed 16859127
+[0m[HW]     RU: packets dropped 40
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 16908296
+[0m[HW]     RU: packets processed 16908279
+[0m[HW]     RU: packets dropped 41
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 16957448
+[0m[HW]     RU: packets processed 16957431
+[0m[HW]     RU: packets dropped 42
+[0m[HW]     RU: packets received 17006599
+[0m[HW]     RU: packets processed 17006583
+[0m[HW]     RU: packets dropped 42
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 17055752
+[0m[HW]     RU: packets processed 17055735
+[0m[HW]     RU: packets dropped 43
+[0m[HW]     RU: packets received 17104903
+[0m[HW]     RU: packets processed 17104887
+[0m[HW]     RU: packets dropped 43
+[0m[HW]     RU: packets received 17154055
+[0m[HW]     RU: packets processed 17154039
+[0m[HW]     RU: packets dropped 43
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 17203208
+[0m[HW]     RU: packets processed 17203191
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17252359
+[0m[HW]     RU: packets processed 17252343
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17301511
+[0m[HW]     RU: packets processed 17301495
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17350663
+[0m[HW]     RU: packets processed 17350647
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17399815
+[0m[HW]     RU: packets processed 17399799
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17448967
+[0m[HW]     RU: packets processed 17448951
+[0m[HW]     RU: packets dropped 44
+[0m[HW]     RU: packets received 17498119
+[0m[HW]     RU: packets processed 17498103
+[0m[HW]     RU: packets dropped 44
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 17547272
+[0m[HW]     RU: packets processed 17547255
+[0m[HW]     RU: packets dropped 45
+[0m[HW]     RU: packets received 17596423
+[0m[HW]     RU: packets processed 17596407
+[0m[HW]     RU: packets dropped 45
+[0m[HW]     RU: packets received 17645575
+[0m[HW]     RU: packets processed 17645559
+[0m[HW]     RU: packets dropped 45
+[0m[HW]     RU: packets received 17694727
+[0m[HW]     RU: packets processed 17694711
+[0m[HW]     RU: packets dropped 45
+[0m[HW]     RU: packets received 17743879
+[0m[HW]     RU: packets processed 17743863
+[0m[HW]     RU: packets dropped 45
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 2
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 2
+[0m[HW]     RU: packets received 17793032
+[0m[HW]     RU: packets processed 17793015
+[0m[HW]     RU: packets dropped 47
+[0m[HW]     RU: packets received 17842183
+[0m[HW]     RU: packets processed 17842167
+[0m[HW]     RU: packets dropped 47
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 17891336
+[0m[HW]     RU: packets processed 17891319
+[0m[HW]     RU: packets dropped 48
+[0m[HW]     RU: packets received 17940487
+[0m[HW]     RU: packets processed 17940471
+[0m[HW]     RU: packets dropped 48
+[0m[HW]     RU: packets received 17989639
+[0m[HW]     RU: packets processed 17989623
+[0m[HW]     RU: packets dropped 48
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18038792
+[0m[HW]     RU: packets processed 18038775
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18087943
+[0m[HW]     RU: packets processed 18087927
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18137095
+[0m[HW]     RU: packets processed 18137079
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18186247
+[0m[HW]     RU: packets processed 18186231
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18235399
+[0m[HW]     RU: packets processed 18235383
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18284551
+[0m[HW]     RU: packets processed 18284535
+[0m[HW]     RU: packets dropped 49
+[0m[HW]     RU: packets received 18333703
+[0m[HW]     RU: packets processed 18333687
+[0m[HW]     RU: packets dropped 49
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18382856
+[0m[HW]     RU: packets processed 18382839
+[0m[HW]     RU: packets dropped 50
+[0m[HW]     RU: packets received 18432007
+[0m[HW]     RU: packets processed 18431991
+[0m[HW]     RU: packets dropped 50
+[0m[HW]     RU: packets received 18481159
+[0m[HW]     RU: packets processed 18481143
+[0m[HW]     RU: packets dropped 50
+[0m[HW]     RU: packets received 18530311
+[0m[HW]     RU: packets processed 18530295
+[0m[HW]     RU: packets dropped 50
+[0m[HW]     RU: packets received 18579463
+[0m[HW]     RU: packets processed 18579447
+[0m[HW]     RU: packets dropped 50
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18628616
+[0m[HW]     RU: packets processed 18628599
+[0m[HW]     RU: packets dropped 51
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18677768
+[0m[HW]     RU: packets processed 18677751
+[0m[HW]     RU: packets dropped 52
+[0m[HW]     RU: packets received 18726919
+[0m[HW]     RU: packets processed 18726903
+[0m[HW]     RU: packets dropped 52
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18776072
+[0m[HW]     RU: packets processed 18776055
+[0m[HW]     RU: packets dropped 53
+[0m[HW]     RU: packets received 18825223
+[0m[HW]     RU: packets processed 18825207
+[0m[HW]     RU: packets dropped 53
+[0m[HW]     RU: packets received 18874375
+[0m[HW]     RU: packets processed 18874359
+[0m[HW]     RU: packets dropped 53
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 18923528
+[0m[HW]     RU: packets processed 18923511
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 18972679
+[0m[HW]     RU: packets processed 18972663
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 19021831
+[0m[HW]     RU: packets processed 19021815
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 19070983
+[0m[HW]     RU: packets processed 19070967
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 19120135
+[0m[HW]     RU: packets processed 19120119
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 19169287
+[0m[HW]     RU: packets processed 19169271
+[0m[HW]     RU: packets dropped 54
+[0m[HW]     RU: packets received 19218439
+[0m[HW]     RU: packets processed 19218423
+[0m[HW]     RU: packets dropped 54
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 19267592
+[0m[HW]     RU: packets processed 19267575
+[0m[HW]     RU: packets dropped 55
+[0m[HW]     RU: packets received 19316743
+[0m[HW]     RU: packets processed 19316727
+[0m[HW]     RU: packets dropped 55
+[0m[HW]     RU: packets received 19365895
+[0m[HW]     RU: packets processed 19365879
+[0m[HW]     RU: packets dropped 55
+[0m[HW]     RU: packets received 19415047
+[0m[HW]     RU: packets processed 19415031
+[0m[HW]     RU: packets dropped 55
+[0m[HW]     RU: packets received 19464199
+[0m[HW]     RU: packets processed 19464183
+[0m[HW]     RU: packets dropped 55
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 19513352
+[0m[HW]     RU: packets processed 19513335
+[0m[HW]     RU: packets dropped 56
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 19562504
+[0m[HW]     RU: packets processed 19562487
+[0m[HW]     RU: packets dropped 57
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[HW]     RU: packets received 19611656
+[0m[HW]     RU: packets processed 19611639
+[0m[HW]     RU: packets dropped 58
+[0m[HW]     RU: packets received 19660807
+[0m[HW]     RU: packets processed 19660791
+[0m[HW]     RU: packets dropped 58
+[0m
