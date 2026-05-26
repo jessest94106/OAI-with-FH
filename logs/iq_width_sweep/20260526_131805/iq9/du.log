@@ -1,0 +1,1669 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260526_131810_pid3819173.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    333824 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 4
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x758c9d7de4b0
+  tx_up_eAxC2Vf 0x758c9d7df0b0
+  rx_cp_eAxC2Vf 0x758c9d7dfcb0
+  rx_up_eAxC2Vf 0x758c9d7e08b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 3819196]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+O-XU      0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+Start Sym timer 107142 ns
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+xran_generic_worker_thread [CPU 17] [PID: 3819196]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 3819196]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 3819196]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x758c60f95040
+xran_sector_get_instances [0]: CC 0 handle 0x758c8416c740
+Handle: 0x758ca452d468 Instance: 0x[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0m758c8416c740
+-> hInstance 0x758c8416c740
+ru_0_cc_0_idx_0: [ handle 0x758c8416c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x758c8416c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x758c8416c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x758c8416c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x758c8416c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x758c8416c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786dc0 
+xran_bm_init() hInstance 0x758c8416c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x758c8416c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x758c8416c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x758c8416c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x758c8416c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x758c8416c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x758c8416c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x758c8416c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786340 
+xran_bm_init() hInstance 0x758c8416c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x758c8416c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x758c8416c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x758c8416c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788d00 
+xran_bm_init() hInstance 0x758c8416c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x758c8416c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/26/26 20:18:14.590795830 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=10, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=11, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=12, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=13, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=14, sym=0, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[PHY]    ULSCH ACK trace 107.18 rnti 4b9b harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.6 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 4b9b
+[0m[93m[NR_MAC] (115.6) RA Contention Resolution timer expired for UE 0x4b9b, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 19355
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx   10716 pps   10716 kbps   43005][tx   31916 pps   31916 kbps  108900][Total Msgs_Rcvd 10716]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10716 tx_pps=31916 total_pps=42632
+[0m[HW]     [o_du0][pusch0    9180 prach0    1536]
+[0m[93m[PHY]    ULSCH NAK trace 142.18 rnti 731e harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 54.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 143.18 rnti 731e harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 57.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 144.18 rnti 731e harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 62.4 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 145.18 rnti 731e harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.6 dB TAest 0
+[0m[93m[NR_MAC] UE 731e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 150.18 rnti 8428 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 151.18 rnti 8428 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 71.4 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 152.18 rnti 8428 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 75.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 153.18 rnti 8428 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 75.1 dB TAest 0
+[0m[93m[NR_MAC] UE 8428 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 158.18 rnti 9014 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 159.18 rnti 9014 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 71.7 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 160.18 rnti 9014 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 75.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 161.18 rnti 9014 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.8 dB TAest 0
+[0m[93m[NR_MAC] UE 9014 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 166.18 rnti 2a78 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 167.18 rnti 2a78 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 168.18 rnti 2a78 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 75.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 169.18 rnti 2a78 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.5 dB TAest 0
+[0m[93m[NR_MAC] UE 2a78 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 174.18 rnti e724 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 175.18 rnti e724 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 176.18 rnti e724 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 75.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 177.18 rnti e724 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.4 dB TAest 0
+[0m[93m[NR_MAC] UE e724 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 182.18 rnti d8a6 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.2 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 183.18 rnti d8a6 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 184.18 rnti d8a6 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.7 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 185.18 rnti d8a6 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE d8a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 190.18 rnti 235a harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 191.18 rnti 235a harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 192.18 rnti 235a harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.5 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 193.18 rnti 235a harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.4 dB TAest 0
+[0m[93m[NR_MAC] UE 235a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 198.18 rnti 010c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.6 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 199.18 rnti 010c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 200.18 rnti 010c harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.4 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 201.18 rnti 010c harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.5 dB TAest 0
+[0m[93m[NR_MAC] UE 010c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5a2b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE de9f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 49d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fbf5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 72ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE df56 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   21468 pps   10752 kbps   43010][tx   63788 pps   31872 kbps  108900][Total Msgs_Rcvd 21468]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   18396 prach0    3072]
+[0m[93m[NR_MAC] UE 0ec3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 306d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd8a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 52da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3f02 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 307.18 rnti bffc harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.1 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE bffc
+[0m[93m[NR_MAC] (315.6) RA Contention Resolution timer expired for UE 0xbffc, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 49148
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 9ea4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5915 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3179 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6e97 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7ef7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   32220 pps   10752 kbps   43008][tx   95660 pps   31872 kbps  108900][Total Msgs_Rcvd 32220]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   27612 prach0    4608]
+[0m[93m[NR_MAC] UE ba72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8060 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5a87 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e14c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4819 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0408 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f040 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 392d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b9c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ba32 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3c3d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c7b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5569 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a9a8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 36a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 507.18 rnti 8a0c harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 8a0c
+[0m[HW]     [o-du 0][rx   42972 pps   10752 kbps   43013][tx  127532 pps   31872 kbps  108900][Total Msgs_Rcvd 42972]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   36828 prach0    6144]
+[0m[93m[NR_MAC] (515.6) RA Contention Resolution timer expired for UE 0x8a0c, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 35340
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 0243 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f714 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8fbb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e22e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4730 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 77e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 08c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9923 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27c8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f6df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d890 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bc02 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   53724 pps   10752 kbps   43002][tx  159404 pps   31872 kbps  108900][Total Msgs_Rcvd 53724]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   46044 prach0    7680]
+[0m[93m[NR_MAC] UE 5401 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 39b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cdd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b33a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 046b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2952 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e672 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 559f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 707.18 rnti 2ce5 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 2ce5
+[0m[93m[NR_MAC] (715.6) RA Contention Resolution timer expired for UE 0x2ce5, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 11493
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE ad26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d2b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c422 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   64476 pps   10752 kbps   43005][tx  191276 pps   31872 kbps  108900][Total Msgs_Rcvd 64476]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   55260 prach0    9216]
+[0m[93m[NR_MAC] UE b364 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6a4e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b3ec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5d6b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 614e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e457 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 78f4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4866 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1943 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e1e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89d8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 50ac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff58 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a413 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 576d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5068 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   75228 pps   10752 kbps   43008][tx  223148 pps   31872 kbps  108900][Total Msgs_Rcvd 75228]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   64476 prach0   10752]
+[0m[93m[NR_MAC] UE add2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 908.18 rnti 53dc harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 72.1 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 53dc
+[0m[93m[NR_MAC] (916.6) RA Contention Resolution timer expired for UE 0x53dc, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 21468
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 943.18 rnti a3e8 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 57.8 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI a3e8, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 951.18 rnti 1ea7 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.1 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 1ea7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 959.18 rnti 617d harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 617d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 967.18 rnti e64b harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI e64b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 975.18 rnti 4b6c harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 4b6c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE b166 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d32a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 95d4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 394c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4b6c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   85980 pps   10752 kbps   43005][tx  255020 pps   31872 kbps  108900][Total Msgs_Rcvd 85980]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   73692 prach0   12288]
+[0m[PHY]    prach_I0 = 5.7 dB
+[0m[93m[NR_MAC] UE f95c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9272 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 15.18 rnti 53f9 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.2 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 53f9, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 23.18 rnti 96b8 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.0 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 96b8, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 31.18 rnti 0a05 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 0a05, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 39.18 rnti be24 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI be24, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 47.18 rnti 7a73 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 7a73, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 55.18 rnti 60eb harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.0 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 60eb, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE c937 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0eb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 85.18 rnti 5b4e harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 5b4e
+[0m[93m[NR_MAC] (93.6) RA Contention Resolution timer expired for UE 0x5b4e, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 23374
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 2e02 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   96732 pps   10752 kbps   43010][tx  286892 pps   31872 kbps  108900][Total Msgs_Rcvd 96732]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   82908 prach0   13824]
+[0m[93m[NR_MAC] UE 1cf7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8008 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0553 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7478 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 93b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ba4c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6cbd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 054a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fc0a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c13d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d81 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eaf9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e206 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cb7e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 42da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  107484 pps   10752 kbps   43008][tx  318764 pps   31872 kbps  108900][Total Msgs_Rcvd 107484]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   92124 prach0   15360]
+[0m[93m[NR_MAC] UE 5a61 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d784 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6dcf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 285.18 rnti a5e2 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE a5e2
+[0m[93m[NR_MAC] (293.6) RA Contention Resolution timer expired for UE 0xa5e2, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 42466
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 9f56 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 00e2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 70ef RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9898 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f7c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ce03 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 57b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 71a9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  118236 pps   10752 kbps   43008][tx  350636 pps   31872 kbps  108900][Total Msgs_Rcvd 118236]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  101340 prach0   16896]
+[0m[93m[NR_MAC] UE efe8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ba9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f795 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ed10 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cecc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef5f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 797d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6343 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 55cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a3df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE edb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef4e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 485.18 rnti de0c harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.2 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE de0c
+[0m[93m[NR_MAC] (493.6) RA Contention Resolution timer expired for UE 0xde0c, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 56844
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  128988 pps   10752 kbps   43005][tx  382508 pps   31872 kbps  108900][Total Msgs_Rcvd 128988]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  110556 prach0   18432]
+[0m[93m[NR_MAC] UE 4ce5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f19 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 668d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1b4d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 221e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 49d6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ebd1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0596 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fe72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e084 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2a42 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf75 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8456 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7990 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7360 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  139740 pps   10752 kbps   43008][tx  414380 pps   31872 kbps  108900][Total Msgs_Rcvd 139740]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  119772 prach0   19968]
+[0m[93m[NR_MAC] UE f0ac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab48 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 02d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 68e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8860 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 661a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9bd2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 718.18 rnti 20e3 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 20e3
+[0m[93m[NR_MAC] (726.6) RA Contention Resolution timer expired for UE 0x20e3, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 8419
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 753.18 rnti 2d0d harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 63.1 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 2d0d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 84fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  150492 pps   10752 kbps   43010][tx  446252 pps   31872 kbps  108900][Total Msgs_Rcvd 150492]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  128988 prach0   21504]
+[0m[93m[NR_MAC] UE 24e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1932 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 979f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1221 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 268e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 809.18 rnti 7547 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.0 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 7547, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 817.18 rnti e8c6 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI e8c6, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 825.18 rnti ae87 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI ae87, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 833.18 rnti e834 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI e834, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 841.18 rnti 5a40 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 5a40, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE c93e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4663 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7ff8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5013 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ee70 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 889.18 rnti dc6a harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.5 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI dc6a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  161244 pps   10752 kbps   43008][tx  478124 pps   31872 kbps  108900][Total Msgs_Rcvd 161244]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  138204 prach0   23040]
+[0m[PHY]    ULSCH ACK trace 897.18 rnti d85a harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.1 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI d85a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[PHY]    ULSCH ACK trace 905.18 rnti d94e harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.9 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI d94e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 40ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f9f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4139 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 952.18 rnti ecc0 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 65.8 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE ecc0
+[0m[93m[NR_MAC] (960.6) RA Contention Resolution timer expired for UE 0xecc0, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 60608
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 987.18 rnti f250 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 57.4 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI f250, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 3b0f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9217 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 24c5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 85ea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  171996 pps   10752 kbps   43002][tx  509996 pps   31872 kbps  108900][Total Msgs_Rcvd 171996]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  147420 prach0   24576]
+[0m[PHY]    prach_I0 = 3.2 dB
+[0m[PHY]    ULSCH ACK trace 3.18 rnti 9aa5 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 66.5 dB TAest 0
+[0m[93m[NR_MAC] No UE found with C-RNTI 9aa5, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f5e4, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 27ae, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9157, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8384, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0285, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 629d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI d4ff, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 5857 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c382 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c795 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE adb7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 0bb7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8d3f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI c115, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  182748 pps   10752 kbps   43013][tx  541868 pps   31872 kbps  108900][Total Msgs_Rcvd 182748]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  156636 prach0   26112]
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 1277
+[0m[93m[NR_MAC] (138.6) RA Contention Resolution timer expired for UE 0x1277, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 4727
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI f648, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5d79, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ef92, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0907, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f7f5, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE aaf4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f59 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 67e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 50a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e2f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d016 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI d00f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  193500 pps   10752 kbps   43002][tx  573740 pps   31872 kbps  108900][Total Msgs_Rcvd 193500]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  165852 prach0   27648]
+[0m[93m[NR_MAC] No UE found with C-RNTI 616e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9adc, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 27a4, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9d5e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE c086 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 68a2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e414 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19d9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bbd7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5068 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2ed9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 7c0d
+[0m[93m[NR_MAC] (372.6) RA Contention Resolution timer expired for UE 0x7c0d, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 31757
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  204252 pps   10752 kbps   43008][tx  605612 pps   31872 kbps  108900][Total Msgs_Rcvd 204252]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  175068 prach0   29184]
+[0m[93m[NR_MAC] No UE found with C-RNTI a4d0, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 249b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 477b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 704b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 305e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE af1e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0637 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5d25 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 69ee, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f000, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0fb1, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8b00, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b074, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ff42, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4874, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  215004 pps   10752 kbps   43005][tx  637484 pps   31872 kbps  108900][Total Msgs_Rcvd 215004]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  184284 prach0   30720]
+[0m[93m[NR_MAC] UE ff62 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cf2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33d8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b77 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a985 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 309b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff4c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5096 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 596d
+[0m[93m[NR_MAC] (606.6) RA Contention Resolution timer expired for UE 0x596d, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 22893
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 9f45, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  225756 pps   10752 kbps   43010][tx  669356 pps   31872 kbps  108900][Total Msgs_Rcvd 225756]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  193500 prach0   32256]
+[0m[93m[NR_MAC] No UE found with C-RNTI 85b3, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ab7e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE c33b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 59b6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 42ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 55a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dd5f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4f38 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 3bf2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ce3c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f275, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f30f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b693, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5b04, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 3cfc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 356a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  236508 pps   10752 kbps   43005][tx  701228 pps   31872 kbps  108900][Total Msgs_Rcvd 236508]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  202716 prach0   33792]
+[0m[93m[NR_MAC] UE 316e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e2e3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 83bb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 14e9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 10f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 716c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE bf7a
+[0m[93m[NR_MAC] (840.6) RA Contention Resolution timer expired for UE 0xbf7a, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 49018
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 9d69, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1bfc, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI a60a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 260a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  247260 pps   10752 kbps   43016][tx  733100 pps   31872 kbps  108900][Total Msgs_Rcvd 247260]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  211932 prach0   35328]
+[0m[93m[NR_MAC] UE c8be RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3033 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2d40 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4d6e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 2efd, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 3aa8, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1a39, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ab29, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2992, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 224b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI c261, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 77af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 97a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b2c8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5735 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 75af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  258012 pps   10752 kbps   42999][tx  764972 pps   31872 kbps  108900][Total Msgs_Rcvd 258012]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  221148 prach0   36864]
+[0m[PHY]    prach_I0 = 3.2 dB
+[0m[93m[NR_MAC] UE 078d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b1ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2229 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6ff7
+[0m[93m[NR_MAC] (50.6) RA Contention Resolution timer expired for UE 0x6ff7, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 28663
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI f97e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE b636 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8122 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c052 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5c9c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dc0a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  268764 pps   10752 kbps   43016][tx  796844 pps   31872 kbps  108900][Total Msgs_Rcvd 268764]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  230364 prach0   38400]
+[0m[93m[NR_MAC] UE 5cfd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 79cf, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 29b3, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8ca7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2d00, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI aed5, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9895, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE da8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7208 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c726 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4129 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI ce20, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE c03b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dd85 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 022c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  279516 pps   10752 kbps   43002][tx  828716 pps   31872 kbps  108900][Total Msgs_Rcvd 279516]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  239580 prach0   39936]
+[0m[93m[NR_MAC] UE b42e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5ba6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6d69
+[0m[93m[NR_MAC] (284.6) RA Contention Resolution timer expired for UE 0x6d69, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 28009
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 833a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 1611 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2a72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0efc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf3d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a95c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 30a1, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 7d2f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI d859, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 20ba, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  290268 pps   10752 kbps   43008][tx  860588 pps   31872 kbps  108900][Total Msgs_Rcvd 290268]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  248796 prach0   41472]
+[0m[93m[NR_MAC] No UE found with C-RNTI 7658, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI eb05, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f2ff, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI cf9e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 204e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a7e2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2166 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c3b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5f4a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 3732, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE eb55 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b6b0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7e2c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6d6a
+[0m[HW]     [o-du 0][rx  301020 pps   10752 kbps   43013][tx  892460 pps   31872 kbps  108900][Total Msgs_Rcvd 301020]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  258012 prach0   43008]
+[0m[93m[NR_MAC] (518.6) RA Contention Resolution timer expired for UE 0x6d6a, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 28010
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI ca1f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI c83a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 2bef RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ddc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c6e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e69a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 7d1b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 4dc0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI e5ce, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 3523, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 49a6, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 717a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  311772 pps   10752 kbps   43002][tx  924332 pps   31872 kbps  108900][Total Msgs_Rcvd 311772]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  267228 prach0   44544]
+[0m[93m[NR_MAC] No UE found with C-RNTI 2a8a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9922, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE bf00 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eb5b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff1d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f3f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bcdc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI cd17, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 619b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6075 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 31ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6449
+[0m[93m[NR_MAC] (752.6) RA Contention Resolution timer expired for UE 0x6449, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 25673
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  322524 pps   10752 kbps   43008][tx  956204 pps   31872 kbps  108900][Total Msgs_Rcvd 322524]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  276444 prach0   46080]
+[0m[93m[NR_MAC] No UE found with C-RNTI e612, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 978c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 5ced RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9f0a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1f61 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 0ceb, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 544d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 23e0, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 12cb, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ee92, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 209e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1226 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4d88 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 02f4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  333276 pps   10752 kbps   43008][tx  988076 pps   31872 kbps  108900][Total Msgs_Rcvd 333276]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  285660 prach0   47616]
+[0m[93m[NR_MAC] UE e65d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 4115, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 958d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 1dd3, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI aeed, ignoring Msg3 to have UE come back with new RA attempt
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e80
+[0m[93m[NR_MAC] (954.6) RA Contention Resolution timer expired for UE 0x9e80, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 40576
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI ff90, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI adf8, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 447f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b35f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 5433 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  344028 pps   10752 kbps   43008][tx 1019948 pps   31872 kbps  108900][Total Msgs_Rcvd 344028]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  294876 prach0   49152]
+[0m[93m[NR_MAC] UE c011 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    prach_I0 = 4.3 dB
+[0m[93m[NR_MAC] UE 66b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e69c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d1a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e10b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI e516, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f0c9, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 02ea, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8023, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4043, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 266a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE d515 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bcd8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 973e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c11c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 0263
+[0m[HW]     [o-du 0][rx  354780 pps   10752 kbps   43008][tx 1051820 pps   31872 kbps  108900][Total Msgs_Rcvd 354780]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  304092 prach0   50688]
+[0m[93m[NR_MAC] (131.6) RA Contention Resolution timer expired for UE 0x0263, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 611
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 600d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d933 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f72a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ae1e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE da71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aa79 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3944 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf0b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a4c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e353 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 621c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7b56 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  365532 pps   10752 kbps   43008][tx 1083692 pps   31872 kbps  108900][Total Msgs_Rcvd 365532]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  313308 prach0   52224]
+[0m[93m[NR_MAC] UE 5e2f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1135 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE af34 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cc1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdd1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9104 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9f24 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4fc7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 404a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b8bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE e9ca
+[0m[93m[NR_MAC] (364.6) RA Contention Resolution timer expired for UE 0xe9ca, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 59850
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  376284 pps   10752 kbps   43005][tx 1115564 pps   31872 kbps  108900][Total Msgs_Rcvd 376284]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  322524 prach0   53760]
+[0m[93m[NR_MAC] No UE found with C-RNTI 0d05, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 67b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI aad9, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 1c71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2ca4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b0e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fb0b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI e81e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1924, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f53e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI e9ae, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI bea2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE ce44 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 9c49, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI feb4, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  387036 pps   10752 kbps   43008][tx 1147436 pps   31872 kbps  108900][Total Msgs_Rcvd 387036]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  331740 prach0   55296]
+[0m[93m[NR_MAC] UE 82d8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2969 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1453 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3f2f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 01f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 08e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c35f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 78e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 1831
+[0m[93m[NR_MAC] (598.6) RA Contention Resolution timer expired for UE 0x1831, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 6193
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 4df7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 4998 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  397788 pps   10752 kbps   43005][tx 1179308 pps   31872 kbps  108900][Total Msgs_Rcvd 397788]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  340956 prach0   56832]
+[0m[93m[NR_MAC] UE 82f7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89d1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d998 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aafd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 7127, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f101, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI a88c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0b06, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9674, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2dd2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2a5c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 513a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 91fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d5d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cb2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 821e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  408540 pps   10752 kbps   43010][tx 1211180 pps   31872 kbps  108900][Total Msgs_Rcvd 408540]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  350172 prach0   58368]
+[0m[93m[NR_MAC] No UE found with C-RNTI e298, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 60b2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 67fe
+[0m[93m[NR_MAC] (800.6) RA Contention Resolution timer expired for UE 0x67fe, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 26622
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 9d8e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI a843, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI c7b1, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 3c56, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1c42, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE ece1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 673b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eef8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0f8c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  419292 pps   10752 kbps   43008][tx 1243052 pps   31872 kbps  108900][Total Msgs_Rcvd 419292]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  359388 prach0   59904]
+[0m[93m[NR_MAC] UE 1682 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 1487, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 539e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI a808, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 3d95, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f514, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0387, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ba27, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 2c26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a37a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9628 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 4314
+[0m[93m[NR_MAC] (1001.6) RA Contention Resolution timer expired for UE 0x4314, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 17172
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  430044 pps   10752 kbps   43008][tx 1274924 pps   31872 kbps  108900][Total Msgs_Rcvd 430044]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  368604 prach0   61440]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[93m[NR_MAC] UE c574 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f6a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 650a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f121 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f588 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3f45 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 24ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fb99 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3cc9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 699d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2409 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d416 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 51a2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE af7a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9dba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  440796 pps   10752 kbps   43008][tx 1306796 pps   31872 kbps  108900][Total Msgs_Rcvd 440796]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  377820 prach0   62976]
+[0m[93m[NR_MAC] UE 5bcd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ed58 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4ac3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c81 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE b12b
+[0m[93m[NR_MAC] (177.6) RA Contention Resolution timer expired for UE 0xb12b, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 45355
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 6dfe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05fb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 09a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a596 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9e00 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2991 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8068 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  451548 pps   10752 kbps   43008][tx 1338668 pps   31872 kbps  108900][Total Msgs_Rcvd 451548]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  387036 prach0   64512]
+[0m[93m[NR_MAC] UE 152b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 40c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2587 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4c37 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7ba2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6eb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 71be RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b77b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a191 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ce29 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c04a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b842 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f1a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cb5f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd13 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  462300 pps   10752 kbps   43008][tx 1370540 pps   31872 kbps  108900][Total Msgs_Rcvd 462300]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  396252 prach0   66048]
+[0m[93m[NR_MAC] UE 5bc3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE de09
+[0m[93m[NR_MAC] (410.6) RA Contention Resolution timer expired for UE 0xde09, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 56841
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE cb41 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1332 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 04c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 48f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 247a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI b24f, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0b5b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 8419, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 6d67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 47dd, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  473052 pps   10752 kbps   43002][tx 1402412 pps   31872 kbps  108900][Total Msgs_Rcvd 473052]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  405468 prach0   67584]
+[0m[93m[NR_MAC] No UE found with C-RNTI 42fb, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2a6a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE bf82 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aa46 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f48 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9d28 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 954b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI f97c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 46aa, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9b1a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 1ac3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5099 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE defd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 7c2f
+[0m[HW]     [o-du 0][rx  483804 pps   10752 kbps   43005][tx 1434284 pps   31872 kbps  108900][Total Msgs_Rcvd 483804]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  414684 prach0   69120]
+[0m[93m[NR_MAC] (644.6) RA Contention Resolution timer expired for UE 0x7c2f, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 31791
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 30c5, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE fa2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef34 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 32c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fc83 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fb7e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 2591, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI fb2d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 6a5c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 90d4, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 92fa, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4adc, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI d68b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  494556 pps   10752 kbps   43016][tx 1466156 pps   31872 kbps  108900][Total Msgs_Rcvd 494556]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  423900 prach0   70656]
+[0m[93m[NR_MAC] No UE found with C-RNTI dc36, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 3da5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 190d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3379 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e992 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI efab, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 83e2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 042e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bb93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3d65 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6faa
+[0m[93m[NR_MAC] (878.6) RA Contention Resolution timer expired for UE 0x6faa, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 28586
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  505308 pps   10752 kbps   43008][tx 1498028 pps   31872 kbps  108900][Total Msgs_Rcvd 505308]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  433116 prach0   72192]
+[0m[93m[NR_MAC] No UE found with C-RNTI d807, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 2cfe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4560 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 14b6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bfc8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9741 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 506e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI e45b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5560, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI faad, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 13f2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9633, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9de7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 08b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 30f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  516060 pps   10752 kbps   43016][tx 1529900 pps   31872 kbps  108900][Total Msgs_Rcvd 516060]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  442332 prach0   73728]
+[0m[PHY]    prach_I0 = 7.4 dB
+[0m[93m[NR_MAC] UE a82a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6336 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b6a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI e0ca, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI f9b1, ignoring Msg3 to have UE come back with new RA attempt
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE d1d5
+[0m[93m[NR_MAC] (56.6) RA Contention Resolution timer expired for UE 0xd1d5, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 53717
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI d6d7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0458, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 23f7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE b7d3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab4c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 211d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  526812 pps   10752 kbps   43002][tx 1561772 pps   31872 kbps  108900][Total Msgs_Rcvd 526812]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  451548 prach0   75264]
+[0m[93m[NR_MAC] UE 482a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 722d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 8d78, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5977, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b484, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI bcb9, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 7ba1, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4c15, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 7503 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ad4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 00a2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 21da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 642a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9f10 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  537564 pps   10752 kbps   43008][tx 1593644 pps   31872 kbps  108900][Total Msgs_Rcvd 537564]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  460764 prach0   76800]
+[0m[93m[NR_MAC] UE 203f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bce9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 21e0
+[0m[93m[NR_MAC] (290.6) RA Contention Resolution timer expired for UE 0x21e0, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 8672
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 0833, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 193e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1651, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 6cab, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 0fa1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5ec4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a1c5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b7a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  548316 pps   10752 kbps   43010][tx 1625516 pps   31872 kbps  108900][Total Msgs_Rcvd 548316]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  469980 prach0   78336]
+[0m[93m[NR_MAC] UE 7b03 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI f121, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 7d97, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b2c3, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI fcba, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI aba2, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE d65f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9417 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c35c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 268e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 91e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE efee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 858d
+[0m[93m[NR_MAC] (492.6) RA Contention Resolution timer expired for UE 0x858d, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 34189
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  559068 pps   10752 kbps   43005][tx 1657388 pps   31872 kbps  108900][Total Msgs_Rcvd 559068]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  479196 prach0   79872]
+[0m[93m[NR_MAC] UE 1458 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 65c5, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 044e, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 95fc, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI e6b7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI ec80, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 6293, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE d060 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 812c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3b12 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 831c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e25 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI c66b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 1dcc, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE e48d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  569820 pps   10752 kbps   43010][tx 1689260 pps   31872 kbps  108900][Total Msgs_Rcvd 569820]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  488412 prach0   81408]
+[0m[93m[NR_MAC] UE 4276 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI f2ae, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI cb24, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5442, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9162, ignoring Msg3 to have UE come back with new RA attempt
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE c130
+[0m[93m[NR_MAC] (693.6) RA Contention Resolution timer expired for UE 0xc130, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 49456
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE da5d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c72f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f846 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a71a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd3a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aef6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  580572 pps   10752 kbps   43008][tx 1721132 pps   31872 kbps  108900][Total Msgs_Rcvd 580572]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  497628 prach0   82944]
+[0m[93m[NR_MAC] UE e753 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0165 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 99d2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 507d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9e88 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b755 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8f85 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE af98 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f2f7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aef6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd43 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 812d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eddc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a6a8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE cd18
+[0m[93m[NR_MAC] (893.6) RA Contention Resolution timer expired for UE 0xcd18, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 52504
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  591324 pps   10752 kbps   43008][tx 1753004 pps   31872 kbps  108900][Total Msgs_Rcvd 591324]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  506844 prach0   84480]
+[0m[93m[NR_MAC] UE e87d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ea19 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e07c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd59 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1a1e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b8d7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f296 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8a15 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c71e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1664 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a549 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d5e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46ef RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  602076 pps   10752 kbps   43002][tx 1784876 pps   31872 kbps  108900][Total Msgs_Rcvd 602076]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  516060 prach0   86016]
+[0m[PHY]    prach_I0 = 6.5 dB
+[0m[93m[NR_MAC] UE f411 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3e66 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d70 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7ec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4f39 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7b64 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4deb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0cc5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b7c3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c30d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 75de
+[0m[93m[NR_MAC] (102.6) RA Contention Resolution timer expired for UE 0x75de, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 30174
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  612828 pps   10752 kbps   43013][tx 1816748 pps   31872 kbps  108900][Total Msgs_Rcvd 612828]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  525276 prach0   87552]
+[0m[93m[NR_MAC] No UE found with C-RNTI 26da, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE d717 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI cb2b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 43bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 177a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27f0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dd3d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4c17 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 32c6, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4fd9, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9006, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI e77a, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 956d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 6a1c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 4f2d, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 2a25 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  623580 pps   10752 kbps   43008][tx 1848620 pps   31872 kbps  108900][Total Msgs_Rcvd 623580]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  534492 prach0   89088]
+[0m[93m[NR_MAC] UE 64f0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3108 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4cec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6ac6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 18a8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c80 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c79d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE f38b
+[0m[93m[NR_MAC] (347.6) RA Contention Resolution timer expired for UE 0xf38b, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 62347
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 71e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  634332 pps   10752 kbps   43008][tx 1880492 pps   31872 kbps  108900][Total Msgs_Rcvd 634332]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  543708 prach0   90624]
+[0m[93m[NR_MAC] UE e5cd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3933 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b997 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 81bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 18e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e64c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b567 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b3c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 891a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e1f2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 887c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3ef1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3196 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 721a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 731e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE baeb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  645084 pps   10752 kbps   43005][tx 1912364 pps   31872 kbps  108900][Total Msgs_Rcvd 645084]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  552924 prach0   92160]
+[0m[93m[NR_MAC] UE cd16 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e22c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e53f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE b6ce
+[0m[93m[NR_MAC] (547.6) RA Contention Resolution timer expired for UE 0xb6ce, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 46798
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE 191b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 73e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34d6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 03bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 738f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc9c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7132 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9638 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  655836 pps   10752 kbps   43008][tx 1944236 pps   31872 kbps  108900][Total Msgs_Rcvd 655836]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  562140 prach0   93696]
+[0m[93m[NR_MAC] UE c166 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b98d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a965 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a9b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6a85 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ce72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ef8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b864 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3a21 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c3b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3444 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE ab38
+[0m[93m[NR_MAC] (747.6) RA Contention Resolution timer expired for UE 0xab38, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 43832
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  666588 pps   10752 kbps   42999][tx 1976108 pps   31872 kbps  108900][Total Msgs_Rcvd 666588]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  571356 prach0   95232]
+[0m[93m[NR_MAC] UE bf66 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ffb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f80 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4057 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 10c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0cbc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1559 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 17bc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2199 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 052b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a642 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b85 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9ce RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0689 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 898a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  677340 pps   10752 kbps   43010][tx 2007980 pps   31872 kbps  108900][Total Msgs_Rcvd 677340]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  580572 prach0   96768]
+[0m[93m[NR_MAC] UE 6f4f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0091 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 843f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 23e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11f2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 0237
+[0m[93m[NR_MAC] (948.6) RA Contention Resolution timer expired for UE 0x0237, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 567
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] No UE found with C-RNTI 22e7, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI b0d8, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] UE 6330 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI 0224, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 2057, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 5e40, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI dc26, ignoring Msg3 to have UE come back with new RA attempt
+[0m[HW]     [o-du 0][rx  688092 pps   10752 kbps   43013][tx 2039852 pps   31872 kbps  108900][Total Msgs_Rcvd 688092]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  589788 prach0   98304]
+[0m[PHY]    prach_I0 = 5.7 dB
+[0m[93m[NR_MAC] UE 0175 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9358 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28fc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 406c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 549a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] No UE found with C-RNTI b494, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 7554, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 0ffe, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 432b, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI c6fa, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 9d01, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI 626c, ignoring Msg3 to have UE come back with new RA attempt
+[0m[93m[NR_MAC] No UE found with C-RNTI a431, ignoring Msg3 to have UE come back with new RA attempt
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE b7fc
+[0m[93m[NR_MAC] (125.6) RA Contention Resolution timer expired for UE 0xb7fc, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 47100
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[HW]     [o-du 0][rx  698844 pps   10752 kbps   43002][tx 2071724 pps   31872 kbps  108900][Total Msgs_Rcvd 698844]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  599004 prach0   99840]
+[0m[93m[NR_MAC] UE 6bed RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 44a9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 788d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bace RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5fc0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ec6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dee6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7376 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46ce RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c8fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cd0b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 61f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c53 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  709596 pps   10752 kbps   43010][tx 2103596 pps   31872 kbps  108900][Total Msgs_Rcvd 709596]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  608220 prach0  101376]
+[0m[93m[NR_MAC] UE 5956 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2a59 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b41e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0f90 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 61ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 29a8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 0745
+[0m[93m[NR_MAC] (325.6) RA Contention Resolution timer expired for UE 0x0745, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 1861
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[NR_MAC] UE f87d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 12f7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a25a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e564 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  720348 pps   10752 kbps   43005][tx 2135468 pps   31872 kbps  108900][Total Msgs_Rcvd 720348]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  617436 prach0  102912]
+[0m[93m[NR_MAC] UE 3916 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 923f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c503 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c4b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9e73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ef4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a35 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 840f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m
