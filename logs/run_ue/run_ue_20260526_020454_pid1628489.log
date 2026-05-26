@@ -36213,4 +36213,104 @@ mac 5 fa fc d6
 [0m[PHY]    Resynchronizing RX by 137684 samples
 [0m[HW]     received write reorder clear context
 [0m[PHY]    max_pos_acc = -214935, shiftForNextFrame = 0
-[0m
+[0m[1;31m[PHY]    [UE 0] frame 676, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 678, nr_slot_rx 0, Error decoding PBCH!
+[0m[NAS]    [UE 0] Received NAS_DEREGISTRATION_REQ
+[0m[1;31m[PDCP]   no SRB found (ue_id 0, rb_id 1)
+[0mPress ^C again to trigger immediate shutdown
+[1;31m[PHY]    [UE 0] frame 0, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 2, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 4, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 6, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 8, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 10, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 12, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 14, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 16, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 18, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 20, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 22, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 24, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 26, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 28, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 30, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 32, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 34, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 36, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 38, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 40, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 42, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 44, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 46, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 48, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 50, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 52, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 54, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 56, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 58, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 60, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 62, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 64, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 66, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 68, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 70, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 72, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 74, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 76, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 78, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 80, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 82, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 84, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 86, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 88, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 90, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 92, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 94, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 96, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 98, nr_slot_rx 0, Error decoding PBCH!
+[0mError: Timed out waiting for samples.
+[93m[NR_PHY] Returned from ITTI signal handler
+[0mError: Timed out waiting for samples.
+[1;31m[HW]     VRTSIM: Read timeout waiting for sample 423205605333 to change, aborting channel
+[0m[93m[NR_PHY] UE main thread is ending
+[0m[HW]     VRTSIM: Realtime issues: TX 0.00%, RX 0.00%
+[0m[HW]     VRTSIM: Read/write too early (suspected radio implementaton error) TX: 0, RX: 0
+[0m[HW]     VRTSIM: Average TX budget 883.827 uS (more is better)
+[0m[HW]     VRTSIM: TX budget histogram: 21990534 samples
+[0m[HW]     Bin 0	[0.0 - 100.0uS]:		3165
+[0m[HW]     Bin 1	[100.0 - 200.0uS]:		4176
+[0m[HW]     Bin 2	[200.0 - 300.0uS]:		7563
+[0m[HW]     Bin 3	[300.0 - 400.0uS]:		11188
+[0m[HW]     Bin 4	[400.0 - 500.0uS]:		53436
+[0m[HW]     Bin 5	[500.0 - 600.0uS]:		50912
+[0m[HW]     Bin 6	[600.0 - 700.0uS]:		353253
+[0m[HW]     Bin 7	[700.0 - 800.0uS]:		905603
+[0m[HW]     Bin 8	[800.0 - 900.0uS]:		17883271
+[0m[HW]     Bin 9	[900.0 - 1000.0uS]:		2717868
+[0m[HW]     Bin 10	[1000.0 - 1100.0uS]:		0
+[0m[HW]     Bin 11	[1100.0 - 1200.0uS]:		0
+[0m[HW]     Bin 12	[1200.0 - 1300.0uS]:		0
+[0m[HW]     Bin 13	[1300.0 - 1400.0uS]:		0
+[0m[HW]     Bin 14	[1400.0 - 1500.0uS]:		0
+[0m[HW]     Bin 15	[1500.0 - 1600.0uS]:		0
+[0m[HW]     Bin 16	[1600.0 - 1700.0uS]:		0
+[0m[HW]     Bin 17	[1700.0 - 1800.0uS]:		0
+[0m[HW]     Bin 18	[1800.0 - 1900.0uS]:		0
+[0m[HW]     Bin 19	[1900.0 - 2000.0uS]:		0
+[0m[HW]     Bin 20	[2000.0 - 2100.0uS]:		0
+[0m[HW]     Bin 21	[2100.0 - 2200.0uS]:		0
+[0m[HW]     Bin 22	[2200.0 - 2300.0uS]:		0
+[0m[HW]     Bin 23	[2300.0 - 2400.0uS]:		0
+[0m[HW]     Bin 24	[2400.0 - 2500.0uS]:		0
+[0m[HW]     Bin 25	[2500.0 - 2600.0uS]:		0
+[0m[HW]     Bin 26	[2600.0 - 2700.0uS]:		0
+[0m[HW]     Bin 27	[2700.0 - 2800.0uS]:		0
+[0m[HW]     Bin 28	[2800.0 - 2900.0uS]:		0
+[0m[HW]     Bin 29	[2900.0 - 3000.0uS]:		0
+[0mmac b4 ed ae 28 
+mac 89 be e9 18 
+Entering ITTI signals handler
+TYPE <CTRL-C> TO TERMINATE
+[NR_RRC] deriving kRRCenc, kRRCint from KgNB=a8 04 60 65 87 c2 88 39 07 a3 76 cb 54 79 1d bf 40 ae 55 1e b4 d5 17 36 e6 18 9e 74 18 ab 54 32 [0m
+mac f4 45 fe 40 
+Bye.

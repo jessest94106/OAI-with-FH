@@ -3750,4 +3750,178 @@ xran_bm_init() hInstance 0x604466d80940 poolIdx 1 elements 511 size[93m[HW]    
 [0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
 [0m[93m[HW]     Packets early: 1
 [0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
-[0m
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 4
+[0m[93m[HW]     Packets early: 2
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 4
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 4
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 4
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 4
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 2
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=1
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 557
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 354
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[1;31m[HW]     Failed to remove connection descriptor file /tmp/vrtsim_connection: No such file or directory
+[0m 4976
+xran_bm_allocate_buffer() hInstance 0x604466d80940 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x604466d80940 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x604466d80940 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x604466d80940 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x604466d80940 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x604466d80940 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x604466d80940 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786340 
+xran_bm_init() hInstance 0x604466d80940 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x604466d80940 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x604466d80940 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x604466d80940 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788d00 
+xran_bm_init() hInstance 0x604466d80940 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x604466d80940 poolIdx 4 count 280
+requested symb 0 OTA coresponds to symb 0 OTA time
+requested symb 1 OTA coresponds to symb 1 OTA time
+requested symb 2 OTA coresponds to symb 2 OTA time
+requested symb 3 OTA coresponds to symb 3 OTA time
+requested symb 4 OTA coresponds to symb 4 OTA time
+requested symb 5 OTA coresponds to symb 5 OTA time
+requested symb 6 OTA coresponds to symb 6 OTA time
+requested symb 7 OTA coresponds to symb 7 OTA time
+requested symb 8 OTA coresponds to symb 8 OTA time
+requested symb 9 OTA coresponds to symb 9 OTA time
+requested symb 10 OTA coresponds to symb 10 OTA time
+requested symb 11 OTA coresponds to symb 11 OTA time
+requested symb 12 OTA coresponds to symb 12 OTA time
+requested symb 13 OTA coresponds to symb 13 OTA time
+ORAN: trx_oran_start
+O-RU: XRAN start time: 05/26/26 09:03:53.607033042 UTC [500]
+Start ORAN. Done
+Initializing random number generator, seed 18054925084630746369
+RU: thread_run start time: 05/26/26 09:03:54.000000017 UTC [500]
+O-RU: thread_run start time: 05/26/26 09:03:55.000000018 UTC [500]
+/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/executables/main_nr_ru.c:84 stop_ru() Exiting OAI softmodem: interrupted
+ORAN: trx_oran_stop
+ORAN: trx_oran_end
+fh_rx_bbdev-12 worker thread finished on core 12 [worker id 0]
+fh_cp_gen-13 worker thread finished on core 13 [worker id 1]
+Closing timing source thread...
+Bye.

@@ -20277,4 +20277,10 @@ CMDLINE: "./nr-uesoftmodem" "-O" "/home/jesse/oran_lab/ue_test.conf" "-C" "40497
 [0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
 [0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
 [0m[1;31m[PHY]    synch Failed: 
+[0m[NAS]    [UE 0] Received NAS_DEREGISTRATION_REQ
+[0m[93m[NAS]    No GUTI, cannot trigger deregistration request.
+[0m[NR_RRC] RRC moved into IDLE state
+[0m[NAS]    [UE 0] Received NR_NAS_CONN_RELEASE_IND: cause OTHER
+[0mPress ^C again to trigger immediate shutdown
+[93m[NR_PHY] Returned from ITTI signal handler
 [0m
