@@ -1,0 +1,1358 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260525_171855_pid4033035.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    331776 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[OPT]    OPT disabled
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[GNB_APP] Initialized RAN Context: RC.nb_nr_inst = 1, RC.nb_nr_macrlc_inst = 1, RC.nb_nr_L1_inst = 1, RC.nb_RU = 1, RC.nb_nr_CC[0] = 1
+[0m[NR_PHY] Initializing gNB RAN context: RC.nb_nr_L1_inst = 1 
+[0m[NR_PHY] Registered with MAC interface module (0x57ff63b61440)
+[0m[NR_PHY] Initializing NR L1: RC.nb_nr_L1_inst = 1
+[0m[NR_PHY] L1_RX_THREAD_CORE 5 (15)
+[0m[NR_PHY] TX_AMP = 8230 (-12 dBFS)
+[0m[PHY]    No prs_config configuration found..!!
+[0m[GNB_APP] pdsch_AntennaPorts N1 1 N2 1 XP 1 pusch_AntennaPorts 1
+[0m[GNB_APP] minTXRXTIME 6
+[0m[GNB_APP] CSI-RS 1, SRS 0, report type 0 (ssb_rsrp), 256 QAM may be on, delta_MCS off, maxMIMO_Layers -1, HARQ feedback enabled, num DLHARQ:16, num ULHARQ:16
+[0m[GNB_APP] No RedCap configuration found
+[0m[GNB_APP] No PTRS configuration found
+[0m[GNB_APP] sr_ProhibitTimer 0, sr_TransMax 64, sr_ProhibitTimer_v1700 0, t300 400, t301 400, t310 2000, n310 10, t311 3000, n311 1, t319 400
+[0m[NR_MAC] Candidates per PDCCH aggregation level on UESS: L1: 0, L2: 2, L4: 0, L8: 0, L16: 0
+[0m[RRC]    Read in ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 669984, DLBand 77, ABSFREQPOINTA 669696, DLBW 24,RACH_TargetReceivedPower -100
+[0m[NR_MAC] Computing frequency (nrarfcn 669984 => 4049760 KHz, NR band 77
+[0m[RRC]    absoluteFrequencySSB 669984 corresponds to 4049760000 Hz
+[0m[NR_MAC] Computing frequency (nrarfcn 669696 => 4045440 KHz, NR band 77
+[0m[NR_MAC] TDD period index = 5, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (2.500000 ms) and Pattern2 (0.000000 ms): Total = 2.500000 ms
+[0m[UTIL]   threadCreate() for MAC_STATS: creating thread with affinity ffffffff, priority 2
+[0m[NR_MAC] PUSCH Target 200, PUCCH Target 200, PUCCH Failure 10, PUSCH Failure 100
+[0m[NR_PHY] Copying 0 blacklisted PRB to L1 context
+[0m[NR_MAC] Computing frequency (nrarfcn 669696 => 4045440 KHz, NR band 77
+[0m[NR_MAC] Computing frequency (nrarfcn 669696 => 4045440 KHz, NR band 77
+[0m[NR_MAC] Set TX antenna number to 1, Set RX antenna number to 1 (num ssb 1: 80000000,0)
+[0m[NR_MAC] TDD period index = 5, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (2.500000 ms) and Pattern2 (0.000000 ms): Total = 2.500000 ms
+[0m[NR_MAC] Set TDD configuration period to: 4 DL slots, 2 UL slots, 5 slots per period (NR_TDD_UL_DL_Pattern is 3 DL slots, 1 UL slots, 6 DL symbols, 4 UL symbols)
+[0m[NR_MAC] Configured 1 TDD patterns (total slots: pattern1 = 5, pattern2 = 0)
+[0m[NR_PHY] Set TDD Period Configuration: 4 periods per frame, 20 slots to be configured (4 DL, 2 UL)
+[0m[NR_PHY] TDD period configuration: slot 0 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 1 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 2 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 3 is FLEXIBLE: DDDDDDFFFFUUUU
+[0m[NR_PHY] TDD period configuration: slot 4 is UPLINK
+[0m[NR_MAC] Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --band 77 --ssb 24 
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[NR_MAC] TDA index 0: start 10 length 3 k2 5
+[0m[NR_MAC] TDA index 1: start 0 length 13 k2 6
+[0m[NR_RRC] SIB1 freq: offsetToPointA 4
+[0m[GNB_APP] F1AP: gNB idx 0 gNB_DU_id 3584, gNB_DU_name gNB-OAI, TAC 1 MCC/MNC/length 208/99/2 cellID 1
+[0m[GNB_APP] ngran_DU: Configuring Cell 0 for TDD
+[0m[GNB_APP] Configured DU: cell ID 1, PCI 0
+[0m[GNB_APP] SDAP layer is enabled
+[0m[GNB_APP] Parsed IPv4 address for NG AMF: 172.21.19.111
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_NGAP: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_RRC_GNB: creating thread with affinity ffffffff, priority 50
+[0m[NR_RRC] Entering main loop of NR_RRC message task
+[0m[GTPU]   Configuring GTPu
+[0m[GTPU]   SA mode 
+[0m[GTPU]   Configuring GTPu address : 172.21.19.111, port : 2152
+[0m[GTPU]   Initializing UDP for local address 172.21.19.111 with port 2152
+[0m[GTPU]   Created gtpu instance id: 92
+[0m[UTIL]   threadCreate() for GTPrx_92: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[NR_RRC] Accepting new CU-UP ID 3584 name gNB-OAI (assoc_id -1)
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[GNB_APP] [gNB 0] Received NGAP_REGISTER_GNB_CNF: associated AMF 1
+[0m[NR_RRC] Received F1 Setup Request from gNB_DU 3584 (gNB-OAI) on assoc_id -1
+[0m[NR_RRC] Accepting DU 3584 (gNB-OAI) (RRC version 17.3.0)
+[0m[NR_RRC] Added cell 1 to DU cells array (total cells = 1)
+[0m[NR_RRC] DU 3584: Added cell 1
+[0m[NR_RRC] DU 3584 (gNB-OAI): sending F1 Setup Response
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[NR_RRC] cell PLMN 208.99 Cell ID 1 is in service
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[UTIL]   threadCreate() for time source realtime: creating thread with affinity ffffffff, priority 2
+[0m[UTIL]   time manager configuration: [time source: reatime] [mode: standalone] [server IP: 127.0.0.1} [server port: 7374] (server IP/port not used)
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[UTIL]   threadCreate() for ru_thread: creating thread with affinity 7, priority 97
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[NR_PHY] nb_tx_streams 1, nb_rx_streams 1, num_Beams_period 1
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x79b6c57de4b0
+  tx_up_eAxC2Vf 0x79b6c57df0b0
+  rx_cp_eAxC2Vf 0x79b6c57dfcb0
+  rx_up_eAxC2Vf 0x79b6c57e08b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 4033059]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 4033059]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 4033059]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 4033059]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x79b688f95040
+xran_sector_get_instances [0]: CC 0 handle 0x79b6ac16c740
+Handle: 0x79b6cc2c5468 Instance: [HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[UTIL]   threadCreate() for Tpool0_4: creating thread with affinity 4, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_5: creating thread with affinity 5, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_6: creating thread with affinity 6, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_7: creating thread with affinity 7, priority 97
+[0m[UTIL]   threadCreate() for L1_rx_thread: creating thread with affinity 5, priority 97
+[0m[UTIL]   threadCreate() for L1_tx_thread: creating thread with affinity 6, priority 97
+[0m[UTIL]   threadCreate() for L1_stats: creating thread with affinity ffffffff, priority 1
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m0x79b6ac16c740
+-> hInstance 0x79b6ac16c740
+ru_0_cc_0_idx_0: [ handle 0x79b6ac16c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x79b6ac16c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x28477fdc0 
+xran_bm_init() hInstance 0x79b6ac16c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x79b6ac16c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x79b6ac16c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x79b6ac16c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x28477f700 
+xran_bm_init() hInstance 0x79b6ac16c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x79b6ac16c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x79b6ac16c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x79b6ac16c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x28477f280 
+xran_bm_init() hInstance 0x79b6ac16c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x79b6ac16c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x79b6ac16c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x79b6ac16c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284781b80 
+xran_bm_init() hInstance 0x79b6ac16c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x79b6ac16c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x79b6ac16c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x79b6ac16c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284781640 
+xran_bm_init() hInstance 0x79b6ac16c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x79b6ac16c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/26/26 00:18:59.014402680 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[32m[NR_PHY] [RAPROC] 106.19 Initiating RA procedure with preamble 16, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 106.19 UE RA-RNTI 010b TC-RNTI f3ac: initiating RA procedure
+[0m[NR_MAC] UE f3ac: Sync beam index 0
+[0m[NR_MAC] UE f3ac: Msg3 scheduled at 107.18 (107.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE f3ac: 107.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 16, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  10813: RA RNTI f3ac CC_id 0 Scheduling retransmission of Msg3 in (108,18)
+[0m[32m[NR_MAC]  108.18 PUSCH with TC_RNTI 0xf3ac received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE f3ac
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xf3ac (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI f3ac, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 1 RNTI f3ac) Create UE context: CU UE ID 1 DU UE ID 62380 (rnti: f3ac, random ue id 5408526484000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 1
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 1 RNTI f3ac) Send RRC Setup
+[0m[NR_MAC] UE f3ac Generate Msg4: feedback at  109.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  109.18 UE f3ac: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xf3ac
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI f3ac CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -123 (4 meas)
+UE f3ac: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE f3ac: ulsch_rounds 6/6/6/6, ulsch_errors 6, ulsch_DTX 0, BLER 0.19000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 38.5 dB CCE fail 0
+UE f3ac: MAC:    TX              0 RX              0 bytes
+UE f3ac: LCID 1: TX              0 RX              0 bytes
+
+[0m[HW]     [o-du 0][rx   10782 pps   10782 kbps   72969][tx   31916 pps   31916 kbps  131385][Total Msgs_Rcvd 10782]
+[0m[HW]     [o_du0][pusch0    9234 prach0    1548]
+[0m[32m[NR_PHY] [RAPROC] 168.19 Initiating RA procedure with preamble 28, energy 41.4 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 168.19 UE RA-RNTI 010b TC-RNTI 1586: initiating RA procedure
+[0m[NR_MAC] UE 1586: Sync beam index 0
+[0m[NR_MAC] UE 1586: Msg3 scheduled at 169.18 (169.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 1586: 169.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 28, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  17013: RA RNTI 1586 CC_id 0 Scheduling retransmission of Msg3 in (170,18)
+[0m[32m[NR_MAC]  170.18 PUSCH with TC_RNTI 0x1586 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 1586
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x1586 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 1586, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 2 RNTI 1586) Create UE context: CU UE ID 2 DU UE ID 5510 (rnti: 1586, random ue id d8aa9ed5c6000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 2
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 2 RNTI 1586) Send RRC Setup
+[0m[NR_MAC] UE 1586 Generate Msg4: feedback at  171.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  171.18 UE 1586: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x1586
+[0m[32m[NR_PHY] [RAPROC] 232.19 Initiating RA procedure with preamble 55, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 232.19 UE RA-RNTI 010b TC-RNTI c372: initiating RA procedure
+[0m[NR_MAC] UE c372: Sync beam index 0
+[0m[NR_MAC] UE c372: Msg3 scheduled at 233.18 (233.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE c372: 233.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 55, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  23413: RA RNTI c372 CC_id 0 Scheduling retransmission of Msg3 in (234,18)
+[0m[32m[NR_MAC]  234.18 PUSCH with TC_RNTI 0xc372 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE c372
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xc372 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI c372, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 3 RNTI c372) Create UE context: CU UE ID 3 DU UE ID 50034 (rnti: c372, random ue id de0244b581000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 3
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 3 RNTI c372) Send RRC Setup
+[0m[NR_MAC] UE c372 Generate Msg4: feedback at  235.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  235.18 UE c372: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xc372
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI f3ac CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -123 (9 meas)
+UE f3ac: dlsch_rounds 2/1/1/1, dlsch_errors 1, pucch0_DTX 4, BLER 0.09000 MCS (0) 0 CCE fail 0
+UE f3ac: ulsch_rounds 27/19/19/18, ulsch_errors 18, ulsch_DTX 2, BLER 0.24953 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE f3ac: MAC:    TX             15 RX           4302 bytes
+UE f3ac: LCID 1: TX              0 RX              0 bytes
+UE RNTI 1586 CU-UE-ID 2 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -88 (13 meas)
+UE 1586: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE 1586: ulsch_rounds 21/18/18/18, ulsch_errors 18, ulsch_DTX 0, BLER 0.37953 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 1586: MAC:    TX              0 RX           1434 bytes
+UE 1586: LCID 1: TX              0 RX              0 bytes
+UE RNTI c372 CU-UE-ID 3 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -114 (4 meas)
+UE c372: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE c372: ulsch_rounds 9/6/6/6, ulsch_errors 6, ulsch_DTX 0, BLER 0.19000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 38.5 dB CCE fail 0
+UE c372: MAC:    TX              0 RX              0 bytes
+UE c372: LCID 1: TX              0 RX              0 bytes
+
+[0m[HW]     [o-du 0][rx   21534 pps   10752 kbps   72964][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 21534]
+[0m[HW]     [o_du0][pusch0   18450 prach0    3084]
+[0m[32m[NR_PHY] [RAPROC] 296.19 Initiating RA procedure with preamble 37, energy 41.4 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 296.19 UE RA-RNTI 010b TC-RNTI 763a: initiating RA procedure
+[0m[NR_MAC] UE 763a: Sync beam index 0
+[0m[NR_MAC] UE 763a: Msg3 scheduled at 297.18 (297.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 763a: 297.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 37, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  29813: RA RNTI 763a CC_id 0 Scheduling retransmission of Msg3 in (298,18)
+[0m[32m[NR_MAC]  298.18 PUSCH with TC_RNTI 0x763a received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 763a
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x763a (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 763a, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 4 RNTI 763a) Create UE context: CU UE ID 4 DU UE ID 30266 (rnti: 763a, random ue id 38894562d9000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 4
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 4 RNTI 763a) Send RRC Setup
+[0m[NR_MAC] UE 763a Generate Msg4: feedback at  299.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  299.18 UE 763a: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x763a
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[NR_MAC] UE 763a: reported RSRP out of 5G usable range -32 dBm
+[0m[32m[NR_PHY] [RAPROC] 360.19 Initiating RA procedure with preamble 30, energy 42.4 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 360.19 UE RA-RNTI 010b TC-RNTI e873: initiating RA procedure
+[0m[NR_MAC] UE e873: Sync beam index 0
+[0m[NR_MAC] UE e873: Msg3 scheduled at 361.18 (361.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE e873: 361.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 30, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  36213: RA RNTI e873 CC_id 0 Scheduling retransmission of Msg3 in (362,18)
+[0m[NR_MAC]  36313: RA RNTI e873 CC_id 0 Scheduling retransmission of Msg3 in (363,18)
+[0m[32m[NR_MAC]  363.18 PUSCH with TC_RNTI 0xe873 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE e873
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xe873 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI e873, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 5 RNTI e873) Create UE context: CU UE ID 5 DU UE ID 59507 (rnti: e873, random ue id 824c1b1754000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 5
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 5 RNTI e873) Send RRC Setup
+[0m[NR_MAC] UE e873 Generate Msg4: feedback at  364.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  364.18 UE e873: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xe873
+[0m[NR_MAC] UE e873: reported RSRP out of 5G usable range -41 dBm
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI f3ac CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm
+UE f3ac: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE f3ac: ulsch_rounds 40/19/19/18, ulsch_errors 18, ulsch_DTX 2, BLER 0.06343 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR -3.0 dB CCE fail 0
+UE f3ac: MAC:    TX             30 RX          10038 bytes
+UE f3ac: LCID 1: TX              0 RX              0 bytes
+UE RNTI 1586 CU-UE-ID 2 in-sync PH 0 dB PCMAX 0 dBm
+UE 1586: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE 1586: ulsch_rounds 33/19/19/19, ulsch_errors 19, ulsch_DTX 4, BLER 0.20719 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 1586: MAC:    TX             30 RX           6692 bytes
+UE 1586: LCID 1: TX              0 RX              0 bytes
+UE RNTI c372 CU-UE-ID 3 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -115 (9 meas)
+UE c372: dlsch_rounds 2/1/1/1, dlsch_errors 1, pucch0_DTX 4, BLER 0.09000 MCS (0) 0 CCE fail 0
+UE c372: ulsch_rounds 28/20/19/19, ulsch_errors 19, ulsch_DTX 1, BLER 0.30170 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE c372: MAC:    TX             15 RX           4302 bytes
+UE c372: LCID 1: TX              0 RX              0 bytes
+UE RNTI 763a CU-UE-ID 4 in-sync PH 0 dB PCMAX 0 dBm
+UE 763a: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE 763a: ulsch_rounds 22/19/19/19, ulsch_errors 19, ulsch_DTX 0, BLER 0.37953 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 763a: MAC:    TX              0 RX           1434 bytes
+UE 763a: LCID 1: TX              0 RX              0 bytes
+UE RNTI e873 CU-UE-ID 5 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -122 (3 meas)
+UE e873: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE e873: ulsch_rounds 6/6/6/6, ulsch_errors 6, ulsch_DTX 0, BLER 0.19000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 35.5 dB CCE fail 0
+UE e873: MAC:    TX              0 RX              0 bytes
+UE e873: LCID 1: TX              0 RX              0 bytes
+
+[0m[HW]     [o-du 0][rx   32286 pps   10752 kbps   72964][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 32286]
+[0m[HW]     [o_du0][pusch0   27666 prach0    4620]
+[0m[NR_MAC] UE e873: reported RSRP out of 5G usable range -41 dBm
+[0m[32m[NR_PHY] [RAPROC] 424.19 Initiating RA procedure with preamble 26, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 424.19 UE RA-RNTI 010b TC-RNTI 3d21: initiating RA procedure
+[0m[NR_MAC] UE 3d21: Sync beam index 0
+[0m[NR_MAC] UE 3d21: Msg3 scheduled at 425.18 (425.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 3d21: 425.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 26, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  42613: RA RNTI 3d21 CC_id 0 Scheduling retransmission of Msg3 in (426,18)
+[0m[32m[NR_MAC]  426.18 PUSCH with TC_RNTI 0x3d21 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 3d21
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x3d21 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 3d21, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 6 RNTI 3d21) Create UE context: CU UE ID 6 DU UE ID 15649 (rnti: 3d21, random ue id 3091573cb9000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 6
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 6 RNTI 3d21) Send RRC Setup
+[0m[NR_MAC] UE 3d21 Generate Msg4: feedback at  427.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  427.18 UE 3d21: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x3d21
+[0m[32m[NR_PHY] [RAPROC] 488.19 Initiating RA procedure with preamble 56, energy 41.4 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 488.19 UE RA-RNTI 010b TC-RNTI a20b: initiating RA procedure
+[0m[NR_MAC] UE a20b: Sync beam index 0
+[0m[NR_MAC] UE a20b: Msg3 scheduled at 489.18 (489.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE a20b: 489.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 56, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  49013: RA RNTI a20b CC_id 0 Scheduling retransmission of Msg3 in (490,18)
+[0m[32m[NR_MAC]  490.18 PUSCH with TC_RNTI 0xa20b received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE a20b
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xa20b (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI a20b, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 7 RNTI a20b) Create UE context: CU UE ID 7 DU UE ID 41483 (rnti: a20b, random ue id 3e5695a7ea000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 7
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 7 RNTI a20b) Send RRC Setup
+[0m[NR_MAC] UE a20b Generate Msg4: feedback at  491.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  491.18 UE a20b: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xa20b
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI f3ac CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm
+UE f3ac: dlsch_rounds 5/4/4/4, dlsch_errors 4, pucch0_DTX 16, BLER 0.33661 MCS (0) 0 CCE fail 0
+UE f3ac: ulsch_rounds 52/19/19/18, ulsch_errors 18, ulsch_DTX 2, BLER 0.01791 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE f3ac: MAC:    TX             60 RX          16252 bytes
+UE f3ac: LCID 1: TX              0 RX              0 bytes
+UE RNTI 1586 CU-UE-ID 2 in-sync PH 0 dB PCMAX 0 dBm
+UE 1586: dlsch_rounds 4/3/3/3, dlsch_errors 3, pucch0_DTX 12, BLER 0.26290 MCS (0) 0 CCE fail 0
+UE 1586: ulsch_rounds 46/20/19/19, ulsch_errors 19, ulsch_DTX 5, BLER 0.10049 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 1586: MAC:    TX             45 RX          12906 bytes
+UE 1586: LCID 1: TX              0 RX              0 bytes
+UE RNTI c372 CU-UE-ID 3 in-sync PH 0 dB PCMAX 0 dBm
+UE c372: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE c372: ulsch_rounds 41/20/19/19, ulsch_errors 19, ulsch_DTX 1, BLER 0.07669 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE c372: MAC:    TX             30 RX          10516 bytes
+UE c372: LCID 1: TX              0 RX              0 bytes
+UE RNTI 763a CU-UE-ID 4 in-sync PH 0 dB PCMAX 0 dBm
+UE 763a: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE 763a: ulsch_rounds 34/19/19/19, ulsch_errors 19, ulsch_DTX 0, BLER 0.10719 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 763a: MAC:    TX             30 RX           7170 bytes
+UE 763a: LCID 1: TX              0 RX              0 bytes
+UE RNTI e873 CU-UE-ID 5 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -122 (8 meas)
+UE e873: dlsch_rounds 2/1/1/1, dlsch_errors 1, pucch0_DTX 4, BLER 0.09000 MCS (0) 0 CCE fail 0
+UE e873: ulsch_rounds 27/19/18/18, ulsch_errors 18, ulsch_DTX 1, BLER 0.24953 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE e873: MAC:    TX             15 RX           4302 bytes
+UE e873: LCID 1: TX              0 RX              0 bytes
+UE RNTI 3d21 CU-UE-ID 6 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -110 (14 meas)
+UE 3d21: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE 3d21: ulsch_rounds 21/18/18/18, ulsch_errors 18, ulsch_DTX 0, BLER 0.37953 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 3d21: MAC:    TX              0 RX            956 bytes
+UE 3d21: LCID 1: TX              0 RX              0 bytes
+UE RNTI a20b CU-UE-ID 7 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -56 (5 meas)
+UE a20b: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE a20b: ulsch_rounds 6/5/5/5, ulsch_errors 5, ulsch_DTX 0, BLER 0.19000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 38.5 dB CCE fail 0
+UE a20b: MAC:    TX              0 RX              0 bytes
+UE a20b: LCID 1: TX              0 RX              0 bytes
+
+[0m[HW]     [o-du 0][rx   43038 pps   10752 kbps   72969][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 43038]
+[0m[HW]     [o_du0][pusch0   36882 prach0    6156]
+[0m[32m[NR_PHY] [RAPROC] 552.19 Initiating RA procedure with preamble 17, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 552.19 UE RA-RNTI 010b TC-RNTI 112e: initiating RA procedure
+[0m[NR_MAC] UE 112e: Sync beam index 0
+[0m[NR_MAC] UE 112e: Msg3 scheduled at 553.18 (553.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 112e: 553.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 17, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  55413: RA RNTI 112e CC_id 0 Scheduling retransmission of Msg3 in (554,18)
+[0m[NR_MAC]  55513: RA RNTI 112e CC_id 0 Scheduling retransmission of Msg3 in (555,18)
+[0m[32m[NR_MAC]  555.18 PUSCH with TC_RNTI 0x112e received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 112e
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x112e (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 112e, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 8 RNTI 112e) Create UE context: CU UE ID 8 DU UE ID 4398 (rnti: 112e, random ue id b29477d47b000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 8
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 8 RNTI 112e) Send RRC Setup
+[0m[NR_MAC] UE 112e Generate Msg4: feedback at  556.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  556.18 UE 112e: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x112e
+[0m[32m[NR_PHY] [RAPROC] 616.19 Initiating RA procedure with preamble 34, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 616.19 UE RA-RNTI 010b TC-RNTI dde7: initiating RA procedure
+[0m[NR_MAC] UE dde7: Sync beam index 0
+[0m[NR_MAC] UE dde7: Msg3 scheduled at 617.18 (617.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE dde7: 617.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 34, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  61813: RA RNTI dde7 CC_id 0 Scheduling retransmission of Msg3 in (618,18)
+[0m[32m[NR_MAC]  618.18 PUSCH with TC_RNTI 0xdde7 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE dde7
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xdde7 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI dde7, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 9 RNTI dde7) Create UE context: CU UE ID 9 DU UE ID 56807 (rnti: dde7, random ue id 34bfa580d2000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 9
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 9 RNTI dde7) Send RRC Setup
+[0m[NR_MAC] UE dde7 Generate Msg4: feedback at  619.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  619.18 UE dde7: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xdde7
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI f3ac CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm
+UE f3ac: dlsch_rounds 6/5/5/5, dlsch_errors 5, pucch0_DTX 20, BLER 0.40295 MCS (0) 0 CCE fail 0
+UE f3ac: ulsch_rounds 65/19/19/18, ulsch_errors 18, ulsch_DTX 2, BLER 0.00455 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE f3ac: MAC:    TX             75 RX          22466 bytes
+UE f3ac: LCID 1: TX              0 RX              0 bytes
+UE RNTI 1586 CU-UE-ID 2 in-sync PH 0 dB PCMAX 0 dBm
+UE 1586: dlsch_rounds 5/4/4/4, dlsch_errors 4, pucch0_DTX 16, BLER 0.33661 MCS (0) 0 CCE fail 0
+UE 1586: ulsch_rounds 58/22/19/19, ulsch_errors 19, ulsch_DTX 7, BLER 0.18153 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 1586: MAC:    TX             60 RX          18642 bytes
+UE 1586: LCID 1: TX              0 RX              0 bytes
+UE RNTI c372 CU-UE-ID 3 in-sync PH 0 dB PCMAX 0 dBm
+UE c372: dlsch_rounds 5/4/4/4, dlsch_errors 4, pucch0_DTX 16, BLER 0.33661 MCS (0) 0 CCE fail 0
+UE c372: ulsch_rounds 53/20/19/19, ulsch_errors 19, ulsch_DTX 1, BLER 0.02166 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE c372: MAC:    TX             60 RX          16252 bytes
+UE c372: LCID 1: TX              0 RX              0 bytes
+UE RNTI 763a CU-UE-ID 4 in-sync PH 0 dB PCMAX 0 dBm
+UE 763a: dlsch_rounds 4/3/3/3, dlsch_errors 3, pucch0_DTX 12, BLER 0.26290 MCS (0) 0 CCE fail 0
+UE 763a: ulsch_rounds 47/19/19/19, ulsch_errors 19, ulsch_DTX 0, BLER 0.02725 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 763a: MAC:    TX             45 RX          13384 bytes
+UE 763a: LCID 1: TX              0 RX              0 bytes
+UE RNTI e873 CU-UE-ID 5 in-sync PH 0 dB PCMAX 0 dBm
+UE e873: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE e873: ulsch_rounds 39/19/18/18, ulsch_errors 18, ulsch_DTX 1, BLER 0.07047 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE e873: MAC:    TX             30 RX          10038 bytes
+UE e873: LCID 1: TX              0 RX              0 bytes
+UE RNTI 3d21 CU-UE-ID 6 in-sync PH 0 dB PCMAX 0 dBm
+UE 3d21: dlsch_rounds 3/2/2/2, dlsch_errors 2, pucch0_DTX 8, BLER 0.18100 MCS (0) 0 CCE fail 0
+UE 3d21: ulsch_rounds 33/18/18/18, ulsch_errors 18, ulsch_DTX 0, BLER 0.10719 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 3d21: MAC:    TX             30 RX           7170 bytes
+UE 3d21: LCID 1: TX              0 RX              0 bytes
+UE RNTI a20b CU-UE-ID 7 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -60 (9 meas)
+UE a20b: dlsch_rounds 2/1/1/1, dlsch_errors 1, pucch0_DTX 4, BLER 0.09000 MCS (0) 0 CCE fail 0
+UE a20b: ulsch_rounds 26/17/17/17, ulsch_errors 17, ulsch_DTX 0, BLER 0.20170 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE a20b: MAC:    TX             15 RX           4302 bytes
+UE a20b: LCID 1: TX              0 RX              0 bytes
+UE RNTI 112e CU-UE-ID 8 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -132 (13 meas)
+UE 112e: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE 112e: ulsch_rounds 19/18/17/17, ulsch_errors 17, ulsch_DTX 1, BLER 0.52170 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 0.0 dB CCE fail 0
+UE 112e: MAC:    TX              0 RX            956 bytes
+UE 112e: LCID 1: TX              0 RX              0 bytes
+UE RNTI dde7 CU-UE-ID 9 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -90 (5 meas)
+UE dde7: dlsch_rounds 1/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.10000 MCS (0) 0 CCE fail 0
+UE dde7: ulsch_rounds 5/5/5/5, ulsch_errors 5, ulsch_DTX 0, BLER 0.19000 MCS (0) 9 (Qm 2 deltaMCS 0 dB) NPRB 24  SNR 38.5 dB CCE fail 0
+UE dde7: MAC:    TX              0 RX              0 bytes
+UE dde7: LCID 1: TX              0 RX              0 bytes
+
+[0m[93m[NR_MAC] periodical UE stats deactivated after reaching 8 UEs, please check nrMAC_stats.log, or increase MACRLCs.[0].stats_max_ue
+[0m[HW]     [o-du 0][rx   53790 pps   10752 kbps   72950][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 53790]
+[0m[HW]     [o_du0][pusch0   46098 prach0    7692]
+[0m[32m[NR_PHY] [RAPROC] 680.19 Initiating RA procedure with preamble 14, energy 42.6 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 680.19 UE RA-RNTI 010b TC-RNTI 696b: initiating RA procedure
+[0m[NR_MAC] UE 696b: Sync beam index 0
+[0m[NR_MAC] UE 696b: Msg3 scheduled at 681.18 (681.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 696b: 681.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 14, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  68213: RA RNTI 696b CC_id 0 Scheduling retransmission of Msg3 in (682,18)
+[0m[32m[NR_MAC]  682.18 PUSCH with TC_RNTI 0x696b received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 696b
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x696b (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 696b, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 10 RNTI 696b) Create UE context: CU UE ID 10 DU UE ID 26987 (rnti: 696b, random ue id fa57afdf90000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 10
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 10 RNTI 696b) Send RRC Setup
+[0m[NR_MAC] UE 696b Generate Msg4: feedback at  683.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  683.18 UE 696b: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x696b
+[0m[32m[NR_PHY] [RAPROC] 744.19 Initiating RA procedure with preamble 62, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 744.19 UE RA-RNTI 010b TC-RNTI a62a: initiating RA procedure
+[0m[NR_MAC] UE a62a: Sync beam index 0
+[0m[NR_MAC] UE a62a: Msg3 scheduled at 745.18 (745.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE a62a: 745.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 62, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  74613: RA RNTI a62a CC_id 0 Scheduling retransmission of Msg3 in (746,18)
+[0m[32m[NR_MAC]  746.18 PUSCH with TC_RNTI 0xa62a received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE a62a
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xa62a (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI a62a, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 11 RNTI a62a) Create UE context: CU UE ID 11 DU UE ID 42538 (rnti: a62a, random ue id 60f3d20df7000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 11
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 11 RNTI a62a) Send RRC Setup
+[0m[NR_MAC] UE a62a Generate Msg4: feedback at  747.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  747.18 UE a62a: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xa62a
+[0m[HW]     [o-du 0][rx   64542 pps   10752 kbps   72960][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 64542]
+[0m[HW]     [o_du0][pusch0   55314 prach0    9228]
+[0m[32m[NR_PHY] [RAPROC] 808.19 Initiating RA procedure with preamble 34, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 808.19 UE RA-RNTI 010b TC-RNTI 0efa: initiating RA procedure
+[0m[NR_MAC] UE 0efa: Sync beam index 0
+[0m[NR_MAC] UE 0efa: Msg3 scheduled at 809.18 (809.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 0efa: 809.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 34, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  81013: RA RNTI 0efa CC_id 0 Scheduling retransmission of Msg3 in (810,18)
+[0m[32m[NR_MAC]  810.18 PUSCH with TC_RNTI 0x0efa received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 0efa
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x0efa (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 0efa, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 12 RNTI 0efa) Create UE context: CU UE ID 12 DU UE ID 3834 (rnti: 0efa, random ue id f2c067ea3f000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 12
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 12 RNTI 0efa) Send RRC Setup
+[0m[NR_MAC] UE 0efa Generate Msg4: feedback at  811.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  811.18 UE 0efa: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x0efa
+[0m[32m[NR_PHY] [RAPROC] 872.19 Initiating RA procedure with preamble 30, energy 42.4 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 872.19 UE RA-RNTI 010b TC-RNTI af63: initiating RA procedure
+[0m[NR_MAC] UE af63: Sync beam index 0
+[0m[NR_MAC] UE af63: Msg3 scheduled at 873.18 (873.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE af63: 873.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 30, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  87413: RA RNTI af63 CC_id 0 Scheduling retransmission of Msg3 in (874,18)
+[0m[32m[NR_MAC]  874.18 PUSCH with TC_RNTI 0xaf63 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE af63
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0xaf63 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI af63, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 13 RNTI af63) Create UE context: CU UE ID 13 DU UE ID 44899 (rnti: af63, random ue id a749f92a3000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 13
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 13 RNTI af63) Send RRC Setup
+[0m[NR_MAC] UE af63 Generate Msg4: feedback at  875.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  875.18 UE af63: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0xaf63
+[0m[HW]     [o-du 0][rx   75294 pps   10752 kbps   72950][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 75294]
+[0m[HW]     [o_du0][pusch0   64530 prach0   10764]
+[0m[32m[NR_PHY] [RAPROC] 936.19 Initiating RA procedure with preamble 0, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 936.19 UE RA-RNTI 010b TC-RNTI 6af3: initiating RA procedure
+[0m[NR_MAC] UE 6af3: Sync beam index 0
+[0m[NR_MAC] UE 6af3: Msg3 scheduled at 937.18 (937.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 6af3: 937.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 0, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  93813: RA RNTI 6af3 CC_id 0 Scheduling retransmission of Msg3 in (938,18)
+[0m[32m[NR_MAC]  938.18 PUSCH with TC_RNTI 0x6af3 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 6af3
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x6af3 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 6af3, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 14 RNTI 6af3) Create UE context: CU UE ID 14 DU UE ID 27379 (rnti: 6af3, random ue id b4a57e9654000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 14
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 14 RNTI 6af3) Send RRC Setup
+[0m[NR_MAC] UE 6af3 Generate Msg4: feedback at  939.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  939.18 UE 6af3: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x6af3
+[0m[32m[NR_PHY] [RAPROC] 1000.19 Initiating RA procedure with preamble 32, energy 42.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 1000.19 UE RA-RNTI 010b TC-RNTI 56bf: initiating RA procedure
+[0m[NR_MAC] UE 56bf: Sync beam index 0
+[0m[NR_MAC] UE 56bf: Msg3 scheduled at 1001.18 (1001.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 56bf: 1001.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 32, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC] 100213: RA RNTI 56bf CC_id 0 Scheduling retransmission of Msg3 in (1002,18)
+[0m[NR_MAC] 100313: RA RNTI 56bf CC_id 0 Scheduling retransmission of Msg3 in (1003,18)
+[0m[32m[NR_MAC] 1003.18 PUSCH with TC_RNTI 0x56bf received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 56bf
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x56bf (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 56bf, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 15 RNTI 56bf) Create UE context: CU UE ID 15 DU UE ID 22207 (rnti: 56bf, random ue id 3c3c6c0f18000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 15
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 15 RNTI 56bf) Send RRC Setup
+[0m[NR_MAC] UE 56bf Generate Msg4: feedback at 1004.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC] 1004.18 UE 56bf: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x56bf
+[0m[HW]     [o-du 0][rx   86046 pps   10752 kbps   72960][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 86046]
+[0m[HW]     [o_du0][pusch0   73746 prach0   12300]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[32m[NR_PHY] [RAPROC] 46.19 Initiating RA procedure with preamble 60, energy 42.6 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 46.19 UE RA-RNTI 010b TC-RNTI 1972: initiating RA procedure
+[0m[NR_MAC] UE 1972: Sync beam index 0
+[0m[NR_MAC] UE 1972: Msg3 scheduled at 47.18 (47.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 1972: 47.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 60, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]   4813: RA RNTI 1972 CC_id 0 Scheduling retransmission of Msg3 in (48,18)
+[0m[32m[NR_MAC]   48.18 PUSCH with TC_RNTI 0x1972 received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 1972
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x1972 (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 1972, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 16 RNTI 1972) Create UE context: CU UE ID 16 DU UE ID 6514 (rnti: 1972, random ue id 7a6a2b7e03000000)
+[0m[NR_RRC] Adding new PCell (cell 1, assoc_id -1)
+[0m[RRC]    activate SRB 1 of UE 16
+[0m[32m[NR_RRC] [DL] (cellID 1, UE ID 16 RNTI 1972) Send RRC Setup
+[0m[NR_MAC] UE 1972 Generate Msg4: feedback at   49.18, payload 201 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]   49.18 UE 1972: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x1972
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[NR_MAC] UE 1972: reported RSRP out of 5G usable range -145 dBm
+[0m[32m[NR_PHY] [RAPROC] 112.19 Initiating RA procedure with preamble 0, energy 41.5 dB (I0 0, thres 150), delay 0 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 112.19 UE RA-RNTI 010b TC-RNTI 2cee: initiating RA procedure
+[0m[NR_MAC] UE 2cee: Sync beam index 0
+[0m[NR_MAC] UE 2cee: Msg3 scheduled at 113.18 (113.10 TDA 0) start 0 RBs 24
+[0m[32m[NR_MAC] UE 2cee: 113.10 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 0, timing_offset = 0 (estimated distance 0.0 [m])
+[0m[NR_MAC]  11413: RA RNTI 2cee CC_id 0 Scheduling retransmission of Msg3 in (114,18)
+[0m[32m[NR_MAC]  114.18 PUSCH with TC_RNTI 0x2cee received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 2cee
+[0m[93m[NR_MAC] Maximum number of UE alllowed at DU reached. Cannot serve UE 2cee[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x2cee (state WAIT_Msg3)
+[0m[NR_RRC] Decoding CCCH: RNTI 2cee, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 17 RNTI 2cee) Create UE context: CU UE ID 17 DU UE ID 11502 (rnti: 2cee, random ue id e1333f07d000000)
+[0m[32m[NR_RRC] Send RRCReject to RNTI 2cee
+[0m[NR_RRC]  [RAPROC] ue 2cee Logical Channel DL-CCCH, Generating NR_RRCReject (bytes 2)
+[0m[93m[PDCP]   /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_pdcp/nr_pdcp_ue_manager.c:127:nr_pdcp_manager_remove_ue: warning: UE ID/RNTI 0x11 not found
+[0m[NR_RRC] removed UE CU UE ID 17/RNTI 2cee 
+[0m[NR_RRC] [--] (UE ID 17 RNTI 2cee) Remove UE context
+[0m[NR_MAC] UE 2cee Generate Msg4: feedback at  115.18, payload 18 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[NR_MAC] (UE 2cee) Received Nack in Msg4, preparing retransmission!
+[0m[NR_MAC] UE 2cee Generate Msg4: feedback at  116.18, payload 18 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[NR_MAC] (UE 2cee) Received Nack in Msg4, preparing retransmission!
+[0m[NR_MAC] UE 2cee Generate Msg4: feedback at  117.18, payload 18 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[NR_MAC] (UE 2cee) Received Nack in Msg4, preparing retransmission!
+[0m[NR_MAC] UE 2cee Generate Msg4: feedback at  118.18, payload 18 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[NR_MAC]  118.18 UE 2cee: RA Procedure failed at Msg4!
+[0m[93m[NR_MAC] (122.6) RA Contention Resolution timer expired for UE 0x2cee, RA procedure failed...
+[0m[NR_MAC] Remove NR rnti 0x2cee
+[0m[HW]     [o-du 0][rx   96798 pps   10752 kbps   72969][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 96798]
+[0m[HW]     [o_du0][pusch0   82962 prach0   13836]
+[0m[HW]     [o-du 0][rx  107550 pps   10752 kbps   72950][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 107550]
+[0m[HW]     [o_du0][pusch0   92178 prach0   15372]
+[0m[HW]     [o-du 0][rx  118302 pps   10752 kbps   72960][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 118302]
+[0m[HW]     [o_du0][pusch0  101394 prach0   16908]
+[0m[HW]     [o-du 0][rx  129054 pps   10752 kbps   72969][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 129054]
+[0m[HW]     [o_du0][pusch0  110610 prach0   18444]
+[0m[HW]     [o-du 0][rx  139806 pps   10752 kbps   72950][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 139806]
+[0m[HW]     [o_du0][pusch0  119826 prach0   19980]
+[0m[HW]     [o-du 0][rx  150558 pps   10752 kbps   72969][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 150558]
+[0m[HW]     [o_du0][pusch0  129042 prach0   21516]
+[0m[HW]     [o-du 0][rx  161310 pps   10752 kbps   72960][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 161310]
+[0m[HW]     [o_du0][pusch0  138258 prach0   23052]
+[0m[HW]     [o-du 0][rx  172062 pps   10752 kbps   72950][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 172062]
+[0m[HW]     [o_du0][pusch0  147474 prach0   24588]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  182814 pps   10752 kbps   72960][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 182814]
+[0m[HW]     [o_du0][pusch0  156690 prach0   26124]
+[0m[HW]     [o-du 0][rx  193566 pps   10752 kbps   72960][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 193566]
+[0m[HW]     [o_du0][pusch0  165906 prach0   27660]
+[0m[HW]     [o-du 0][rx  204318 pps   10752 kbps   72960][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 204318]
+[0m[HW]     [o_du0][pusch0  175122 prach0   29196]
+[0m[HW]     [o-du 0][rx  215070 pps   10752 kbps   72960][tx  637484 pps   31872 kbps  182321][Total Msgs_Rcvd 215070]
+[0m[HW]     [o_du0][pusch0  184338 prach0   30732]
+[0m[HW]     [o-du 0][rx  225822 pps   10752 kbps   72950][tx  669356 pps   31872 kbps  182321][Total Msgs_Rcvd 225822]
+[0m[HW]     [o_du0][pusch0  193554 prach0   32268]
+[0m[HW]     [o-du 0][rx  236574 pps   10752 kbps   72960][tx  701228 pps   31872 kbps  182321][Total Msgs_Rcvd 236574]
+[0m[HW]     [o_du0][pusch0  202770 prach0   33804]
+[0m[HW]     [o-du 0][rx  247326 pps   10752 kbps   72960][tx  733100 pps   31872 kbps  182321][Total Msgs_Rcvd 247326]
+[0m[HW]     [o_du0][pusch0  211986 prach0   35340]
+[0m[HW]     [o-du 0][rx  258078 pps   10752 kbps   72969][tx  764972 pps   31872 kbps  182321][Total Msgs_Rcvd 258078]
+[0m[HW]     [o_du0][pusch0  221202 prach0   36876]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  268830 pps   10752 kbps   72950][tx  796844 pps   31872 kbps  182321][Total Msgs_Rcvd 268830]
+[0m[HW]     [o_du0][pusch0  230418 prach0   38412]
+[0m[HW]     [o-du 0][rx  279582 pps   10752 kbps   72969][tx  828716 pps   31872 kbps  182321][Total Msgs_Rcvd 279582]
+[0m[HW]     [o_du0][pusch0  239634 prach0   39948]
+[0m[HW]     [o-du 0][rx  290334 pps   10752 kbps   72950][tx  860588 pps   31872 kbps  182321][Total Msgs_Rcvd 290334]
+[0m[HW]     [o_du0][pusch0  248850 prach0   41484]
+[0m[HW]     [o-du 0][rx  301086 pps   10752 kbps   72950][tx  892460 pps   31872 kbps  182321][Total Msgs_Rcvd 301086]
+[0m[HW]     [o_du0][pusch0  258066 prach0   43020]
+[0m[HW]     [o-du 0][rx  311838 pps   10752 kbps   72969][tx  924332 pps   31872 kbps  182321][Total Msgs_Rcvd 311838]
+[0m[HW]     [o_du0][pusch0  267282 prach0   44556]
+[0m[HW]     [o-du 0][rx  322590 pps   10752 kbps   72960][tx  956204 pps   31872 kbps  182321][Total Msgs_Rcvd 322590]
+[0m[HW]     [o_du0][pusch0  276498 prach0   46092]
+[0m[HW]     [o-du 0][rx  333342 pps   10752 kbps   72950][tx  988076 pps   31872 kbps  182321][Total Msgs_Rcvd 333342]
+[0m[HW]     [o_du0][pusch0  285714 prach0   47628]
+[0m[HW]     [o-du 0][rx  344094 pps   10752 kbps   72960][tx 1019948 pps   31872 kbps  182321][Total Msgs_Rcvd 344094]
+[0m[HW]     [o_du0][pusch0  294930 prach0   49164]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  354846 pps   10752 kbps   72960][tx 1051820 pps   31872 kbps  182321][Total Msgs_Rcvd 354846]
+[0m[HW]     [o_du0][pusch0  304146 prach0   50700]
+[0m[HW]     [o-du 0][rx  365598 pps   10752 kbps   72969][tx 1083692 pps   31872 kbps  182321][Total Msgs_Rcvd 365598]
+[0m[HW]     [o_du0][pusch0  313362 prach0   52236]
+[0m[HW]     [o-du 0][rx  376350 pps   10752 kbps   72960][tx 1115564 pps   31872 kbps  182321][Total Msgs_Rcvd 376350]
+[0m[HW]     [o_du0][pusch0  322578 prach0   53772]
+[0m[HW]     [o-du 0][rx  387102 pps   10752 kbps   72960][tx 1147436 pps   31872 kbps  182321][Total Msgs_Rcvd 387102]
+[0m[HW]     [o_du0][pusch0  331794 prach0   55308]
+[0m[HW]     [o-du 0][rx  397854 pps   10752 kbps   72960][tx 1179308 pps   31872 kbps  182321][Total Msgs_Rcvd 397854]
+[0m[HW]     [o_du0][pusch0  341010 prach0   56844]
+[0m[HW]     [o-du 0][rx  408606 pps   10752 kbps   72960][tx 1211180 pps   31872 kbps  182321][Total Msgs_Rcvd 408606]
+[0m[HW]     [o_du0][pusch0  350226 prach0   58380]
+[0m[HW]     [o-du 0][rx  419358 pps   10752 kbps   72950][tx 1243052 pps   31872 kbps  182321][Total Msgs_Rcvd 419358]
+[0m[HW]     [o_du0][pusch0  359442 prach0   59916]
+[0m[HW]     [o-du 0][rx  430110 pps   10752 kbps   72960][tx 1274924 pps   31872 kbps  182321][Total Msgs_Rcvd 430110]
+[0m[HW]     [o_du0][pusch0  368658 prach0   61452]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  440862 pps   10752 kbps   72969][tx 1306796 pps   31872 kbps  182321][Total Msgs_Rcvd 440862]
+[0m[HW]     [o_du0][pusch0  377874 prach0   62988]
+[0m[HW]     [o-du 0][rx  451614 pps   10752 kbps   72950][tx 1338668 pps   31872 kbps  182321][Total Msgs_Rcvd 451614]
+[0m[HW]     [o_du0][pusch0  387090 prach0   64524]
+[0m[HW]     [o-du 0][rx  462366 pps   10752 kbps   72969][tx 1370540 pps   31872 kbps  182321][Total Msgs_Rcvd 462366]
+[0m[HW]     [o_du0][pusch0  396306 prach0   66060]
+[0m[HW]     [o-du 0][rx  473118 pps   10752 kbps   72960][tx 1402412 pps   31872 kbps  182321][Total Msgs_Rcvd 473118]
+[0m[HW]     [o_du0][pusch0  405522 prach0   67596]
+[0m[HW]     [o-du 0][rx  483870 pps   10752 kbps   72950][tx 1434284 pps   31872 kbps  182321][Total Msgs_Rcvd 483870]
+[0m[HW]     [o_du0][pusch0  414738 prach0   69132]
+[0m[HW]     [o-du 0][rx  494622 pps   10752 kbps   72960][tx 1466156 pps   31872 kbps  182321][Total Msgs_Rcvd 494622]
+[0m[HW]     [o_du0][pusch0  423954 prach0   70668]
+[0m[HW]     [o-du 0][rx  505374 pps   10752 kbps   72969][tx 1498028 pps   31872 kbps  182321][Total Msgs_Rcvd 505374]
+[0m[HW]     [o_du0][pusch0  433170 prach0   72204]
+[0m[HW]     [o-du 0][rx  516126 pps   10752 kbps   72960][tx 1529900 pps   31872 kbps  182321][Total Msgs_Rcvd 516126]
+[0m[HW]     [o_du0][pusch0  442386 prach0   73740]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  526878 pps   10752 kbps   72969][tx 1561772 pps   31872 kbps  182321][Total Msgs_Rcvd 526878]
+[0m[HW]     [o_du0][pusch0  451602 prach0   75276]
+[0m[HW]     [o-du 0][rx  537630 pps   10752 kbps   72950][tx 1593644 pps   31872 kbps  182321][Total Msgs_Rcvd 537630]
+[0m[HW]     [o_du0][pusch0  460818 prach0   76812]
+[0m[HW]     [o-du 0][rx  548382 pps   10752 kbps   72960][tx 1625516 pps   31872 kbps  182321][Total Msgs_Rcvd 548382]
+[0m[HW]     [o_du0][pusch0  470034 prach0   78348]
+[0m[HW]     [o-du 0][rx  559134 pps   10752 kbps   72960][tx 1657388 pps   31872 kbps  182321][Total Msgs_Rcvd 559134]
+[0m[HW]     [o_du0][pusch0  479250 prach0   79884]
+[0m[HW]     [o-du 0][rx  569886 pps   10752 kbps   72950][tx 1689260 pps   31872 kbps  182321][Total Msgs_Rcvd 569886]
+[0m[HW]     [o_du0][pusch0  488466 prach0   81420]
+[0m[HW]     [o-du 0][rx  580638 pps   10752 kbps   72960][tx 1721132 pps   31872 kbps  182321][Total Msgs_Rcvd 580638]
+[0m[HW]     [o_du0][pusch0  497682 prach0   82956]
+[0m[HW]     [o-du 0][rx  591390 pps   10752 kbps   72960][tx 1753004 pps   31872 kbps  182321][Total Msgs_Rcvd 591390]
+[0m[HW]     [o_du0][pusch0  506898 prach0   84492]
+[0m[HW]     [o-du 0][rx  602142 pps   10752 kbps   72960][tx 1784876 pps   31872 kbps  182321][Total Msgs_Rcvd 602142]
+[0m[HW]     [o_du0][pusch0  516114 prach0   86028]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  612894 pps   10752 kbps   72960][tx 1816748 pps   31872 kbps  182321][Total Msgs_Rcvd 612894]
+[0m[HW]     [o_du0][pusch0  525330 prach0   87564]
+[0m[HW]     [o-du 0][rx  623646 pps   10752 kbps   72950][tx 1848620 pps   31872 kbps  182321][Total Msgs_Rcvd 623646]
+[0m[HW]     [o_du0][pusch0  534546 prach0   89100]
+[0m[HW]     [o-du 0][rx  634398 pps   10752 kbps   72960][tx 1880492 pps   31872 kbps  182321][Total Msgs_Rcvd 634398]
+[0m[HW]     [o_du0][pusch0  543762 prach0   90636]
+[0m[HW]     [o-du 0][rx  645150 pps   10752 kbps   72950][tx 1912364 pps   31872 kbps  182321][Total Msgs_Rcvd 645150]
+[0m[HW]     [o_du0][pusch0  552978 prach0   92172]
+[0m[HW]     [o-du 0][rx  655902 pps   10752 kbps   72969][tx 1944236 pps   31872 kbps  182321][Total Msgs_Rcvd 655902]
+[0m[HW]     [o_du0][pusch0  562194 prach0   93708]
+[0m[HW]     [o-du 0][rx  666654 pps   10752 kbps   72950][tx 1976108 pps   31872 kbps  182321][Total Msgs_Rcvd 666654]
+[0m[HW]     [o_du0][pusch0  571410 prach0   95244]
+[0m[HW]     [o-du 0][rx  677406 pps   10752 kbps   72969][tx 2007980 pps   31872 kbps  182321][Total Msgs_Rcvd 677406]
+[0m[HW]     [o_du0][pusch0  580626 prach0   96780]
+[0m[HW]     [o-du 0][rx  688158 pps   10752 kbps   72960][tx 2039852 pps   31872 kbps  182321][Total Msgs_Rcvd 688158]
+[0m[HW]     [o_du0][pusch0  589842 prach0   98316]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  698910 pps   10752 kbps   72969][tx 2071724 pps   31872 kbps  182321][Total Msgs_Rcvd 698910]
+[0m[HW]     [o_du0][pusch0  599058 prach0   99852]
+[0m[HW]     [o-du 0][rx  709662 pps   10752 kbps   72960][tx 2103596 pps   31872 kbps  182321][Total Msgs_Rcvd 709662]
+[0m[HW]     [o_du0][pusch0  608274 prach0  101388]
+[0m[HW]     [o-du 0][rx  720414 pps   10752 kbps   72969][tx 2135468 pps   31872 kbps  182321][Total Msgs_Rcvd 720414]
+[0m[HW]     [o_du0][pusch0  617490 prach0  102924]
+[0m[HW]     [o-du 0][rx  731166 pps   10752 kbps   72950][tx 2167340 pps   31872 kbps  182321][Total Msgs_Rcvd 731166]
+[0m[HW]     [o_du0][pusch0  626706 prach0  104460]
+[0m[HW]     [o-du 0][rx  741918 pps   10752 kbps   72969][tx 2199212 pps   31872 kbps  182321][Total Msgs_Rcvd 741918]
+[0m[HW]     [o_du0][pusch0  635922 prach0  105996]
+[0m[HW]     [o-du 0][rx  752670 pps   10752 kbps   72960][tx 2231084 pps   31872 kbps  182321][Total Msgs_Rcvd 752670]
+[0m[HW]     [o_du0][pusch0  645138 prach0  107532]
+[0m[HW]     [o-du 0][rx  763422 pps   10752 kbps   72960][tx 2262956 pps   31872 kbps  182321][Total Msgs_Rcvd 763422]
+[0m[HW]     [o_du0][pusch0  654354 prach0  109068]
+[0m[HW]     [o-du 0][rx  774174 pps   10752 kbps   72960][tx 2294828 pps   31872 kbps  182321][Total Msgs_Rcvd 774174]
+[0m[HW]     [o_du0][pusch0  663570 prach0  110604]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  784926 pps   10752 kbps   72960][tx 2326700 pps   31872 kbps  182321][Total Msgs_Rcvd 784926]
+[0m[HW]     [o_du0][pusch0  672786 prach0  112140]
+[0m[HW]     [o-du 0][rx  795678 pps   10752 kbps   72960][tx 2358572 pps   31872 kbps  182321][Total Msgs_Rcvd 795678]
+[0m[HW]     [o_du0][pusch0  682002 prach0  113676]
+[0m[HW]     [o-du 0][rx  806430 pps   10752 kbps   72969][tx 2390444 pps   31872 kbps  182321][Total Msgs_Rcvd 806430]
+[0m[HW]     [o_du0][pusch0  691218 prach0  115212]
+[0m[HW]     [o-du 0][rx  817182 pps   10752 kbps   72960][tx 2422316 pps   31872 kbps  182321][Total Msgs_Rcvd 817182]
+[0m[HW]     [o_du0][pusch0  700434 prach0  116748]
+[0m[HW]     [o-du 0][rx  827934 pps   10752 kbps   72960][tx 2454188 pps   31872 kbps  182321][Total Msgs_Rcvd 827934]
+[0m[HW]     [o_du0][pusch0  709650 prach0  118284]
+[0m[HW]     [o-du 0][rx  838686 pps   10752 kbps   72950][tx 2486060 pps   31872 kbps  182321][Total Msgs_Rcvd 838686]
+[0m[HW]     [o_du0][pusch0  718866 prach0  119820]
+[0m[HW]     [o-du 0][rx  849438 pps   10752 kbps   72969][tx 2517932 pps   31872 kbps  182321][Total Msgs_Rcvd 849438]
+[0m[HW]     [o_du0][pusch0  728082 prach0  121356]
+[0m[HW]     [o-du 0][rx  860190 pps   10752 kbps   72950][tx 2549804 pps   31872 kbps  182321][Total Msgs_Rcvd 860190]
+[0m[HW]     [o_du0][pusch0  737298 prach0  122892]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  870942 pps   10752 kbps   72960][tx 2581676 pps   31872 kbps  182321][Total Msgs_Rcvd 870942]
+[0m[HW]     [o_du0][pusch0  746514 prach0  124428]
+[0m[HW]     [o-du 0][rx  881694 pps   10752 kbps   72950][tx 2613548 pps   31872 kbps  182321][Total Msgs_Rcvd 881694]
+[0m[HW]     [o_du0][pusch0  755730 prach0  125964]
+[0m[HW]     [o-du 0][rx  892446 pps   10752 kbps   72969][tx 2645420 pps   31872 kbps  182321][Total Msgs_Rcvd 892446]
+[0m[HW]     [o_du0][pusch0  764946 prach0  127500]
+[0m[HW]     [o-du 0][rx  903198 pps   10752 kbps   72960][tx 2677292 pps   31872 kbps  182321][Total Msgs_Rcvd 903198]
+[0m[HW]     [o_du0][pusch0  774162 prach0  129036]
+[0m[HW]     [o-du 0][rx  913950 pps   10752 kbps   72969][tx 2709164 pps   31872 kbps  182321][Total Msgs_Rcvd 913950]
+[0m[HW]     [o_du0][pusch0  783378 prach0  130572]
+[0m[HW]     [o-du 0][rx  924702 pps   10752 kbps   72950][tx 2741036 pps   31872 kbps  182321][Total Msgs_Rcvd 924702]
+[0m[HW]     [o_du0][pusch0  792594 prach0  132108]
+[0m[HW]     [o-du 0][rx  935454 pps   10752 kbps   72960][tx 2772908 pps   31872 kbps  182321][Total Msgs_Rcvd 935454]
+[0m[HW]     [o_du0][pusch0  801810 prach0  133644]
+[0m[HW]     [o-du 0][rx  946206 pps   10752 kbps   72960][tx 2804780 pps   31872 kbps  182321][Total Msgs_Rcvd 946206]
+[0m[HW]     [o_du0][pusch0  811026 prach0  135180]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  956958 pps   10752 kbps   72969][tx 2836652 pps   31872 kbps  182321][Total Msgs_Rcvd 956958]
+[0m[HW]     [o_du0][pusch0  820242 prach0  136716]
+[0m[HW]     [o-du 0][rx  967710 pps   10752 kbps   72950][tx 2868524 pps   31872 kbps  182321][Total Msgs_Rcvd 967710]
+[0m[HW]     [o_du0][pusch0  829458 prach0  138252]
+[0m[HW]     [o-du 0][rx  978462 pps   10752 kbps   72969][tx 2900396 pps   31872 kbps  182321][Total Msgs_Rcvd 978462]
+[0m[HW]     [o_du0][pusch0  838674 prach0  139788]
+[0m[HW]     [o-du 0][rx  989214 pps   10752 kbps   72960][tx 2932268 pps   31872 kbps  182321][Total Msgs_Rcvd 989214]
+[0m[HW]     [o_du0][pusch0  847890 prach0  141324]
+[0m[HW]     [o-du 0][rx  999966 pps   10752 kbps   72950][tx 2964140 pps   31872 kbps  182321][Total Msgs_Rcvd 999966]
+[0m[HW]     [o_du0][pusch0  857106 prach0  142860]
+[0m[HW]     [o-du 0][rx 1010718 pps   10752 kbps   72960][tx 2996012 pps   31872 kbps  182321][Total Msgs_Rcvd 1010718]
+[0m[HW]     [o_du0][pusch0  866322 prach0  144396]
+[0m[HW]     [o-du 0][rx 1021470 pps   10752 kbps   72969][tx 3027884 pps   31872 kbps  182321][Total Msgs_Rcvd 1021470]
+[0m[HW]     [o_du0][pusch0  875538 prach0  145932]
+[0m[HW]     [o-du 0][rx 1032222 pps   10752 kbps   72960][tx 3059756 pps   31872 kbps  182321][Total Msgs_Rcvd 1032222]
+[0m[HW]     [o_du0][pusch0  884754 prach0  147468]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1042974 pps   10752 kbps   72960][tx 3091628 pps   31872 kbps  182321][Total Msgs_Rcvd 1042974]
+[0m[HW]     [o_du0][pusch0  893970 prach0  149004]
+[0m[HW]     [o-du 0][rx 1053726 pps   10752 kbps   72960][tx 3123500 pps   31872 kbps  182321][Total Msgs_Rcvd 1053726]
+[0m[HW]     [o_du0][pusch0  903186 prach0  150540]
+[0m[HW]     [o-du 0][rx 1064479 pps   10753 kbps   72962][tx 3155372 pps   31872 kbps  182321][Total Msgs_Rcvd 1064479]
+[0m[HW]     [o_du0][pusch0  912402 prach0  152076]
+[0m[HW]     [o-du 0][rx 1075231 pps   10752 kbps   72945][tx 3187244 pps   31872 kbps  182321][Total Msgs_Rcvd 1075231]
+[0m[HW]     [o_du0][pusch0  921618 prach0  153612]
+[0m[HW]     [o-du 0][rx 1085983 pps   10752 kbps   72974][tx 3219116 pps   31872 kbps  182321][Total Msgs_Rcvd 1085983]
+[0m[HW]     [o_du0][pusch0  930834 prach0  155148]
+[0m[HW]     [o-du 0][rx 1096736 pps   10753 kbps   72953][tx 3250988 pps   31872 kbps  182321][Total Msgs_Rcvd 1096736]
+[0m[HW]     [o_du0][pusch0  940050 prach0  156684]
+[0m[HW]     [o-du 0][rx 1107488 pps   10752 kbps   72945][tx 3282860 pps   31872 kbps  182321][Total Msgs_Rcvd 1107488]
+[0m[HW]     [o_du0][pusch0  949266 prach0  158220]
+[0m[HW]     [o-du 0][rx 1118240 pps   10752 kbps   72964][tx 3314732 pps   31872 kbps  182321][Total Msgs_Rcvd 1118240]
+[0m[HW]     [o_du0][pusch0  958482 prach0  159756]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1128993 pps   10753 kbps   72969][tx 3346604 pps   31872 kbps  182321][Total Msgs_Rcvd 1128993]
+[0m[HW]     [o_du0][pusch0  967698 prach0  161292]
+[0m[HW]     [o-du 0][rx 1139745 pps   10752 kbps   72962][tx 3378476 pps   31872 kbps  182321][Total Msgs_Rcvd 1139745]
+[0m[HW]     [o_du0][pusch0  976914 prach0  162828]
+[0m[HW]     [o-du 0][rx 1150497 pps   10752 kbps   72974][tx 3410348 pps   31872 kbps  182321][Total Msgs_Rcvd 1150497]
+[0m[HW]     [o_du0][pusch0  986130 prach0  164364]
+[0m[HW]     [o-du 0][rx 1161249 pps   10752 kbps   72960][tx 3442220 pps   31872 kbps  182321][Total Msgs_Rcvd 1161249]
+[0m[HW]     [o_du0][pusch0  995346 prach0  165900]
+[0m[HW]     [o-du 0][rx 1172001 pps   10752 kbps   72960][tx 3474092 pps   31872 kbps  182321][Total Msgs_Rcvd 1172001]
+[0m[HW]     [o_du0][pusch0 1004562 prach0  167436]
+[0m[HW]     [o-du 0][rx 1182753 pps   10752 kbps   72960][tx 3505964 pps   31872 kbps  182321][Total Msgs_Rcvd 1182753]
+[0m[HW]     [o_du0][pusch0 1013778 prach0  168972]
+[0m[HW]     [o-du 0][rx 1193505 pps   10752 kbps   72960][tx 3537836 pps   31872 kbps  182321][Total Msgs_Rcvd 1193505]
+[0m[HW]     [o_du0][pusch0 1022994 prach0  170508]
+[0m[HW]     [o-du 0][rx 1204258 pps   10753 kbps   72960][tx 3569708 pps   31872 kbps  182321][Total Msgs_Rcvd 1204258]
+[0m[HW]     [o_du0][pusch0 1032210 prach0  172044]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1215010 pps   10752 kbps   72962][tx 3601580 pps   31872 kbps  182321][Total Msgs_Rcvd 1215010]
+[0m[HW]     [o_du0][pusch0 1041426 prach0  173580]
+[0m[HW]     [o-du 0][rx 1225762 pps   10752 kbps   72950][tx 3633452 pps   31872 kbps  182321][Total Msgs_Rcvd 1225762]
+[0m[HW]     [o_du0][pusch0 1050642 prach0  175116]
+[0m[HW]     [o-du 0][rx 1236514 pps   10752 kbps   72960][tx 3665324 pps   31872 kbps  182321][Total Msgs_Rcvd 1236514]
+[0m[HW]     [o_du0][pusch0 1059858 prach0  176652]
+[0m[HW]     [o-du 0][rx 1247266 pps   10752 kbps   72960][tx 3697196 pps   31872 kbps  182321][Total Msgs_Rcvd 1247266]
+[0m[HW]     [o_du0][pusch0 1069074 prach0  178188]
+[0m[HW]     [o-du 0][rx 1258018 pps   10752 kbps   72960][tx 3729068 pps   31872 kbps  182321][Total Msgs_Rcvd 1258018]
+[0m[HW]     [o_du0][pusch0 1078290 prach0  179724]
+[0m[HW]     [o-du 0][rx 1268770 pps   10752 kbps   72960][tx 3760940 pps   31872 kbps  182321][Total Msgs_Rcvd 1268770]
+[0m[HW]     [o_du0][pusch0 1087506 prach0  181260]
+[0m[HW]     [o-du 0][rx 1279522 pps   10752 kbps   72969][tx 3792812 pps   31872 kbps  182321][Total Msgs_Rcvd 1279522]
+[0m[HW]     [o_du0][pusch0 1096722 prach0  182796]
+[0m[HW]     [o-du 0][rx 1290274 pps   10752 kbps   72950][tx 3824684 pps   31872 kbps  182321][Total Msgs_Rcvd 1290274]
+[0m[HW]     [o_du0][pusch0 1105938 prach0  184332]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1301026 pps   10752 kbps   72969][tx 3856556 pps   31872 kbps  182321][Total Msgs_Rcvd 1301026]
+[0m[HW]     [o_du0][pusch0 1115154 prach0  185868]
+[0m[HW]     [o-du 0][rx 1311778 pps   10752 kbps   72950][tx 3888428 pps   31872 kbps  182321][Total Msgs_Rcvd 1311778]
+[0m[HW]     [o_du0][pusch0 1124370 prach0  187404]
+[0m[HW]     [o-du 0][rx 1322530 pps   10752 kbps   72969][tx 3920300 pps   31872 kbps  182321][Total Msgs_Rcvd 1322530]
+[0m[HW]     [o_du0][pusch0 1133586 prach0  188940]
+[0m[HW]     [o-du 0][rx 1333282 pps   10752 kbps   72969][tx 3952172 pps   31872 kbps  182321][Total Msgs_Rcvd 1333282]
+[0m[HW]     [o_du0][pusch0 1142802 prach0  190476]
+[0m[HW]     [o-du 0][rx 1344035 pps   10753 kbps   72962][tx 3984044 pps   31872 kbps  182321][Total Msgs_Rcvd 1344035]
+[0m[HW]     [o_du0][pusch0 1152018 prach0  192012]
+[0m[HW]     [o-du 0][rx 1354787 pps   10752 kbps   72960][tx 4015916 pps   31872 kbps  182321][Total Msgs_Rcvd 1354787]
+[0m[HW]     [o_du0][pusch0 1161234 prach0  193548]
+[0m[HW]     [o-du 0][rx 1365539 pps   10752 kbps   72950][tx 4047788 pps   31872 kbps  182321][Total Msgs_Rcvd 1365539]
+[0m[HW]     [o_du0][pusch0 1170450 prach0  195084]
+[0m[HW]     [o-du 0][rx 1376291 pps   10752 kbps   72960][tx 4079660 pps   31872 kbps  182321][Total Msgs_Rcvd 1376291]
+[0m[HW]     [o_du0][pusch0 1179666 prach0  196620]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1387043 pps   10752 kbps   72969][tx 4111532 pps   31872 kbps  182321][Total Msgs_Rcvd 1387043]
+[0m[HW]     [o_du0][pusch0 1188882 prach0  198156]
+[0m[HW]     [o-du 0][rx 1397795 pps   10752 kbps   72950][tx 4143404 pps   31872 kbps  182321][Total Msgs_Rcvd 1397795]
+[0m[HW]     [o_du0][pusch0 1198098 prach0  199692]
+[0m[HW]     [o-du 0][rx 1408547 pps   10752 kbps   72969][tx 4175276 pps   31872 kbps  182321][Total Msgs_Rcvd 1408547]
+[0m[HW]     [o_du0][pusch0 1207314 prach0  201228]
+[0m[HW]     [o-du 0][rx 1419299 pps   10752 kbps   72960][tx 4207148 pps   31872 kbps  182321][Total Msgs_Rcvd 1419299]
+[0m[HW]     [o_du0][pusch0 1216530 prach0  202764]
+[0m[HW]     [o-du 0][rx 1430051 pps   10752 kbps   72955][tx 4239020 pps   31872 kbps  182321][Total Msgs_Rcvd 1430051]
+[0m[HW]     [o_du0][pusch0 1225746 prach0  204300]
+[0m[HW]     [o-du 0][rx 1440803 pps   10752 kbps   72964][tx 4270892 pps   31872 kbps  182321][Total Msgs_Rcvd 1440803]
+[0m[HW]     [o_du0][pusch0 1234962 prach0  205836]
+[0m[HW]     [o-du 0][rx 1451556 pps   10753 kbps   72960][tx 4302764 pps   31872 kbps  182321][Total Msgs_Rcvd 1451556]
+[0m[HW]     [o_du0][pusch0 1244178 prach0  207372]
+[0m[HW]     [o-du 0][rx 1462309 pps   10753 kbps   72960][tx 4334636 pps   31872 kbps  182321][Total Msgs_Rcvd 1462309]
+[0m[HW]     [o_du0][pusch0 1253394 prach0  208908]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1473061 pps   10752 kbps   72962][tx 4366508 pps   31872 kbps  182321][Total Msgs_Rcvd 1473061]
+[0m[HW]     [o_du0][pusch0 1262610 prach0  210444]
+[0m[HW]     [o-du 0][rx 1483813 pps   10752 kbps   72960][tx 4398380 pps   31872 kbps  182321][Total Msgs_Rcvd 1483813]
+[0m[HW]     [o_du0][pusch0 1271826 prach0  211980]
+[0m[HW]     [o-du 0][rx 1494565 pps   10752 kbps   72955][tx 4430252 pps   31872 kbps  182321][Total Msgs_Rcvd 1494565]
+[0m[HW]     [o_du0][pusch0 1281042 prach0  213516]
+[0m[HW]     [o-du 0][rx 1505318 pps   10753 kbps   72964][tx 4462124 pps   31872 kbps  182321][Total Msgs_Rcvd 1505318]
+[0m[HW]     [o_du0][pusch0 1290258 prach0  215052]
+[0m[HW]     [o-du 0][rx 1516070 pps   10752 kbps   72962][tx 4493996 pps   31872 kbps  182321][Total Msgs_Rcvd 1516070]
+[0m[HW]     [o_du0][pusch0 1299474 prach0  216588]
+[0m[HW]     [o-du 0][rx 1526822 pps   10752 kbps   72960][tx 4525868 pps   31872 kbps  182321][Total Msgs_Rcvd 1526822]
+[0m[HW]     [o_du0][pusch0 1308690 prach0  218124]
+[0m[HW]     [o-du 0][rx 1537574 pps   10752 kbps   72960][tx 4557740 pps   31872 kbps  182321][Total Msgs_Rcvd 1537574]
+[0m[HW]     [o_du0][pusch0 1317906 prach0  219660]
+[0m[HW]     [o-du 0][rx 1548326 pps   10752 kbps   72950][tx 4589612 pps   31872 kbps  182321][Total Msgs_Rcvd 1548326]
+[0m[HW]     [o_du0][pusch0 1327122 prach0  221196]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1559078 pps   10752 kbps   72969][tx 4621484 pps   31872 kbps  182321][Total Msgs_Rcvd 1559078]
+[0m[HW]     [o_du0][pusch0 1336338 prach0  222732]
+[0m[HW]     [o-du 0][rx 1569830 pps   10752 kbps   72960][tx 4653356 pps   31872 kbps  182321][Total Msgs_Rcvd 1569830]
+[0m[HW]     [o_du0][pusch0 1345554 prach0  224268]
+[0m[HW]     [o-du 0][rx 1580583 pps   10753 kbps   72953][tx 4685228 pps   31872 kbps  182321][Total Msgs_Rcvd 1580583]
+[0m[HW]     [o_du0][pusch0 1354770 prach0  225804]
+[0m[HW]     [o-du 0][rx 1591335 pps   10752 kbps   72955][tx 4717100 pps   31872 kbps  182321][Total Msgs_Rcvd 1591335]
+[0m[HW]     [o_du0][pusch0 1363986 prach0  227340]
+[0m[HW]     [o-du 0][rx 1602087 pps   10752 kbps   72960][tx 4748972 pps   31872 kbps  182321][Total Msgs_Rcvd 1602087]
+[0m[HW]     [o_du0][pusch0 1373202 prach0  228876]
+[0m[HW]     [o-du 0][rx 1612839 pps   10752 kbps   72950][tx 4780844 pps   31872 kbps  182321][Total Msgs_Rcvd 1612839]
+[0m[HW]     [o_du0][pusch0 1382418 prach0  230412]
+[0m[HW]     [o-du 0][rx 1623591 pps   10752 kbps   72960][tx 4812716 pps   31872 kbps  182321][Total Msgs_Rcvd 1623591]
+[0m[HW]     [o_du0][pusch0 1391634 prach0  231948]
+[0m[HW]     [o-du 0][rx 1634343 pps   10752 kbps   72960][tx 4844588 pps   31872 kbps  182321][Total Msgs_Rcvd 1634343]
+[0m[HW]     [o_du0][pusch0 1400850 prach0  233484]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1645095 pps   10752 kbps   72969][tx 4876460 pps   31872 kbps  182321][Total Msgs_Rcvd 1645095]
+[0m[HW]     [o_du0][pusch0 1410066 prach0  235020]
+[0m[HW]     [o-du 0][rx 1655847 pps   10752 kbps   72941][tx 4908332 pps   31872 kbps  182321][Total Msgs_Rcvd 1655847]
+[0m[HW]     [o_du0][pusch0 1419282 prach0  236556]
+[0m[HW]     [o-du 0][rx 1666599 pps   10752 kbps   72978][tx 4940204 pps   31872 kbps  182321][Total Msgs_Rcvd 1666599]
+[0m[HW]     [o_du0][pusch0 1428498 prach0  238092]
+[0m[HW]     [o-du 0][rx 1677351 pps   10752 kbps   72950][tx 4972076 pps   31872 kbps  182321][Total Msgs_Rcvd 1677351]
+[0m[HW]     [o_du0][pusch0 1437714 prach0  239628]
+[0m[HW]     [o-du 0][rx 1688103 pps   10752 kbps   72960][tx 5003948 pps   31872 kbps  182321][Total Msgs_Rcvd 1688103]
+[0m[HW]     [o_du0][pusch0 1446930 prach0  241164]
+[0m[HW]     [o-du 0][rx 1698855 pps   10752 kbps   72960][tx 5035820 pps   31872 kbps  182321][Total Msgs_Rcvd 1698855]
+[0m[HW]     [o_du0][pusch0 1456146 prach0  242700]
+[0m[HW]     [o-du 0][rx 1709607 pps   10752 kbps   72960][tx 5067692 pps   31872 kbps  182321][Total Msgs_Rcvd 1709607]
+[0m[HW]     [o_du0][pusch0 1465362 prach0  244236]
+[0m[HW]     [o-du 0][rx 1720360 pps   10753 kbps   72957][tx 5099564 pps   31872 kbps  182321][Total Msgs_Rcvd 1720360]
+[0m[HW]     [o_du0][pusch0 1474578 prach0  245772]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1731112 pps   10752 kbps   72964][tx 5131436 pps   31872 kbps  182321][Total Msgs_Rcvd 1731112]
+[0m[HW]     [o_du0][pusch0 1483794 prach0  247308]
+[0m[HW]     [o-du 0][rx 1741864 pps   10752 kbps   72969][tx 5163308 pps   31872 kbps  182321][Total Msgs_Rcvd 1741864]
+[0m[HW]     [o_du0][pusch0 1493010 prach0  248844]
+[0m[HW]     [o-du 0][rx 1752616 pps   10752 kbps   72960][tx 5195180 pps   31872 kbps  182321][Total Msgs_Rcvd 1752616]
+[0m[HW]     [o_du0][pusch0 1502226 prach0  250380]
+[0m[HW]     [o-du 0][rx 1763368 pps   10752 kbps   72950][tx 5227052 pps   31872 kbps  182321][Total Msgs_Rcvd 1763368]
+[0m[HW]     [o_du0][pusch0 1511442 prach0  251916]
+[0m[HW]     [o-du 0][rx 1774120 pps   10752 kbps   72969][tx 5258924 pps   31872 kbps  182321][Total Msgs_Rcvd 1774120]
+[0m[HW]     [o_du0][pusch0 1520658 prach0  253452]
+[0m[HW]     [o-du 0][rx 1784872 pps   10752 kbps   72950][tx 5290796 pps   31872 kbps  182321][Total Msgs_Rcvd 1784872]
+[0m[HW]     [o_du0][pusch0 1529874 prach0  254988]
+[0m[HW]     [o-du 0][rx 1795624 pps   10752 kbps   72969][tx 5322668 pps   31872 kbps  182321][Total Msgs_Rcvd 1795624]
+[0m[HW]     [o_du0][pusch0 1539090 prach0  256524]
+[0m[HW]     [o-du 0][rx 1806376 pps   10752 kbps   72960][tx 5354540 pps   31872 kbps  182321][Total Msgs_Rcvd 1806376]
+[0m[HW]     [o_du0][pusch0 1548306 prach0  258060]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1817128 pps   10752 kbps   72945][tx 5386412 pps   31872 kbps  182321][Total Msgs_Rcvd 1817128]
+[0m[HW]     [o_du0][pusch0 1557522 prach0  259596]
+[0m[HW]     [o-du 0][rx 1827881 pps   10753 kbps   72976][tx 5418284 pps   31872 kbps  182321][Total Msgs_Rcvd 1827881]
+[0m[HW]     [o_du0][pusch0 1566738 prach0  261132]
+[0m[HW]     [o-du 0][rx 1838634 pps   10753 kbps   72960][tx 5450156 pps   31872 kbps  182321][Total Msgs_Rcvd 1838634]
+[0m[HW]     [o_du0][pusch0 1575954 prach0  262668]
+[0m[HW]     [o-du 0][rx 1849386 pps   10752 kbps   72962][tx 5482028 pps   31872 kbps  182321][Total Msgs_Rcvd 1849386]
+[0m[HW]     [o_du0][pusch0 1585170 prach0  264204]
+[0m[HW]     [o-du 0][rx 1860138 pps   10752 kbps   72950][tx 5513900 pps   31872 kbps  182321][Total Msgs_Rcvd 1860138]
+[0m[HW]     [o_du0][pusch0 1594386 prach0  265740]
+[0m[HW]     [o-du 0][rx 1870890 pps   10752 kbps   72969][tx 5545772 pps   31872 kbps  182321][Total Msgs_Rcvd 1870890]
+[0m[HW]     [o_du0][pusch0 1603602 prach0  267276]
+[0m[HW]     [o-du 0][rx 1881643 pps   10753 kbps   72962][tx 5577644 pps   31872 kbps  182321][Total Msgs_Rcvd 1881643]
+[0m[HW]     [o_du0][pusch0 1612818 prach0  268812]
+[0m[HW]     [o-du 0][rx 1892395 pps   10752 kbps   72960][tx 5609516 pps   31872 kbps  182321][Total Msgs_Rcvd 1892395]
+[0m[HW]     [o_du0][pusch0 1622034 prach0  270348]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1903147 pps   10752 kbps   72950][tx 5641388 pps   31872 kbps  182321][Total Msgs_Rcvd 1903147]
+[0m[HW]     [o_du0][pusch0 1631250 prach0  271884]
+[0m[HW]     [o-du 0][rx 1913899 pps   10752 kbps   72960][tx 5673260 pps   31872 kbps  182321][Total Msgs_Rcvd 1913899]
+[0m[HW]     [o_du0][pusch0 1640466 prach0  273420]
+[0m[HW]     [o-du 0][rx 1924651 pps   10752 kbps   72955][tx 5705132 pps   31872 kbps  182321][Total Msgs_Rcvd 1924651]
+[0m[HW]     [o_du0][pusch0 1649682 prach0  274956]
+[0m[HW]     [o-du 0][rx 1935403 pps   10752 kbps   72964][tx 5737004 pps   31872 kbps  182321][Total Msgs_Rcvd 1935403]
+[0m[HW]     [o_du0][pusch0 1658898 prach0  276492]
+[0m[HW]     [o-du 0][rx 1946156 pps   10753 kbps   72960][tx 5768876 pps   31872 kbps  182321][Total Msgs_Rcvd 1946156]
+[0m[HW]     [o_du0][pusch0 1668114 prach0  278028]
+[0m[HW]     [o-du 0][rx 1956908 pps   10752 kbps   72950][tx 5800748 pps   31872 kbps  182321][Total Msgs_Rcvd 1956908]
+[0m[HW]     [o_du0][pusch0 1677330 prach0  279564]
+[0m[HW]     [o-du 0][rx 1967660 pps   10752 kbps   72960][tx 5832620 pps   31872 kbps  182321][Total Msgs_Rcvd 1967660]
+[0m[HW]     [o_du0][pusch0 1686546 prach0  281100]
+[0m[HW]     [o-du 0][rx 1978412 pps   10752 kbps   72960][tx 5864492 pps   31872 kbps  182321][Total Msgs_Rcvd 1978412]
+[0m[HW]     [o_du0][pusch0 1695762 prach0  282636]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1989164 pps   10752 kbps   72964][tx 5896364 pps   31872 kbps  182321][Total Msgs_Rcvd 1989164]
+[0m[HW]     [o_du0][pusch0 1704978 prach0  284172]
+[0m[HW]     [o-du 0][rx 1999916 pps   10752 kbps   72960][tx 5928236 pps   31872 kbps  182321][Total Msgs_Rcvd 1999916]
+[0m[HW]     [o_du0][pusch0 1714194 prach0  285708]
+[0m[HW]     [o-du 0][rx 2010668 pps   10752 kbps   72960][tx 5960108 pps   31872 kbps  182321][Total Msgs_Rcvd 2010668]
+[0m[HW]     [o_du0][pusch0 1723410 prach0  287244]
+[0m[HW]     [o-du 0][rx 2021420 pps   10752 kbps   72955][tx 5991980 pps   31872 kbps  182321][Total Msgs_Rcvd 2021420]
+[0m[HW]     [o_du0][pusch0 1732626 prach0  288780]
+[0m[HW]     [o-du 0][rx 2032172 pps   10752 kbps   72964][tx 6023852 pps   31872 kbps  182321][Total Msgs_Rcvd 2032172]
+[0m[HW]     [o_du0][pusch0 1741842 prach0  290316]
+[0m[HW]     [o-du 0][rx 2042924 pps   10752 kbps   72960][tx 6055724 pps   31872 kbps  182321][Total Msgs_Rcvd 2042924]
+[0m[HW]     [o_du0][pusch0 1751058 prach0  291852]
+[0m[HW]     [o-du 0][rx 2053676 pps   10752 kbps   72955][tx 6087596 pps   31872 kbps  182321][Total Msgs_Rcvd 2053676]
+[0m[HW]     [o_du0][pusch0 1760274 prach0  293388]
+[0m[HW]     [o-du 0][rx 2064428 pps   10752 kbps   72960][tx 6119468 pps   31872 kbps  182321][Total Msgs_Rcvd 2064428]
+[0m[HW]     [o_du0][pusch0 1769490 prach0  294924]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2075180 pps   10752 kbps   72945][tx 6151340 pps   31872 kbps  182321][Total Msgs_Rcvd 2075180]
+[0m[HW]     [o_du0][pusch0 1778706 prach0  296460]
+[0m[HW]     [o-du 0][rx 2085933 pps   10753 kbps   72964][tx 6183212 pps   31872 kbps  182321][Total Msgs_Rcvd 2085933]
+[0m[HW]     [o_du0][pusch0 1787922 prach0  297996]
+[0m[HW]     [o-du 0][rx 2096685 pps   10752 kbps   72971][tx 6215084 pps   31872 kbps  182321][Total Msgs_Rcvd 2096685]
+[0m[HW]     [o_du0][pusch0 1797138 prach0  299532]
+[0m[HW]     [o-du 0][rx 2107437 pps   10752 kbps   72960][tx 6246956 pps   31872 kbps  182321][Total Msgs_Rcvd 2107437]
+[0m[HW]     [o_du0][pusch0 1806354 prach0  301068]
+[0m[HW]     [o-du 0][rx 2118189 pps   10752 kbps   72960][tx 6278828 pps   31872 kbps  182321][Total Msgs_Rcvd 2118189]
+[0m[HW]     [o_du0][pusch0 1815570 prach0  302604]
+[0m[HW]     [o-du 0][rx 2128941 pps   10752 kbps   72960][tx 6310700 pps   31872 kbps  182321][Total Msgs_Rcvd 2128941]
+[0m[HW]     [o_du0][pusch0 1824786 prach0  304140]
+[0m[HW]     [o-du 0][rx 2139693 pps   10752 kbps   72960][tx 6342572 pps   31872 kbps  182321][Total Msgs_Rcvd 2139693]
+[0m[HW]     [o_du0][pusch0 1834002 prach0  305676]
+[0m[HW]     [o-du 0][rx 2150445 pps   10752 kbps   72960][tx 6374444 pps   31872 kbps  182321][Total Msgs_Rcvd 2150445]
+[0m[HW]     [o_du0][pusch0 1843218 prach0  307212]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2161197 pps   10752 kbps   72960][tx 6406316 pps   31872 kbps  182321][Total Msgs_Rcvd 2161197]
+[0m[HW]     [o_du0][pusch0 1852434 prach0  308748]
+[0m[HW]     [o-du 0][rx 2171949 pps   10752 kbps   72960][tx 6438188 pps   31872 kbps  182321][Total Msgs_Rcvd 2171949]
+[0m[HW]     [o_du0][pusch0 1861650 prach0  310284]
+[0m[HW]     [o-du 0][rx 2182701 pps   10752 kbps   72960][tx 6470060 pps   31872 kbps  182321][Total Msgs_Rcvd 2182701]
+[0m[HW]     [o_du0][pusch0 1870866 prach0  311820]
+[0m[HW]     [o-du 0][rx 2193453 pps   10752 kbps   72960][tx 6501932 pps   31872 kbps  182321][Total Msgs_Rcvd 2193453]
+[0m[HW]     [o_du0][pusch0 1880082 prach0  313356]
+[0m[HW]     [o-du 0][rx 2204206 pps   10753 kbps   72953][tx 6533804 pps   31872 kbps  182321][Total Msgs_Rcvd 2204206]
+[0m[HW]     [o_du0][pusch0 1889298 prach0  314892]
+[0m[HW]     [o-du 0][rx 2214958 pps   10752 kbps   72960][tx 6565676 pps   31872 kbps  182321][Total Msgs_Rcvd 2214958]
+[0m[HW]     [o_du0][pusch0 1898514 prach0  316428]
+[0m[HW]     [o-du 0][rx 2225711 pps   10753 kbps   72962][tx 6597548 pps   31872 kbps  182321][Total Msgs_Rcvd 2225711]
+[0m[HW]     [o_du0][pusch0 1907730 prach0  317964]
+[0m[HW]     [o-du 0][rx 2236463 pps   10752 kbps   72950][tx 6629420 pps   31872 kbps  182321][Total Msgs_Rcvd 2236463]
+[0m[HW]     [o_du0][pusch0 1916946 prach0  319500]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2247215 pps   10752 kbps   72960][tx 6661292 pps   31872 kbps  182321][Total Msgs_Rcvd 2247215]
+[0m[HW]     [o_du0][pusch0 1926162 prach0  321036]
+[0m[HW]     [o-du 0][rx 2257967 pps   10752 kbps   72960][tx 6693164 pps   31872 kbps  182321][Total Msgs_Rcvd 2257967]
+[0m[HW]     [o_du0][pusch0 1935378 prach0  322572]
+[0m[HW]     [o-du 0][rx 2268720 pps   10753 kbps   72962][tx 6725036 pps   31872 kbps  182321][Total Msgs_Rcvd 2268720]
+[0m[HW]     [o_du0][pusch0 1944594 prach0  324108]
+[0m
+** Caught SIGTERM, shutting down
+[GNB_APP] stopping nr-softmodem
+[0m[PHY]    Killing gNB 0 processing threads
+[0m[PHY]    Stopping RU 0 processing threads
+[0m[93m[PHY]    No stop_rf() for RU 0 defined, cannot stop RF!
+[0m[HW]     xran_get_time_stats(): total thread time 924239556104, total time essential tasks 595814330770, num cores used 3
+[0m[GNB_APP] turned off RU ifdevice
+[0m[NR_MAC] Remove NR rnti 0xf3ac
+[0m[NR_MAC] Remove NR rnti 0x1586
+[0m[NR_MAC] Remove NR rnti 0xc372
+[0m[NR_MAC] Remove NR rnti 0x763a
+[0m[NR_MAC] Remove NR rnti 0xe873
+[0m[NR_MAC] Remove NR rnti 0x3d21
+[0m[NR_MAC] Remove NR rnti 0xa20b
+[0m[NR_MAC] Remove NR rnti 0x112e
+[0m[NR_MAC] Remove NR rnti 0xdde7
+[0m[NR_MAC] Remove NR rnti 0x696b
+[0m[NR_MAC] Remove NR rnti 0xa62a
+[0m[NR_MAC] Remove NR rnti 0x0efa
+[0m[NR_MAC] Remove NR rnti 0xaf63
+[0m[NR_MAC] Remove NR rnti 0x6af3
+[0m[NR_MAC] Remove NR rnti 0x56bf
+[0m[NR_MAC] Remove NR rnti 0x1972
+[0mO-DU: thread_run start time: 05/26/26 00:19:00.000000007 UTC [500]
+Returned from ITTI signal handler
+ORAN: trx_oran_get_stats
+ORAN: trx_oran_stop
+fh_rx_bbdev-17 worker thread finished on core 17 [worker id 0]
+fh_cp_gen-18 worker thread finished on core 18 [worker id 1]
+Closing timing source thread...
+Bye.

@@ -1,0 +1,899 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260526_004037_pid1329615.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    333824 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 13fa21ea91 Date: Mon May 25 14:33:49 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7357aefe14b0
+  tx_up_eAxC2Vf 0x7357aefe20b0
+  rx_cp_eAxC2Vf 0x7357aefe2cb0
+  rx_up_eAxC2Vf 0x7357aefe38b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 1329642]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+O-XU      0
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+Start Sym timer 107142 ns
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+xran_generic_worker_thread [CPU 17] [PID: 1329642]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 1329642]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 1329642]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x735774f95040
+xran_sector_get_instances [0]: CC 0 handle 0x73579816c740
+Handle: 0x7357bc3b0468 Instance: [HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m0x73579816c740
+-> hInstance 0x73579816c740
+ru_0_cc_0_idx_0: [ handle 0x73579816c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x73579816c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284782180 
+xran_bm_init() hInstance 0x73579816c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x73579816c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x73579816c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x73579816c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284784a00 
+xran_bm_init() hInstance 0x73579816c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x73579816c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x73579816c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x73579816c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284784580 
+xran_bm_init() hInstance 0x73579816c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x73579816c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x73579816c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x73579816c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786e80 
+xran_bm_init() hInstance 0x73579816c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x73579816c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x73579816c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x73579816c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284786940 
+xran_bm_init() hInstance 0x73579816c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x73579816c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/26/26 07:40:41.031354016 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     [o-du 0][rx   10752 pps   10752 kbps   26209][tx   31916 pps   31916 kbps   65749][Total Msgs_Rcvd 10752]
+[0m[HW]     [o_du0][pusch0    9216 prach0    1536]
+[0m[HW]     [o-du 0][rx   21504 pps   10752 kbps   72960][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 21504]
+[0m[HW]     [o_du0][pusch0   18432 prach0    3072]
+[0m[93m[PHY]    ULSCH NAK trace 257.18 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 8
+[0m[93m[PHY]    ULSCH NAK trace 258.18 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 259.18 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 3
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 557c
+[0m[93m[PHY]    ULSCH NAK trace 261.19 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 262.14 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 262.19 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 263.14 rnti 557c harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 263.19 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 264.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.1 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 264.9 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 264.14 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.1 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 264.19 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 265.4 rnti 557c harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 265.9 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 265.14 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 265.19 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 266.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 266.19 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 267.4 rnti 557c harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 268.14 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 269.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 269.14 rnti 557c harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 270.4 rnti 557c harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 275.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 275.14 rnti 557c harq 11 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 276.4 rnti 557c harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 276.14 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 276.19 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 277.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 277.9 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 277.14 rnti 557c harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 277.19 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 278.4 rnti 557c harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 278.9 rnti 557c harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 278.14 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 279.14 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 280.14 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 281.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 281.14 rnti 557c harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 282.4 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 283.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 283.14 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 284.4 rnti 557c harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 284.14 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 285.4 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 285.9 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 285.14 rnti 557c harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 285.19 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 286.4 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 286.9 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 286.14 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 286.19 rnti 557c harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 287.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 287.9 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 287.14 rnti 557c harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 287.19 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 288.4 rnti 557c harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 288.9 rnti 557c harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 288.14 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 288.19 rnti 557c harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 289.14 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 291.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 291.14 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 292.4 rnti 557c harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 292.14 rnti 557c harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 294.14 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 295.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 295.14 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 296.4 rnti 557c harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 298.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 298.14 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 299.4 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 299.14 rnti 557c harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 300.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.1 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 300.9 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 300.14 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.1 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 301.4 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 301.9 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 301.14 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 302.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 302.9 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 303.4 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 304.14 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 305.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 305.14 rnti 557c harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 306.4 rnti 557c harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 306.14 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 306.19 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 307.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 307.9 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 307.14 rnti 557c harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 307.19 rnti 557c harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 308.4 rnti 557c harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 308.9 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 308.14 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 308.19 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 309.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 309.9 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 309.14 rnti 557c harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 309.19 rnti 557c harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 310.4 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 310.9 rnti 557c harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 310.14 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 310.19 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 311.14 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 311.19 rnti 557c harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[PHY]    ULSCH NAK trace 314.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 314.14 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 315.4 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 315.14 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 318.14 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 319.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 319.14 rnti 557c harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 320.4 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 320.14 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 320.19 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 321.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 321.14 rnti 557c harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 321.19 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 322.4 rnti 557c harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 322.19 rnti 557c harq 9 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 323.19 rnti 557c harq 9 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 326.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 326.14 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 327.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 327.14 rnti 557c harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 2
+[0m[93m[PHY]    ULSCH NAK trace 328.4 rnti 557c harq 10 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 328.14 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 328.19 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 329.4 rnti 557c harq 10 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 7
+[0m[PHY]    ULSCH ACK trace 329.9 rnti 557c harq 15 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 329.14 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 329.19 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 330.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 330.9 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 330.14 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 330.19 rnti 557c harq 14 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 331.4 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 331.9 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 331.14 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 331.19 rnti 557c harq 14 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 332.4 rnti 557c harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 332.9 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 332.14 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 332.19 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 333.4 rnti 557c harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 7
+[0m[93m[PHY]    ULSCH NAK trace 333.9 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 333.14 rnti 557c harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 6
+[0m[93m[PHY]    ULSCH NAK trace 333.19 rnti 557c harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 334.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 6
+[0m[PHY]    ULSCH ACK trace 334.9 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 7
+[0m[93m[PHY]    ULSCH NAK trace 334.14 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 334.19 rnti 557c harq 4 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 335.4 rnti 557c harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    ULSCH ACK trace 335.14 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 335.19 rnti 557c harq 4 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 336.4 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 336.19 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 337.4 rnti 557c harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 6
+[0m[93m[PHY]    ULSCH NAK trace 337.19 rnti 557c harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 4
+[0m[PHY]    ULSCH ACK trace 338.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 338.19 rnti 557c harq 11 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 339.19 rnti 557c harq 11 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 349.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 350.4 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 6
+[0m[PHY]    ULSCH ACK trace 351.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 361.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 362.4 rnti 557c harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 6
+[0m[PHY]    ULSCH ACK trace 363.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 366.14 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 8
+[0m[93m[PHY]    ULSCH NAK trace 367.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    ULSCH ACK trace 367.14 rnti 557c harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 368.4 rnti 557c harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.1 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 368.14 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.1 dB TAest 2
+[0m[PHY]    ULSCH ACK trace 369.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest 6
+[0m[PHY]    ULSCH ACK trace 369.14 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 379.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 380.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 381.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[HW]     [o-du 0][rx   32256 pps   10752 kbps   72955][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 32256]
+[0m[HW]     [o_du0][pusch0   27648 prach0    4608]
+[0m[93m[PHY]    ULSCH NAK trace 391.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 392.4 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 393.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 403.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 404.4 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 405.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 414.14 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 4
+[0m[93m[PHY]    ULSCH NAK trace 415.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[PHY]    ULSCH ACK trace 415.14 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 416.4 rnti 557c harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 2
+[0m[93m[PHY]    ULSCH NAK trace 416.14 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest 2
+[0m[PHY]    ULSCH ACK trace 417.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 7
+[0m[PHY]    ULSCH ACK trace 417.14 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 427.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 428.4 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 429.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 439.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 440.4 rnti 557c harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.1 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 441.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 451.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 3
+[0m[93m[PHY]    ULSCH NAK trace 452.4 rnti 557c harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 30.4 dB TAest 3
+[0m[PHY]    ULSCH ACK trace 453.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest 5
+[0m[93m[PHY]    ULSCH NAK trace 462.14 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 463.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 463.14 rnti 557c harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 464.4 rnti 557c harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 464.14 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 465.14 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 466.14 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 476.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 477.4 rnti 557c harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 478.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 488.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 489.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 490.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 500.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 501.4 rnti 557c harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 502.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx   43008 pps   10752 kbps   72974][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 43008]
+[0m[HW]     [o_du0][pusch0   36864 prach0    6144]
+[0m[93m[PHY]    ULSCH NAK trace 512.4 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 513.4 rnti 557c harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 514.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 524.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 525.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 526.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 536.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 537.4 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 538.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 548.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 549.4 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 550.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 560.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 561.4 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 562.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 572.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 573.4 rnti 557c harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 574.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 584.4 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 585.4 rnti 557c harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 586.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 596.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 597.4 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 598.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 608.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 609.4 rnti 557c harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 610.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 620.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 621.4 rnti 557c harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 622.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 632.4 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 633.4 rnti 557c harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 634.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx   53760 pps   10752 kbps   72964][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 53760]
+[0m[HW]     [o_du0][pusch0   46080 prach0    7680]
+[0m[93m[PHY]    ULSCH NAK trace 644.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 645.4 rnti 557c harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 646.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 656.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 657.4 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 658.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 668.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 669.4 rnti 557c harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 670.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 680.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 681.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 682.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 686.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 686.14 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 687.4 rnti 557c harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 687.14 rnti 557c harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 688.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 688.9 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 688.14 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -5
+[0m[93m[PHY]    ULSCH NAK trace 688.19 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 689.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 689.9 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 689.14 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 689.19 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 690.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 690.9 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 690.14 rnti 557c harq 1 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 690.19 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 691.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 691.9 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 691.14 rnti 557c harq 1 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 692.4 rnti 557c harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 692.9 rnti 557c harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 692.14 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 693.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 693.14 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 694.14 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 695.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 695.14 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 696.4 rnti 557c harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 696.14 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 697.4 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 697.9 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 697.14 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[93m[PHY]    ULSCH NAK trace 697.19 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 698.4 rnti 557c harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 698.9 rnti 557c harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 698.14 rnti 557c harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 698.19 rnti 557c harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 699.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 699.9 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 709.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 710.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 711.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 721.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 722.4 rnti 557c harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 723.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 733.4 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 734.4 rnti 557c harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 735.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 745.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 746.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 747.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 757.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 758.4 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 759.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx   64512 pps   10752 kbps   72960][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 64512]
+[0m[HW]     [o_du0][pusch0   55296 prach0    9216]
+[0m[93m[PHY]    ULSCH NAK trace 769.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 770.4 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 771.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 781.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 782.4 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 783.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 793.4 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 794.4 rnti 557c harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 795.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 805.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 806.4 rnti 557c harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 807.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 817.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 818.4 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 819.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 829.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 830.4 rnti 557c harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 831.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 841.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 842.4 rnti 557c harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 843.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 853.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 854.4 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 855.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 865.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 866.4 rnti 557c harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 867.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 877.4 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 878.4 rnti 557c harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 879.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 889.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 890.4 rnti 557c harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 891.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx   75264 pps   10752 kbps   72960][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 75264]
+[0m[HW]     [o_du0][pusch0   64512 prach0   10752]
+[0m[93m[PHY]    ULSCH NAK trace 901.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 902.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 903.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 913.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 914.4 rnti 557c harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 915.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 925.4 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 926.4 rnti 557c harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 927.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 937.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 938.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 939.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 949.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 950.4 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 951.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 961.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 962.4 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 963.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 973.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 974.4 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 975.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 985.4 rnti 557c harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 986.4 rnti 557c harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 987.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 997.4 rnti 557c harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 998.4 rnti 557c harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 999.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 1009.4 rnti 557c harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 1010.4 rnti 557c harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 1011.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 1021.4 rnti 557c harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 1022.4 rnti 557c harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 1023.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx   86016 pps   10752 kbps   72960][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 86016]
+[0m[HW]     [o_du0][pusch0   73728 prach0   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[93m[PHY]    ULSCH NAK trace 9.4 rnti 557c harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 10.4 rnti 557c harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 11.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 21.4 rnti 557c harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 22.4 rnti 557c harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 23.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 33.4 rnti 557c harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 34.4 rnti 557c harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 35.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 45.4 rnti 557c harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 46.4 rnti 557c harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 47.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 57.4 rnti 557c harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 58.4 rnti 557c harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 59.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 69.4 rnti 557c harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 70.4 rnti 557c harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 71.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 81.4 rnti 557c harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 82.4 rnti 557c harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 83.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 93.4 rnti 557c harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 94.4 rnti 557c harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 95.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 105.4 rnti 557c harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 106.4 rnti 557c harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 107.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 117.4 rnti 557c harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 118.4 rnti 557c harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 119.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx   96768 pps   10752 kbps   72960][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 96768]
+[0m[HW]     [o_du0][pusch0   82944 prach0   13824]
+[0m[93m[PHY]    ULSCH NAK trace 129.4 rnti 557c harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 130.4 rnti 557c harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 131.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 141.4 rnti 557c harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 142.4 rnti 557c harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 143.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 155.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 167.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 179.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 191.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 203.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 215.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 227.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 239.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 251.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx  107520 pps   10752 kbps   72960][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 107520]
+[0m[HW]     [o_du0][pusch0   92160 prach0   15360]
+[0m[PHY]    ULSCH ACK trace 263.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 275.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 287.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 299.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 311.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 323.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 335.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 347.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 359.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 371.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 383.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[HW]     [o-du 0][rx  118272 pps   10752 kbps   72960][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 118272]
+[0m[HW]     [o_du0][pusch0  101376 prach0   16896]
+[0m[PHY]    ULSCH ACK trace 395.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 407.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 419.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 431.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 443.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 455.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 457.14 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 458.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 459.14 rnti 557c harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 460.4 rnti 557c harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 460.9 rnti 557c harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 460.19 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 461.4 rnti 557c harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 462.14 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 462.19 rnti 557c harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 467.4 rnti 557c harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 467.14 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 469.19 rnti 557c harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 470.9 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 470.14 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 471.4 rnti 557c harq 9 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 474.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 474.9 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 474.14 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 486.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 498.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 510.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  129025 pps   10753 kbps   72953][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 129025]
+[0m[HW]     [o_du0][pusch0  110592 prach0   18432]
+[0m[PHY]    ULSCH ACK trace 522.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 534.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 546.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 558.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 570.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 582.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 594.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 606.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 618.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 630.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  139777 pps   10752 kbps   72955][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 139777]
+[0m[HW]     [o_du0][pusch0  119808 prach0   19968]
+[0m[PHY]    ULSCH ACK trace 642.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 654.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 666.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 678.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 690.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 702.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 714.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 726.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 738.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 750.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 762.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  150530 pps   10753 kbps   72964][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 150530]
+[0m[HW]     [o_du0][pusch0  129024 prach0   21504]
+[0m[PHY]    ULSCH ACK trace 774.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 786.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 798.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 810.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 822.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 834.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 846.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 858.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 870.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 882.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 894.4 rnti 557c harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  161282 pps   10752 kbps   72971][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 161282]
+[0m[HW]     [o_du0][pusch0  138240 prach0   23040]
+[0m[PHY]    ULSCH ACK trace 906.4 rnti 557c harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 918.4 rnti 557c harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 930.4 rnti 557c harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 942.4 rnti 557c harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 954.4 rnti 557c harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 966.4 rnti 557c harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 978.4 rnti 557c harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 990.4 rnti 557c harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 1002.4 rnti 557c harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 1014.4 rnti 557c harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  172034 pps   10752 kbps   72960][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 172034]
+[0m[HW]     [o_du0][pusch0  147456 prach0   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    ULSCH ACK trace 2.4 rnti 557c harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 14.4 rnti 557c harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 26.4 rnti 557c harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 38.4 rnti 557c harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 50.4 rnti 557c harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[HW]     [o-du 0][rx  182786 pps   10752 kbps   72960][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 182786]
+[0m[HW]     [o_du0][pusch0  156672 prach0   26112]
+[0m[HW]     [o-du 0][rx  184623 pps    1837 kbps   45192][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 184623]
+[0m[HW]     [o_du0][pusch0  158249 prach0   26371]
+[0m[HW]     [o-du 0][rx  184623 pps       0 kbps       2][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 184623]
+[0m[HW]     [o_du0][pusch0  158249 prach0   26371]
+[0m

@@ -8,6 +8,7 @@ OAI_DIR="${TEST_DIR}/openairinterface5g"
 BUILD_DIR="${OAI_DIR}/build"
 UE_CORES="20,21,22,23"
 UE_SSB="${RUN_UE_SSB:-24}"
+UE_SAMPLE_ADVANCE="${RUN_UE_SAMPLE_ADVANCE:-0}"
 
 SCRIPT_NAME="$(basename "$0" .sh)"
 LOG_DIR="${BASE_DIR}/logs/${SCRIPT_NAME}"
@@ -17,6 +18,7 @@ exec > >(tee -a "${LOG_FILE}") 2>&1
 
 echo "Logging terminal output to ${LOG_FILE}"
 echo "UE cores: ${UE_CORES}"
+echo "UE sample advance: ${UE_SAMPLE_ADVANCE}"
 
 for path in "${BUILD_DIR}/nr-uesoftmodem" "${BUILD_DIR}/libvrtsim.so"; do
   if [[ ! -e "${path}" ]]; then
@@ -47,11 +49,13 @@ exec sudo -E taskset -c "${UE_CORES}" env \
   LD_LIBRARY_PATH="${LD_LIBRARY_PATH}" \
   ASAN_OPTIONS="${ASAN_OPTIONS}" \
   ./nr-uesoftmodem \
+    -O "${BASE_DIR}/ue_test.conf" \
     -C 4049760000 \
     -r 24 \
     --numerology 1 \
     --band 77 \
     --ssb "${UE_SSB}" \
+    -A "${UE_SAMPLE_ADVANCE}" \
     --device.name vrtsim \
     --vrtsim.role client \
     --ue-nb-ant-tx 1 \

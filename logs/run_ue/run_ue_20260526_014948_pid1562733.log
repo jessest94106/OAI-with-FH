@@ -1,0 +1,4 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ue/run_ue_20260526_014948_pid1562733.log
+UE cores: 20,21,22,23
+UE sample advance: 0
+nr-oru is not running. Start /home/jesse/oran_lab/run_ru.sh first and keep it running.

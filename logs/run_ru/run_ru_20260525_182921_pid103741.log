@@ -1,0 +1,14 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260525_182921_pid103741.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    331776 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.

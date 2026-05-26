@@ -1,0 +1,1344 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260526_011404_pid1442960.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    333824 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 13fa21ea91 Date: Mon May 25 14:33:49 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x70261a7e04b0
+  tx_up_eAxC2Vf 0x70261a7e10b0
+  rx_cp_eAxC2Vf 0x70261a7e1cb0
+  rx_up_eAxC2Vf 0x70261a7e28b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 1442987]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 1442987]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 1442987]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 1442987]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7025e4f95040
+xran_sector_get_instances [0]: CC 0 handle 0x70260816c740
+Handle: 0x7026282c2468 Instance: [HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0m0x70260816c740
+-> hInstance 0x70260816c740
+ru_0_cc_0_idx_0: [ handle 0x70260816c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x70260816c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284782180 
+xran_bm_init() hInstance 0x70260816c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x70260816c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x70260816c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70260816c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284784a00 
+xran_bm_init() hInstance 0x70260816c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x70260816c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x70260816c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x70260816c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284784580 
+xran_bm_init() hInstance 0x70260816c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x70260816c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x70260816c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70260816c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786e80 
+xran_bm_init() hInstance 0x70260816c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x70260816c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x70260816c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x70260816c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284786940 
+xran_bm_init() hInstance 0x70260816c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x70260816c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/26/26 08:14:08.277161192 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     [o-du 0][rx   10752 pps   10752 kbps   23314][tx   31916 pps   31916 kbps   58456][Total Msgs_Rcvd 10752]
+[0m[HW]     [o_du0][pusch0    9216 prach0    1536]
+[0m[HW]     [o-du 0][rx   21504 pps   10752 kbps   72960][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 21504]
+[0m[HW]     [o_du0][pusch0   18432 prach0    3072]
+[0m[HW]     [o-du 0][rx   32256 pps   10752 kbps   72960][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 32256]
+[0m[HW]     [o_du0][pusch0   27648 prach0    4608]
+[0m[93m[PHY]    ULSCH NAK trace 483.18 rnti 2a82 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 38.9 dB TAest 9
+[0m[93m[PHY]    ULSCH NAK trace 484.18 rnti 2a82 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 2
+[0m[93m[PHY]    ULSCH NAK trace 485.18 rnti 2a82 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 486.18 rnti 2a82 harq 0 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 2a82
+[0m[93m[PHY]    ULSCH NAK trace 488.19 rnti 2a82 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 489.14 rnti 2a82 harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.3 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 489.19 rnti 2a82 harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 490.14 rnti 2a82 harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 490.19 rnti 2a82 harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 491.4 rnti 2a82 harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.0 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 491.9 rnti 2a82 harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 36.0 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 491.14 rnti 2a82 harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 491.19 rnti 2a82 harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 492.4 rnti 2a82 harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 492.9 rnti 2a82 harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.7 dB TAest -2
+[0m[PHY]    ULSCH ACK trace 492.14 rnti 2a82 harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 492.19 rnti 2a82 harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 493.4 rnti 2a82 harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 494.4 rnti 2a82 harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 495.4 rnti 2a82 harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 495.14 rnti 2a82 harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 496.4 rnti 2a82 harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 496.14 rnti 2a82 harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 502.4 rnti 2a82 harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 502.14 rnti 2a82 harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 503.4 rnti 2a82 harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 503.14 rnti 2a82 harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 504.4 rnti 2a82 harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 504.9 rnti 2a82 harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.7 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 504.14 rnti 2a82 harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 504.19 rnti 2a82 harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 505.4 rnti 2a82 harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 505.9 rnti 2a82 harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 505.14 rnti 2a82 harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 505.19 rnti 2a82 harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 506.4 rnti 2a82 harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 506.9 rnti 2a82 harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 506.14 rnti 2a82 harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 507.4 rnti 2a82 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 508.4 rnti 2a82 harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 509.4 rnti 2a82 harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 509.14 rnti 2a82 harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 510.4 rnti 2a82 harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 510.14 rnti 2a82 harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 511.4 rnti 2a82 harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 511.14 rnti 2a82 harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[HW]     [o-du 0][rx   43009 pps   10753 kbps   72967][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 43009]
+[0m[HW]     [o_du0][pusch0   36864 prach0    6144]
+[0m[93m[PHY]    ULSCH NAK trace 512.4 rnti 2a82 harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 512.14 rnti 2a82 harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 513.4 rnti 2a82 harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 513.14 rnti 2a82 harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 513.19 rnti 2a82 harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 514.4 rnti 2a82 harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 514.9 rnti 2a82 harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 514.14 rnti 2a82 harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 514.19 rnti 2a82 harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 515.4 rnti 2a82 harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 515.9 rnti 2a82 harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[93m[PHY]    ULSCH NAK trace 515.14 rnti 2a82 harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 516.4 rnti 2a82 harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 516.14 rnti 2a82 harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 27.0 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 516.19 rnti 2a82 harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 517.4 rnti 2a82 harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 518.9 rnti 2a82 harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 518.14 rnti 2a82 harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[HW]     TTI processing delay detected, skipping  593. 9 =>  593.15
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 593.15, expected 593.9)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 593.19
+[0m[93m[NR_MAC] Current 595.3 : future UL_tti_req's frame.slot  594. 3 does not match PUCCH  595. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 594.19
+[0m[HW]     [o-du 0][rx   53761 pps   10752 kbps   72960][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 53761]
+[0m[HW]     [o_du0][pusch0   46080 prach0    7680]
+[0m[HW]     [o-du 0][rx   64513 pps   10752 kbps   72964][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 64513]
+[0m[HW]     [o_du0][pusch0   55296 prach0    9216]
+[0m[93m[HW]     TTI processing delay detected, skipping  794. 9 =>  794.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 794.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 794.19, expected 794.9)
+[0m[93m[NR_MAC] Current 796.3 : future UL_tti_req's frame.slot  795. 3 does not match PUCCH  796. 3
+[0m[93m[NR_MAC] Current 796.4 : future UL_tti_req's frame.slot  795. 4 does not match PUCCH  796. 4
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 795.19
+[0m[HW]     [o-du 0][rx   75265 pps   10752 kbps   72945][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 75265]
+[0m[HW]     [o_du0][pusch0   64512 prach0   10752]
+[0m[93m[HW]     TTI processing delay detected, skipping  995.14 =>  996.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 996.12, expected 995.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 996.12 , expected 995.12)
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[1;31m[NR_MAC] PUCCH frame/slot mismatch: current  996. 4 vs. request  997. 4: not scheduling PUCCH
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 996.19
+[0m[93m[NR_MAC] Current 997.13 : future UL_tti_req's frame.slot  996.13 does not match PUCCH  997.13
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 997.19
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 12 (have 15) for RNTI 0x2a82
+[0m[HW]     [o-du 0][rx   86017 pps   10752 kbps   72974][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 86017]
+[0m[HW]     [o_du0][pusch0   73728 prach0   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx   96769 pps   10752 kbps   72960][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 96769]
+[0m[HW]     [o_du0][pusch0   82944 prach0   13824]
+[0m[93m[HW]     TTI processing delay detected, skipping  173. 9 =>  174. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 174.9 , expected 173.9)
+[0m[93m[NR_MAC] Current 175.3 : future UL_tti_req's frame.slot  174. 3 does not match PUCCH  175. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 174.19
+[0m[93m[NR_MAC] Current 175.13 : future UL_tti_req's frame.slot  174.13 does not match PUCCH  175.13
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 0 (have 12) for RNTI 0x2a82
+[0m[HW]     [o-du 0][rx  107521 pps   10752 kbps   72960][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 107521]
+[0m[HW]     [o_du0][pusch0   92160 prach0   15360]
+[0m[93m[HW]     TTI processing delay detected, skipping  375. 9 =>  375.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 375.13, expected 375.9)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 375.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 376.19
+[0m[HW]     [o-du 0][rx  118273 pps   10752 kbps   72960][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 118273]
+[0m[HW]     [o_du0][pusch0  101376 prach0   16896]
+[0m[HW]     [o-du 0][rx  129025 pps   10752 kbps   72964][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 129025]
+[0m[HW]     [o_du0][pusch0  110592 prach0   18432]
+[0m[93m[HW]     TTI processing delay detected, skipping  576.14 =>  577.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 577.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 577.19, expected 576.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 577.19 , expected 576.19)
+[0m[93m[NR_MAC] 578.13 future UL_tti_req's frame.slot 577.19 does not match PUSCH 578.19
+[0m[93m[NR_MAC] Current 578.13 : future UL_tti_req's frame.slot  577.13 does not match PUCCH  578.13
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 578.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 579.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 580.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 581.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 582.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 583.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 584.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 585.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 586.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 587.19
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 2 (have 13) for RNTI 0x2a82
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 588.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 589.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 590.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 591.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 592.19
+[0m[HW]     [o-du 0][rx  139777 pps   10752 kbps   72960][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 139777]
+[0m[HW]     [o_du0][pusch0  119808 prach0   19968]
+[0m[HW]     [o-du 0][rx  150529 pps   10752 kbps   72960][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 150529]
+[0m[HW]     [o_du0][pusch0  129024 prach0   21504]
+[0m[93m[HW]     TTI processing delay detected, skipping  778.19 =>  779. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 779.9, expected 778.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 779.9 , expected 778.9)
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[NR_MAC] 780.3 future UL_tti_req's frame.slot 779.9 does not match PUSCH 780.9
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 779.19
+[0m[93m[NR_MAC] Current 780.13 : future UL_tti_req's frame.slot  779.13 does not match PUCCH  780.13
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 780.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 781.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 782.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 783.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 784.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 785.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 786.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 787.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 788.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 789.19
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 10 (have 7) for RNTI 0x2a82
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 790.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 791.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 792.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 793.19
+[0m[HW]     [o-du 0][rx  161282 pps   10753 kbps   72957][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 161282]
+[0m[HW]     [o_du0][pusch0  138240 prach0   23040]
+[0m[93m[HW]     TTI processing delay detected, skipping  980.14 =>  981. 2
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 981.2, expected 980.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 981.2 , expected 980.2)
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 981.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 982.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 983.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 984.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 985.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 986.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 987.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 988.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 989.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 990.19
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 11 (have 7) for RNTI 0x2a82
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 991.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 992.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 993.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 994.19
+[0m[HW]     [o-du 0][rx  172035 pps   10753 kbps   72962][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 172035]
+[0m[HW]     [o_du0][pusch0  147456 prach0   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  182787 pps   10752 kbps   72960][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 182787]
+[0m[HW]     [o_du0][pusch0  156672 prach0   26112]
+[0m[93m[HW]     TTI processing delay detected, skipping  158. 9 =>  160. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 160.4, expected 158.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 160.4 , expected 158.4)
+[0m[93m[NR_MAC] Current 161.3 : future UL_tti_req's frame.slot  159. 3 does not match PUCCH  161. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 160.19
+[0m[HW]     [o-du 0][rx  193539 pps   10752 kbps   72950][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 193539]
+[0m[HW]     [o_du0][pusch0  165888 prach0   27648]
+[0m[93m[HW]     TTI processing delay detected, skipping  361. 9 =>  363. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 363.8, expected 361.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 363.8 , expected 361.8)
+[0m[93m[NR_MAC] Current 364.3 : future UL_tti_req's frame.slot  362. 3 does not match PUCCH  364. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 363.19
+[0m[93m[NR_MAC] Current 364.13 : future UL_tti_req's frame.slot  362.13 does not match PUCCH  364.13
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 15 (have 9) for RNTI 0x2a82
+[0m[HW]     [o-du 0][rx  204291 pps   10752 kbps   72960][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 204291]
+[0m[HW]     [o_du0][pusch0  175104 prach0   29184]
+[0m[HW]     [o-du 0][rx  215044 pps   10753 kbps   72962][tx  637484 pps   31872 kbps  182321][Total Msgs_Rcvd 215044]
+[0m[HW]     [o_du0][pusch0  184320 prach0   30720]
+[0m[93m[HW]     TTI processing delay detected, skipping  564.14 =>  566.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 566.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 566.19, expected 564.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 566.19 , expected 564.19)
+[0m[93m[NR_MAC] Current 567.13 : future UL_tti_req's frame.slot  565.13 does not match PUCCH  567.13
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[NR_MAC] Current 568.4 : future UL_tti_req's frame.slot  565. 4 does not match PUCCH  568. 4
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 567.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 568.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 569.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 570.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 571.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 572.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 573.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 574.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 575.19
+[0m[HW]     [o-du 0][rx  225796 pps   10752 kbps   72960][tx  669356 pps   31872 kbps  182321][Total Msgs_Rcvd 225796]
+[0m[HW]     [o_du0][pusch0  193536 prach0   32256]
+[0m[HW]     [o-du 0][rx  236548 pps   10752 kbps   72960][tx  701228 pps   31872 kbps  182321][Total Msgs_Rcvd 236548]
+[0m[HW]     [o_du0][pusch0  202752 prach0   33792]
+[0m[93m[HW]     TTI processing delay detected, skipping  768. 9 =>  770.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 770.12, expected 768.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 770.12 , expected 768.12)
+[0m[93m[NR_MAC] Current 771.3 : future UL_tti_req's frame.slot  769. 3 does not match PUCCH  771. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 770.19
+[0m[93m[NR_MAC] Current 771.13 : future UL_tti_req's frame.slot  769.13 does not match PUCCH  771.13
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 771.19
+[0m[HW]     [o-du 0][rx  247300 pps   10752 kbps   72960][tx  733100 pps   31872 kbps  182321][Total Msgs_Rcvd 247300]
+[0m[HW]     [o_du0][pusch0  211968 prach0   35328]
+[0m[93m[HW]     TTI processing delay detected, skipping  972. 4 =>  974. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 974.8, expected 972.4)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 974.8 , expected 972.8)
+[0m[93m[NR_MAC] Current 975.3 : future UL_tti_req's frame.slot  973. 3 does not match PUCCH  975. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 974.19
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[HW]     [o-du 0][rx  258052 pps   10752 kbps   72950][tx  764972 pps   31872 kbps  182321][Total Msgs_Rcvd 258052]
+[0m[HW]     [o_du0][pusch0  221184 prach0   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  268804 pps   10752 kbps   72983][tx  796844 pps   31872 kbps  182321][Total Msgs_Rcvd 268804]
+[0m[HW]     [o_du0][pusch0  230400 prach0   38400]
+[0m[93m[HW]     TTI processing delay detected, skipping  151.19 =>  154.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 154.10, expected 151.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 154.10 , expected 151.10)
+[0m[93m[NR_MAC] Current 155.3 : future UL_tti_req's frame.slot  153. 3 does not match PUCCH  155. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 154.19
+[0m[93m[NR_MAC] Current 155.13 : future UL_tti_req's frame.slot  152.13 does not match PUCCH  155.13
+[0m[HW]     [o-du 0][rx  279557 pps   10753 kbps   72945][tx  828716 pps   31872 kbps  182321][Total Msgs_Rcvd 279557]
+[0m[HW]     [o_du0][pusch0  239616 prach0   39936]
+[0m[93m[HW]     TTI processing delay detected, skipping  356. 4 =>  358.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 358.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 358.19, expected 356.4)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 358.19 , expected 356.19)
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[NR_MAC] Current 360.3 : future UL_tti_req's frame.slot  357. 3 does not match PUCCH  360. 3
+[0m[93m[NR_MAC] Current 360.4 : future UL_tti_req's frame.slot  357. 4 does not match PUCCH  360. 4
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 359.19
+[0m[HW]     [o-du 0][rx  290309 pps   10752 kbps   72960][tx  860588 pps   31872 kbps  182321][Total Msgs_Rcvd 290309]
+[0m[HW]     [o_du0][pusch0  248832 prach0   41472]
+[0m[HW]     [o-du 0][rx  301061 pps   10752 kbps   72960][tx  892460 pps   31872 kbps  182321][Total Msgs_Rcvd 301061]
+[0m[HW]     [o_du0][pusch0  258048 prach0   43008]
+[0m[93m[HW]     TTI processing delay detected, skipping  560.14 =>  563.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 563.16, expected 560.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 563.16 , expected 560.16)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 563.19
+[0m[93m[NR_MAC] Current 564.13 : future UL_tti_req's frame.slot  561.13 does not match PUCCH  564.13
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 14 (have 13) for RNTI 0x2a82
+[0m[HW]     [o-du 0][rx  311813 pps   10752 kbps   72960][tx  924332 pps   31872 kbps  182321][Total Msgs_Rcvd 311813]
+[0m[HW]     [o_du0][pusch0  267264 prach0   44544]
+[0m[93m[HW]     TTI processing delay detected, skipping  765.14 =>  768.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 768.16, expected 765.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 768.16 , expected 765.16)
+[0m[93m[NR_MAC] Current 769.13 : future UL_tti_req's frame.slot  766.13 does not match PUCCH  769.13
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 769.19
+[0m[HW]     [o-du 0][rx  333317 pps   21504 kbps   72960][tx  988076 pps   63744 kbps  182321][Total Msgs_Rcvd 333317]
+[0m[HW]     [o_du0][pusch0  285696 prach0   47616]
+[0m[93m[HW]     TTI processing delay detected, skipping  970.14 =>  973.17
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 973.17, expected 970.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 973.17 , expected 970.17)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 973.19
+[0m[93m[NR_MAC] Current 974.13 : future UL_tti_req's frame.slot  971.13 does not match PUCCH  974.13
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[1;31m[NR_MAC] Cannot schedule SR. PRBs not available
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 974.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 975.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 976.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 977.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 978.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 979.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 980.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 981.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 982.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 983.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 984.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 985.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 986.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 987.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 988.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 989.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 990.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 991.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 992.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 993.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 994.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 995.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 996.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 997.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 998.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 999.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1000.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1001.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1002.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1003.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1004.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1005.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1006.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1007.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1008.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1009.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1010.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1011.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1012.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1013.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1014.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1015.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1016.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1017.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1018.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1019.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1020.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1021.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1022.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1023.19
+[0m[HW]     [o-du 0][rx  344069 pps   10752 kbps   72955][tx 1019948 pps   31872 kbps  182321][Total Msgs_Rcvd 344069]
+[0m[HW]     [o_du0][pusch0  294912 prach0   49152]
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 2.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 3.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 4.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 5.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 6.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 7.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 8.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 9.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 10.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 11.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 12.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 13.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 14.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 15.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 16.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 17.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 18.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 19.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 20.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 21.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 22.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 23.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 24.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 25.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 26.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 27.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 28.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 29.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 30.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 31.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 32.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 33.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 34.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 35.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 36.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 37.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 38.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 39.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 40.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 41.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 42.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 43.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 44.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 45.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 46.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 47.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 48.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 49.19
+[0m[93m[HW]     TTI processing delay detected, skipping   50. 9 =>   53.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 53.16, expected 50.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 53.16 , expected 50.16)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 53.19
+[0m[93m[NR_MAC] Current 54.13 : future UL_tti_req's frame.slot   51.13 does not match PUCCH   54.13
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[NR_MAC] Current 55.3 : future UL_tti_req's frame.slot   51. 3 does not match PUCCH   55. 3
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 54.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 55.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 56.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 57.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 58.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 59.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 60.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 61.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 62.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 63.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 64.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 65.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 66.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 67.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 68.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 69.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 70.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 71.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 72.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 73.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 74.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 75.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 76.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 77.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 78.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 79.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 80.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 81.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 82.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 83.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 84.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 85.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 86.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 87.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 88.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 89.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 90.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 91.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 92.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 93.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 94.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 95.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 96.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 97.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 98.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 99.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 100.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 101.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 102.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 103.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 104.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 105.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 106.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 107.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 108.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 109.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 110.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 111.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 112.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 113.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 114.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 115.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 116.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 117.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 118.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 119.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 120.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 121.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 122.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 123.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 124.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 125.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 126.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 127.19
+[0m[HW]     [o-du 0][rx  354821 pps   10752 kbps   72964][tx 1051820 pps   31872 kbps  182321][Total Msgs_Rcvd 354821]
+[0m[HW]     [o_du0][pusch0  304128 prach0   50688]
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 128.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 129.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 130.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 131.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 132.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 133.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 134.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 135.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 136.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 137.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 138.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 139.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 140.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 141.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 142.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 143.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 144.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 145.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 146.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 147.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 148.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 149.19
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 150.19
+[0m

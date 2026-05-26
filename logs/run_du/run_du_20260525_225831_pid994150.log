@@ -1,0 +1,1722 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260525_225831_pid994150.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    333824 kB
+HugePages_Total:    8192
+HugePages_Free:     8192
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 13fa21ea91 Date: Mon May 25 14:33:49 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 6
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7237f17de4b0
+  tx_up_eAxC2Vf 0x7237f17df0b0
+  rx_cp_eAxC2Vf 0x7237f17dfcb0
+  rx_up_eAxC2Vf 0x7237f17e08b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 994177]
+TTI interval 500 [us]
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+xran_generic_worker_thread [CPU 17] [PID: 994177]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 994177]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 994177]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7237b0f95040
+xran_sector_get_instances [0]: CC 0 handle 0x7237d416c740
+Handle: 0x7237f8170468 Instance: 0x72[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0m37d416c740
+-> hInstance 0x7237d416c740
+ru_0_cc_0_idx_0: [ handle 0x7237d416c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x7237d416c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x7237d416c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x7237d416c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x7237d416c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7237d416c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786dc0 
+xran_bm_init() hInstance 0x7237d416c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x7237d416c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x7237d416c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x7237d416c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x7237d416c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x7237d416c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x7237d416c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7237d416c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786340 
+xran_bm_init() hInstance 0x7237d416c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x7237d416c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x7237d416c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x7237d416c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788d00 
+xran_bm_init() hInstance 0x7237d416c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x7237d416c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/26/26 05:58:35.101370477 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     [o-du 0][rx       1 pps       1 kbps       0][tx   31916 pps   31916 kbps  182321][Total Msgs_Rcvd 1]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       1 pps       0 kbps       2][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 1]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       1 pps       0 kbps       0][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 1]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       1 pps       0 kbps       0][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 1]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       1 kbps       2][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       2 pps       0 kbps       0][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 2]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       3 pps       1 kbps       2][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 3]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       3 pps       0 kbps       0][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 3]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       3 pps       0 kbps       0][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 3]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       3 pps       0 kbps       0][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 3]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[HW]     [o-du 0][rx       3 pps       0 kbps       0][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 3]
+[0m[HW]     [o_du0][pusch0       0 prach0       0]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx   10719 pps   10716 kbps   46301][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 10719]
+[0m[HW]     [o_du0][pusch0    9180 prach0    1536]
+[0m[HW]     [o-du 0][rx   21471 pps   10752 kbps   72955][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 21471]
+[0m[HW]     [o_du0][pusch0   18396 prach0    3072]
+[0m[HW]     [o-du 0][rx   32223 pps   10752 kbps   72960][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 32223]
+[0m[HW]     [o_du0][pusch0   27612 prach0    4608]
+[0m[HW]     [o-du 0][rx   42975 pps   10752 kbps   72950][tx  637484 pps   31872 kbps  182321][Total Msgs_Rcvd 42975]
+[0m[HW]     [o_du0][pusch0   36828 prach0    6144]
+[0m[HW]     [o-du 0][rx   53727 pps   10752 kbps   72960][tx  669356 pps   31872 kbps  182321][Total Msgs_Rcvd 53727]
+[0m[HW]     [o_du0][pusch0   46044 prach0    7680]
+[0m[HW]     [o-du 0][rx   64479 pps   10752 kbps   72960][tx  701228 pps   31872 kbps  182321][Total Msgs_Rcvd 64479]
+[0m[HW]     [o_du0][pusch0   55260 prach0    9216]
+[0m[HW]     [o-du 0][rx   75231 pps   10752 kbps   72960][tx  733100 pps   31872 kbps  182321][Total Msgs_Rcvd 75231]
+[0m[HW]     [o_du0][pusch0   64476 prach0   10752]
+[0m[HW]     [o-du 0][rx   85983 pps   10752 kbps   72969][tx  764972 pps   31872 kbps  182321][Total Msgs_Rcvd 85983]
+[0m[HW]     [o_du0][pusch0   73692 prach0   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx   96736 pps   10753 kbps   72948][tx  796844 pps   31872 kbps  182321][Total Msgs_Rcvd 96736]
+[0m[HW]     [o_du0][pusch0   82908 prach0   13824]
+[0m[PHY]    PUSCH demod: avgs=2315 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=12 Kc=52 E=384 A=56 R=15: l_min=-128 l_max=127 nonzero=426/624 ulsch_llr[0..3]=-10,52,28,39 l[2Z..2Z+3]=-10,28,-41,-41 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 243.18 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2315 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=12 Kc=52 E=384 A=56 R=15: l_min=-128 l_max=127 nonzero=592/624 ulsch_llr[0..3]=-7,35,-40,-60 l[2Z..2Z+3]=9,9,-60,-58 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 244.18 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2730 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=3 Z=12 Kc=52 E=384 A=56 R=15: l_min=-128 l_max=127 nonzero=599/624 ulsch_llr[0..3]=-48,18,-64,-30 l[2Z..2Z+3]=81,-16,-85,-128 l[0..3]=0,0,0,0
+[0m[PHY]    ULSCH ACK trace 245.18 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE bc9f
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1286/1352 ulsch_llr[0..3]=47,7,33,43 l[2Z..2Z+3]=95,127,-68,81 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 247.19 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1259/1352 ulsch_llr[0..3]=19,-54,15,29 l[2Z..2Z+3]=-3,19,81,45 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 248.14 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1291/1352 ulsch_llr[0..3]=48,7,48,-40 l[2Z..2Z+3]=127,127,-67,80 l[0..3]=0,0,0,0
+[0m[PHY]    ULSCH ACK trace 248.19 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1296/1352 ulsch_llr[0..3]=43,0,-43,44 l[2Z..2Z+3]=-73,-52,127,-6 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 249.14 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-86 l_max=127 nonzero=1298/1352 ulsch_llr[0..3]=45,9,32,44 l[2Z..2Z+3]=-6,83,87,-14 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 249.19 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-117 l_max=127 nonzero=1300/1352 ulsch_llr[0..3]=-45,36,10,-79 l[2Z..2Z+3]=-117,-4,61,62 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 250.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-85 l_max=127 nonzero=1292/1352 ulsch_llr[0..3]=41,38,4,80 l[2Z..2Z+3]=54,76,127,70 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 250.9 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=3 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1297/1352 ulsch_llr[0..3]=43,0,-43,-44 l[2Z..2Z+3]=-28,-6,81,44 l[0..3]=0,0,0,0
+[0m[PHY]    ULSCH ACK trace 250.14 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1281/1352 ulsch_llr[0..3]=45,9,-51,28 l[2Z..2Z+3]=-74,15,127,61 l[0..3]=0,0,0,0
+[0m[PHY]    ULSCH ACK trace 250.19 rnti bc9f harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1298/1352 ulsch_llr[0..3]=29,-35,46,-24 l[2Z..2Z+3]=-128,-2,67,27 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 251.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=2 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1295/1352 ulsch_llr[0..3]=-8,-13,-52,-16 l[2Z..2Z+3]=57,1,127,123 l[0..3]=0,0,0,0
+[0m[PHY]    ULSCH ACK trace 251.9 rnti bc9f harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1270/1352 ulsch_llr[0..3]=20,-53,44,-46 l[2Z..2Z+3]=54,49,79,26 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 251.14 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    LDPC_LLR_DIAG BG=2 rv=0 Z=26 Kc=52 E=1200 A=136 R=15: l_min=-128 l_max=127 nonzero=1288/1352 ulsch_llr[0..3]=48,7,48,-40 l[2Z..2Z+3]=97,98,87,22 l[0..3]=0,0,0,0
+[0m[93m[PHY]    ULSCH NAK trace 251.19 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 252.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 252.14 rnti bc9f harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 252.19 rnti bc9f harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 253.4 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 254.4 rnti bc9f harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 255.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 255.14 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[HW]     [o-du 0][rx  107488 pps   10752 kbps   72960][tx  828716 pps   31872 kbps  182321][Total Msgs_Rcvd 107488]
+[0m[HW]     [o_du0][pusch0   92124 prach0   15360]
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 256.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 256.14 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 257.14 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 261.14 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 262.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 262.14 rnti bc9f harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 263.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 263.14 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 263.19 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 264.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 264.9 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.7 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 264.14 rnti bc9f harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 264.19 rnti bc9f harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 265.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 265.9 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 265.14 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 265.19 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 266.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 266.9 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 266.14 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 266.19 rnti bc9f harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 267.9 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 268.9 rnti bc9f harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 269.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 269.14 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 270.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 270.14 rnti bc9f harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 271.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 271.14 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 272.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 272.14 rnti bc9f harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 273.4 rnti bc9f harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 273.9 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 273.14 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 31.1 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 273.19 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 274.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 274.9 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 274.14 rnti bc9f harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 35.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 274.19 rnti bc9f harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 275.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 275.9 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 275.14 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 275.19 rnti bc9f harq 15 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 276.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 276.9 rnti bc9f harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 276.14 rnti bc9f harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 277.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 277.9 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 277.14 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 278.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 278.9 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 278.14 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 278.19 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 279.9 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 279.19 rnti bc9f harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 280.9 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 282.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 282.14 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 283.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 283.14 rnti bc9f harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 284.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 284.9 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 284.14 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 284.19 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 285.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 285.9 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 285.14 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 285.19 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 286.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 286.9 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 286.14 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 288.14 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 289.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 289.14 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 290.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 290.14 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 291.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 291.14 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 291.19 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 292.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 292.14 rnti bc9f harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 292.19 rnti bc9f harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 293.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 294.4 rnti bc9f harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 294.14 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 295.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 295.14 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 296.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 296.14 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 297.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 297.9 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 297.14 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 297.19 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 298.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 298.9 rnti bc9f harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 298.14 rnti bc9f harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2091 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 298.19 rnti bc9f harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 299.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 299.9 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 299.14 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 299.19 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 300.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 24.8 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1116 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 300.9 rnti bc9f harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.7 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 300.14 rnti bc9f harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1709 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 300.19 rnti bc9f harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 301.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 28.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 301.9 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 302.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 32.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2112 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 302.9 rnti bc9f harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.1 dB TAest -1
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 304.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 304.14 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 305.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 305.14 rnti bc9f harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 306.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 306.14 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2788 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 308.14 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 309.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 309.14 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2124 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 310.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 310.14 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3077 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 311.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3844 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 311.14 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1177 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 311.19 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2272 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 312.14 rnti bc9f harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2550 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 312.19 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3368 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 313.19 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    PUSCH demod: avgs=3296 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 315.14 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=3727 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 316.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=3019 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 316.14 rnti bc9f harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2737 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 317.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2562 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 317.14 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3072 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 317.19 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2248 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 318.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2381 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 318.9 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3392 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 318.14 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2967 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 318.19 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4028 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 319.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1390 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 319.9 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2449 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 319.14 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1177 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 319.19 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1950 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 320.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1102 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 320.9 rnti bc9f harq 5 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3844 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 320.14 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2550 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 320.19 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2611 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 321.9 rnti bc9f harq 5 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2174 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 321.14 rnti bc9f harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3368 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 321.19 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    PUSCH demod: avgs=2636 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 322.14 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3069 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 324.4 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3171 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 324.14 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3165 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 325.4 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -4
+[0m[PHY]    PUSCH demod: avgs=4206 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 325.14 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1400 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 326.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3039 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 326.14 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2840 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 327.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3839 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 328.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 338.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3839 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 339.4 rnti bc9f harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 349.4 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 350.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 351.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3207 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 356.14 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2156 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 357.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3042 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 357.14 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=2070 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 358.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2747 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 358.14 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3844 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 359.14 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2272 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 360.14 rnti bc9f harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3017 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 363.4 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3820 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 363.14 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3826 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 364.4 rnti bc9f harq 1 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=3821 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 364.14 rnti bc9f harq 4 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 365.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 366.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 367.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 377.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 378.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 379.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  118240 pps   10752 kbps   72960][tx  860588 pps   31872 kbps  182321][Total Msgs_Rcvd 118240]
+[0m[HW]     [o_du0][pusch0  101340 prach0   16896]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 389.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 390.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 391.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 401.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 402.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 403.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=4006 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 404.14 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3016 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 405.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2152 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 405.14 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 406.4 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3433 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 406.14 rnti bc9f harq 7 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=3839 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 407.4 rnti bc9f harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=2689 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 407.14 rnti bc9f harq 7 round 3 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3844 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 408.14 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2174 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 409.14 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2636 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 410.14 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3050 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 411.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2925 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 411.14 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=3534 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 412.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4154 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 412.14 rnti bc9f harq 12 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 413.4 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 414.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 415.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 425.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 426.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 427.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 437.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 438.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 439.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 449.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 450.4 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 451.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3026 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 452.14 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3671 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 453.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2462 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 453.14 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=2457 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 454.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2082 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 454.14 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=4303 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 455.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -5
+[0m[PHY]    PUSCH demod: avgs=3844 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 455.14 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2272 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 456.14 rnti bc9f harq 8 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 466.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3839 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 467.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 477.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 478.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 479.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 489.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 490.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 491.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 501.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 502.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 503.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  128992 pps   10752 kbps   72960][tx  892460 pps   31872 kbps  182321][Total Msgs_Rcvd 128992]
+[0m[HW]     [o_du0][pusch0  110556 prach0   18432]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 513.4 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 514.4 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 515.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 525.4 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 526.4 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 527.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 537.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 538.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 539.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 549.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 550.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 551.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 561.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 562.4 rnti bc9f harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 563.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 573.4 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 574.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 575.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 585.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 586.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 587.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 597.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 598.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 599.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 609.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 610.4 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 611.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 621.4 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 622.4 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 623.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 633.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 634.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 635.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  139744 pps   10752 kbps   72950][tx  924332 pps   31872 kbps  182321][Total Msgs_Rcvd 139744]
+[0m[HW]     [o_du0][pusch0  119772 prach0   19968]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 645.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 646.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 647.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 657.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 658.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 659.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 669.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 670.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 671.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3141 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 673.14 rnti bc9f harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3016 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 674.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2273 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 674.14 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2547 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 674.19 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3785 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 675.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=2008 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 675.9 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2577 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 675.14 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2382 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 675.19 rnti bc9f harq 7 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3694 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 676.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1789 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 676.9 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3148 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 676.14 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1177 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 676.19 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2286 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 677.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3759 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 677.9 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3061 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 677.14 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=3028 log2_maxh=3 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 677.19 rnti bc9f harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    PUSCH demod: avgs=1586 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 678.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2523 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 678.9 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=2174 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 678.14 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3368 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 678.19 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 2
+[0m[PHY]    PUSCH demod: avgs=1434 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 679.9 rnti bc9f harq 14 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=3396 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 679.14 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 689.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 690.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 691.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 701.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 702.4 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 703.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 713.4 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 714.4 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 715.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 725.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 726.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 727.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 737.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 738.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 739.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 749.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 750.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 751.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 761.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 762.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 763.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  150496 pps   10752 kbps   72969][tx  956204 pps   31872 kbps  182321][Total Msgs_Rcvd 150496]
+[0m[HW]     [o_du0][pusch0  128988 prach0   21504]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 773.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 774.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 775.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 785.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 786.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 787.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 797.4 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 798.4 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 799.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 809.4 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 810.4 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 811.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 821.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 822.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 823.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 833.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 834.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 835.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 845.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 846.4 rnti bc9f harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 847.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 857.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 858.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 859.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 869.4 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 870.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 871.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 881.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 882.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 883.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 893.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 894.4 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 895.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  161248 pps   10752 kbps   72945][tx  988076 pps   31872 kbps  182321][Total Msgs_Rcvd 161248]
+[0m[HW]     [o_du0][pusch0  138204 prach0   23040]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 905.4 rnti bc9f harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 906.4 rnti bc9f harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 907.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 917.4 rnti bc9f harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 918.4 rnti bc9f harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 919.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 929.4 rnti bc9f harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 930.4 rnti bc9f harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 931.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 941.4 rnti bc9f harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 942.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 943.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 953.4 rnti bc9f harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 954.4 rnti bc9f harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 955.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 965.4 rnti bc9f harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 966.4 rnti bc9f harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 967.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 977.4 rnti bc9f harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 978.4 rnti bc9f harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 979.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 989.4 rnti bc9f harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 990.4 rnti bc9f harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 991.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 1001.4 rnti bc9f harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 1002.4 rnti bc9f harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 1003.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 1013.4 rnti bc9f harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 1014.4 rnti bc9f harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 1015.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  172000 pps   10752 kbps   72974][tx 1019948 pps   31872 kbps  182321][Total Msgs_Rcvd 172000]
+[0m[HW]     [o_du0][pusch0  147420 prach0   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 1.4 rnti bc9f harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 2.4 rnti bc9f harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 3.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 13.4 rnti bc9f harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 14.4 rnti bc9f harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 15.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 25.4 rnti bc9f harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 26.4 rnti bc9f harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 27.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 37.4 rnti bc9f harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 38.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 39.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 49.4 rnti bc9f harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 50.4 rnti bc9f harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 51.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 61.4 rnti bc9f harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[93m[PHY]    ULSCH NAK trace 62.4 rnti bc9f harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 63.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 75.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 87.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 99.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 111.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 123.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  182752 pps   10752 kbps   72955][tx 1051820 pps   31872 kbps  182321][Total Msgs_Rcvd 182752]
+[0m[HW]     [o_du0][pusch0  156636 prach0   26112]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 135.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 147.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 159.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 171.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 183.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 195.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 207.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 219.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 231.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 243.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 255.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  193504 pps   10752 kbps   72974][tx 1083692 pps   31872 kbps  182321][Total Msgs_Rcvd 193504]
+[0m[HW]     [o_du0][pusch0  165852 prach0   27648]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 267.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 279.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 291.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 303.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 315.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 327.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 339.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 351.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=2370 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2384 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2401 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 354.14 rnti bc9f harq 9 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=3478 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=2669 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2459 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3577 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 356.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1591 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3054 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1374 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3028 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=3377 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1746 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 357.14 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=5578 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 357.19 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1716 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 358.4 rnti bc9f harq 13 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1316 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 358.9 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=3061 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=2391 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2020 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2272 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 359.14 rnti bc9f harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2550 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 359.19 rnti bc9f harq 2 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1434 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2766 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 361.9 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=4380 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=2806 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3659 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=3309 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1434 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 365.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1731 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 365.14 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2523 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3133 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=2391 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=3839 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 367.4 rnti bc9f harq 3 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 0
+[0m[PHY]    PUSCH demod: avgs=1434 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 367.9 rnti bc9f harq 6 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -3
+[0m[PHY]    PUSCH demod: avgs=3327 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 367.14 rnti bc9f harq 5 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest -2
+[0m[PHY]    PUSCH demod: avgs=2550 log2_maxh=2 qam=2
+[0m[PHY]    ULSCH ACK trace 367.19 rnti bc9f harq 10 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 39.0 dB TAest -1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 379.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  204257 pps   10753 kbps   72953][tx 1115564 pps   31872 kbps  182321][Total Msgs_Rcvd 204257]
+[0m[HW]     [o_du0][pusch0  175068 prach0   29184]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 391.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 403.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 415.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 427.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 439.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 451.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 463.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 475.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 487.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 499.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 511.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  215009 pps   10752 kbps   72969][tx 1147436 pps   31872 kbps  182321][Total Msgs_Rcvd 215009]
+[0m[HW]     [o_du0][pusch0  184284 prach0   30720]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 523.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 535.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 547.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 559.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 571.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 583.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 595.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 607.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 619.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 631.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  225762 pps   10753 kbps   72962][tx 1179308 pps   31872 kbps  182321][Total Msgs_Rcvd 225762]
+[0m[HW]     [o_du0][pusch0  193500 prach0   32256]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 643.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 655.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 667.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 679.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 691.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 703.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 715.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 727.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 739.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 751.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 763.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  236514 pps   10752 kbps   72960][tx 1211180 pps   31872 kbps  182321][Total Msgs_Rcvd 236514]
+[0m[HW]     [o_du0][pusch0  202716 prach0   33792]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 775.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 787.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 799.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 811.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 823.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 835.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 847.4 rnti bc9f harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 859.4 rnti bc9f harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 871.4 rnti bc9f harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 883.4 rnti bc9f harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 895.4 rnti bc9f harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  247266 pps   10752 kbps   72960][tx 1243052 pps   31872 kbps  182321][Total Msgs_Rcvd 247266]
+[0m[HW]     [o_du0][pusch0  211932 prach0   35328]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 907.4 rnti bc9f harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 919.4 rnti bc9f harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 931.4 rnti bc9f harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 943.4 rnti bc9f harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 955.4 rnti bc9f harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 967.4 rnti bc9f harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 979.4 rnti bc9f harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 991.4 rnti bc9f harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 1003.4 rnti bc9f harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 1015.4 rnti bc9f harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[HW]     [o-du 0][rx  258019 pps   10753 kbps   72962][tx 1274924 pps   31872 kbps  182321][Total Msgs_Rcvd 258019]
+[0m[HW]     [o_du0][pusch0  221148 prach0   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    ULSCH ACK trace 3.4 rnti bc9f harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 20 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 38.9 dB TAest 1
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[HW]     [o-du 0][rx  268771 pps   10752 kbps   72955][tx 1306796 pps   31872 kbps  182321][Total Msgs_Rcvd 268771]
+[0m[HW]     [o_du0][pusch0  230364 prach0   38400]
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1841 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2560 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4350 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=3701 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=3619 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=2576 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2504 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2380 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2561 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=2170 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=1637 log2_maxh=2 qam=2
+[0m[PHY]    PUSCH demod: avgs=4073 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=3052 log2_maxh=3 qam=2
+[0m[PHY]    PUSCH demod: avgs=1682 log2_maxh=2 qam=2
+[0m
+** Caught SIGTERM, shutting down
+[PHY]    Killing gNB 0 processing threads
+[0m[PHY]    Stopping RU 0 processing threads
+[0m[93m[PHY]    No stop_rf() for RU 0 defined, cannot stop RF!
+[0m[HW]     xran_get_time_stats(): total thread time 191404807304, total time essential tasks 123187226820, num cores used 3
+[0mO-DU: thread_run start time: 05/26/26 05:58:36.000000002 UTC [500]
+Returned from ITTI signal handler
+ORAN: trx_oran_get_stats
+ORAN: trx_oran_stop
+fh_rx_bbdev-17 worker thread finished on core 17 [worker id 0]
+Closing timing source thread...
+Bye.

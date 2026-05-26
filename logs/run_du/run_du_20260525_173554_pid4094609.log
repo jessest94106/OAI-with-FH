@@ -1,0 +1,83 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260525_173554_pid4094609.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    331776 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[93m[GTPU]   bind: Address already in use
+[0m[1;31m[GTPU]   failed to bind socket: 172.21.19.111 2152 
+[0m[1;31m[GTPU]   can't create GTP-U instance
+[0m[1;31m[E1AP]   Failed to create CUUP N3 UDP listener
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 4
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No free hugepages reported in hugepages-2048kB
+EAL: No available hugepages reported in hugepages-2048kB
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: FATAL: Cannot get hugepage information.
+EAL: Cannot get hugepage information.
+PANIC in xran_ethdi_init_dpdk_io():
+Cannot init EAL: Permission denied
+11: [/lib/x86_64-linux-gnu/libc.so.6(+0x129c6c) [0x71c236729c6c]]
+10: [/lib/x86_64-linux-gnu/libc.so.6(+0x9caa4) [0x71c23669caa4]]
+9: [./nr-softmodem(ru_thread+0x19f) [0x55b2b459c05f]]
+8: [./nr-softmodem(openair0_transport_load+0x2b) [0x55b2b488506b]]
+7: [./nr-softmodem(load_lib+0x17e) [0x55b2b4884b8e]]
+6: [/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/liboai_transpro.so(transport_init+0x155) [0x71c2340ab2b5]]
+5: [/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/liboai_transpro.so(+0x20879) [0x71c2340c4879]]
+4: [/home/jesse/oran_lab/oaicicd/test_dir/phy-f-1.0/fhi_lib/lib/build/libxran.so(xran_init+0x341) [0x71c22cf364c5]]
+3: [/home/jesse/oran_lab/oaicicd/test_dir/phy-f-1.0/fhi_lib/lib/build/libxran.so(xran_ethdi_init_dpdk_io+0x7bd) [0x71c22cf1768b]]
+2: [/home/jesse/oran_lab/oaicicd/test_dir/dpdk-stable-20.11.9/lib/x86_64-linux-gnu/librte_eal.so.21(__rte_panic+0xc9) [0x71c22cd7ce13]]
+1: [/home/jesse/oran_lab/oaicicd/test_dir/dpdk-stable-20.11.9/lib/x86_64-linux-gnu/librte_eal.so.21(rte_dump_stack+0x32) [0x71c22cda1152]]

@@ -1,0 +1,115 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260525_151038_pid3576350.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:    331776 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" "--numerology" "1" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+_i40evf_execute_vf_cmd(): fail to send cmd 6
+i40evf_configure_vsi_queues(): Failed to execute command of VIRTCHNL_OP_CONFIG_VSI_QUEUES
+i40evf_dev_start(): configure queues failed
+PANIC in xran_init_port():
+Cannot start port 0 (-1)
+13: [./nr-oru(_start+0x25) [0x5eded746bf05]]
+12: [/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b) [0x7d5b2f62a28b]]
+11: [/lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca) [0x7d5b2f62a1ca]]
+10: [./nr-oru(main+0x337) [0x5eded7469ba7]]
+9: [./nr-oru(openair0_transport_load+0x2b) [0x5eded74c5dcb]]
+8: [./nr-oru(load_lib+0x17e) [0x5eded74c58ee]]
+7: [/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/liboai_transpro.so(transport_init+0x155) [0x7d5b2e1a32b5]]
+6: [/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/liboai_transpro.so(+0x20879) [0x7d5b2e1bc879]]
+5: [/home/jesse/oran_lab/oaicicd/test_dir/phy-f-1.0/fhi_lib/lib/build/libxran.so(xran_init+0x4c9) [0x7d5b2e0d864d]]
+4: [/home/jesse/oran_lab/oaicicd/test_dir/phy-f-1.0/fhi_lib/lib/build/libxran.so(xran_ethdi_init_dpdk_io+0x855) [0x7d5b2e0b9723]]
+3: [/home/jesse/oran_lab/oaicicd/test_dir/phy-f-1.0/fhi_lib/lib/build/libxran.so(xran_init_port+0x629) [0x7d5b2e0bb4b2]]
+2: [/home/jesse/oran_lab/oaicicd/test_dir/dpdk-stable-20.11.9/lib/x86_64-linux-gnu/librte_eal.so.21(__rte_panic+0xc9) [0x7d5b2df1ee13]]
+1: [/home/jesse/oran_lab/oaicicd/test_dir/dpdk-stable-20.11.9/lib/x86_64-linux-gnu/librte_eal.so.21(rte_dump_stack+0x32) [0x7d5b2df43152]]

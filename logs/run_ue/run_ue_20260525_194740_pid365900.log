@@ -1,0 +1,643 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ue/run_ue_20260525_194740_pid365900.log
+UE cores: 20,21,22,23
+UE sample advance: 0
+VRTSIM shared memory is ready; starting UE without waiting for non-zero DL samples.
+CMDLINE: "./nr-uesoftmodem" "-O" "/home/jesse/oran_lab/ue_test.conf" "-C" "4049760000" "-r" "24" "--numerology" "1" "--band" "77" "--ssb" "24" "-A" "0" "--device.name" "vrtsim" "--vrtsim.role" "client" "--ue-nb-ant-tx" "1" "--ue-nb-ant-rx" "1" 
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool8_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool9_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool10_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool11_-1: creating thread with affinity ffffffff, priority 97
+[0m[OPT]    OPT disabled
+[0m[HW]     Version: Branch: oru-rebase-1-plus-compression Abrev. Hash: dae942c616 Date: Fri May 15 22:54:55 2026 +0000
+[0m[NR_RRC] create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[SIM]    UICC simulation: IMSI=2089900007487, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=C42449363BBAD02B66D16BC975D77CC1
+[0m[SIM]    overriding potential uicc0.dnn/nssai_sst/nssai_sd from uicc0.pdu_sessions
+[0m[SIM]    will request PDU session ID 1, type 1, DNN oai, NSSAI 1.ffffff
+[0m[NR_MAC] [UE0] Initializing MAC
+[0m[NR_MAC] Initializing dl and ul config_request. num_slots = 20
+[0m[RLC]    Activated srb0 for UE 0
+[0m[UTIL]   threadCreate() for time source realtime: creating thread with affinity ffffffff, priority 2
+[0m[UTIL]   time manager configuration: [time source: reatime] [mode: standalone] [server IP: 127.0.0.1} [server port: 7374] (server IP/port not used)
+[0m[PHY]    Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ofdm_offset_divisor 8
+[0m[PHY]    SA init parameters. DL freq 4049760000 UL offset 0 SSB numerology 1 N_RB_DL 24
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[93m[PHY]    samples_per_subframe 15360/per second 15360000, wCP 14336
+[0m[PHY]    Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0, chest-time 0
+[0m[UTIL]   threadCreate() for SYNC__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[PHY]    Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]    prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]    HW: Configuring ru_id 0, sample_rate 15360000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_freq 4049760000 Hz, rx_freq 4049760000 Hz, tune_offset 0
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[UTIL]   threadCreate() for ru_start_thread: creating thread with affinity ffffffff, priority 97
+[0m[HW]     VRTSIM: TX sample advance 4096 samples
+[0m[HW]     Running as client: will connect to a vrtsim server
+[0m[HW]     [RAU] has loaded RFSIMULATOR device.
+[0m[HW]     VRTSIM: UE 0/1 - 1x1 antennas, UL offset=0, DL offset=0
+[0m[HW]     VRTSIM: client RX aligned to frame boundary current_sample=506020869 aligned_sample=506112000 samples_per_frame=153600
+[0m[PHY]    Intializing UE Threads for instance 0 ...
+[0m[UTIL]   threadCreate() for UEthread_0: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats_0: creating thread with affinity ffffffff, priority 1
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[32m[PHY]    Initial sync: pbch decoded sucessfully, ssb index 0
+[0m[PHY]    pbch rx ok. rsrp:74 dB/RE, adjust_rxgain:-24 dB
+[0m[NR_PHY] Cell Detected with GSCN: 0, SSB SC offset: 24, SSB Ref: 0.000000, PSS Corr peak: 117 dB, PSS Corr Average: 80
+[0m[PHY]    [UE0] In synch, rx_offset 55316 samples
+[0m[PHY]    [UE 0] Measured Carrier Frequency offset -4 Hz
+[0m[32m[PHY]    Initial sync successful, PCI: 0
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_freq 4049759996 Hz, rx_freq 4049759996 Hz, tune_offset 0
+[0m[PHY]    Got synch: hw_slot_offset 14, carrier off -4 Hz
+[0m[NR_RRC] [UE 0] BCCH update: phyCellID 0->0, arfcn_ssb 0->669984
+[0m[32m[PHY]    UE synchronized! decoded_frame_rx=328 UE->init_sync_frame=0 trashed_frames=2
+[0m[PHY]    Resynchronizing RX by 55316 samples
+[0m[HW]     received write reorder clear context
+[0m[PHY]    max_pos_acc = 0, shiftForNextFrame = 0
+[0m[32m[NR_RRC] SIB1 decoded
+[0m[NR_MAC] [UE 0] Initial cell selection: dl_frequency=4045440 kHz (from command-line, band=77, scs=1)
+[0m[NR_MAC] Initial cell selection: uplink_frequency=4045440 kHz (from dl_frequency=4045440 kHz)
+[0m[NR_MAC] TDD period index = 5, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (2.500000 ms) and Pattern2 (0.000000 ms): Total = 2.500000 ms
+[0m[NR_MAC] Set TDD configuration period to: 4 DL slots, 2 UL slots, 5 slots per period (NR_TDD_UL_DL_Pattern is 3 DL slots, 1 UL slots, 6 DL symbols, 4 UL symbols)
+[0m[NR_MAC] Configured 1 TDD patterns (total slots: pattern1 = 5, pattern2 = 0)
+[0m[PHY]    N_TA_offset changed from 0 to 200
+[0m[MAC]    Initialization of 4-Step CBRA procedure
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 332, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 332.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 24, first_nonzero_root_idx 0, preambleIndex = 24
+[0m[PHY]    [UE 0] RAR-Msg2 decoded
+[0m[NR_MAC] [UE 0][RAPROC][RA-RNTI 010b] Got BI RAR subPDU 5 ms
+[0m[NR_MAC] [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+[0m[32m[NR_MAC] [UE 0][RAPROC][333.10] Found RAR with the intended RAPID 24
+[0m[93m[MAC]    received TA command 31
+[0m[32m[NR_MAC] [RAPROC][333.18] RA-Msg3 transmitted
+[0m[NR_MAC] [RAPROC][334.18] RA-Msg3 retransmitted
+[0m[NR_MAC] [RAPROC][335.18] RA-Msg3 retransmitted
+[0m[32m[NR_MAC] [UE 0][336.10][RAPROC] 4-Step RA procedure succeeded. CBRA: Contention Resolution is successful.
+[0m[NR_RRC] [UE0][RAPROC] Logical Channel DL-CCCH (SRB0), Received NR_RRCSetup
+[0m[RLC]    Added srb 1 to UE 0
+[0m[NR_RRC] State = NR_RRC_CONNECTED
+[0m[NAS]    Generate Initial NAS Message: Registration Request
+[0m[NR_RRC] [UE 0][RAPROC] Logical Channel UL-DCCH (SRB1), Generating RRCSetupComplete (bytes32)
+[0m[NAS]    [UE 0] Received NR_NAS_CONN_ESTABLISH_IND: asCause 0
+[0m[MAC]    [UE 0] Applying CellGroupConfig from gNodeB
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_AUTHENTICATION_REQUEST with length 42
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_SECURITY_MODE_COMMAND with length 21
+[0m[NAS]    Generate Initial NAS Message: Registration Request
+[0m[NR_RRC] Received securityModeCommand (gNB 0)
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), Processing securityModeCommand
+[0m[NR_RRC] Security algorithm is set to nea0
+[0m[NR_RRC] Integrity protection algorithm is set to nia2
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), encoding securityModeComplete, rrc_TransactionIdentifier: 0
+[0m[NR_RRC] Received Capability Enquiry (gNB 0)
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), Processing UECapabilityEnquiry
+[0m[CONFIG] function config_libconfig_init returned 0
+Initializing random number generator, seed 5980907021196673631
+Waiting for server to create shared memory segment
+UE threads created by 365908
+TYPE <CTRL-C> TO TERMINATE
+kausf:16 c8 f8 2 50 4e 1f cf fe 8d c6 fc fd 2 16 55 ca b0 a9 d cf eb cb b1 96 23 82 b 0 54 82 2a 
+kseaf:2c ed 80 68 54 e5 a7 b4 ba 54 ce 4f 4e bc c0 b5 92 a1 68 f5 ae 5f 7b 5e 70 32 bb 8 cb bc 57 20 
+kamf:fb 76 76 87 39 56 b0 c8 f3 7b f8 4e 6c be 95 88 ef 8c 3e 53 5d 6f b2 e7 c7 f4 2 7b 14 5c 44 3d 
+knas_int: ee b7 4b 12 1d bf 5d c3 3a 97 a3 1 99 f4 29 83 
+knas_enc: 93 e4 af a1 9a 21 fe a1 48 6c de 44 e8 22 b2 3e 
+mac 8 3d 32 d8 
+[NR_RRC] deriving kRRCenc, kRRCint from KgNB=4a 43 da da 89 39 98 de b5 d9 87 0b 1a e0 80 0a 33 2b e1 4e 26 bc c2 75 a4 cb 1a b2 40 49 31 89 [0m
+[NR_RRC] securityModeComplete payload: 28 00 00 00 00 00 00 00 20 18 00 30 20 76 00 00 [0m
+<UE-NR-Capability>
+    <accessStratumRelease><rel15/></accessStratumRelease>
+    <pdcp-Parameters>
+        <supportedROHC-Profiles>
+            <profile0x0000><false/></profile0x0000>
+            <profile0x0001><false/></profile0x0001>
+            <profile0x0002><false/></profile0x0002>
+            <profile0x0003><false/></profile0x0003>
+            <profile0x0004><false/></profile0x0004>
+            <profile0x0006><false/></profile0x0006>
+            <profile0x0101><false/></profile0x0101>
+            <profile0x0102><false/></profile0x0102>
+            <profile0x0103><false/></profile0x0103>
+            <profile0x0104><false/></profile0x0104>
+        </supportedROHC-Profiles>
+        <maxNumberROHC-ContextSessions><cs2/></maxNumberROHC-ContextSessions>
+    </pdcp-Parameters>
+    <phy-Parameters>
+    </phy-Parameters>
+    <rf-Parameters>
+        <supportedBandListNR>
+            <BandNR>
+                <bandNR>1</bandNR>
+            </BandNR>
+        </supportedBandListNR>
+    </rf-Parameters>
+</UE-NR-Capability>
+[PHY]    [RRC]UE NR Capability encoded, 10 bytes (86 bits)
+[0m[NR_RRC] UECapabilityInformation Encoded 106 bits (14 bytes)
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_REGISTRATION_ACCEPT with length 53
+[0m[NAS]    Received Registration Accept with result 3GPP
+[0m[NAS]    SMS not allowed in 5GS Registration Result
+[0m[NR_RRC] 5G-GUTI: AMF pointer 1, AMF Set ID 1, 5G-TMSI 67390679 
+[0m[NAS]    Send NAS_UPLINK_DATA_REQ message(RegistrationComplete)
+[0m[NAS]    requested PDU session ID 1 type 1 NSSAI 1.16777215 DNN oai
+[0m[NAS]    Send NAS_UPLINK_DATA_REQ message(PduSessionEstablishRequest)
+[0m[RLC]    Added srb 2 to UE 0
+[0m[RLC]    Added drb 1 to UE 0
+[0m[RLC]    Added DRB to UE 0
+[0m[NR_RRC] RRCReconfiguration includes radio Bearer Configuration
+[0m[MAC]    [UE 0] Applying CellGroupConfig from gNodeB
+[0m[SDAP]   Default DRB for the created SDAP entity: DRB 1 
+[0m[PDCP]   Added DRB 1 to UE ID 0
+[0m[NR_RRC] State = NR_RRC_CONNECTED
+[0m[NR_RRC] RRCReconfiguration includes Measurement Configuration
+[0m[93m[NR_RRC] Measurement gaps not yet supported!
+[0m[NR_RRC] rrcReconfigurationComplete Encoded 10 bits (2 bytes)
+[0m[NR_RRC]  Logical Channel UL-DCCH (SRB1), Generating RRCReconfigurationComplete (bytes 2)
+[0m[NAS]    [UE 0] Received NAS_CONN_ESTABLI_CNF: errCode 1, length 98
+[0m[NAS]    Received PDU Session Establishment Accept, UE IPv4: 10.0.0.12
+[0m[32m[OIP]    TUN Interface oaitun_ue1 successfully configured, IPv4 10.0.0.12, IPv6 (null)
+[0m[93m[NR_RRC] (active_cell_rsrp) -123 + (rsrp_hysteresis) 0 < (rsrp_threshold) -97
+[0m[UTIL]   threadCreate() for ue_tun_read_0_p1: creating thread with affinity ffffffff, priority 1
+[0m[NR_RRC] MeasurementReport Encoded 53 bits (7 bytes)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 22/0/0/0
+    UL harq: 64/44/9/1 avg code rate 0.1, avg bit/symbol 2.1, avg per TB: (nb RBs 5.1, nb symbols 12.7)
+[0m[NR_RRC] MeasurementReport Encoded 53 bits (7 bytes)
+[0m[NR_RRC] MeasurementReport Encoded 53 bits (7 bytes)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 27/0/0/0
+    UL harq: 81/62/24/2 avg code rate 0.1, avg bit/symbol 2.1, avg per TB: (nb RBs 5.1, nb symbols 12.8)
+[0m[NR_RRC] MeasurementReport Encoded 53 bits (7 bytes)
+[0m[NR_MAC] [635.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 30/0/0/0
+    UL harq: 94/75/35/3 avg code rate 0.1, avg bit/symbol 2.1, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [735.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 32/0/0/0
+    UL harq: 113/94/47/3 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 33/0/0/0
+    UL harq: 124/105/55/3 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 34/0/0/0
+    UL harq: 135/116/66/3 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [11.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [111.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 36/0/0/0
+    UL harq: 145/126/75/4 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 37/0/0/0
+    UL harq: 156/137/86/4 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [311.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 38/0/0/0
+    UL harq: 167/148/96/5 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [411.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 40/0/0/0
+    UL harq: 185/165/109/5 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 42/0/0/0
+    UL harq: 196/177/119/5 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 43/0/0/0
+    UL harq: 207/188/130/5 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [811.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 44/0/0/0
+    UL harq: 218/199/140/6 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [911.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 46/0/0/0
+    UL harq: 228/209/150/6 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 12.9)
+[0m[NR_MAC] [87.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 47/0/0/0
+    UL harq: 239/220/160/7 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [187.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 48/0/0/0
+    UL harq: 250/231/171/7 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 49/0/0/0
+    UL harq: 260/241/181/7 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [387.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [487.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 51/0/0/0
+    UL harq: 271/252/191/8 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 52/0/0/0
+    UL harq: 282/263/202/8 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [687.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 53/0/0/0
+    UL harq: 292/273/211/9 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [787.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 55/0/0/0
+    UL harq: 303/284/222/9 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [987.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 56/0/0/0
+    UL harq: 314/295/232/10 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [63.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 59/0/0/0
+    UL harq: 337/318/246/10 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 60/0/0/0
+    UL harq: 348/329/257/10 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [263.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [363.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 62/0/0/0
+    UL harq: 359/340/267/11 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 63/0/0/0
+    UL harq: 369/350/277/11 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [563.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 64/0/0/0
+    UL harq: 380/361/287/12 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [663.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 66/0/0/0
+    UL harq: 391/372/298/12 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [863.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 67/0/0/0
+    UL harq: 401/382/307/13 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [963.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 68/0/0/0
+    UL harq: 412/393/318/13 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 69/0/0/0
+    UL harq: 423/404/329/13 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [139.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [239.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 71/0/0/0
+    UL harq: 433/414/338/14 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 72/0/0/0
+    UL harq: 444/425/349/14 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [439.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 73/0/0/0
+    UL harq: 455/436/359/15 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [539.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 75/0/0/0
+    UL harq: 465/446/369/15 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [739.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 76/0/0/0
+    UL harq: 476/457/379/16 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [839.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 77/0/0/0
+    UL harq: 487/468/390/16 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 78/0/0/0
+    UL harq: 497/478/400/16 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [15.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [115.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 80/0/0/0
+    UL harq: 508/489/410/17 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 81/0/0/0
+    UL harq: 519/500/421/17 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [315.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 82/0/0/0
+    UL harq: 529/510/430/18 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [415.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 83/0/0/0
+    UL harq: 540/521/441/18 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [615.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 85/0/0/0
+    UL harq: 551/532/451/19 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [715.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 86/0/0/0
+    UL harq: 561/542/461/19 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 87/0/0/0
+    UL harq: 572/553/472/19 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [915.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [1015.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 89/0/0/0
+    UL harq: 583/564/482/20 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 90/0/0/0
+    UL harq: 593/574/492/20 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [191.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 93/0/0/0
+    UL harq: 617/598/507/21 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [291.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 94/0/0/0
+    UL harq: 628/609/518/21 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [391.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [491.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 96/0/0/0
+    UL harq: 639/620/528/22 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 97/0/0/0
+    UL harq: 649/630/538/22 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [691.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 98/0/0/0
+    UL harq: 660/641/548/23 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [791.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 100/0/0/0
+    UL harq: 671/652/559/23 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [991.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 101/0/0/0
+    UL harq: 681/662/568/24 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [67.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 102/0/0/0
+    UL harq: 692/673/579/24 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 103/0/0/0
+    UL harq: 703/684/590/24 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [267.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [367.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 105/0/0/0
+    UL harq: 713/694/599/25 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 106/0/0/0
+    UL harq: 724/705/610/25 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [567.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 107/0/0/0
+    UL harq: 735/716/620/26 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [667.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 109/0/0/0
+    UL harq: 745/726/630/26 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [867.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 896.4, cumulated bad DCI 0
+    DL harq: 110/0/0/0
+    UL harq: 756/737/640/27 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [967.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 0.4, cumulated bad DCI 0
+    DL harq: 111/0/0/0
+    UL harq: 767/748/651/27 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 128.4, cumulated bad DCI 0
+    DL harq: 112/0/0/0
+    UL harq: 777/758/661/27 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [143.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] [243.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 256.4, cumulated bad DCI 0
+    DL harq: 114/0/0/0
+    UL harq: 788/769/671/28 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 384.4, cumulated bad DCI 0
+    DL harq: 115/0/0/0
+    UL harq: 799/780/682/28 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [443.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 512.4, cumulated bad DCI 0
+    DL harq: 116/0/0/0
+    UL harq: 809/790/691/29 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [543.0] Received TA_COMMAND 32 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 640.4, cumulated bad DCI 0
+    DL harq: 117/0/0/0
+    UL harq: 820/801/702/29 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NR_MAC] [743.0] Received TA_COMMAND 30 TAGID 0 CC_id 0 
+[0m[NR_MAC] UE 0 RNTI e27e stats sfn: 768.4, cumulated bad DCI 0
+    DL harq: 119/0/0/0
+    UL harq: 831/812/712/30 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 5.0, nb symbols 13.0)
+[0m[NAS]    [UE 0] Received NAS_DEREGISTRATION_REQ
+[0mPress ^C again to trigger immediate shutdown
+[1;31m[PHY]    [UE 0] frame 820, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 822, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 824, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 826, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 828, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 830, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 832, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 834, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 836, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 838, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 840, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 842, nr_slot_rx 0, Error decoding PBCH!
+[0m[1;31m[PHY]    [UE 0] frame 844, nr_slot_rx 0, Error decoding PBCH!
+[0m[93m[NR_MAC] [UE 0] SR not served! SR counter 64 reached sr_MaxTransmissions 64
+[0m[93m[NR_MAC] Triggering new RA procedure for UE with RNTI e27e
+[0m[MAC]    Initialization of 4-Step CBRA procedure
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 844, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 844.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 4, first_nonzero_root_idx 0, preambleIndex = 4
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 846, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 846, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 846.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 48, first_nonzero_root_idx 0, preambleIndex = 48
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 848, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 848, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 848.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 37, first_nonzero_root_idx 0, preambleIndex = 37
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 850, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 850, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 850.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 22, first_nonzero_root_idx 0, preambleIndex = 22
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 852, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 852, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 852.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 11, first_nonzero_root_idx 0, preambleIndex = 11
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 854, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 854, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 854.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 48, first_nonzero_root_idx 0, preambleIndex = 48
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 856, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 856, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 856.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 53, first_nonzero_root_idx 0, preambleIndex = 53
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 858, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 858, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 858.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 4, first_nonzero_root_idx 0, preambleIndex = 4
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 860, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 860, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 860.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 48, first_nonzero_root_idx 0, preambleIndex = 48
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 862, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 862, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 862.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 27, first_nonzero_root_idx 0, preambleIndex = 27
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 864, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 864, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 864.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 24, first_nonzero_root_idx 0, preambleIndex = 24
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 866, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 866, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 866.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 43, first_nonzero_root_idx 0, preambleIndex = 43
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 868, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 868, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 868.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 50, first_nonzero_root_idx 0, preambleIndex = 50
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 870, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 870, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 870.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 39, first_nonzero_root_idx 0, preambleIndex = 39
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 872, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 872, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 872.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 37, first_nonzero_root_idx 0, preambleIndex = 37
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 874, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 874, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 874.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 44, first_nonzero_root_idx 0, preambleIndex = 44
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 876, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 876, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 876.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 1, first_nonzero_root_idx 0, preambleIndex = 1
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 878, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 878, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 878.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 5, first_nonzero_root_idx 0, preambleIndex = 5
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 880, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 880, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 880.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 8, first_nonzero_root_idx 0, preambleIndex = 8
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 882, nr_slot_rx 0, Error decoding PBCH!
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 882, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 882.19, placing PRACH in position 740, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 61, first_nonzero_root_idx 0, preambleIndex = 61
+[0m[93m[MAC]    [UE 0] RAR reception failed
+[0m[1;31m[PHY]    [UE 0] frame 884, nr_slot_rx 0, Error decoding PBCH!
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting re-sync detection for target Nid_cell 0
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 4049760000, bandwidth: 24. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 24, SSB Freq: 0.000000
+[0m[1;31m[PHY]    synch Failed: 
+[0mError: Timed out waiting for samples.
+[93m[NR_PHY] Returned from ITTI signal handler
+[0mError: Timed out waiting for samples.
+[1;31m[HW]     VRTSIM: Read timeout waiting for sample 1870734912 to change, aborting channel
+[0m
+Assertion (readBlockSize == tmp) failed!
+In readFrame() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/executables/nr-ue.c:679
+
+Exiting execution
+mac ef 49 50 1a 
+mac 30 32 a6 e0 
+Entering ITTI signals handler
+TYPE <CTRL-C> TO TERMINATE
+mac a7 da c7 d9 
+[93m[NR_PHY] called by: /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/executables/nr-ue.c:679 readFrame() Exiting OAI softmodem: _Assert_Exit_
+[0m[HW]     VRTSIM: Realtime issues: TX 0.00%, RX 0.00%
+[0m[HW]     VRTSIM: Read/write too early (suspected radio implementaton error) TX: 0, RX: 0
+[0m[HW]     VRTSIM: Average TX budget 904.666 uS (more is better)
+[0m[HW]     VRTSIM: TX budget histogram: 69953 samples
+[0m[HW]     Bin 0	[0.0 - 100.0uS]:		0
+[0m[HW]     Bin 1	[100.0 - 200.0uS]:		0
+[0m[HW]     Bin 2	[200.0 - 300.0uS]:		0
+[0m[HW]     Bin 3	[300.0 - 400.0uS]:		0
+[0m[HW]     Bin 4	[400.0 - 500.0uS]:		0
+[0m[HW]     Bin 5	[500.0 - 600.0uS]:		0
+[0m[HW]     Bin 6	[600.0 - 700.0uS]:		0
+[0m[HW]     Bin 7	[700.0 - 800.0uS]:		186
+[0m[HW]     Bin 8	[800.0 - 900.0uS]:		61220
+[0m[HW]     Bin 9	[900.0 - 1000.0uS]:		8448
+[0m[HW]     Bin 10	[1000.0 - 1100.0uS]:		0
+[0m[HW]     Bin 11	[1100.0 - 1200.0uS]:		0
+[0m[HW]     Bin 12	[1200.0 - 1300.0uS]:		0
+[0m[HW]     Bin 13	[1300.0 - 1400.0uS]:		0
+[0m[HW]     Bin 14	[1400.0 - 1500.0uS]:		0
+[0m[HW]     Bin 15	[1500.0 - 1600.0uS]:		0
+[0m[HW]     Bin 16	[1600.0 - 1700.0uS]:		0
+[0m[HW]     Bin 17	[1700.0 - 1800.0uS]:		0
+[0m[HW]     Bin 18	[1800.0 - 1900.0uS]:		0
+[0m[HW]     Bin 19	[1900.0 - 2000.0uS]:		0
+[0m[HW]     Bin 20	[2000.0 - 2100.0uS]:		0
+[0m[HW]     Bin 21	[2100.0 - 2200.0uS]:		0
+[0m[HW]     Bin 22	[2200.0 - 2300.0uS]:		0
+[0m[HW]     Bin 23	[2300.0 - 2400.0uS]:		0
+[0m[HW]     Bin 24	[2400.0 - 2500.0uS]:		0
+[0m[HW]     Bin 25	[2500.0 - 2600.0uS]:		0
+[0m[HW]     Bin 26	[2600.0 - 2700.0uS]:		0
+[0m[HW]     Bin 27	[2700.0 - 2800.0uS]:		0
+[0m[HW]     Bin 28	[2800.0 - 2900.0uS]:		0
+[0m[HW]     Bin 29	[2900.0 - 3000.0uS]:		0
+[0m
