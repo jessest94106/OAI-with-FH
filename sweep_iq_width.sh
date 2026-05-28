@@ -14,6 +14,8 @@ IPERF_PORT="${IPERF_PORT:-5201}"
 IPERF_SECONDS="${IPERF_SECONDS:-20}"
 IPERF_PARALLEL="${IPERF_PARALLEL:-1}"
 IPERF_DIRECTION="${IPERF_DIRECTION:-both}" # ul, dl, both, none
+IPERF_PROTOCOL="${IPERF_PROTOCOL:-udp}"   # tcp or udp
+IPERF_BITRATE="${IPERF_BITRATE:-100M}"    # UDP target bitrate; ignored for TCP
 RU_WAIT_SECONDS="${RU_WAIT_SECONDS:-30}"
 DU_WAIT_SECONDS="${DU_WAIT_SECONDS:-60}"
 UE_WAIT_SECONDS="${UE_WAIT_SECONDS:-90}"
@@ -39,6 +41,8 @@ Options:
   --iperf-server IP        iperf3 server reachable from UE tunnel. Default: ${IPERF_SERVER}
   --iperf-seconds N        iperf duration per direction. Default: ${IPERF_SECONDS}
   --iperf-direction D      ul, dl, both, or none. Default: ${IPERF_DIRECTION}
+  --iperf-protocol P       tcp or udp. Default: ${IPERF_PROTOCOL}
+  --iperf-bitrate B        UDP target bitrate (e.g. 50M, 100M). Default: ${IPERF_BITRATE}
   --out-dir DIR            Output directory. Default: ${OUT_DIR}
   --dry-run                Patch/launch plan only; do not start processes.
   -h, --help               Show this help.
@@ -55,6 +59,8 @@ while [[ $# -gt 0 ]]; do
     --iperf-server) IPERF_SERVER="$2"; shift 2 ;;
     --iperf-seconds) IPERF_SECONDS="$2"; shift 2 ;;
     --iperf-direction) IPERF_DIRECTION="$2"; shift 2 ;;
+    --iperf-protocol) IPERF_PROTOCOL="$2"; shift 2 ;;
+    --iperf-bitrate) IPERF_BITRATE="$2"; shift 2 ;;
     --out-dir) OUT_DIR="$2"; CSV="${OUT_DIR}/summary.csv"; REPORT="${OUT_DIR}/report.md"; shift 2 ;;
     --dry-run) DRY_RUN=1; shift ;;
     -h|--help) usage; exit 0 ;;
@@ -135,13 +141,15 @@ comp_for_width() {
 patch_conf() {
   local width="$1"
   local comp="$2"
+  local prach_width=16
+  local prach_comp=0
   local conf
   for conf in "${RU_CONF}" "${DU_CONF}"; do
     perl -0pi -e '
       s/(iq_width\s*=\s*)\d+(\s*;)/${1}'"${width}"'${2}/g;
-      s/(iq_width_prach\s*=\s*)\d+(\s*;)/${1}'"${width}"'${2}/g;
+      s/(iq_width_prach\s*=\s*)\d+(\s*;)/${1}'"${prach_width}"'${2}/g;
       s/(compMeth\s*=\s*)\d+(\s*;)/${1}'"${comp}"'${2}/g;
-      s/(compMeth_prach\s*=\s*)\d+(\s*;)/${1}'"${comp}"'${2}/g;
+      s/(compMeth_prach\s*=\s*)\d+(\s*;)/${1}'"${prach_comp}"'${2}/g;
     ' "${conf}"
   done
 }
@@ -192,12 +200,15 @@ extract_ue_ip() {
 
 run_iperf_one() {
   local direction="$1" ue_ip="$2" out_json="$3" out_log="$4"
-  local reverse=()
+  local reverse=() proto_flags=()
   if [[ "${direction}" == "dl" ]]; then
     reverse=(-R)
   fi
-  log "running iperf3 ${direction}: server=${IPERF_SERVER}, ue_ip=${ue_ip}, seconds=${IPERF_SECONDS}"
-  if iperf3 -J -c "${IPERF_SERVER}" -p "${IPERF_PORT}" -B "${ue_ip}" -t "${IPERF_SECONDS}" -P "${IPERF_PARALLEL}" "${reverse[@]}" >"${out_json}" 2>"${out_log}"; then
+  if [[ "${IPERF_PROTOCOL}" == "udp" ]]; then
+    proto_flags=(-u -b "${IPERF_BITRATE}")
+  fi
+  log "running iperf3 ${IPERF_PROTOCOL} ${direction}: server=${IPERF_SERVER}, ue_ip=${ue_ip}, seconds=${IPERF_SECONDS}"
+  if iperf3 -J -c "${IPERF_SERVER}" -p "${IPERF_PORT}" -B "${ue_ip}" -t "${IPERF_SECONDS}" -P "${IPERF_PARALLEL}" "${proto_flags[@]}" "${reverse[@]}" >"${out_json}" 2>"${out_log}"; then
     return 0
   fi
   return 1
@@ -205,7 +216,7 @@ run_iperf_one() {
 
 write_csv_header() {
   if [[ ! -f "${CSV}" ]]; then
-    echo 'timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes' >"${CSV}"
+    echo 'timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,channel_model_id,delay_spread_ns,mobility_mps,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes' >"${CSV}"
   fi
 }
 
@@ -246,6 +257,78 @@ def normalize_carrier(value):
     return str(n)
 
 
+def option_value(text, names, default=""):
+    for name in names:
+        escaped = re.escape(name)
+        patterns = [
+            r"--" + escaped + r"(?:=|\s+)\"?([^\"\s]+)",
+            r"\b" + escaped + r"\s*[=:]\s*\"?([^\"\s,;]+)",
+        ]
+        for pattern in patterns:
+            value = first_match(pattern, text)
+            if value:
+                return value
+    return default
+
+
+def tdl_name(model_id):
+    try:
+        model = int(model_id)
+    except (TypeError, ValueError):
+        return ""
+    if 0 <= model <= 4:
+        return f"TDL-{chr(65 + model)}"
+    return ""
+
+
+def vrtsim_channel_context(text):
+    result = {
+        "channel_model": "",
+        "channel_model_id": "",
+        "delay_spread_ns": "",
+        "mobility_mps": "",
+        "path_loss_db": "",
+        "noise_power_sample": "",
+    }
+    result["path_loss_db"] = first_match(r"path_loss_dB=([+-]?[0-9.]+)", text)
+    result["noise_power_sample"] = first_match(r"VRTSIM:\s+Noise power\s+([0-9]+)\s+sample value", text)
+    patterns = [
+        r"VRTSIM:\s+UE\s+\d+(?:\s+channel)?\s+-.*?Model\s+([0-4])\s+\((TDL-[A-E])\).*?DS\s+([0-9.]+)\s*ns.*?Speed\s+([0-9.]+)\s*m/s",
+        r"Model\s+([0-4])\s+\((TDL-[A-E])\).*?DS\s+([0-9.]+)\s*ns.*?Speed\s+([0-9.]+)\s*m/s",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, text)
+        if m:
+            result["channel_model_id"] = m.group(1)
+            result["channel_model"] = m.group(2)
+            result["delay_spread_ns"] = m.group(3)
+            result["mobility_mps"] = m.group(4)
+            return result
+
+    model_id = option_value(text, ["vrtsim.cirdb_model_id", "cirdb_model_id"])
+    delay_spread = option_value(text, ["vrtsim.cirdb_ds_ns", "cirdb_ds_ns"])
+    mobility = option_value(text, ["vrtsim.cirdb_speed_mps", "cirdb_speed_mps"])
+    model = tdl_name(model_id)
+    if model:
+        result["channel_model_id"] = model_id
+        result["channel_model"] = model
+    if delay_spread:
+        result["delay_spread_ns"] = delay_spread
+    if mobility:
+        result["mobility_mps"] = mobility
+
+    legacy = first_match(r'channel[_ -]?model\s*[=:]\s*([^"\s,]+)', text)
+    if legacy and legacy.lower() != "vrtsim":
+        result["channel_model"] = legacy
+
+    if not result["channel_model"] and "vrtsim" in text.lower():
+        result["channel_model"] = "TDL-A"
+        result["channel_model_id"] = result["channel_model_id"] or "0"
+        result["delay_spread_ns"] = result["delay_spread_ns"] or "10.0"
+        result["mobility_mps"] = result["mobility_mps"] or "1.5"
+    return result
+
+
 def trial_text(name):
     return read_text(os.path.join(trial_dir, name))
 
@@ -270,12 +353,7 @@ ue_ips = set(re.findall(r"UE IPv4:\s*([0-9.]+)", ue_log))
 ue_ids = set(re.findall(r"\[UE\s+(\d+)\]", ue_log))
 tun_ids = set(re.findall(r"TUN Interface\s+oaitun_ue(\d+)", ue_log))
 ue_count = len(ue_ips) or len(tun_ids) or len(ue_ids) or (1 if ue_log.strip() else 0)
-
-channel_model = first_match(r'--device\.name"?\s+"?([^"\s]+)', all_logs)
-if not channel_model:
-    channel_model = first_match(r'device\.name\s+([^"\s]+)', all_logs)
-if not channel_model:
-    channel_model = first_match(r'channel[_ -]?model\s*[=:]\s*([^"\s,]+)', all_logs, "not_logged")
+channel_context = vrtsim_channel_context(all_logs)
 
 carrier_hz = first_match(r'"-C"\s+"([0-9]+)"', ue_log)
 if not carrier_hz:
@@ -323,7 +401,10 @@ row = {
     "status": status,
     "ue_ip": ue_ip,
     "ue_count": ue_count,
-    "channel_model": channel_model,
+    "channel_model": channel_context["channel_model"] or "not_logged",
+    "channel_model_id": channel_context["channel_model_id"],
+    "delay_spread_ns": channel_context["delay_spread_ns"],
+    "mobility_mps": channel_context["mobility_mps"],
     "carrier_hz": carrier_hz,
     "tx_bw_prb": conf_value(ru_conf, "tx_bw", dl_rb),
     "rx_bw_prb": conf_value(ru_conf, "rx_bw", ul_rb),
@@ -386,8 +467,86 @@ def normalize_carrier(value):
     return str(n)
 
 
+def option_value(text, names, default=""):
+    for name in names:
+        escaped = re.escape(name)
+        patterns = [
+            r"--" + escaped + r"(?:=|\s+)\"?([^\"\s]+)",
+            r"\b" + escaped + r"\s*[=:]\s*\"?([^\"\s,;]+)",
+        ]
+        for pattern in patterns:
+            value = first_match(pattern, text)
+            if value:
+                return value
+    return default
+
+
+def tdl_name(model_id):
+    try:
+        model = int(model_id)
+    except (TypeError, ValueError):
+        return ""
+    if 0 <= model <= 4:
+        return f"TDL-{chr(65 + model)}"
+    return ""
+
+
+def vrtsim_channel_context(text):
+    result = {
+        "channel_model": "",
+        "channel_model_id": "",
+        "delay_spread_ns": "",
+        "mobility_mps": "",
+        "path_loss_db": "",
+        "noise_power_sample": "",
+    }
+    result["path_loss_db"] = first_match(r"path_loss_dB=([+-]?[0-9.]+)", text)
+    result["noise_power_sample"] = first_match(r"VRTSIM:\s+Noise power\s+([0-9]+)\s+sample value", text)
+    patterns = [
+        r"VRTSIM:\s+UE\s+\d+(?:\s+channel)?\s+-.*?Model\s+([0-4])\s+\((TDL-[A-E])\).*?DS\s+([0-9.]+)\s*ns.*?Speed\s+([0-9.]+)\s*m/s",
+        r"Model\s+([0-4])\s+\((TDL-[A-E])\).*?DS\s+([0-9.]+)\s*ns.*?Speed\s+([0-9.]+)\s*m/s",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, text)
+        if m:
+            result["channel_model_id"] = m.group(1)
+            result["channel_model"] = m.group(2)
+            result["delay_spread_ns"] = m.group(3)
+            result["mobility_mps"] = m.group(4)
+            return result
+
+    model_id = option_value(text, ["vrtsim.cirdb_model_id", "cirdb_model_id"])
+    delay_spread = option_value(text, ["vrtsim.cirdb_ds_ns", "cirdb_ds_ns"])
+    mobility = option_value(text, ["vrtsim.cirdb_speed_mps", "cirdb_speed_mps"])
+    model = tdl_name(model_id)
+    if model:
+        result["channel_model_id"] = model_id
+        result["channel_model"] = model
+    if delay_spread:
+        result["delay_spread_ns"] = delay_spread
+    if mobility:
+        result["mobility_mps"] = mobility
+
+    legacy = first_match(r'channel[_ -]?model\s*[=:]\s*([^"\s,]+)', text)
+    if legacy and legacy.lower() != "vrtsim":
+        result["channel_model"] = legacy
+
+    if not result["channel_model"] and "vrtsim" in text.lower():
+        result["channel_model"] = "TDL-A"
+        result["channel_model_id"] = result["channel_model_id"] or "0"
+        result["delay_spread_ns"] = result["delay_spread_ns"] or "10.0"
+        result["mobility_mps"] = result["mobility_mps"] or "1.5"
+    return result
+
+
 def ensure(row, key, value):
     if not row.get(key):
+        row[key] = str(value)
+
+
+def replace_placeholder(row, key, value):
+    current = row.get(key, "")
+    if value and (not current or current.lower() in ("vrtsim", "not_logged")):
         row[key] = str(value)
 
 
@@ -408,7 +567,13 @@ def enrich(row):
     tun_ids = set(re.findall(r"TUN Interface\s+oaitun_ue(\d+)", ue_log))
 
     ensure(row, "ue_count", len(ue_ips) or len(tun_ids) or len(ue_ids) or (1 if ue_log.strip() else 0))
-    ensure(row, "channel_model", first_match(r'--device\.name"?\s+"?([^"\s]+)', all_logs) or first_match(r'device\.name\s+([^"\s]+)', all_logs) or first_match(r'channel[_ -]?model\s*[=:]\s*([^"\s,]+)', all_logs, "not_logged"))
+    channel_context = vrtsim_channel_context(all_logs)
+    replace_placeholder(row, "channel_model", channel_context["channel_model"] or "not_logged")
+    ensure(row, "channel_model_id", channel_context["channel_model_id"])
+    ensure(row, "delay_spread_ns", channel_context["delay_spread_ns"])
+    ensure(row, "mobility_mps", channel_context["mobility_mps"])
+    ensure(row, "path_loss_db", channel_context["path_loss_db"])
+    ensure(row, "noise_power_sample", channel_context["noise_power_sample"])
 
     carrier_hz = first_match(r'"-C"\s+"([0-9]+)"', ue_log) or first_match(r'\b-C\s+([0-9]+)', ue_log) or first_match(r'DL freq\s+([0-9]+)', ue_log) or normalize_carrier(conf_value(ru_conf, "carrier_tx"))
     ensure(row, "carrier_hz", carrier_hz)
@@ -440,10 +605,10 @@ except FileNotFoundError:
 with open(report_path, "w") as out:
     out.write("# IQ Width Sweep Report\n\n")
     out.write(f"Source CSV: `{csv_path}`\n\n")
-    out.write("| IQ width | compMeth | status | UE # | channel | carrier Hz | BW tx/rx PRB | RB dl/ul | mu | ant tx/rx | SNR avg/min/max dB | FH avg Mbps | FH max Mbps | UL iperf Mbps | DL iperf Mbps | samples |\n")
-    out.write("|---:|---:|---|---:|---|---:|---|---|---:|---|---|---:|---:|---:|---:|---:|\n")
+    out.write("| IQ width | compMeth | status | UE # | FH UL/DL/Total Mbps | User iperf3 UL/DL Mbps |\n")
+    out.write("|---:|---:|---|---:|---:|---:|\n")
     for r in rows:
-        out.write("| {iq_width} | {comp_method} | {status} | {ue_count} | {channel_model} | {carrier_hz} | {tx_bw_prb}/{rx_bw_prb} | {dl_rb}/{ul_rb} | {numerology} | {nb_tx}/{nb_rx} | {snr_triplet} | {fh_total_mbps_avg} | {fh_total_mbps_max} | {iperf_ul_mbps} | {iperf_dl_mbps} | {fh_samples} |\n".format(**r))
+        out.write("| {iq_width} | {comp_method} | {status} | {ue_count} | {fh_rx_mbps_avg}/{fh_tx_mbps_avg}/{fh_total_mbps_avg} | {iperf_ul_mbps}/{iperf_dl_mbps} |\n".format(**r))
     out.write("\n## Radio Context\n\n")
     if rows:
         r = rows[0]
@@ -451,12 +616,20 @@ with open(report_path, "w") as out:
         out.write(f"- Bandwidth/RB: tx/rx `{r.get('tx_bw_prb', '')}/{r.get('rx_bw_prb', '')}` PRB, dl/ul `{r.get('dl_rb', '')}/{r.get('ul_rb', '')}` RB\n")
         out.write(f"- Numerology: `{r.get('numerology', '')}`\n")
         out.write(f"- Antennas: tx/rx `{r.get('nb_tx', '')}/{r.get('nb_rx', '')}`\n")
-        out.write(f"- Channel/device model: `{r.get('channel_model', '')}`\n")
+        out.write("- Channel model: {} (model id {})\n".format(r.get("channel_model", ""), r.get("channel_model_id", "")))
+        out.write("- Delay spread: {} ns\n".format(r.get("delay_spread_ns", "")))
+        out.write("- Mobility: {} m/s\n".format(r.get("mobility_mps", "")))
+        out.write("- VRTSIM path loss: {} dB (`n/a` for CIRDB/taps unless gain is embedded in taps)\n".format(r.get("path_loss_db") or "n/a"))
+        out.write("- VRTSIM noise power: {} sample value (`0` means no configured global noise in current logs)\n".format(r.get("noise_power_sample") or "n/a"))
+        out.write("\n| IQ width | DU post-combining SNR avg/min/max dB | FH max Mbps | FH samples | trial dir |\n")
+        out.write("|---:|---|---:|---:|---|\n")
+        for r in rows:
+            out.write("| {iq_width} | {snr_triplet} | {fh_total_mbps_max} | {fh_samples} | `{trial_dir}` |\n".format(**r))
     out.write("\n## Notes\n\n")
     out.write("- `compMeth=0` is uncompressed / `XRAN_COMPMETHOD_NONE`.\n")
     out.write("- `compMeth=1` is block-floating compression / `XRAN_COMPMETHOD_BLKFLOAT`.\n")
-    out.write("- FH load is parsed from `[FH LOAD]` log lines after dropping the first warmup samples.\n")
-    out.write("- SNR is parsed from DU `ULSCH ... trace` lines containing `SNR ... dB`. `n/a` means no such lines appeared in that trial.\n")
+    out.write("- FH UL/DL/Total is reported as parsed rx/tx/total average Mbps after dropping the first warmup samples.\n")
+    out.write("- DU SNR is the post-combining PHY estimate parsed from `ULSCH ... trace` lines; it is not a configured vrtsim input/channel SNR.\n")
 PY
 }
 
@@ -539,7 +712,7 @@ main() {
   write_csv_header
   log "output: ${OUT_DIR}"
   log "widths: ${WIDTHS}"
-  log "iperf: direction=${IPERF_DIRECTION} server=${IPERF_SERVER}:${IPERF_PORT} seconds=${IPERF_SECONDS} parallel=${IPERF_PARALLEL}"
+  log "iperf: direction=${IPERF_DIRECTION} protocol=${IPERF_PROTOCOL} bitrate=${IPERF_BITRATE} server=${IPERF_SERVER}:${IPERF_PORT} seconds=${IPERF_SECONDS} parallel=${IPERF_PARALLEL}"
 
   local width
   for width in ${WIDTHS}; do
