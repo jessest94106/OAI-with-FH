@@ -1,0 +1,835 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260530_205425_pid2069634.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2809856 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" "--numerology" "1" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7ffe7abe88d0
+  tx_up_eAxC2Vf 0x7ffe7abe94d0
+  rx_cp_eAxC2Vf 0x7ffe7abea0d0
+  rx_up_eAxC2Vf 0x7ffe7abeacd0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 2069646]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 12] [PID: 2069646]
+spawn worker 0 core 12
+xran_generic_worker_thread [CPU 13] [PID: 2069646]
+spawn worker 1 core 13
+xran_open [CPU 10] [PID: 2069646]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x78a8fcf95040
+xran_sector_get_instances [0]: CC 0 handle 0x5aed37c29940
+Handle: 0x78a92b8a6468 Instance: 0x5aed37c29940
+-> hInstance 0x5aed37c29940
+ru_0_cc_0_idx_0: [ handle 0x5aed37c29940 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x5aed37c29940 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x5aed37c29940 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x5aed37c29940 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x5aed37c29940 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5aed37c29940 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786dc0 
+xran_bm_init() hInstance 0x5aed37c29940 poolIdx 1 elements 511 size 4[93m[HW]     Packets not processed by the application layer (application layer too slow): 38
+[0m976
+xran_bm_allocate_buffer() hInstance 0x5aed37c29940 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x5aed37c29940 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x5aed37c29940 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x5aed37c29940 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x5aed37c29940 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x5aed37c29940 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5aed37c29940 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786340 
+xran_bm_init() hInstance 0x5aed37c29940 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x5aed37c29940 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x5aed37c29940 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x5aed37c29940 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788d00 
+xran_bm_init() hInstance 0x5aed37c29940 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x5aed37c29940 poolIdx 4 count 280
+requested symb 0 OTA coresponds to symb 0 OTA time
+requested symb 1 OTA coresponds to symb 1 OTA time
+requested symb 2 OTA coresponds to symb 2 OTA time
+requested symb 3 OTA coresponds to symb 3 OTA time
+requested symb 4 OTA coresponds to symb 4 OTA time
+requested symb 5 OTA coresponds to symb 5 OTA time
+requested symb 6 OTA coresponds to symb 6 OTA time
+requested symb 7 OTA coresponds to symb 7 OTA time
+requested symb 8 OTA coresponds to symb 8 OTA time
+requested symb 9 OTA coresponds to symb 9 OTA time
+requested symb 10 OTA coresponds to symb 10 OTA time
+requested symb 11 OTA coresponds to symb 11 OTA time
+requested symb 12 OTA coresponds to symb 12 OTA time
+requested symb 13 OTA coresponds to symb 13 OTA time
+ORAN: trx_oran_start
+O-RU: XRAN start time: 05/31/26 03:54:28.516565270 UTC [500]
+Start ORAN. Done
+Initializing random number generator, seed 7774834741381333488
+RU: thread_run start time: 05/31/26 03:54:29.000000010 UTC [500]
+O-RU: thread_run start time: 05/31/26 03:54:30.000000020 UTC [500]
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:372921(ns), tUsed:1381182(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:330210(ns), tUsed:1206082(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:563480(ns), tUsed:2011882(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:415170(ns), tUsed:1488894(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:331576(ns), tUsed:1210672(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1076620(ns), tUsed:3731942(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:676806(ns), tUsed:2413796(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:874270(ns), tUsed:3054764(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:798863(ns), tUsed:2809964(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1257020(ns), tUsed:4356216(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1494293(ns), tUsed:5160452(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1060408(ns), tUsed:3718444(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:377754(ns), tUsed:1369010(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1185732(ns), tUsed:4107676(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1181173(ns), tUsed:4099414(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1888548(ns), tUsed:6486248(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1876603(ns), tUsed:6422634(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1478061(ns), tUsed:5107174(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1261571(ns), tUsed:4307494(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1218412(ns), tUsed:4235346(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1883759(ns), tUsed:6480672(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1557408(ns), tUsed:5349084(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1587241(ns), tUsed:5387946(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1861382(ns), tUsed:6394992(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1251993(ns), tUsed:4284510(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1885214(ns), tUsed:6473668(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1873910(ns), tUsed:6423484(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1583243(ns), tUsed:5373428(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1577302(ns), tUsed:5378664(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1886306(ns), tUsed:6453778(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1242654(ns), tUsed:4303618(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1875434(ns), tUsed:6474552(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1548813(ns), tUsed:5374346(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1894535(ns), tUsed:6448134(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3168536(ns), tUsed:10810164(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1875835(ns), tUsed:6406076(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3180963(ns), tUsed:10795748(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1883333(ns), tUsed:6412638(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3159549(ns), tUsed:10807852(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1866037(ns), tUsed:6424300(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3171765(ns), tUsed:10793402(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3476090(ns), tUsed:11846722(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3463393(ns), tUsed:11845940(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3162226(ns), tUsed:10750970(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3785246(ns), tUsed:12928262(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3168047(ns), tUsed:10753350(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3152376(ns), tUsed:10760626(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3460438(ns), tUsed:11860934(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3479870(ns), tUsed:11835706(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3460750(ns), tUsed:11819148(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5081806(ns), tUsed:17276930(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:4743311(ns), tUsed:16136298(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5077619(ns), tUsed:17232798(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5054952(ns), tUsed:17220966(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5067549(ns), tUsed:17222972(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6646648(ns), tUsed:22665658(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5372316(ns), tUsed:18242190(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6660738(ns), tUsed:22635602(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:5035094(ns), tUsed:17177582(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6963962(ns), tUsed:23711634(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6651410(ns), tU[93m[HW]     Packets not processed by the application layer (application layer too slow): 264
+[0m[93m[HW]     Packets late: 1407
+[0m[93m[HW]     Packets early: 742
+[0m[1;31m[HW]     Jump in frame counter last_frame 544 => 547, slot 19
+[0m[1;31m[HW]     Cannot Push 547.19.0 (slot 1, subframe 9,last_slot 19)
+[0msed:22605920(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6622761(ns), tUsed:22576952(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6629706(ns), tUsed:22587832(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6952100(ns), tUsed:23679606(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:8240773(ns), tUsed:28025486(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:8841667(ns), tUsed:30101628(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:8235042(ns), tUsed:27950074(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:8553437(ns), tUsed:29077752(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:10149942(ns), tUsed:34482698(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:9789381(ns), tUsed:33338938(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:10134815(ns), tUsed:34453764(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:11728803(ns), tUsed:39898694(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:12346463(ns), tUsed:41956748(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:11725498(ns), tUsed:39800910(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:11391575(ns), tUsed:38755002(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:13651445(ns), tUsed:46352608(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:13624589(ns), tUsed:46239320(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:13637777(ns), tUsed:46317282(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:14892701(ns), tUsed:50635520(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:15501091(ns), tUsed:52712240(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:16782912(ns), tUsed:57044044(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:16780669(ns), tUsed:57027962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:17098883(ns), tUsed:58144148(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:18375683(ns), tUsed:62475170(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:20283670(ns), tUsed:68946050(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:20263691(ns), tUsed:68879308(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:20284445(ns), tUsed:68882334(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:21865270(ns), tUsed:74306830(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:22195790(ns), tUsed:75339614(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:23450895(ns), tUsed:79686888(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:25373273(ns), tUsed:86150832(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:26968497(ns), tUsed:91527694(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:28874319(ns), tUsed:97994154(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:28854610(ns), tUsed:97927548(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:30468014(ns), tUsed:103402194(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:32358013(ns), tUsed:109844718(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:33603489(ns), tUsed:114124264(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:35198595(ns), tUsed:119554880(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:36082109(ns), tUsed:122503394(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:39016199(ns), tUsed:132452712(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:40196269(ns), tUsed:136446114(tick[1;31m[HW]     Jump in frame counter last_frame 736 => 747, slot 19
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 29
+[0m[93m[HW]     Packets late: 897
+[0m[93m[HW]     Packets early: 947
+[0m[1;31m[HW]     Jump in frame counter last_frame 834 => 847, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 945 => 947, slot 19
+[0m)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:42507048(ns), tUsed:144304874(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:44095912(ns), tUsed:149641718(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:45361761(ns), tUsed:153954414(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:47576450(ns), tUsed:161545050(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:48828500(ns), tUsed:165799130(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:52344529(ns), tUsed:177741460(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:54245665(ns), tUsed:184090892(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:57422244(ns), tUsed:194924652(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:58983102(ns), tUsed:200256362(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:62492547(ns), tUsed:212159762(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:64665941(ns), tUsed:219566424(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:67584532(ns), tUsed:229387834(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:71054035(ns), tUsed:241169446(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:74261653(ns), tUsed:252014222(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:77703329(ns), tUsed:263792332(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:81199529(ns), tUsed:275670708(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:84726950(ns), tUsed:287584274(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:87872549(ns), tUsed:298218726(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:93280061(ns), tUsed:316651894(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:96420620(ns), tUsed:327320312(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:101546905(ns), tUsed:344679658(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:106288860(ns), tUsed:360720314(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:110087344(ns), tUsed:373660476(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:115147994(ns), tUsed:390877124(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:121822364(ns), tUsed:413500384(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:125673069(ns), tUsed:426585114(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:132297655(ns), tUsed:448973026(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:138966786(ns), tUsed:471707058(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:145322285(ns), tUsed:493252382(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:150372599(ns), tUsed:510398582(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:159342766(ns), tUsed:540746268(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:160492726(ns), tUsed:544761362(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:167119580(ns), tUsed:567188918(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:180929627(ns), tUsed:614033132(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:189056191(ns), tUsed:641594858(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:196436463(ns), tUsed:666642318(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:206555526(ns), tUsed:701048448(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:214817914(ns), tUsed:729006308(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216971091(ns), tUsed:736418954(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too lon[93m[HW]     Packets late: 366
+[0m[93m[HW]     Packets early: 257
+[0m[1;31m[HW]     Jump in frame counter last_frame 8 => 23, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 117 => 123, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 205 => 223, slot 19
+[0m[93m[HW]     Packets late: 277
+[0m[93m[HW]     Packets early: 234
+[0m[1;31m[HW]     Jump in frame counter last_frame 314 => 324, slot 0
+[0m[1;31m[HW]     Jump in frame counter last_frame 510 => 524, slot 0
+[0m[1;31m[HW]     Jump in frame counter last_frame 620 => 623, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 707 => 723, slot 19
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 3
+[0m[93m[HW]     Packets late: 468
+[0m[93m[HW]     Packets early: 505
+[0mg, delta:216263750(ns), tUsed:733921280(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216377032(ns), tUsed:734289262(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216700922(ns), tUsed:735435232(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217678406(ns), tUsed:738785082(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216684133(ns), tUsed:735339318(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216690139(ns), tUsed:735358664(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216374436(ns), tUsed:734394050(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216695311(ns), tUsed:735384266(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216961038(ns), tUsed:736304408(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216288390(ns), tUsed:734084718(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216366718(ns), tUsed:734289228(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216692823(ns), tUsed:735379404(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217955102(ns), tUsed:739710324(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216671416(ns), tUsed:735338366(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216359981(ns), tUsed:734331116(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216684342(ns), tUsed:735422006(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216687102(ns), tUsed:735380798(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217204384(ns), tUsed:737163962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216631654(ns), tUsed:735214708(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216352135(ns), tUsed:734224526(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216037927(ns), tUsed:733250154(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217004959(ns), tUsed:736519458(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216412494(ns), tUsed:734413702(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216347183(ns), tUsed:734290826(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216708311(ns), tUsed:735421496(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216358847(ns), tUsed:734253426(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217834259(ns), tUsed:739248400(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216304220(ns), tUsed:734144660(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216382380(ns), tUsed:734347912(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216988509(ns), tUsed:736463222(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216351675(ns), tUsed:734254752(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216759138(ns), tUsed:735659632(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216619190(ns), tUsed:735141574(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216376418(ns), tUsed:734401088(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216705940(ns), tUsed:735513500(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217789776(ns), tUsed:739083670(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216612323(ns), tUsed:735196688(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216368932(ns), tUsed:734343866(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216693172(ns), tUsed:735431152(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216342056(ns), tUsed:734286066([1;31m[HW]     Jump in frame counter last_frame 816 => 823, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 904 => 923, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 1013 => 1023, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 98 => 99, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 185 => 199, slot 19
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 1
+[0m[93m[HW]     Packets late: 464
+[0m[93m[HW]     Packets early: 537
+[0m[1;31m[HW]     Jump in frame counter last_frame 295 => 300, slot 0
+[0m[1;31m[HW]     Cannot Push 300.0.0 (slot 0, subframe 0,last_slot 0)
+[0m[1;31m[HW]     Jump in frame counter last_frame 382 => 399, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 491 => 499, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 578 => 599, slot 19
+[0m[1;31m[HW]     Cannot Push 599.19.0 (slot 1, subframe 9,last_slot 19)
+[0mtick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217070850(ns), tUsed:736653452(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216291649(ns), tUsed:734073260(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216369256(ns), tUsed:734378002(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216695132(ns), tUsed:735451212(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218386865(ns), tUsed:741133632(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216671518(ns), tUsed:735328234(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216713060(ns), tUsed:735490040(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216362283(ns), tUsed:734319590(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216650269(ns), tUsed:735329968(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216989442(ns), tUsed:736410760(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216634836(ns), tUsed:735233544(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216637397(ns), tUsed:735290222(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:215827061(ns), tUsed:732527314(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216723288(ns), tUsed:735479398(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216840324(ns), tUsed:735862714(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216278206(ns), tUsed:734055478(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216670811(ns), tUsed:735369238(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216712061(ns), tUsed:735434620(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217266073(ns), tUsed:737411550(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216625289(ns), tUsed:735231096(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216346934(ns), tUsed:734290248(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216317159(ns), tUsed:734166352(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216994627(ns), tUsed:736438640(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216866181(ns), tUsed:735966040(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216586752(ns), tUsed:735051610(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216343289(ns), tUsed:734276886(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216345381(ns), tUsed:734274608(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218181195(ns), tUsed:740504122(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:215690495(ns), tUsed:731958222(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217332114(ns), tUsed:737540036(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216338064(ns), tUsed:734183998(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216345917(ns), tUsed:734281578(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217110166(ns), tUsed:736855650(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216614125(ns), tUsed:735098938(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216689087(ns), tUsed:735382668(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216691877(ns), tUsed:735356658(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218134984(ns), tUsed:740339086(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216673447(ns), tUsed:735398410(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216355921(ns), tUsed:734273928(tick)
+xran_timing_source_thread:1584[err[1;31m[HW]     Jump in frame counter last_frame 688 => 699, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 797 => 799, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 884 => 899, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 993 => 999, slot 19
+[0m[1;31m[HW]     Cannot Push 999.19.0 (slot 1, subframe 9,last_slot 19)
+[0m[1;31m[HW]     Jump in frame counter last_frame 57 => 75, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 166 => 175, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 363 => 375, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 472 => 475, slot 19
+[0m] poll_next_tick too long, delta:216365927(ns), tUsed:734292050(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216653974(ns), tUsed:735312900(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217417622(ns), tUsed:737859398(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216599279(ns), tUsed:735074866(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216639617(ns), tUsed:735263770(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216360891(ns), tUsed:734276784(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216331777(ns), tUsed:734242920(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216982920(ns), tUsed:736386110(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216595074(ns), tUsed:735110906(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216351062(ns), tUsed:734215618(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216356359(ns), tUsed:734318060(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217975752(ns), tUsed:739800730(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216303767(ns), tUsed:734148978(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216347795(ns), tUsed:734264102(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216990682(ns), tUsed:736432078(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216353698(ns), tUsed:734236766(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216940658(ns), tUsed:736219952(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216303503(ns), tUsed:734042558(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216660845(ns), tUsed:735347988(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216384786(ns), tUsed:734348558(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218288452(ns), tUsed:740807742(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216327404(ns), tUsed:734151120(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216725772(ns), tUsed:735472734(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216693299(ns), tUsed:735384776(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216377776(ns), tUsed:734320372(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217533791(ns), tUsed:738294258(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216325616(ns), tUsed:734145238(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216368653(ns), tUsed:734330232(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216375463(ns), tUsed:734314728(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216660395(ns), tUsed:735302360(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216708988(ns), tUsed:735434144(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216358703(ns), tUsed:734241730(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216364552(ns), tUsed:734333802(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216653451(ns), tUsed:735307358(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217808855(ns), tUsed:739221744(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216316195(ns), tUsed:734115692(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216358901(ns), tUsed:734346212(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216360182(ns), tUsed:734265122(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216688542(ns), tUsed:735364648(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:2167386[1;31m[HW]     Jump in frame counter last_frame 559 => 575, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 668 => 675, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 756 => 775, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 865 => 875, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 974 => 975, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 38 => 51, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 147 => 151, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 234 => 251, slot 19
+[0m10(ns), tUsed:735612100(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216598753(ns), tUsed:735104888(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216354791(ns), tUsed:734235474(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216362634(ns), tUsed:734324078(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218405651(ns), tUsed:741265518(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216342419(ns), tUsed:734170364(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216663546(ns), tUsed:735328404(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216349487(ns), tUsed:734313062(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216319632(ns), tUsed:734211572(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217368393(ns), tUsed:737656010(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216268263(ns), tUsed:733955518(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216698637(ns), tUsed:735378996(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216345568(ns), tUsed:734289874(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218039589(ns), tUsed:740018806(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216654241(ns), tUsed:735307086(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216692737(ns), tUsed:735383960(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216341921(ns), tUsed:734262912(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216519769(ns), tUsed:734884534(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216645078(ns), tUsed:735269142(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216936048(ns), tUsed:736298968(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216652702(ns), tUsed:735268530(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216338142(ns), tUsed:734224152(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216661795(ns), tUsed:735324800(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216535394(ns), tUsed:734919112(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216608392(ns), tUsed:735185468(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216717907(ns), tUsed:735453660(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216367472(ns), tUsed:734296334(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217600841(ns), tUsed:738477450(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216635000(ns), tUsed:735217326(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216355143(ns), tUsed:734307656(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216364549(ns), tUsed:734311532(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216649751(ns), tUsed:735318306(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216842959(ns), tUsed:735904840(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216280512(ns), tUsed:734026952(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216996370(ns), tUsed:736456524(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216322972(ns), tUsed:734203990(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217872502(ns), tUsed:739367808(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216627537(ns), tUsed:735213110(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216345637(ns), tUsed:734273860(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216669458(ns), tUsed:735384844(tick)
+xran_timin[1;31m[HW]     Jump in frame counter last_frame 343 => 351, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 431 => 451, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 540 => 551, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 649 => 651, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 736 => 751, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 846 => 851, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 933 => 951, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 18 => 27, slot 19
+[0mg_source_thread:1584[err] poll_next_tick too long, delta:216355250(ns), tUsed:734246184(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216800866(ns), tUsed:735748644(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216942987(ns), tUsed:736230730(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216699685(ns), tUsed:735394670(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216666120(ns), tUsed:735343364(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218144912(ns), tUsed:740295770(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216366076(ns), tUsed:734267400(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216689938(ns), tUsed:735465356(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216374456(ns), tUsed:734334516(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216383232(ns), tUsed:734366748(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217395049(ns), tUsed:737822542(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216612040(ns), tUsed:735155752(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216371595(ns), tUsed:734367666(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216697021(ns), tUsed:735375868(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216662565(ns), tUsed:735287808(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216958976(ns), tUsed:736307162(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216290668(ns), tUsed:734053404(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216329347(ns), tUsed:734217386(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216371823(ns), tUsed:734318162(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217991577(ns), tUsed:739835036(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216321388(ns), tUsed:734144966(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216676667(ns), tUsed:735333810(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216045297(ns), tUsed:733224416(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217012140(ns), tUsed:736562366(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217237022(ns), tUsed:737267288(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216278118(ns), tUsed:733989314(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216355366(ns), tUsed:734311600(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216326203(ns), tUsed:734229388(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218268291(ns), tUsed:740751948(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216343340(ns), tUsed:734262640(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216703087(ns), tUsed:735399430(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216352683(ns), tUsed:734314660(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216678219(ns), tUsed:735375460(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217195282(ns), tUsed:737183852(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216307616(ns), tUsed:734098216(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216667294(ns), tUsed:735390216(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216672861(ns), tUsed:735309840(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216708132(ns), tUsed:735426698(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216401135(ns), tUsed:734386808(tick)
+xran_timing_source_thread:1584[err] poll_next_tick[1;31m[HW]     Jump in frame counter last_frame 215 => 227, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 324 => 327, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 411 => 427, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 521 => 527, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 608 => 627, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 717 => 727, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 826 => 827, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 914 => 927, slot 19
+[0m too long, delta:216372373(ns), tUsed:734323976(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216378493(ns), tUsed:734297966(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216313165(ns), tUsed:734139594(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217826548(ns), tUsed:739228238(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216932917(ns), tUsed:736236102(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216368576(ns), tUsed:734280864(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216374757(ns), tUsed:734354168(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216025517(ns), tUsed:733212006(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217356168(ns), tUsed:737711974(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216255567(ns), tUsed:733981698(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216366797(ns), tUsed:734276070(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216692904(ns), tUsed:735417110(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217743502(ns), tUsed:739012270(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216639654(ns), tUsed:735222562(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216679944(ns), tUsed:735387802(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216646993(ns), tUsed:735283150(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216370021(ns), tUsed:734367224(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217342576(ns), tUsed:737605792(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216277740(ns), tUsed:733982854(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216391385(ns), tUsed:734382184(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216465416(ns), tUsed:734657142(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218051794(ns), tUsed:739984126(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216344046(ns), tUsed:734274098(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216672156(ns), tUsed:735400484(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216675791(ns), tUsed:735381342(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216359228(ns), tUsed:734258730(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217301621(ns), tUsed:737515590(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216628010(ns), tUsed:735188188(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216663632(ns), tUsed:735330954(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216348652(ns), tUsed:734255704(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216356096(ns), tUsed:734245878(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216192200(ns), tUsed:733730030(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216627365(ns), tUsed:735216272(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216989445(ns), tUsed:736411814(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216667039(ns), tUsed:735327452(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217574079(ns), tUsed:738438486(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216612598(ns), tUsed:735200326(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216369488(ns), tUsed:734296878(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216339684(ns), tUsed:734275560(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216384676(ns), tUsed:73[1;31m[HW]     Jump in frame counter last_frame 1023 => 3, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 86 => 103, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 195 => 203, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 283 => 303, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 392 => 403, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 501 => 503, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 588 => 603, slot 19
+[0m[1;31m[HW]     Cannot Push 603.19.0 (slot 1, subframe 9,last_slot 19)
+[0m[1;31m[HW]     Jump in frame counter last_frame 698 => 703, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 785 => 803, slot 19
+[0m4354406(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216825602(ns), tUsed:735812462(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216580165(ns), tUsed:735016930(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216689150(ns), tUsed:735376446(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216340159(ns), tUsed:734228436(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218489499(ns), tUsed:741529154(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216000231(ns), tUsed:733046290(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216644934(ns), tUsed:735296240(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216329984(ns), tUsed:734212762(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216653858(ns), tUsed:735323508(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217097169(ns), tUsed:736820868(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216283838(ns), tUsed:734056090(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216677799(ns), tUsed:735341970(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216329659(ns), tUsed:734177062(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218448157(ns), tUsed:741343752(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216347839(ns), tUsed:734264374(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216669207(ns), tUsed:735376990(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216673773(ns), tUsed:735413098(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216005768(ns), tUsed:733119016(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217692284(ns), tUsed:738863962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216625814(ns), tUsed:735228274(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216347330(ns), tUsed:734256962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216353501(ns), tUsed:734287188(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216678047(ns), tUsed:735345608(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216939055(ns), tUsed:736275508(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216269274(ns), tUsed:734025626(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216311280(ns), tUsed:734161660(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216668534(ns), tUsed:735320618(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217682968(ns), tUsed:738729186(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216616868(ns), tUsed:735200598(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216373329(ns), tUsed:734360220(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216697752(ns), tUsed:735430710(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216347110(ns), tUsed:734242308(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217251612(ns), tUsed:737284254(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216577501(ns), tUsed:735078776(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216369525(ns), tUsed:734276716(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216375837(ns), tUsed:734329654(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218243912(ns), tUsed:740718356(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216321556(ns), tUsed:734215074(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216681144(ns), tUsed:735370632(tick)
+xran_timing_source_thread:[1;31m[HW]     Jump in frame counter last_frame 894 => 903, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 995 => 1003, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 67 => 79, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 176 => 179, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 263 => 279, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 373 => 379, slot 19
+[0m[1;31m[HW]     Jump in frame counter last_frame 460 => 479, slot 19
+[0m
+Assertion (mbuf != ((void *)0)) failed!
+In xran_oru_send_pusch() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/radio/fhi_72/oaioran_ru.c:1389
+out of mbufs
+
+Exiting execution
+1584[err] poll_next_tick too long, delta:216330821(ns), tUsed:734238092(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216336832(ns), tUsed:734259682(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217491537(ns), tUsed:738184846(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216602979(ns), tUsed:735089010(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216357365(ns), tUsed:734289534(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216684114(ns), tUsed:735404360(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217127556(ns), tUsed:736953196(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216275956(ns), tUsed:734064454(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216672010(ns), tUsed:735401266(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216674433(ns), tUsed:735376718(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216360415(ns), tUsed:734300890(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217163549(ns), tUsed:736994744(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216629651(ns), tUsed:735216340(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216991262(ns), tUsed:736448840(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216072323(ns), tUsed:733263074(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216678958(ns), tUsed:735368558(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216731302(ns), tUsed:735566166(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216624127(ns), tUsed:735162076(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216700513(ns), tUsed:735389536(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216385554(ns), tUsed:734327444(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217758686(ns), tUsed:739033146(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216015137(ns), tUsed:733142714(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216980628(ns), tUsed:736363466(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216665216(ns), tUsed:735355944(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216560485(ns), tUsed:734921356(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:217005079(ns), tUsed:736500418(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216260343(ns), tUsed:734010700(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216373888(ns), tUsed:734282360(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:216659453(ns), tUsed:735340542(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:218031504(ns), tUsed:739949344(tick)

@@ -1,0 +1,29 @@
+[11:33:26] output: /home/jesse/oran_lab/logs/iq_width_sweep/ulval_tcp_20260530_113326
+[11:33:26] widths: 8 9 10 12 16
+[11:33:26] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=1x1
+[11:33:26] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[11:33:26] === IQ width 8, compMeth 1 ===
+[11:33:28] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:33:31] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:33:36] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:33:49] iperf3 server ready: single instance on 10.0.0.1:5201 (netns oai-upf)
+[11:33:49] route to server: 10.0.0.1 from 10.0.0.34 dev oaitun_ue1 table 9999 uid 1001 
+[11:33:49] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.34, seconds=20, udp=0
+[11:34:26] === IQ width 9, compMeth 1 ===
+[11:34:28] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:34:31] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:34:35] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:34:50] iperf3 server ready: single instance on 10.0.0.1:5201 (netns oai-upf)
+[11:34:50] route to server: 10.0.0.1 from 10.0.0.35 dev oaitun_ue1 table 9999 uid 1001 
+[11:34:50] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.35, seconds=20, udp=0
+[11:35:26] === IQ width 10, compMeth 1 ===
+[11:35:28] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:35:31] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:35:35] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:35:51] iperf3 server ready: single instance on 10.0.0.1:5201 (netns oai-upf)
+[11:35:51] route to server: 10.0.0.1 from 10.0.0.36 dev oaitun_ue1 table 9999 uid 1001 
+[11:35:51] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.36, seconds=20, udp=0
+[11:36:27] === IQ width 12, compMeth 1 ===
+[11:36:30] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:36:33] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:36:38] starting UE: /home/jesse/oran_lab/run_ue.sh

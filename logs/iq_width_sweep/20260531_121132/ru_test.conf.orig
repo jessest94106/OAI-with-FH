@@ -1,0 +1,75 @@
+Asn1_verbosity = "none";
+ORUs = (
+{
+  tx_bw              = [24];
+  rx_bw              = [24];
+  carrier_tx         = [4049760];
+  carrier_rx         = [4049760];
+  prach_config_index = 159;
+  prach_msg1_start   = 0;
+  tdd_period         = 5;
+  num_dl_slots       = 1;
+  num_dl_symbols     = 6;
+  num_ul_slots       = 3;
+  num_ul_symbols     = 4;
+  mu         = 1;
+  tp_cores           = [14,15];
+  num_tp_cores       = 2;
+  ru_thread_core     = 14
+});
+
+RUs = (
+{
+  local_rf       = "no";
+  nb_tx          = 1;
+  nb_rx          = 1;
+  att_tx         = 0;
+  att_rx         = 0;
+  bands          = [77];
+  max_pdschReferenceSignalPower = -27;
+  max_rxgain     = 75;
+  sf_extension   = 0;
+  eNB_instances  = [0];
+  nr_scs_for_raster = 1;
+  sl_ahead       = 10;
+  tr_preference  = "raw_if4p5";
+  do_precoding   = 0;
+});
+
+log_config :
+{
+  global_log_level = "warn";
+  hw_log_level     = "warn";
+  phy_log_level    = "warn";
+  mac_log_level    = "info";
+  rlc_log_level    = "warn";
+  pdcp_log_level   = "warn";
+  rrc_log_level    = "warn";
+  ngap_log_level   = "warn";
+  f1ap_log_level   = "warn";
+};
+
+fhi_72 = {
+  dpdk_devices = ("0000:06:02.0", "0000:06:02.1");
+  system_core  = 10;
+  io_core      = 11;
+  worker_cores = (12,13);
+  du_addr      = ("00:11:22:33:64:68", "00:11:22:33:64:69");
+  mtu          = 9600;
+  file_prefix  = "ru";
+  app_id       = "RU";
+  fh_config = ({
+    Ta3_up    = (200, 470);
+    T1a_cp_dl = (285, 470);
+    T1a_cp_ul = (285, 429);
+    T1a_up    = (300, 450);
+    Ta4       = (400, 440);
+    T2a_up    = (425, 1200);  # relaxed for single-host SR-IOV loopback jitter
+    ru_config = {
+      iq_width       = 9;
+      iq_width_prach = 9;
+      compMeth       = 1;
+      compMeth_prach = 1;
+    };
+  });
+};

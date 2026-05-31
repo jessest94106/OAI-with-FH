@@ -1,0 +1,368 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260531_081017_pid4187517.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2816000 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 2, NB_TX 2
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x787532e8b4b0
+  tx_up_eAxC2Vf 0x787532e8c0b0
+  rx_cp_eAxC2Vf 0x787532e8ccb0
+  rx_up_eAxC2Vf 0x787532e8d8b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 4187540]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+created sym cp dl cb for symbol 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+created sym cp dl cb for symbol 2
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 4187540]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 4187540]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 4187540]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x787504f95040
+xran_sector_get_instances [0]: CC 0 handle 0x787528196800
+Handle: 0x7875326a5468 Instance: 0x[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 2
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m787528196800
+-> hInstance 0x787528196800
+ru_0_cc_0_idx_0: [ handle 0x787528196800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 4095 nBufferSize 14116 socket_id 0
+CC:[ handle 0x787528196800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784940 
+xran_bm_init() hInstance 0x787528196800 poolIdx 0 elements 4095 size 14116
+xran_bm_allocate_buffer() hInstance 0x787528196800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x787528196800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 4095 nBufferSize 4976 socket_id 0
+CC:[ handle 0x787528196800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284788dc0 
+xran_bm_init() hInstance 0x787528196800 poolIdx 1 elements 4095 size 4976
+xran_bm_allocate_buffer() hInstance 0x787528196800 poolIdx 1 count 40
+ru_0_cc_0_idx_2: [ handle 0x787528196800 0 0 ] [nPoolIndex 2] nNumberOfBuffers 4095 nBufferSize 13168 socket_id 0
+CC:[ handle 0x787528196800 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x2847881c0 
+xran_bm_init() hInstance 0x787528196800 poolIdx 2 elements 4095 size 13168
+xran_bm_allocate_buffer() hInstance 0x787528196800 poolIdx 2 count 560
+ru_0_cc_0_idx_3: [ handle 0x787528196800 0 0 ] [nPoolIndex 3] nNumberOfBuffers 4095 nBufferSize 4976 socket_id 0
+CC:[ handle 0x787528196800 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x28478c7c0 
+xran_bm_init() hInstance 0x787528196800 poolIdx 3 elements 4095 size 4976
+xran_bm_allocate_buffer() hInstance 0x787528196800 poolIdx 3 count 40
+ru_0_cc_0_idx_4: [ handle 0x787528196800 0 0 ] [nPoolIndex 4] nNumberOfBuffers 4095 nBufferSize 3360 socket_id 0
+CC:[ handle 0x787528196800 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x28478d6c0 
+xran_bm_init() hInstance 0x787528196800 poolIdx 4 elements 4095 size 3360
+xran_bm_allocate_buffer() hInstance 0x787528196800 poolIdx 4 count 560
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/31/26 15:10:21.199611789 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=10, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=11, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=12, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=13, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=0, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     TTI processing delay detected, skipping    0.10 =>    0.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 0.18, expected 0.10)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1.19
+[0m[93m[HW]     TTI processing delay detected, skipping    5.12 =>    7. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 7.0, expected 5.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 7.0 , expected 5.0)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 7.19
+[0m[93m[HW]     TTI processing delay detected, skipping   33. 5 =>   35.18
+[0m
+Assertion (xran_queue_length == 0) failed!
+In xran_fh_rx_read_slot() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/radio/fhi_72/oaioran.c:539
+
+Exiting execution
+O-DU: thread_run start time: 05/31/26 15:10:22.000000012 UTC [500]
+[HW]     xran_get_time_stats(): total thread time 28100227962, total time essential tasks 17936794622, num cores used 3
+[0m

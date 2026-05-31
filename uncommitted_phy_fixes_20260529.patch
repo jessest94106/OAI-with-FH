@@ -1,0 +1,155 @@
+diff --git a/openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c b/openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c
+index 460b3b1bdf..e763e44727 100644
+--- a/openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c
++++ b/openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c
+@@ -1591,19 +1591,9 @@ int nr_rx_pusch_tp(PHY_VARS_gNB *gNB,
+   if (pusch_vars->log2_maxh < 0)
+     pusch_vars->log2_maxh = 0;
+ 
+-  // nr_qpsk_llr() applies an additional >>4 after channel compensation. The log2_maxh formula
+-  // normalises the MF output to ~±1 amplitude, so the combined >>log2_maxh >>4 over-attenuates
+-  // in low-amplitude paths (e.g. vrtsim), producing int8 LLRs of only ~±2-5 — too weak for
+-  // the LDPC decoder to converge in max_iter iterations.  Absorb the QPSK downstream shift
+-  // into log2_maxh so the channel comp output is 16× larger and nr_qpsk_llr yields ~±50 LLRs.
+-  if (rel15_ul->qam_mod_order == 2) {
+-    const int qpsk_llr_shift = 4;
+-    pusch_vars->log2_maxh = (pusch_vars->log2_maxh > qpsk_llr_shift)
+-                            ? pusch_vars->log2_maxh - qpsk_llr_shift : 0;
+-  }
+ 
+   static int pusch_demod_trace_count = 0;
+-  if (pusch_demod_trace_count < 0) {
++  if (pusch_demod_trace_count < 50) {
+     NR_UL_gNB_HARQ_t *harq = gNB->ulsch[ulsch_id].harq_process;
+     LOG_I(PHY,
+           "PUSCH demod trace %d.%d rnti %04x harq %d round %d rv %d rb %d+%d sym %d+%d dmrs 0x%x meas_sym %d dmrs_sym %d G %d avgs %d avg0 %d log2_maxh %d max_ch %d nvar %u qam %d mcs %d\n",
+diff --git a/openair1/PHY/nr_phy_common/src/nr_phy_common.c b/openair1/PHY/nr_phy_common/src/nr_phy_common.c
+index c29a3a4936..d37a1c5cb6 100644
+--- a/openair1/PHY/nr_phy_common/src/nr_phy_common.c
++++ b/openair1/PHY/nr_phy_common/src/nr_phy_common.c
+@@ -71,8 +71,8 @@ void nr_qpsk_llr(int32_t *rxdataF_comp, int16_t *llr, uint32_t nb_re)
+   c16_t *rxF   = (c16_t *)rxdataF_comp;
+   c16_t *llr32 = (c16_t *)llr;
+   for (int i = 0; i < nb_re; i++) {
+-    llr32[i].r = rxF[i].r >> 4;
+-    llr32[i].i = rxF[i].i >> 4;
++    llr32[i].r = rxF[i].r;
++    llr32[i].i = rxF[i].i;
+   }
+ }
+ 
+diff --git a/openair2/LAYER2/NR_MAC_gNB/gNB_scheduler_dlsch.c b/openair2/LAYER2/NR_MAC_gNB/gNB_scheduler_dlsch.c
+index dbf285e931..eb73b37f24 100644
+--- a/openair2/LAYER2/NR_MAC_gNB/gNB_scheduler_dlsch.c
++++ b/openair2/LAYER2/NR_MAC_gNB/gNB_scheduler_dlsch.c
+@@ -615,6 +615,11 @@ static void ack_reconfig(gNB_MAC_INST *mac, NR_UE_info_t *UE)
+   /* clean BWP structures */
+   clean_bwp_structures(UE->CellGroup->spCellConfig);
+   configure_UE_BWP(mac, scc, UE, false, NR_SearchSpace__searchSpaceType_PR_common, -1, -1);
++  /* clear action on all pending HARQ processes — the config is now applied and
++   * subsequent ACKs from co-scheduled SRB1 messages must not re-fire this */
++  NR_UE_sched_ctrl_t *sched_ctrl = &UE->UE_sched_ctrl;
++  for (int pid = 0; pid < NR_MAX_HARQ_PROCESSES; pid++)
++    sched_ctrl->harq_processes[pid].sched_pdsch.action = NULL;
+ }
+ 
+ static bool dlsch_to_schedule(const NR_UE_sched_ctrl_t *sched_ctrl, int frame)
+diff --git a/radio/fhi_72/oaioran.c b/radio/fhi_72/oaioran.c
+index ea94978133..8dc8a5fb1f 100644
+--- a/radio/fhi_72/oaioran.c
++++ b/radio/fhi_72/oaioran.c
+@@ -105,15 +105,24 @@ void oai_xran_fh_rx_callback(void *pCallbackTag, xran_status_t status)
+           struct xran_prb_map *pRbMap = (struct xran_prb_map *)bufs->dstcp[ant_id][tti % XRAN_N_FE_BUF_LEN].pBuffers->pData;
+           AssertFatal(pRbMap != NULL, "(%d:%d:%d)pRbMap == NULL. Aborting.\n", cc_id, tti % XRAN_N_FE_BUF_LEN, ant_id);
+ 
+-          for (uint32_t sym_id = 0; sym_id < XRAN_NUM_OF_SYMBOL_PER_SLOT; sym_id++) {
+-            // LOG_D(HW, "cb pRbMap->nPrbElm %d\n", pRbMap->nPrbElm);
+-            for (uint32_t idxElm = 0; idxElm < pRbMap->nPrbElm; idxElm++ ) {
+-              struct xran_prb_elm *pRbElm = &pRbMap->prbMap[idxElm];
+-              pRbElm->nSecDesc[sym_id] = 0;
+-              // Clear pCtrl so OAI does not read stale F-1 mbuf pointers for
+-              // mixed-slot UL symbols (sym 10-13) that arrive after this callback.
+-              for (int f = 0; f < XRAN_MAX_FRAGMENT; f++)
+-                pRbElm->sec_desc[sym_id][f].pCtrl = NULL;
++          // Reset the NEXT slot's buffer, not the current one.
++          //
++          // The callback fires at the full-slot deadline for TTI tti (already
++          // decremented by xran). At this moment the CURRENT buffer (tti%N) has
++          // just been filled by xran_process_rx_sym. Resetting it here would erase
++          // fresh data written before the timer fired (~50% of slots).
++          //
++          // The NEXT buffer ((tti+1)%N) will be filled during the upcoming slot
++          // whose first UL packets are >300 µs away. Resetting it now is safe and
++          // ensures nSecDesc==0 is the unambiguous "not yet received" state that
++          // xran_fh_rx_read_slot's spin-wait relies on.
++          uint32_t next_buf = (tti + 1) % XRAN_N_FE_BUF_LEN;
++          struct xran_prb_map *pNextRbMap = (struct xran_prb_map *)bufs->dstcp[ant_id][next_buf].pBuffers->pData;
++          if (pNextRbMap != NULL) {
++            for (uint32_t sym_id = 0; sym_id < XRAN_NUM_OF_SYMBOL_PER_SLOT; sym_id++) {
++              for (uint32_t idxElm = 0; idxElm < pNextRbMap->nPrbElm; idxElm++) {
++                pNextRbMap->prbMap[idxElm].nSecDesc[sym_id] = 0;
++              }
+             }
+           }
+         }
+@@ -611,19 +620,31 @@ int xran_fh_rx_read_slot(ru_info_t *ru, int *frame, int *slot)
+             if (p_sec_desc == NULL)
+               continue;
+             if (sym_idx >= pRbElm->nStartSymb && sym_idx < pRbElm->nStartSymb + pRbElm->numSymb) {
+-              if (!p_sec_desc->pCtrl) {
+-                // UL symbols in mixed slot (sym 10-13) arrive ~107-214 µs after the
+-                // sym-7 callback fires. Spin-wait on the first fragment; remaining
+-                // fragments will be NULL (no fragmentation in this config) and fall
+-                // through to the continue below.
+-                if (idxDesc == 0) {
+-                  void *volatile *pCtrl_v = (void *volatile *)&p_sec_desc->pCtrl;
+-                  for (int w = 0; w < 300000 && !*pCtrl_v; w++)
++              // nSecDesc is reset for the NEXT slot's buffer at the start of each
++              // full-slot callback, then incremented by xran_process_rx_sym as
++              // each fragment arrives.  Use it to distinguish fresh writes (for
++              // this frame) from stale pCtrl/pData left over from two frames ago.
++              //
++              // Sym 0-9 arrive in the first half of the slot, well before the
++              // end-of-slot callback; spin-wait is unnecessary and would race
++              // with the reset of the buffer at the slot boundary.  Only spin on
++              // sym >= 10 (the last four symbols, which may arrive fractionally
++              // after the deadline timer fires).
++              if (idxDesc == 0 && sym_idx >= 10) {
++                if (pRbElm->nSecDesc[sym_idx] == 0) {
++                  volatile uint16_t *ns = (volatile uint16_t *)&pRbElm->nSecDesc[sym_idx];
++                  for (int w = 0; w < 300000 && *ns == 0; w++)
+                     __asm__ volatile("pause" ::: "memory");
+                 }
+-                if (!p_sec_desc->pCtrl)
++                if (pRbElm->nSecDesc[sym_idx] == 0)
+                   continue;
++              } else if (idxDesc >= (int)pRbElm->nSecDesc[sym_idx]) {
++                // Fragment not received this frame or sym arrived early and is
++                // already counted — skip stale sec_desc entries.
++                continue;
+               }
++              if (!p_sec_desc->pCtrl)
++                continue;
+               pData = p_sec_desc->pData;
+               numRB = p_sec_desc->num_prbu;
+               startRB = p_sec_desc->start_prbu;
+diff --git a/radio/fhi_72/oaioran_ru.c b/radio/fhi_72/oaioran_ru.c
+index 9256e7a196..415dd05cc5 100644
+--- a/radio/fhi_72/oaioran_ru.c
++++ b/radio/fhi_72/oaioran_ru.c
+@@ -1422,6 +1422,7 @@ void xran_oru_send_pusch(uint32_t *puschF, int aarx, int frame, int slot, int sy
+   int num_sc_second_copy = fh_cfg->nULRBs * NR_NB_SC_PER_RB - num_sc_first_copy;
+   int16_t* dest = (int16_t*)iq_data_start;
+   uint16_t* src = (uint16_t*)&puschF[first_carrier_offset];
++  uint32_t local_src[num_prb * NR_NB_SC_PER_RB] __attribute__((aligned(64)));
+   if (use_comp_hdr) {
+     // Calculate split based on start position
+     int neg_len = 0;                                                                                                                                           
+@@ -1442,7 +1443,6 @@ void xran_oru_send_pusch(uint32_t *puschF, int aarx, int frame, int slot, int sy
+                                           fftsize - (num_ul_rbs * NR_NB_SC_PER_RB / 2)];                                                                       
+                                                                                                                                                                
+     // Reorder into local buffer                                                                                                                               
+-    uint32_t local_src[num_prb * NR_NB_SC_PER_RB] __attribute__((aligned(64)));                                                                                
+     memcpy(local_src, src2, neg_len * 4);                                                                                                                      
+     memcpy(&local_src[neg_len], src1, pos_len * 4);                                                                                                            
+                                                                                                                                                                

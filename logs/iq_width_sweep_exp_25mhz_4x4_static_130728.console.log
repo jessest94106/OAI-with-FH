@@ -1,0 +1,11 @@
+[13:07:28] antennas patched to 4x4 (nb_tx/nb_rx, pusch/pdsch AntennaPorts) — VALIDATE: FH/xran MIMO path is untested here
+[13:07:28] bandwidth patched to 65 PRB (carrierBandwidth + initial BWP RIV=17600 + tx_bw/rx_bw + UE -r) — @30kHz: 133=50MHz 65=25MHz
+[13:07:28] output: /home/jesse/oran_lab/logs/iq_width_sweep/exp_25mhz_4x4_static_130728
+[13:07:28] widths: 16
+[13:07:28] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=4x4
+[13:07:28] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[13:07:28] === IQ width 16, compMeth 0 ===
+[13:07:30] starting RU: /home/jesse/oran_lab/run_ru.sh
+Timed out waiting for RU VRTSIM connection: /tmp/vrtsim_connection
+[13:08:08] summary: /home/jesse/oran_lab/logs/iq_width_sweep/exp_25mhz_4x4_static_130728/summary.csv
+[13:08:08] report: /home/jesse/oran_lab/logs/iq_width_sweep/exp_25mhz_4x4_static_130728/report.md

@@ -1,0 +1,13 @@
+[11:37:59] output: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_probe_113759
+[11:37:59] widths: 9
+[11:37:59] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=1x1
+[11:37:59] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[11:37:59] === IQ width 9, compMeth 1 ===
+[11:38:01] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:38:04] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:38:09] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:38:25] iperf3 server ready: single instance on 10.0.0.1:5201 (netns oai-upf)
+[11:38:25] route to server: 10.0.0.1 from 10.0.0.37 dev oaitun_ue1 table 9999 uid 1001 
+[11:38:25] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.37, seconds=20, udp=1
+[11:39:38] summary: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_probe_113759/summary.csv
+[11:39:38] report: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_probe_113759/report.md

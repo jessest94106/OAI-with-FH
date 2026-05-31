@@ -1,0 +1,2 @@
+timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes
+2026-05-31T12:40:44,9,1,ue-timeout,,1,vrtsim,4049760000,24,24,24,24,1,1,1,0,,,,65,209.894,91.644,301.538,301.538,0.000,0.000,/home/jesse/oran_lab/logs/iq_width_sweep/20260531_123859/iq9,

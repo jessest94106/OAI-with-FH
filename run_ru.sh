@@ -118,4 +118,5 @@ exec sudo -E chrt -f 95 taskset -c "${RU_CORES}" env \
   ./nr-oru \
     -O "${RU_CONF}" \
     --vrtsim.role server \
-    --numerology "${RU_NUMEROLOGY}"
+    --numerology "${RU_NUMEROLOGY}" \
+    ${VRTSIM_RU_EXTRA_ARGS:-}

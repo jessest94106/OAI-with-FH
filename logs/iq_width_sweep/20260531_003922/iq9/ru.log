@@ -1,0 +1,384 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260531_003924_pid2787144.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2809856 kB
+HugePages_Total:    8192
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" "--numerology" "1" "--vrtsim.chanmod" "1" "--vrtsim.timescale" "1.0" "--vrtsim.client-num-rx-antennas" "2" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 1200
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7fff0b367a50
+  tx_up_eAxC2Vf 0x7fff0b368650
+  rx_cp_eAxC2Vf 0x7fff0b369250
+  rx_up_eAxC2Vf 0x7fff0b369e50
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 2787156]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 1200 us after OTA [offset in sym 34]
+O-XU      1
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 12] [PID: 2787156]
+spawn worker 0 core 12
+xran_generic_worker_thread [CPU 13] [PID: 2787156]
+spawn worker 1 core 13
+xran_open [CPU 10] [PID: 2787156]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7cd694f95040
+xran_sector_get_instances [0]: CC 0 handle 0x5f60a7f57800
+Handle: 0x7cd6c538c468 Instance: 0x5f60a7f57800
+-> hInstance 0x5f60a7f57800
+ru_0_cc_0_idx_0: [ handle 0x5f60a7f57800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 1023 nBufferSize 14116 socket_id 0
+CC:[ handle 0x5f60a7f57800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x5f60a7f57800 poolIdx 0 elements 1023 size 14116
+xran_bm_allocate_buffer() hInstance 0x5f60a7f57800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x5f60a7f57800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5f60a7f57800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786ac0 
+xran_bm_init() hInstance 0x5f60a7f57800 poolIdx 1 elements 1023 si[93m[HW]     PRACH was not configured for frame.slot 37.19 adjusted 37.19 frame8 37: no C-plane config cached
+[0mze 4976
+xran_bm_allocate_buffer() hInstance 0x5f60a7f57800 poolIdx 1 count 40
+ru_0_cc_0_idx_2: [ handle 0x5f60a7f57800 0 0 ] [nPoolIndex 2] nNumberOfBuffers 1023 nBufferSize 13168 socket_id 0
+CC:[ handle 0x5f60a7f57800 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786580 
+xran_bm_init() hInstance 0x5f60a7f57800 poolIdx 2 elements 1023 size 13168
+xran_bm_allocate_buffer() hInstance 0x5f60a7f57800 poolIdx 2 count 560
+ru_0_cc_0_idx_3: [ handle 0x5f60a7f57800 0 0 ] [nPoolIndex 3] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x5f60a7f57800 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284788b80 
+xran_bm_init() hInstance 0x5f60a7f57800 poolIdx 3 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x5f60a7f57800 poolIdx 3 count 40
+ru_0_cc_0_idx_4: [ handle 0x5f60a7f57800 0 0 ] [nPoolIndex 4] nNumberOfBuffers 1023 nBufferSize 3360 socket_id 0
+CC:[ handle 0x5f60a7f57800 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788580 
+xran_bm_init() hInstance 0x5f60a7f57800 poolIdx 4 elements 1023 size 3360
+xran_bm_allocate_buffer() hInstance 0x5f60a7f57800 poolIdx 4 count 560
+requested symb 0 OTA coresponds to symb 0 OTA time
+requested symb 1 OTA coresponds to symb 1 OTA time
+requested symb 2 OTA coresponds to symb 2 OTA time
+requested symb 3 OTA coresponds to symb 3 OTA time
+requested symb 4 OTA coresponds to symb 4 OTA time
+requested symb 5 OTA coresponds to symb 5 OTA time
+requested symb 6 OTA coresponds to symb 6 OTA time
+requested symb 7 OTA coresponds to symb 7 OTA time
+requested symb 8 OTA coresponds to symb 8 OTA time
+requested symb 9 OTA coresponds to symb 9 OTA time
+requested symb 10 OTA coresponds to symb 10 OTA time
+requested symb 11 OTA coresponds to symb 11 OTA time
+requested symb 12 OTA coresponds to symb 12 OTA time
+requested symb 13 OTA coresponds to symb 13 OTA time
+ORAN: trx_oran_start
+O-RU: XRAN start time: 05/31/26 07:39:27.425467151 UTC [500]
+Start ORAN. Done
+Initializing random number generator, seed 7754476312743020309
+Initializing random number generator, seed 9307952884003430568
+last path (12) at 12.525000 * 3.000000e-01 = 3.757500e+00
+TDL : 15360000.000000 Ms/s, nb_taps 13, Td 3.757500e+00, channel_length 5
+last path (12) at 3.757500 * 3.000000e-01 = 1.127250e+00
+TDL : 15360000.000000 Ms/s, nb_taps 13, Td 1.127250e+00, channel_length 4
+RU: thread_run start time: 05/31/26 07:39:28.000000000 UTC [500]
+O-RU: thread_run start time: 05/31/26 07:39:29.000000005 UTC [500]
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:503218(ns), tUsed:1788162(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1172571(ns), tUsed:4085678(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:575127(ns), tUsed:2070600(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:800909(ns), tUsed:2807516(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1260522(ns), tUsed:4323372(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:1253912(ns), tUsed:4300728(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:2114026(ns), tUsed:7224184(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:2306851(ns), tUsed:7844412(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:3597235(ns), tUsed:12295794(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:2931492(ns), tUsed:9965876(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:4636098(ns), tUsed:15818024(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:6963115(ns), tUsed:23701434(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:8851317(ns), tUsed:30115602(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:12462322(ns), tUsed:42323200(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:17136362(ns), tUsed:58202458(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:22183468(ns), tUsed:75390274(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too lo[93m[HW]     PRACH was not configured for frame.slot 80.19 adjusted 80.19 frame8 80: no C-plane config cached
+[0m[1;31m[HW]     Jump in frame counter last_frame 102 => 116, slot 0
+[0m[93m[HW]     PRACH was not configured for frame.slot 122.19 adjusted 122.19 frame8 122: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 163.19 adjusted 163.19 frame8 163: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 205.19 adjusted 205.19 frame8 205: no C-plane config cached
+[0m[1;31m[HW]     Jump in frame counter last_frame 207 => 215, slot 19
+[0m[93m[HW]     PRACH was not configured for frame.slot 247.19 adjusted 247.19 frame8 247: no C-plane config cached
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 148
+[0m[93m[HW]     Packets late: 712
+[0m[93m[HW]     Packets early: 584
+[0m[1;31m[HW]     Jump in frame counter last_frame 312 => 315, slot 19
+[0m[1;31m[HW]     Cannot Push 315.19.0 (slot 1, subframe 9,last_slot 19)
+[0m[93m[HW]     PRACH was not configured for frame.slot 352.19 adjusted 352.19 frame8 96: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 394.19 adjusted 394.19 frame8 138: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 436.19 adjusted 436.19 frame8 180: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 477.19 adjusted 477.19 frame8 221: no C-plane config cached
+[0m[1;31m[HW]     Jump in frame counter last_frame 505 => 516, slot 0
+[0mng, delta:29419971(ns), tUsed:99906892(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:38453398(ns), tUsed:130573226(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:50541007(ns), tUsed:171568522(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:69838650(ns), tUsed:237120862(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:94182806(ns), tUsed:319668238(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:128258027(ns), tUsed:435345010(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148727713(ns), tUsed:504731462(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148441514(ns), tUsed:503796530(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:150179971(ns), tUsed:509760742(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148757605(ns), tUsed:504906256(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148541572(ns), tUsed:504159446(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148950987(ns), tUsed:505552222(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148707872(ns), tUsed:504761212(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148527463(ns), tUsed:504107188(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148936748(ns), tUsed:505454914(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:149522982(ns), tUsed:507433000(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148522722(ns), tUsed:504110962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148930964(ns), tUsed:505459606(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148687919(ns), tUsed:504637044(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148614574(ns), tUsed:504391224(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148987733(ns), tUsed:505666326(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148709074(ns), tUsed:504731326(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148894105(ns), tUsed:505284676(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:145709790(ns), tUsed:494526192(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:143859209(ns), tUsed:488236090(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:144575124(ns), tUsed:490643800(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:144209883(ns), tUsed:489386344(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:143735894(ns), tUsed:487809662(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:144754452(ns), tUsed:491240670(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:146692854(ns), tUsed:497893790(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148807271(ns), tUsed:505090774(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148484245(ns), tUsed:503908866(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:149036478(ns), tUsed:505878962(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148685927(ns), tUsed:504653024(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148543017(ns), tUsed:504131158(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:149922675(ns), tUsed:508853928(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148750920(ns), tUsed:504810614(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148677305(ns), tUsed:504548304(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:149086839(ns), tUsed:506016492(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148736538(ns), tUsed:504813776(tick)[93m[HW]     PRACH was not configured for frame.slot 596.19 adjusted 596.19 frame8 84: no C-plane config cached
+[0m[1;31m[HW]     Jump in frame counter last_frame 610 => 615, slot 19
+[0m[93m[HW]     PRACH was not configured for frame.slot 638.19 adjusted 638.19 frame8 126: no C-plane config cached
+[0m
+Assertion (mbuf != ((void *)0)) failed!
+In xran_oru_send_pusch() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/radio/fhi_72/oaioran_ru.c:1389
+out of mbufs
+
+Exiting execution
+
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148520596(ns), tUsed:504098960(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:148930190(ns), tUsed:505508294(tick)
+xran_timing_source_thread:1584[err] poll_next_tick too long, delta:149230837(ns), tUsed:506489160(tick)

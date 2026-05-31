@@ -1,0 +1,2214 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260526_213405_pid1167926.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:   6725632 kB
+ShmemHugePages:        0 kB
+FileHugePages:   3432448 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x754e66fe14b0
+  tx_up_eAxC2Vf 0x754e66fe20b0
+  rx_cp_eAxC2Vf 0x754e66fe2cb0
+  rx_up_eAxC2Vf 0x754e66fe38b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 1167949]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 1167949]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 1167949]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 1167949]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x754e2cf95040
+xran_sector_get_instances [0]: CC 0 handle 0x754e5016c740
+Handle: 0x754e745b1468 Instance: 0x[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m754e5016c740
+-> hInstance 0x754e5016c740
+ru_0_cc_0_idx_0: [ handle 0x754e5016c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x754e5016c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x754e5016c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x754e5016c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x754e5016c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x754e5016c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786dc0 
+xran_bm_init() hInstance 0x754e5016c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x754e5016c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x754e5016c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x754e5016c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x754e5016c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x754e5016c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x754e5016c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x754e5016c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786340 
+xran_bm_init() hInstance 0x754e5016c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x754e5016c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x754e5016c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x754e5016c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788d00 
+xran_bm_init() hInstance 0x754e5016c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x754e5016c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/27/26 04:34:08.931563892 UTC [500]
+Start ORAN. Done
+O-DU: thread_run start time: 05/27/26 04:34:09.000000014 UTC [500]
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=10, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=11, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=12, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=13, sym=13, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=14, sym=0, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[93m[PHY]    ULSCH NAK trace 107.18 rnti 635e harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 108.18 rnti 635e harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 109.18 rnti 635e harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 110.18 rnti 635e harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 635e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 118.18 rnti 06d9 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 119.18 rnti 06d9 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 120.18 rnti 06d9 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 121.18 rnti 06d9 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 06d9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   10716 pps   10716 kbps   34180][tx   31916 pps   31916 kbps   87188][Total Msgs_Rcvd 10716]
+[0m[HW]     [FH LOAD][o-du 0] rx=34.180 Mbps tx=87.188 Mbps total=121.368 Mbps rx_pps=10716 tx_pps=31916 total_pps=42632
+[0m[HW]     [o_du0][pusch0    9180 prach0    1536]
+[0m[93m[PHY]    ULSCH NAK trace 129.18 rnti 5bee harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 130.18 rnti 5bee harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 131.18 rnti 5bee harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 132.18 rnti 5bee harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 5bee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 140.18 rnti f275 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 141.18 rnti f275 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 142.18 rnti f275 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 143.18 rnti f275 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE f275 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 151.18 rnti 0c55 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 152.18 rnti 0c55 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 153.18 rnti 0c55 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 154.18 rnti 0c55 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 0c55 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 162.18 rnti 8479 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 163.18 rnti 8479 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 164.18 rnti 8479 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 165.18 rnti 8479 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 8479 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 173.18 rnti 5e77 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 174.18 rnti 5e77 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 175.18 rnti 5e77 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 176.18 rnti 5e77 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 5e77 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[PHY]    ULSCH NAK trace 184.18 rnti 6ce6 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 185.18 rnti 6ce6 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 186.18 rnti 6ce6 harq 0 round 2 rv 3 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 187.18 rnti 6ce6 harq 0 round 3 rv 1 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 74.3 dB TAest 0
+[0m[93m[NR_MAC] UE 6ce6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 94a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c833 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d20b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c4dd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f01c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   21468 pps   10752 kbps   43002][tx   63788 pps   31872 kbps  108900][Total Msgs_Rcvd 21468]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   18396 prach0    3072]
+[0m[93m[NR_MAC] UE bcd9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad4c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 847b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f645 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d66 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c79 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 51f0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 783f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 00ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   32220 pps   10752 kbps   43005][tx   95660 pps   31872 kbps  108900][Total Msgs_Rcvd 32220]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   27612 prach0    4608]
+[0m[93m[NR_MAC] UE 8ce8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1bde RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a35c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 64b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 39b0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9dee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad70 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 079a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f70c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a17d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0122 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   42972 pps   10752 kbps   43016][tx  127532 pps   31872 kbps  108900][Total Msgs_Rcvd 42972]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   36828 prach0    6144]
+[0m[93m[NR_MAC] UE c370 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4455 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 172d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bcc6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b332 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5bb9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 91c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9fe8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 93da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   53724 pps   10752 kbps   43008][tx  159404 pps   31872 kbps  108900][Total Msgs_Rcvd 53724]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   46044 prach0    7680]
+[0m[93m[NR_MAC] UE 3f35 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bdcb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4552 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4e69 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d08d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f97f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5521 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3cdd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a2d4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5115 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b39a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45fb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   64476 pps   10752 kbps   43008][tx  191276 pps   31872 kbps  108900][Total Msgs_Rcvd 64476]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   55260 prach0    9216]
+[0m[93m[NR_MAC] UE 05b5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 68ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c736 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e37f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e90e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7101 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f597 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 034d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5330 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   75228 pps   10752 kbps   43005][tx  223148 pps   31872 kbps  108900][Total Msgs_Rcvd 75228]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   64476 prach0   10752]
+[0m[93m[NR_MAC] UE 43ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1abc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f268 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cd9d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4e37 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c20a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a07b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a92c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ada8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e4e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f1ac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   85980 pps   10752 kbps   43010][tx  255020 pps   31872 kbps  108900][Total Msgs_Rcvd 85980]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   73692 prach0   12288]
+[0m[PHY]    prach_I0 = 4.2 dB
+[0m[93m[NR_MAC] UE 9256 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 706a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4868 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 71f3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b25d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4ac9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 606b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 492e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 59a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   96732 pps   10752 kbps   43010][tx  286892 pps   31872 kbps  108900][Total Msgs_Rcvd 96732]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   82908 prach0   13824]
+[0m[93m[NR_MAC] UE 6456 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c7c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 727a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9691 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e58b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE afbc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b953 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 263f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a9d1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e60d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ac7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  107484 pps   10752 kbps   42999][tx  318764 pps   31872 kbps  108900][Total Msgs_Rcvd 107484]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   92124 prach0   15360]
+[0m[93m[NR_MAC] UE 91ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 59ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9860 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5f2c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9de2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7ac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9403 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 60da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c18c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  118236 pps   10752 kbps   43010][tx  350636 pps   31872 kbps  108900][Total Msgs_Rcvd 118236]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  101340 prach0   16896]
+[0m[93m[NR_MAC] UE 2e1a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ca2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7658 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3986 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7464 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bacd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7123 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 63b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2928 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 117d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 69a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  128988 pps   10752 kbps   43013][tx  382508 pps   31872 kbps  108900][Total Msgs_Rcvd 128988]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  110556 prach0   18432]
+[0m[93m[NR_MAC] UE d2c5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89cb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9842 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 343e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bf37 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 424e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 180b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 02f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 93ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  139740 pps   10752 kbps   43002][tx  414380 pps   31872 kbps  108900][Total Msgs_Rcvd 139740]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  119772 prach0   19968]
+[0m[93m[NR_MAC] UE e687 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 198a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b78 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ae46 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a92 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5c7b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 054e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 245c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e29d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5097 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3167 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bb60 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  150492 pps   10752 kbps   43016][tx  446252 pps   31872 kbps  108900][Total Msgs_Rcvd 150492]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  128988 prach0   21504]
+[0m[93m[NR_MAC] UE 27ee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4bd5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f196 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4762 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 57d2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c127 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef2f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 428e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eb3f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  161244 pps   10752 kbps   43002][tx  478124 pps   31872 kbps  108900][Total Msgs_Rcvd 161244]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  138204 prach0   23040]
+[0m[93m[NR_MAC] UE 5aca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8a14 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2ab8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b31 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0838 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE abd6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bbab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 88f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 52d4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 13ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a391 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  171996 pps   10752 kbps   43008][tx  509996 pps   31872 kbps  108900][Total Msgs_Rcvd 171996]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  147420 prach0   24576]
+[0m[PHY]    prach_I0 = 3.1 dB
+[0m[93m[NR_MAC] UE 4fb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 545f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6021 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5ede RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c1f5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d905 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc15 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b013 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  182748 pps   10752 kbps   43005][tx  541868 pps   31872 kbps  108900][Total Msgs_Rcvd 182748]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  156636 prach0   26112]
+[0m[93m[NR_MAC] UE da0e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3473 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f51 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d328 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 768a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 20b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE de9d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 407a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd9e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b91 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 814a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  193500 pps   10752 kbps   43010][tx  573740 pps   31872 kbps  108900][Total Msgs_Rcvd 193500]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  165852 prach0   27648]
+[0m[93m[NR_MAC] UE de51 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3086 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ec04 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f8ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ceae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 469b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5a8d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b2d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  204252 pps   10752 kbps   43005][tx  605612 pps   31872 kbps  108900][Total Msgs_Rcvd 204252]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  175068 prach0   29184]
+[0m[93m[NR_MAC] UE 0cea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c5a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1de7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a16e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b78d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d0a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f290 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3bb7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bbf5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e7f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 15e2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  215004 pps   10752 kbps   43010][tx  637484 pps   31872 kbps  108900][Total Msgs_Rcvd 215004]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  184284 prach0   30720]
+[0m[93m[NR_MAC] UE b7b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a1c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 826c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0fb5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c86e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 722d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2040 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  225756 pps   10752 kbps   43010][tx  669356 pps   31872 kbps  108900][Total Msgs_Rcvd 225756]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  193500 prach0   32256]
+[0m[93m[NR_MAC] UE 7dad RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff33 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a60a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f6fb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2bc2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5cfc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 63c0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34b1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE de02 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c60 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd6f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  236508 pps   10752 kbps   43008][tx  701228 pps   31872 kbps  108900][Total Msgs_Rcvd 236508]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  202716 prach0   33792]
+[0m[93m[NR_MAC] UE 1083 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9d78 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b5e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ca25 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 87c0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4d75 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 95a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e1bf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE be9c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  247260 pps   10752 kbps   43013][tx  733100 pps   31872 kbps  108900][Total Msgs_Rcvd 247260]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  211932 prach0   35328]
+[0m[93m[NR_MAC] UE 81ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5308 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 008c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 20b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e451 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f1cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9563 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ab2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5496 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6634 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a9d2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6ae0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  258012 pps   10752 kbps   43008][tx  764972 pps   31872 kbps  108900][Total Msgs_Rcvd 258012]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  221148 prach0   36864]
+[0m[PHY]    prach_I0 = 2.3 dB
+[0m[93m[NR_MAC] UE 2520 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f807 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ecb1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 640c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1123 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2669 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 40d3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d5f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  268764 pps   10752 kbps   43008][tx  796844 pps   31872 kbps  108900][Total Msgs_Rcvd 268764]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  230364 prach0   38400]
+[0m[93m[NR_MAC] UE 1c27 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b4e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ccc8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 110d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3559 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8edc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1307 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 08a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab80 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ce88 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f44a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  279516 pps   10752 kbps   43016][tx  828716 pps   31872 kbps  108900][Total Msgs_Rcvd 279516]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  239580 prach0   39936]
+[0m[93m[NR_MAC] UE a3a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e911 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d311 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d43 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 300d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 70dc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 95f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0226 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c46 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  290268 pps   10752 kbps   43002][tx  860588 pps   31872 kbps  108900][Total Msgs_Rcvd 290268]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  248796 prach0   41472]
+[0m[93m[NR_MAC] UE 2d46 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1e5f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc97 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 427e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34d1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 92cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE df42 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b0f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b74c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 50ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  301020 pps   10752 kbps   43008][tx  892460 pps   31872 kbps  108900][Total Msgs_Rcvd 301020]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  258012 prach0   43008]
+[0m[93m[NR_MAC] UE 4eb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f9ed RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 66c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f9fe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef29 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dbff RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9480 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 82e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b35a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eba7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  311772 pps   10752 kbps   43008][tx  924332 pps   31872 kbps  108900][Total Msgs_Rcvd 311772]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  267228 prach0   44544]
+[0m[93m[NR_MAC] UE 59f4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 037a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1cb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a83a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4762 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 53a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a71f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e658 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b1f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e417 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  322524 pps   10752 kbps   43013][tx  956204 pps   31872 kbps  108900][Total Msgs_Rcvd 322524]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  276444 prach0   46080]
+[0m[93m[NR_MAC] UE 996e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6340 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d50e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 512a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab98 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c777 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d1da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ae1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9293 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdc1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  333276 pps   10752 kbps   43002][tx  988076 pps   31872 kbps  108900][Total Msgs_Rcvd 333276]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  285660 prach0   47616]
+[0m[93m[NR_MAC] UE 132f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 73c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f088 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 24fe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 07bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab54 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2022 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 623d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 215a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d32 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  344028 pps   10752 kbps   43002][tx 1019948 pps   31872 kbps  108900][Total Msgs_Rcvd 344028]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  294876 prach0   49152]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[93m[NR_MAC] UE 3356 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e91b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 627c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b48 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7fd8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8a07 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 045d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b7bd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8218 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5f82 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  354780 pps   10752 kbps   43013][tx 1051820 pps   31872 kbps  108900][Total Msgs_Rcvd 354780]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  304092 prach0   50688]
+[0m[93m[NR_MAC] UE 94fe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7a4d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fcb2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0288 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3914 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5e6a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a17a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4f00 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  365532 pps   10752 kbps   43002][tx 1083692 pps   31872 kbps  108900][Total Msgs_Rcvd 365532]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  313308 prach0   52224]
+[0m[93m[NR_MAC] UE b37b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ade1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7931 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8346 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e3cb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1894 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4b26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 90be RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a603 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 88ea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ce0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  376284 pps   10752 kbps   43010][tx 1115564 pps   31872 kbps  108900][Total Msgs_Rcvd 376284]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  322524 prach0   53760]
+[0m[93m[NR_MAC] UE f891 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1b45 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3981 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7e83 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d3e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 98da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fe9e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE baa2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE accb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  387036 pps   10752 kbps   43008][tx 1147436 pps   31872 kbps  108900][Total Msgs_Rcvd 387036]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  331740 prach0   55296]
+[0m[93m[NR_MAC] UE d190 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9eac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2758 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7667 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 354d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4185 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2820 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b4a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 900e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 446a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 577e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5897 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  397788 pps   10752 kbps   43008][tx 1179308 pps   31872 kbps  108900][Total Msgs_Rcvd 397788]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  340956 prach0   56832]
+[0m[93m[NR_MAC] UE ee33 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 94e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b09a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2968 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 80e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 77fc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4673 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bc84 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b858 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  408540 pps   10752 kbps   43008][tx 1211180 pps   31872 kbps  108900][Total Msgs_Rcvd 408540]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  350172 prach0   58368]
+[0m[93m[NR_MAC] UE b855 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 018d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0f65 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f258 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f55f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9dbc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f9e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3471 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0a6c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2377 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d98c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  419292 pps   10752 kbps   43016][tx 1243052 pps   31872 kbps  108900][Total Msgs_Rcvd 419292]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  359388 prach0   59904]
+[0m[93m[NR_MAC] UE 5130 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3b33 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE afff RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aa6a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c8d8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 085e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 85c8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3144 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b9b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  430044 pps   10752 kbps   43008][tx 1274924 pps   31872 kbps  108900][Total Msgs_Rcvd 430044]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  368604 prach0   61440]
+[0m[PHY]    prach_I0 = 3.9 dB
+[0m[93m[NR_MAC] UE 5d2f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bdbd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2693 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d97c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a351 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d3c0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dd99 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 32f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 044d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f64 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a9d1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28ee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  440796 pps   10752 kbps   43002][tx 1306796 pps   31872 kbps  108900][Total Msgs_Rcvd 440796]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  377820 prach0   62976]
+[0m[93m[NR_MAC] UE 397d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1660 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c797 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b644 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 40d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5f6c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5453 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c87 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4768 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  451548 pps   10752 kbps   43008][tx 1338668 pps   31872 kbps  108900][Total Msgs_Rcvd 451548]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  387036 prach0   64512]
+[0m[93m[NR_MAC] UE 8f3c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f451 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ca93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d64e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f57f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 57dc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28b5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5e98 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e966 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8aa0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 128d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  462300 pps   10752 kbps   43005][tx 1370540 pps   31872 kbps  108900][Total Msgs_Rcvd 462300]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  396252 prach0   66048]
+[0m[93m[NR_MAC] UE bd93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3322 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4bd8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3da2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 90d9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f0cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 31cb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  473052 pps   10752 kbps   43008][tx 1402412 pps   31872 kbps  108900][Total Msgs_Rcvd 473052]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  405468 prach0   67584]
+[0m[93m[NR_MAC] UE 62a0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d7f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e18 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 77cb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0005 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6cdd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e3d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7578 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9127 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6eb1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 96a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 14ff RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  483804 pps   10752 kbps   43010][tx 1434284 pps   31872 kbps  108900][Total Msgs_Rcvd 483804]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  414684 prach0   69120]
+[0m[93m[NR_MAC] UE 0c06 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7794 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 728b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d5cd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 88e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f90 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9ed RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a2fc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5446 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  494556 pps   10752 kbps   43010][tx 1466156 pps   31872 kbps  108900][Total Msgs_Rcvd 494556]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  423900 prach0   70656]
+[0m[93m[NR_MAC] UE 0adc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab88 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7726 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7da0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5d5a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 599f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2869 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e4e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 92b9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c757 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a398 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b2d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  505308 pps   10752 kbps   43013][tx 1498028 pps   31872 kbps  108900][Total Msgs_Rcvd 505308]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  433116 prach0   72192]
+[0m[93m[NR_MAC] UE 1f68 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1b57 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 73a5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7102 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c078 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 12d3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a27c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cd76 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 65ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  516060 pps   10752 kbps   42999][tx 1529900 pps   31872 kbps  108900][Total Msgs_Rcvd 516060]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  442332 prach0   73728]
+[0m[PHY]    prach_I0 = 3.1 dB
+[0m[93m[NR_MAC] UE 2b7b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b40 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e4cd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 81f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dfe5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0651 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf7b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ecc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6162 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7afe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1675 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  526812 pps   10752 kbps   43008][tx 1561772 pps   31872 kbps  108900][Total Msgs_Rcvd 526812]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  451548 prach0   75264]
+[0m[93m[NR_MAC] UE 9c63 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0d90 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a6f1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ad3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89c9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3aba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d0c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  537564 pps   10752 kbps   43008][tx 1593644 pps   31872 kbps  108900][Total Msgs_Rcvd 537564]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  460764 prach0   76800]
+[0m[93m[NR_MAC] UE 646b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a0bf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c2cc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3d1c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 46b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8b2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 355e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c998 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dacb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 06f0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0050 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 283e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  548316 pps   10752 kbps   43008][tx 1625516 pps   31872 kbps  108900][Total Msgs_Rcvd 548316]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  469980 prach0   78336]
+[0m[93m[NR_MAC] UE b5b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3555 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a182 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e74e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b3f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f14f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bbae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f59 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  559068 pps   10752 kbps   43013][tx 1657388 pps   31872 kbps  108900][Total Msgs_Rcvd 559068]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  479196 prach0   79872]
+[0m[93m[NR_MAC] UE 839a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4001 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 18b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e34f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a930 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 617b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3391 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e79b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 856c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f933 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  569820 pps   10752 kbps   43008][tx 1689260 pps   31872 kbps  108900][Total Msgs_Rcvd 569820]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  488412 prach0   81408]
+[0m[93m[NR_MAC] UE 16fb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab9f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8616 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b3b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e84c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 01cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 265f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4265 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f41e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  580572 pps   10752 kbps   43008][tx 1721132 pps   31872 kbps  108900][Total Msgs_Rcvd 580572]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  497628 prach0   82944]
+[0m[93m[NR_MAC] UE 8e91 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6279 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0176 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c057 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6b33 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e261 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7e9c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 86a5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8926 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d4f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b6e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  591324 pps   10752 kbps   43005][tx 1753004 pps   31872 kbps  108900][Total Msgs_Rcvd 591324]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  506844 prach0   84480]
+[0m[93m[NR_MAC] UE 71df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8696 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a791 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 371b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f30 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a519 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 408a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 532a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  602076 pps   10752 kbps   43010][tx 1784876 pps   31872 kbps  108900][Total Msgs_Rcvd 602076]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  516060 prach0   86016]
+[0m[PHY]    prach_I0 = 2.3 dB
+[0m[93m[NR_MAC] UE 2fa1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d2e3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE abd1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 65c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5292 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28ac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff3a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7507 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4461 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c26 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33f7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  612828 pps   10752 kbps   42999][tx 1816748 pps   31872 kbps  108900][Total Msgs_Rcvd 612828]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  525276 prach0   87552]
+[0m[93m[NR_MAC] UE 1997 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6aca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 321e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6edf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1493 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a073 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cb5d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d00 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 806b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  623580 pps   10752 kbps   43016][tx 1848620 pps   31872 kbps  108900][Total Msgs_Rcvd 623580]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  534492 prach0   89088]
+[0m[93m[NR_MAC] UE 18a5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05ff RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c60a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f738 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b0b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2ab2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 85ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bea1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b0fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a1f3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bced RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  634332 pps   10752 kbps   43002][tx 1880492 pps   31872 kbps  108900][Total Msgs_Rcvd 634332]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  543708 prach0   90624]
+[0m[93m[NR_MAC] UE bafd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c8d9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c69b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9663 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d10 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0a1a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 78f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4457 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f67e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  645084 pps   10752 kbps   43005][tx 1912364 pps   31872 kbps  108900][Total Msgs_Rcvd 645084]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  552924 prach0   92160]
+[0m[93m[NR_MAC] UE 7477 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 478b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d33f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 55c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 44ec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3698 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e20f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b745 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f477 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b7fe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eb10 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  655836 pps   10752 kbps   43016][tx 1944236 pps   31872 kbps  108900][Total Msgs_Rcvd 655836]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  562140 prach0   93696]
+[0m[93m[NR_MAC] UE 1678 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 54be RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f8c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c6b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6b40 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1850 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 164d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3d7c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  666588 pps   10752 kbps   43002][tx 1976108 pps   31872 kbps  108900][Total Msgs_Rcvd 666588]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  571356 prach0   95232]
+[0m[93m[NR_MAC] UE c751 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f86f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdb7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b549 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 26a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c58 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d7a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 394d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 93b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 74c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8371 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  677340 pps   10752 kbps   43013][tx 2007980 pps   31872 kbps  108900][Total Msgs_Rcvd 677340]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  580572 prach0   96768]
+[0m[93m[NR_MAC] UE ddd3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ed9a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f136 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c605 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0295 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4294 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 37c5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE caa0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a4e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  688092 pps   10752 kbps   43005][tx 2039852 pps   31872 kbps  108900][Total Msgs_Rcvd 688092]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  589788 prach0   98304]
+[0m[PHY]    prach_I0 = 1.7 dB
+[0m[93m[NR_MAC] UE 547d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd6a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8cfd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b5f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 167b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11ed RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 49a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f8f5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6de6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 79d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f600 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  698844 pps   10752 kbps   43010][tx 2071724 pps   31872 kbps  108900][Total Msgs_Rcvd 698844]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  599004 prach0   99840]
+[0m[93m[NR_MAC] UE 674c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4463 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0c71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5a3a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3387 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b399 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f222 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 38dc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  709596 pps   10752 kbps   43008][tx 2103596 pps   31872 kbps  108900][Total Msgs_Rcvd 709596]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  608220 prach0  101376]
+[0m[93m[NR_MAC] UE 4335 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eeb9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eb0e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f77 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 473d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c09b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f3a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ae5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 99f8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ecdc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e0be RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  720348 pps   10752 kbps   43005][tx 2135468 pps   31872 kbps  108900][Total Msgs_Rcvd 720348]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  617436 prach0  102912]
+[0m[93m[NR_MAC] UE d4e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 335d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 03e5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0f15 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d36 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33b9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b78d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d7d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4505 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  731100 pps   10752 kbps   43008][tx 2167340 pps   31872 kbps  108900][Total Msgs_Rcvd 731100]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  626652 prach0  104448]
+[0m[93m[NR_MAC] UE 9926 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 26a2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c57 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5df8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c70 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a56f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e155 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8536 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 40cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c751 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ef3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  741852 pps   10752 kbps   43005][tx 2199212 pps   31872 kbps  108900][Total Msgs_Rcvd 741852]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  635868 prach0  105984]
+[0m[93m[NR_MAC] UE 46fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3068 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9108 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc11 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8b15 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9ce3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8500 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 91b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9fce RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  752604 pps   10752 kbps   43016][tx 2231084 pps   31872 kbps  108900][Total Msgs_Rcvd 752604]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  645084 prach0  107520]
+[0m[93m[NR_MAC] UE 43bc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d1af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 87d4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 74b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1263 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e7c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cce4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6098 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6b94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cba0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  763356 pps   10752 kbps   43010][tx 2262956 pps   31872 kbps  108900][Total Msgs_Rcvd 763356]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  654300 prach0  109056]
+[0m[93m[NR_MAC] UE 8c51 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 844d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d2ce RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 335d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fa3d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 17c0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d681 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9b91 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9fe9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 88e5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  774108 pps   10752 kbps   43013][tx 2294828 pps   31872 kbps  108900][Total Msgs_Rcvd 774108]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  663516 prach0  110592]
+[0m[PHY]    prach_I0 = 6.2 dB
+[0m[93m[NR_MAC] UE 569b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 590c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0259 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4f75 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff29 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1014 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9312 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 22c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5a7f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  784860 pps   10752 kbps   42999][tx 2326700 pps   31872 kbps  108900][Total Msgs_Rcvd 784860]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  672732 prach0  112128]
+[0m[93m[NR_MAC] UE b10b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 184d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a23a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 180d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5af0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0287 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e6ff RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7cab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bfc6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 74b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05ba RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  795612 pps   10752 kbps   43008][tx 2358572 pps   31872 kbps  108900][Total Msgs_Rcvd 795612]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  681948 prach0  113664]
+[0m[93m[NR_MAC] UE cf93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a2fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0723 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 978d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cc4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE db4a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fbd5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 01ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ae67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  806364 pps   10752 kbps   43019][tx 2390444 pps   31872 kbps  108900][Total Msgs_Rcvd 806364]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.019 Mbps tx=108.900 Mbps total=151.919 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  691164 prach0  115200]
+[0m[93m[NR_MAC] UE 1e4a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 89b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1906 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f165 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9a4a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aa01 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c701 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5dc6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aee1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9415 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0ff8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  817116 pps   10752 kbps   43008][tx 2422316 pps   31872 kbps  108900][Total Msgs_Rcvd 817116]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  700380 prach0  116736]
+[0m[93m[NR_MAC] UE c42f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d16 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a10a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9922 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 49ee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0205 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4c46 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9c94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 980c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9a9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  827868 pps   10752 kbps   43002][tx 2454188 pps   31872 kbps  108900][Total Msgs_Rcvd 827868]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  709596 prach0  118272]
+[0m[93m[NR_MAC] UE cb66 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a36f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d554 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c2d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 26cc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b758 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f25e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 640d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aa02 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e949 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ccc1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9088 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  838620 pps   10752 kbps   43005][tx 2486060 pps   31872 kbps  108900][Total Msgs_Rcvd 838620]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  718812 prach0  119808]
+[0m[93m[NR_MAC] UE 2fc8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6619 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eef1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f5f3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7bd4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a1a8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 69a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 07c3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9f1e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  849372 pps   10752 kbps   43010][tx 2517932 pps   31872 kbps  108900][Total Msgs_Rcvd 849372]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  728028 prach0  121344]
+[0m[93m[NR_MAC] UE 5433 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 77df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fc6b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 386f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f664 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dbbe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 00c6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8523 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 953d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e5ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f243 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  860124 pps   10752 kbps   43002][tx 2549804 pps   31872 kbps  108900][Total Msgs_Rcvd 860124]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  737244 prach0  122880]
+[0m[PHY]    prach_I0 = 4.8 dB
+[0m[93m[NR_MAC] UE 4661 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6a8c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bfad RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 95e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdc9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9616 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 092f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 03b2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b3e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  870876 pps   10752 kbps   43013][tx 2581676 pps   31872 kbps  108900][Total Msgs_Rcvd 870876]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  746460 prach0  124416]
+[0m[93m[NR_MAC] UE 2c52 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE feb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0715 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 865a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4b36 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c20f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0d57 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1207 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fb6b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2011 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1419 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 856c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  881628 pps   10752 kbps   43002][tx 2613548 pps   31872 kbps  108900][Total Msgs_Rcvd 881628]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  755676 prach0  125952]
+[0m[93m[NR_MAC] UE d8a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2eaa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f200 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3817 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6330 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 90c3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6e6b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6d76 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bb8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  892380 pps   10752 kbps   43013][tx 2645420 pps   31872 kbps  108900][Total Msgs_Rcvd 892380]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  764892 prach0  127488]
+[0m[93m[NR_MAC] UE 326b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6df9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 17e2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9e3d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e68d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b84 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aeda RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3fcd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f7db RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 33da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4167 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  903132 pps   10752 kbps   42999][tx 2677292 pps   31872 kbps  108900][Total Msgs_Rcvd 903132]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  774108 prach0  129024]
+[0m[93m[NR_MAC] UE 38fe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f772 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 350f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c22e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a5dd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0183 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 78f8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ecf3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e81a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  913884 pps   10752 kbps   43010][tx 2709164 pps   31872 kbps  108900][Total Msgs_Rcvd 913884]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  783324 prach0  130560]
+[0m[93m[NR_MAC] UE 6c11 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2933 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cfb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e039 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ea63 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 64f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b3cf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7454 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 657b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b8c6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b77 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9555 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  924636 pps   10752 kbps   43005][tx 2741036 pps   31872 kbps  108900][Total Msgs_Rcvd 924636]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  792540 prach0  132096]
+[0m[93m[NR_MAC] UE 8fee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b5ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 55da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6d59 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 65f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b0c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4626 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cafc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 50b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  935388 pps   10752 kbps   43010][tx 2772908 pps   31872 kbps  108900][Total Msgs_Rcvd 935388]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  801756 prach0  133632]
+[0m[93m[NR_MAC] UE dbac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 334b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aceb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff66 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 51bb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 95bf RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 76a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0174 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4de8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fe2e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  946140 pps   10752 kbps   43013][tx 2804780 pps   31872 kbps  108900][Total Msgs_Rcvd 946140]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  810972 prach0  135168]
+[0m[93m[NR_MAC] UE 9ae8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    prach_I0 = 3.6 dB
+[0m[93m[NR_MAC] UE 4212 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6900 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ec81 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2c72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 84ce RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34cd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e339 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c44b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2257 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  956892 pps   10752 kbps   42999][tx 2836652 pps   31872 kbps  108900][Total Msgs_Rcvd 956892]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  820188 prach0  136704]
+[0m[93m[NR_MAC] UE 7570 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c11d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2699 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE efe5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fde2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1ab8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 067f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ebb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 55ea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6e41 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c149 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a324 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  967644 pps   10752 kbps   43016][tx 2868524 pps   31872 kbps  108900][Total Msgs_Rcvd 967644]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  829404 prach0  138240]
+[0m[93m[NR_MAC] UE 46c3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7b3f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eb24 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 739e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 22bb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 382b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d51a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c03 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ee4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  978396 pps   10752 kbps   43002][tx 2900396 pps   31872 kbps  108900][Total Msgs_Rcvd 978396]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  838620 prach0  139776]
+[0m[93m[NR_MAC] UE fac1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1abe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8615 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05dc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd65 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 086b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3c4f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9677 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f28a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e746 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 26da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a34c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ac3f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  989148 pps   10752 kbps   43005][tx 2932268 pps   31872 kbps  108900][Total Msgs_Rcvd 989148]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  847836 prach0  141312]
+[0m[93m[NR_MAC] UE 334b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3fd5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 42a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4980 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 314c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11fb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0956 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx  999900 pps   10752 kbps   43008][tx 2964140 pps   31872 kbps  108900][Total Msgs_Rcvd 999900]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  857052 prach0  142848]
+[0m[93m[NR_MAC] UE 2946 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cfe7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a0b0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 087b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 275e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4fa7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c48d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c47 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4203 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 72e3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9739 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1010652 pps   10752 kbps   43002][tx 2996012 pps   31872 kbps  108900][Total Msgs_Rcvd 1010652]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  866268 prach0  144384]
+[0m[93m[NR_MAC] UE 1e20 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6f72 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d94c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 93d1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dbbd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 98e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5fb4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 288f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8fa5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1021404 pps   10752 kbps   43005][tx 3027884 pps   31872 kbps  108900][Total Msgs_Rcvd 1021404]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  875484 prach0  145920]
+[0m[93m[NR_MAC] UE e5ad RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8317 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 92b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0bf8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3b80 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cfb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9fa7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b73c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c556 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef50 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4e5d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6e38 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab41 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1032156 pps   10752 kbps   43002][tx 3059756 pps   31872 kbps  108900][Total Msgs_Rcvd 1032156]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  884700 prach0  147456]
+[0m[PHY]    prach_I0 = 2.7 dB
+[0m[93m[NR_MAC] UE 05a2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c9e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c8dc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5208 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bf67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e2ef RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 06b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3345 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 96fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1042908 pps   10752 kbps   43008][tx 3091628 pps   31872 kbps  108900][Total Msgs_Rcvd 1042908]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  893916 prach0  148992]
+[0m[93m[NR_MAC] UE 46d5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9a8e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 98a3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ae8b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6e08 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f964 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9536 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1f53 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c22e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 14c6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 01da RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1053660 pps   10752 kbps   43005][tx 3123500 pps   31872 kbps  108900][Total Msgs_Rcvd 1053660]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  903132 prach0  150528]
+[0m[93m[NR_MAC] UE 1f35 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e9a1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 234e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6a5e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3a58 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9637 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6041 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 321d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 15ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1064412 pps   10752 kbps   43010][tx 3155372 pps   31872 kbps  108900][Total Msgs_Rcvd 1064412]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  912348 prach0  152064]
+[0m[93m[NR_MAC] UE 4901 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8ab7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cd22 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e070 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 74df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd2c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bfa5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9588 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 38e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 04e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4ba6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1075164 pps   10752 kbps   43008][tx 3187244 pps   31872 kbps  108900][Total Msgs_Rcvd 1075164]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  921564 prach0  153600]
+[0m[93m[NR_MAC] UE 021f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8990 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b4b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6371 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f51c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c2e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 484b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 28d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0277 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1085916 pps   10752 kbps   43008][tx 3219116 pps   31872 kbps  108900][Total Msgs_Rcvd 1085916]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  930780 prach0  155136]
+[0m[93m[NR_MAC] UE fc99 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 338f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 746b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ed76 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3188 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5886 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fef6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ed92 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9851 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6ee2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 363e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11f0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1096668 pps   10752 kbps   43013][tx 3250988 pps   31872 kbps  108900][Total Msgs_Rcvd 1096668]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  939996 prach0  156672]
+[0m[93m[NR_MAC] UE 9c79 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 841e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9dfe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c3ca RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45cc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0f2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dced RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b07 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cfb5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1107420 pps   10752 kbps   43008][tx 3282860 pps   31872 kbps  108900][Total Msgs_Rcvd 1107420]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  949212 prach0  158208]
+[0m[93m[NR_MAC] UE 707d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11c8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0db6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cec6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 053f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1318 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e6b5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0e60 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7bb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d894 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 407a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8765 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1118172 pps   10752 kbps   43016][tx 3314732 pps   31872 kbps  108900][Total Msgs_Rcvd 1118172]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  958428 prach0  159744]
+[0m[PHY]    prach_I0 = 2.0 dB
+[0m[93m[NR_MAC] UE d64b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b253 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 271f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE be3c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a70c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a7e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3b9f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 467c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eadb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1128924 pps   10752 kbps   43002][tx 3346604 pps   31872 kbps  108900][Total Msgs_Rcvd 1128924]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  967644 prach0  161280]
+[0m[93m[NR_MAC] UE 55e3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b1b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b2c5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c21 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4d5d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e3db RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3185 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f036 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19a0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 70aa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c82 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1139676 pps   10752 kbps   43008][tx 3378476 pps   31872 kbps  108900][Total Msgs_Rcvd 1139676]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  976860 prach0  162816]
+[0m[93m[NR_MAC] UE e944 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9865 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0685 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e434 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0647 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bbea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdb6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 555f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1150428 pps   10752 kbps   43008][tx 3410348 pps   31872 kbps  108900][Total Msgs_Rcvd 1150428]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  986076 prach0  164352]
+[0m[93m[NR_MAC] UE 991e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f553 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d958 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8753 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 331e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf0c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d6c0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4015 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7695 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 40fd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ea03 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3577 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8fac RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1161180 pps   10752 kbps   43005][tx 3442220 pps   31872 kbps  108900][Total Msgs_Rcvd 1161180]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  995292 prach0  165888]
+[0m[93m[NR_MAC] UE e0d2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6fa3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c7e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fdee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8a18 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0d01 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 729e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 57e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ba0b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1171932 pps   10752 kbps   43008][tx 3474092 pps   31872 kbps  108900][Total Msgs_Rcvd 1171932]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1004508 prach0  167424]
+[0m[93m[NR_MAC] UE 24e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cbd1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ecea RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 565e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8b25 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 851f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 733a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 20d3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4f16 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1182684 pps   10752 kbps   43010][tx 3505964 pps   31872 kbps  108900][Total Msgs_Rcvd 1182684]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1013724 prach0  168960]
+[0m[93m[NR_MAC] UE fb55 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d91f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 239a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7b9e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a183 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1f09 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0cfb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8b9a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c45 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1193436 pps   10752 kbps   43008][tx 3537836 pps   31872 kbps  108900][Total Msgs_Rcvd 1193436]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1022940 prach0  170496]
+[0m[93m[NR_MAC] UE 282b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 24d3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1383 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f5b4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad62 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d79 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad1e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 642b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9dc5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c808 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ac93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1204188 pps   10752 kbps   43013][tx 3569708 pps   31872 kbps  108900][Total Msgs_Rcvd 1204188]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1032156 prach0  172032]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[93m[NR_MAC] UE 7a32 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ff7c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4939 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d2f5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d311 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 059a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2e6f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5c24 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE be63 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fc47 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1214940 pps   10752 kbps   43008][tx 3601580 pps   31872 kbps  108900][Total Msgs_Rcvd 1214940]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1041372 prach0  173568]
+[0m[93m[NR_MAC] UE 4204 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eccd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9ba7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ef9f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3564 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0446 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 39c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d271 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1086 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc8c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1225692 pps   10752 kbps   43005][tx 3633452 pps   31872 kbps  108900][Total Msgs_Rcvd 1225692]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1050588 prach0  175104]
+[0m[93m[NR_MAC] UE 971f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d04 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f30 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d144 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c655 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ac99 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5c39 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d1eb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 311a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 53d4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 851f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1236444 pps   10752 kbps   43005][tx 3665324 pps   31872 kbps  108900][Total Msgs_Rcvd 1236444]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1059804 prach0  176640]
+[0m[93m[NR_MAC] UE a576 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c521 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c670 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1dc2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE deb2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bf83 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3bdb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d3bb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e97d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6685 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1247196 pps   10752 kbps   43019][tx 3697196 pps   31872 kbps  108900][Total Msgs_Rcvd 1247196]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.019 Mbps tx=108.900 Mbps total=151.919 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1069020 prach0  178176]
+[0m[93m[NR_MAC] UE f928 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 12b1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4428 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7713 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fd0f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 09ee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 03b1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9cab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 36b5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 70aa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 53e5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1257948 pps   10752 kbps   43002][tx 3729068 pps   31872 kbps  108900][Total Msgs_Rcvd 1257948]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1078236 prach0  179712]
+[0m[93m[NR_MAC] UE 9b1c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dd2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE aabc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1570 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4cb8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0908 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d64d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5059 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 16ec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8926 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1268700 pps   10752 kbps   43008][tx 3760940 pps   31872 kbps  108900][Total Msgs_Rcvd 1268700]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1087452 prach0  181248]
+[0m[93m[NR_MAC] UE c7a7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0a39 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE daa7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9211 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b6e4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5d5a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9088 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 23d6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e0c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ec73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c5a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3cd4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1279452 pps   10752 kbps   43005][tx 3792812 pps   31872 kbps  108900][Total Msgs_Rcvd 1279452]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1096668 prach0  182784]
+[0m[93m[NR_MAC] UE 7c63 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 16cd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9513 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0113 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6444 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 56f5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fcee RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f5e8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1290204 pps   10752 kbps   43008][tx 3824684 pps   31872 kbps  108900][Total Msgs_Rcvd 1290204]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1105884 prach0  184320]
+[0m[93m[NR_MAC] UE a069 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    prach_I0 = 2.8 dB
+[0m[93m[NR_MAC] UE 48a4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f65 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 743a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 630e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b7c1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c168 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 30b7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 19dd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 34f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE efa5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2350 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 68ae RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1300956 pps   10752 kbps   42999][tx 3856556 pps   31872 kbps  108900][Total Msgs_Rcvd 1300956]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1115100 prach0  185856]
+[0m[93m[NR_MAC] UE 6846 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ca71 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 24c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 197b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4a1b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0b4d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ad56 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 652a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d2e2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1311708 pps   10752 kbps   43016][tx 3888428 pps   31872 kbps  108900][Total Msgs_Rcvd 1311708]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1124316 prach0  187392]
+[0m[93m[NR_MAC] UE e343 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 565e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 982d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3a40 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f8f2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eacd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE abd4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9083 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f0fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8c1b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f272 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ab0a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1322460 pps   10752 kbps   42999][tx 3920300 pps   31872 kbps  108900][Total Msgs_Rcvd 1322460]
+[0m[HW]     [FH LOAD][o-du 0] rx=42.999 Mbps tx=108.900 Mbps total=151.899 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1133532 prach0  188928]
+[0m[93m[NR_MAC] UE d333 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6b48 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4ef0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c0b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c587 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7c3e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d5d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3522 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 274e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1333212 pps   10752 kbps   43010][tx 3952172 pps   31872 kbps  108900][Total Msgs_Rcvd 1333212]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1142748 prach0  190464]
+[0m[93m[NR_MAC] UE 4abe RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7f36 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ea30 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7170 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0c23 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cc79 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d465 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 21cc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5f2a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9a8d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4588 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 61b1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1343964 pps   10752 kbps   43008][tx 3984044 pps   31872 kbps  108900][Total Msgs_Rcvd 1343964]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1151964 prach0  192000]
+[0m[93m[NR_MAC] UE 7e1a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 47c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a2e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d15c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 47e6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8e96 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9ca4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 48f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6a7c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1354716 pps   10752 kbps   43008][tx 4015916 pps   31872 kbps  108900][Total Msgs_Rcvd 1354716]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1161180 prach0  193536]
+[0m[93m[NR_MAC] UE 65f9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3921 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f9c7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 94ec RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 8d9a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 423d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 193e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2806 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6083 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0c8a RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cedb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0fd3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1365468 pps   10752 kbps   43005][tx 4047788 pps   31872 kbps  108900][Total Msgs_Rcvd 1365468]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.005 Mbps tx=108.900 Mbps total=151.905 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1170396 prach0  195072]
+[0m[93m[NR_MAC] UE 74aa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c6ab RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE cf61 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3a5c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE eab8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 45d0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4c37 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5b62 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0d34 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bcf5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1376220 pps   10752 kbps   43010][tx 4079660 pps   31872 kbps  108900][Total Msgs_Rcvd 1376220]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.010 Mbps tx=108.900 Mbps total=151.910 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1179612 prach0  196608]
+[0m[PHY]    prach_I0 = 2.7 dB
+[0m[93m[NR_MAC] UE 864b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 38bc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3da9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f419 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE fcf1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b70d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 9a0c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 27cc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b4c9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2db4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2143 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1386972 pps   10752 kbps   43008][tx 4111532 pps   31872 kbps  108900][Total Msgs_Rcvd 1386972]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1188828 prach0  198144]
+[0m[93m[NR_MAC] UE f3af RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 30e3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e846 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d9c2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7624 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a827 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d783 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 38eb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2a94 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1397724 pps   10752 kbps   43008][tx 4143404 pps   31872 kbps  108900][Total Msgs_Rcvd 1397724]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1198044 prach0  199680]
+[0m[93m[NR_MAC] UE 322f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f804 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 88f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bd14 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE dc47 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b143 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b358 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1c18 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 213e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE bc78 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4d73 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6677 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 226f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1408476 pps   10752 kbps   43013][tx 4175276 pps   31872 kbps  108900][Total Msgs_Rcvd 1408476]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1207260 prach0  201216]
+[0m[93m[NR_MAC] UE c233 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE afa2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d0fc RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1d5e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1868 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 6c7d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 10a9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2f08 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ee7d RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1419228 pps   10752 kbps   43008][tx 4207148 pps   31872 kbps  108900][Total Msgs_Rcvd 1419228]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1216476 prach0  202752]
+[0m[93m[NR_MAC] UE eda6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3548 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 0c67 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3e12 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 50e7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e674 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3825 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 4535 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE caa2 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1b19 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f901 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1429980 pps   10752 kbps   43013][tx 4239020 pps   31872 kbps  108900][Total Msgs_Rcvd 1429980]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.013 Mbps tx=108.900 Mbps total=151.913 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1225692 prach0  204288]
+[0m[93m[NR_MAC] UE 96df RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 48b3 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE a151 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 626f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3c07 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE f862 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 1639 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7154 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE db88 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b5e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1440732 pps   10752 kbps   43008][tx 4270892 pps   31872 kbps  108900][Total Msgs_Rcvd 1440732]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.008 Mbps tx=108.900 Mbps total=151.908 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1234908 prach0  205824]
+[0m[93m[NR_MAC] UE fa93 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c577 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 32a9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2211 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE de17 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b8d9 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE ac91 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 80e5 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 529b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE d322 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 62a6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 79cb RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1451485 pps   10753 kbps   43016][tx 4302764 pps   31872 kbps  108900][Total Msgs_Rcvd 1451485]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.016 Mbps tx=108.900 Mbps total=151.916 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0 1244124 prach0  207360]
+[0m[93m[NR_MAC] UE e90f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 5e7e RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 05e1 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 3817 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2928 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 11f7 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c31f RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2b62 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 7d44 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 1462237 pps   10752 kbps   43002][tx 4334636 pps   31872 kbps  108900][Total Msgs_Rcvd 1462237]
+[0m[HW]     [FH LOAD][o-du 0] rx=43.002 Mbps tx=108.900 Mbps total=151.902 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1253340 prach0  208896]
+[0m[PHY]    prach_I0 = 2.0 dB
+[0m[93m[NR_MAC] UE 4b60 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 2317 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 358b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE e8e0 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE 679b RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE c7b8 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m

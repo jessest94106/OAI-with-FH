@@ -1,0 +1,700 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260531_115401_pid735246.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2816000 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 6
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 2, NB_TX 2
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7e9bbcfdd4b0
+  tx_up_eAxC2Vf 0x7e9bbcfde0b0
+  rx_cp_eAxC2Vf 0x7e9bbcfdecb0
+  rx_up_eAxC2Vf 0x7e9bbcfdf8b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 735269]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+O-XU      0
+Start Sym timer 107142 ns
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+created sym cp dl cb for symbol 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+created sym cp dl cb for symbol 2
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+xran_generic_worker_thread [CPU 17] [PID: 735269]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 735269]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 735269]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x7e9b7cf95040
+xran_sector_get_instances [0]: CC 0 handle 0x7e9ba0196800
+Handle: 0x7e9bc4289468 Instance: 0x7e9b[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 2
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0ma0196800
+-> hInstance 0x7e9ba0196800
+ru_0_cc_0_idx_0: [ handle 0x7e9ba0196800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 1023 nBufferSize 14116 socket_id 0
+CC:[ handle 0x7e9ba0196800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x7e9ba0196800 poolIdx 0 elements 1023 size 14116
+xran_bm_allocate_buffer() hInstance 0x7e9ba0196800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x7e9ba0196800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7e9ba0196800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786ac0 
+xran_bm_init() hInstance 0x7e9ba0196800 poolIdx 1 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x7e9ba0196800 poolIdx 1 count 40
+ru_0_cc_0_idx_2: [ handle 0x7e9ba0196800 0 0 ] [nPoolIndex 2] nNumberOfBuffers 1023 nBufferSize 13168 socket_id 0
+CC:[ handle 0x7e9ba0196800 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786580 
+xran_bm_init() hInstance 0x7e9ba0196800 poolIdx 2 elements 1023 size 13168
+xran_bm_allocate_buffer() hInstance 0x7e9ba0196800 poolIdx 2 count 560
+ru_0_cc_0_idx_3: [ handle 0x7e9ba0196800 0 0 ] [nPoolIndex 3] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x7e9ba0196800 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284788b80 
+xran_bm_init() hInstance 0x7e9ba0196800 poolIdx 3 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x7e9ba0196800 poolIdx 3 count 40
+ru_0_cc_0_idx_4: [ handle 0x7e9ba0196800 0 0 ] [nPoolIndex 4] nNumberOfBuffers 1023 nBufferSize 3360 socket_id 0
+CC:[ handle 0x7e9ba0196800 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788580 
+xran_bm_init() hInstance 0x7e9ba0196800 poolIdx 4 elements 1023 size 3360
+xran_bm_allocate_buffer() hInstance 0x7e9ba0196800 poolIdx 4 count 560
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/31/26 18:54:05.093693035 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=0, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=1, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=2, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=3, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=4, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[PHY]    ULSCH ACK trace 107.18 rnti e66b harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 36.1 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE e66b
+[0m[PHY]    ULSCH ACK trace 109.17 rnti e66b harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 33.3 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 110.12 rnti e66b harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 112.12 rnti e66b harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 113.12 rnti e66b harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 115.12 rnti e66b harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 116.2 rnti e66b harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 116.12 rnti e66b harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 118.12 rnti e66b harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 119.12 rnti e66b harq 8 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 120.12 rnti e66b harq 9 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 121.12 rnti e66b harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 122.2 rnti e66b harq 11 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 122.12 rnti e66b harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[PHY]    ULSCH ACK trace 126.2 rnti e66b harq 13 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 126.12 rnti e66b harq 14 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 127.2 rnti e66b harq 15 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 127.12 rnti e66b harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[HW]     [o-du 0][rx   50187 pps   50187 kbps   92353][tx   35138 pps   35138 kbps   40460][Total Msgs_Rcvd 50187]
+[0m[HW]     [FH LOAD][o-du 0] rx=92.353 Mbps tx=40.460 Mbps total=132.813 Mbps rx_pps=50187 tx_pps=35138 total_pps=85325
+[0m[HW]     [o_du0][pusch0   23557 prach0    1536]
+[0m[HW]     [o_du0][pusch1   23558 prach1    1536]
+[0m[PHY]    ULSCH ACK trace 131.12 rnti e66b harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 132.2 rnti e66b harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 132.12 rnti e66b harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 142.2 rnti e66b harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 152.2 rnti e66b harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 162.2 rnti e66b harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 172.2 rnti e66b harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 178.12 rnti e66b harq 8 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 179.12 rnti e66b harq 9 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 189.2 rnti e66b harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 199.2 rnti e66b harq 11 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 209.2 rnti e66b harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 1
+[0m[PHY]    ULSCH ACK trace 219.2 rnti e66b harq 13 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 226.12 rnti e66b harq 14 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 36.3 dB TAest 0
+[0m[HW]     [o-du 0][rx  100360 pps   50173 kbps  209894][tx   70210 pps   35072 kbps   91644][Total Msgs_Rcvd 100360]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50173 tx_pps=35072 total_pps=85245
+[0m[HW]     [o_du0][pusch0   47108 prach0    3072]
+[0m[HW]     [o_du0][pusch1   47108 prach1    3072]
+[0m[HW]     [o-du 0][rx  150538 pps   50178 kbps  209894][tx  105282 pps   35072 kbps   91644][Total Msgs_Rcvd 150538]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0   70661 prach0    4608]
+[0m[HW]     [o_du0][pusch1   70661 prach1    4608]
+[0m[HW]     [o-du 0][rx  200713 pps   50175 kbps  209894][tx  140354 pps   35072 kbps   91644][Total Msgs_Rcvd 200713]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0   94212 prach0    6144]
+[0m[HW]     [o_du0][pusch1   94213 prach1    6144]
+[0m[HW]     [o-du 0][rx  250890 pps   50177 kbps  209894][tx  175426 pps   35072 kbps   91644][Total Msgs_Rcvd 250890]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0  117765 prach0    7680]
+[0m[HW]     [o_du0][pusch1  117765 prach1    7680]
+[0m[HW]     [o-du 0][rx  301064 pps   50174 kbps  209894][tx  210498 pps   35072 kbps   91644][Total Msgs_Rcvd 301064]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50174 tx_pps=35072 total_pps=85246
+[0m[HW]     [o_du0][pusch0  141316 prach0    9216]
+[0m[HW]     [o_du0][pusch1  141316 prach1    9216]
+[0m[HW]     [o-du 0][rx  351242 pps   50178 kbps  209894][tx  245570 pps   35072 kbps   91644][Total Msgs_Rcvd 351242]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0  164869 prach0   10752]
+[0m[HW]     [o_du0][pusch1  164868 prach1   10752]
+[0m[HW]     [o-du 0][rx  401417 pps   50175 kbps  209894][tx  280642 pps   35072 kbps   91644][Total Msgs_Rcvd 401417]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0  188420 prach0   12288]
+[0m[HW]     [o_du0][pusch1  188421 prach1   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[93m[PHY]    ULSCH NAK trace 103.7 rnti e66b harq 9 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 103.12 rnti e66b harq 10 round 0 rv 0 crc_valid 0 processed 1/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 103.17 rnti e66b harq 11 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 104.2 rnti e66b harq 12 round 0 rv 0 crc_valid 0 processed 1/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 109.7 rnti e66b harq 13 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 109.17 rnti e66b harq 15 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 110.2 rnti e66b harq 0 round 0 rv 0 crc_valid 0 processed 1/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 110.12 rnti e66b harq 1 round 0 rv 0 crc_valid 0 processed 1/2 abort 1 dtx 0 TBS 1153 rb 4+17 sym 0+13 mcs 22 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 115.2 rnti e66b harq 0 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 115.7 rnti e66b harq 2 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 115.12 rnti e66b harq 1 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 115.17 rnti e66b harq 3 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 117.2 rnti e66b harq 4 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 121.2 rnti e66b harq 3 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1249 rb 4+17 sym 0+13 mcs 23 Qm 6 SNR 36.2 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 121.7 rnti e66b harq 5 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 121.12 rnti e66b harq 6 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 121.17 rnti e66b harq 7 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.2 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 123.2 rnti e66b harq 4 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 127.2 rnti e66b harq 7 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 127.7 rnti e66b harq 8 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 127.12 rnti e66b harq 9 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 127.17 rnti e66b harq 10 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.2 dB TAest 1
+[0m[HW]     [o-du 0][rx  451595 pps   50178 kbps  209894][tx  315714 pps   35072 kbps   91644][Total Msgs_Rcvd 451595]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0  211973 prach0   13824]
+[0m[HW]     [o_du0][pusch1  211973 prach1   13824]
+[0m[93m[PHY]    ULSCH NAK trace 129.2 rnti e66b harq 4 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 133.2 rnti e66b harq 10 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 133.7 rnti e66b harq 11 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 133.12 rnti e66b harq 12 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.4 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 133.17 rnti e66b harq 14 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.2 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 135.2 rnti e66b harq 4 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 139.2 rnti e66b harq 14 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 139.7 rnti e66b harq 13 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 139.12 rnti e66b harq 15 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.3 dB TAest 1
+[0m[93m[PHY]    ULSCH NAK trace 139.17 rnti e66b harq 0 round 0 rv 0 crc_valid 0 processed 0/2 abort 1 dtx 0 TBS 1313 rb 4+17 sym 0+13 mcs 24 Qm 6 SNR 36.4 dB TAest 1
+[0m[HW]     [o-du 0][rx  501771 pps   50176 kbps  209894][tx  350786 pps   35072 kbps   91644][Total Msgs_Rcvd 501771]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  235525 prach0   15360]
+[0m[HW]     [o_du0][pusch1  235525 prach1   15360]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 336.7 for RNTI E66B! mac_subheader_len: 2, mac_len: 168, remaining pdu_len: 21
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[HW]     [o-du 0][rx  551947 pps   50176 kbps  209894][tx  385858 pps   35072 kbps   91644][Total Msgs_Rcvd 551947]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  259077 prach0   16896]
+[0m[HW]     [o_du0][pusch1  259077 prach1   16896]
+[0m[HW]     [o-du 0][rx  602123 pps   50176 kbps  209894][tx  420930 pps   35072 kbps   91644][Total Msgs_Rcvd 602123]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  282629 prach0   18432]
+[0m[HW]     [o_du0][pusch1  282629 prach1   18432]
+[0m[HW]     [o-du 0][rx  652299 pps   50176 kbps  209894][tx  456002 pps   35072 kbps   91644][Total Msgs_Rcvd 652299]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  306181 prach0   19968]
+[0m[HW]     [o_du0][pusch1  306181 prach1   19968]
+[0m[HW]     [o-du 0][rx  702475 pps   50176 kbps  209894][tx  491074 pps   35072 kbps   91644][Total Msgs_Rcvd 702475]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  329733 prach0   21504]
+[0m[HW]     [o_du0][pusch1  329733 prach1   21504]
+[0m[HW]     [o-du 0][rx  752651 pps   50176 kbps  209894][tx  526146 pps   35072 kbps   91644][Total Msgs_Rcvd 752651]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  353285 prach0   23040]
+[0m[HW]     [o_du0][pusch1  353285 prach1   23040]
+[0m[HW]     [o-du 0][rx  802827 pps   50176 kbps  209894][tx  561218 pps   35072 kbps   91644][Total Msgs_Rcvd 802827]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  376837 prach0   24576]
+[0m[HW]     [o_du0][pusch1  376837 prach1   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  853003 pps   50176 kbps  209894][tx  596290 pps   35072 kbps   91644][Total Msgs_Rcvd 853003]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  400389 prach0   26112]
+[0m[HW]     [o_du0][pusch1  400389 prach1   26112]
+[0m[HW]     [o-du 0][rx  903179 pps   50176 kbps  209894][tx  631362 pps   35072 kbps   91644][Total Msgs_Rcvd 903179]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  423941 prach0   27648]
+[0m[HW]     [o_du0][pusch1  423941 prach1   27648]
+[0m[HW]     [o-du 0][rx  953356 pps   50177 kbps  209897][tx  666434 pps   35072 kbps   91644][Total Msgs_Rcvd 953356]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0  447493 prach0   29184]
+[0m[HW]     [o_du0][pusch1  447493 prach1   29184]
+[0m[HW]     [o-du 0][rx 1003531 pps   50175 kbps  209897][tx  701506 pps   35072 kbps   91644][Total Msgs_Rcvd 1003531]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0  471044 prach0   30720]
+[0m[HW]     [o_du0][pusch1  471044 prach1   30720]
+[0m[HW]     [o-du 0][rx 1053709 pps   50178 kbps  209894][tx  736578 pps   35072 kbps   91644][Total Msgs_Rcvd 1053709]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0  494597 prach0   32256]
+[0m[HW]     [o_du0][pusch1  494597 prach1   32256]
+[0m[HW]     [o-du 0][rx 1103885 pps   50176 kbps  209894][tx  771650 pps   35072 kbps   91644][Total Msgs_Rcvd 1103885]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  518149 prach0   33792]
+[0m[HW]     [o_du0][pusch1  518149 prach1   33792]
+[0m[HW]     [o-du 0][rx 1154061 pps   50176 kbps  209894][tx  806722 pps   35072 kbps   91644][Total Msgs_Rcvd 1154061]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  541701 prach0   35328]
+[0m[HW]     [o_du0][pusch1  541701 prach1   35328]
+[0m[HW]     [o-du 0][rx 1204238 pps   50177 kbps  209897][tx  841794 pps   35072 kbps   91644][Total Msgs_Rcvd 1204238]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0  565253 prach0   36864]
+[0m[HW]     [o_du0][pusch1  565253 prach1   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1254414 pps   50176 kbps  209894][tx  876866 pps   35072 kbps   91644][Total Msgs_Rcvd 1254414]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  588805 prach0   38400]
+[0m[HW]     [o_du0][pusch1  588805 prach1   38400]
+[0m[HW]     [o-du 0][rx 1304590 pps   50176 kbps  209894][tx  911938 pps   35072 kbps   91644][Total Msgs_Rcvd 1304590]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  612357 prach0   39936]
+[0m[HW]     [o_du0][pusch1  612357 prach1   39936]
+[0m[HW]     [o-du 0][rx 1354766 pps   50176 kbps  209894][tx  947010 pps   35072 kbps   91644][Total Msgs_Rcvd 1354766]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  635909 prach0   41472]
+[0m[HW]     [o_du0][pusch1  635909 prach1   41472]
+[0m[HW]     [o-du 0][rx 1404942 pps   50176 kbps  209894][tx  982082 pps   35072 kbps   91644][Total Msgs_Rcvd 1404942]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  659461 prach0   43008]
+[0m[HW]     [o_du0][pusch1  659461 prach1   43008]
+[0m[HW]     [o-du 0][rx 1455118 pps   50176 kbps  209894][tx 1017154 pps   35072 kbps   91644][Total Msgs_Rcvd 1455118]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  683013 prach0   44544]
+[0m[HW]     [o_du0][pusch1  683013 prach1   44544]
+[0m[HW]     [o-du 0][rx 1505293 pps   50175 kbps  209894][tx 1052226 pps   35072 kbps   91644][Total Msgs_Rcvd 1505293]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0  706565 prach0   46080]
+[0m[HW]     [o_du0][pusch1  706564 prach1   46080]
+[0m[HW]     [o-du 0][rx 1555471 pps   50178 kbps  209897][tx 1087298 pps   35072 kbps   91644][Total Msgs_Rcvd 1555471]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0  730117 prach0   47616]
+[0m[HW]     [o_du0][pusch1  730117 prach1   47616]
+[0m[HW]     [o-du 0][rx 1605647 pps   50176 kbps  209894][tx 1122370 pps   35072 kbps   91644][Total Msgs_Rcvd 1605647]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  753669 prach0   49152]
+[0m[HW]     [o_du0][pusch1  753669 prach1   49152]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1655823 pps   50176 kbps  209894][tx 1157442 pps   35072 kbps   91644][Total Msgs_Rcvd 1655823]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  777221 prach0   50688]
+[0m[HW]     [o_du0][pusch1  777221 prach1   50688]
+[0m[HW]     [o-du 0][rx 1705999 pps   50176 kbps  209894][tx 1192514 pps   35072 kbps   91644][Total Msgs_Rcvd 1705999]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  800773 prach0   52224]
+[0m[HW]     [o_du0][pusch1  800773 prach1   52224]
+[0m[HW]     [o-du 0][rx 1756175 pps   50176 kbps  209894][tx 1227586 pps   35072 kbps   91644][Total Msgs_Rcvd 1756175]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  824325 prach0   53760]
+[0m[HW]     [o_du0][pusch1  824325 prach1   53760]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1806351 pps   50176 kbps  209894][tx 1262658 pps   35072 kbps   91644][Total Msgs_Rcvd 1806351]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  847877 prach0   55296]
+[0m[HW]     [o_du0][pusch1  847877 prach1   55296]
+[0m[HW]     [o-du 0][rx 1856527 pps   50176 kbps  209894][tx 1297730 pps   35072 kbps   91644][Total Msgs_Rcvd 1856527]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  871429 prach0   56832]
+[0m[HW]     [o_du0][pusch1  871429 prach1   56832]
+[0m[HW]     [o-du 0][rx 1906703 pps   50176 kbps  209894][tx 1332802 pps   35072 kbps   91644][Total Msgs_Rcvd 1906703]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  894981 prach0   58368]
+[0m[HW]     [o_du0][pusch1  894981 prach1   58368]
+[0m[HW]     [o-du 0][rx 1956879 pps   50176 kbps  209894][tx 1367874 pps   35072 kbps   91644][Total Msgs_Rcvd 1956879]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  918533 prach0   59904]
+[0m[HW]     [o_du0][pusch1  918533 prach1   59904]
+[0m[HW]     [o-du 0][rx 2007055 pps   50176 kbps  209894][tx 1402946 pps   35072 kbps   91644][Total Msgs_Rcvd 2007055]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  942085 prach0   61440]
+[0m[HW]     [o_du0][pusch1  942085 prach1   61440]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2057231 pps   50176 kbps  209894][tx 1438018 pps   35072 kbps   91644][Total Msgs_Rcvd 2057231]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  965637 prach0   62976]
+[0m[HW]     [o_du0][pusch1  965637 prach1   62976]
+[0m[HW]     [o-du 0][rx 2107407 pps   50176 kbps  209894][tx 1473090 pps   35072 kbps   91644][Total Msgs_Rcvd 2107407]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  989189 prach0   64512]
+[0m[HW]     [o_du0][pusch1  989189 prach1   64512]
+[0m[1;31m[NR_MAC] Invalid PDU in 372.12 for RNTI E66B! mac_subheader_len: 2, mac_len: 72, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[HW]     [o-du 0][rx 2157583 pps   50176 kbps  209894][tx 1508162 pps   35072 kbps   91644][Total Msgs_Rcvd 2157583]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1012741 prach0   66048]
+[0m[HW]     [o_du0][pusch1 1012741 prach1   66048]
+[0m[HW]     [o-du 0][rx 2207760 pps   50177 kbps  209897][tx 1543234 pps   35072 kbps   91644][Total Msgs_Rcvd 2207760]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1036293 prach0   67584]
+[0m[HW]     [o_du0][pusch1 1036293 prach1   67584]
+[0m[HW]     [o-du 0][rx 2257935 pps   50175 kbps  209894][tx 1578306 pps   35072 kbps   91644][Total Msgs_Rcvd 2257935]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0 1059845 prach0   69120]
+[0m[HW]     [o_du0][pusch1 1059844 prach1   69120]
+[0m[HW]     [o-du 0][rx 2308112 pps   50177 kbps  209894][tx 1613378 pps   35072 kbps   91644][Total Msgs_Rcvd 2308112]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1083397 prach0   70656]
+[0m[HW]     [o_du0][pusch1 1083397 prach1   70656]
+[0m[HW]     [o-du 0][rx 2358288 pps   50176 kbps  209894][tx 1648450 pps   35072 kbps   91644][Total Msgs_Rcvd 2358288]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1106949 prach0   72192]
+[0m[HW]     [o_du0][pusch1 1106949 prach1   72192]
+[0m[HW]     [o-du 0][rx 2408463 pps   50175 kbps  209894][tx 1683522 pps   35072 kbps   91644][Total Msgs_Rcvd 2408463]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0 1130500 prach0   73728]
+[0m[HW]     [o_du0][pusch1 1130501 prach1   73728]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2458640 pps   50177 kbps  209894][tx 1718594 pps   35072 kbps   91644][Total Msgs_Rcvd 2458640]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1154053 prach0   75264]
+[0m[HW]     [o_du0][pusch1 1154053 prach1   75264]
+[0m[HW]     [o-du 0][rx 2508815 pps   50175 kbps  209894][tx 1753666 pps   35072 kbps   91644][Total Msgs_Rcvd 2508815]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0 1177605 prach0   76800]
+[0m[HW]     [o_du0][pusch1 1177604 prach1   76800]
+[0m[HW]     [o-du 0][rx 2558991 pps   50176 kbps  209894][tx 1788738 pps   35072 kbps   91644][Total Msgs_Rcvd 2558991]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1201156 prach0   78336]
+[0m[HW]     [o_du0][pusch1 1201157 prach1   78336]
+[0m[HW]     [o-du 0][rx 2609167 pps   50176 kbps  209894][tx 1823810 pps   35072 kbps   91644][Total Msgs_Rcvd 2609167]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1224708 prach0   79872]
+[0m[HW]     [o_du0][pusch1 1224709 prach1   79872]
+[0m[HW]     [o-du 0][rx 2659344 pps   50177 kbps  209894][tx 1858882 pps   35072 kbps   91644][Total Msgs_Rcvd 2659344]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1248261 prach0   81408]
+[0m[HW]     [o_du0][pusch1 1248261 prach1   81408]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2709521 pps   50177 kbps  209897][tx 1893954 pps   35072 kbps   91644][Total Msgs_Rcvd 2709521]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1271813 prach0   82944]
+[0m[HW]     [o_du0][pusch1 1271813 prach1   82944]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2759696 pps   50175 kbps  209894][tx 1929026 pps   35072 kbps   91644][Total Msgs_Rcvd 2759696]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50175 tx_pps=35072 total_pps=85247
+[0m[HW]     [o_du0][pusch0 1295365 prach0   84480]
+[0m[HW]     [o_du0][pusch1 1295364 prach1   84480]
+[0m[HW]     [o-du 0][rx 2809873 pps   50177 kbps  209897][tx 1964098 pps   35072 kbps   91644][Total Msgs_Rcvd 2809873]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1318917 prach0   86016]
+[0m[HW]     [o_du0][pusch1 1318916 prach1   86016]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2860050 pps   50177 kbps  209894][tx 1999170 pps   35072 kbps   91644][Total Msgs_Rcvd 2860050]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1342469 prach0   87552]
+[0m[HW]     [o_du0][pusch1 1342469 prach1   87552]
+[0m[HW]     [o-du 0][rx 2910226 pps   50176 kbps  209894][tx 2034242 pps   35072 kbps   91644][Total Msgs_Rcvd 2910226]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1366021 prach0   89088]
+[0m[HW]     [o_du0][pusch1 1366021 prach1   89088]
+[0m[HW]     [o-du 0][rx 2960403 pps   50177 kbps  209897][tx 2069314 pps   35072 kbps   91644][Total Msgs_Rcvd 2960403]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1389573 prach0   90624]
+[0m[HW]     [o_du0][pusch1 1389573 prach1   90624]
+[0m[HW]     [o-du 0][rx 3010579 pps   50176 kbps  209894][tx 2104386 pps   35072 kbps   91644][Total Msgs_Rcvd 3010579]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1413125 prach0   92160]
+[0m[HW]     [o_du0][pusch1 1413125 prach1   92160]
+[0m[HW]     [o-du 0][rx 3060755 pps   50176 kbps  209894][tx 2139458 pps   35072 kbps   91644][Total Msgs_Rcvd 3060755]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1436677 prach0   93696]
+[0m[HW]     [o_du0][pusch1 1436677 prach1   93696]
+[0m[HW]     [o-du 0][rx 3110931 pps   50176 kbps  209894][tx 2174530 pps   35072 kbps   91644][Total Msgs_Rcvd 3110931]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1460229 prach0   95232]
+[0m[HW]     [o_du0][pusch1 1460229 prach1   95232]
+[0m[HW]     [o-du 0][rx 3161107 pps   50176 kbps  209894][tx 2209602 pps   35072 kbps   91644][Total Msgs_Rcvd 3161107]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1483781 prach0   96768]
+[0m[HW]     [o_du0][pusch1 1483781 prach1   96768]
+[0m[HW]     [o-du 0][rx 3211283 pps   50176 kbps  209894][tx 2244674 pps   35072 kbps   91644][Total Msgs_Rcvd 3211283]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1507333 prach0   98304]
+[0m[HW]     [o_du0][pusch1 1507333 prach1   98304]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 3261459 pps   50176 kbps  209894][tx 2279746 pps   35072 kbps   91644][Total Msgs_Rcvd 3261459]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1530885 prach0   99840]
+[0m[HW]     [o_du0][pusch1 1530885 prach1   99840]
+[0m

@@ -1,0 +1,119 @@
+CMDLINE: "/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/nr-softmodem" "-O" "/home/jesse/oran_lab/gnb_rfsim.conf" "--rfsim" "--thread-pool" "4,5,6,7" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (,synch_to_ext_device),
+[0m[PHY]    RU thread-pool core string -1,-1 (size 2)
+[0m[PHY]    Starting RU 0 (,synch_to_ext_device) on cpu 4
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 75, rx_freq 4049760000 Hz
+[0m[HW]     Running as server waiting opposite rfsimulators to connect
+[0m[HW]     [RAU] has loaded RFSIMULATOR device.
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 6
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[CONFIG] function config_libconfig_init returned 0
+Initializing random number generator, seed 14872779429539746085
+[PHY]    RU 0 rf device ready
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     No connected device, generating void samples...
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     Client connects from ::ffff:127.0.0.1:30392
+[0m[32m[HW]     RFsim: Number of antennas changed from 0 to 1
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m
+** Caught SIGTERM, shutting down
+[PHY]    Killing gNB 0 processing threads
+[0m[PHY]    Stopping RU 0 processing threads
+[0m[PHY]    RU 0 RF device stopped
+[0mTYPE <CTRL-C> TO TERMINATE
+Returned from ITTI signal handler
+Bye.

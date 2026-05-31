@@ -1,0 +1,3 @@
+timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes
+2026-05-30T02:15:10,9,1,ok,10.0.0.8,1,vrtsim,4049760000,24,24,24,24,1,1,1,35,34.240,0.000,39.000,26,43.123,108.900,152.023,152.028,0.000,7.235,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_021416/iq9,UL iperf failed
+2026-05-30T02:16:48,16,0,ok,10.0.0.9,1,vrtsim,4049760000,24,24,24,24,1,1,1,32,37.450,26.200,39.000,54,72.959,182.321,255.280,255.295,0.000,6.187,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_021416/iq16,UL iperf failed

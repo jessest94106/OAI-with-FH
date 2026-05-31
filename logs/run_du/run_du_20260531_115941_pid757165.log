@@ -1,0 +1,2454 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260531_115941_pid757165.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2816000 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 2, NB_TX 2
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x756ccbfe34b0
+  tx_up_eAxC2Vf 0x756ccbfe40b0
+  rx_cp_eAxC2Vf 0x756ccbfe4cb0
+  rx_up_eAxC2Vf 0x756ccbfe58b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 757188]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+O-XU      0
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 757188]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 757188]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 757188]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x756c9cf95040
+xran_sector_get_instances [0]: CC 0 handle 0x756cc0196800
+Handle: 0x756ce03ae468 Instance: 0x756c[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 2
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]    got sync (ru_thread)
+[0m[PHY]    got sync (L1_stats_thread)
+[0mc0196800
+-> hInstance 0x756cc0196800
+ru_0_cc_0_idx_0: [ handle 0x756cc0196800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 1023 nBufferSize 14116 socket_id 0
+CC:[ handle 0x756cc0196800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x756cc0196800 poolIdx 0 elements 1023 size 14116
+xran_bm_allocate_buffer() hInstance 0x756cc0196800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x756cc0196800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x756cc0196800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786ac0 
+xran_bm_init() hInstance 0x756cc0196800 poolIdx 1 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x756cc0196800 poolIdx 1 count 40
+ru_0_cc_0_idx_2: [ handle 0x756cc0196800 0 0 ] [nPoolIndex 2] nNumberOfBuffers 1023 nBufferSize 13168 socket_id 0
+CC:[ handle 0x756cc0196800 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786580 
+xran_bm_init() hInstance 0x756cc0196800 poolIdx 2 elements 1023 size 13168
+xran_bm_allocate_buffer() hInstance 0x756cc0196800 poolIdx 2 count 560
+ru_0_cc_0_idx_3: [ handle 0x756cc0196800 0 0 ] [nPoolIndex 3] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x756cc0196800 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284788b80 
+xran_bm_init() hInstance 0x756cc0196800 poolIdx 3 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x756cc0196800 poolIdx 3 count 40
+ru_0_cc_0_idx_4: [ handle 0x756cc0196800 0 0 ] [nPoolIndex 4] nNumberOfBuffers 1023 nBufferSize 3360 socket_id 0
+CC:[ handle 0x756cc0196800 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788580 
+xran_bm_init() hInstance 0x756cc0196800 poolIdx 4 elements 1023 size 3360
+xran_bm_allocate_buffer() hInstance 0x756cc0196800 poolIdx 4 count 560
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/31/26 18:59:45.468033159 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=12, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=13, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=0, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=1, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=2, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     TTI processing delay detected, skipping    0.10 =>    1. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 1.8, expected 0.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 1.8 , expected 0.8)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[HW]     [o-du 0][rx   50000 pps   50000 kbps  108129][tx   35138 pps   35138 kbps   47791][Total Msgs_Rcvd 50000]
+[0m[HW]     [FH LOAD][o-du 0] rx=108.129 Mbps tx=47.791 Mbps total=155.920 Mbps rx_pps=50000 tx_pps=35138 total_pps=85138
+[0m[HW]     [o_du0][pusch0   23464 prach0    1536]
+[0m[HW]     [o_du0][pusch1   23464 prach1    1536]
+[0m[PHY]    ULSCH ACK trace 169.18 rnti e481 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 170.16 rnti e481 harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 171.16 rnti e481 harq 0 round 1 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 171.18 rnti 9e53 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 40.6 dB TAest 0
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e53
+[0m[PHY]    ULSCH ACK trace 172.16 rnti e481 harq 0 round 1 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 27.3 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE e481 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[PHY]    ULSCH ACK trace 173.17 rnti 9e53 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 30.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 174.12 rnti 9e53 harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 37.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 177.12 rnti 9e53 harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 178.2 rnti 9e53 harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 178.12 rnti 9e53 harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 180.2 rnti 9e53 harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 180.12 rnti 9e53 harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 181.2 rnti 9e53 harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 181.12 rnti 9e53 harq 8 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 185.2 rnti 9e53 harq 9 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 185.12 rnti 9e53 harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 186.2 rnti 9e53 harq 11 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 187.2 rnti 9e53 harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 190.2 rnti 9e53 harq 13 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 190.12 rnti 9e53 harq 14 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 191.2 rnti 9e53 harq 15 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 191.12 rnti 9e53 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[PHY]    ULSCH ACK trace 195.2 rnti 9e53 harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 195.12 rnti 9e53 harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 196.2 rnti 9e53 harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 196.12 rnti 9e53 harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 201.12 rnti 9e53 harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 202.2 rnti 9e53 harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 202.12 rnti 9e53 harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 203.2 rnti 9e53 harq 8 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 208.2 rnti 9e53 harq 9 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 40.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 208.12 rnti 9e53 harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 66 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  100176 pps   50176 kbps  209894][tx   70210 pps   35072 kbps   91644][Total Msgs_Rcvd 100176]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0   47016 prach0    3072]
+[0m[HW]     [o_du0][pusch1   47016 prach1    3072]
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [256.2], received unknown MAC header (LCID = 0x29)
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 2e not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [269.2], received unknown MAC header (LCID = 0x2e)
+[0m[93m[RLC]    ack_sn (5) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [312.2], received unknown MAC header (LCID = 0x29)
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 2e not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [346.2], received unknown MAC header (LCID = 0x2e)
+[0m[93m[RLC]    ack_sn (5) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [376.2], received unknown MAC header (LCID = 0x29)
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[HW]     [o-du 0][rx  150352 pps   50176 kbps  209894][tx  105282 pps   35072 kbps   91644][Total Msgs_Rcvd 150352]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0   70568 prach0    4608]
+[0m[HW]     [o_du0][pusch1   70568 prach1    4608]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  200528 pps   50176 kbps  209894][tx  140354 pps   35072 kbps   91644][Total Msgs_Rcvd 200528]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0   94120 prach0    6144]
+[0m[HW]     [o_du0][pusch1   94120 prach1    6144]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [609.12], received unknown MAC header (LCID = 0x29)
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  250704 pps   50176 kbps  209894][tx  175426 pps   35072 kbps   91644][Total Msgs_Rcvd 250704]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  117672 prach0    7680]
+[0m[HW]     [o_du0][pusch1  117672 prach1    7680]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  300880 pps   50176 kbps  209894][tx  210498 pps   35072 kbps   91644][Total Msgs_Rcvd 300880]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  141224 prach0    9216]
+[0m[HW]     [o_du0][pusch1  141224 prach1    9216]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [891.2], received unknown MAC header (LCID = 0x29)
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 6 tx_next 6), discard control PDU
+[0m[HW]     [o-du 0][rx  351054 pps   50174 kbps  209894][tx  245570 pps   35072 kbps   91644][Total Msgs_Rcvd 351054]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50174 tx_pps=35072 total_pps=85246
+[0m[HW]     [o_du0][pusch0  164775 prach0   10752]
+[0m[HW]     [o_du0][pusch1  164775 prach1   10752]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[RLC]    ack_sn (0) not valid (tx_next_ack 2 tx_next 3), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 1013.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 62976, remaining pdu_len: 103
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[93m[RLC]    ack_sn (1) not valid (tx_next_ack 2 tx_next 3), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  401232 pps   50178 kbps  209894][tx  280642 pps   35072 kbps   91644][Total Msgs_Rcvd 401232]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50178 tx_pps=35072 total_pps=85250
+[0m[HW]     [o_du0][pusch0  188328 prach0   12288]
+[0m[HW]     [o_du0][pusch1  188328 prach1   12288]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[RLC]    ack_sn (2) not valid (tx_next_ack 3 tx_next 5), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[RLC]    ack_sn (0) not valid (tx_next_ack 5 tx_next 8), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[RLC]    ack_sn (5) not valid (tx_next_ack 8 tx_next 8), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [70.12], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 73.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 40704, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 74.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 73, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] LCID 2a not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [76.12], received unknown MAC header (LCID = 0x2a)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [79.2], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [87.7], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [87.17], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 22 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [88.7], received unknown MAC header (LCID = 0x22)
+[0m[1;31m[NR_MAC] Invalid PDU in 89.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 48640, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 89.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 51712, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 89.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 47872, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 90.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 24320, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2e not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [92.2], received unknown MAC header (LCID = 0x2e)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [103.17], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [110.2], received unknown MAC header (LCID = 0x2c)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [111.17], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 114.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 37376, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 121.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 117, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [121.12], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] Invalid PDU in 122.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 101, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 37 not handled yet!
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [124.2], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 22 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [124.17], received unknown MAC header (LCID = 0x22)
+[0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [126.2], received unknown MAC header (LCID = 0x2c)
+[0m[HW]     [o-du 0][rx  451408 pps   50176 kbps  209894][tx  315714 pps   35072 kbps   91644][Total Msgs_Rcvd 451408]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  211880 prach0   13824]
+[0m[HW]     [o_du0][pusch1  211880 prach1   13824]
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [129.12], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] Invalid PDU in 132.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 7658, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2e not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [133.2], received unknown MAC header (LCID = 0x2e)
+[0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [134.2], received unknown MAC header (LCID = 0x2c)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 139.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 51103, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 140.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 7658, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [142.2], received unknown MAC header (LCID = 0x2c)
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [143.12], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [144.2], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 148.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 7658, remaining pdu_len: 208
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 148.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 616, remaining pdu_len: 66
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 149.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 596, remaining pdu_len: 46
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 151.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 552, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 153.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 616, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 155.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 188, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 155.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 619, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 157.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 596, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 160.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 166, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 161.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 616, remaining pdu_len: 92
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e53
+[0m[MAC]    UE with RNTI 9e53 is RedCap
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] Invalid PDU in 164.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 20993, remaining pdu_len: 4
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 165.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 13358, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 167.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 70, remaining pdu_len: 17
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 169.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 170, remaining pdu_len: 19
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2f not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [173.7], received unknown MAC header (LCID = 0x2f)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 178.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 56541, remaining pdu_len: 34
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 182.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 24915, remaining pdu_len: 32
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 182.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 51715, remaining pdu_len: 53
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [183.7], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [184.2], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [184.17], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] Invalid PDU in 185.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 33, remaining pdu_len: 34
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 186.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 56541, remaining pdu_len: 34
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [189.12], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [191.7], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [192.2], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 27 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [195.2], received unknown MAC header (LCID = 0x27)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 202.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 86, remaining pdu_len: 72
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 203.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 47824, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [204.17], received unknown MAC header (LCID = 0x29)
+[0m[1;31m[NR_MAC] Invalid PDU in 208.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 44390, remaining pdu_len: 116
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 21 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [209.17], received unknown MAC header (LCID = 0x21)
+[0m[1;31m[NR_MAC] Invalid PDU in 211.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 44713, remaining pdu_len: 44
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 215.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 5632, remaining pdu_len: 44
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 22 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [216.2], received unknown MAC header (LCID = 0x22)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 37 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 217.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 31221, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 223.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 5632, remaining pdu_len: 84
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2f not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [229.17], received unknown MAC header (LCID = 0x2f)
+[0m[1;31m[NR_MAC] LCID 37 not handled yet!
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 2a not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [230.2], received unknown MAC header (LCID = 0x2a)
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 24 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [230.12], received unknown MAC header (LCID = 0x24)
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [231.7], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 29 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [232.17], received unknown MAC header (LCID = 0x29)
+[0m[1;31m[NR_MAC] LCID 21 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [234.17], received unknown MAC header (LCID = 0x21)
+[0m[1;31m[NR_MAC] LCID 2f not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [237.17], received unknown MAC header (LCID = 0x2f)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 239.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 50514, remaining pdu_len: 38
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [239.7], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [242.2], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] Invalid PDU in 243.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 24944, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [247.7], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 2f not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [253.17], received unknown MAC header (LCID = 0x2f)
+[0m[HW]     [o-du 0][rx  501584 pps   50176 kbps  209894][tx  350786 pps   35072 kbps   91644][Total Msgs_Rcvd 501584]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  235432 prach0   15360]
+[0m[HW]     [o_du0][pusch1  235432 prach1   15360]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 258.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 1442, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 259.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 82, remaining pdu_len: 65
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 263.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 248, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 265.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 181, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 22 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [265.7], received unknown MAC header (LCID = 0x22)
+[0m[1;31m[NR_MAC] Invalid PDU in 266.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 1442, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 267.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 30975, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0mO-DU: thread_run start time: 05/31/26 18:59:46.000000016 UTC [500]
+c9 f6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+56 9f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+87 49 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+51 be 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+fc ca 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+fe bb 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+dc 5f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+47 92 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+99 75 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+05 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+7e 1d ea 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+c5 c7 9f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+7e 1d ea 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+7e 1d ea 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+44 02 68 f0 00 32 00 f0 08 df 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 
+44 02 54 90 00 33 80 00 33 81 45 00 05 c4 d0 92 40 00 40 11 50 38 0a 00 00 5e 0a 00 00 01 
+44 02 28 b0 00 27 00 d8 d3 c0 5a bf 0c 5d 02 e1 0d 04 85 62 5e 24 e1 af f8 ab 79 f5 14 6c 
+44 02 68 b0 00 34 01 4c 9d 5d 8c 2b e9 34 ee 61 67 24 bf bd fe 11 3c 6e e0 74 82 c0 73 c2 
+44 00 bc a0 00 35 05 11 ac 96 97 57 1d 82 22 0e e4 b4 42 2f db ff 3b e2 69 99 63 da 51 65 
+44 02 6b b0 00 31 01 f4 7f c5 44 24 7e 56 60 73 67 46 18 7d 04 15 b6 eb 54 54 3e 2b 8c b2 
+44 02 54 90 00 33 80 00 33 81 45 00 05 c4 d0 92 40 00 40 11 50 38 0a 00 00 5e 0a 00 00 01 
+1d a6 d6 b8 7b e9 06 03 bc 5a d0 83 1f 02 7f c5 44 24 7e 56 60 73 67 
+44 02 68 b0 00 34 01 4c 9d 5d 8c 2b e9 34 ee 61 67 24 bf bd fe 11 3c 6e e0 74 82 c0 73 c2 
+5f 52 01 81 
+cc 34 2e ac 1e 7d 41 21 de eb 54 c7 c9 de a8 39 bd 79 bc c1 83 a3 0c 
+12 46 cc df 73 6e 45 0b e2 20 6e 81 07 e0 02 e0 d4 
+0f aa ab 79 f5 14 6c 9c b5 08 df 5c 26 0f ec 77 48 ce 1d 
+5a dc dd 21 7e 0c f6 e9 e2 4d 4b d9 26 41 1b eb e8 3e 82 78 d2 ee e4 df 87 00 81 1e 30 cc 
+de 61 53 9d 0d 24 6f a6 92 06 e0 c8 60 48 56 80 11 8f 25 ee 3f dd 43 4e 4f b1 91 c1 7f 64 
+d6 ca 03 8c be 28 89 2e 5f 9d ee 82 77 a8 20 6e 1f cd 10 51 e4 6a 01 fd 44 01 f7 90 00 31 
+05 21 cc 94 db e6 d6 aa 90 e6 5d 70 03 8c be 28 89 2e 5f 9d ee 82 77 a8 20 6e 1f cd 10 51 
+5a dc dd 21 7e 0c f6 e9 e2 4d 4b d9 26 41 1b eb e8 3e 82 78 d2 ee e4 df 87 00 81 1e 30 cc 
+93 56 1f 4e 74 54 72 d3 c0 5a bf 0c 5d 02 e1 0d 04 85 62 5e 24 e1 af f8 ab 79 f5 14 6c 9c 
+c7 ba d0 29 e6 66 11 9f 67 b8 9a 3d d9 a1 47 a6 6d 06 e6 03 f9 26 fe 6f 71 9c 5d 53 06 98 
+7c ad 66 8c 6e e0 b7 99 cd 2f 00 ad a6 ed 77 35 f0 52 31 54 41 e7 05 95 00 42 20 04 7e 58 
+d9 ae a9 02 79 68 0f 33 a5 12 d9 2b c8 6e a1 e9 b7 1a 58 af 22 b1 83 1a 2f 0a 7a 01 ad a2 
+47 16 00 01 a6 df 14 51 05 b0 61 c2 00 0a 39 46 00 06 77 48 00 00 00 2d c8 2c 62 07 31 85 
+cb 79 f5 14 6c 9c b5 08 df 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 e5 
+47 16 00 01 a6 df 14 51 05 b0 61 c2 00 0a 39 46 00 06 77 48 00 00 00 2d c8 2c 62 07 31 85 
+47 c5 52 95 e9 de f4 38 d1 b2 fb 1c 3b 74 53 a4 3b d2 d1 a5 b1 f4 bb 24 de 61 53 9d 0d 24 
+c6 61 70 03 8c be 28 89 2e 5f 9d ee 82 77 a8 20 6e 1f cd 10 51 e4 6a 01 fd 04 f3 90 00 32 
+4d 05 a2 74 43 e9 ce 58 9e 79 9c 30 ed 07 e7 05 20 6d 5d 70 60 55 dd 09 37 f9 70 e3 fd ad 
+95 52 de 61 53 9d 0d 24 6f a6 92 06 e0 c8 60 48 9b c8 11 8f 25 ee 3f dd 43 4e 4f b1 91 c1 
+99 f8 39 11 78 22 c0 e7 d5 c9 f2 47 02 46 24 79 f9 55 ac 58 e2 b6 1c 86 5a e3 47 ec 7e fc 
+98 b5 08 df 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 e5 31 36 b7 ce 70 
+4d 05 a2 74 43 e9 ce 58 9e 79 9c 30 ed 07 e7 05 20 6d 5d 70 60 55 dd 09 37 f9 70 e3 fd ad 
+4d 78 ff df 7e d8 28 5f b8 46 d5 c1[1;31m[NR_MAC] Invalid PDU in 268.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 41397, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 268.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 796, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 270.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 222, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 273.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 110, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 25 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [276.2], received unknown MAC header (LCID = 0x25)
+[0m[1;31m[NR_MAC] Invalid PDU in 276.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 41397, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 276.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 796, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 278.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 16271, remaining pdu_len: 62
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 278.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 222, remaining pdu_len: 123
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 279.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 24309, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 282.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 1442, remaining pdu_len: 172
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 287.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 180, remaining pdu_len: 123
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 287.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 204, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 289.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 85, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 290.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 206, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 290.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 185, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 296.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 555, remaining pdu_len: 69
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 297.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 555, remaining pdu_len: 92
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 298.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 185, remaining pdu_len: 92
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 33 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [298.12], received unknown MAC header (LCID = 0x33)
+[0m[1;31m[NR_MAC] Invalid PDU in 303.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 36372, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 304.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 26, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 305.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 619, remaining pdu_len: 92
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 2e not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [309.7], received unknown MAC header (LCID = 0x2e)
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [310.2], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 310.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 108, remaining pdu_len: 19
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 311.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 149, remaining pdu_len: 19
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 25 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [316.12], received unknown MAC header (LCID = 0x25)
+[0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [317.12], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 318.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 108, remaining pdu_len: 53
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 37 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 320.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 32342, remaining pdu_len: 33
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [322.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 323.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 254, remaining pdu_len: 33
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 328.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 155, remaining pdu_len: 32
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 329.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 148, remaining pdu_len: 32
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [330.12], received unknown MAC header (LCID = 0x32)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] Invalid PDU in 331.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 41, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [331.7], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] Invalid PDU in 336.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 155, remaining pdu_len: 32
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 37 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 337.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 29323, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [338.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 343.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 111, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [344.2], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] Invalid PDU in 344.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 155, remaining pdu_len: 72
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [346.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 348.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 223, remaining pdu_len: 30
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 351.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 146, remaining pdu_len: 43
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 353.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 33574, remaining pdu_len: 43
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e53
+[0m[MAC]    UE with RNTI 9e53 is RedCap
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [353.12], received unknown MAC header (LCID = 0x28)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] Invalid PDU in 354.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 16384, remaining pdu_len: 37
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] Invalid PDU in 356.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 223, remaining pdu_len: 30
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 3 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [359.7], received unknown MAC header (LCID = 0x03)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 362.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 29146, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 363.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 183, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 364.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 14717, remaining pdu_len: 40
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 368.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 21790, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 369.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 3346, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 370.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 168, remaining pdu_len: 20
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 371.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 183, remaining pdu_len: 88
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 372.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 14717, remaining pdu_len: 88
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 25 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [374.7], received unknown MAC header (LCID = 0x25)
+[0m[1;31m[NR_MAC] Invalid PDU in 377.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 47, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m 31 11 fa 75 4f 2f c9 5c c5 f8 4b 64 ba fb f3 32 fb 93 
+d6 a1 b5 74 9f b9 7f 90 f0 12 46 cc df 73 6e 45 0b e2 20 6e 81 07 e0 02 e0 d4 81 cc cb f0 
+5c 03 1c 1a 8b 35 67 37 ff 87 51 bc 83 ca 6d 6d 6a 70 3a ee 73 78 29 33 8a eb a3 94 57 29 
+9f de 4e 69 57 02 78 b1 74 e0 82 f7 9e 3b 67 a4 88 78 23 05 86 6d c2 cd a2 08 19 43 b7 e0 
+84 6e da dd 59 cf 40 de 9e 8a f5 7f 72 c2 39 12 b4 29 07 83 31 83 39 11 78 22 c0 e7 d5 c9 
+d6 a1 b5 74 9f b9 7f 90 f0 12 46 cc df 73 6e 45 0b e2 20 6e 81 07 e0 02 e0 d4 81 cc cb f0 
+5c 03 1c 1a 8b 35 67 37 ff 87 51 bc 83 ca 6d 6d 6a 70 3a ee 73 78 29 33 8a eb a3 94 57 29 
+7c 3f 8f a5 d0 db f3 8d 5f 1f fa dd c7 ba 01 cc 94 db e6 d6 aa 90 e6 5d 70 03 8c be 28 89 
+9f de 4e 69 57 02 78 b1 74 e0 82 f7 9e 3b 67 a4 88 78 23 05 86 6d c2 cd a2 08 19 43 b7 e0 
+cc 5e f5 65 52 bf 68 3d a7 b8 6f 04 2f 9e ce 66 be 6d 0c 52 e1 60 15 7d 65 7a e2 96 a9 f0 
+4d 05 a2 74 43 e9 ce 58 9e 79 9c 30 ed 07 e7 05 20 6d 5d 70 60 55 dd 09 37 f9 70 e3 fd ad 
+1e b4 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 e5 31 36 b7 ce 70 e7 a1 
+10 cc 1a f9 f6 82 7e 0d 08 60 83 52 be 38 44 73 02 67 65 c8 17 c0 0c ef ef 3e 2f 6e 9b ca 
+1e 55 65 ac 7e ea a2 de db c5 c2 9b 7d 57 1f 61 72 8b 35 15 ad 79 2e 02 2c e2 c9 d1 ba 54 
+44 00 ce a0 00 65 04 ff 1c d6 6e 97 0e 40 f0 2d 8e 4a c2 d1 0b 3b f0 3a e2 63 ac 96 97 57 
+44 00 b9 a0 00 54 05 14 57 1d 82 22 0e e4 b4 42 2f db ff 3b e2 69 99 63 da 51 65 29 92 9b 
+44 02 2b b0 00 64 00 11 00 00 5e 0a 00 00 01 a6 df 14 51 05 b0 1b 48 00 0a 39 46 00 06 bd 
+44 02 2b b0 00 65 02 d9 7a e2 96 a9 f0 00 57 56 0d c8 15 92 2d bd be 03 44 c6 6c 44 cc 6e 
+44 00 b9 a0 00 54 05 14 57 1d 82 22 0e e4 b4 42 2f db ff 3b e2 69 99 63 da 51 65 29 92 9b 
+47 8e 14 c8 43 28 1c 45 45 bf df 70 6a cc 03 6e 76 2e d5 9a e2 15 67 
+88 1a 9c 30 ed 07 e7 05 20 6d 5d 70 60 55 dd 09 37 f9 70 e3 fd ad 69 
+44 02 6b b0 00 6a 00 8b e9 17 6b ca 14 8b a9 5e bd 17 2b 6f 0a 73 67 c5 52 95 e9 de f4 38 
+91 6c ee 3f dd 43 4e 4f b1 91 c1 7f 64 75 ea 28 00 1f 4e 
+0e 95 c6 6c 44 cc 6e a4 f6 e2 30 5a 11 f0 6c 36 37 60 06 
+91 6c ee 3f dd 43 4e 4f b1 91 c1 7f 64 75 ea 28 00 1f 4e 0b 7e 72 d3 c0 5a bf 0c 5d 02 e1 
+4c 7e 56 60 73 67 46 18 7d 04 15 b6 eb 54 54 3e 2b 8c b2 26 3f ea c6 ab f8 a2 06 cd e7 a4 
+18 fe 04 0d 38 14 37 57 ed c3 06 db 08 b9 a8 7e 74 88 3d 15 48 1e 4f 95 dd 21 7e 0c f6 e9 
+85 9b 3a f7 ca ea e3 a8 85 a9 28 fd b7 f2 00 b1 ce 2f 60 61 32 72 44 c8 dc e9 47 51 00 ef 
+99 94 52 01 81 9a 7f fe 9d 51 84 dd bd 9d 5d 8c 2b e9 34 ee 61 67 24 bf bd fe 11 3c 6e e0 
+1f 29 06 62 ce 2b 95 df 0a 59 e9 b7 f1 da 39 0b 24 59 fd 0c 08 c8 42 
+85 9b 3a f7 ca ea e3 a8 85 a9 28 fd b7 f2 00 b1 ce 2f 60 61 32 72 44 c8 dc e9 47 51 00 ef 
+4f 72 8b 35 15 ad 79 2e 02 2c e2 c9 d1 ba 54 ba b9 e6 7a d0 c6 9b 54 08 2d cc de b6 f1 2f 
+02 6f 8b 62 ac ca 8c 4f f1 6d 5e b5 2b 03 52 91 6c 82 85 f2 f8 5d 82 df 05 a1 54 22 09 81 
+85 9b 3a f7 ca ea e3 a8 85 a9 28 fd b7 f2 00 b1 ce 2f 60 61 32 72 44 c8 dc e9 47 51 00 ef 
+08 df 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 e5 31 36 b7 ce 70 e7 a1 
+05 92 90 00 69 80 00 69 81 45 00 05 c4 d0 c8 40 00 40 11 50 02 0a 00 00 5e 0a 00 00 01 a6 
+da 83 26 62 7c 9d f8 d0 82 f2 db e6 f6 cf c1 b7 60 35 6a 32 32 19 09 0a 21 58 2b 04 d5 fc 
+c5 40 00 40 11 50 05 0a 00 00 5e 0a 00 00 01 a6 df 14 51 05 b0 17 57 00 0a 39 46 00 06 c1 
+08 df 5c 26 0f ec 77 48 ce 1d 0e 83 dc 52 33 2c f2 00 dd 7f 06 e1 e5 31 36 b7 ce 70 e7 a1 
+4c 71 da 8d 74 e2 00 65 82 51 39 9f 64 2f 94 46 dd 18 80 ff 78 46 50 ea 1c 23 e5 44 c5 02 
+8a b7 00 00 00 60 c8 2c 62 07 31 85 c5 70 fd 7a 46 d3 d5 7e b1 a6 ff df 7e d8 28 5f b8 46 
+55 39 7d d6 4b 87 dc 37 da 71 59 0c 53 3d 24 11 64 65 1e d0 29 e6 66 11 9f 67 b8 9a 3d d9 
+4a 55 1e e3 e4 ce da f0 68 cd 5f 52 01 81 9a 7f fe 9d 51 84 dd bd 9d 5d 8c 2b e9 34 ee 61 
+de 0d 12 d9 2b c8 6e a1 e9 b7 1a 58 af 22 b1 83 1a 2f 0a 7a 01 ad a2 74 43 e9 ce 58 9e 79 
+13 a8 cc 85 57 31 2a 50 35 92 91 07 43 2b 5f 1a 5f 43 2b 63 
+8a b7 00 00 00 60 c8 2c 62 07 31 85 c5 70 fd 7a 46 d3 d5 7e b1 a6 ff df 7e d8 28 5f b8 46 
+55 39 7d d6 4b 87 dc 37 da 71 59 0c 53 3d 24 11 64 65 1e d0 29 e6 66 11 9f 67 b8 9a 3d d9 
+9f 2f b7 e0 7[1;31m[NR_MAC] Invalid PDU in 378.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 53669, remaining pdu_len: 3
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 378.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 168, remaining pdu_len: 59
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 383.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 32896, remaining pdu_len: 87
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 383.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 131, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[HW]     [o-du 0][rx  551760 pps   50176 kbps  209894][tx  385858 pps   35072 kbps   91644][Total Msgs_Rcvd 551760]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  258984 prach0   16896]
+[0m[HW]     [o_du0][pusch1  258984 prach1   16896]
+[0m[1;31m[NR_MAC] Invalid PDU in 384.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 58262, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [384.17], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] Invalid PDU in 385.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 47, remaining pdu_len: 39
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 27 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [397.12], received unknown MAC header (LCID = 0x27)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [399.17], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [400.7], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[RLC]    discard PDU, CPT not 0 (2)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 401.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 51943, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [403.7], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] Invalid PDU in 404.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 202, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 405.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 16562, remaining pdu_len: 49
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 27 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [405.12], received unknown MAC header (LCID = 0x27)
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [407.17], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] Invalid PDU in 408.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 133, remaining pdu_len: 41
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [408.12], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] LCID 28 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [412.7], received unknown MAC header (LCID = 0x28)
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [415.17], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [417.12], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] Invalid PDU in 418.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 46602, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 420.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 45478, remaining pdu_len: 23
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [423.17], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] Invalid PDU in 429.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 38415, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 25 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [429.17], received unknown MAC header (LCID = 0x25)
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [431.17], received unknown MAC header (LCID = 0x2b)
+[0m[1;31m[NR_MAC] Invalid PDU in 432.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 143, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [434.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 435.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 116, remaining pdu_len: 61
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 437.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 38415, remaining pdu_len: 64
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 438.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 3059, remaining pdu_len: 80
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [442.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 443.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 183, remaining pdu_len: 80
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 443.12 for RNTI 9E53! mac_subheader_len: 2, mac_len: 226, remaining pdu_len: 80
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 444.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 202, remaining pdu_len: 41
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 445.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 61577, remaining pdu_len: 80
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 446.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 3059, remaining pdu_len: 80
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [448.17], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 452.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 37255, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2a not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [454.7], received unknown MAC header (LCID = 0x2a)
+[0m[1;31m[NR_MAC] Invalid PDU in 454.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 193, remaining pdu_len: 48
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [458.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 465.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 37673, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [466.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 467.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 44467, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 467.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 191, remaining pdu_len: 192
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 477.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 58698, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 478.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 24739, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 480.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 122, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 481.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 43632, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 482.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 5960, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 484.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 11672, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] Invalid PDU in 485.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 58698, remaining pdu_len: 113
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 489.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 43632, remaining pdu_len: 209
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 490.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 5960, remaining pdu_len: 209
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 491.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 14749, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 3 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [491.17], received unknown MAC header (LCID = 0x03)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 492.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 31744, remaining pdu_len: 95
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 492.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 33735, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 2f not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [494.17], received unknown MAC header (LCID = 0x2f)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 500.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 33735, remaining pdu_len: 192
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 24 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [501.17], received unknown MAC header (LCID = 0x24)
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [503.7], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 3 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [504.2], received unknown MAC header (LCID = 0x03)
+[0m[1;31m[NR_MAC] Invalid PDU in 504.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 28072, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 508.7 for RNTI 9E53! mac_subheader_len: 2, mac_len: 186, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [509.7], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [510.7], received unknown MAC header (LCID = 0x30)
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [511.7], received unknown MAC header (LCID = 0x31)
+[0m[HW]     [o-du 0][rx  601936 pps   50176 kbps  209894][tx  420930 pps   35072 kbps   91644][Total Msgs_Rcvd 601936]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  282536 prach0   18432]
+[0m[HW]     [o_du0][pusch1  282536 prach1   18432]
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] LCID 3 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [512.2], received unknown MAC header (LCID = 0x03)
+[0m[1;31m[NR_MAC] LCID 25 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [513.17], received unknown MAC header (LCID = 0x25)
+[0m[1;31m[NR_MAC] Invalid PDU in 515.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 232, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 30 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [517.7], received unknown MAC header (LCID = 0x30)
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [519.7], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] Invalid PDU in 520.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 26408, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 520.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 9006, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 38 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 520.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 233, remaining pdu_len: 95
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0ma cd 7a 63 56 e7 78 e5 6e b1 3a f7 ca ea e3 a8 85 a9 28 fd b7 f2 00 b1 ce 2f 
+d2 d1 a5 
+13 a8 cc 85 57 31 2a 50 35 92 91 07 43 2b 5f 1a 5f 43 2b 63 10 4c 03 01 82 1c cd 5d e7 5f 
+fc 80 80 00 5c 81 45 00 05 c4 d0 bb 40 00 40 11 50 0f 0a 00 00 5e 0a 00 00 01 a6 df 14 51 
+9a 83 0c f6 ce 4e 57 89 df c3 a8 67 e7 e9 17 6b ca 14 8b a9 5e bd 17 2b 6f 0a 73 67 c5 52 
+cc e3 96 97 57 1d 82 22 0e e4 b4 42 2f db ff 3b e2 69 99 63 da 51 65 29 92 9b cb d3 41 7c 
+9f 2f b7 e0 7a cd 7a 63 56 e7 78 e5 6e b1 3a f7 ca ea e3 a8 85 a9 28 fd b7 f2 00 b1 ce 2f 
+ce ca e7 0e 08 16 dd c9 c9 66 7a 31 1b bd 0e da dd 59 cf 40 de 9e 8a f5 7f 72 c2 39 12 b4 
+86 ca cd 5d e7 5f 02 77 8c b0 2b 75 55 2e ac 1e 7d 41 21 de eb 54 c7 c9 de a8 39 bd 79 bc 
+d8 40 b2 26 3f ea c6 ab f8 a2 06 cd e7 a4 1c c3 21 74 94 c4 05 86 d4 36 99 01 9a c7 18 a5 
+82 85 f2 f8 5d 82 df 05 a1 54 22 09 81 c4 f7 dc 9b 48 fb 5d f0 4e 16 8d 1c 08 fd 6b d6 25 
+4c b6 0a 00 65 0e 52 26 89 a8 9c 0d 75 3a f7 76 38 e6 d8 fe 52 91 38 c0 e9 0f c6 77 9d eb 
+7e b1 a6 ff df 7e d8 28 5f b8 46 d5 c1 31 11 fa 75 4f 2f c9 5c c5 f8 
+47 96 0f 9c 5d 53 06 98 bc df 8c 1f 89 b5 a2 7d 65 52 bf 68 3d a7 b8 6f 04 2f 9e ce 66 be 
+91 8f ee fb f3 32 fb 93 af d7 c0 f2 2b 1b 0c 3a ad 65 e9 cc 27 0e 16 31 75 7f 6d 6e 7c d9 
+8d 74 e2 00 65 82 51 39 9f 64 2f 94 46 dd 18 80 ff 78 46 50 ea 1c 23 e5 44 c5 02 83 26 62 
+47 96 0f 9c 5d 53 06 98 bc df 8c 1f 89 b5 a2 7d 65 52 bf 68 3d a7 b8 6f 04 2f 9e ce 66 be 
+58 0b f3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+98 b7 a1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11 e2 52 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+9b ca 8a 1a 7b 9d 8f 14 c0 5e 94 ca 0c 5a be 5a 8a 2a 65 b8 b9 b4 b4 c9 a1 e5 5c 00 e0 0d 
+cb f0 89 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+58 0b f3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+cd 91 87 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+07 c1 96 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+48 93 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+49 ad b3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+18 bf eb 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+60 e5 4a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+5d 60 a3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+87 7a ed 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+5a aa 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+50 17 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+de 2d 98 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+60 e5 4a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+5a aa 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+50 17 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+dd 39 9d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+e0 7c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+50 83 c7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+50 83 c7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+c7 6d a8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+14 ba a4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+a0 e8 f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+5d 67 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+c2 23 2e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+9e e9 00 00 00 00 00 00 0[1;31m[NR_MAC] Invalid PDU in 521.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 219, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [522.17], received unknown MAC header (LCID = 0x31)
+[0m[1;31m[NR_MAC] LCID 36 not handled yet!
+[0m[1;31m[NR_MAC] Multi entry PHR not supported
+[0m[1;31m[NR_MAC] Invalid PDU in 524.2 for RNTI 9E53! mac_subheader_len: 2, mac_len: 183, remaining pdu_len: 95
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[MAC]    [RAPROC] Received SDU for CCCH length 8 for UE 9e53
+[0m[93m[RLC]    SRB0 already exists for UE 9e53, do nothing
+[0m[1;31m[NR_MAC] prepare_initial_ul_rrc_message() returned false, cannot forward CCCH message
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 528.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 26408, remaining pdu_len: 224
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 530.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 6426, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 531.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 1014, remaining pdu_len: 830
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 533.17 for RNTI 9E53! mac_subheader_len: 3, mac_len: 44896, remaining pdu_len: 128
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [537.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [538.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 544.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 41204, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] Invalid PDU in 544.12 for RNTI 9E53! mac_subheader_len: 3, mac_len: 5318, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [545.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [546.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] Invalid PDU in 547.17 for RNTI 9E53! mac_subheader_len: 2, mac_len: 153, remaining pdu_len: 96
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 27 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [551.12], received unknown MAC header (LCID = 0x27)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 32 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [553.12], received unknown MAC header (LCID = 0x32)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] LCID 33 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [559.2], received unknown MAC header (LCID = 0x33)
+[0m[1;31m[NR_MAC] Invalid PDU in 560.7 for RNTI 9E53! mac_subheader_len: 3, mac_len: 41204, remaining pdu_len: 256
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 24 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [562.12], received unknown MAC header (LCID = 0x24)
+[0m[1;31m[NR_MAC] Invalid PDU in 567.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 62200, remaining pdu_len: 160
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [568.2], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 27 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [569.2], received unknown MAC header (LCID = 0x27)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] Invalid PDU in 575.2 for RNTI 9E53! mac_subheader_len: 3, mac_len: 62200, remaining pdu_len: 256
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[NR_MAC] LCID 2d not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [576.2], received unknown MAC header (LCID = 0x2d)
+[0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [578.2], received unknown MAC header (LCID = 0x2c)
+[0m[1;31m[NR_MAC] LCID 2c not handled yet!
+[0m[1;31m[NR_MAC] RNTI 9e53 [586.2], received unknown MAC header (LCID = 0x2c)
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  652112 pps   50176 kbps  209894][tx  456002 pps   35072 kbps   91644][Total Msgs_Rcvd 652112]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  306088 prach0   19968]
+[0m[HW]     [o_du0][pusch1  306088 prach1   19968]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  702288 pps   50176 kbps  209894][tx  491074 pps   35072 kbps   91644][Total Msgs_Rcvd 702288]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  329640 prach0   21504]
+[0m[HW]     [o_du0][pusch1  329640 prach1   21504]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  752464 pps   50176 kbps  209894][tx  526146 pps   35072 kbps   91644][Total Msgs_Rcvd 752464]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  353192 prach0   23040]
+[0m[HW]     [o_du0][pusch1  353192 prach1   23040]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  802640 pps   50176 kbps  209894][tx  561218 pps   35072 kbps   91644][Total Msgs_Rcvd 802640]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  376744 prach0   24576]
+[0m[HW]     [o_du0][pusch1  376744 prach1   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  852816 pps   50176 kbps  209894][tx  596290 pps   35072 kbps   91644][Total Msgs_Rcvd 852816]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  400296 prach0   26112]
+[0m[HW]     [o_du0][pusch1  400296 prach1   26112]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  902992 pps   50176 kbps  209894][tx  631362 pps   35072 kbps   91644][Total Msgs_Rcvd 902992]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  423848 prach0   27648]
+[0m[HW]     [o_du0][pusch1  423848 prach1   27648]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx  953168 pps   50176 kbps  209894][tx  666434 pps   35072 kbps   91644][Total Msgs_Rcvd 953168]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  447400 prach0   29184]
+[0m[HW]     [o_du0][pusch1  447400 prach1   29184]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1003344 pps   50176 kbps  209894][tx  701506 pps   35072 kbps   91644][Total Msgs_Rcvd 1003344]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  470952 prach0   30720]
+[0m[HW]     [o_du0][pusch1  470952 prach1   30720]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1053520 pps   50176 kbps  209894][tx  736578 pps   35072 kbps   91644][Total Msgs_Rcvd 1053520]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  494504 prach0   32256]
+[0m[HW]     [o_du0][pusch1  494504 prach1   32256]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1103696 pps   50176 kbps  209894][tx  771650 pps   35072 kbps   91644][Total Msgs_Rcvd 1103696]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  518056 prach0   33792]
+[0m[HW]     [o_du0][pusch1  518056 prach1   33792]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1153872 pps   50176 kbps  209894][tx  806722 pps   35072 kbps   91644][Total Msgs_Rcvd 1153872]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  541608 prach0   35328]
+[0m[HW]     [o_du0][pusch1  541608 prach1   35328]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1204048 pps   50176 kbps  209894][tx  841794 pps   35072 kbps   91644][Total Msgs_Rcvd 1204048]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  565160 prach0   36864]
+[0m[HW]     [o_du0][pusch1  565160 prach1   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1254224 pps   50176 kbps  209894][tx  876866 pps   35072 kbps   91644][Total Msgs_Rcvd 1254224]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  588712 prach0   38400]
+[0m[HW]     [o_du0][pusch1  588712 prach1   38400]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1304400 pps   50176 kbps  209894][tx  911938 pps   35072 kbps   91644][Total Msgs_Rcvd 1304400]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  612264 prach0   39936]
+[0m[HW]     [o_du0][pusch1  612264 prach1   39936]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1354576 pps   50176 kbps  209894][tx  947010 pps   35072 kbps   91644][Total Msgs_Rcvd 1354576]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  635816 prach0   41472]
+[0m[HW]     [o_du0][pusch1  635816 prach1   41472]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1404752 pps   50176 kbps  209894][tx  982082 pps   35072 kbps   91644][Total Msgs_Rcvd 1404752]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  659368 prach0   43008]
+[0m[HW]     [o_du0][pusch1  659368 prach1   43008]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1454928 pps   50176 kbps  209894][tx 1017154 pps   35072 kbps   91644][Total Msgs_Rcvd 1454928]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  682920 prach0   44544]
+[0m[HW]     [o_du0][pusch1  682920 prach1   44544]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1505104 pps   50176 kbps  209894][tx 1052226 pps   35072 kbps   91644][Total Msgs_Rcvd 1505104]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  706472 prach0   46080]
+[0m[HW]     [o_du0][pusch1  706472 prach1   46080]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1555280 pps   50176 kbps  209894][tx 1087298 pps   35072 kbps   91644][Total Msgs_Rcvd 1555280]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  730024 prach0   47616]
+[0m[HW]     [o_du0][pusch1  730024 prach1   47616]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1605456 pps   50176 kbps  209894][tx 1122370 pps   35072 kbps   91644][Total Msgs_Rcvd 1605456]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  753576 prach0   49152]
+[0m[HW]     [o_du0][pusch1  753576 prach1   49152]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1655632 pps   50176 kbps  209894][tx 1157442 pps   35072 kbps   91644][Total Msgs_Rcvd 1655632]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  777128 prach0   50688]
+[0m[HW]     [o_du0][pusch1  777128 prach1   50688]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1705808 pps   50176 kbps  209894][tx 1192514 pps   35072 kbps   91644][Total Msgs_Rcvd 1705808]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  800680 prach0   52224]
+[0m[HW]     [o_du0][pusch1  800680 prach1   52224]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1755984 pps   50176 kbps  209894][tx 1227586 pps   35072 kbps   91644][Total Msgs_Rcvd 1755984]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  824232 prach0   53760]
+[0m[HW]     [o_du0][pusch1  824232 prach1   53760]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1806160 pps   50176 kbps  209894][tx 1262658 pps   35072 kbps   91644][Total Msgs_Rcvd 1806160]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  847784 prach0   55296]
+[0m[HW]     [o_du0][pusch1  847784 prach1   55296]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1856336 pps   50176 kbps  209894][tx 1297730 pps   35072 kbps   91644][Total Msgs_Rcvd 1856336]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  871336 prach0   56832]
+[0m[HW]     [o_du0][pusch1  871336 prach1   56832]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1906512 pps   50176 kbps  209894][tx 1332802 pps   35072 kbps   91644][Total Msgs_Rcvd 1906512]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  894888 prach0   58368]
+[0m[HW]     [o_du0][pusch1  894888 prach1   58368]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 1956688 pps   50176 kbps  209894][tx 1367874 pps   35072 kbps   91644][Total Msgs_Rcvd 1956688]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  918440 prach0   59904]
+[0m[HW]     [o_du0][pusch1  918440 prach1   59904]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2006864 pps   50176 kbps  209894][tx 1402946 pps   35072 kbps   91644][Total Msgs_Rcvd 2006864]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  941992 prach0   61440]
+[0m[HW]     [o_du0][pusch1  941992 prach1   61440]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2057040 pps   50176 kbps  209894][tx 1438018 pps   35072 kbps   91644][Total Msgs_Rcvd 2057040]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  965544 prach0   62976]
+[0m[HW]     [o_du0][pusch1  965544 prach1   62976]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2107216 pps   50176 kbps  209894][tx 1473090 pps   35072 kbps   91644][Total Msgs_Rcvd 2107216]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0  989096 prach0   64512]
+[0m[HW]     [o_du0][pusch1  989096 prach1   64512]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2157392 pps   50176 kbps  209894][tx 1508162 pps   35072 kbps   91644][Total Msgs_Rcvd 2157392]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1012648 prach0   66048]
+[0m[HW]     [o_du0][pusch1 1012648 prach1   66048]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2207568 pps   50176 kbps  209894][tx 1543234 pps   35072 kbps   91644][Total Msgs_Rcvd 2207568]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1036200 prach0   67584]
+[0m[HW]     [o_du0][pusch1 1036200 prach1   67584]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2257744 pps   50176 kbps  209894][tx 1578306 pps   35072 kbps   91644][Total Msgs_Rcvd 2257744]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1059752 prach0   69120]
+[0m[HW]     [o_du0][pusch1 1059752 prach1   69120]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2307920 pps   50176 kbps  209894][tx 1613378 pps   35072 kbps   91644][Total Msgs_Rcvd 2307920]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1083304 prach0   70656]
+[0m[HW]     [o_du0][pusch1 1083304 prach1   70656]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2358096 pps   50176 kbps  209894][tx 1648450 pps   35072 kbps   91644][Total Msgs_Rcvd 2358096]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1106856 prach0   72192]
+[0m[HW]     [o_du0][pusch1 1106856 prach1   72192]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2408272 pps   50176 kbps  209894][tx 1683522 pps   35072 kbps   91644][Total Msgs_Rcvd 2408272]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1130408 prach0   73728]
+[0m[HW]     [o_du0][pusch1 1130408 prach1   73728]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2458448 pps   50176 kbps  209894][tx 1718594 pps   35072 kbps   91644][Total Msgs_Rcvd 2458448]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1153960 prach0   75264]
+[0m[HW]     [o_du0][pusch1 1153960 prach1   75264]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2508624 pps   50176 kbps  209894][tx 1753666 pps   35072 kbps   91644][Total Msgs_Rcvd 2508624]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1177512 prach0   76800]
+[0m[HW]     [o_du0][pusch1 1177512 prach1   76800]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2558800 pps   50176 kbps  209894][tx 1788738 pps   35072 kbps   91644][Total Msgs_Rcvd 2558800]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1201064 prach0   78336]
+[0m[HW]     [o_du0][pusch1 1201064 prach1   78336]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2608976 pps   50176 kbps  209894][tx 1823810 pps   35072 kbps   91644][Total Msgs_Rcvd 2608976]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1224616 prach0   79872]
+[0m[HW]     [o_du0][pusch1 1224616 prach1   79872]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2659152 pps   50176 kbps  209894][tx 1858882 pps   35072 kbps   91644][Total Msgs_Rcvd 2659152]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1248168 prach0   81408]
+[0m[HW]     [o_du0][pusch1 1248168 prach1   81408]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2709328 pps   50176 kbps  209894][tx 1893954 pps   35072 kbps   91644][Total Msgs_Rcvd 2709328]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1271720 prach0   82944]
+[0m[HW]     [o_du0][pusch1 1271720 prach1   82944]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2759504 pps   50176 kbps  209894][tx 1929026 pps   35072 kbps   91644][Total Msgs_Rcvd 2759504]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1295272 prach0   84480]
+[0m[HW]     [o_du0][pusch1 1295272 prach1   84480]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2809680 pps   50176 kbps  209894][tx 1964098 pps   35072 kbps   91644][Total Msgs_Rcvd 2809680]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1318824 prach0   86016]
+[0m[HW]     [o_du0][pusch1 1318824 prach1   86016]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2859856 pps   50176 kbps  209894][tx 1999170 pps   35072 kbps   91644][Total Msgs_Rcvd 2859856]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1342376 prach0   87552]
+[0m[HW]     [o_du0][pusch1 1342376 prach1   87552]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2910032 pps   50176 kbps  209894][tx 2034242 pps   35072 kbps   91644][Total Msgs_Rcvd 2910032]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1365928 prach0   89088]
+[0m[HW]     [o_du0][pusch1 1365928 prach1   89088]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 2960209 pps   50177 kbps  209897][tx 2069314 pps   35072 kbps   91644][Total Msgs_Rcvd 2960209]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1389480 prach0   90624]
+[0m[HW]     [o_du0][pusch1 1389480 prach1   90624]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3010385 pps   50176 kbps  209894][tx 2104386 pps   35072 kbps   91644][Total Msgs_Rcvd 3010385]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1413032 prach0   92160]
+[0m[HW]     [o_du0][pusch1 1413032 prach1   92160]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3060561 pps   50176 kbps  209894][tx 2139458 pps   35072 kbps   91644][Total Msgs_Rcvd 3060561]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1436584 prach0   93696]
+[0m[HW]     [o_du0][pusch1 1436583 prach1   93696]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3110738 pps   50177 kbps  209897][tx 2174530 pps   35072 kbps   91644][Total Msgs_Rcvd 3110738]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.897 Mbps tx=91.644 Mbps total=301.541 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1460136 prach0   95232]
+[0m[HW]     [o_du0][pusch1 1460136 prach1   95232]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3160914 pps   50176 kbps  209894][tx 2209602 pps   35072 kbps   91644][Total Msgs_Rcvd 3160914]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1483688 prach0   96768]
+[0m[HW]     [o_du0][pusch1 1483688 prach1   96768]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 10 ack 12) (tx_next_ack 11 tx_next 13)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 10 ack 12) (tx_next_ack 11 tx_next 13)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 10 ack 12) (tx_next_ack 11 tx_next 15)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 11 ack 13) (tx_next_ack 12 tx_next 15)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3211090 pps   50176 kbps  209888][tx 2244674 pps   35072 kbps   91644][Total Msgs_Rcvd 3211090]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.888 Mbps tx=91.644 Mbps total=301.532 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1507240 prach0   98304]
+[0m[HW]     [o_du0][pusch1 1507240 prach1   98304]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 16 ack 17) (tx_next_ack 17 tx_next 17)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[RLC]    ack_sn (17) not valid (tx_next_ack 18 tx_next 19), discard control PDU
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 3261267 pps   50177 kbps  209902][tx 2279746 pps   35072 kbps   91644][Total Msgs_Rcvd 3261267]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.902 Mbps tx=91.644 Mbps total=301.546 Mbps rx_pps=50177 tx_pps=35072 total_pps=85249
+[0m[HW]     [o_du0][pusch0 1530792 prach0   99840]
+[0m[HW]     [o_du0][pusch1 1530792 prach1   99840]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 18 ack 20) (tx_next_ack 19 tx_next 20)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    bad NACK, bigger than ACK (nack 18 ack 20) (tx_next_ack 19 tx_next 20)
+[0m[1;31m[RLC]    error decoding control PDU, discarding
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on DRB 1
+[0m[93m[RLC]    UE 9e53: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3311443 pps   50176 kbps  209894][tx 2314818 pps   35072 kbps   91644][Total Msgs_Rcvd 3311443]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50176 tx_pps=35072 total_pps=85248
+[0m[HW]     [o_du0][pusch0 1554344 prach0  101376]
+[0m[HW]     [o_du0][pusch1 1554344 prach1  101376]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 3361617 pps   50174 kbps  209894][tx 2349890 pps   35072 kbps   91644][Total Msgs_Rcvd 3361617]
+[0m[HW]     [FH LOAD][o-du 0] rx=209.894 Mbps tx=91.644 Mbps total=301.538 Mbps rx_pps=50174 tx_pps=35072 total_pps=85246
+[0m[HW]     [o_du0][pusch0 1577895 prach0  102912]
+[0m[HW]     [o_du0][pusch1 1577895 prach1  102912]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m

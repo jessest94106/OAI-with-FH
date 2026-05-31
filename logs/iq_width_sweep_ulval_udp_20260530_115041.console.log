@@ -1,0 +1,41 @@
+[11:50:41] output: /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041
+[11:50:41] widths: 8 9 10 12 16
+[11:50:41] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=1x1
+[11:50:41] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[11:50:41] === IQ width 8, compMeth 1 ===
+[11:50:43] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:50:46] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:50:50] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:51:03] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 1s) -> /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/iq8/iperf_ul.server.json
+[11:51:03] route to server: 10.0.0.1 from 10.0.0.40 dev oaitun_ue1 table 9999 uid 1001 
+[11:51:03] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.40, seconds=20, udp=1
+[11:52:16] === IQ width 9, compMeth 1 ===
+[11:52:18] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:52:21] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:52:25] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:52:36] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 1s) -> /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/iq9/iperf_ul.server.json
+[11:52:36] route to server: 10.0.0.1 from 10.0.0.41 dev oaitun_ue1 table 9999 uid 1001 
+[11:52:36] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.41, seconds=20, udp=1
+[11:53:49] === IQ width 10, compMeth 1 ===
+[11:53:51] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:53:54] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:53:59] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:54:17] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 0s) -> /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/iq10/iperf_ul.server.json
+[11:54:17] route to server: 10.0.0.1 from 10.0.0.42 dev oaitun_ue1 table 9999 uid 1001 
+[11:54:17] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.42, seconds=20, udp=1
+[11:55:30] === IQ width 12, compMeth 1 ===
+[11:55:32] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:55:35] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:55:39] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:55:50] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 1s) -> /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/iq12/iperf_ul.server.json
+[11:55:50] route to server: 10.0.0.1 from 10.0.0.43 dev oaitun_ue1 table 9999 uid 1001 
+[11:55:50] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.43, seconds=20, udp=1
+[11:57:03] === IQ width 16, compMeth 0 ===
+[11:57:05] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:57:08] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:57:12] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:57:32] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 1s) -> /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/iq16/iperf_ul.server.json
+[11:57:32] route to server: 10.0.0.1 from 10.0.0.44 dev oaitun_ue1 table 9999 uid 1001 
+[11:57:32] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.44, seconds=20, udp=1
+[11:58:45] summary: /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/summary.csv
+[11:58:45] report: /home/jesse/oran_lab/logs/iq_width_sweep/ulval_udp_20260530_115041/report.md

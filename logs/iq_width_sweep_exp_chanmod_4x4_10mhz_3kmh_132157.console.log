@@ -1,0 +1,17 @@
+[13:21:57] antennas patched to 4x4 (nb_tx/nb_rx, pusch/pdsch AntennaPorts) — VALIDATE: FH/xran MIMO path is untested here
+[13:21:57] UE speed 3 km/h @ 4049760000 Hz -> Doppler 11.26 Hz -> forgetfact 0.01331
+[13:21:57] chanmod ON: type=AWGN ds_tdl=0us noise=-30dB ploss=0dB forgetfact=0.01331 timescale=1.0 ant=4
+[13:21:57] chanmod NOTE: realtime is fragile — if UE will not connect, lower VRTSIM_TIMESCALE; this path needs validation.
+[13:21:57] output: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_10mhz_3kmh_132157
+[13:21:57] widths: 16
+[13:21:57] channel: chanmod=1 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0.01331 ant=4x4
+[13:21:57] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[13:21:57] === IQ width 16, compMeth 0 ===
+[13:21:59] starting RU: /home/jesse/oran_lab/run_ru.sh
+[13:22:02] starting DU: /home/jesse/oran_lab/run_du.sh
+[13:22:06] starting UE: /home/jesse/oran_lab/run_ue.sh
+[13:22:20] iperf3 one-off UDP logging server LISTENING on 10.0.0.1:5201 (after 0s) -> /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_10mhz_3kmh_132157/iq16/iperf_ul.server.json
+[13:22:20] route to server: 10.0.0.1 from 10.0.0.45 dev oaitun_ue1 table 9999 uid 1001 
+[13:22:20] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.45, seconds=20, udp=1
+[13:23:33] summary: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_10mhz_3kmh_132157/summary.csv
+[13:23:33] report: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_10mhz_3kmh_132157/report.md

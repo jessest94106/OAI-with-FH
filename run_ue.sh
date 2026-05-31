@@ -8,6 +8,8 @@ OAI_DIR="${TEST_DIR}/openairinterface5g"
 BUILD_DIR="${OAI_DIR}/build"
 UE_CORES="20,21,22,23"
 UE_SSB="${RUN_UE_SSB:-24}"
+UE_RB="${RUN_UE_RB:-24}"   # UE N_RB; must match carrier bandwidth (24=10MHz, 51=20MHz, 133=50MHz @ 30kHz SCS)
+UE_CARRIER="${RUN_UE_CARRIER:-4049760000}"  # UE carrier CENTER (Hz); moves with bandwidth since pointA is fixed (center = pointA + N_RB*180kHz)
 UE_SAMPLE_ADVANCE="${RUN_UE_SAMPLE_ADVANCE:-0}"
 
 SCRIPT_NAME="$(basename "$0" .sh)"
@@ -50,13 +52,14 @@ exec sudo -E taskset -c "${UE_CORES}" env \
   ASAN_OPTIONS="${ASAN_OPTIONS}" \
   ./nr-uesoftmodem \
     -O "${BASE_DIR}/ue_test.conf" \
-    -C 4049760000 \
-    -r 24 \
+    -C "${UE_CARRIER}" \
+    -r "${UE_RB}" \
     --numerology 1 \
     --band 77 \
     --ssb "${UE_SSB}" \
     -A "${UE_SAMPLE_ADVANCE}" \
     --device.name vrtsim \
     --vrtsim.role client \
-    --ue-nb-ant-tx 1 \
-    --ue-nb-ant-rx 1
+    --ue-nb-ant-tx "${UE_NB_ANT_TX:-1}" \
+    --ue-nb-ant-rx "${UE_NB_ANT_RX:-1}" \
+    ${VRTSIM_UE_EXTRA_ARGS:-}

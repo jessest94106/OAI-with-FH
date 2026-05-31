@@ -1,0 +1,1610 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260530_222207_pid2364941.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2809856 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 4, NB_TX 4
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 2: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 3: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 2: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 3: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 4
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 4
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x70e0637e24b0
+  tx_up_eAxC2Vf 0x70e0637e30b0
+  rx_cp_eAxC2Vf 0x70e0637e3cb0
+  rx_up_eAxC2Vf 0x70e0637e48b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 2364964]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 4
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 2364964]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 2364964]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 2364964]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x70e028f95040
+xran_sector_get_instances [0]: CC 0 handle 0x70e04c1e8b00
+Handle: 0x70e070611468 Instance: 0x[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 4
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]    Attaching RU 0 antenna 2 to gNB antenna 2
+[0m[PHY]    Attaching RU 0 antenna 3 to gNB antenna 3
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m70e04c1e8b00
+-> hInstance 0x70e04c1e8b00
+ru_0_cc_0_idx_0: [ handle 0x70e04c1e8b00 0 0 ] [nPoolIndex 0] nNumberOfBuffers 2047 nBufferSize 14116 socket_id 0
+CC:[ handle 0x70e04c1e8b00 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784940 
+xran_bm_init() hInstance 0x70e04c1e8b00 poolIdx 0 elements 2047 size 14116
+xran_bm_allocate_buffer() hInstance 0x70e04c1e8b00 poolIdx 0 count 1120
+ru_0_cc_0_idx_1: [ handle 0x70e04c1e8b00 0 0 ] [nPoolIndex 1] nNumberOfBuffers 2047 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70e04c1e8b00 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786940 
+xran_bm_init() hInstance 0x70e04c1e8b00 poolIdx 1 elements 2047 size 4976
+xran_bm_allocate_buffer() hInstance 0x70e04c1e8b00 poolIdx 1 count 80
+ru_0_cc_0_idx_2: [ handle 0x70e04c1e8b00 0 0 ] [nPoolIndex 2] nNumberOfBuffers 2047 nBufferSize 13168 socket_id 0
+CC:[ handle 0x70e04c1e8b00 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x2847861c0 
+xran_bm_init() hInstance 0x70e04c1e8b00 poolIdx 2 elements 2047 size 13168
+xran_bm_allocate_buffer() hInstance 0x70e04c1e8b00 poolIdx 2 count 1120
+ru_0_cc_0_idx_3: [ handle 0x70e04c1e8b00 0 0 ] [nPoolIndex 3] nNumberOfBuffers 2047 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70e04c1e8b00 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284788280 
+xran_bm_init() hInstance 0x70e04c1e8b00 poolIdx 3 elements 2047 size 4976
+xran_bm_allocate_buffer() hInstance 0x70e04c1e8b00 poolIdx 3 count 80
+ru_0_cc_0_idx_4: [ handle 0x70e04c1e8b00 0 0 ] [nPoolIndex 4] nNumberOfBuffers 2047 nBufferSize 3360 socket_id 0
+CC:[ handle 0x70e04c1e8b00 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x28478aa00 
+xran_bm_init() hInstance 0x70e04c1e8b00 poolIdx 4 elements 2047 size 3360
+xran_bm_allocate_buffer() hInstance 0x70e04c1e8b00 poolIdx 4 count 1120
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/31/26 05:22:11.221379159 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=0, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=1, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=2, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=3, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=4, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 0.19
+[0m[93m[HW]     TTI processing delay detected, skipping   14.13 =>   15. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 15.6, expected 14.13)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 15.6 , expected 14.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   36.12 =>   37. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 37.7, expected 36.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 37.7 , expected 36.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   53. 7 =>   55. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 55.5, expected 53.7)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 55.5 , expected 53.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   55.10 =>   58. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 58.9, expected 55.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 58.9 , expected 55.9)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 58.19
+[0m[93m[HW]     TTI processing delay detected, skipping   76. 5 =>   80. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 80.4, expected 76.5)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 80.4 , expected 76.4)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 80.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[93m[HW]     TTI processing delay detected, skipping  115.17 =>  120.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 120.16, expected 115.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 120.16 , expected 115.16)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 120.19
+[0m[93m[HW]     TTI processing delay detected, skipping  121. 5 =>  121. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 121.9, expected 121.5)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 121.19
+[0m[HW]     [o-du 0][rx  100352 pps  100352 kbps  419733][tx   70276 pps   70276 kbps  183289][Total Msgs_Rcvd 100352]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.733 Mbps tx=183.289 Mbps total=603.022 Mbps rx_pps=100352 tx_pps=70276 total_pps=170628
+[0m[HW]     [o_du0][pusch0   23552 prach0    1536]
+[0m[HW]     [o_du0][pusch1   23552 prach1    1536]
+[0m[HW]     [o_du0][pusch2   23552 prach2    1536]
+[0m[HW]     [o_du0][pusch3   23552 prach3    1536]
+[0m[HW]     [o-du 0][rx  200704 pps  100352 kbps  419800][tx  140420 pps   70144 kbps  183289][Total Msgs_Rcvd 200704]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0   47104 prach0    3072]
+[0m[HW]     [o_du0][pusch1   47104 prach1    3072]
+[0m[HW]     [o_du0][pusch2   47104 prach2    3072]
+[0m[HW]     [o_du0][pusch3   47104 prach3    3072]
+[0m[HW]     [o-du 0][rx  301056 pps  100352 kbps  419799][tx  210564 pps   70144 kbps  183289][Total Msgs_Rcvd 301056]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.799 Mbps tx=183.289 Mbps total=603.088 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0   70656 prach0    4608]
+[0m[HW]     [o_du0][pusch1   70656 prach1    4608]
+[0m[HW]     [o_du0][pusch2   70656 prach2    4608]
+[0m[HW]     [o_du0][pusch3   70656 prach3    4608]
+[0m[HW]     [o-du 0][rx  401408 pps  100352 kbps  419788][tx  280708 pps   70144 kbps  183289][Total Msgs_Rcvd 401408]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0   94208 prach0    6144]
+[0m[HW]     [o_du0][pusch1   94208 prach1    6144]
+[0m[HW]     [o_du0][pusch2   94208 prach2    6144]
+[0m[HW]     [o_du0][pusch3   94208 prach3    6144]
+[0m[HW]     [o-du 0][rx  501760 pps  100352 kbps  419800][tx  350852 pps   70144 kbps  183289][Total Msgs_Rcvd 501760]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  117760 prach0    7680]
+[0m[HW]     [o_du0][pusch1  117760 prach1    7680]
+[0m[HW]     [o_du0][pusch2  117760 prach2    7680]
+[0m[HW]     [o_du0][pusch3  117760 prach3    7680]
+[0m[HW]     [o-du 0][rx  602112 pps  100352 kbps  419766][tx  420996 pps   70144 kbps  183289][Total Msgs_Rcvd 602112]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  141312 prach0    9216]
+[0m[HW]     [o_du0][pusch1  141312 prach1    9216]
+[0m[HW]     [o_du0][pusch2  141312 prach2    9216]
+[0m[HW]     [o_du0][pusch3  141312 prach3    9216]
+[0m[HW]     [o-du 0][rx  702464 pps  100352 kbps  419810][tx  491140 pps   70144 kbps  183289][Total Msgs_Rcvd 702464]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.810 Mbps tx=183.289 Mbps total=603.099 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  164864 prach0   10752]
+[0m[HW]     [o_du0][pusch1  164864 prach1   10752]
+[0m[HW]     [o_du0][pusch2  164864 prach2   10752]
+[0m[HW]     [o_du0][pusch3  164864 prach3   10752]
+[0m[HW]     [o-du 0][rx  802816 pps  100352 kbps  419755][tx  561284 pps   70144 kbps  183289][Total Msgs_Rcvd 802816]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.755 Mbps tx=183.289 Mbps total=603.044 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  188416 prach0   12288]
+[0m[HW]     [o_du0][pusch1  188416 prach1   12288]
+[0m[HW]     [o_du0][pusch2  188416 prach2   12288]
+[0m[HW]     [o_du0][pusch3  188416 prach3   12288]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx  903168 pps  100352 kbps  419822][tx  631428 pps   70144 kbps  183289][Total Msgs_Rcvd 903168]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.822 Mbps tx=183.289 Mbps total=603.111 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  211968 prach0   13824]
+[0m[HW]     [o_du0][pusch1  211968 prach1   13824]
+[0m[HW]     [o_du0][pusch2  211968 prach2   13824]
+[0m[HW]     [o_du0][pusch3  211968 prach3   13824]
+[0m[HW]     [o-du 0][rx 1003520 pps  100352 kbps  419777][tx  701572 pps   70144 kbps  183289][Total Msgs_Rcvd 1003520]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  235520 prach0   15360]
+[0m[HW]     [o_du0][pusch1  235520 prach1   15360]
+[0m[HW]     [o_du0][pusch2  235520 prach2   15360]
+[0m[HW]     [o_du0][pusch3  235520 prach3   15360]
+[0m[HW]     [o-du 0][rx 1103872 pps  100352 kbps  419800][tx  771716 pps   70144 kbps  183289][Total Msgs_Rcvd 1103872]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  259072 prach0   16896]
+[0m[HW]     [o_du0][pusch1  259072 prach1   16896]
+[0m[HW]     [o_du0][pusch2  259072 prach2   16896]
+[0m[HW]     [o_du0][pusch3  259072 prach3   16896]
+[0m[HW]     [o-du 0][rx 1204224 pps  100352 kbps  419788][tx  841860 pps   70144 kbps  183289][Total Msgs_Rcvd 1204224]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  282624 prach0   18432]
+[0m[HW]     [o_du0][pusch1  282624 prach1   18432]
+[0m[HW]     [o_du0][pusch2  282624 prach2   18432]
+[0m[HW]     [o_du0][pusch3  282624 prach3   18432]
+[0m[HW]     [o-du 0][rx 1304576 pps  100352 kbps  419800][tx  912004 pps   70144 kbps  183289][Total Msgs_Rcvd 1304576]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  306176 prach0   19968]
+[0m[HW]     [o_du0][pusch1  306176 prach1   19968]
+[0m[HW]     [o_du0][pusch2  306176 prach2   19968]
+[0m[HW]     [o_du0][pusch3  306176 prach3   19968]
+[0m[HW]     [o-du 0][rx 1404928 pps  100352 kbps  419777][tx  982148 pps   70144 kbps  183289][Total Msgs_Rcvd 1404928]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  329728 prach0   21504]
+[0m[HW]     [o_du0][pusch1  329728 prach1   21504]
+[0m[HW]     [o_du0][pusch2  329728 prach2   21504]
+[0m[HW]     [o_du0][pusch3  329728 prach3   21504]
+[0m[HW]     [o-du 0][rx 1505280 pps  100352 kbps  419769][tx 1052292 pps   70144 kbps  183289][Total Msgs_Rcvd 1505280]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.769 Mbps tx=183.289 Mbps total=603.058 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  353280 prach0   23040]
+[0m[HW]     [o_du0][pusch1  353280 prach1   23040]
+[0m[HW]     [o_du0][pusch2  353280 prach2   23040]
+[0m[HW]     [o_du0][pusch3  353280 prach3   23040]
+[0m[HW]     [o-du 0][rx 1605632 pps  100352 kbps  419808][tx 1122436 pps   70144 kbps  183289][Total Msgs_Rcvd 1605632]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.808 Mbps tx=183.289 Mbps total=603.097 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  376832 prach0   24576]
+[0m[HW]     [o_du0][pusch1  376832 prach1   24576]
+[0m[HW]     [o_du0][pusch2  376832 prach2   24576]
+[0m[HW]     [o_du0][pusch3  376832 prach3   24576]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 1705984 pps  100352 kbps  419788][tx 1192580 pps   70144 kbps  183289][Total Msgs_Rcvd 1705984]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  400384 prach0   26112]
+[0m[HW]     [o_du0][pusch1  400384 prach1   26112]
+[0m[HW]     [o_du0][pusch2  400384 prach2   26112]
+[0m[HW]     [o_du0][pusch3  400384 prach3   26112]
+[0m[HW]     [o-du 0][rx 1806336 pps  100352 kbps  419766][tx 1262724 pps   70144 kbps  183289][Total Msgs_Rcvd 1806336]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  423936 prach0   27648]
+[0m[HW]     [o_du0][pusch1  423936 prach1   27648]
+[0m[HW]     [o_du0][pusch2  423936 prach2   27648]
+[0m[HW]     [o_du0][pusch3  423936 prach3   27648]
+[0m[HW]     [o-du 0][rx 1906688 pps  100352 kbps  419777][tx 1332868 pps   70144 kbps  183289][Total Msgs_Rcvd 1906688]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  447488 prach0   29184]
+[0m[HW]     [o_du0][pusch1  447488 prach1   29184]
+[0m[HW]     [o_du0][pusch2  447488 prach2   29184]
+[0m[HW]     [o_du0][pusch3  447488 prach3   29184]
+[0m[HW]     [o-du 0][rx 2007040 pps  100352 kbps  419777][tx 1403012 pps   70144 kbps  183289][Total Msgs_Rcvd 2007040]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  471040 prach0   30720]
+[0m[HW]     [o_du0][pusch1  471040 prach1   30720]
+[0m[HW]     [o_du0][pusch2  471040 prach2   30720]
+[0m[HW]     [o_du0][pusch3  471040 prach3   30720]
+[0m[HW]     [o-du 0][rx 2107392 pps  100352 kbps  419810][tx 1473156 pps   70144 kbps  183289][Total Msgs_Rcvd 2107392]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.810 Mbps tx=183.289 Mbps total=603.099 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  494592 prach0   32256]
+[0m[HW]     [o_du0][pusch1  494592 prach1   32256]
+[0m[HW]     [o_du0][pusch2  494592 prach2   32256]
+[0m[HW]     [o_du0][pusch3  494592 prach3   32256]
+[0m[HW]     [o-du 0][rx 2207744 pps  100352 kbps  419799][tx 1543300 pps   70144 kbps  183289][Total Msgs_Rcvd 2207744]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.799 Mbps tx=183.289 Mbps total=603.088 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  518144 prach0   33792]
+[0m[HW]     [o_du0][pusch1  518144 prach1   33792]
+[0m[HW]     [o_du0][pusch2  518144 prach2   33792]
+[0m[HW]     [o_du0][pusch3  518144 prach3   33792]
+[0m[HW]     [o-du 0][rx 2308096 pps  100352 kbps  419783][tx 1613444 pps   70144 kbps  183289][Total Msgs_Rcvd 2308096]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  541696 prach0   35328]
+[0m[HW]     [o_du0][pusch1  541696 prach1   35328]
+[0m[HW]     [o_du0][pusch2  541696 prach2   35328]
+[0m[HW]     [o_du0][pusch3  541696 prach3   35328]
+[0m[HW]     [o-du 0][rx 2408448 pps  100352 kbps  419805][tx 1683588 pps   70144 kbps  183289][Total Msgs_Rcvd 2408448]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.805 Mbps tx=183.289 Mbps total=603.094 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  565248 prach0   36864]
+[0m[HW]     [o_du0][pusch1  565248 prach1   36864]
+[0m[HW]     [o_du0][pusch2  565248 prach2   36864]
+[0m[HW]     [o_du0][pusch3  565248 prach3   36864]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 2508800 pps  100352 kbps  419788][tx 1753732 pps   70144 kbps  183289][Total Msgs_Rcvd 2508800]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  588800 prach0   38400]
+[0m[HW]     [o_du0][pusch1  588800 prach1   38400]
+[0m[HW]     [o_du0][pusch2  588800 prach2   38400]
+[0m[HW]     [o_du0][pusch3  588800 prach3   38400]
+[0m[HW]     [o-du 0][rx 2609152 pps  100352 kbps  419810][tx 1823876 pps   70144 kbps  183289][Total Msgs_Rcvd 2609152]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.810 Mbps tx=183.289 Mbps total=603.099 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  612352 prach0   39936]
+[0m[HW]     [o_du0][pusch1  612352 prach1   39936]
+[0m[HW]     [o_du0][pusch2  612352 prach2   39936]
+[0m[HW]     [o_du0][pusch3  612352 prach3   39936]
+[0m[HW]     [o-du 0][rx 2709504 pps  100352 kbps  419774][tx 1894020 pps   70144 kbps  183289][Total Msgs_Rcvd 2709504]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.774 Mbps tx=183.289 Mbps total=603.063 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  635904 prach0   41472]
+[0m[HW]     [o_du0][pusch1  635904 prach1   41472]
+[0m[HW]     [o_du0][pusch2  635904 prach2   41472]
+[0m[HW]     [o_du0][pusch3  635904 prach3   41472]
+[0m[HW]     [o-du 0][rx 2809856 pps  100352 kbps  419802][tx 1964164 pps   70144 kbps  183289][Total Msgs_Rcvd 2809856]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.802 Mbps tx=183.289 Mbps total=603.091 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  659456 prach0   43008]
+[0m[HW]     [o_du0][pusch1  659456 prach1   43008]
+[0m[HW]     [o_du0][pusch2  659456 prach2   43008]
+[0m[HW]     [o_du0][pusch3  659456 prach3   43008]
+[0m[HW]     [o-du 0][rx 2910208 pps  100352 kbps  419766][tx 2034308 pps   70144 kbps  183289][Total Msgs_Rcvd 2910208]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  683008 prach0   44544]
+[0m[HW]     [o_du0][pusch1  683008 prach1   44544]
+[0m[HW]     [o_du0][pusch2  683008 prach2   44544]
+[0m[HW]     [o_du0][pusch3  683008 prach3   44544]
+[0m[HW]     [o-du 0][rx 3010560 pps  100352 kbps  419822][tx 2104452 pps   70144 kbps  183289][Total Msgs_Rcvd 3010560]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.822 Mbps tx=183.289 Mbps total=603.111 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  706560 prach0   46080]
+[0m[HW]     [o_du0][pusch1  706560 prach1   46080]
+[0m[HW]     [o_du0][pusch2  706560 prach2   46080]
+[0m[HW]     [o_du0][pusch3  706560 prach3   46080]
+[0m[HW]     [o-du 0][rx 3110912 pps  100352 kbps  419766][tx 2174596 pps   70144 kbps  183289][Total Msgs_Rcvd 3110912]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  730112 prach0   47616]
+[0m[HW]     [o_du0][pusch1  730112 prach1   47616]
+[0m[HW]     [o_du0][pusch2  730112 prach2   47616]
+[0m[HW]     [o_du0][pusch3  730112 prach3   47616]
+[0m[HW]     [o-du 0][rx 3211264 pps  100352 kbps  419810][tx 2244740 pps   70144 kbps  183289][Total Msgs_Rcvd 3211264]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.810 Mbps tx=183.289 Mbps total=603.099 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  753664 prach0   49152]
+[0m[HW]     [o_du0][pusch1  753664 prach1   49152]
+[0m[HW]     [o_du0][pusch2  753664 prach2   49152]
+[0m[HW]     [o_du0][pusch3  753664 prach3   49152]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 3311616 pps  100352 kbps  419816][tx 2314884 pps   70144 kbps  183289][Total Msgs_Rcvd 3311616]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.816 Mbps tx=183.289 Mbps total=603.105 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  777216 prach0   50688]
+[0m[HW]     [o_du0][pusch1  777216 prach1   50688]
+[0m[HW]     [o_du0][pusch2  777216 prach2   50688]
+[0m[HW]     [o_du0][pusch3  777216 prach3   50688]
+[0m[HW]     [o-du 0][rx 3411968 pps  100352 kbps  419783][tx 2385028 pps   70144 kbps  183289][Total Msgs_Rcvd 3411968]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  800768 prach0   52224]
+[0m[HW]     [o_du0][pusch1  800768 prach1   52224]
+[0m[HW]     [o_du0][pusch2  800768 prach2   52224]
+[0m[HW]     [o_du0][pusch3  800768 prach3   52224]
+[0m[HW]     [o-du 0][rx 3512320 pps  100352 kbps  419777][tx 2455172 pps   70144 kbps  183289][Total Msgs_Rcvd 3512320]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  824320 prach0   53760]
+[0m[HW]     [o_du0][pusch1  824320 prach1   53760]
+[0m[HW]     [o_du0][pusch2  824320 prach2   53760]
+[0m[HW]     [o_du0][pusch3  824320 prach3   53760]
+[0m[HW]     [o-du 0][rx 3612672 pps  100352 kbps  419788][tx 2525316 pps   70144 kbps  183289][Total Msgs_Rcvd 3612672]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  847872 prach0   55296]
+[0m[HW]     [o_du0][pusch1  847872 prach1   55296]
+[0m[HW]     [o_du0][pusch2  847872 prach2   55296]
+[0m[HW]     [o_du0][pusch3  847872 prach3   55296]
+[0m[HW]     [o-du 0][rx 3713024 pps  100352 kbps  419772][tx 2595460 pps   70144 kbps  183289][Total Msgs_Rcvd 3713024]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.772 Mbps tx=183.289 Mbps total=603.061 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  871424 prach0   56832]
+[0m[HW]     [o_du0][pusch1  871424 prach1   56832]
+[0m[HW]     [o_du0][pusch2  871424 prach2   56832]
+[0m[HW]     [o_du0][pusch3  871424 prach3   56832]
+[0m[HW]     [o-du 0][rx 3813376 pps  100352 kbps  419816][tx 2665604 pps   70144 kbps  183289][Total Msgs_Rcvd 3813376]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.816 Mbps tx=183.289 Mbps total=603.105 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  894976 prach0   58368]
+[0m[HW]     [o_du0][pusch1  894976 prach1   58368]
+[0m[HW]     [o_du0][pusch2  894976 prach2   58368]
+[0m[HW]     [o_du0][pusch3  894976 prach3   58368]
+[0m[HW]     [o-du 0][rx 3913728 pps  100352 kbps  419788][tx 2735748 pps   70144 kbps  183289][Total Msgs_Rcvd 3913728]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  918528 prach0   59904]
+[0m[HW]     [o_du0][pusch1  918528 prach1   59904]
+[0m[HW]     [o_du0][pusch2  918528 prach2   59904]
+[0m[HW]     [o_du0][pusch3  918528 prach3   59904]
+[0m[HW]     [o-du 0][rx 4014080 pps  100352 kbps  419777][tx 2805892 pps   70144 kbps  183289][Total Msgs_Rcvd 4014080]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  942080 prach0   61440]
+[0m[HW]     [o_du0][pusch1  942080 prach1   61440]
+[0m[HW]     [o_du0][pusch2  942080 prach2   61440]
+[0m[HW]     [o_du0][pusch3  942080 prach3   61440]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 4114432 pps  100352 kbps  419788][tx 2876036 pps   70144 kbps  183289][Total Msgs_Rcvd 4114432]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  965632 prach0   62976]
+[0m[HW]     [o_du0][pusch1  965632 prach1   62976]
+[0m[HW]     [o_du0][pusch2  965632 prach2   62976]
+[0m[HW]     [o_du0][pusch3  965632 prach3   62976]
+[0m[HW]     [o-du 0][rx 4214784 pps  100352 kbps  419788][tx 2946180 pps   70144 kbps  183289][Total Msgs_Rcvd 4214784]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0  989184 prach0   64512]
+[0m[HW]     [o_du0][pusch1  989184 prach1   64512]
+[0m[HW]     [o_du0][pusch2  989184 prach2   64512]
+[0m[HW]     [o_du0][pusch3  989184 prach3   64512]
+[0m[HW]     [o-du 0][rx 4315136 pps  100352 kbps  419800][tx 3016324 pps   70144 kbps  183289][Total Msgs_Rcvd 4315136]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1012736 prach0   66048]
+[0m[HW]     [o_du0][pusch1 1012736 prach1   66048]
+[0m[HW]     [o_du0][pusch2 1012736 prach2   66048]
+[0m[HW]     [o_du0][pusch3 1012736 prach3   66048]
+[0m[HW]     [o-du 0][rx 4415488 pps  100352 kbps  419805][tx 3086468 pps   70144 kbps  183289][Total Msgs_Rcvd 4415488]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.805 Mbps tx=183.289 Mbps total=603.094 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1036288 prach0   67584]
+[0m[HW]     [o_du0][pusch1 1036288 prach1   67584]
+[0m[HW]     [o_du0][pusch2 1036288 prach2   67584]
+[0m[HW]     [o_du0][pusch3 1036288 prach3   67584]
+[0m[HW]     [o-du 0][rx 4515840 pps  100352 kbps  419772][tx 3156612 pps   70144 kbps  183289][Total Msgs_Rcvd 4515840]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.772 Mbps tx=183.289 Mbps total=603.061 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1059840 prach0   69120]
+[0m[HW]     [o_du0][pusch1 1059840 prach1   69120]
+[0m[HW]     [o_du0][pusch2 1059840 prach2   69120]
+[0m[HW]     [o_du0][pusch3 1059840 prach3   69120]
+[0m[HW]     [o-du 0][rx 4616192 pps  100352 kbps  419788][tx 3226756 pps   70144 kbps  183289][Total Msgs_Rcvd 4616192]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1083392 prach0   70656]
+[0m[HW]     [o_du0][pusch1 1083392 prach1   70656]
+[0m[HW]     [o_du0][pusch2 1083392 prach2   70656]
+[0m[HW]     [o_du0][pusch3 1083392 prach3   70656]
+[0m[HW]     [o-du 0][rx 4716544 pps  100352 kbps  419766][tx 3296900 pps   70144 kbps  183289][Total Msgs_Rcvd 4716544]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1106944 prach0   72192]
+[0m[HW]     [o_du0][pusch1 1106944 prach1   72192]
+[0m[HW]     [o_du0][pusch2 1106944 prach2   72192]
+[0m[HW]     [o_du0][pusch3 1106944 prach3   72192]
+[0m[HW]     [o-du 0][rx 4816896 pps  100352 kbps  419788][tx 3367044 pps   70144 kbps  183289][Total Msgs_Rcvd 4816896]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1130496 prach0   73728]
+[0m[HW]     [o_du0][pusch1 1130496 prach1   73728]
+[0m[HW]     [o_du0][pusch2 1130496 prach2   73728]
+[0m[HW]     [o_du0][pusch3 1130496 prach3   73728]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 4917248 pps  100352 kbps  419810][tx 3437188 pps   70144 kbps  183289][Total Msgs_Rcvd 4917248]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.810 Mbps tx=183.289 Mbps total=603.099 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1154048 prach0   75264]
+[0m[HW]     [o_du0][pusch1 1154048 prach1   75264]
+[0m[HW]     [o_du0][pusch2 1154048 prach2   75264]
+[0m[HW]     [o_du0][pusch3 1154048 prach3   75264]
+[0m[HW]     [o-du 0][rx 5017600 pps  100352 kbps  419788][tx 3507332 pps   70144 kbps  183289][Total Msgs_Rcvd 5017600]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1177600 prach0   76800]
+[0m[HW]     [o_du0][pusch1 1177600 prach1   76800]
+[0m[HW]     [o_du0][pusch2 1177600 prach2   76800]
+[0m[HW]     [o_du0][pusch3 1177600 prach3   76800]
+[0m[HW]     [o-du 0][rx 5117952 pps  100352 kbps  419800][tx 3577476 pps   70144 kbps  183289][Total Msgs_Rcvd 5117952]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1201152 prach0   78336]
+[0m[HW]     [o_du0][pusch1 1201152 prach1   78336]
+[0m[HW]     [o_du0][pusch2 1201152 prach2   78336]
+[0m[HW]     [o_du0][pusch3 1201152 prach3   78336]
+[0m[HW]     [o-du 0][rx 5218304 pps  100352 kbps  419777][tx 3647620 pps   70144 kbps  183289][Total Msgs_Rcvd 5218304]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1224704 prach0   79872]
+[0m[HW]     [o_du0][pusch1 1224704 prach1   79872]
+[0m[HW]     [o_du0][pusch2 1224704 prach2   79872]
+[0m[HW]     [o_du0][pusch3 1224704 prach3   79872]
+[0m[HW]     [o-du 0][rx 5318656 pps  100352 kbps  419783][tx 3717764 pps   70144 kbps  183289][Total Msgs_Rcvd 5318656]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1248256 prach0   81408]
+[0m[HW]     [o_du0][pusch1 1248256 prach1   81408]
+[0m[HW]     [o_du0][pusch2 1248256 prach2   81408]
+[0m[HW]     [o_du0][pusch3 1248256 prach3   81408]
+[0m[PHY]    ULSCH ACK trace 702.3 rnti e2c4 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 703.1 rnti e2c4 harq 0 round 1 rv 2 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 704.1 rnti e2c4 harq 0 round 1 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 0.0 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[PHY]    ULSCH ACK trace 704.3 rnti 27cd harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 32.8 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 27cd
+[0m[PHY]    ULSCH ACK trace 705.1 rnti e2c4 harq 0 round 1 rv 1 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 19.4 dB TAest 0
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE e2c4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] (711.11) RA Contention Resolution timer expired for UE 0x27cd, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 10189
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 712.3 rnti b321 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 32.8 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE b321
+[0m[93m[NR_MAC] (719.11) RA Contention Resolution timer expired for UE 0xb321, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 45857
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 720.3 rnti eedb harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 32.8 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE eedb
+[0m[93m[NR_MAC] (727.11) RA Contention Resolution timer expired for UE 0xeedb, RA procedure failed...
+[0m[93m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[93m[RLC]    Remove UE 61147
+[0m[1;31m[NGAP]   Failed to find ue context associated with gNB ue ngap id: 1
+[0m[PHY]    ULSCH ACK trace 728.3 rnti b58e harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 14 rb 0+16 sym 10+3 mcs 1 Qm 2 SNR 32.8 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE b58e
+[0m[PHY]    ULSCH ACK trace 733.2 rnti b58e harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 734.2 rnti b58e harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 734.12 rnti b58e harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 735.12 rnti b58e harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 33.0 dB TAest -1
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 736.2 rnti b58e harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 736.12 rnti b58e harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 738.12 rnti b58e harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 739.12 rnti b58e harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 740.2 rnti b58e harq 8 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 740.12 rnti b58e harq 9 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 741.12 rnti b58e harq 10 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 742.2 rnti b58e harq 11 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 742.12 rnti b58e harq 12 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 743.12 rnti b58e harq 13 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 744.2 rnti b58e harq 14 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 744.12 rnti b58e harq 15 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 745.12 rnti b58e harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 746.2 rnti b58e harq 1 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 746.12 rnti b58e harq 2 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 747.12 rnti b58e harq 3 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 748.2 rnti b58e harq 4 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 748.12 rnti b58e harq 5 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 749.12 rnti b58e harq 6 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[PHY]    ULSCH ACK trace 750.2 rnti b58e harq 7 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 57 rb 4+16 sym 0+13 mcs 0 Qm 2 SNR 0.0 dB TAest 0
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 5419008 pps  100352 kbps  419777][tx 3787908 pps   70144 kbps  183289][Total Msgs_Rcvd 5419008]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1271808 prach0   82944]
+[0m[HW]     [o_du0][pusch1 1271808 prach1   82944]
+[0m[HW]     [o_du0][pusch2 1271808 prach2   82944]
+[0m[HW]     [o_du0][pusch3 1271808 prach3   82944]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE f4fa RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 5519360 pps  100352 kbps  419796][tx 3858052 pps   70144 kbps  183289][Total Msgs_Rcvd 5519360]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.796 Mbps tx=183.289 Mbps total=603.085 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1295360 prach0   84480]
+[0m[HW]     [o_du0][pusch1 1295360 prach1   84480]
+[0m[HW]     [o_du0][pusch2 1295360 prach2   84480]
+[0m[HW]     [o_du0][pusch3 1295360 prach3   84480]
+[0m[HW]     [o-du 0][rx 5619712 pps  100352 kbps  419774][tx 3928196 pps   70144 kbps  183289][Total Msgs_Rcvd 5619712]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.774 Mbps tx=183.289 Mbps total=603.063 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1318912 prach0   86016]
+[0m[HW]     [o_du0][pusch1 1318912 prach1   86016]
+[0m[HW]     [o_du0][pusch2 1318912 prach2   86016]
+[0m[HW]     [o_du0][pusch3 1318912 prach3   86016]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 5720064 pps  100352 kbps  419805][tx 3998340 pps   70144 kbps  183289][Total Msgs_Rcvd 5720064]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.805 Mbps tx=183.289 Mbps total=603.094 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1342464 prach0   87552]
+[0m[HW]     [o_du0][pusch1 1342464 prach1   87552]
+[0m[HW]     [o_du0][pusch2 1342464 prach2   87552]
+[0m[HW]     [o_du0][pusch3 1342464 prach3   87552]
+[0m[HW]     [o-du 0][rx 5820416 pps  100352 kbps  419766][tx 4068484 pps   70144 kbps  183289][Total Msgs_Rcvd 5820416]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1366016 prach0   89088]
+[0m[HW]     [o_du0][pusch1 1366016 prach1   89088]
+[0m[HW]     [o_du0][pusch2 1366016 prach2   89088]
+[0m[HW]     [o_du0][pusch3 1366016 prach3   89088]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 5920768 pps  100352 kbps  419766][tx 4138628 pps   70144 kbps  183289][Total Msgs_Rcvd 5920768]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1389568 prach0   90624]
+[0m[HW]     [o_du0][pusch1 1389568 prach1   90624]
+[0m[HW]     [o_du0][pusch2 1389568 prach2   90624]
+[0m[HW]     [o_du0][pusch3 1389568 prach3   90624]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6021120 pps  100352 kbps  419822][tx 4208772 pps   70144 kbps  183289][Total Msgs_Rcvd 6021120]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.822 Mbps tx=183.289 Mbps total=603.111 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1413120 prach0   92160]
+[0m[HW]     [o_du0][pusch1 1413120 prach1   92160]
+[0m[HW]     [o_du0][pusch2 1413120 prach2   92160]
+[0m[HW]     [o_du0][pusch3 1413120 prach3   92160]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6121472 pps  100352 kbps  419788][tx 4278916 pps   70144 kbps  183289][Total Msgs_Rcvd 6121472]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1436672 prach0   93696]
+[0m[HW]     [o_du0][pusch1 1436672 prach1   93696]
+[0m[HW]     [o_du0][pusch2 1436672 prach2   93696]
+[0m[HW]     [o_du0][pusch3 1436672 prach3   93696]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6221824 pps  100352 kbps  419800][tx 4349060 pps   70144 kbps  183289][Total Msgs_Rcvd 6221824]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1460224 prach0   95232]
+[0m[HW]     [o_du0][pusch1 1460224 prach1   95232]
+[0m[HW]     [o_du0][pusch2 1460224 prach2   95232]
+[0m[HW]     [o_du0][pusch3 1460224 prach3   95232]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6322176 pps  100352 kbps  419777][tx 4419204 pps   70144 kbps  183289][Total Msgs_Rcvd 6322176]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1483776 prach0   96768]
+[0m[HW]     [o_du0][pusch1 1483776 prach1   96768]
+[0m[HW]     [o_du0][pusch2 1483776 prach2   96768]
+[0m[HW]     [o_du0][pusch3 1483776 prach3   96768]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6422528 pps  100352 kbps  419808][tx 4489348 pps   70144 kbps  183289][Total Msgs_Rcvd 6422528]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.808 Mbps tx=183.289 Mbps total=603.097 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1507328 prach0   98304]
+[0m[HW]     [o_du0][pusch1 1507328 prach1   98304]
+[0m[HW]     [o_du0][pusch2 1507328 prach2   98304]
+[0m[HW]     [o_du0][pusch3 1507328 prach3   98304]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6522880 pps  100352 kbps  419794][tx 4559492 pps   70144 kbps  183289][Total Msgs_Rcvd 6522880]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.794 Mbps tx=183.289 Mbps total=603.083 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1530880 prach0   99840]
+[0m[HW]     [o_du0][pusch1 1530880 prach1   99840]
+[0m[HW]     [o_du0][pusch2 1530880 prach2   99840]
+[0m[HW]     [o_du0][pusch3 1530880 prach3   99840]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6623232 pps  100352 kbps  419769][tx 4629636 pps   70144 kbps  183289][Total Msgs_Rcvd 6623232]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.769 Mbps tx=183.289 Mbps total=603.058 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1554432 prach0  101376]
+[0m[HW]     [o_du0][pusch1 1554432 prach1  101376]
+[0m[HW]     [o_du0][pusch2 1554432 prach2  101376]
+[0m[HW]     [o_du0][pusch3 1554432 prach3  101376]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 6723584 pps  100352 kbps  419769][tx 4699780 pps   70144 kbps  183289][Total Msgs_Rcvd 6723584]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.769 Mbps tx=183.289 Mbps total=603.058 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1577984 prach0  102912]
+[0m[HW]     [o_du0][pusch1 1577984 prach1  102912]
+[0m[HW]     [o_du0][pusch2 1577984 prach2  102912]
+[0m[HW]     [o_du0][pusch3 1577984 prach3  102912]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[NR_MAC] UE b58e expected HARQ pid 1 feedback at  389. 1, but is at  388. 7 instead (HARQ feedback is in the future)
+[0m[1;31m[NR_MAC] UE b58e: Could not find a HARQ process at  388. 7!
+[0m[93m[NR_MAC] UE b58e expected HARQ pid 1 feedback at  389. 1, but is at  388.11 instead (HARQ feedback is in the future)
+[0m[1;31m[NR_MAC] UE b58e: Could not find a HARQ process at  388.11!
+[0m[93m[NR_MAC] UE b58e expected HARQ pid 1 feedback at  389. 1, but is at  388.16 instead (HARQ feedback is in the future)
+[0m[1;31m[NR_MAC] UE b58e: Could not find a HARQ process at  388.16!
+[0m[93m[NR_MAC] UE b58e expected HARQ pid 1 feedback at  389. 1, but is at  388.17 instead (HARQ feedback is in the future)
+[0m[1;31m[NR_MAC] UE b58e: Could not find a HARQ process at  388.17!
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6823936 pps  100352 kbps  419808][tx 4769924 pps   70144 kbps  183289][Total Msgs_Rcvd 6823936]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.808 Mbps tx=183.289 Mbps total=603.097 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1601536 prach0  104448]
+[0m[HW]     [o_du0][pusch1 1601536 prach1  104448]
+[0m[HW]     [o_du0][pusch2 1601536 prach2  104448]
+[0m[HW]     [o_du0][pusch3 1601536 prach3  104448]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[HW]     [o-du 0][rx 6924288 pps  100352 kbps  419788][tx 4840068 pps   70144 kbps  183289][Total Msgs_Rcvd 6924288]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1625088 prach0  105984]
+[0m[HW]     [o_du0][pusch1 1625088 prach1  105984]
+[0m[HW]     [o_du0][pusch2 1625088 prach2  105984]
+[0m[HW]     [o_du0][pusch3 1625088 prach3  105984]
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[HW]     [o-du 0][rx 7024640 pps  100352 kbps  419791][tx 4910212 pps   70144 kbps  183289][Total Msgs_Rcvd 7024640]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.791 Mbps tx=183.289 Mbps total=603.080 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1648640 prach0  107520]
+[0m[HW]     [o_du0][pusch1 1648640 prach1  107520]
+[0m[HW]     [o_du0][pusch2 1648640 prach2  107520]
+[0m[HW]     [o_du0][pusch3 1648640 prach3  107520]
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE bac4 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] UE b58e expected HARQ pid 2 feedback at  795. 1, but is at  794. 7 instead (HARQ feedback is in the future)
+[0m[1;31m[NR_MAC] UE b58e: Could not find a HARQ process at  794. 7!
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 9 (have 10) for RNTI 0xb58e
+[0m[93m[NR_MAC] Unexpected ULSCH HARQ PID 9 (have -1) for RNTI 0xb58e
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[RLC]    max RETX reached on SRB 1
+[0m[93m[RLC]    UE b58e: RLF detected, but no callable RLF handler registered
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[1;31m[NR_MAC] invalid cqi_idx 0, default to MCS 9
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE b8dd RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE f9f6 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE ad63 RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE f91c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx 7124992 pps  100352 kbps  419797][tx 4980356 pps   70144 kbps  183289][Total Msgs_Rcvd 7124992]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.797 Mbps tx=183.289 Mbps total=603.086 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1672192 prach0  109056]
+[0m[HW]     [o_du0][pusch1 1672192 prach1  109056]
+[0m[HW]     [o_du0][pusch2 1672192 prach2  109056]
+[0m[HW]     [o_du0][pusch3 1672192 prach3  109056]
+[0m[HW]     [o-du 0][rx 7225344 pps  100352 kbps  419766][tx 5050500 pps   70144 kbps  183289][Total Msgs_Rcvd 7225344]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1695744 prach0  110592]
+[0m[HW]     [o_du0][pusch1 1695744 prach1  110592]
+[0m[HW]     [o_du0][pusch2 1695744 prach2  110592]
+[0m[HW]     [o_du0][pusch3 1695744 prach3  110592]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 7325696 pps  100352 kbps  419819][tx 5120644 pps   70144 kbps  183289][Total Msgs_Rcvd 7325696]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.819 Mbps tx=183.289 Mbps total=603.108 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1719296 prach0  112128]
+[0m[HW]     [o_du0][pusch1 1719296 prach1  112128]
+[0m[HW]     [o_du0][pusch2 1719296 prach2  112128]
+[0m[HW]     [o_du0][pusch3 1719296 prach3  112128]
+[0m[HW]     [o-du 0][rx 7426048 pps  100352 kbps  419783][tx 5190788 pps   70144 kbps  183289][Total Msgs_Rcvd 7426048]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1742848 prach0  113664]
+[0m[HW]     [o_du0][pusch1 1742848 prach1  113664]
+[0m[HW]     [o_du0][pusch2 1742848 prach2  113664]
+[0m[HW]     [o_du0][pusch3 1742848 prach3  113664]
+[0m[HW]     [o-du 0][rx 7526400 pps  100352 kbps  419794][tx 5260932 pps   70144 kbps  183289][Total Msgs_Rcvd 7526400]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.794 Mbps tx=183.289 Mbps total=603.083 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1766400 prach0  115200]
+[0m[HW]     [o_du0][pusch1 1766400 prach1  115200]
+[0m[HW]     [o_du0][pusch2 1766400 prach2  115200]
+[0m[HW]     [o_du0][pusch3 1766400 prach3  115200]
+[0m[HW]     [o-du 0][rx 7626752 pps  100352 kbps  419788][tx 5331076 pps   70144 kbps  183289][Total Msgs_Rcvd 7626752]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1789952 prach0  116736]
+[0m[HW]     [o_du0][pusch1 1789952 prach1  116736]
+[0m[HW]     [o_du0][pusch2 1789952 prach2  116736]
+[0m[HW]     [o_du0][pusch3 1789952 prach3  116736]
+[0m[HW]     [o-du 0][rx 7727104 pps  100352 kbps  419800][tx 5401220 pps   70144 kbps  183289][Total Msgs_Rcvd 7727104]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1813504 prach0  118272]
+[0m[HW]     [o_du0][pusch1 1813504 prach1  118272]
+[0m[HW]     [o_du0][pusch2 1813504 prach2  118272]
+[0m[HW]     [o_du0][pusch3 1813504 prach3  118272]
+[0m[HW]     [o-du 0][rx 7827456 pps  100352 kbps  419794][tx 5471364 pps   70144 kbps  183289][Total Msgs_Rcvd 7827456]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.794 Mbps tx=183.289 Mbps total=603.083 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1837056 prach0  119808]
+[0m[HW]     [o_du0][pusch1 1837056 prach1  119808]
+[0m[HW]     [o_du0][pusch2 1837056 prach2  119808]
+[0m[HW]     [o_du0][pusch3 1837056 prach3  119808]
+[0m[HW]     [o-du 0][rx 7927808 pps  100352 kbps  419788][tx 5541508 pps   70144 kbps  183289][Total Msgs_Rcvd 7927808]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1860608 prach0  121344]
+[0m[HW]     [o_du0][pusch1 1860608 prach1  121344]
+[0m[HW]     [o_du0][pusch2 1860608 prach2  121344]
+[0m[HW]     [o_du0][pusch3 1860608 prach3  121344]
+[0m[HW]     [o-du 0][rx 8028160 pps  100352 kbps  419788][tx 5611652 pps   70144 kbps  183289][Total Msgs_Rcvd 8028160]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1884160 prach0  122880]
+[0m[HW]     [o_du0][pusch1 1884160 prach1  122880]
+[0m[HW]     [o_du0][pusch2 1884160 prach2  122880]
+[0m[HW]     [o_du0][pusch3 1884160 prach3  122880]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 8128512 pps  100352 kbps  419783][tx 5681796 pps   70144 kbps  183289][Total Msgs_Rcvd 8128512]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1907712 prach0  124416]
+[0m[HW]     [o_du0][pusch1 1907712 prach1  124416]
+[0m[HW]     [o_du0][pusch2 1907712 prach2  124416]
+[0m[HW]     [o_du0][pusch3 1907712 prach3  124416]
+[0m[HW]     [o-du 0][rx 8228864 pps  100352 kbps  419783][tx 5751940 pps   70144 kbps  183289][Total Msgs_Rcvd 8228864]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1931264 prach0  125952]
+[0m[HW]     [o_du0][pusch1 1931264 prach1  125952]
+[0m[HW]     [o_du0][pusch2 1931264 prach2  125952]
+[0m[HW]     [o_du0][pusch3 1931264 prach3  125952]
+[0m[HW]     [o-du 0][rx 8329216 pps  100352 kbps  419777][tx 5822084 pps   70144 kbps  183289][Total Msgs_Rcvd 8329216]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1954816 prach0  127488]
+[0m[HW]     [o_du0][pusch1 1954816 prach1  127488]
+[0m[HW]     [o_du0][pusch2 1954816 prach2  127488]
+[0m[HW]     [o_du0][pusch3 1954816 prach3  127488]
+[0m[HW]     [o-du 0][rx 8429568 pps  100352 kbps  419766][tx 5892228 pps   70144 kbps  183289][Total Msgs_Rcvd 8429568]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.766 Mbps tx=183.289 Mbps total=603.055 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 1978368 prach0  129024]
+[0m[HW]     [o_du0][pusch1 1978368 prach1  129024]
+[0m[HW]     [o_du0][pusch2 1978368 prach2  129024]
+[0m[HW]     [o_du0][pusch3 1978368 prach3  129024]
+[0m[HW]     [o-du 0][rx 8529920 pps  100352 kbps  419788][tx 5962372 pps   70144 kbps  183289][Total Msgs_Rcvd 8529920]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.788 Mbps tx=183.289 Mbps total=603.077 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2001920 prach0  130560]
+[0m[HW]     [o_du0][pusch1 2001920 prach1  130560]
+[0m[HW]     [o_du0][pusch2 2001920 prach2  130560]
+[0m[HW]     [o_du0][pusch3 2001920 prach3  130560]
+[0m[HW]     [o-du 0][rx 8630272 pps  100352 kbps  419800][tx 6032516 pps   70144 kbps  183289][Total Msgs_Rcvd 8630272]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2025472 prach0  132096]
+[0m[HW]     [o_du0][pusch1 2025472 prach1  132096]
+[0m[HW]     [o_du0][pusch2 2025472 prach2  132096]
+[0m[HW]     [o_du0][pusch3 2025472 prach3  132096]
+[0m[HW]     [o-du 0][rx 8730624 pps  100352 kbps  419777][tx 6102660 pps   70144 kbps  183289][Total Msgs_Rcvd 8730624]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.777 Mbps tx=183.289 Mbps total=603.066 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2049024 prach0  133632]
+[0m[HW]     [o_du0][pusch1 2049024 prach1  133632]
+[0m[HW]     [o_du0][pusch2 2049024 prach2  133632]
+[0m[HW]     [o_du0][pusch3 2049024 prach3  133632]
+[0m[HW]     [o-du 0][rx 8830976 pps  100352 kbps  419800][tx 6172804 pps   70144 kbps  183289][Total Msgs_Rcvd 8830976]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.800 Mbps tx=183.289 Mbps total=603.089 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2072576 prach0  135168]
+[0m[HW]     [o_du0][pusch1 2072576 prach1  135168]
+[0m[HW]     [o_du0][pusch2 2072576 prach2  135168]
+[0m[HW]     [o_du0][pusch3 2072576 prach3  135168]
+[0m[PHY]    prach_I0 = 0.0 dB
+[0m[HW]     [o-du 0][rx 8931328 pps  100352 kbps  419799][tx 6242948 pps   70144 kbps  183289][Total Msgs_Rcvd 8931328]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.799 Mbps tx=183.289 Mbps total=603.088 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2096128 prach0  136704]
+[0m[HW]     [o_du0][pusch1 2096128 prach1  136704]
+[0m[HW]     [o_du0][pusch2 2096128 prach2  136704]
+[0m[HW]     [o_du0][pusch3 2096128 prach3  136704]
+[0m[HW]     [o-du 0][rx 9031680 pps  100352 kbps  419774][tx 6313092 pps   70144 kbps  183289][Total Msgs_Rcvd 9031680]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.774 Mbps tx=183.289 Mbps total=603.063 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2119680 prach0  138240]
+[0m[HW]     [o_du0][pusch1 2119680 prach1  138240]
+[0m[HW]     [o_du0][pusch2 2119680 prach2  138240]
+[0m[HW]     [o_du0][pusch3 2119680 prach3  138240]
+[0m[HW]     [o-du 0][rx 9132032 pps  100352 kbps  419783][tx 6383236 pps   70144 kbps  183289][Total Msgs_Rcvd 9132032]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.783 Mbps tx=183.289 Mbps total=603.072 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2143232 prach0  139776]
+[0m[HW]     [o_du0][pusch1 2143232 prach1  139776]
+[0m[HW]     [o_du0][pusch2 2143232 prach2  139776]
+[0m[HW]     [o_du0][pusch3 2143232 prach3  139776]
+[0m[HW]     [o-du 0][rx 9232384 pps  100352 kbps  419786][tx 6453380 pps   70144 kbps  183289][Total Msgs_Rcvd 9232384]
+[0m[HW]     [FH LOAD][o-du 0] rx=419.786 Mbps tx=183.289 Mbps total=603.075 Mbps rx_pps=100352 tx_pps=70144 total_pps=170496
+[0m[HW]     [o_du0][pusch0 2166784 prach0  141312]
+[0m[HW]     [o_du0][pusch1 2166784 prach1  141312]
+[0m[HW]     [o_du0][pusch2 2166784 prach2  141312]
+[0m[HW]     [o_du0][pusch3 2166784 prach3  141312]
+[0m

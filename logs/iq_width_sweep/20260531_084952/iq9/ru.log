@@ -1,0 +1,484 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_ru/run_ru_20260531_084954_pid143429.log
+RU cores: 10,11,12,13,14,15,16
+RU numerology: 1
+ORU PRACH frame adjust: 0
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2816000 kB
+HugePages_Total:    8192
+HugePages_Free:     8192
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+Using uio_pci_generic; skipping VFIO IOMMU group viability check.
+CMDLINE: "./nr-oru" "-O" "/home/jesse/oran_lab/ru_test.conf" "--vrtsim.role" "server" "--numerology" "1" "--vrtsim.chanmod" "1" "--vrtsim.timescale" "1.0" "--vrtsim.client-num-rx-antennas" "2" 
+[93m[PHY]    ./nr-oru is experimental software and at this point is not an implementation of a 7.2 O-RAN RU
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/ru/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.0 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+Reading in command-line options
+configuring for RRU
+About to Init RU threads
+xran_fh_init:
+  io_cfg:
+    id 1 (O-RU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.0, 0000:06:02.1, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 11
+    system_core 10
+    pkt_proc_core 0000000000003000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 11
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[1]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix ru
+  mtu 9600
+  p_o_du_addr 
+  p_o_du_addr [00:11:22:33:64:68, 00:11:22:33:64:69]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000003c00 core 11 [id] system_core 10 [id] pkt_proc_core 0x00000000000003000 [mask] pkt_aux_core 0 [id] timing_core 11 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:ru -c 0x00000000000003c00 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix ru -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 66
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.1 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 67
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 11
+Created ring rx_ring_cp_1_0 on core 11
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 66
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 68
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 67
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 69
+created dl_gen_ring_up_0 on core 11
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 200
+  T2a_max_up 550
+  Ta3_min 200
+  Ta3_max 470
+  T1a_min_cp_dl 0
+  T1a_max_cp_dl 0
+  T1a_min_cp_ul 0
+  T1a_max_cp_ul 0
+  T1a_min_up 0
+  T1a_max_up 0
+  Ta4_min 0
+  Ta4_max 0
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 10
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7ffc07a83c30
+  tx_up_eAxC2Vf 0x7ffc07a84830
+  rx_cp_eAxC2Vf 0x7ffc07a85430
+  rx_up_eAxC2Vf 0x7ffc07a86030
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU 11] [PID: 143441]
+TTI interval 500 [us]
+Start UL U-plane 200 us after OTA [offset in sym 6]
+Receive DL U-plane 550 us after OTA [offset in sym 16]
+O-XU      1
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 12] [PID: 143441]
+spawn worker 0 core 12
+xran_generic_worker_thread [CPU 13] [PID: 143441]
+spawn worker 1 core 13
+xran_open [CPU 10] [PID: 143441]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x717198f95040
+xran_sector_get_instances [0]: CC 0 handle 0x597250a9d800
+Handle: 0x7171c998c468 Instance: 0x597250a9d800
+-> hInstance 0x597250a9d800
+ru_0_cc_0_idx_0: [ handle 0x597250a9d800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 1023 nBufferSize 14116 socket_id 0
+CC:[ handle 0x597250a9d800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784540 
+xran_bm_init() hInstance 0x597250a9d800 poolIdx 0 elements 1023 size 14116
+xran_bm_allocate_buffer() hInstance 0x597250a9d800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x597250a9d800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x597250a9d800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786ac0 
+xran_bm_init() hInstance 0x597250a9d800 poolIdx 1 elements 1023 size 497[93m[HW]     PRACH was not configured for frame.slot 33.19 adjusted 33.19 frame8 33: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 74.19 adjusted 74.19 frame8 74: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 116.19 adjusted 116.19 frame8 116: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 158.19 adjusted 158.19 frame8 158: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 199.19 adjusted 199.19 frame8 199: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 241.19 adjusted 241.19 frame8 241: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     Packets not processed by the application layer (application layer too slow): 6
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 316.19 adjusted 316.19 frame8 60: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 357.19 adjusted 357.19 frame8 101: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 399.19 adjusted 399.19 frame8 143: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 441.19 adjusted 441.19 frame8 185: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 482.19 adjusted 482.19 frame8 226: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 557.19 adjusted 557.19 frame8 45: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 599.19 adjusted 599.19 frame8 87: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 640.19 adjusted 640.19 frame8 128: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 682.19 adjusted 682.19 frame8 170: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 724.19 adjusted 724.19 frame8 212: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 765.19 adjusted 765.19 frame8 253: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 840.19 adjusted 840.19 frame8 72: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 882.19 adjusted 882.19 frame8 114: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 923.19 adjusted 923.19 frame8 155: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 965.19 adjusted 965.19 frame8 197: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 1007.19 adjusted 1007.19 frame8 239: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 57.19 adjusted 57.19 frame8 57: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 99.19 adjusted 99.19 frame8 99: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 141.19 adjusted 141.19 frame8 141: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 182.19 adjusted 182.19 frame8 182: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 224.19 adjusted 224.19 frame8 224: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 299.19 adjusted 299.19 frame8 43: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 340.19 adjusted 340.19 frame8 84: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 382.19 adjusted 382.19 frame8 126: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 424.19 adjusted 424.19 frame8 168: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 465.19 adjusted 465.19 frame8 209: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 507.19 adjusted 507.19 frame8 251: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 582.19 adjusted 582.19 frame8 70: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 623.19 adjusted 623.19 frame8 111: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 665.19 adjusted 665.19 frame8 153: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 707.19 adjusted 707.19 frame8 195: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 748.19 adjusted 748.19 frame8 236: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 823.19 adjusted 823.19 frame8 55: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 865.19 adjusted 865.19 frame8 97: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 906.19 adjusted 906.19 frame8 138: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 948.19 adjusted 948.19 frame8 180: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 990.19 adjusted 990.19 frame8 222: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 40.19 adjusted 40.19 frame8 40: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 82.19 adjusted 82.19 frame8 82: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 124.19 adjusted 124.19 frame8 124: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 165.19 adjusted 165.19 frame8 165: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 207.19 adjusted 207.19 frame8 207: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 249.19 adjusted 249.19 frame8 249: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 323.19 adjusted 323.19 frame8 67: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 365.19 adjusted 365.19 frame8 109: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 407.19 adjusted 407.19 frame8 151: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 448.19 adjusted 448.19 frame8 192: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 490.19 adjusted 490.19 frame8 234: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 565.19 adjusted 565.19 frame8 53: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 606.19 adjusted 606.19 frame8 94: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 648.19 adjusted 648.19 frame8 136: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 690.19 adjusted 690.19 frame8 178: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 731.19 adjusted 731.19 frame8 219: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 806.19 adjusted 806.19 frame8 38: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 848.19 adjusted 848.19 frame8 80: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 889.19 adjusted 889.19 frame8 121: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 931.19 adjusted 931.19 frame8 163: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 973.19 adjusted 973.19 frame8 205: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 1014.19 adjusted 1014.19 frame8 246: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 65.19 adjusted 65.19 frame8 65: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 107.19 adjusted 107.19 frame8 107: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 148.19 adjusted 148.19 frame8 148: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 190.19 adjusted 190.19 frame8 190: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 232.19 adjusted 232.19 frame8 232: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 306.19 adjusted 306.19 frame8 50: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 348.19 adjusted 348.19 frame8 92: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 390.19 adjusted 390.19 frame8 134: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 431.19 adjusted 431.19 frame8 175: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 473.19 adjusted 473.19 frame8 217: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 548.19 adjusted 548.19 frame8 36: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 589.19 adjusted 589.19 frame8 77: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 631.19 adjusted 631.19 frame8 119: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 673.19 adjusted 673.19 frame8 161: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 714.19 adjusted 714.19 frame8 202: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 756.19 adjusted 756.19 frame8 244: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 831.19 adjusted 831.19 frame8 63: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 872.19 adjusted 872.19 frame8 104: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 914.19 adjusted 914.19 frame8 146: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 956.19 adjusted 956.19 frame8 188: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 997.19 adjusted 997.19 frame8 229: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 48.19 adjusted 48.19 frame8 48: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 90.19 adjusted 90.19 frame8 90: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 131.19 adjusted 131.19 frame8 131: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 173.19 adjusted 173.19 frame8 173: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 215.19 adjusted 215.19 frame8 215: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 289.19 adjusted 289.19 frame8 33: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 331.19 adjusted 331.19 frame8 75: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 373.19 adjusted 373.19 frame8 117: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 414.19 adjusted 414.19 frame8 158: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 456.19 adjusted 456.19 frame8 200: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 498.19 adjusted 498.19 frame8 242: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 572.19 adjusted 572.19 frame8 60: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 614.19 adjusted 614.19 frame8 102: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 656.19 adjusted 656.19 frame8 144: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 697.19 adjusted 697.19 frame8 185: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 739.19 adjusted 739.19 frame8 227: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 814.19 adjusted 814.19 frame8 46: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 855.19 adjusted 855.19 frame8 87: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 897.19 adjusted 897.19 frame8 129: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 939.19 adjusted 939.19 frame8 171: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 980.19 adjusted 980.19 frame8 212: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 1022.19 adjusted 1022.19 frame8 254: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 73.19 adjusted 73.19 frame8 73: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 114.19 adjusted 114.19 frame8 114: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 156.19 adjusted 156.19 frame8 156: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 198.19 adjusted 198.19 frame8 198: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 239.19 adjusted 239.19 frame8 239: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 314.19 adjusted 314.19 frame8 58: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 356.19 adjusted 356.19 frame8 100: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 397.19 adjusted 397.19 frame8 141: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 439.19 adjusted 439.19 frame8 183: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 481.19 adjusted 481.19 frame8 225: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 555.19 adjusted 555.19 frame8 43: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 597.19 adjusted 597.19 frame8 85: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 639.19 adjusted 639.19 frame8 127: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 680.19 adjusted 680.19 frame8 168: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 722.19 adjusted 722.19 frame8 210: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 764.19 adjusted 764.19 frame8 252: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 838.19 adjusted 838.19 frame8 70: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 880.19 adjusted 880.19 frame8 112: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 922.19 adjusted 922.19 frame8 154: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 963.19 adjusted 963.19 frame8 195: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 1005.19 adjusted 1005.19 frame8 237: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 56.19 adjusted 56.19 frame8 56: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 97.19 adjusted 97.19 frame8 97: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 139.19 adjusted 139.19 frame8 139: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 181.19 adjusted 181.19 frame8 181: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 222.19 adjusted 222.19 frame8 222: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 297.19 adjusted 297.19 frame8 41: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 339.19 adjusted 339.19 frame8 83: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 380.19 adjusted 380.19 frame8 124: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 422.19 adjusted 422.19 frame8 166: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 464.19 adjusted 464.19 frame8 208: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 505.19 adjusted 505.19 frame8 249: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 580.19 adjusted 580.19 frame8 68: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 622.19 adjusted 622.19 frame8 110: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 663.19 adjusted 663.19 frame8 151: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 705.19 adjusted 705.19 frame8 193: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 747.19 adjusted 747.19 frame8 235: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 821.19 adjusted 821.19 frame8 53: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 863.19 adjusted 863.19 frame8 95: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 905.19 adjusted 905.19 frame8 137: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 946.19 adjusted 946.19 frame8 178: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 988.19 adjusted 988.19 frame8 220: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 39.19 adjusted 39.19 frame8 39: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 80.19 adjusted 80.19 frame8 80: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 122.19 adjusted 122.19 frame8 122: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 164.19 adjusted 164.19 frame8 164: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 205.19 adjusted 205.19 frame8 205: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 247.19 adjusted 247.19 frame8 247: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 322.19 adjusted 322.19 frame8 66: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 363.19 adjusted 363.19 frame8 107: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 405.19 adjusted 405.19 frame8 149: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 447.19 adjusted 447.19 frame8 191: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 488.19 adjusted 488.19 frame8 232: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 563.19 adjusted 563.19 frame8 51: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 605.19 adjusted 605.19 frame8 93: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 646.19 adjusted 646.19 frame8 134: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 688.19 adjusted 688.19 frame8 176: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 730.19 adjusted 730.19 frame8 218: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 804.19 adjusted 804.19 frame8 36: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 846.19 adjusted 846.19 frame8 78: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 888.19 adjusted 888.19 frame8 120: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 929.19 adjusted 929.19 frame8 161: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 971.19 adjusted 971.19 frame8 203: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 1013.19 adjusted 1013.19 frame8 245: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 63.19 adjusted 63.19 frame8 63: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 105.19 adjusted 105.19 frame8 105: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 147.19 adjusted 147.19 frame8 147: no C-plane config cached
+[0m[93m[HW]     [ORU] Drop invalid U-plane packet: port=0 frame=17 subframe=3 slot=38 slot_in_frame=44 symbol=37 ant=0 start_prb=0 num_prb=0 nDLRBs=24 neAxc=2
+[0m[93m[HW]     PRACH was not configured for frame.slot 188.19 adjusted 188.19 frame8 188: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 230.19 adjusted 230.19 frame8 230: no C-plane config cached
+[0m[93m[HW]     Packets early: 1
+[0m[93m[HW]     Packets malformed (packet couldn't be processed): 1
+[0m[93m[HW]     PRACH was not configured for frame.slot 305.19 adjusted 305.19 frame8 49: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 346.19 adjusted 346.19 frame8 90: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 388.19 adjusted 388.19 frame8 132: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 430.19 adjusted 430.19 frame8 174: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 471.19 adjusted 471.19 frame8 215: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 546.19 adjusted 546.19 frame8 34: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 588.19 adjusted 588.19 frame8 76: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 629.19 adjusted 629.19 frame8 117: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 671.19 adjusted 671.19 frame8 159: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 713.19 adjusted 713.19 frame8 201: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 754.19 adjusted 754.19 frame8 242: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 829.19 adjusted 829.19 frame8 61: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 871.19 adjusted 871.19 frame8 103: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 912.19 adjusted 912.19 frame8 144: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 954.19 adjusted 954.19 frame8 186: no C-plane config cached
+[0m[93m[HW]     PRACH was not configured for frame.slot 996.19 adjusted 996.19 frame8 228: no C-plane config cached
+[0m

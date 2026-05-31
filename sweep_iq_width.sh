@@ -33,12 +33,16 @@ CHAN_TYPE="${CHAN_TYPE:-AWGN}"           # AWGN | TDL_A | TDL_B | TDL_C | TDL_D 
 CHAN_DS_TDL="${CHAN_DS_TDL:-0}"          # delay spread for TDL models, microseconds
 CHAN_NOISE_DB="${CHAN_NOISE_DB:--30}"    # channel noise power dB (lower = higher RX SNR)
 CHAN_PLOSS_DB="${CHAN_PLOSS_DB:-0}"      # channel path loss dB
-CHAN_FORGETFACT="${CHAN_FORGETFACT:-0}"  # 0=static .. ~1=fast-varying (UE-mobility PROXY; max_Doppler is NOT implemented)
+CHAN_FORGETFACT="${CHAN_FORGETFACT:-0}"  # 0=static .. ~1=fast-varying. Auto-derived from UE_SPEED_KMH when that is >0 (see build_chanmod).
+UE_SPEED_KMH="${UE_SPEED_KMH:-0}"        # UE speed (km/h). >0 converts to max Doppler -> forgetfact (max_Doppler itself is NOT implemented)
+CARRIER_HZ="${CARRIER_HZ:-4049760000}"   # carrier freq for the Doppler conversion f_d = (v/3.6)*fc/c (band 77 default in use here)
+DOPPLER_HZ=""                            # filled in by build_chanmod when UE_SPEED_KMH>0 (for the report)
 VRTSIM_TIMESCALE="${VRTSIM_TIMESCALE:-1.0}" # <1.0 = slower-than-realtime (often needed for chanmod, per vrtsim README)
 NB_ANT="${NB_ANT:-1}"                    # gNB+UE antenna count (1..4); raises FH load ~linearly to stress FH latency
+BW_PRB="${BW_PRB:-0}"                    # 0=leave conf as-is; else set dl/ul carrierBandwidth + initial BWP RIV + tx_bw/rx_bw. @30kHz SCS: 133=50MHz, 65=25MHz, 24=10MHz
 UE_COUNT="${UE_COUNT:-1}"                # documented only: vrtsim multi-UE needs N UE procs + N CN subs + chanmod (see feasibility doc)
 # export so the report generator (python subprocess) can show them in ## Radio Context
-export CHANMOD CHAN_TYPE CHAN_DS_TDL CHAN_NOISE_DB CHAN_PLOSS_DB CHAN_FORGETFACT VRTSIM_TIMESCALE NB_ANT UE_COUNT
+export CHANMOD CHAN_TYPE CHAN_DS_TDL CHAN_NOISE_DB CHAN_PLOSS_DB CHAN_FORGETFACT UE_SPEED_KMH CARRIER_HZ DOPPLER_HZ VRTSIM_TIMESCALE NB_ANT BW_PRB UE_COUNT
 RU_WAIT_SECONDS="${RU_WAIT_SECONDS:-30}"
 DU_WAIT_SECONDS="${DU_WAIT_SECONDS:-60}"
 UE_WAIT_SECONDS="${UE_WAIT_SECONDS:-90}"
@@ -122,15 +126,48 @@ restore_configs() {
 build_chanmod() {
   # gNB/UE antenna count (FH-load lever). UE side is via run_ue.sh cmdline; gNB/RU
   # side patches the configs. NB_ANT>1 (MIMO) needs validation in this FH/xran setup.
-  export UE_NB_ANT_TX="${NB_ANT}" UE_NB_ANT_RX="${NB_ANT}"
-  if [[ "${NB_ANT}" != "1" ]]; then
-    perl -0pi -e 's/(\bnb_tx\s*=\s*)\d+/${1}'"${NB_ANT}"'/g; s/(\bnb_rx\s*=\s*)\d+/${1}'"${NB_ANT}"'/g;' "${RU_CONF}" "${DU_CONF}"
-    perl -0pi -e 's/(pdsch_AntennaPorts_XP\s*=\s*)\d+/${1}'"${NB_ANT}"'/g; s/(pusch_AntennaPorts\s*=\s*)\d+/${1}'"${NB_ANT}"'/g; s/(maxMIMO_layers\s*=\s*)\d+/${1}'"${NB_ANT}"'/g;' "${DU_CONF}"
-    log "antennas patched to ${NB_ANT}x${NB_ANT} (nb_tx/nb_rx, pusch/pdsch AntennaPorts) — VALIDATE: FH/xran MIMO path is untested here"
+  # Asymmetric antennas: gNB DL TX = NB_ANT_TX, gNB UL RX = NB_ANT_RX (default both = NB_ANT).
+  # UE mirrors: UE UL TX = gNB RX, UE DL RX = gNB TX. For a UL-only FH-load test set
+  # NB_ANT_TX=1 (cheap DL/attach -> server chanmod ~1 conv, realtime holds) + NB_ANT_RX=4
+  # (4x UL FH load + UL MIMO; UE-side UL chanmod already keeps up at 0 drops).
+  local nbtx="${NB_ANT_TX:-${NB_ANT}}" nbrx="${NB_ANT_RX:-${NB_ANT}}"
+  export UE_NB_ANT_TX="${nbrx}" UE_NB_ANT_RX="${nbtx}"
+  if [[ "${nbtx}" != "1" || "${nbrx}" != "1" ]]; then
+    perl -0pi -e 's/(\bnb_tx\s*=\s*)\d+/${1}'"${nbtx}"'/g; s/(\bnb_rx\s*=\s*)\d+/${1}'"${nbrx}"'/g;' "${RU_CONF}" "${DU_CONF}"
+    perl -0pi -e 's/(pdsch_AntennaPorts_XP\s*=\s*)\d+/${1}'"${nbtx}"'/g; s/(pusch_AntennaPorts\s*=\s*)\d+/${1}'"${nbrx}"'/g; s/(maxMIMO_layers\s*=\s*)\d+/${1}'"${nbtx}"'/g;' "${DU_CONF}"
+    log "antennas patched: gNB tx=${nbtx} rx=${nbrx}; UE tx=${nbrx} rx=${nbtx}; pdsch=${nbtx} pusch=${nbrx}"
+  fi
+  if [[ "${BW_PRB}" != "0" ]]; then
+    # Widen the carrier: set dl/ul carrierBandwidth, the initial BWP RIV
+    # (locationAndBandwidth for start=0,len=BW_PRB; N_size=275 -> RIV=275*(L-1)),
+    # and the RU tx_bw/rx_bw. pointA/SSB are left fixed (SSB stays low-edge valid).
+    local riv=$(( 275 * (BW_PRB - 1) ))
+    perl -0pi -e 's/(\b(?:dl|ul)_carrierBandwidth\s*=\s*)\d+/${1}'"${BW_PRB}"'/g; s/(initial(?:DL|UL)BWPlocationAndBandwidth\s*=\s*)\d+/${1}'"${riv}"'/g;' "${DU_CONF}"
+    perl -0pi -e 's/(tx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"${BW_PRB}"'${2}/g; s/(rx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"${BW_PRB}"'${2}/g;' "${RU_CONF}"
+    export RUN_UE_RB="${BW_PRB}"   # UE cmdline N_RB (-r) must match the carrier
+    # pointA is fixed, so the carrier CENTER moves with bandwidth: center = pointA + N_RB*12*SCS/2.
+    # pointA here = 4045.44 MHz (ARFCN 669696); SCS=30kHz -> 180kHz/PRB half-step. Update the RU
+    # carrier_tx/rx (kHz) and the UE -C (Hz) to the new center, else the UE can't find the SSB.
+    local center_hz=$(( 4045440000 + BW_PRB * 180000 )) center_khz=$(( (4045440000 + BW_PRB * 180000) / 1000 ))
+    perl -0pi -e 's/(carrier_tx\s*=\s*\[)\s*\d+\s*(\])/${1}'"${center_khz}"'${2}/g; s/(carrier_rx\s*=\s*\[)\s*\d+\s*(\])/${1}'"${center_khz}"'${2}/g;' "${RU_CONF}"
+    export RUN_UE_CARRIER="${center_hz}"
+    log "bandwidth patched to ${BW_PRB} PRB: carrierBandwidth + BWP RIV=${riv} + tx_bw/rx_bw + UE -r; carrier center -> ${center_hz} Hz (RU carrier_tx/rx + UE -C) — @30kHz: 51=20MHz 133=50MHz"
   fi
   if [[ "${CHANMOD}" != "1" ]]; then
     export VRTSIM_RU_EXTRA_ARGS="" VRTSIM_UE_EXTRA_ARGS=""
     return 0
+  fi
+  # Convert UE speed (km/h) -> max Doppler (Hz) -> forgetfact. The model does not
+  # honor max_Doppler (sim.h), so translate the Doppler into the per-slot channel
+  # decorrelation that 'forgetfact' controls: f_d = (v/3.6)*fc/c; coherence time
+  # T_c ~= 0.423/f_d (Clarke); forgetfact ~= slot_dur/T_c (clamped 0..1).
+  if [[ "${UE_SPEED_KMH}" != "0" ]]; then
+    read -r DOPPLER_HZ CHAN_FORGETFACT < <(awk -v v="${UE_SPEED_KMH}" -v fc="${CARRIER_HZ}" -v mu="${NUMEROLOGY:-1}" 'BEGIN{
+      c=299792458.0; fd=(v/3.6)*fc/c; slot=0.001/(2^mu);
+      tc=(fd>0)?0.423/fd:1e9; ff=slot/tc; if(ff>1)ff=1; if(ff<0)ff=0;
+      printf "%.2f %.5f\n", fd, ff }')
+    export DOPPLER_HZ CHAN_FORGETFACT
+    log "UE speed ${UE_SPEED_KMH} km/h @ ${CARRIER_HZ} Hz -> Doppler ${DOPPLER_HZ} Hz -> forgetfact ${CHAN_FORGETFACT}"
   fi
   local cm="${BASE_DIR}/channelmod_sweep.conf"   # next to the configs so libconfig @include resolves
   cat > "${cm}" <<EOF
@@ -140,17 +177,33 @@ channelmod = {
   max_chan  = 10;
   modellist = "vrtsim_sweep_list";
   vrtsim_sweep_list = (
-    { model_name = "server_tx_channel_model"; type = "${CHAN_TYPE}"; ploss_dB = ${CHAN_PLOSS_DB}; noise_power_dB = ${CHAN_NOISE_DB}; forgetfact = ${CHAN_FORGETFACT}; offset = 0; ds_tdl = ${CHAN_DS_TDL}; },
+    { model_name = "server_tx_channel_model"; type = "${CHAN_TYPE_DL:-${CHAN_TYPE}}"; ploss_dB = ${CHAN_PLOSS_DB}; noise_power_dB = ${CHAN_NOISE_DB}; forgetfact = ${CHAN_FORGETFACT_DL:-${CHAN_FORGETFACT}}; offset = 0; ds_tdl = ${CHAN_DS_TDL_DL:-${CHAN_DS_TDL}}; },
     { model_name = "client_tx_channel_model"; type = "${CHAN_TYPE}"; ploss_dB = ${CHAN_PLOSS_DB}; noise_power_dB = ${CHAN_NOISE_DB}; forgetfact = ${CHAN_FORGETFACT}; offset = 0; ds_tdl = ${CHAN_DS_TDL}; }
   );
 };
 EOF
+  # vrtsim reads per-UE antenna/channel config from vrtsim.ue_config.[i] on the
+  # SERVER; without it each UE defaults to 1x1 TX and a multi-antenna UE aborts
+  # ("Server expects UE 0 to have 1 TX antennas"). Emit it for NB_ANT>1.
+  if [[ "${UE_NB_ANT_TX}" != "1" || "${UE_NB_ANT_RX}" != "1" ]]; then
+    cat >> "${cm}" <<EOF
+
+vrtsim = {
+  ue_config = (
+    { antennas = "${UE_NB_ANT_TX}x${UE_NB_ANT_RX}"; }
+  );
+};
+EOF
+  fi
   cp "${cm}" "${OUT_DIR}/channelmod_sweep.conf" 2>/dev/null || true
   grep -q 'channelmod_sweep.conf' "${RU_CONF}" || printf '\n@include "channelmod_sweep.conf"\n' >> "${RU_CONF}"
   [[ -f "${UE_CONF}" ]] && { grep -q 'channelmod_sweep.conf' "${UE_CONF}" || printf '\n@include "channelmod_sweep.conf"\n' >> "${UE_CONF}"; }
-  export VRTSIM_RU_EXTRA_ARGS="--vrtsim.chanmod 1 --vrtsim.timescale ${VRTSIM_TIMESCALE}"
+  # The server must know how many RX antennas the client has, else it defaults to 1
+  # (client_num_rx_antennas .defintval=1) and models DL for only 1 of the UE's NB_ANT
+  # RX antennas -> UE 4-antenna DL combine gets garbage -> synch fails. Pass it explicitly.
+  export VRTSIM_RU_EXTRA_ARGS="--vrtsim.chanmod 1 --vrtsim.timescale ${VRTSIM_TIMESCALE} --vrtsim.client-num-rx-antennas ${UE_NB_ANT_RX}"
   export VRTSIM_UE_EXTRA_ARGS="--vrtsim.chanmod 1"
-  export UE_NB_ANT_TX="${NB_ANT}" UE_NB_ANT_RX="${NB_ANT}"
+  export UE_NB_ANT_TX="${nbrx}" UE_NB_ANT_RX="${nbtx}"
   log "chanmod ON: type=${CHAN_TYPE} ds_tdl=${CHAN_DS_TDL}us noise=${CHAN_NOISE_DB}dB ploss=${CHAN_PLOSS_DB}dB forgetfact=${CHAN_FORGETFACT} timescale=${VRTSIM_TIMESCALE} ant=${NB_ANT}"
   log "chanmod NOTE: realtime is fragile — if UE will not connect, lower VRTSIM_TIMESCALE; this path needs validation."
 }

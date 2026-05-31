@@ -1,0 +1,709 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260531_004127_pid2794913.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:  12896256 kB
+ShmemHugePages:        0 kB
+FileHugePages:   2809856 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 2, NB_TX 2
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    Channel 1: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 2
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 2
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDGGGGUUUU
+    sSlotConfig[2]: UUUUUUUUUUUUUU
+    sSlotConfig[3]: UUUUUUUUUUUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 9
+    compMeth 1
+    iqWidth_PRACH 9
+    compMeth_PRACH 1
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7087ae7e04b0
+  tx_up_eAxC2Vf 0x7087ae7e10b0
+  rx_cp_eAxC2Vf 0x7087ae7e1cb0
+  rx_up_eAxC2Vf 0x7087ae7e28b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 2794936]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+O-XU      0
+HW        0
+Num cores 3
+created sym cp dl cb for symbol 1
+Num ports 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 2
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 2794936]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 2794936]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 2794936]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x708774f95040
+xran_sector_get_instances [0]: CC 0 handle 0x70879c196800
+Handle: 0x7087bc3b1468 Instance: 0x[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 2
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]    got sync (ru_thread)
+[0m70879c196800
+-> hInstance 0x70879c196800
+ru_0_cc_0_idx_0: [ handle 0x70879c196800 0 0 ] [nPoolIndex 0] nNumberOfBuffers 1023 nBufferSize 14116 socket_id 0
+CC:[ handle 0x70879c196800 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784940 
+xran_bm_init() hInstance 0x70879c196800 poolIdx 0 elements 1023 size 14116
+xran_bm_allocate_buffer() hInstance 0x70879c196800 poolIdx 0 count 560
+ru_0_cc_0_idx_1: [ handle 0x70879c196800 0 0 ] [nPoolIndex 1] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70879c196800 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284786e80 
+xran_bm_init() hInstance 0x70879c196800 poolIdx 1 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x70879c196800 poolIdx 1 count 40
+ru_0_cc_0_idx_2: [ handle 0x70879c196800 0 0 ] [nPoolIndex 2] nNumberOfBuffers 1023 nBufferSize 13168 socket_id 0
+CC:[ handle 0x70879c196800 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786940 
+xran_bm_init() hInstance 0x70879c196800 poolIdx 2 elements 1023 size 13168
+xran_bm_allocate_buffer() hInstance 0x70879c196800 poolIdx 2 count 560
+ru_0_cc_0_idx_3: [ handle 0x70879c196800 0 0 ] [nPoolIndex 3] nNumberOfBuffers 1023 nBufferSize 4976 socket_id 0
+CC:[ handle 0x70879c196800 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284788e80 
+xran_bm_init() hInstance 0x70879c196800 poolIdx 3 elements 1023 size 4976
+xran_bm_allocate_buffer() hInstance 0x70879c196800 poolIdx 3 count 40
+ru_0_cc_0_idx_4: [ handle 0x70879c196800 0 0 ] [nPoolIndex 4] nNumberOfBuffers 1023 nBufferSize 3360 socket_id 0
+CC:[ handle 0x70879c196800 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x284788940 
+xran_bm_init() hInstance 0x70879c196800 poolIdx 4 elements 1023 size 3360
+xran_bm_allocate_buffer() hInstance 0x70879c196800 poolIdx 4 count 560
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/31/26 07:41:30.727370861 UTC [500]
+Start ORAN. Done
+O-DU: thread_run start time: 05/31/26 07:41:31.000000012 UTC [500]
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=12, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=0, slot=9, sym=13, ant=1, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[93m[HW]     TTI processing delay detected, skipping    0.10 =>    3. 8
+[0m[HW]     [PUSCH BFP] ENTER: frame=3, slot=8, sym=0, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=3, slot=8, sym=1, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[HW]     [PUSCH BFP] ENTER: frame=3, slot=8, sym=2, ant=0, startRB=0, numRB=24, iqWidth=9, payload_len=672
+[0m[HW]     [PUSCH BFP] Decompression returned, rsp.len=1152
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 3.8, expected 0.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 3.8 , expected 0.8)
+[0m[93m[HW]     TTI processing delay detected, skipping    3.15 =>    3.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 3.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 3.19, expected 3.15)
+[0m[93m[HW]     TTI processing delay detected, skipping    4. 0 =>    4.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 4.11, expected 4.0)
+[0m[93m[HW]     TTI processing delay detected, skipping    4.12 =>    5.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 5.12 , expected 4.12)
+[0m[93m[HW]     TTI processing delay detected, skipping    5.14 =>    5.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 5.18, expected 5.14)
+[0m[93m[HW]     TTI processing delay detected, skipping    5.19 =>    6.17
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 6.17, expected 5.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 6.17 , expected 5.17)
+[0m[93m[HW]     TTI processing delay detected, skipping    6.18 =>    9. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 9.5, expected 6.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 9.5 , expected 6.5)
+[0m[93m[HW]     TTI processing delay detected, skipping    9.10 =>    9.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 9.14, expected 9.10)
+[0m[93m[HW]     TTI processing delay detected, skipping    9.15 =>   10. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 10.5, expected 9.15)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 10.5 , expected 9.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   10. 7 =>   11. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 11.7 , expected 10.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   11. 9 =>   11.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 11.13, expected 11.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   11.14 =>   14. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 14.0, expected 11.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 14.0 , expected 11.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   14. 2 =>   15. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 15.0, expected 14.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 15.0 , expected 14.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   15. 5 =>   15.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 15.10, expected 15.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   15.12 =>   16. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 16.0, expected 15.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 16.0 , expected 15.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   16. 2 =>   17. 2
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 17.2 , expected 16.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   17. 4 =>   17. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 17.9, expected 17.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   17.10 =>   18. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 18.1, expected 17.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 18.1 , expected 17.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   18. 2 =>   19. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 19.4, expected 18.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 19.4 , expected 18.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   19. 5 =>   19.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 19.13, expected 19.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   19.14 =>   20.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 20.11, expected 19.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 20.11 , expected 19.11)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 20.19
+[0m[93m[HW]     TTI processing delay detected, skipping   21. 0 =>   21. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 21.5, expected 21.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   21. 7 =>   21.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 21.16, expected 21.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   21.17 =>   22.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 22.16, expected 21.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 22.16 , expected 21.16)
+[0m[93m[HW]     TTI processing delay detected, skipping   22.19 =>   23. 2
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 23.2, expected 22.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 23.2 , expected 22.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   23. 3 =>   23.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 23.10, expected 23.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   23.12 =>   24. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 24.7, expected 23.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 24.7 , expected 23.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   24.18 =>   25. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 25.1, expected 24.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 25.1 , expected 24.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   25. 2 =>   25. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 25.9, expected 25.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   25.10 =>   26. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 26.9, expected 25.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 26.9 , expected 25.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   26.15 =>   26.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 26.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 26.19, expected 26.15)
+[0m[93m[HW]     TTI processing delay detected, skipping   27. 0 =>   27.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 27.10, expected 27.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   27.12 =>   28.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 28.11, expected 27.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 28.11 , expected 27.11)
+[0m[93m[HW]     TTI processing delay detected, skipping   28.14 =>   28.17
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 28.17, expected 28.14)
+[0m[93m[HW]     TTI processing delay detected, skipping   28.18 =>   29. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 29.5, expected 28.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 29.5 , expected 28.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   29. 7 =>   30. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 30.3, expected 29.7)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 30.3 , expected 29.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   30.13 =>   30.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 30.16, expected 30.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   30.17 =>   31. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 31.4, expected 30.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 31.4 , expected 30.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   31. 5 =>   32. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 32.4, expected 31.5)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 32.4 , expected 31.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   32.10 =>   32.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 32.14, expected 32.10)
+[0m[93m[HW]     TTI processing delay detected, skipping   32.15 =>   33. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 33.5, expected 32.15)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 33.5 , expected 32.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   33. 7 =>   34. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 34.7 , expected 33.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   34. 9 =>   34.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 34.13, expected 34.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   34.14 =>   37. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 37.0, expected 34.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 37.0 , expected 34.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   37. 2 =>   38. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 38.0, expected 37.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 38.0 , expected 37.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   38. 5 =>   38.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 38.10, expected 38.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   38.12 =>   39. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 39.1, expected 38.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 39.1 , expected 38.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   39. 2 =>   40. 2
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 40.2 , expected 39.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   40. 4 =>   40. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 40.8, expected 40.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   40. 9 =>   40.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 40.18, expected 40.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   40.19 =>   41.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 41.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 41.19 , expected 40.19)
+[0m[93m[HW]     TTI processing delay detected, skipping   42. 0 =>   42. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 42.3, expected 42.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   42. 4 =>   42.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 42.10, expected 42.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   42.12 =>   43. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 43.4, expected 42.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 43.4 , expected 42.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   43. 5 =>   44.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 44.13, expected 43.5)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 44.13 , expected 43.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   44.14 =>   45.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 45.11, expected 44.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 45.11 , expected 44.11)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 45.19
+[0m[93m[HW]     TTI processing delay detected, skipping   46. 0 =>   46. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 46.4, expected 46.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   46. 5 =>   47. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 47.3, expected 46.5)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 47.3 , expected 46.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   47. 4 =>   48.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 48.11, expected 47.4)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 48.11 , expected 47.11)
+[0m[93m[HW]     TTI processing delay detected, skipping   48.12 =>   49. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 49.6, expected 48.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 49.6 , expected 48.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   49. 7 =>   50.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 50.16, expected 49.7)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 50.16 , expected 49.16)
+[0m[93m[HW]     TTI processing delay detected, skipping   50.17 =>   51.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 51.16, expected 50.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 51.16 , expected 50.16)
+[0m[93m[HW]     TTI processing delay detected, skipping   51.19 =>   52. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 52.3, expected 51.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 52.3 , expected 51.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   52. 4 =>   52.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 52.13, expected 52.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   52.14 =>   53.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 53.13, expected 52.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 53.13 , expected 52.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   53.19 =>   54. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 54.3, expected 53.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 54.3 , expected 53.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   54. 4 =>   55.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 55.12, expected 54.4)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 55.12 , expected 54.12)
+[0m[93m[HW]     TTI processing delay detected, skipping   55.19 =>   56. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 56.3, expected 55.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 56.3 , expected 55.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   56. 4 =>   56.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 56.13, expected 56.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   56.14 =>   57.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 57.14 , expected 56.14)
+[0m[93m[HW]     TTI processing delay detected, skipping   57.18 =>   58. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 58.1, expected 57.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 58.1 , expected 57.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   58. 2 =>   58. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 58.7, expected 58.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   58. 8 =>   59. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 59.1, expected 58.8)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 59.1 , expected 58.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   59. 2 =>   60. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 60.8, expected 59.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 60.8 , expected 59.8)
+[0m[93m[HW]     TTI processing delay detected, skipping   60. 9 =>   61. 4
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 61.4, expected 60.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 61.4 , expected 60.4)
+[0m[93m[HW]     TTI processing delay detected, skipping   61.15 =>   61.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 61.18, expected 61.15)
+[0m[93m[HW]     TTI processing delay detected, skipping   61.19 =>   62. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 62.5, expected 61.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 62.5 , expected 61.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   62. 7 =>   62.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 62.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 62.19, expected 62.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   63. 0 =>   64. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 64.8, expected 63.0)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 64.8 , expected 63.8)
+[0m[93m[HW]     TTI processing delay detected, skipping   64. 9 =>   65. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 65.6, expected 64.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 65.6 , expected 64.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   65.15 =>   65.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 65.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 65.19, expected 65.15)
+[0m[93m[HW]     TTI processing delay detected, skipping   66. 0 =>   68. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 68.6, expected 66.0)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 68.6 , expected 66.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   68. 7 =>   69. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 69.0, expected 68.7)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 69.0 , expected 68.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   69. 2 =>   70.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 70.10, expected 69.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 70.10 , expected 69.10)
+[0m[93m[HW]     TTI processing delay detected, skipping   70.12 =>   71.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 71.11, expected 70.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 71.11 , expected 70.11)
+[0m[93m[HW]     TTI processing delay detected, skipping   71.14 =>   71.17
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 71.17, expected 71.14)
+[0m[93m[HW]     TTI processing delay detected, skipping   71.18 =>   73. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 73.0, expected 71.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 73.0 , expected 71.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   73. 2 =>   76. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 76.7, expected 73.2)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 76.7 , expected 73.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   76. 8 =>   77. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 77.5, expected 76.8)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 77.5 , expected 76.5)
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     TTI processing delay detected, skipping   77.13 =>   77.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 77.16, expected 77.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   77.17 =>   78. 2
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 78.2, expected 77.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 78.2 , expected 77.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   78. 3 =>   78.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 78.16, expected 78.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   78.17 =>   80. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 80.3, expected 78.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 80.3 , expected 78.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   80. 4 =>   80.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 80.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 80.19, expected 80.4)
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[93m[HW]     TTI processing delay detected, skipping   81.13 =>   81.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 81.16, expected 81.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   81.17 =>   82. 3
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 82.3, expected 81.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 82.3 , expected 81.3)
+[0m[93m[HW]     TTI processing delay detected, skipping   82. 4 =>   83. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 83.0, expected 82.4)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 83.0 , expected 82.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   83.10 =>   83.13
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 83.13, expected 83.10)
+[0m[93m[HW]     TTI processing delay detected, skipping   83.14 =>   84. 0
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 84.0, expected 83.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 84.0 , expected 83.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   84. 2 =>   84.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 84.14, expected 84.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   84.15 =>   86.13
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 86.13, expected 84.15)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 86.13 , expected 84.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   86.14 =>   88. 1
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 88.1, expected 86.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 88.1 , expected 86.1)
+[0m[93m[HW]     TTI processing delay detected, skipping   88. 2 =>   88.15
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 88.15, expected 88.2)
+[0m[93m[HW]     TTI processing delay detected, skipping   88.17 =>   90. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 90.5, expected 88.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 90.5 , expected 88.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   90. 7 =>   91. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 91.6, expected 90.7)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 91.6 , expected 90.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   91. 9 =>   91.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 91.12, expected 91.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   91.13 =>   91.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 91.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 91.19, expected 91.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   92. 0 =>   92.15
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 92.15, expected 92.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   92.17 =>   93. 5
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 93.5, expected 92.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 93.5 , expected 92.5)
+[0m[93m[HW]     TTI processing delay detected, skipping   93. 9 =>   93.12
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 93.12, expected 93.9)
+[0m[93m[HW]     TTI processing delay detected, skipping   93.13 =>   93.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 93.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 93.19, expected 93.13)
+[0m[93m[HW]     TTI processing delay detected, skipping   94. 0 =>   94.16
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 94.16, expected 94.0)
+[0m[93m[HW]     TTI processing delay detected, skipping   94.17 =>   96. 6
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 96.6, expected 94.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 96.6 , expected 94.6)
+[0m[93m[HW]     TTI processing delay detected, skipping   96. 7 =>   97. 7
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 97.7 , expected 96.7)
+[0m[93m[HW]     TTI processing delay detected, skipping   97. 8 =>   97.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 97.11, expected 97.8)
+[0m[93m[HW]     TTI processing delay detected, skipping   97.12 =>   97.17
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 97.17, expected 97.12)
+[0m[93m[HW]     TTI processing delay detected, skipping   97.18 =>   98.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 98.10, expected 97.18)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 98.10 , expected 97.10)
+[0m[93m[HW]     TTI processing delay detected, skipping   98.12 =>   99.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 99.18, expected 98.12)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 99.18 , expected 98.18)
+[0m[93m[HW]     TTI processing delay detected, skipping   99.19 =>  100.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 100.14, expected 99.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 100.14 , expected 99.14)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 100.19
+[0m[93m[HW]     TTI processing delay detected, skipping  101. 8 =>  101.11
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 101.11, expected 101.8)
+[0m[93m[HW]     TTI processing delay detected, skipping  101.12 =>  101.18
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 101.18, expected 101.12)
+[0m[93m[HW]     TTI processing delay detected, skipping  101.19 =>  102.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 102.14, expected 101.19)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 102.14 , expected 101.14)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 102.19
+[0m[93m[HW]     TTI processing delay detected, skipping  103. 5 =>  103. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 103.8, expected 103.5)
+[0m[93m[HW]     TTI processing delay detected, skipping  103. 9 =>  103.14
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 103.14, expected 103.9)
+[0m[93m[HW]     TTI processing delay detected, skipping  103.15 =>  104. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 104.8, expected 103.15)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 104.8 , expected 103.8)
+[0m[93m[HW]     TTI processing delay detected, skipping  104. 9 =>  105.15
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 105.15, expected 104.9)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 105.15 , expected 104.15)
+[0m[93m[HW]     TTI processing delay detected, skipping  105.17 =>  106. 9
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 106.9, expected 105.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 106.9 , expected 105.9)
+[0m[93m[HW]     TTI processing delay detected, skipping  106.10 =>  109.16
+[0m[93m[PHY]    no free space for a new detected rach, discarding
+[0m[93m[NR_PHY_RACH] Error in scheduling rach
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 109.16, expected 106.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 109.16 , expected 106.16)
+[0m[93m[HW]     TTI processing delay detected, skipping  109.17 =>  110.10
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 110.10, expected 109.17)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 110.10 , expected 109.10)
+[0m[93m[HW]     TTI processing delay detected, skipping  110.12 =>  112. 0
+[0m
+Assertion (xran_queue_length == 0) failed!
+In xran_fh_rx_read_slot() /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/radio/fhi_72/oaioran.c:539
+
+Exiting execution
+[HW]     xran_get_time_stats(): total thread time 30003994042, total time essential tasks 19197834596, num cores used 3
+[0m

@@ -1,0 +1,1007 @@
+Logging terminal output to /home/jesse/oran_lab/logs/run_du/run_du_20260527_145056_pid215745.log
+DU cores: 4,5,6,7,8,9,17,18
+DU numerology: 1
+AnonHugePages:   6725632 kB
+ShmemHugePages:        0 kB
+FileHugePages:   3432448 kB
+HugePages_Total:    8192
+HugePages_Free:     4096
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:        16777216 kB
+CMDLINE: "./nr-softmodem" "-O" "/home/jesse/oran_lab/du_test.conf" "--gNBs.[0].min_rxtxtime" "6" "--thread-pool" "4,5,6,7" "--numerology" "1" 
+[HW]     Version: Branch: compression-plus-timing-fix Abrev. Hash: 3b10464162 Date: Tue May 26 09:32:18 2026 -0700
+[0m[PHY]    No prs_config configuration found..!!
+[0m[PHY]    DL frequency 4049760000 Hz, UL frequency 4049760000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 32
+[0m[PHY]    Initialized RU proc 0 (NGFI_RAU_IF4p5,synch_to_ext_device),
+[0m[PHY]    Starting RU 0 (NGFI_RAU_IF4p5,synch_to_ext_device) on cpu 5
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 24, Ncp 0
+[0m[PHY]    Init: N_RB_DL 24, first_carrier_offset 368, nb_prefix_samples 36,nb_prefix_samples0 44, ofdm_symbol_size 512
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=512
+[0m[PHY]    fp->nb_prefix_samples0=44
+[0m[PHY]    fp->nb_prefix_samples=36
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=14336
+[0m[PHY]    fp->samples_per_frame_wCP=143360
+[0m[PHY]    fp->samples_per_subframe=15360
+[0m[PHY]    fp->samples_per_frame=153600
+[0m[PHY]    fp->dl_CarrierFreq=4049760000
+[0m[PHY]    fp->ul_CarrierFreq=4049760000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=368
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=24
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=0
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[PHY]    Setting RF config for N_RB 24, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 15360000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 4049760000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 0, rx_freq 4049760000 Hz
+[0m[PHY]    starting transport
+[0m[32m[PHY]    Initializing XRAN layer as O-DU
+[0m[HW]     Initializing O-RAN 7.2 FH interface through xran library (compiled against headers of oran_f_release_v1.8)
+[0mEAL: Detected 32 lcore(s)
+EAL: Detected 1 NUMA nodes
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/wls_0/mp_socket
+EAL: Selected IOVA mode 'PA'
+EAL: No available hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.2 (socket 0)
+[CONFIG] function config_libconfig_init returned 0
+xran_fh_init:
+  io_cfg:
+    id 0 (O-DU)
+    num_vfs 2
+    num_rxq 1
+    dpdk_dev [0000:06:02.2, 0000:06:02.3, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null)]
+    bbdev_dev (null)
+    bbdev_mode -1
+    dpdkIoVaMode 0
+    dpdkMemorySize 8192
+    core 9
+    system_core 8
+    pkt_proc_core 0000000000060000
+    pkt_proc_core_64_127 0000000000000000
+    pkt_aux_core 0
+    timing_core 9
+    port (filled within xran library)
+    io_sleep 0
+    nEthLinePerPort 1
+    nEthLineSpeed 10
+    one_vf_cu_plane 0
+    eowd_cmn[0]:
+      initiator_en 0
+      numberOfSamples 0
+      filterType 0
+      responseTo 0
+      measVf 0
+      measState 0
+      measId 0
+      measMethod 0
+      owdm_enable 0
+      owdm_PlLength 0
+eowd_port (filled within xran library)
+    bbu_offload 0
+  eAxCId_conf:
+    mask_cuPortId 0xf000
+    mask_bandSectorId 0x0f00
+    mask_ccId 0x00f0
+    mask_ruPortId 0x000f
+    bit_cuPortId 0
+    bit_bandSectorId 0
+    bit_ccId 0
+    bit_ruPortId 0
+  xran_ports 1
+  dpdkBasebandFecMode 0
+  dpdkBasebandDevice (null)
+  filePrefix wls_0
+  mtu 9600
+  p_o_du_addr (null)
+  p_o_ru_addr [00:11:22:33:64:66, 00:11:22:33:64:67]
+  totalBfWeights 0
+  mlogxranenable 0
+  dlCpProcBurst 0
+'DPDK 20.11.9'
+ xran_init: MTU 9600
+PF Eth line speed 10G
+PF Eth lines per O-xU port 1
+RX HW queues per O-xU Eth line 1 
+node 0
+total cores 32 c_mask 0x00000000000060300 core 9 [id] system_core 8 [id] pkt_proc_core 0x00000000000060000 [mask] pkt_aux_core 0 [id] timing_core 9 [id]
+xran_ethdi_init_dpdk_io: Calling rte_eal_init:wls_0 -c 0x00000000000060300 -n2 --iova-mode=pa --socket-mem=8192,0 --socket-limit=8192,0 --proc-type=auto --no-telemetry --file-prefix wls_0 -a0000:00:00.0    
+xran_init_mbuf_pool: socket 0
+initializing port 0 for TX, drv=net_i40e_vf
+Port 0 MAC: 00 11 22 33 64 68
+Port 0: nb_rxd 4096 nb_txd 4096
+[0] mp_rx__p_0_q_0 num blocks 65535
+[0] mempool_small__0
+
+Checking link status portid [0]  EAL: Probe PCI driver: net_i40e_vf (8086:154c) device: 0000:06:02.3 (socket 0)
+skipped by XRAN_SKIP_LINK_CHECK
+initializing port 1 for TX, drv=net_i40e_vf
+Port 1 MAC: 00 11 22 33 64 69
+Port 1: nb_rxd 4096 nb_txd 4096
+[1] mp_rx__p_1_q_0 num blocks 65535
+[1] mempool_small__1
+Created ring tx_ring_cp_1 on core 9
+Created ring rx_ring_cp_1_0 on core 9
+
+Checking link status portid [1]  [93m[HW]     XRAN modifed affinity. Correcting affinity of caller
+[0mskipped by XRAN_SKIP_LINK_CHECK
+[ 0] vf  0 local  SRC MAC: 00 11 22 33 64 68
+[ 0] vf  0 remote DST MAC: 00 11 22 33 64 66
+[ 0] vf  1 local  SRC MAC: 00 11 22 33 64 69
+[ 0] vf  1 remote DST MAC: 00 11 22 33 64 67
+created dl_gen_ring_up_0 on core 9
+xran_fh_config:
+  dpdk_port 0
+  sector_id 0
+  nCC 1
+  neAxc 1
+  neAxcUl 0
+  nAntElmTRx 0
+  nDLFftSize 9
+  nULFftSize 9
+  nDLRBs 24
+  nULRBs 24
+  nDLAbsFrePointA 0
+  nULAbsFrePointA 0
+  nDLCenterFreqARFCN 0
+  nULCenterFreqARFCN 0
+  ttiCb (nil)
+  ttiCbParam (nil)
+  Tadv_cp_dl 0
+  T2a_min_cp_dl 0
+  T2a_max_cp_dl 0
+  T2a_min_cp_ul 0
+  T2a_max_cp_ul 0
+  T2a_min_up 0
+  T2a_max_up 0
+  Ta3_min 0
+  Ta3_max 0
+  T1a_min_cp_dl 285
+  T1a_max_cp_dl 470
+  T1a_min_cp_ul 285
+  T1a_max_cp_ul 535
+  T1a_min_up 300
+  T1a_max_up 450
+  Ta4_min 400
+  Ta4_max 440
+  enableCP 1
+  prachEnable 1
+  srsEnable 0
+  puschMaskEnable 0
+  puschMaskSlot 0
+  cp_vlan_tag 0
+  up_vlan_tag 0
+  debugStop 0
+  debugStopCount 0
+  DynamicSectionEna 0
+  GPS_Alpha 0
+  GPS_Beta -9000
+  srsEnableCp 0
+  SrsDelaySym 0
+  prach_config:
+    nPrachConfIdx 159
+    nPrachSubcSpacing 1
+    nPrachZeroCorrConf 0
+    nPrachRestrictSet 0
+    nPrachRootSeqIdx 0
+    nPrachFreqStart 0
+    nPrachFreqOffset -288
+    nPrachFilterIdx 0
+    startSymId 0
+    lastSymId 0
+    startPrbc 0
+    numPrbc 0
+    timeOffset 0
+    freqOffset 0
+    eAxC_offset 1
+    nPrachConfIdxLTE 0
+  srs_config:
+    symbMask 0000
+    eAxC_offset 0
+  frame_conf:
+    nFrameDuplexType TDD
+    nNumerology 1
+    nTddPeriod 5
+    sSlotConfig[0]: DDDDDDDDDDDDDD
+    sSlotConfig[1]: DDDDDDDDDDDDDD
+    sSlotConfig[2]: DDDDDDDDDDDDDD
+    sSlotConfig[3]: DDDDDDGGGGUUUU
+    sSlotConfig[4]: UUUUUUUUUUUUUU
+  ru_config:
+    xranTech NR
+    xranCat A
+    xranCompHdrType dynamic
+    iqWidth 16
+    compMeth 0
+    iqWidth_PRACH 16
+    compMeth_PRACH 0
+    fftSize 8
+    byteOrder network/BE
+    iqOrder I_Q
+    xran_max_frame 0
+  bbdev_enc (nil)
+  bbdev_dec (nil)
+  tx_cp_eAxC2Vf 0x7976af7e24b0
+  tx_up_eAxC2Vf 0x7976af7e30b0
+  rx_cp_eAxC2Vf 0x7976af7e3cb0
+  rx_up_eAxC2Vf 0x7976af7e48b0
+  log_level 1
+  max_sections_per_slot 0
+  max_sections_per_symbol 0
+  RunSlotPrbMapBySymbolEnable 0
+  LiteOnIgnoreUPSectionIdEnable 0
+  dssEnable 0
+  dssPeriod 0
+  technology[XRAN_MAX_DSS_PERIODICITY] (not filled as DSS disabled)
+ xran_open: 5G NR Category A
+xRAN open PRACH config: Numerology 1 ConfIdx 159, preambleFmrt 10 startsymb 0, numSymbol 12, occassionsInPrachSlot 1
+PRACH: x 1 y[0] 0, y[1] 0 prach slot: 9 ..
+PRACH start symbol 0 lastsymbol 11
+xran_init_vfs_mapping: p 0 vf 0
+xran_init_vfs_mapping: p 0 vf 1
+xran_open: interval_us=500, interval_us_local=500
+bbu_offload 0
+XRAN_UP_VF: 0x0000
+xran_timing_source_thread [CPU  9] [PID: 215768]
+TTI interval 500 [us]
+delay_cp_dl_max=30, sym_cp_dl_max=1, max_dl_offset_sym=13
+delay_cp_dl_min=215, sym_cp_dl_min=5, min_dl_offset_sym=9
+delay_cp_ul=465,     sym_cp_ul=0,     ul_offset_sym=14
+offset_num_slots_cp_dl=0, offset_num_slots_cp_ul=1, offset_num_slots_up_ul=0
+C-plane DL from 30 us after TTI  [trigger on sym 1] to 215 us after TTI [trigger on sym 5]
+Start C-plane UL 465 us after TTI  [trigger on sym 0]
+Start U-plane DL 450 us before OTA [offset  in sym -12]
+Start U-plane UL 440 us OTA        [offset  in sym 13]
+C-plane to U-plane delay 20 us after TTI
+Start Sym timer 107142 ns
+created sym cp dl cb for symbol 1
+created sym cp dl cb for symbol 2
+created sym cp dl cb for symbol 3
+created sym cp dl cb for symbol 4
+created sym cp dl cb for symbol 5
+O-XU      0
+HW        0
+Num cores 3
+Num ports 1
+O-RU Cat  0
+O-RU CC   1
+O-RU eAxC 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 1
+p:0 XRAN_JOB_TYPE_CP_UL worker id 1
+p:0 XRAN_JOB_TYPE_CP_DL worker id 0
+p:0 XRAN_JOB_TYPE_CP_UL worker id 0
+xran_generic_worker_thread [CPU 17] [PID: 215768]
+spawn worker 0 core 17
+xran_generic_worker_thread [CPU 18] [PID: 215768]
+spawn worker 1 core 18
+xran_open [CPU  7] [PID: 215768]
+Waiting on Timing thread...
+Initialize ORAN port instance 0 (1) sector 0
+xran_sector_get_instances() o_xu_id 0 xran_handle 0x797674f95040
+xran_sector_get_instances [0]: CC 0 handle 0x79769816c740
+Handle: 0x7976bc3af468 Instance: 0x79[HW]     [RAU] has loaded ETHERNET trasport protocol.
+[0m[PHY]    Starting IF interface for RU 0, nb_rx 1
+[0m[PHY]    RU 0 Setting N_TA_offset to 200 samples (UL Freq 4045440, N_RB 24, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 10
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]    got sync (L1_stats_thread)
+[0m[PHY]    got sync (ru_thread)
+[0m769816c740
+-> hInstance 0x79769816c740
+ru_0_cc_0_idx_0: [ handle 0x79769816c740 0 0 ] [nPoolIndex 0] nNumberOfBuffers 511 nBufferSize 14116 socket_id 0
+CC:[ handle 0x79769816c740 ru 0 cc_idx 0 ] [nPoolIndex 0] mb pool 0x284784940 
+xran_bm_init() hInstance 0x79769816c740 poolIdx 0 elements 511 size 14116
+xran_bm_allocate_buffer() hInstance 0x79769816c740 poolIdx 0 count 280
+ru_0_cc_0_idx_1: [ handle 0x79769816c740 0 0 ] [nPoolIndex 1] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x79769816c740 ru 0 cc_idx 0 ] [nPoolIndex 1] mb pool 0x284784280 
+xran_bm_init() hInstance 0x79769816c740 poolIdx 1 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x79769816c740 poolIdx 1 count 20
+ru_0_cc_0_idx_2: [ handle 0x79769816c740 0 0 ] [nPoolIndex 2] nNumberOfBuffers 511 nBufferSize 13168 socket_id 0
+CC:[ handle 0x79769816c740 ru 0 cc_idx 0 ] [nPoolIndex 2] mb pool 0x284786d00 
+xran_bm_init() hInstance 0x79769816c740 poolIdx 2 elements 511 size 13168
+xran_bm_allocate_buffer() hInstance 0x79769816c740 poolIdx 2 count 280
+ru_0_cc_0_idx_3: [ handle 0x79769816c740 0 0 ] [nPoolIndex 3] nNumberOfBuffers 511 nBufferSize 4976 socket_id 0
+CC:[ handle 0x79769816c740 ru 0 cc_idx 0 ] [nPoolIndex 3] mb pool 0x284786700 
+xran_bm_init() hInstance 0x79769816c740 poolIdx 3 elements 511 size 4976
+xran_bm_allocate_buffer() hInstance 0x79769816c740 poolIdx 3 count 20
+ru_0_cc_0_idx_4: [ handle 0x79769816c740 0 0 ] [nPoolIndex 4] nNumberOfBuffers 511 nBufferSize 3360 socket_id 0
+CC:[ handle 0x79769816c740 ru 0 cc_idx 0 ] [nPoolIndex 4] mb pool 0x2847861c0 
+xran_bm_init() hInstance 0x79769816c740 poolIdx 4 elements 511 size 3360
+xran_bm_allocate_buffer() hInstance 0x79769816c740 poolIdx 4 count 280
+ORAN: get_internal_parameter
+ORAN: get_internal_parameter
+ORAN: trx_oran_start
+O-DU: XRAN start time: 05/27/26 21:51:00.135569138 UTC [500]
+Start ORAN. Done
+TYPE <CTRL-C> TO TERMINATE
+[PHY]    RU 0 no rf device
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[93m[HW]     TTI processing delay detected, skipping    0.10 =>    1. 8
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 1.8, expected 0.10)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 1.8 , expected 0.8)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 1.19
+[0m[93m[HW]     TTI processing delay detected, skipping   86.14 =>   87.19
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 87.19
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (slot mismatch, received 87.19, expected 86.14)
+[0m[1;31m[HW]     Received Time doesn't correspond to the time we think it is (frame mismatch, 87.19 , expected 86.19)
+[0m[93m[HW]     we get rach data from ru, but it is not scheduled 88.19
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 4049760000 -r 24 --numerology 1 --ssb 24 
+[0m[PHY]    ULSCH ACK trace 115.18 rnti 5935 harq 0 round 0 rv 0 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 7 rb 0+8 sym 10+3 mcs 1 Qm 2 SNR 39.0 dB TAest -1
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 5935
+[0m[93m[PHY]    ULSCH NAK trace 117.19 rnti 5935 harq 0 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 118.14 rnti 5935 harq 1 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 118.19 rnti 5935 harq 0 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 119.14 rnti 5935 harq 1 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 119.19 rnti 5935 harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 120.4 rnti 5935 harq 2 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 120.14 rnti 5935 harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 120.19 rnti 5935 harq 3 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 121.4 rnti 5935 harq 2 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 121.9 rnti 5935 harq 4 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 121.14 rnti 5935 harq 5 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 121.19 rnti 5935 harq 3 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 122.4 rnti 5935 harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 122.9 rnti 5935 harq 4 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 122.14 rnti 5935 harq 5 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 122.19 rnti 5935 harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 123.4 rnti 5935 harq 6 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 123.9 rnti 5935 harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 123.14 rnti 5935 harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 123.19 rnti 5935 harq 7 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 124.4 rnti 5935 harq 6 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 124.19 rnti 5935 harq 7 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 125.4 rnti 5935 harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 20.3 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 125.19 rnti 5935 harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 126.4 rnti 5935 harq 8 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.3 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 126.14 rnti 5935 harq 9 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 26.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 127.4 rnti 5935 harq 8 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 127.14 rnti 5935 harq 9 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[HW]     [o-du 0][rx   10716 pps   10716 kbps   57975][tx   31916 pps   31916 kbps  145971][Total Msgs_Rcvd 10716]
+[0m[HW]     [FH LOAD][o-du 0] rx=57.975 Mbps tx=145.971 Mbps total=203.946 Mbps rx_pps=10716 tx_pps=31916 total_pps=42632
+[0m[HW]     [o_du0][pusch0    9180 prach0    1536]
+[0m[PHY]    ULSCH ACK trace 128.4 rnti 5935 harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 128.14 rnti 5935 harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 133.14 rnti 5935 harq 10 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 25.4 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 134.4 rnti 5935 harq 11 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 29.1 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 134.14 rnti 5935 harq 10 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 135.4 rnti 5935 harq 11 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 135.14 rnti 5935 harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 136.4 rnti 5935 harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 136.14 rnti 5935 harq 12 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 136.19 rnti 5935 harq 13 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 19.7 dB TAest -1
+[0m[93m[PHY]    ULSCH NAK trace 137.4 rnti 5935 harq 14 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 137.9 rnti 5935 harq 15 round 0 rv 0 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 137.14 rnti 5935 harq 12 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 137.19 rnti 5935 harq 13 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 24.0 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 138.4 rnti 5935 harq 14 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[93m[PHY]    ULSCH NAK trace 138.9 rnti 5935 harq 15 round 1 rv 2 crc_valid 0 processed 0/1 abort 1 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 138.14 rnti 5935 harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 138.19 rnti 5935 harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 30.1 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 139.4 rnti 5935 harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 139.9 rnti 5935 harq 15 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 141.14 rnti 5935 harq 0 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 144.4 rnti 5935 harq 1 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 144.14 rnti 5935 harq 2 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 147.4 rnti 5935 harq 3 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 147.9 rnti 5935 harq 4 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 147.14 rnti 5935 harq 5 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 147.19 rnti 5935 harq 6 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 30.1 dB TAest -1
+[0m[PHY]    ULSCH ACK trace 150.4 rnti 5935 harq 7 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.8 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 150.9 rnti 5935 harq 8 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 150.14 rnti 5935 harq 9 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 150.19 rnti 5935 harq 10 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 12+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 153.4 rnti 5935 harq 11 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 153.9 rnti 5935 harq 12 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 34.8 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 153.14 rnti 5935 harq 13 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 33.9 dB TAest 0
+[0m[PHY]    ULSCH ACK trace 156.4 rnti 5935 harq 14 round 2 rv 3 crc_valid 1 processed 1/1 abort 0 dtx 0 TBS 17 rb 4+5 sym 0+13 mcs 0 Qm 2 SNR 18.4 dB TAest -1
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[HW]     [o-du 0][rx   21468 pps   10752 kbps   72960][tx   63788 pps   31872 kbps  182321][Total Msgs_Rcvd 21468]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   18396 prach0    3072]
+[0m[HW]     [o-du 0][rx   32220 pps   10752 kbps   72964][tx   95660 pps   31872 kbps  182321][Total Msgs_Rcvd 32220]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.964 Mbps tx=182.321 Mbps total=255.285 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   27612 prach0    4608]
+[0m[HW]     [o-du 0][rx   42972 pps   10752 kbps   72960][tx  127532 pps   31872 kbps  182321][Total Msgs_Rcvd 42972]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   36828 prach0    6144]
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] MSG3 ULSCH with no signal
+[0m[93m[NR_MAC] UE e10c RA failed at state WAIT_Msg3 (Reached msg3 max harq rounds)
+[0m[HW]     [o-du 0][rx   53724 pps   10752 kbps   72969][tx  159404 pps   31872 kbps  182321][Total Msgs_Rcvd 53724]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   46044 prach0    7680]
+[0m[HW]     [o-du 0][rx   64477 pps   10753 kbps   72962][tx  191276 pps   31872 kbps  182321][Total Msgs_Rcvd 64477]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.962 Mbps tx=182.321 Mbps total=255.283 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0   55260 prach0    9216]
+[0m[HW]     [o-du 0][rx   75229 pps   10752 kbps   72974][tx  223148 pps   31872 kbps  182321][Total Msgs_Rcvd 75229]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.974 Mbps tx=182.321 Mbps total=255.295 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   64476 prach0   10752]
+[0m[HW]     [o-du 0][rx   85981 pps   10752 kbps   72941][tx  255020 pps   31872 kbps  182321][Total Msgs_Rcvd 85981]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.941 Mbps tx=182.321 Mbps total=255.262 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   73692 prach0   12288]
+[0m[PHY]    prach_I0 = 13.6 dB
+[0m[HW]     [o-du 0][rx   96733 pps   10752 kbps   72974][tx  286892 pps   31872 kbps  182321][Total Msgs_Rcvd 96733]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.974 Mbps tx=182.321 Mbps total=255.295 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   82908 prach0   13824]
+[0m[HW]     [o-du 0][rx  107485 pps   10752 kbps   72974][tx  318764 pps   31872 kbps  182321][Total Msgs_Rcvd 107485]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.974 Mbps tx=182.321 Mbps total=255.295 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0   92124 prach0   15360]
+[0m[HW]     [o-du 0][rx  118237 pps   10752 kbps   72945][tx  350636 pps   31872 kbps  182321][Total Msgs_Rcvd 118237]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.945 Mbps tx=182.321 Mbps total=255.266 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  101340 prach0   16896]
+[0m[HW]     [o-du 0][rx  128989 pps   10752 kbps   72974][tx  382508 pps   31872 kbps  182321][Total Msgs_Rcvd 128989]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.974 Mbps tx=182.321 Mbps total=255.295 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  110556 prach0   18432]
+[0m[HW]     [o-du 0][rx  139741 pps   10752 kbps   72945][tx  414380 pps   31872 kbps  182321][Total Msgs_Rcvd 139741]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.945 Mbps tx=182.321 Mbps total=255.266 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  119772 prach0   19968]
+[0m[HW]     [o-du 0][rx  150493 pps   10752 kbps   72978][tx  446252 pps   31872 kbps  182321][Total Msgs_Rcvd 150493]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.978 Mbps tx=182.321 Mbps total=255.299 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  128988 prach0   21504]
+[0m[HW]     [o-du 0][rx  161245 pps   10752 kbps   72960][tx  478124 pps   31872 kbps  182321][Total Msgs_Rcvd 161245]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  138204 prach0   23040]
+[0m[HW]     [o-du 0][rx  171998 pps   10753 kbps   72957][tx  509996 pps   31872 kbps  182321][Total Msgs_Rcvd 171998]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.957 Mbps tx=182.321 Mbps total=255.278 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0  147420 prach0   24576]
+[0m[PHY]    prach_I0 = 13.2 dB
+[0m[HW]     [o-du 0][rx  182750 pps   10752 kbps   72960][tx  541868 pps   31872 kbps  182321][Total Msgs_Rcvd 182750]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  156636 prach0   26112]
+[0m[HW]     [o-du 0][rx  193503 pps   10753 kbps   72953][tx  573740 pps   31872 kbps  182321][Total Msgs_Rcvd 193503]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.953 Mbps tx=182.321 Mbps total=255.274 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0  165852 prach0   27648]
+[0m[HW]     [o-du 0][rx  204255 pps   10752 kbps   72969][tx  605612 pps   31872 kbps  182321][Total Msgs_Rcvd 204255]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  175068 prach0   29184]
+[0m[HW]     [o-du 0][rx  215007 pps   10752 kbps   72960][tx  637484 pps   31872 kbps  182321][Total Msgs_Rcvd 215007]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  184284 prach0   30720]
+[0m[HW]     [o-du 0][rx  225760 pps   10753 kbps   72962][tx  669356 pps   31872 kbps  182321][Total Msgs_Rcvd 225760]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.962 Mbps tx=182.321 Mbps total=255.283 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0  193500 prach0   32256]
+[0m[HW]     [o-du 0][rx  236512 pps   10752 kbps   72960][tx  701228 pps   31872 kbps  182321][Total Msgs_Rcvd 236512]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  202716 prach0   33792]
+[0m[HW]     [o-du 0][rx  247264 pps   10752 kbps   72969][tx  733100 pps   31872 kbps  182321][Total Msgs_Rcvd 247264]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  211932 prach0   35328]
+[0m[HW]     [o-du 0][rx  258016 pps   10752 kbps   72960][tx  764972 pps   31872 kbps  182321][Total Msgs_Rcvd 258016]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  221148 prach0   36864]
+[0m[PHY]    prach_I0 = 13.5 dB
+[0m[HW]     [o-du 0][rx  268768 pps   10752 kbps   72960][tx  796844 pps   31872 kbps  182321][Total Msgs_Rcvd 268768]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  230364 prach0   38400]
+[0m[HW]     [o-du 0][rx  279520 pps   10752 kbps   72960][tx  828716 pps   31872 kbps  182321][Total Msgs_Rcvd 279520]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  239580 prach0   39936]
+[0m[HW]     [o-du 0][rx  290272 pps   10752 kbps   72969][tx  860588 pps   31872 kbps  182321][Total Msgs_Rcvd 290272]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  248796 prach0   41472]
+[0m[1;31m[NR_MAC] LCID 3 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 5935 [443.4], received unknown MAC header (LCID = 0x03)
+[0m[HW]     [o-du 0][rx  301025 pps   10753 kbps   72969][tx  892460 pps   31872 kbps  182321][Total Msgs_Rcvd 301025]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0  258012 prach0   43008]
+[0m[HW]     [o-du 0][rx  311777 pps   10752 kbps   72960][tx  924332 pps   31872 kbps  182321][Total Msgs_Rcvd 311777]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  267228 prach0   44544]
+[0m[HW]     [o-du 0][rx  322529 pps   10752 kbps   72950][tx  956204 pps   31872 kbps  182321][Total Msgs_Rcvd 322529]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.950 Mbps tx=182.321 Mbps total=255.271 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  276444 prach0   46080]
+[0m[1;31m[NR_MAC] Invalid PDU in 830.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 836.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 839.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 844.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 846.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 856.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 858.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 862.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 864.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 869.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 871.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 875.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 877.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 884.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 888.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 889.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 894.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[HW]     [o-du 0][rx  333281 pps   10752 kbps   72969][tx  988076 pps   31872 kbps  182321][Total Msgs_Rcvd 333281]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  285660 prach0   47616]
+[0m[1;31m[NR_MAC] Invalid PDU in 908.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 910.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 914.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 916.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 924.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 926.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 936.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 939.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 941.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 952.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 954.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 958.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 960.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 968.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 970.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 980.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 983.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 984.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 985.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 990.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1000.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1004.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1006.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1016.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1018.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 1023.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[HW]     [o-du 0][rx  344033 pps   10752 kbps   72964][tx 1019948 pps   31872 kbps  182321][Total Msgs_Rcvd 344033]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.964 Mbps tx=182.321 Mbps total=255.285 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  294876 prach0   49152]
+[0m[PHY]    prach_I0 = 13.4 dB
+[0m[1;31m[NR_MAC] Invalid PDU in 4.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 5.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 10.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 20.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 24.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 26.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 36.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 38.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 43.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 48.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 49.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 54.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 64.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 68.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 70.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 80.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 82.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 87.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 92.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 93.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 98.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 108.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 112.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 114.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 124.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 126.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[HW]     [o-du 0][rx  354785 pps   10752 kbps   72969][tx 1051820 pps   31872 kbps  182321][Total Msgs_Rcvd 354785]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  304092 prach0   50688]
+[0m[1;31m[NR_MAC] Invalid PDU in 131.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 136.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 137.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 142.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 152.14 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 156.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 158.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 168.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 170.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 175.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 180.9 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 181.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[1;31m[NR_MAC] Invalid PDU in 186.19 for RNTI 5935! mac_subheader_len: 1, mac_len: 8, remaining pdu_len: 5
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[1;31m[RLC]    /home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/openair2/LAYER2/nr_rlc/nr_rlc_entity_am.c:800:nr_rlc_entity_am_recv_pdu: warning: discard PDU, bad so
+[0m[93m[PDCP]   discard NR PDU rcvd_count=30, entity->rx_deliv 32,sdu_in_list 0
+[0m[HW]     [o-du 0][rx  365537 pps   10752 kbps   72950][tx 1083692 pps   31872 kbps  182321][Total Msgs_Rcvd 365537]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.950 Mbps tx=182.321 Mbps total=255.271 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  313308 prach0   52224]
+[0m[HW]     [o-du 0][rx  376289 pps   10752 kbps   72960][tx 1115564 pps   31872 kbps  182321][Total Msgs_Rcvd 376289]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  322524 prach0   53760]
+[0m[HW]     [o-du 0][rx  387041 pps   10752 kbps   72969][tx 1147436 pps   31872 kbps  182321][Total Msgs_Rcvd 387041]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.969 Mbps tx=182.321 Mbps total=255.290 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  331740 prach0   55296]
+[0m[HW]     [o-du 0][rx  397793 pps   10752 kbps   72950][tx 1179308 pps   31872 kbps  182321][Total Msgs_Rcvd 397793]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.950 Mbps tx=182.321 Mbps total=255.271 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  340956 prach0   56832]
+[0m[HW]     [o-du 0][rx  408545 pps   10752 kbps   72955][tx 1211180 pps   31872 kbps  182321][Total Msgs_Rcvd 408545]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.955 Mbps tx=182.321 Mbps total=255.276 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  350172 prach0   58368]
+[0m[HW]     [o-du 0][rx  419297 pps   10752 kbps   72955][tx 1243052 pps   31872 kbps  182321][Total Msgs_Rcvd 419297]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.955 Mbps tx=182.321 Mbps total=255.276 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  359388 prach0   59904]
+[0m[HW]     [o-du 0][rx  430049 pps   10752 kbps   72974][tx 1274924 pps   31872 kbps  182321][Total Msgs_Rcvd 430049]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.974 Mbps tx=182.321 Mbps total=255.295 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  368604 prach0   61440]
+[0m[PHY]    prach_I0 = 13.8 dB
+[0m[HW]     [o-du 0][rx  440802 pps   10753 kbps   72962][tx 1306796 pps   31872 kbps  182321][Total Msgs_Rcvd 440802]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.962 Mbps tx=182.321 Mbps total=255.283 Mbps rx_pps=10753 tx_pps=31872 total_pps=42625
+[0m[HW]     [o_du0][pusch0  377820 prach0   62976]
+[0m[HW]     [o-du 0][rx  451554 pps   10752 kbps   72960][tx 1338668 pps   31872 kbps  182321][Total Msgs_Rcvd 451554]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  387036 prach0   64512]
+[0m[HW]     [o-du 0][rx  462306 pps   10752 kbps   72960][tx 1370540 pps   31872 kbps  182321][Total Msgs_Rcvd 462306]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  396252 prach0   66048]
+[0m[HW]     [o-du 0][rx  473058 pps   10752 kbps   72960][tx 1402412 pps   31872 kbps  182321][Total Msgs_Rcvd 473058]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  405468 prach0   67584]
+[0m[HW]     [o-du 0][rx  483810 pps   10752 kbps   72960][tx 1434284 pps   31872 kbps  182321][Total Msgs_Rcvd 483810]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  414684 prach0   69120]
+[0m[HW]     [o-du 0][rx  494562 pps   10752 kbps   72960][tx 1466156 pps   31872 kbps  182321][Total Msgs_Rcvd 494562]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  423900 prach0   70656]
+[0m[HW]     [o-du 0][rx  505314 pps   10752 kbps   72960][tx 1498028 pps   31872 kbps  182321][Total Msgs_Rcvd 505314]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  433116 prach0   72192]
+[0m[1;31m[NR_MAC] LCID 2b not handled yet!
+[0m[1;31m[NR_MAC] RNTI 5935 [910.4], received unknown MAC header (LCID = 0x2b)
+[0m[HW]     [o-du 0][rx  516066 pps   10752 kbps   72960][tx 1529900 pps   31872 kbps  182321][Total Msgs_Rcvd 516066]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  442332 prach0   73728]
+[0m[PHY]    prach_I0 = 14.4 dB
+[0m[HW]     [o-du 0][rx  526818 pps   10752 kbps   72960][tx 1561772 pps   31872 kbps  182321][Total Msgs_Rcvd 526818]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  451548 prach0   75264]
+[0m[HW]     [o-du 0][rx  537570 pps   10752 kbps   72960][tx 1593644 pps   31872 kbps  182321][Total Msgs_Rcvd 537570]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  460764 prach0   76800]
+[0m[HW]     [o-du 0][rx  548322 pps   10752 kbps   72960][tx 1625516 pps   31872 kbps  182321][Total Msgs_Rcvd 548322]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  469980 prach0   78336]
+[0m[HW]     [o-du 0][rx  559074 pps   10752 kbps   72960][tx 1657388 pps   31872 kbps  182321][Total Msgs_Rcvd 559074]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  479196 prach0   79872]
+[0m[HW]     [o-du 0][rx  569826 pps   10752 kbps   72960][tx 1689260 pps   31872 kbps  182321][Total Msgs_Rcvd 569826]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  488412 prach0   81408]
+[0m[HW]     [o-du 0][rx  580578 pps   10752 kbps   72960][tx 1721132 pps   31872 kbps  182321][Total Msgs_Rcvd 580578]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  497628 prach0   82944]
+[0m[HW]     [o-du 0][rx  591330 pps   10752 kbps   72960][tx 1753004 pps   31872 kbps  182321][Total Msgs_Rcvd 591330]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  506844 prach0   84480]
+[0m[HW]     [o-du 0][rx  602082 pps   10752 kbps   72960][tx 1784876 pps   31872 kbps  182321][Total Msgs_Rcvd 602082]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  516060 prach0   86016]
+[0m[PHY]    prach_I0 = 13.4 dB
+[0m[HW]     [o-du 0][rx  612834 pps   10752 kbps   72960][tx 1816748 pps   31872 kbps  182321][Total Msgs_Rcvd 612834]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  525276 prach0   87552]
+[0m[HW]     [o-du 0][rx  623586 pps   10752 kbps   72960][tx 1848620 pps   31872 kbps  182321][Total Msgs_Rcvd 623586]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  534492 prach0   89088]
+[0m[HW]     [o-du 0][rx  634338 pps   10752 kbps   72960][tx 1880492 pps   31872 kbps  182321][Total Msgs_Rcvd 634338]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  543708 prach0   90624]
+[0m[HW]     [o-du 0][rx  645090 pps   10752 kbps   72960][tx 1912364 pps   31872 kbps  182321][Total Msgs_Rcvd 645090]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  552924 prach0   92160]
+[0m[HW]     [o-du 0][rx  655842 pps   10752 kbps   72960][tx 1944236 pps   31872 kbps  182321][Total Msgs_Rcvd 655842]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  562140 prach0   93696]
+[0m[HW]     [o-du 0][rx  666594 pps   10752 kbps   72960][tx 1976108 pps   31872 kbps  182321][Total Msgs_Rcvd 666594]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  571356 prach0   95232]
+[0m[HW]     [o-du 0][rx  677346 pps   10752 kbps   72960][tx 2007980 pps   31872 kbps  182321][Total Msgs_Rcvd 677346]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  580572 prach0   96768]
+[0m[HW]     [o-du 0][rx  688098 pps   10752 kbps   72960][tx 2039852 pps   31872 kbps  182321][Total Msgs_Rcvd 688098]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  589788 prach0   98304]
+[0m[PHY]    prach_I0 = 14.4 dB
+[0m[HW]     [o-du 0][rx  698850 pps   10752 kbps   72960][tx 2071724 pps   31872 kbps  182321][Total Msgs_Rcvd 698850]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  599004 prach0   99840]
+[0m[HW]     [o-du 0][rx  709602 pps   10752 kbps   72960][tx 2103596 pps   31872 kbps  182321][Total Msgs_Rcvd 709602]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  608220 prach0  101376]
+[0m[HW]     [o-du 0][rx  720354 pps   10752 kbps   72960][tx 2135468 pps   31872 kbps  182321][Total Msgs_Rcvd 720354]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  617436 prach0  102912]
+[0m[HW]     [o-du 0][rx  731106 pps   10752 kbps   72960][tx 2167340 pps   31872 kbps  182321][Total Msgs_Rcvd 731106]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  626652 prach0  104448]
+[0m[HW]     [o-du 0][rx  741858 pps   10752 kbps   72960][tx 2199212 pps   31872 kbps  182321][Total Msgs_Rcvd 741858]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  635868 prach0  105984]
+[0m[HW]     [o-du 0][rx  752610 pps   10752 kbps   72960][tx 2231084 pps   31872 kbps  182321][Total Msgs_Rcvd 752610]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  645084 prach0  107520]
+[0m[HW]     [o-du 0][rx  763362 pps   10752 kbps   72960][tx 2262956 pps   31872 kbps  182321][Total Msgs_Rcvd 763362]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  654300 prach0  109056]
+[0m[1;31m[NR_MAC] LCID 35 not handled yet!
+[0m[1;31m[NR_MAC] LCID 31 not handled yet!
+[0m[1;31m[NR_MAC] RNTI 5935 [909.4], received unknown MAC header (LCID = 0x31)
+[0m[HW]     [o-du 0][rx  774114 pps   10752 kbps   72960][tx 2294828 pps   31872 kbps  182321][Total Msgs_Rcvd 774114]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  663516 prach0  110592]
+[0m[PHY]    prach_I0 = 13.7 dB
+[0m[HW]     [o-du 0][rx  784866 pps   10752 kbps   72960][tx 2326700 pps   31872 kbps  182321][Total Msgs_Rcvd 784866]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  672732 prach0  112128]
+[0m[HW]     [o-du 0][rx  795618 pps   10752 kbps   72960][tx 2358572 pps   31872 kbps  182321][Total Msgs_Rcvd 795618]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  681948 prach0  113664]
+[0m[HW]     [o-du 0][rx  806370 pps   10752 kbps   72960][tx 2390444 pps   31872 kbps  182321][Total Msgs_Rcvd 806370]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  691164 prach0  115200]
+[0m[HW]     [o-du 0][rx  817122 pps   10752 kbps   72960][tx 2422316 pps   31872 kbps  182321][Total Msgs_Rcvd 817122]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  700380 prach0  116736]
+[0m[HW]     [o-du 0][rx  827874 pps   10752 kbps   72960][tx 2454188 pps   31872 kbps  182321][Total Msgs_Rcvd 827874]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  709596 prach0  118272]
+[0m[HW]     [o-du 0][rx  838626 pps   10752 kbps   72960][tx 2486060 pps   31872 kbps  182321][Total Msgs_Rcvd 838626]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  718812 prach0  119808]
+[0m[HW]     [o-du 0][rx  849378 pps   10752 kbps   72960][tx 2517932 pps   31872 kbps  182321][Total Msgs_Rcvd 849378]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  728028 prach0  121344]
+[0m[HW]     [o-du 0][rx  860130 pps   10752 kbps   72960][tx 2549804 pps   31872 kbps  182321][Total Msgs_Rcvd 860130]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  737244 prach0  122880]
+[0m[PHY]    prach_I0 = 14.1 dB
+[0m[HW]     [o-du 0][rx  870882 pps   10752 kbps   72960][tx 2581676 pps   31872 kbps  182321][Total Msgs_Rcvd 870882]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  746460 prach0  124416]
+[0m[HW]     [o-du 0][rx  881634 pps   10752 kbps   72960][tx 2613548 pps   31872 kbps  182321][Total Msgs_Rcvd 881634]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  755676 prach0  125952]
+[0m[HW]     [o-du 0][rx  892386 pps   10752 kbps   72960][tx 2645420 pps   31872 kbps  182321][Total Msgs_Rcvd 892386]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  764892 prach0  127488]
+[0m[HW]     [o-du 0][rx  903138 pps   10752 kbps   72960][tx 2677292 pps   31872 kbps  182321][Total Msgs_Rcvd 903138]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  774108 prach0  129024]
+[0m[HW]     [o-du 0][rx  913890 pps   10752 kbps   72960][tx 2709164 pps   31872 kbps  182321][Total Msgs_Rcvd 913890]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  783324 prach0  130560]
+[0m[HW]     [o-du 0][rx  924642 pps   10752 kbps   72960][tx 2741036 pps   31872 kbps  182321][Total Msgs_Rcvd 924642]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  792540 prach0  132096]
+[0m[HW]     [o-du 0][rx  935394 pps   10752 kbps   72960][tx 2772908 pps   31872 kbps  182321][Total Msgs_Rcvd 935394]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  801756 prach0  133632]
+[0m[HW]     [o-du 0][rx  946146 pps   10752 kbps   72960][tx 2804780 pps   31872 kbps  182321][Total Msgs_Rcvd 946146]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  810972 prach0  135168]
+[0m[PHY]    prach_I0 = 13.7 dB
+[0m[HW]     [o-du 0][rx  956898 pps   10752 kbps   72960][tx 2836652 pps   31872 kbps  182321][Total Msgs_Rcvd 956898]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  820188 prach0  136704]
+[0m[HW]     [o-du 0][rx  967650 pps   10752 kbps   72960][tx 2868524 pps   31872 kbps  182321][Total Msgs_Rcvd 967650]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  829404 prach0  138240]
+[0m[HW]     [o-du 0][rx  978402 pps   10752 kbps   72960][tx 2900396 pps   31872 kbps  182321][Total Msgs_Rcvd 978402]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  838620 prach0  139776]
+[0m[HW]     [o-du 0][rx  989154 pps   10752 kbps   72945][tx 2932268 pps   31872 kbps  182321][Total Msgs_Rcvd 989154]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.945 Mbps tx=182.321 Mbps total=255.266 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  847836 prach0  141312]
+[0m[HW]     [o-du 0][rx  999906 pps   10752 kbps   72960][tx 2964140 pps   31872 kbps  182321][Total Msgs_Rcvd 999906]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  857052 prach0  142848]
+[0m[HW]     [o-du 0][rx 1010658 pps   10752 kbps   72960][tx 2996012 pps   31872 kbps  182321][Total Msgs_Rcvd 1010658]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  866268 prach0  144384]
+[0m[HW]     [o-du 0][rx 1021410 pps   10752 kbps   72960][tx 3027884 pps   31872 kbps  182321][Total Msgs_Rcvd 1021410]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  875484 prach0  145920]
+[0m[HW]     [o-du 0][rx 1032162 pps   10752 kbps   72960][tx 3059756 pps   31872 kbps  182321][Total Msgs_Rcvd 1032162]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  884700 prach0  147456]
+[0m[PHY]    prach_I0 = 11.0 dB
+[0m[HW]     [o-du 0][rx 1042914 pps   10752 kbps   72960][tx 3091628 pps   31872 kbps  182321][Total Msgs_Rcvd 1042914]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  893916 prach0  148992]
+[0m[HW]     [o-du 0][rx 1053666 pps   10752 kbps   72960][tx 3123500 pps   31872 kbps  182321][Total Msgs_Rcvd 1053666]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  903132 prach0  150528]
+[0m[HW]     [o-du 0][rx 1064418 pps   10752 kbps   72945][tx 3155372 pps   31872 kbps  182321][Total Msgs_Rcvd 1064418]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.945 Mbps tx=182.321 Mbps total=255.266 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  912348 prach0  152064]
+[0m[HW]     [o-du 0][rx 1075170 pps   10752 kbps   72960][tx 3187244 pps   31872 kbps  182321][Total Msgs_Rcvd 1075170]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  921564 prach0  153600]
+[0m[HW]     [o-du 0][rx 1085922 pps   10752 kbps   72960][tx 3219116 pps   31872 kbps  182321][Total Msgs_Rcvd 1085922]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  930780 prach0  155136]
+[0m[HW]     [o-du 0][rx 1096674 pps   10752 kbps   72960][tx 3250988 pps   31872 kbps  182321][Total Msgs_Rcvd 1096674]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  939996 prach0  156672]
+[0m[HW]     [o-du 0][rx 1107426 pps   10752 kbps   72960][tx 3282860 pps   31872 kbps  182321][Total Msgs_Rcvd 1107426]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  949212 prach0  158208]
+[0m[HW]     [o-du 0][rx 1118178 pps   10752 kbps   72960][tx 3314732 pps   31872 kbps  182321][Total Msgs_Rcvd 1118178]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  958428 prach0  159744]
+[0m[PHY]    prach_I0 = 11.5 dB
+[0m[93m[PDCP]   discard NR PDU rcvd_count=293, entity->rx_deliv 296,sdu_in_list 0
+[0m[HW]     [o-du 0][rx 1128930 pps   10752 kbps   72960][tx 3346604 pps   31872 kbps  182321][Total Msgs_Rcvd 1128930]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  967644 prach0  161280]
+[0m[HW]     [o-du 0][rx 1139682 pps   10752 kbps   72960][tx 3378476 pps   31872 kbps  182321][Total Msgs_Rcvd 1139682]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  976860 prach0  162816]
+[0m[HW]     [o-du 0][rx 1150434 pps   10752 kbps   72960][tx 3410348 pps   31872 kbps  182321][Total Msgs_Rcvd 1150434]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  986076 prach0  164352]
+[0m[HW]     [o-du 0][rx 1161186 pps   10752 kbps   72960][tx 3442220 pps   31872 kbps  182321][Total Msgs_Rcvd 1161186]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0  995292 prach0  165888]
+[0m[HW]     [o-du 0][rx 1171938 pps   10752 kbps   72960][tx 3474092 pps   31872 kbps  182321][Total Msgs_Rcvd 1171938]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1004508 prach0  167424]
+[0m[HW]     [o-du 0][rx 1182690 pps   10752 kbps   72960][tx 3505964 pps   31872 kbps  182321][Total Msgs_Rcvd 1182690]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1013724 prach0  168960]
+[0m[HW]     [o-du 0][rx 1193442 pps   10752 kbps   72960][tx 3537836 pps   31872 kbps  182321][Total Msgs_Rcvd 1193442]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1022940 prach0  170496]
+[0m[93m[PDCP]   discard NR PDU rcvd_count=396, entity->rx_deliv 399,sdu_in_list 0
+[0m[HW]     [o-du 0][rx 1204194 pps   10752 kbps   72960][tx 3569708 pps   31872 kbps  182321][Total Msgs_Rcvd 1204194]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1032156 prach0  172032]
+[0m[PHY]    prach_I0 = 13.3 dB
+[0m[1;31m[NR_MAC] Invalid PDU in 52.9 for RNTI 5935! mac_subheader_len: 3, mac_len: 15072, remaining pdu_len: 20
+[0m[1;31m[NR_MAC] Residual UL MAC PDU: [0m[HW]     [o-du 0][rx 1214946 pps   10752 kbps   72960][tx 3601580 pps   31872 kbps  182321][Total Msgs_Rcvd 1214946]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1041372 prach0  173568]
+[0m[HW]     [o-du 0][rx 1225698 pps   10752 kbps   72960][tx 3633452 pps   31872 kbps  182321][Total Msgs_Rcvd 1225698]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1050588 prach0  175104]
+[0m[HW]     [o-du 0][rx 1236450 pps   10752 kbps   72960][tx 3665324 pps   31872 kbps  182321][Total Msgs_Rcvd 1236450]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1059804 prach0  176640]
+[0m[HW]     [o-du 0][rx 1247202 pps   10752 kbps   72960][tx 3697196 pps   31872 kbps  182321][Total Msgs_Rcvd 1247202]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1069020 prach0  178176]
+[0m[HW]     [o-du 0][rx 1257954 pps   10752 kbps   72960][tx 3729068 pps   31872 kbps  182321][Total Msgs_Rcvd 1257954]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1078236 prach0  179712]
+[0m[HW]     [o-du 0][rx 1268706 pps   10752 kbps   72960][tx 3760940 pps   31872 kbps  182321][Total Msgs_Rcvd 1268706]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1087452 prach0  181248]
+[0m[HW]     [o-du 0][rx 1279458 pps   10752 kbps   72960][tx 3792812 pps   31872 kbps  182321][Total Msgs_Rcvd 1279458]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1096668 prach0  182784]
+[0m[HW]     [o-du 0][rx 1290210 pps   10752 kbps   72960][tx 3824684 pps   31872 kbps  182321][Total Msgs_Rcvd 1290210]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1105884 prach0  184320]
+[0m[PHY]    prach_I0 = 13.4 dB
+[0m[HW]     [o-du 0][rx 1300962 pps   10752 kbps   72960][tx 3856556 pps   31872 kbps  182321][Total Msgs_Rcvd 1300962]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1115100 prach0  185856]
+[0m[HW]     [o-du 0][rx 1311714 pps   10752 kbps   72960][tx 3888428 pps   31872 kbps  182321][Total Msgs_Rcvd 1311714]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1124316 prach0  187392]
+[0m[93m[PDCP]   discard NR PDU rcvd_count=545, entity->rx_deliv 548,sdu_in_list 0
+[0m[HW]     [o-du 0][rx 1322466 pps   10752 kbps   72960][tx 3920300 pps   31872 kbps  182321][Total Msgs_Rcvd 1322466]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1133532 prach0  188928]
+[0m[HW]     [o-du 0][rx 1333218 pps   10752 kbps   72960][tx 3952172 pps   31872 kbps  182321][Total Msgs_Rcvd 1333218]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1142748 prach0  190464]
+[0m[HW]     [o-du 0][rx 1343970 pps   10752 kbps   72960][tx 3984044 pps   31872 kbps  182321][Total Msgs_Rcvd 1343970]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1151964 prach0  192000]
+[0m[HW]     [o-du 0][rx 1354722 pps   10752 kbps   72960][tx 4015916 pps   31872 kbps  182321][Total Msgs_Rcvd 1354722]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1161180 prach0  193536]
+[0m[HW]     [o-du 0][rx 1365474 pps   10752 kbps   72960][tx 4047788 pps   31872 kbps  182321][Total Msgs_Rcvd 1365474]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1170396 prach0  195072]
+[0m[HW]     [o-du 0][rx 1376226 pps   10752 kbps   72960][tx 4079660 pps   31872 kbps  182321][Total Msgs_Rcvd 1376226]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1179612 prach0  196608]
+[0m[PHY]    prach_I0 = 12.8 dB
+[0m[HW]     [o-du 0][rx 1386978 pps   10752 kbps   72960][tx 4111532 pps   31872 kbps  182321][Total Msgs_Rcvd 1386978]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1188828 prach0  198144]
+[0m[HW]     [o-du 0][rx 1397730 pps   10752 kbps   72960][tx 4143404 pps   31872 kbps  182321][Total Msgs_Rcvd 1397730]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1198044 prach0  199680]
+[0m[HW]     [o-du 0][rx 1408482 pps   10752 kbps   72960][tx 4175276 pps   31872 kbps  182321][Total Msgs_Rcvd 1408482]
+[0m[HW]     [FH LOAD][o-du 0] rx=72.960 Mbps tx=182.321 Mbps total=255.281 Mbps rx_pps=10752 tx_pps=31872 total_pps=42624
+[0m[HW]     [o_du0][pusch0 1207260 prach0  201216]
+[0m

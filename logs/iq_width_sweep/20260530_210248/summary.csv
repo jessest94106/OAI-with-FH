@@ -1,0 +1,5 @@
+timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes
+2026-05-30T21:04:10,8,1,ok,10.0.0.47,1,vrtsim,4049760000,24,24,24,24,1,1,1,35,36.949,10.900,38.800,52,94.003,41.184,135.187,135.224,4.995,0.000,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_210248/iq8,
+2026-05-30T21:05:58,9,1,ue-timeout,,1,vrtsim,4049760000,24,24,24,24,1,1,1,0,,,,64,104.947,45.822,150.769,150.777,0.000,0.000,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_210248/iq9,
+2026-05-30T21:07:45,12,1,ue-timeout,,1,vrtsim,4049760000,24,24,24,24,1,1,1,0,,,,60,137.780,59.646,197.426,197.438,0.000,0.000,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_210248/iq12,
+2026-05-30T21:09:33,16,0,ue-timeout,,1,vrtsim,4049760000,24,24,24,24,1,1,1,0,,,,64,180.387,76.414,256.801,431.639,0.000,0.000,/home/jesse/oran_lab/logs/iq_width_sweep/20260530_210248/iq16,

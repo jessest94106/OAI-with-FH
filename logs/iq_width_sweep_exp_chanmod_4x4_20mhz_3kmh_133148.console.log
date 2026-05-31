@@ -1,0 +1,16 @@
+[13:31:48] antennas patched to 4x4 (nb_tx/nb_rx, pusch/pdsch AntennaPorts) — VALIDATE: FH/xran MIMO path is untested here
+[13:31:48] bandwidth patched to 51 PRB: carrierBandwidth + BWP RIV=13750 + tx_bw/rx_bw + UE -r; carrier center -> 4054620000 Hz (RU carrier_tx/rx + UE -C) — @30kHz: 51=20MHz 133=50MHz
+[13:31:48] UE speed 3 km/h @ 4049760000 Hz -> Doppler 11.26 Hz -> forgetfact 0.01331
+[13:31:48] chanmod ON: type=AWGN ds_tdl=0us noise=-30dB ploss=0dB forgetfact=0.01331 timescale=1.0 ant=4
+[13:31:48] chanmod NOTE: realtime is fragile — if UE will not connect, lower VRTSIM_TIMESCALE; this path needs validation.
+[13:31:48] output: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_20mhz_3kmh_133148
+[13:31:48] widths: 16
+[13:31:48] channel: chanmod=1 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0.01331 ant=4x4
+[13:31:48] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[13:31:48] === IQ width 16, compMeth 0 ===
+[13:31:51] starting RU: /home/jesse/oran_lab/run_ru.sh
+[13:31:54] starting DU: /home/jesse/oran_lab/run_du.sh
+[13:31:59] starting UE: /home/jesse/oran_lab/run_ue.sh
+Timed out waiting for UE PDU session; regex=TUN Interface .*successfully configured|Received PDU Session Establishment Accept; log=/home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_20mhz_3kmh_133148/iq16/ue.log
+[13:33:36] summary: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_20mhz_3kmh_133148/summary.csv
+[13:33:36] report: /home/jesse/oran_lab/logs/iq_width_sweep/exp_chanmod_4x4_20mhz_3kmh_133148/report.md

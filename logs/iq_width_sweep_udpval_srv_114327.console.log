@@ -1,0 +1,15 @@
+[11:43:27] output: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_srv_114327
+[11:43:27] widths: 9
+[11:43:27] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=1x1
+[11:43:27] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[11:43:27] === IQ width 9, compMeth 1 ===
+[11:43:29] starting RU: /home/jesse/oran_lab/run_ru.sh
+[11:43:32] starting DU: /home/jesse/oran_lab/run_du.sh
+[11:43:37] starting UE: /home/jesse/oran_lab/run_ue.sh
+[11:43:53] iperf3 one-off UDP logging server up on 10.0.0.1:5201 -> /home/jesse/oran_lab/logs/iq_width_sweep/udpval_srv_114327/iq9/iperf_ul.server.json
+[11:43:53] route to server: 10.0.0.1 from 10.0.0.38 dev oaitun_ue1 table 9999 uid 1001 
+[11:43:53] running iperf3 ul: server=10.0.0.1, ue_ip=10.0.0.38, seconds=20, udp=1
+iperf_json_finish: pthread_mutex_lock: Success
+iperf_errexit: pthread_mutex_unlock: Invalid argument
+[11:44:26] summary: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_srv_114327/summary.csv
+[11:44:26] report: /home/jesse/oran_lab/logs/iq_width_sweep/udpval_srv_114327/report.md

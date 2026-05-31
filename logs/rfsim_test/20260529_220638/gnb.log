@@ -1,0 +1,15 @@
+CMDLINE: "/home/jesse/oran_lab/oaicicd/test_dir/openairinterface5g/build/nr-softmodem" "-O" "/home/jesse/oran_lab/gnb_rfsim.conf" "--rfsim" "--thread-pool" "4,5,6,7" 
+[MAC]    received F1 Setup Response from CU (null)
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[CONFIG] function config_libconfig_init returned 0
+Initializing random number generator, seed 14327428931161310261
+[1;31m[HW]     write() failed, errno(104)
+[0m[93m[HW]     Lost socket
+[0m[1;31m[HW]     write() failed, errno(32)
+[0m
+** Caught SIGTERM, shutting down
+TYPE <CTRL-C> TO TERMINATE
+Returned from ITTI signal handler
+Bye.

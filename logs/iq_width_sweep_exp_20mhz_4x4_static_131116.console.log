@@ -1,0 +1,13 @@
+[13:11:16] antennas patched to 4x4 (nb_tx/nb_rx, pusch/pdsch AntennaPorts) — VALIDATE: FH/xran MIMO path is untested here
+[13:11:16] bandwidth patched to 51 PRB (carrierBandwidth + initial BWP RIV=13750 + tx_bw/rx_bw + UE -r) — @30kHz: 133=50MHz 65=25MHz
+[13:11:16] output: /home/jesse/oran_lab/logs/iq_width_sweep/exp_20mhz_4x4_static_131116
+[13:11:16] widths: 16
+[13:11:16] channel: chanmod=0 type=AWGN ds_tdl=0us noise=-30dB forgetfact=0 ant=4x4
+[13:11:16] iperf: direction=ul server=10.0.0.1:5201 seconds=20 parallel=1
+[13:11:16] === IQ width 16, compMeth 0 ===
+[13:11:18] starting RU: /home/jesse/oran_lab/run_ru.sh
+[13:11:21] starting DU: /home/jesse/oran_lab/run_du.sh
+[13:11:26] starting UE: /home/jesse/oran_lab/run_ue.sh
+Timed out waiting for UE PDU session; regex=TUN Interface .*successfully configured|Received PDU Session Establishment Accept; log=/home/jesse/oran_lab/logs/iq_width_sweep/exp_20mhz_4x4_static_131116/iq16/ue.log
+[13:13:04] summary: /home/jesse/oran_lab/logs/iq_width_sweep/exp_20mhz_4x4_static_131116/summary.csv
+[13:13:04] report: /home/jesse/oran_lab/logs/iq_width_sweep/exp_20mhz_4x4_static_131116/report.md
