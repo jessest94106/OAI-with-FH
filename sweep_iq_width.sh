@@ -31,8 +31,9 @@ IPERF_UDP_RATE="${IPERF_UDP_RATE:-100M}"
 CHANMOD="${CHANMOD:-0}"                  # 1 = enable vrtsim channel modelling (chanmod)
 CHAN_TYPE="${CHAN_TYPE:-AWGN}"           # AWGN | TDL_A | TDL_B | TDL_C | TDL_D | TDL_E
 CHAN_DS_TDL="${CHAN_DS_TDL:-0}"          # delay spread for TDL models, microseconds
-CHAN_NOISE_DB="${CHAN_NOISE_DB:--30}"    # channel noise power dB (lower = higher RX SNR)
+CHAN_NOISE_DB="${CHAN_NOISE_DB:--30}"    # channel noise power dB (per-model; NOTE: a NO-OP in vrtsim, kept for record)
 CHAN_PLOSS_DB="${CHAN_PLOSS_DB:-0}"      # channel path loss dB
+CHAN_RX_SNR_DB="${CHAN_RX_SNR_DB:-}"     # TARGET UL time-domain RX SNR (dB). Set -> vrtsim per-slot AGC injects noise on the UL (UE->RU) to hit this SNR. Empty = off. Needs CHANMOD=1.
 CHAN_FORGETFACT="${CHAN_FORGETFACT:-0}"  # 0=static .. ~1=fast-varying. Auto-derived from UE_SPEED_KMH when that is >0 (see build_chanmod).
 UE_SPEED_KMH="${UE_SPEED_KMH:-0}"        # UE speed (km/h). >0 converts to max Doppler -> forgetfact (max_Doppler itself is NOT implemented)
 CARRIER_HZ="${CARRIER_HZ:-4049760000}"   # carrier freq for the Doppler conversion f_d = (v/3.6)*fc/c (band 77 default in use here)
@@ -42,7 +43,7 @@ NB_ANT="${NB_ANT:-1}"                    # gNB+UE antenna count (1..4); raises F
 BW_PRB="${BW_PRB:-0}"                    # 0=leave conf as-is; else set dl/ul carrierBandwidth + initial BWP RIV + tx_bw/rx_bw. @30kHz SCS: 133=50MHz, 65=25MHz, 24=10MHz
 UE_COUNT="${UE_COUNT:-1}"                # documented only: vrtsim multi-UE needs N UE procs + N CN subs + chanmod (see feasibility doc)
 # export so the report generator (python subprocess) can show them in ## Radio Context
-export CHANMOD CHAN_TYPE CHAN_DS_TDL CHAN_NOISE_DB CHAN_PLOSS_DB CHAN_FORGETFACT UE_SPEED_KMH CARRIER_HZ DOPPLER_HZ VRTSIM_TIMESCALE NB_ANT BW_PRB UE_COUNT
+export CHANMOD CHAN_TYPE CHAN_DS_TDL CHAN_NOISE_DB CHAN_PLOSS_DB CHAN_RX_SNR_DB CHAN_FORGETFACT UE_SPEED_KMH CARRIER_HZ DOPPLER_HZ VRTSIM_TIMESCALE NB_ANT BW_PRB UE_COUNT
 RU_WAIT_SECONDS="${RU_WAIT_SECONDS:-30}"
 DU_WAIT_SECONDS="${DU_WAIT_SECONDS:-60}"
 UE_WAIT_SECONDS="${UE_WAIT_SECONDS:-90}"
@@ -203,8 +204,13 @@ EOF
   # RX antennas -> UE 4-antenna DL combine gets garbage -> synch fails. Pass it explicitly.
   export VRTSIM_RU_EXTRA_ARGS="--vrtsim.chanmod 1 --vrtsim.timescale ${VRTSIM_TIMESCALE} --vrtsim.client-num-rx-antennas ${UE_NB_ANT_RX}"
   export VRTSIM_UE_EXTRA_ARGS="--vrtsim.chanmod 1"
+  # Target UL RX SNR: per-slot AGC lives in the UE (client = UL TX path). Pass to the UE only,
+  # so the DL (RU server_tx) stays clean and initial sync is unaffected.
+  if [[ -n "${CHAN_RX_SNR_DB}" ]]; then
+    export VRTSIM_UE_EXTRA_ARGS="${VRTSIM_UE_EXTRA_ARGS} --vrtsim.rx-target-snr-db ${CHAN_RX_SNR_DB}"
+  fi
   export UE_NB_ANT_TX="${nbrx}" UE_NB_ANT_RX="${nbtx}"
-  log "chanmod ON: type=${CHAN_TYPE} ds_tdl=${CHAN_DS_TDL}us noise=${CHAN_NOISE_DB}dB ploss=${CHAN_PLOSS_DB}dB forgetfact=${CHAN_FORGETFACT} timescale=${VRTSIM_TIMESCALE} ant=${NB_ANT}"
+  log "chanmod ON: type=${CHAN_TYPE} ds_tdl=${CHAN_DS_TDL}us noise=${CHAN_NOISE_DB}dB ploss=${CHAN_PLOSS_DB}dB rx_snr=${CHAN_RX_SNR_DB:-off}dB forgetfact=${CHAN_FORGETFACT} timescale=${VRTSIM_TIMESCALE} ant=${NB_ANT}"
   log "chanmod NOTE: realtime is fragile — if UE will not connect, lower VRTSIM_TIMESCALE; this path needs validation."
 }
 
@@ -402,7 +408,7 @@ run_iperf_one() {
 
 write_csv_header() {
   if [[ ! -f "${CSV}" ]]; then
-    echo 'timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,trial_dir,notes' >"${CSV}"
+    echo 'timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,ul_jitter_ms,ul_loss_pct,fh_late_total,fh_lead_mean,fh_lead_min,ul_sym_present_pct,trial_dir,notes' >"${CSV}"
   fi
 }
 
@@ -463,6 +469,10 @@ for text in (du_log, ru_log):
 fh_used = fh[drop_first:] if len(fh) > drop_first else fh
 
 snrs = [float(x) for x in re.findall(r"\bSNR\s+(-?[0-9]+(?:\.[0-9]+)?)\s+dB", du_log)]
+# Real time-domain UL RX SNR injected/measured by vrtsim AGC (ue.log). Preferred over
+# the gNB ULSCH SNR (post-FFT, inflated by processing gain) when AGC was active.
+td_snrs = [float(x) for x in re.findall(r"RX SNR \(time-domain[^)]*\):\s*(-?[0-9]+(?:\.[0-9]+)?)\s*dB", ue_log)]
+rx_snrs = td_snrs if td_snrs else snrs
 ue_ips = set(re.findall(r"UE IPv4:\s*([0-9.]+)", ue_log))
 ue_ids = set(re.findall(r"\[UE\s+(\d+)\]", ue_log))
 tun_ids = set(re.findall(r"TUN Interface\s+oaitun_ue(\d+)", ue_log))
@@ -532,6 +542,60 @@ def iperf_mbps(path):
                 return float(val["bits_per_second"]) / 1e6
     return 0.0
 
+def ul_latency(path):
+    # UL latency/reliability from the iperf3 UDP server JSON. Under UDP UL saturation the
+    # client control socket dies so end.sum is empty -> fall back to per-interval jitter/loss.
+    server_path = (path[:-5] if path.endswith(".json") else path) + ".server.json"
+    jit, loss = "", ""
+    if os.path.exists(server_path) and os.path.getsize(server_path) > 0:
+        try:
+            sd = json.load(open(server_path))
+        except Exception:
+            sd = {}
+        s = sd.get("end", {}).get("sum", {})
+        if s.get("jitter_ms") is not None:
+            jit = f"{float(s['jitter_ms']):.3f}"
+        if s.get("lost_percent") is not None:
+            loss = f"{float(s['lost_percent']):.2f}"
+        if jit == "" or loss == "":
+            ivs = [iv.get("sum", {}) for iv in sd.get("intervals", [])]
+            ivs = [x for x in ivs if x.get("packets")]
+            if len(ivs) >= 3:
+                ivs = ivs[1:-1]            # drop ramp-up + teardown tail
+            if ivs:
+                js = [float(x["jitter_ms"]) for x in ivs if x.get("jitter_ms") is not None]
+                if js and jit == "":
+                    jit = f"{sum(js)/len(js):.3f}"
+                tot = sum(int(x.get("packets", 0)) for x in ivs)
+                lost = sum(int(x.get("lost_packets", 0)) for x in ivs)
+                if tot > 0 and loss == "":
+                    loss = f"{100.0 * lost / tot:.2f}"
+    return jit, loss
+
+def fh_lead_stats():
+    # R1 real FH-latency proxy: U-plane arrival lead-time (symbols) from oaioran_ru.c instrumentation.
+    # lower mean = less margin = higher FH latency. Also total up_late (FH packets dropped as too-late).
+    rows = re.findall(r'FH lead-time symbols: mean=([0-9.\-]+) min=(-?[0-9]+) \(n=([0-9]+)\)', ru_log)
+    late = sum(int(x) for x in re.findall(r'Packets late: ([0-9]+)', ru_log))
+    if not rows:
+        return "", "", late
+    tot = sum(int(n) for _, _, n in rows)
+    wmean = sum(float(mu) * int(n) for mu, _, n in rows) / tot if tot else 0.0
+    gmin = min(int(mn) for _, mn, _ in rows)
+    return f"{wmean:.2f}", str(gmin), late
+
+def ul_sym_present():
+    # UL FH-latency metric: fraction of expected UL symbols present (arrived) at DU read time.
+    # From oaioran.c instrumentation in du.log. Tightening Ta4 -> late UL symbols dropped -> rate falls.
+    rows = re.findall(r'UL sym present: ([0-9]+)/([0-9]+) \(', du_log)
+    tp = sum(int(p) for p, _ in rows)
+    te = sum(int(e) for _, e in rows)
+    return f"{100.0 * tp / te:.2f}" if te else ""
+
+_jit, _loss = ul_latency(os.path.join(trial_dir, 'iperf_ul.json'))
+_lead_mean, _lead_min, _late = fh_lead_stats()
+_ul_present = ul_sym_present()
+
 def fmt(value):
     return f"{value:.3f}" if isinstance(value, float) else str(value)
 
@@ -551,10 +615,10 @@ row = {
     "numerology": numerology,
     "nb_tx": conf_value(ru_conf, "nb_tx", conf_value(du_conf, "nb_tx", "")),
     "nb_rx": conf_value(ru_conf, "nb_rx", conf_value(du_conf, "nb_rx", "")),
-    "snr_samples": len(snrs),
-    "snr_db_avg": fmt(statistics.mean(snrs)) if snrs else "",
-    "snr_db_min": fmt(min(snrs)) if snrs else "",
-    "snr_db_max": fmt(max(snrs)) if snrs else "",
+    "snr_samples": len(rx_snrs),
+    "snr_db_avg": fmt(statistics.mean(rx_snrs)) if rx_snrs else "",
+    "snr_db_min": fmt(min(rx_snrs)) if rx_snrs else "",
+    "snr_db_max": fmt(max(rx_snrs)) if rx_snrs else "",
     "fh_samples": len(fh_used),
     "fh_rx_mbps_avg": f"{avg_fh(0):.3f}",
     "fh_tx_mbps_avg": f"{avg_fh(1):.3f}",
@@ -562,6 +626,12 @@ row = {
     "fh_total_mbps_max": f"{max_total():.3f}",
     "iperf_ul_mbps": f"{iperf_mbps(os.path.join(trial_dir, 'iperf_ul.json')):.3f}",
     "iperf_dl_mbps": f"{iperf_mbps(os.path.join(trial_dir, 'iperf_dl.json')):.3f}",
+    "ul_jitter_ms": _jit,
+    "ul_loss_pct": _loss,
+    "fh_late_total": _late,
+    "fh_lead_mean": _lead_mean,
+    "fh_lead_min": _lead_min,
+    "ul_sym_present_pct": _ul_present,
     "trial_dir": trial_dir,
     "notes": notes.replace("\n", " "),
 }
@@ -622,6 +692,9 @@ def enrich(row):
     all_logs = "\n".join((ru_log, du_log, ue_log))
 
     snrs = [float(x) for x in re.findall(r"\bSNR\s+(-?[0-9]+(?:\.[0-9]+)?)\s+dB", du_log)]
+    # Real time-domain UL RX SNR injected/measured by vrtsim AGC (ue.log). Preferred
+    # over the gNB ULSCH SNR (which is post-FFT and inflated by processing gain).
+    td_snrs = [float(x) for x in re.findall(r"RX SNR \(time-domain[^)]*\):\s*(-?[0-9]+(?:\.[0-9]+)?)\s*dB", ue_log)]
     ue_ips = set(re.findall(r"UE IPv4:\s*([0-9.]+)", ue_log))
     ue_ids = set(re.findall(r"\[UE\s+(\d+)\]", ue_log))
     tun_ids = set(re.findall(r"TUN Interface\s+oaitun_ue(\d+)", ue_log))
@@ -642,11 +715,13 @@ def enrich(row):
     ensure(row, "numerology", numerology)
     ensure(row, "nb_tx", conf_value(ru_conf, "nb_tx", conf_value(du_conf, "nb_tx", "")))
     ensure(row, "nb_rx", conf_value(ru_conf, "nb_rx", conf_value(du_conf, "nb_rx", "")))
-    ensure(row, "snr_samples", len(snrs))
-    ensure(row, "snr_db_avg", f"{statistics.mean(snrs):.3f}" if snrs else "")
-    ensure(row, "snr_db_min", f"{min(snrs):.3f}" if snrs else "")
-    ensure(row, "snr_db_max", f"{max(snrs):.3f}" if snrs else "")
-    row["snr_triplet"] = f"{row.get('snr_db_avg', '')}/{row.get('snr_db_min', '')}/{row.get('snr_db_max', '')}" if row.get("snr_db_avg") else "n/a"
+    rx_snrs = td_snrs if td_snrs else snrs
+    ensure(row, "snr_samples", len(rx_snrs))
+    ensure(row, "snr_db_avg", f"{statistics.mean(rx_snrs):.3f}" if rx_snrs else "")
+    ensure(row, "snr_db_min", f"{min(rx_snrs):.3f}" if rx_snrs else "")
+    ensure(row, "snr_db_max", f"{max(rx_snrs):.3f}" if rx_snrs else "")
+    # "(td)" marks the real time-domain RX SNR; otherwise it's the gNB ULSCH estimate.
+    row["snr_triplet"] = (f"{row.get('snr_db_avg', '')}/{row.get('snr_db_min', '')}/{row.get('snr_db_max', '')}" + (" (td)" if td_snrs else "")) if row.get("snr_db_avg") else "n/a"
     return row
 
 rows = []
@@ -659,7 +734,7 @@ except FileNotFoundError:
 with open(report_path, "w") as out:
     out.write("# IQ Width Sweep Report\n\n")
     out.write(f"Source CSV: `{csv_path}`\n\n")
-    out.write("| IQ width | compMeth | status | UE # | channel | carrier Hz | BW tx/rx PRB | RB dl/ul | mu | ant tx/rx | SNR avg/min/max dB | FH avg Mbps | FH max Mbps | UL iperf Mbps | DL iperf Mbps | samples |\n")
+    out.write("| IQ width | compMeth | status | UE # | channel | carrier Hz | BW tx/rx PRB | RB dl/ul | mu | ant tx/rx | RX SNR avg/min/max dB | FH avg Mbps | FH max Mbps | UL iperf Mbps | DL iperf Mbps | samples |\n")
     out.write("|---:|---:|---|---:|---|---:|---|---|---:|---|---|---:|---:|---:|---:|---:|\n")
     for r in rows:
         out.write("| {iq_width} | {comp_method} | {status} | {ue_count} | {channel_model} | {carrier_hz} | {tx_bw_prb}/{rx_bw_prb} | {dl_rb}/{ul_rb} | {numerology} | {nb_tx}/{nb_rx} | {snr_triplet} | {fh_total_mbps_avg} | {fh_total_mbps_max} | {iperf_ul_mbps} | {iperf_dl_mbps} | {fh_samples} |\n".format(**r))
