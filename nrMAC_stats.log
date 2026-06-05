@@ -1,1 +1,7 @@
+UE RNTI 74a2 CU-UE-ID 1 in-sync PH 61 dB PCMAX 20 dBm, average RSRP -43 (3 meas)
+UE 74a2: dlsch_rounds 19733/6763/3489/1662, dlsch_errors 378, pucch0_DTX 12281 (SNR 29.6+9.6 dB), BLER 0.68932 MCS (0) 0 CCE fail 1, goodput 0.02 Mbps
+UE 74a2: ulsch_rounds 190454/24303/5667/1370, ulsch_errors 906, ulsch_DTX 220, BLER 0.59705 MCS (0) 0 (Qm 2 deltaMCS 0 dB) NPRB 106 SNR 23.6 (+3.6) dB CCE fail 0, goodput 1.09 Mbps
+UE 74a2: LCID 1: TX            522 RX            279 bytes
+UE 74a2: LCID 2: TX              0 RX              0 bytes
+UE 74a2: LCID 4: TX         443310 RX      472172327 bytes
 

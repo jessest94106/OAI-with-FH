@@ -5,8 +5,8 @@ Blacklisted PRBs 0/106
  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
  0. 0. 0. 0. 0. 0.
 max_IO = 0 (0), min_I0 = -90 (0), avg_I0 = -90 dB
-PRACH I0 = 4.1 dB
-DLSCH RNTI 74a2: current_Qm 2, current_RI 1, total_bytes TX 4036998
-ULSCH RNTI 74a2, 391: ulsch_power[0] 45,3 ulsch_noise_power[0] 0.0, sync_pos 0
-                 round_trials 190369(1.3e-01):24382(3.0e-02):5720(7.2e-03):1378, DTX 225, current_Qm 2, current_RI 1, total_bytes RX/SCHED 0/15705065
+PRACH I0 = 8.0 dB
+DLSCH RNTI 12e1: current_Qm 2, current_RI 1, total_bytes TX 11825801
+ULSCH RNTI 12e1, 866: ulsch_power[0] 43,9 ulsch_noise_power[0] 0.0, sync_pos 0
+                 round_trials 210898(1.4e-01):29341(4.9e-02):10397(1.8e-02):3890, DTX 4664, current_Qm 2, current_RI 1, total_bytes RX/SCHED 0/17321304
 

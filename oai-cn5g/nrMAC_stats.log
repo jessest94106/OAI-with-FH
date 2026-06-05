@@ -1,0 +1,7 @@
+UE RNTI 12e1 CU-UE-ID 1 in-sync PH 61 dB PCMAX 20 dBm, average RSRP -43 (4 meas)
+UE 12e1: dlsch_rounds 26326/11934/6612/3920, dlsch_errors 2372, pucch0_DTX 24757 (SNR 29.2+9.2 dB), BLER 0.72367 MCS (0) 0 CCE fail 3, goodput 0.18 Mbps
+UE 12e1: ulsch_rounds 214233/29851/10465/3913, ulsch_errors 1655, ulsch_DTX 4622, BLER 0.24716 MCS (0) 0 (Qm 2 deltaMCS 0 dB) NPRB 106 SNR 26.1 (+6.1) dB CCE fail 0, goodput 1.16 Mbps
+UE 12e1: LCID 1: TX            522 RX            275 bytes
+UE 12e1: LCID 2: TX              0 RX              0 bytes
+UE 12e1: LCID 4: TX        4339497 RX      169961492 bytes
+

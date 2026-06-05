@@ -34,6 +34,7 @@ CHAN_DS_TDL="${CHAN_DS_TDL:-0}"          # delay spread for TDL models, microsec
 CHAN_NOISE_DB="${CHAN_NOISE_DB:--30}"    # channel noise power dB (per-model; NOTE: a NO-OP in vrtsim, kept for record)
 CHAN_PLOSS_DB="${CHAN_PLOSS_DB:-0}"      # channel path loss dB
 CHAN_RX_SNR_DB="${CHAN_RX_SNR_DB:-}"     # TARGET UL time-domain RX SNR (dB). Set -> vrtsim per-slot AGC injects noise on the UL (UE->RU) to hit this SNR. Empty = off. Needs CHANMOD=1.
+RX_SNRS="${RX_SNRS:-}"                   # SWEEP: space-separated INTEGER dB UL RX-SNR targets (e.g. "20 12 8"). Each value runs one trial PER width. Needs CHANMOD=1 (CHAN_TYPE=AWGN recommended). Empty = single value from CHAN_RX_SNR_DB (current behaviour).
 CHAN_FORGETFACT="${CHAN_FORGETFACT:-0}"  # 0=static .. ~1=fast-varying. Auto-derived from UE_SPEED_KMH when that is >0 (see build_chanmod).
 UE_SPEED_KMH="${UE_SPEED_KMH:-0}"        # UE speed (km/h). >0 converts to max Doppler -> forgetfact (max_Doppler itself is NOT implemented)
 CARRIER_HZ="${CARRIER_HZ:-4049760000}"   # carrier freq for the Doppler conversion f_d = (v/3.6)*fc/c (band 77 default in use here)
@@ -66,6 +67,8 @@ The script patches ru_test.conf and du_test.conf for each trial and restores the
 
 Options:
   --widths "9 16"          IQ widths to test. Width 16 uses compMeth=0; others use compMeth=1.
+  --rx-snrs "20 12 8"      Sweep UL RX SNR (integer dB) — one trial per width per value.
+                           Needs CHANMOD=1 (CHAN_TYPE=AWGN recommended). Default: off.
   --iperf-server IP        iperf3 server reachable from UE tunnel. Default: ${IPERF_SERVER}
   --iperf-seconds N        iperf duration per direction. Default: ${IPERF_SECONDS}
   --iperf-direction D      ul, dl, both, or none. Default: ${IPERF_DIRECTION}
@@ -82,6 +85,7 @@ USAGE
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --widths) WIDTHS="$2"; shift 2 ;;
+    --rx-snrs) RX_SNRS="$2"; shift 2 ;;
     --iperf-server) IPERF_SERVER="$2"; shift 2 ;;
     --iperf-seconds) IPERF_SECONDS="$2"; shift 2 ;;
     --iperf-direction) IPERF_DIRECTION="$2"; shift 2 ;;
@@ -142,20 +146,26 @@ build_chanmod() {
     # Widen the carrier: set dl/ul carrierBandwidth, the initial BWP RIV
     # (locationAndBandwidth for start=0,len=BW_PRB; N_size=275 -> RIV=275*(L-1)),
     # and the RU tx_bw/rx_bw. pointA/SSB are left fixed (SSB stays low-edge valid).
+    # Widen the carrier keeping the SSB CENTERED. Moving the carrier center up (old approach)
+    # de-centers the fixed SSB at wide BW and breaks UE sync. Instead keep carrier_tx/UE-C/SSB
+    # fixed at 4049.76 MHz and move pointA DOWN so SSB stays at the carrier center:
+    # pointA_ARFCN = SSB_ARFCN(669984) - (BW_PRB/2)*24 (SSB center is BW_PRB/2 RBs above pointA;
+    # 1 RB = 24 x 15kHz ARFCN). Gives 669696 at 24 PRB (= baseline). Use EVEN BW_PRB.
     local riv=$(( 275 * (BW_PRB - 1) ))
-    perl -0pi -e 's/(\b(?:dl|ul)_carrierBandwidth\s*=\s*)\d+/${1}'"${BW_PRB}"'/g; s/(initial(?:DL|UL)BWPlocationAndBandwidth\s*=\s*)\d+/${1}'"${riv}"'/g;' "${DU_CONF}"
+    local pointa_arfcn=$(( 669984 - (BW_PRB / 2) * 24 ))
+    # center the PRACH near the carrier center (else msg1_FrequencyStart=0 pins it to the
+    # band edge, far from the SSB, and the gNB sees prach_I0=0.0 dB -> RAR fails at wide BW)
+    local prach_start=$(( BW_PRB / 2 - 6 ))
+    perl -0pi -e 's/(\b(?:dl|ul)_carrierBandwidth\s*=\s*)\d+/${1}'"${BW_PRB}"'/g; s/(initial(?:DL|UL)BWPlocationAndBandwidth\s*=\s*)\d+/${1}'"${riv}"'/g; s/(dl_absoluteFrequencyPointA\s*=\s*)\d+/${1}'"${pointa_arfcn}"'/g; s/(prach_msg1_FrequencyStart\s*=\s*)\d+/${1}'"${prach_start}"'/g;' "${DU_CONF}"
     perl -0pi -e 's/(tx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"${BW_PRB}"'${2}/g; s/(rx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"${BW_PRB}"'${2}/g;' "${RU_CONF}"
-    export RUN_UE_RB="${BW_PRB}"   # UE cmdline N_RB (-r) must match the carrier
-    # pointA is fixed, so the carrier CENTER moves with bandwidth: center = pointA + N_RB*12*SCS/2.
-    # pointA here = 4045.44 MHz (ARFCN 669696); SCS=30kHz -> 180kHz/PRB half-step. Update the RU
-    # carrier_tx/rx (kHz) and the UE -C (Hz) to the new center, else the UE can't find the SSB.
-    local center_hz=$(( 4045440000 + BW_PRB * 180000 )) center_khz=$(( (4045440000 + BW_PRB * 180000) / 1000 ))
-    perl -0pi -e 's/(carrier_tx\s*=\s*\[)\s*\d+\s*(\])/${1}'"${center_khz}"'${2}/g; s/(carrier_rx\s*=\s*\[)\s*\d+\s*(\])/${1}'"${center_khz}"'${2}/g;' "${RU_CONF}"
-    export RUN_UE_CARRIER="${center_hz}"
-    log "bandwidth patched to ${BW_PRB} PRB: carrierBandwidth + BWP RIV=${riv} + tx_bw/rx_bw + UE -r; carrier center -> ${center_hz} Hz (RU carrier_tx/rx + UE -C) — @30kHz: 51=20MHz 133=50MHz"
+    export RUN_UE_RB="${BW_PRB}"   # UE -r must match the carrier; UE -C stays default (SSB freq = carrier center now)
+    # UE --ssb = SSB lowest-subcarrier offset from pointA. SSB center is at BW_PRB/2 RBs (centered),
+    # lowest RB at BW_PRB/2 - 10; in subcarriers: (BW_PRB/2 - 10)*12. Gives 24 at 24 PRB (baseline).
+    export RUN_UE_SSB=$(( (BW_PRB / 2 - 10) * 12 ))
+    log "bandwidth -> ${BW_PRB} PRB (SSB-centered): pointA ARFCN -> ${pointa_arfcn}, BWP RIV=${riv}, tx/rx_bw, UE --ssb=${RUN_UE_SSB}; carrier_tx/UE-C fixed at 4049.76 MHz"
   fi
   if [[ "${CHANMOD}" != "1" ]]; then
-    export VRTSIM_RU_EXTRA_ARGS="" VRTSIM_UE_EXTRA_ARGS=""
+    export VRTSIM_RU_EXTRA_ARGS="" VRTSIM_UE_EXTRA_ARGS="" VRTSIM_UE_BASE_ARGS=""
     return 0
   fi
   # Convert UE speed (km/h) -> max Doppler (Hz) -> forgetfact. The model does not
@@ -203,12 +213,12 @@ EOF
   # (client_num_rx_antennas .defintval=1) and models DL for only 1 of the UE's NB_ANT
   # RX antennas -> UE 4-antenna DL combine gets garbage -> synch fails. Pass it explicitly.
   export VRTSIM_RU_EXTRA_ARGS="--vrtsim.chanmod 1 --vrtsim.timescale ${VRTSIM_TIMESCALE} --vrtsim.client-num-rx-antennas ${UE_NB_ANT_RX}"
-  export VRTSIM_UE_EXTRA_ARGS="--vrtsim.chanmod 1"
-  # Target UL RX SNR: per-slot AGC lives in the UE (client = UL TX path). Pass to the UE only,
-  # so the DL (RU server_tx) stays clean and initial sync is unaffected.
-  if [[ -n "${CHAN_RX_SNR_DB}" ]]; then
-    export VRTSIM_UE_EXTRA_ARGS="${VRTSIM_UE_EXTRA_ARGS} --vrtsim.rx-target-snr-db ${CHAN_RX_SNR_DB}"
-  fi
+  # Base UE chanmod args. The per-slot UL RX-SNR AGC target lives in the UE (client =
+  # UL TX path); it is appended PER TRIAL by run_trial so RX_SNRS can sweep it (DL /
+  # RU server_tx stays clean so initial sync is unaffected). VRTSIM_UE_EXTRA_ARGS is
+  # the default (single-value / off) launch line; run_trial overrides it each trial.
+  export VRTSIM_UE_BASE_ARGS="--vrtsim.chanmod 1 --vrtsim.timescale ${VRTSIM_TIMESCALE}"
+  export VRTSIM_UE_EXTRA_ARGS="${VRTSIM_UE_BASE_ARGS}"
   export UE_NB_ANT_TX="${nbrx}" UE_NB_ANT_RX="${nbtx}"
   log "chanmod ON: type=${CHAN_TYPE} ds_tdl=${CHAN_DS_TDL}us noise=${CHAN_NOISE_DB}dB ploss=${CHAN_PLOSS_DB}dB rx_snr=${CHAN_RX_SNR_DB:-off}dB forgetfact=${CHAN_FORGETFACT} timescale=${VRTSIM_TIMESCALE} ant=${NB_ANT}"
   log "chanmod NOTE: realtime is fragile — if UE will not connect, lower VRTSIM_TIMESCALE; this path needs validation."
@@ -408,15 +418,15 @@ run_iperf_one() {
 
 write_csv_header() {
   if [[ ! -f "${CSV}" ]]; then
-    echo 'timestamp,iq_width,comp_method,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,ul_jitter_ms,ul_loss_pct,fh_late_total,fh_lead_mean,fh_lead_min,ul_sym_present_pct,trial_dir,notes' >"${CSV}"
+    echo 'timestamp,iq_width,comp_method,target_snr_db,status,ue_ip,ue_count,channel_model,carrier_hz,tx_bw_prb,rx_bw_prb,dl_rb,ul_rb,numerology,nb_tx,nb_rx,snr_samples,snr_db_avg,snr_db_min,snr_db_max,fh_samples,fh_rx_mbps_avg,fh_tx_mbps_avg,fh_total_mbps_avg,fh_total_mbps_max,iperf_ul_mbps,iperf_dl_mbps,ul_jitter_ms,ul_loss_pct,fh_late_total,fh_lead_mean,fh_lead_min,ul_sym_present_pct,trial_dir,notes' >"${CSV}"
   fi
 }
 
 append_metrics() {
-  local width="$1" comp="$2" status="$3" ue_ip="$4" trial_dir="$5" notes="$6"
-  python3 - "$width" "$comp" "$status" "$ue_ip" "$trial_dir" "$notes" "$FH_DROP_FIRST" <<'PY' >>"${CSV}"
+  local width="$1" comp="$2" snr="$3" status="$4" ue_ip="$5" trial_dir="$6" notes="$7"
+  python3 - "$width" "$comp" "$snr" "$status" "$ue_ip" "$trial_dir" "$notes" "$FH_DROP_FIRST" <<'PY' >>"${CSV}"
 import csv, json, os, re, statistics, sys, datetime
-width, comp, status, ue_ip, trial_dir, notes, drop_first = sys.argv[1:8]
+width, comp, snr, status, ue_ip, trial_dir, notes, drop_first = sys.argv[1:9]
 drop_first = int(drop_first)
 
 
@@ -603,6 +613,7 @@ row = {
     "timestamp": datetime.datetime.now().isoformat(timespec="seconds"),
     "iq_width": width,
     "comp_method": comp,
+    "target_snr_db": snr,
     "status": status,
     "ue_ip": ue_ip,
     "ue_count": ue_count,
@@ -682,6 +693,7 @@ def ensure(row, key, value):
 
 def enrich(row):
     row = dict(row)
+    ensure(row, "target_snr_db", "")  # absent in pre-RX_SNRS CSVs
     trial_dir = row.get("trial_dir", "")
     run_dir = os.path.dirname(trial_dir)
     ru_conf = read_text(os.path.join(run_dir, "ru_test.conf.orig"))
@@ -734,10 +746,10 @@ except FileNotFoundError:
 with open(report_path, "w") as out:
     out.write("# IQ Width Sweep Report\n\n")
     out.write(f"Source CSV: `{csv_path}`\n\n")
-    out.write("| IQ width | compMeth | status | UE # | channel | carrier Hz | BW tx/rx PRB | RB dl/ul | mu | ant tx/rx | RX SNR avg/min/max dB | FH avg Mbps | FH max Mbps | UL iperf Mbps | DL iperf Mbps | samples |\n")
-    out.write("|---:|---:|---|---:|---|---:|---|---|---:|---|---|---:|---:|---:|---:|---:|\n")
+    out.write("| IQ width | compMeth | RX SNR tgt dB | status | UE # | channel | carrier Hz | BW tx/rx PRB | RB dl/ul | mu | ant tx/rx | RX SNR avg/min/max dB | FH avg Mbps | FH max Mbps | UL iperf Mbps | DL iperf Mbps | samples |\n")
+    out.write("|---:|---:|---:|---|---:|---|---:|---|---|---:|---|---|---:|---:|---:|---:|---:|\n")
     for r in rows:
-        out.write("| {iq_width} | {comp_method} | {status} | {ue_count} | {channel_model} | {carrier_hz} | {tx_bw_prb}/{rx_bw_prb} | {dl_rb}/{ul_rb} | {numerology} | {nb_tx}/{nb_rx} | {snr_triplet} | {fh_total_mbps_avg} | {fh_total_mbps_max} | {iperf_ul_mbps} | {iperf_dl_mbps} | {fh_samples} |\n".format(**r))
+        out.write("| {iq_width} | {comp_method} | {target_snr_db} | {status} | {ue_count} | {channel_model} | {carrier_hz} | {tx_bw_prb}/{rx_bw_prb} | {dl_rb}/{ul_rb} | {numerology} | {nb_tx}/{nb_rx} | {snr_triplet} | {fh_total_mbps_avg} | {fh_total_mbps_max} | {iperf_ul_mbps} | {iperf_dl_mbps} | {fh_samples} |\n".format(**r))
     out.write("\n## Radio Context\n\n")
     if rows:
         r = rows[0]
@@ -760,7 +772,7 @@ with open(report_path, "w") as out:
             out.write(f"    - vrtsim timescale: `{os.environ.get('VRTSIM_TIMESCALE','1.0')}`\n")
         # RX SNR actually measured at the gNB (UL ULSCH traces), per trial:
         snr_line = ", ".join(
-            f"iq{r2.get('iq_width','?')}={r2.get('snr_db_avg','n/a')}dB(min {r2.get('snr_db_min','?')}/max {r2.get('snr_db_max','?')})"
+            f"iq{r2.get('iq_width','?')}" + (f"@tgt{r2.get('target_snr_db')}dB" if r2.get('target_snr_db') else "") + f"={r2.get('snr_db_avg','n/a')}dB(min {r2.get('snr_db_min','?')}/max {r2.get('snr_db_max','?')})"
             for r2 in rows)
         out.write(f"- Measured RX SNR (UL, gNB): {snr_line}\n")
     out.write("\n## Notes\n\n")
@@ -773,16 +785,29 @@ PY
 
 run_trial() {
   local width="$1"
+  local snr="${2:-}"
   local comp status="ok" notes="" ue_ip=""
   comp="$(comp_for_width "${width}")"
   local trial_dir="${OUT_DIR}/iq${width}"
+  # Sweeping RX SNR -> per-(width,snr) dir so trials never overwrite each other's logs.
+  [[ -n "${snr}" ]] && trial_dir="${OUT_DIR}/iq${width}_rxsnr${snr}"
   mkdir -p "${trial_dir}"
 
-  log "=== IQ width ${width}, compMeth ${comp} ==="
+  # Per-trial UL RX-SNR AGC target (sweepable via RX_SNRS), appended to the chanmod
+  # base from build_chanmod. Only meaningful with CHANMOD=1 (else AGC never runs).
+  if [[ "${CHANMOD}" == "1" ]]; then
+    if [[ -n "${snr}" ]]; then
+      export VRTSIM_UE_EXTRA_ARGS="${VRTSIM_UE_BASE_ARGS} --vrtsim.rx-target-snr-db ${snr}"
+    else
+      export VRTSIM_UE_EXTRA_ARGS="${VRTSIM_UE_BASE_ARGS}"
+    fi
+  fi
+
+  log "=== IQ width ${width}, compMeth ${comp}${snr:+, target RX SNR ${snr} dB} ==="
 
   if (( DRY_RUN )); then
     patch_conf "${width}" "${comp}"
-    append_metrics "${width}" "${comp}" "dry-run" "" "${trial_dir}" "not launched"
+    append_metrics "${width}" "${comp}" "${snr}" "dry-run" "" "${trial_dir}" "not launched"
     write_report
     return 0
   fi
@@ -816,6 +841,8 @@ run_trial() {
       notes="UE tunnel IP not detected"
     else
       sleep "${SETTLE_SECONDS}"
+      # RTT over the radio link (UE_IP -> 10.0.0.1) — latency metric
+      ping -c 12 -i 0.2 -W 1 -I "${ue_ip}" 10.0.0.1 > "${trial_dir}/ping.txt" 2>&1 || true
       case "${IPERF_DIRECTION}" in
         ul)
           run_iperf_one ul "${ue_ip}" "${trial_dir}/iperf_ul.json" "${trial_dir}/iperf_ul.log" || notes="UL iperf failed"
@@ -839,7 +866,7 @@ run_trial() {
     fi
   fi
 
-  append_metrics "${width}" "${comp}" "${status}" "${ue_ip}" "${trial_dir}" "${notes}"
+  append_metrics "${width}" "${comp}" "${snr}" "${status}" "${ue_ip}" "${trial_dir}" "${notes}"
   write_report
   stop_stack
   sleep "${BETWEEN_TRIAL_SECONDS}"
@@ -852,14 +879,27 @@ main() {
   log "output: ${OUT_DIR}"
   log "widths: ${WIDTHS}"
   log "channel: chanmod=${CHANMOD} type=${CHAN_TYPE} ds_tdl=${CHAN_DS_TDL}us noise=${CHAN_NOISE_DB}dB forgetfact=${CHAN_FORGETFACT} ant=${NB_ANT}x${NB_ANT}"
+  [[ -n "${RX_SNRS}" ]] && log "RX SNR sweep: targets=[${RX_SNRS}] dB (one trial per width; needs CHANMOD=1)"
   log "iperf: direction=${IPERF_DIRECTION} server=${IPERF_SERVER}:${IPERF_PORT} seconds=${IPERF_SECONDS} parallel=${IPERF_PARALLEL}"
 
-  local width
+  # RX-SNR sweep dimension. Default (RX_SNRS empty) -> single value from CHAN_RX_SNR_DB
+  # (which itself may be empty = off), so behaviour is unchanged unless RX_SNRS is set.
+  local snr_list="${RX_SNRS:-${CHAN_RX_SNR_DB}}"
+  [[ -z "${snr_list}" ]] && snr_list="__none__"   # sentinel: one trial, no SNR override
+  if [[ -n "${RX_SNRS}" && "${CHANMOD}" != "1" ]]; then
+    log "WARN: RX_SNRS is set but CHANMOD!=1 — the RX-SNR AGC only injects under chanmod, so these targets will NOT be applied. Set CHANMOD=1 (CHAN_TYPE=AWGN recommended)."
+  fi
+
+  local width snr
   for width in ${WIDTHS}; do
     case "${width}" in
-      8|9|10|12|16) run_trial "${width}" ;;
+      8|9|10|12|16) ;;
       *) echo "Unsupported width in sweep: ${width}" >&2; exit 2 ;;
     esac
+    for snr in ${snr_list}; do
+      [[ "${snr}" == "__none__" ]] && snr=""
+      run_trial "${width}" "${snr}"
+    done
   done
 
   restore_configs

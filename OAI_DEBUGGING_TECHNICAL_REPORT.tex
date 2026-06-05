@@ -1,0 +1,950 @@
+% OAI O-RAN 7.2 Lab -- End-to-End Debugging Technical Report
+% Compile with pdfLaTeX on Overleaf.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amssymb,amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{underscore}   % after hyperref: _ prints literally in text/\texttt
+
+% ---- colour macros ----
+\definecolor{closedcol}{rgb}{0.05,0.45,0.05}
+\definecolor{opencol}{rgb}{0.70,0.15,0.10}
+\definecolor{codebg}{gray}{0.96}
+
+\newcommand{\closed}{\textcolor{closedcol}{\textbf{[Closed]}}}
+\newcommand{\openissue}{\textcolor{opencol}{\textbf{[Open]}}}
+\newcommand{\yes}{\textcolor{closedcol}{\ensuremath{\checkmark}}}
+\newcommand{\warn}{\textcolor{orange!85!black}{\textbf{(!)}}}
+\newcommand{\no}{\textcolor{opencol}{\ensuremath{\times}}}
+\newcommand{\us}{\ensuremath{\mu}\text{s}}
+
+% ---- listing style ----
+\lstdefinestyle{plain}{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  frame=single,
+  framesep=4pt,
+  xleftmargin=2pt,
+  showstringspaces=false,
+}
+\lstset{style=plain}
+
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.18}
+
+\title{\textbf{OAI O-RAN 7.2 Lab\\[4pt]End-to-End Debugging Technical Report}}
+\author{Jesse}
+\date{2026-05-26 $\rightarrow$ 2026-06-01}
+
+\begin{document}
+\maketitle
+
+\paragraph{Summary.}
+An OAI 5G NR O-RAN 7.2 split cell (DU + O-RU + UE, single host, DPDK/SR-IOV fronthaul,
+vrtsim air channel) was brought up from zero through thirteen tracked issues. Experiments
+swept IQ compression width (iq8--16), MIMO count (1$\times$1--4$\times$4), receive SNR,
+DL fronthaul latency (T2a\_min), and UE mobility. Key results: the 10~MHz cell delivers
+$\sim$5~Mbps UL at 0\% loss; FH load scales linearly with compression but UL is flat
+(fronthaul over-provisioned 14$\times$); SNR degrades UL monotonically (20~dB
+$\rightarrow$ 5~Mbps, 8~dB $\rightarrow$ 2.1~Mbps); tightening the DL FH window shows a
+sharp knee at 400--450~\us; all attempts beyond 10~MHz fail.
+
+\tableofcontents
+\bigskip\hrule\bigskip
+
+%% ==========================================================================
+\section{Overview and Architecture}
+%% ==========================================================================
+
+\subsection{System diagram}
+
+\begin{figure}[h]
+\centering
+\scalebox{0.80}{
+\begin{minipage}{1.25\linewidth}
+\begin{lstlisting}[breaklines=false,basicstyle=\ttfamily\footnotesize,frame=single,
+                   caption={},belowskip=0pt,aboveskip=0pt]
+  +-------------+  O-RAN 7.2 FH (eCPRI/xran     +---------+  vrtsim "air"  +------------------+
+  | DU          |  DPDK SR-IOV, 2 VLANs)         | O-RU    |  shared mem.   | UE               |
+  | nr-softmodem|<==============================>| nr-oru  |<=============> | nr-uesoftmodem   |
+  | (PHY/MAC)   |  DL:vf2/vf3   UL:vf0/vf1      | (RUPHY) |  chanmod/IQ    | oaitun_ue1       |
+  +------+------+  10G VEB, PF link DOWN          +---------+                +--------+---------+
+         |                                                                            |
+         | NGAP/GTP-U                                              iperf3 -c 10.0.0.1 -u -b 20M
+         v                                                                            |
+  +------------------+                                                                |
+  | OAI 5GC          |  docker-compose: AMF/SMF/NRF/UPF                              |
+  | UPF  10.0.0.1    |<--------------------------------------------------------------+
+  | iperf3 -s        |  GTP-U decap          TRUE UL = server received rate (~5 Mbps)
+  | (UPF netns)      |
+  +------------------+
+\end{lstlisting}
+\end{minipage}
+}
+\caption{System architecture with iperf3 endpoints. UL goodput = server-side received rate.}
+\label{fig:arch}
+\end{figure}
+
+\subsection{Two interfaces --- keep them separate}
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}l l X@{}}
+\toprule
+\textbf{Interface} & \textbf{Medium} & \textbf{Bug class found here} \\
+\midrule
+Fronthaul (FH) DU$\leftrightarrow$RU & O-RAN 7.2 eCPRI/xran, DPDK SR-IOV &
+  C-plane timing, slot-ID mismatch, U-plane buffer reset, compression header \\
+Air RU$\leftrightarrow$UE & vrtsim shared memory &
+  chanmod realtime, SNR, mobility \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Cell and hardware}
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Cell:} 24~PRB, $\mu$1 (30~kHz SCS) $\Rightarrow$ \textbf{10~MHz}, fs = 15.36~Msps,
+  band n77, fc = 4049.76~MHz.
+\item \textbf{NIC:} Intel X710 (i40e), PF \texttt{eno1np0} (\texttt{0000:05:00.0}), PF link
+  DOWN --- loopback via embedded switch (VEB), no cable.
+  VF map: vf0/vf1 = RU egress (UL U-plane, VLAN 3/4);
+  vf2/vf3 = DU egress (DL U-plane, VLAN 3/4).
+\item \textbf{Build trap:} the FH code (\texttt{oaioran.c}, \texttt{oaioran_ru.c},
+  \texttt{oai_bfp_compression.c}, \texttt{oran-config.c}) compiles into a
+  runtime-dlopen'd shared library \texttt{liboran_fhlib_5g.so} --- \emph{not} into the
+  \texttt{nr-softmodem} or \texttt{nr-oru} executables. Rebuilding the executables does not
+  pick up FH changes; \texttt{ninja oran_fhlib_5g} is required. Several ``fix had no effect''
+  episodes traced back to this.
+\end{itemize}
+
+%% ==========================================================================
+\section{Issues}
+%% ==========================================================================
+
+Each subsection is labelled \closed\ (fixed, in the working build) or
+\openissue\ (known limitation, no fix yet merged).
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ AVX512 unavailable --- BFP compression reimplemented without AVX512}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+The initial BFP (Block Floating Point) compression implementation relied on AVX-512 SIMD
+intrinsics. The lab host does not expose AVX-512 (either unsupported or not enabled in the
+BIOS/kernel). This caused the BFP code path to fail --- either as an illegal-instruction
+fault at runtime or as silent miscompilation where the intrinsics were never executed ---
+making BFP compression non-functional from the outset.
+
+\textbf{Root cause.}
+The compression library (\texttt{oai_bfp_compression.c}) was written with AVX-512 as the
+assumed baseline SIMD tier. On hardware that only exposes up to AVX2 (or on builds where the
+compiler does not emit AVX-512), the data path either trapped or produced garbage IQ output.
+
+\textbf{Fix (commit \texttt{40eaf33c9c}).}
+BFP compression was reimplemented using portable scalar code, keeping the same
+O-RAN-compliant bit-packing format. The scalar path is correct and produces identical output
+to the AVX-512 path. This is the baseline that all subsequent compression work (the
+compression-header fix in Section~2.6) was built on.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ DU/RU binary mismatch --- invalid U-plane slot IDs}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+\begin{lstlisting}
+[ORU] Drop invalid U-plane packet: ... slot=38 ... symbol=37 num_prb=0
+Packets early: 1  /  Packets malformed: 1
+\end{lstlisting}
+For $\mu$1, valid slot\,=\,0--19 and symbol\,=\,0--13.
+\texttt{slot=38} and \texttt{symbol=37} are impossible from a correct DU.
+
+\textbf{Root cause.}
+\texttt{run_ru.sh} launched the new \texttt{build/nr-oru}, while \texttt{run_du.sh} still
+launched the old \texttt{cmake_targets/ran_build/build/nr-softmodem}.
+\texttt{xran_slotid_convert()} in \texttt{phy-f-1.0/.../xran_main.c} is a no-op
+(\texttt{return slot_id;}) in the current source, but the old DU binary was linked against a
+build where the $\mu$1 shift (\texttt{slot\_id <{}< 1}) was active. The DU encoded wire slot
+$19 << 1 = 38$; the RU applied the no-op and read 38 --- out of bounds --- and dropped the
+packet. Confirmed not to be a stray ARP/IPv6 frame: xran's \texttt{handle_ecpri_ethertype()}
+only dispatches EtherType \texttt{0xAEFE}, so non-eCPRI frames are discarded before the
+packet processor; the offending packet passed the full eCPRI header parse.
+
+\textbf{Fix.}
+Point both launchers at \texttt{openairinterface5g/build/} and rebuild DU + RU from the same
+\texttt{phy-f-1.0} source tree so \texttt{xran_slotid_convert} is the no-op in both
+binaries. Drop counter (\texttt{up_malformed}/\texttt{up_dropped}, bounds-checked at
+\texttt{oaioran_ru.c:640}) went to 0.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ PRACH MSG1 not forwarded --- MSG2 (RAR) never sent}
+\label{sec:prach}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+After DL synchronization, the UE repeatedly transmitted PRACH (MSG1) but received no RAR
+(MSG2). The gNB never logged a PRACH detection event; the DU never scheduled a RAR because
+it never received the complete preamble IQ from the RU. The UE exhausted its preamble
+transmission counter and re-entered idle.
+
+Three independent bugs on the FH C-plane path caused the RU to silently discard every PRACH
+IQ packet before forwarding it to the DU.
+
+\paragraph{(A) \texttt{T1a\_cp\_ul} timing too tight.}
+The DU must send a C-plane section-type-3 packet to the RU \emph{before} each PRACH slot; the
+RU caches it in \texttt{prach_config_by_frame_slot[...]} and consults it in
+\texttt{xran_oru_send_prach()}. With \texttt{T1a_max_cp_ul = 429}\,\us:
+\begin{lstlisting}
+delay_cp_ul = 500 - 429 = 71 us  ->  C-plane fired at symbol 2 of the PRACH slot
+\end{lstlisting}
+The RU's read thread processed symbols 0 and 1 with an empty cache --- those PRACH symbols
+were silently dropped. PRACH format~B4 (\texttt{prach_config_index=159}) needs \textbf{12
+consecutive symbols}; losing symbols 0--1 breaks preamble detection entirely.
+
+\textbf{Fix:} \texttt{T1a_cp_ul = (285, 535)} in \texttt{du_test.conf}. With
+\texttt{T1a\_max > 500}\,\us, xran's \texttt{xran_timing_create_cbs()} wraps one slot
+earlier (\texttt{offset_num_slots_cp_ul = 1}) and fires the C-plane at symbol~0 of slot~18,
+populating the cache $\sim$450\,\us\ before slot~19 begins. Config-only, no recompile.
+
+\paragraph{(B) C-plane packet built but never transmitted.}
+\texttt{tx_cp_ul_cb()} (\texttt{xran_main.c:1401}) checked:
+\begin{lstlisting}[language=C]
+if (ret == XRAN_STATUS_SUCCESS)   // XRAN_STATUS_SUCCESS == 0
+    send_cpmsg(...);
+\end{lstlisting}
+but \texttt{generate_cpmsg_prach()} returns a \textbf{positive byte count} on success, so
+\texttt{send_cpmsg()} was never reached --- the packet was assembled and the mbuf allocated,
+then discarded without being placed in the TX ring.
+
+\textbf{Fix:} \texttt{if (ret >= 0)}.
+
+\paragraph{(C) Slot index overflow in the RU PRACH cache write.}
+\texttt{process_ru_cplane()} (\texttt{oaioran_ru.c:700}) derived the numerology from
+\texttt{frameStructure.uScs}, which for format~B4 encodes the \textbf{PRACH SCS (= 14)}, not
+$\mu$:
+\begin{lstlisting}[language=C]
+int mu   = hdr->frameStructure.uScs;      // 14, not 1
+int slot = slotId + subframeId*(1<<mu);   // 1 + 9*16384 = 147457  -> out of bounds
+\end{lstlisting}
+The cache entry was never written, so \texttt{xran_oru_send_prach()} returned early on every
+PRACH symbol.
+
+\textbf{Fix:} \texttt{int mu = fh\_cfg->frame\_conf.nNumerology;}
+
+Also fixed during this period: \texttt{callbacks_per_slot} in \texttt{oran-init.c} was
+\texttt{2}, raised to \textbf{14} (one RU consumer wakeup per OFDM symbol).
+
+After (A) + (B) + (C): PRACH IQ forwarded intact, the gNB detected the preamble,
+scheduled a RAR, and MSG2 was transmitted to the UE. Rebuild scope:
+\texttt{libxran.so} for (A,B); \texttt{liboran_fhlib_5g.so} for (C).
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ MSG3 contention resolution failure --- UL U-plane buffer reset wiped early symbols}
+\label{sec:ulbuf}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+After the PRACH fixes the UE received MSG2 (RAR) with a TC-RNTI and a UL grant for MSG3.
+The UE transmitted MSG3 (RRC Setup Request) on the scheduled UL PUSCH resource, but the gNB
+could not decode it. MSG4 (Contention Resolution) was never sent, the MAC contention
+resolution timer expired, and the UE re-initiated RA from MSG1 in a continuous loop.
+Even after RA appeared to eventually complete (NAS attach), UL goodput was effectively zero:
+UE MAC counter \texttt{UL harq: \textasciitilde719/718} = 99.9\% HARQ retransmissions at
+$\sim$34~dB SNR. MSG3 was simply the first symptom of the same underlying defect affecting
+all UL PUSCH transmissions.
+
+\textbf{Root cause.}
+The RU streams UL U-plane symbol-by-symbol in near real time. An uncommitted line in
+\texttt{oai_xran_fh_rx_callback} (\texttt{radio/fhi_72/oaioran.c}) reset the \emph{next}
+slot's ring-buffer entry, \texttt{(tti + 1) \% 20}, from the mid-slot callback
+(\texttt{rx\_sym == 7}). But the next slot's first U-plane packets \emph{arrive before that
+callback fires}: by the time the mid-slot fires and clears \texttt{(tti+1)}'s
+\texttt{nSecDesc}, symbols 0--8 had already landed in that buffer and were wiped. Only the
+last $\sim$5 symbols of each full UL slot survived into the DU's PUSCH decoder.
+
+\textbf{Evidence.} A temporary \texttt{[UL SYMPROBE]} in \texttt{xran_fh_rx_read_slot}
+logged \texttt{present=5/14 mask=00000000011111} (syms 9--13 only) --- deterministic, not
+random. A \texttt{[FH DROP]} counter confirmed xran was not dropping
+(\texttt{Rx\_pkt\_dupl=0}, \texttt{Rx\_on\_time} large) --- the symbols reached the buffer;
+the reset erased them. The LDPC decoder corroborated: UL TBs decoded only on HARQ round~3
+(rv3), with \texttt{ulsch\_llr[0..3]=0,0,0,0} (the missing early-symbol LLRs defaulting to
+zero); REs accumulated across three HARQ rounds before a codeword decoded, which for MSG3
+(a short one-shot TB) meant the contention resolution window always expired first.
+
+\textbf{Fix (commit \texttt{37b55fa535}).}
+\begin{lstlisting}[language=C]
+// oaioran.c  oai_xran_fh_rx_callback
+- reset_buffer((tti + 1) % 20);
++ reset_buffer((tti + XRAN_N_FE_BUF_LEN/2) % 20);   // tti+10, half a ring away
+\end{lstlisting}
+\texttt{tti+10} is cleared long before its slot is filled or read, and never overlaps the
+active fill/read window.
+
+\textbf{Result:} \texttt{present=14/14 mask=11111111111111}, all HARQ round~0,
+\texttt{UL harq: 845/0} --- \textbf{zero retransmissions}. MSG3 decoded on the first
+transmission; contention resolution completed; NAS registration (Auth / SecurityMode /
+Registration Accept) now completed end-to-end.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ iq16 path unstable --- PUSCH compression-header byte offset}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+With UL flowing, iq9 (BFP-compressed) was stable; iq16 (uncompressed,
+\texttt{compMeth = NONE}) showed wildly varying UL SNR: $-8.5$ to $+39$~dB vs.\ a stable
+63~dB for iq9.
+
+\textbf{Root cause.}
+\texttt{xran_oru_send_pusch()} (\texttt{oaioran_ru.c}) unconditionally wrote a 2-byte
+\texttt{data_section_compression_hdr} before the IQ payload, even for \texttt{compMeth =
+NONE}. The DU's xran reader (\texttt{xran_common.c:322}) computes
+$\texttt{iq\_offset} = \texttt{ecpri} + \texttt{radio\_app} + \texttt{data\_section}$ for
+NONE (no compression header), so it read those 2 zero bytes as the \textbf{first IQ sample},
+shifting every UL sample by one position. For iq9/BFP, \texttt{xran_common.c} adds
+\texttt{compr\_size} to \texttt{iq\_offset}, so the alignment was always correct --- which is
+why only iq16 failed.
+
+\textbf{Fix (commit \texttt{47dcaef44b}).}
+Gate the header write: \texttt{use\_comp\_hdr = (compMeth != NONE)}.
+Also fixed: a BFP mbuf under-allocation (2 bytes short, truncating the tail of each BFP
+packet). iq16's truncation had been masked in iq9 runs by
+\texttt{ul\_prbblacklist = "0,1,2,3,20,21,22,23"}, which hides the edge PRBs where the
+truncation fell.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ PDU session reject --- SMF deadlock in CN}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+UE attached at RRC but received \texttt{FGS\_PDU\_SESSION\_ESTABLISHMENT\_REJ}; no IP
+address, no \texttt{oaitun\_ue1}.
+
+\textbf{Root cause.}
+The SMF had deadlocked $\sim$31~h earlier (last log 2026-05-29 03:40; likely blocked on a PFCP
+recv from the UPF). The container reported healthy but the application was frozen, emitting
+no NRF heartbeats. Consequently the NRF had no SMF registered
+(\texttt{/nnrf-nfm/v1/nf-instances?nf-type=SMF} $\rightarrow$ \texttt{item:[]}). The AMF
+(\texttt{enable\_smf\_selection: yes}) could not locate an SMF and logged \emph{``No SMF is
+available for this PDU session''}.
+
+\textbf{Fix.}
+Full CN restart --- a bare SMF restart fixed NRF discovery but the first session still
+rejected with ``empty QFI list'' from stale UPF/N4 state; the full down/up cleared it:
+\begin{lstlisting}[language=bash]
+cd ~/oran_lab/oai-cn5g && docker-compose down && docker-compose up -d   # v1 syntax
+\end{lstlisting}
+DNN ``oai'', sst=1, 5QI~9, PAA pool 10.0.0.0/24 were all correct. After restart: UE gets
+10.0.0.x, TUN up, traffic flows.
+
+\textbf{End-to-end milestone (2026-05-30):} iq9 UL 1.325~Mbps / DL 6.082~Mbps;
+iq16 UL 1.325~Mbps / DL 7.130~Mbps.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ UL grant pinned at 5 RBs --- \texttt{min\_grant\_prb} default}
+%% --------------------------------------------------------------------------
+
+\textbf{Symptom.}
+After all radio/CN fixes, UL throughput was stuck at $\sim$1.3~Mbps.
+The UE MAC showed grants of only 5~RBs regardless of how much data was queued.
+
+\textbf{Root cause.}
+\texttt{min\_grant\_prb} in MACRLCs defaults to \textbf{5}
+(\texttt{MACRLC\_nr\_paramdef.h}, \texttt{.defintval=5}). The UE is perpetually scheduled
+\texttt{sched\_inactive}: its transmit buffer drains every grant, so the scheduler's estimate
+\texttt{B = estimated\_ul\_buffer - sched\_ul\_bytes == 0}
+(\texttt{gNB\_scheduler\_ulsch.c:2113}), and inactive UEs always receive exactly
+\texttt{min\_grant\_prb} RBs (lines $\sim$2190/2260). A ``greedy-RB'' hack in the
+\texttt{B>0} branch was tried but had no effect --- that branch is never entered when the
+buffer drains on every TTI.
+
+\textbf{Fix.}
+\texttt{min\_grant\_prb = 16;} in \texttt{du\_test.conf} MACRLCs.
+UL grant jumped 5 $\rightarrow$ 17~RBs.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ DL-heavy TDD starved UL --- pattern changed to D\,M\,U\,U\,U}
+%% --------------------------------------------------------------------------
+
+The default TDD pattern \texttt{D D D M U} gives only 1 UL slot per 5-slot period.
+Changed to \textbf{\texttt{D M U U U}} in both \texttt{du\_test.conf}
+(\texttt{nrofDownlinkSlots 3$\rightarrow$1}, \texttt{nrofUplinkSlots 1$\rightarrow$3}) and
+\texttt{ru\_test.conf} (\texttt{num\_dl\_slots 3$\rightarrow$1},
+\texttt{num\_ul\_slots 1$\rightarrow$3}). The UE follows via SIB1.
+UL TBs per run went $\sim$2337 $\rightarrow$ 26\,000+.
+
+Combined with the \texttt{min\_grant\_prb} fix: UL $\approx$\textbf{5.05~Mbps @ 0\% loss,
+17~RBs, 0 retx} (from 1.3~Mbps, a $\sim$3.9$\times$ improvement).
+
+\textbf{Note --- TCP iperf breaks with this pattern.} DL is so starved that TCP ACKs and
+the iperf control socket reset (``Connection reset by peer''). UL \emph{must} be measured
+with UDP (see Section~\ref{sec:iperf}).
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\closed}{[Closed]}\ iperf measurement traps --- how server-side UL is measured}
+\label{sec:iperf}
+%% --------------------------------------------------------------------------
+
+Getting a trustworthy UL figure required resolving five measurement pitfalls, each of which
+produced an incorrect reading at some point.
+
+\textbf{Pitfall 1 --- wrong server address inflates by $\sim$7000$\times$.}
+Pointing the iperf3 client at the host IP (\texttt{192.168.70.129}) instead of the UPF
+gateway (\texttt{10.0.0.1}) causes iperf to loop back on the host without crossing the
+radio, reporting a bogus $\sim$36~Gbps. Traffic to \texttt{10.0.0.1} is forced over the radio
+because the host routes \texttt{10.0.0.0/24} via \texttt{oaitun\_ue1}. The server must bind
+\texttt{10.0.0.1}.
+
+\textbf{Pitfall 2 --- UPF container has no iperf3.}
+The host's iperf3 is run inside the UPF network namespace (giving it ownership of
+\texttt{tun0}/\texttt{10.0.0.1}) while keeping the host mount namespace
+(\texttt{/tmp} stays on the host):
+\begin{lstlisting}[language=bash]
+UPF_PID=$(docker inspect -f '{{.State.Pid}}' oai-upf)
+sudo nsenter -t $UPF_PID -n pkill -x iperf3           # clear stale servers
+sudo nsenter -t $UPF_PID -n iperf3 -s -B 10.0.0.1 \
+    -1 --logfile /tmp/iperf_srv.log -D                 # one-shot, daemonized
+iperf3 -c 10.0.0.1 -u -b 20M -t 20                   # UE side (client)
+\end{lstlisting}
+
+\textbf{Pitfall 3 --- UDP client rate is not the radio rate.}
+The client's \texttt{bits\_per\_second} over UDP is the rate \emph{pushed into the TUN}; the
+UE drops excess at the TUN when the radio can't keep up, so the client over-reports (source
+of the fake ``20~Mbps'' readings). The true UL rate is the \textbf{server's received rate},
+read from \texttt{/tmp/iperf\_srv.log}. The sweep uses \texttt{IPERF\_UDP=1
+IPERF\_UDP\_RATE=20M} and parses the server log.
+
+\textbf{Pitfall 4 --- \texttt{end.sum} is empty under saturation.}
+When the UL saturates the radio, the iperf3 control socket dies before the JSON summary is
+written. \texttt{--get-server-output}/\texttt{end.sum.bits\_per\_second} come back blank.
+The harness instead averages the per-interval rows for throughput, jitter, and loss.
+
+\textbf{Pitfall 5 --- two concurrent sweeps collide.}
+The harness runs a single iperf3 server (\texttt{ensure\_iperf\_server} kills duplicates and
+starts one). A second sweep returns ``server is busy'' $\rightarrow$ 0~Mbps. The two sweeps
+also share \texttt{ru\_test.conf}/\texttt{du\_test.conf} and vrtsim cores. Never run two
+sweeps at the same time.
+
+\textbf{Cross-check.} The UE MAC counter \texttt{UL harq: X/Y} $\times$ TBS
+($\sim$1.5~KB/TB at 17~RB / 64-QAM) independently gives $\sim$5~Mbps, confirming the iperf
+server number.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\openissue}{[Open]}\ 10 MHz bandwidth ceiling --- three blocking layers}
+%% --------------------------------------------------------------------------
+
+The cell is 24~PRB (10~MHz) by construction. Every path to wider bandwidth is blocked:
+
+\textbf{Layer 1 --- PRB blacklist (config, effect is immediate).}
+\texttt{ul\_prbblacklist = "0,1,2,3,20,21,22,23"} hides 8 of 24~PRBs, leaving only
+16~usable, and MCS is already maxed at 28. So the UL ceiling is
+$16\,\text{PRB} \times \text{MCS28} \times \text{UL-TDD duty cycle} \approx 5\,\text{Mbps}$
+within 10~MHz. The blacklist exists because the edge PRBs were where the BFP truncation and
+band-edge artefacts landed (Section~2.5).
+
+\textbf{Layer 2 --- FH-tuned PHY breaks SIB1 decode outside 24~PRB.}
+The SSB/pointA frequency placement was fixed in config
+(\texttt{dl\_absoluteFrequencyPointA = 669984 - (BW\_PRB/2)*24},
+UE \texttt{--ssb = (BW\_PRB/2 - 10)*12}), and at 106~PRB the UE now syncs and finds the
+CORESET0/SIB1 grant. But SIB1 PDSCH still NACKs
+(\texttt{Got NACK on NR-BCCH-DL-SCH-Message (SIB1)}): the lab's FH-tuned PHY commit
+\texttt{3b10464162} (amplitude/timing tuned for the 7.2 freq-domain split where the \emph{RU}
+does the IFFT) produces confident-but-wrong LLRs outside 24~PRB
+(\texttt{l\_max=127} saturated, 8/8 LDPC iterations, wrong codeword). The rfsim path
+exhibits the same failure (Section~2.13).
+
+\textbf{Layer 3 --- realtime constraints.}
+At 106~PRB realtime vrtsim+xran, the gNB runs N\_RB~106 and SIB1 decodes clean, but
+\texttt{prach\_I0 = 0.0~dB} at the gNB --- RA never completes. The scalar chanmod FIR
+(\texttt{vrtsim.c:887}) also cannot sustain 4--8$\times$ the 10-MHz sample rate without
+overrunning its core (Section~2.12). At 273~PRB (100~MHz) the DU crashes with a realtime
+timeout.
+
+\textbf{FH headroom is not the limit.} Direct testpmd VF$\leftrightarrow$VF measurement:
+$\sim$3.18~Gbps per VF, $\sim$6.36~Gbps aggregate, zero loss. OAI loads the FH to
+$\sim$440~Mbps ($<$15\%). FH lead-time is flat at $\sim$12 symbols ($\sim$428\,\us\ margin)
+across iq8--iq16 (94--180~Mbps). The FH pipe is not the bottleneck; the per-slot timing
+window is.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\openissue}{[Open]}\ $\sim$50\% attach flakiness --- per-bringup timing transient}
+%% --------------------------------------------------------------------------
+
+Across $\sim$250 logged runs, roughly half end in \texttt{ue-timeout}: either the UE never
+achieves initial DL sync ($\sim$23\% of runs, 0--200 \texttt{synch Failed} in UE log before
+giving up) or it syncs but PRACH fails (\texttt{prach\_I0 = 0.0~dB} at the gNB, $\sim$27\%
+of runs). Once the UE locks it stays locked for the whole session --- the failure is a
+startup/timing-alignment transient, not a steady-state instability. The experiment harness
+mitigates with a retry-to-attach loop; all results in Section~4 are from successful
+bringups only.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\openissue}{[Open]}\ Scalar chanmod FIR limits 4$\times$4 and wide-BW realtime}
+%% --------------------------------------------------------------------------
+
+The channel-modelling convolution \texttt{perform\_channel\_modelling()} in
+\texttt{radio/vrtsim/vrtsim.c:887} is a scalar, un-vectorised complex FIR loop (comment:
+\texttt{// TODO: Use AVX2 for this}). Cost scales as $N_\text{tx} \times N_\text{samp} \times
+N_\text{taps}$ per actor thread per slot. At 1$\times$1 TDL-D it is borderline on one core;
+at 4$\times$4 the server-side DL chanmod runs 16 convolutions/slot and consistently overruns
+(``Packets not processed by the application layer (application layer too slow)''), causing the
+gNB to read zero-filled UL buffers ($\Rightarrow$ \texttt{prach\_I0=0.0~dB} $\Rightarrow$ no
+RA). A core-pin fix was applied (pin chanmod actors to isolated cores 24+/28+ instead of
+\texttt{init\_actor(...,-1)}, which let them float onto busy cores 0--3) --- this unblocked
+1$\times$1 mobility and 2$\times$2, but 4$\times$4 / wide-BW still overrun. The fix required
+is to vectorise the FIR with AVX2/AVX512.
+
+%% --------------------------------------------------------------------------
+\subsection{\texorpdfstring{\openissue}{[Open]}\ rfsim DL broken on FH-tuned tree}
+%% --------------------------------------------------------------------------
+
+To isolate PHY bugs from FH bugs, the rfsim path (no FH, monolithic gNB) was tested.
+rfsim DL fails: SIB1 LDPC produces confident-but-wrong LLRs (same signature as the wide-BW
+failure in Section~2.10). vrtsim is immune because the split RU does the IFFT on a separate
+path; rfsim uses the monolithic gNB IFFT, which is affected by a suspected
+\texttt{txdataF} fftshift/flat-buffer refactor (\texttt{044ca835d6}) that interacts badly
+with the FH-tuned amplitude/timing commit \texttt{3b10464162}.
+
+A clean OAI tree (\texttt{git worktree} at release \texttt{2026.w22}, commit
+\texttt{26efcc4989}, where rfsim DL is a hard CI gate) was checked out at
+\texttt{oai\_rfsim\_clean/} for high-BW / non-realtime work, keeping the FH-tuned tree
+for the FH measurements. The two halves are independent: rfsim needs no xran; FH latency
+can be injected synthetically from a NIC-measured load$\rightarrow$latency LUT.
+
+%% ==========================================================================
+\section{Toolchain}
+%% ==========================================================================
+
+The lab is orchestrated by a set of shell scripts in \texttt{oran\_lab/}.
+All scripts must be run as the regular user (not \texttt{sudo}) --- they invoke \texttt{sudo}
+internally for DPDK and network configuration. Running as root breaks path resolution because
+\texttt{HOME=/root} redirects away from the user's environment.
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{prepare\_network.sh} --- DPDK and VF setup (run once at boot)}
+%% --------------------------------------------------------------------------
+
+Prepares the SR-IOV and hugepage environment before any OAI process is started:
+\begin{itemize}[leftmargin=1.4em]
+\item Creates 5 VFs on PF \texttt{eno1np0}, sets their MAC addresses and VLAN tags
+  (vf0: MAC \texttt{...66}, VLAN 3; vf1: \texttt{...67}, VLAN 4; etc.).
+\item Binds each VF to the \texttt{uio\_pci\_generic} driver so DPDK can take ownership.
+\item Allocates 8192 hugepages (2~MB each, 16~GB total) and mounts
+  \texttt{/dev/hugepages}.
+\item Configures the embedded switch so vf0/vf1 (RU egress) can reach vf2/vf3 (DU egress)
+  across the VEB --- the PF link is intentionally left DOWN; no physical cable is needed.
+\end{itemize}
+
+Between runs, stale DPDK hugepage mappings must be cleared manually:
+\texttt{sudo rm -f /dev/hugepages/*map\_*} (DPDK does not release them on process kill).
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{run\_du.sh} --- launch the DU (nr-softmodem)}
+%% --------------------------------------------------------------------------
+
+Launches \texttt{openairinterface5g/build/nr-softmodem} with:
+\begin{itemize}[leftmargin=1.4em]
+\item \texttt{--sa} (standalone 5G), \texttt{--rfsim} disabled, fronthaul via
+  \texttt{liboran\_fhlib\_5g.so} (loaded at runtime).
+\item Config file \texttt{du\_test.conf} (MACRLCs, cell parameters, FH timing windows
+  \texttt{T1a\_cp\_ul}, \texttt{T2a\_up}, TDD pattern, \texttt{min\_grant\_prb}, etc.).
+\item CPU affinity to isolated cores 4--9, 17, 18 (away from the OS and from the RU/UE
+  process sets).
+\item Log file \texttt{logs/run\_du/<timestamp>/du.log}; a symlink
+  \texttt{logs/run\_du/latest} is updated each launch.
+\end{itemize}
+The DU process owns the NGAP connection to the AMF and the GTP-U tunnel to the UPF.
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{run\_ru.sh} --- launch the O-RU (nr-oru)}
+%% --------------------------------------------------------------------------
+
+Launches \texttt{openairinterface5g/build/nr-oru} with:
+\begin{itemize}[leftmargin=1.4em]
+\item Config file \texttt{ru\_test.conf} (FH timing windows \texttt{T2a\_up},
+  \texttt{callbacks\_per\_slot=14}, TDD slot counts, IQ compression parameters).
+\item CPU affinity to isolated cores 10--15.
+\item Extra vrtsim arguments forwarded via \texttt{VRTSIM\_RU\_EXTRA\_ARGS} (used by the
+  sweep to pass \texttt{--vrtsim.chanmod}, \texttt{--vrtsim.timescale}, etc.).
+\item Log file \texttt{logs/run\_ru/<timestamp>/ru.log}.
+\end{itemize}
+The RU process owns both DPDK VFs (vf0, vf1 for UL; vf2, vf3 for DL), loads
+\texttt{liboran\_fhlib\_5g.so}, and manages the vrtsim shared-memory air interface.
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{run\_ue.sh} --- launch the UE (nr-uesoftmodem)}
+%% --------------------------------------------------------------------------
+
+Launches \texttt{openairinterface5g/build/nr-uesoftmodem} with:
+\begin{itemize}[leftmargin=1.4em]
+\item SIM credentials (IMSI, Ki, OPc) matching the OAI 5GC subscriber database.
+\item \texttt{--band 77 --numerology 1 --ssb <offset>} matching the cell configuration.
+\item CPU affinity to isolated cores 20--23.
+\item Extra vrtsim arguments forwarded via \texttt{VRTSIM\_UE\_EXTRA\_ARGS} (channel model,
+  RX-SNR target, etc.).
+\item A \texttt{poll\_attach} function that waits for \texttt{oaitun\_ue1} to come up (UE
+  has an IP) or times out. The sweep retries this up to \texttt{MAX\_ATTACH\_TRIES} times to
+  absorb the $\sim$50\% per-bringup flakiness (Section~2.11).
+\end{itemize}
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{kill\_all.sh} --- tear down all OAI processes}
+%% --------------------------------------------------------------------------
+
+Sends \texttt{SIGTERM} (then \texttt{SIGKILL} after a timeout) to
+\texttt{nr-softmodem}, \texttt{nr-oru}, and \texttt{nr-uesoftmodem}. Does \emph{not}
+automatically clear hugepages --- that must be done manually between runs.
+
+%% --------------------------------------------------------------------------
+\subsection{\texttt{sweep\_iq\_width.sh} --- main experiment orchestration ($\sim$40\,KB)}
+%% --------------------------------------------------------------------------
+
+The sweep script is the primary experiment harness. Its outer loop iterates over a parameter
+matrix (iq\_width, compression method, antenna count, channel model, UE speed, FH timing
+knobs, bandwidth, RX-SNR target) and for each point:
+
+\begin{enumerate}[leftmargin=1.8em]
+\item \textbf{Back up configs.} Copies \texttt{du\_test.conf}, \texttt{ru\_test.conf}, and
+  \texttt{ue\_test.conf} to a per-trial log directory and patches them in-place
+  (\texttt{min\_grant\_prb}, TDD slots, IQ width, compression header, \texttt{T2a\_up},
+  \texttt{T1a\_cp\_ul}, antenna counts, etc.).
+
+\item \textbf{Build channel model (optional).} If \texttt{CHANMOD=1}, the
+  \texttt{build\_chanmod()} function generates \texttt{channelmod\_sweep.conf}, inserts an
+  \texttt{@include} directive into \texttt{ru\_test.conf} and \texttt{ue\_test.conf}, and
+  sets the vrtsim extra-arg variables (\texttt{VRTSIM\_RU\_EXTRA\_ARGS},
+  \texttt{VRTSIM\_UE\_EXTRA\_ARGS}).
+
+\item \textbf{Launch DU $\rightarrow$ RU $\rightarrow$ UE} (in that order, with brief waits
+  between each). Calls \texttt{run\_du.sh}, \texttt{run\_ru.sh}, \texttt{run\_ue.sh} in
+  sub-shells.
+
+\item \textbf{Retry-to-attach loop.} Polls \texttt{ip addr show oaitun\_ue1} until the UE
+  has an IP or the attempt count exceeds \texttt{MAX\_ATTACH\_TRIES}. On failure, kills all
+  processes, clears hugepages, and retries the full launch from step 3.
+
+\item \textbf{Ensure iperf3 server.} \texttt{ensure\_iperf\_server()} checks whether an
+  iperf3 server is already running in the UPF netns; kills stale instances and starts a
+  fresh one with \texttt{nsenter}. Only one server may be running at a time.
+
+\item \textbf{Run iperf3 client} on the UE side for the configured duration
+  (\texttt{IPERF\_TIME}, default 20~s), UDP (\texttt{IPERF\_UDP=1}),
+  offered rate \texttt{IPERF\_UDP\_RATE=20M}.
+
+\item \textbf{Parse metrics} from \texttt{du.log}, \texttt{ru.log}, \texttt{ue.log}, and the
+  iperf server log: UL/DL Mbps, jitter, loss, FH rx/tx Mbps, RX SNR
+  (\texttt{ULSCH\_STATS}), FH lead-time (\texttt{fh\_lead\_mean}), DL late-drops
+  (\texttt{fh\_late\_total}), UL symbol completeness (\texttt{ul\_sym\_present\_pct}).
+
+\item \textbf{Append to \texttt{summary.csv}} and generate \texttt{report.md} for the
+  trial directory. The sweep never modifies these files once written.
+
+\item \textbf{Restore configs} from the backup copies, kill all processes, and clear
+  hugepages before the next iteration.
+\end{enumerate}
+
+Key environment variables controlling the sweep:
+\texttt{IQ\_WIDTHS}, \texttt{CHANMOD}, \texttt{CHAN\_TYPE}, \texttt{CHAN\_DS\_TDL},
+\texttt{CHAN\_FORGETFACT}, \texttt{NB\_ANT}, \texttt{UE\_COUNT},
+\texttt{UE\_SPEED\_KMH}, \texttt{CHAN\_RX\_SNR\_DB}, \texttt{T2A\_MIN\_UP},
+\texttt{BW\_PRB}, \texttt{VRTSIM\_TIMESCALE}, \texttt{IPERF\_UDP},
+\texttt{IPERF\_UDP\_RATE}, \texttt{IPERF\_MANAGE\_SERVER},
+\texttt{MAX\_ATTACH\_TRIES}.
+
+%% ==========================================================================
+\section{Experiments \& Results}
+%% ==========================================================================
+
+All figures are from \texttt{logs/iq\_width\_sweep/<timestamp>/summary.csv}.
+UL is the \textbf{server-side received rate} (iperf3 in the UPF netns as described in
+Section~\ref{sec:iperf}), not the client send rate.
+The cell is \textbf{24~PRB $\mu$1 = 10~MHz} throughout
+(\texttt{carrier\_hz = 4\,049\,760\,000}, band n77).
+Outcomes are reported as-is, including the flat and cliff-shaped ones.
+
+%% --------------------------------------------------------------------------
+\subsection{Result 0: 10 MHz link works end-to-end \texorpdfstring{\yes}{[OK]}}
+%% --------------------------------------------------------------------------
+
+All UL figures use \texttt{IPERF\_UDP=1 IPERF\_UDP\_RATE=20M}; the $\sim$5~Mbps figure is
+the radio-limited received rate, well below the 20~Mbit/s offered.
+Representative clean 1$\times$1 ideal-channel runs:
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}l c c c c c c@{}}
+\toprule
+\textbf{Run} & \textbf{iq} & \textbf{SNR dB} & \textbf{FH tot Mbps}
+  & \textbf{UL Mbps} & \textbf{jitter ms} & \textbf{UL loss} \\
+\midrule
+\texttt{rxsnr\_track\_20dB} & 9  & 20.0 & 150.8 & \textbf{4.995} & 1.83 & 0.00\% \\
+\texttt{20260531\_120552}   & 9  & 42.7 & ---   & \textbf{5.004} & ---  & ---    \\
+\texttt{20260531\_124630}   & 16 & 45.7 & 254.0 & \textbf{5.006} & ---  & ---    \\
+\bottomrule
+\end{tabular}
+\caption*{\small 1$\times$1, 24 PRB / 10 MHz, ideal channel. UL sym present = 100\% on all clean runs.}
+\end{table}
+
+UE syncs, attaches, gets an IP (10.0.0.x), passes NAS, and carries $\sim$5~Mbps UL at 0\%
+loss, $\sim$1.8~ms jitter, 100\% UL symbol completeness. Both iq9 (BFP) and iq16
+(uncompressed) work.
+
+\textbf{Attach flakiness caveat.} $\approx$50\% of bringups time out (Section~2.11). All
+results below are from successful bringups only; the harness retries to get clean data points.
+
+%% --------------------------------------------------------------------------
+\subsection{Compression (iq\_width) $\rightarrow$ FH load: linear; UL flat
+  \texorpdfstring{\yes/\warn}{[OK/!]}}
+%% --------------------------------------------------------------------------
+
+Single sweep \texttt{20260531\_140241} (1$\times$1, ideal channel, all four widths
+back-to-back from the same bringup):
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}c c c c c c c@{}}
+\toprule
+\textbf{iq} & \textbf{FH rx Mbps} & \textbf{FH total Mbps} & \textbf{SNR dB}
+  & \textbf{UL Mbps} & \textbf{FH lead sym} & \textbf{UL loss} \\
+\midrule
+8  & 94.0  & 135.2 & 38.55 & 4.999 & 12.01 & 0.00\% \\
+9  & 104.9 & 150.8 & 38.55 & 4.999 & 12.00 & 0.00\% \\
+12 & 137.8 & 197.4 & 38.55 & 5.001 & 12.00 & 0.00\% \\
+16 & 180.4 & 256.8 & 38.55 & 5.001 & 12.00 & 0.00\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+FH load scales linearly with iq\_width as $(3 \cdot \text{iq} + 1) \cdot \text{num\_prb}$
+predicts (iq8$\rightarrow$iq16 nearly doubles the byte rate). \yes\ Clean expected result.
+
+UL throughput, SNR, and FH latency margin are all \textbf{flat}. \warn\ Honest null result:
+at 10~MHz / 1$\times$1 the FH is so over-provisioned (180~Mbps into a 6.4~Gbps loopback)
+that compression buys nothing on UL. The ``heavy compression helps under FH pressure''
+tradeoff only appears when the FH pipe is artificially constrained (Section~4.5) or the load
+is driven up with more antennas --- and those hit other walls first (Sections~4.3, 2.12).
+
+%% --------------------------------------------------------------------------
+\subsection{Antennas (MIMO) $\rightarrow$ FH scales $\times$N; wide-BW cliffs hard}
+%% --------------------------------------------------------------------------
+
+FH load scales with antenna count as expected (iq9, 10~MHz):
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}c c l@{}}
+\toprule
+\textbf{Config} & \textbf{FH rx Mbps} & \textbf{Note} \\
+\midrule
+1$\times$1 & 104.9 & baseline \\
+2$\times$2 & 209.9 & 2$\times$ (\texttt{20260530\_221945}: UL 4.991, SNR 42.5) \\
+4$\times$4 & 419.8 & 4$\times$ (\texttt{20260530\_211642}) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{2$\times$2 at 10~MHz works} with chanmod ON (mobility):
+\texttt{20260531\_144956} $\rightarrow$ UL 4.978, SNR 46.3;
+\texttt{20260531\_145140} $\rightarrow$ UL 4.984, SNR 43.7.
+Per-run variance is visible: same config at \texttt{20260531\_142504} gave UL 2.67, SNR 32.8
+--- bringup-SNR noise, not a config difference.
+
+\textbf{4$\times$4 at 10~MHz can attach} (\texttt{exp\_chanmod\_4x4\_10mhz\_3kmh}: status ok,
+UL 4.998, FH 710/1016~Mbps) but is fragile --- earlier symmetric-4$\times$4 attempts gave
+UL~=~0 because the server-side DL chanmod (16 convolutions/slot) overran its core even with
+the core-pin fix (Section~2.12).
+
+\textbf{Wide-BW is a hard cliff} (see Section~2.10 for root causes):
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}l c c X@{}}
+\toprule
+\textbf{Target} & \textbf{FH Mbps} & \textbf{Status} & \textbf{Root cause} \\
+\midrule
+40 MHz (106 PRB)    & 1085 & ue-timeout      & SIB1 NACK / \texttt{prach\_I0=0} \\
+20 MHz 4$\times$4   & 637  & ue-timeout      & chanmod overrun \\
+20 MHz 4$\times$4   & 2107 & ue-timeout      & chanmod overrun \\
+50 MHz 4$\times$4   & 1645 & ue-timeout      & sample-rate wall \\
+25 MHz 4$\times$4   & ---  & ru-timeout (crash) & DU realtime \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The FH carried up to 2.1~Gbps before the endpoints fell over --- bandwidth is not the limit.
+
+%% --------------------------------------------------------------------------
+\subsection{RX SNR $\rightarrow$ UL throughput: clean monotonic tradeoff
+  \texorpdfstring{\yes}{[OK]}}
+%% --------------------------------------------------------------------------
+
+Using \texttt{--vrtsim.rx-target-snr-db} (time-domain AGC applied on UL only):
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}c c c c l@{}}
+\toprule
+\textbf{Target SNR dB} & \textbf{Measured SNR dB} & \textbf{UL Mbps} & \textbf{jitter ms} & \textbf{Run} \\
+\midrule
+20 & 20.00 & \textbf{4.995} & 1.83 & \texttt{rxsnr\_track\_20dB\_160100} \\
+8  & 8.00  & \textbf{2.148} & 4.92 & \texttt{rxsnr\_track\_8dB\_160232}  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The AGC hits its target exactly and UL tracks SNR monotonically while jitter rises.
+The same shape appears incidentally across chanmod runs:
+SNR $\approx$10~dB $\rightarrow$ UL $\approx$1.0--1.7~Mbps;
+SNR $\approx$22~dB $\rightarrow$ UL $\approx$2.2~Mbps;
+SNR $\geq$38~dB $\rightarrow$ UL $\approx$5.0~Mbps.
+This is the cleanest physical tradeoff in the dataset.
+
+%% --------------------------------------------------------------------------
+\subsection{FH latency $\rightarrow$ UL: injectable on DL path only; sharp knee then cliff
+  \texorpdfstring{\warn}{[!]}}
+%% --------------------------------------------------------------------------
+
+The loopback FH is far too fast to create natural latency (Section~2.10), so it was injected.
+
+\textbf{(a) \texttt{T2a\_min\_up} --- the one graceful knob.}
+This parameter gates the DL U-plane acceptance window at the O-RU
+(\texttt{process\_ru\_uplane} = O-RU receiving DL from the DU). Raising it forces late DL
+packets to be dropped; the clean metric is \texttt{up\_late} (RU log ``Packets late: N'').
+Sweep: 2$\times$2, 3~km/h, iq9, retry-to-attach:
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}c c c X@{}}
+\toprule
+\textbf{T2a\_min\_up (\us)} & \textbf{up\_late} & \textbf{UL Mbps} & \textbf{Note} \\
+\midrule
+200 & 0             & $\sim$4.4 & baseline window \\
+300 & 0             & $\sim$5.0 & clean \\
+350 & $\sim$8       & $\sim$4.7 & first drops (\texttt{20260601\_004209}: late=8, UL 4.994) \\
+400 & $\sim$120     & $\sim$4.0 & knee \\
+450 & $\sim$130\,000 & $\sim$2.5 & \textbf{cliff} (retx $\approx$26\%) \\
+$\geq$600 & thousands & 0 (no-attach) & DL link breaks (\texttt{20260601\_005323}: late=4000) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Sharp knee at 400$\rightarrow$450~\us\ (drops jump $\sim$1000$\times$). \textbf{This is the
+downlink FH path}: UL collapses indirectly because the UE loses DL/DCI. Confirmed by capping
+DU egress (\texttt{20260531\_141132}): FH lead-time went 12.0 $\rightarrow$ $-$8.29~sym (DL
+arriving after deadline), late=561\,759, UL=0.
+
+\textbf{(b) \texttt{Ta3} / \texttt{Ta4} (true UL FH windows) are no-ops on this loopback.}
+Swept Ta4\_max \{440,420,410,405\} and Ta3 \{470,900,1100\}:
+\texttt{ul\_sym\_present\_pct} stayed 100\% and UL stayed $\sim$5~Mbps everywhere.
+Honest negative result --- they would bite on a real FH link.
+
+\textbf{(c) VF rate-cap is a cliff, not a dial.}
+Capping RU/DU egress below the IQ load $\Rightarrow$ mbuf exhaustion $\Rightarrow$ crash
+(small pool) or $\sim$74~ms queued latency $\Rightarrow$ no-attach (32$\times$ pool). No
+stable graceful regime exists for a CBR fronthaul with a rate limiter.
+
+%% --------------------------------------------------------------------------
+\subsection{Mobility $\rightarrow$ UL: barely moves (forgetfact proxy, not real Doppler)
+  \texorpdfstring{\warn}{[!]}}
+%% --------------------------------------------------------------------------
+
+\texttt{max\_Doppler} is marked ``CURRENTLY NOT IMPLEMENTED'' in \texttt{sim.h:100}. Mobility
+is approximated by the \texttt{forgetfact} parameter: 0 = static, 1 = fully decorrelates
+each slot. At 3~km/h forgetfact~=~0.0133; at 60~km/h forgetfact~=~0.266.
+
+2$\times$2 TDL-D runs at 3~km/h give UL 4.96--4.98~Mbps when SNR is high
+(\texttt{20260531\_144956}/\texttt{145140}). At 60~km/h the result was similarly UL
+$\approx$4.99~Mbps. At 120~km/h (forgetfact~=~0.53) bringup fails --- not from UL
+degradation but from \textbf{DL initial-sync failure}: the SSB decorrelates faster than
+the UE can acquire. There is no significant mobility $\rightarrow$ UL throughput effect at
+high SNR on this testbed. UL channel estimation is in-slot (PUSCH DMRS), so there is no
+classical CSI-aging mechanism on the UL data path.
+
+%% --------------------------------------------------------------------------
+\subsection{Summary}
+%% --------------------------------------------------------------------------
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}l l X l@{}}
+\toprule
+\textbf{Axis} & \textbf{Knob} & \textbf{Effect on UL @ 10 MHz} & \textbf{Verdict} \\
+\midrule
+Link end-to-end & --- & 5~Mbps, 0\% loss, 100\% UL syms & \yes\ ($\sim$50\% flaky attach) \\
+Compression & iq\_width 8$\rightarrow$16 & FH load 94$\rightarrow$180~Mbps; UL flat & \warn\ FH over-provisioned \\
+Antennas & 1$\times$1$\rightarrow$4$\times$4 & FH $\times$N; UL $\sim$5; 4$\times$4 fragile & \yes\ FH scales; \warn\ chanmod overrun \\
+Bandwidth & $>$24~PRB & --- & \no\ cliff $\rightarrow$ 10~MHz ceiling \\
+RX SNR & AGC 20$\rightarrow$8~dB & 5.0 $\rightarrow$ 2.1~Mbps & \yes\ clean monotonic \\
+FH latency (DL) & T2a\_min 200$\rightarrow$450~\us & 5.0 $\rightarrow$ 2.5~Mbps, then cliff & \warn\ DL path; sharp knee \\
+FH latency (UL) & Ta3 / Ta4 & present 100\%; UL flat & \warn\ no-op on loopback \\
+VF cap & egress rate & crash or 74~ms queue & \no\ cliff, not a dial \\
+Mobility & forgetfact proxy & flat at high SNR & \warn\ weak; not real Doppler \\
+\bottomrule
+\end{tabularx}
+\caption*{\small The two axes that genuinely bend UL goodput are \textbf{RX SNR} (clean
+monotonic) and \textbf{injected DL FH latency via T2a\_min} (sharp knee). All others
+correctly change FH load or channel state but do not move UL goodput at 10~MHz because the
+binding constraint is the $\sim$5~Mbps grant cap, not the FH pipe nor the channel.}
+\end{table}
+
+\appendix
+
+%% ==========================================================================
+\section{Git Commits}
+%% ==========================================================================
+
+\textbf{Branch \texttt{compression-plus-timing-fix} on \texttt{openairinterface5g}:}
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+\textbf{Commit} & \textbf{Description} \\
+\midrule
+\texttt{cd509aad8a} & Initial single-machine O-RU recopy working \\
+\texttt{057d167ee}/\texttt{dae942c61} & BFP compression; no-comp path works; extra bytes in compression header \\
+\texttt{3b10464162} & \textbf{PHY fix} (ULSCH amplitude/timing) --- the FH-tuned PHY that later breaks wide-BW and rfsim SIB1 \\
+\texttt{40eaf33c9c} & \textbf{BFP without AVX512} --- scalar reimplementation (Section~2.1) \\
+\texttt{565e936c19} & Stability fix (spin-wait, \texttt{>{}>2} scale) \\
+\texttt{47dcaef44b} & \textbf{iq16 PUSCH offset} --- skip compression header for \texttt{compMeth=NONE} (Section~2.5) \\
+\texttt{37b55fa535} & \textbf{FH UL fix} (reset tti+10) + chanmod core-pin + R-bucket + pthread-setname (Section~2.4) \\
+\texttt{a559a1f755} & vrtsim time-domain RX-SNR AGC \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Branch \texttt{fh-latency-experiment} on \texttt{oran\_lab}:}
+\texttt{0e9b835} sync success $\rightarrow$
+\texttt{c10a7c0} UL throughput fix $\rightarrow$
+\texttt{6a6ad68} compression success $\rightarrow$
+\texttt{840e405} stability $\rightarrow$
+\texttt{55493cb} reliable UDP UL capture $\rightarrow$
+\texttt{fae7cc8} FH-latency harness $\rightarrow$
+\texttt{b10743c} RX-SNR AGC wiring.
+
+%% ==========================================================================
+\section{Key configuration parameters}
+%% ==========================================================================
+
+\begin{table}[h]\centering\small
+\begin{tabularx}{\linewidth}{@{}l l l X@{}}
+\toprule
+\textbf{Parameter} & \textbf{File} & \textbf{Value} & \textbf{Why / issue} \\
+\midrule
+\texttt{T1a\_cp\_ul}          & du\_test.conf    & \texttt{(285, 535)}          & PRACH C-plane timing (Sec.~2.3a) \\
+\texttt{callbacks\_per\_slot} & oran-init.c      & \texttt{14}                  & One RU wakeup per OFDM symbol (Sec.~2.3) \\
+Buffer reset offset           & oaioran.c        & \texttt{tti+10}              & MSG3/UL-buffer fix (Sec.~2.4) \\
+\texttt{min\_grant\_prb}      & du\_test.conf    & \texttt{16}                  & Break 5-RB grant cap (Sec.~2.7) \\
+TDD pattern                   & du/ru\_test.conf & \texttt{D M U U U}           & UL-heavy (Sec.~2.8) \\
+\texttt{ul\_prbblacklist}     & du\_test.conf    & \texttt{0,1,2,3,20,21,22,23} & Hide edge PRBs $\rightarrow$ 16 usable (Sec.~2.10) \\
+\texttt{tx\_amp\_backoff\_dB} & conf             & \texttt{12}                  & Correct for 7.2 split (RU does IFFT) \\
+\texttt{IPERF\_UDP\_RATE}     & sweep env        & \texttt{20M}                 & Offered load; true rate is server-side (Sec.~2.9) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}
