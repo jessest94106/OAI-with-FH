@@ -83,6 +83,10 @@ exec sudo -E chrt -f 70 taskset -c "${DU_CORES}" env \
   LD_LIBRARY_PATH="${LD_LIBRARY_PATH}" \
   ASAN_OPTIONS="${ASAN_OPTIONS}" \
   XRAN_SKIP_LINK_CHECK="${XRAN_SKIP_LINK_CHECK}" \
+  XRAN_TIMESCALE="${XRAN_TIMESCALE:-1.0}" \
+  XRAN_TIME_EPOCH="${XRAN_TIME_EPOCH:-0}" \
+  OAI_FH_MAX_QUEUE_NO_JUMP="${OAI_FH_MAX_QUEUE_NO_JUMP:-8}" \
+  OAI_FH_SPIN_CAP="${OAI_FH_SPIN_CAP:-2000}" \
   ./nr-softmodem \
     -O "${DU_CONF}" \
     --gNBs.[0].min_rxtxtime "${MIN_RXTXTIME:-6}" \
