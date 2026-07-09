@@ -33,8 +33,20 @@ trap cleanup EXIT
 
 # ---------------- preflight (from run_iq_2port.sh) ----------------
 log "preflight (N_UE=$N_UE BW=$BW TS=$TS)"
-sudo pkill -9 -f nr-softmodem 2>/dev/null; sudo pkill -9 -f nr-oru 2>/dev/null; sudo pkill -9 -f nr-uesoftmodem 2>/dev/null; sleep 2
+sudo pkill -9 -f nr-softmodem 2>/dev/null; sudo pkill -9 -f nr-oru 2>/dev/null; sudo pkill -9 -f nr-uesoftmodem 2>/dev/null
+sudo pkill -9 -f ul_saturate.py 2>/dev/null; sleep 3
 sudo find /dev/hugepages -type f -delete
+# BLOCK-3 PERMANENT FIX: a crashed/SIGKILL'd nr-oru leaves 8192 hugepage FILES behind that keep the
+# pages reserved -> the next run starves at Free=0 and the RU can't allocate. Deleting files above
+# only helps if nothing holds them; shrinking the pool to 0 forces the kernel to RECLAIM all
+# freeable huge pages regardless, then regrow. This self-heals every run from any prior leak.
+HPFILE=/sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages
+HPNOW=$(cat "$HPFILE" 2>/dev/null || echo 8192)
+echo 0 | sudo tee "$HPFILE" >/dev/null; sleep 1
+echo "${HP_TOTAL:-$HPNOW}" | sudo tee "$HPFILE" >/dev/null; sleep 1
+HPFREE=$(grep HugePages_Free /proc/meminfo | awk '{print $2}')
+log "hugepages reclaimed: Free=$HPFREE"
+[ "${HPFREE:-0}" -lt 4096 ] && log "WARN: only $HPFREE hugepages free after reset (leak may persist)"
 sudo find /dev/shm -maxdepth 1 -name 'vrtsim*' -delete
 sudo rm -f /tmp/vrtsim_connection
 rm -f /tmp/vrtsim_mu_steer_on
