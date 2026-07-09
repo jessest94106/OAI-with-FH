@@ -151,6 +151,7 @@ for i in $(seq 0 $((N_UE-1))); do
   log "launching UE$i ue_id=$i imsi=$IMSI netns=${NS:-<default>} cores=${UE_CORES_ARR[$i]}"
   UE_NETNS=$NS UE_CONF="$conf" UE_CORES="${UE_CORES_ARR[$i]}" RUN_UE_RB=$BW RUN_UE_SSB=$UE_SSB \
     VRTSIM_UE_EXTRA_ARGS="$VRTSIM_UE_BASE --vrtsim.ue_id $i" \
+    OAI_UE_FORCE_SCID="$((i % 2))" \
     setsid bash "$BASE/run_ue.sh" >"$OUT/ue$i.log" 2>&1 &
   for s in $(seq 1 $((PER_UE_WAIT/5))); do
     if grep -qaE 'TUN Interface .*successfully configured|PDU Session Establishment Accept' "$OUT/ue$i.log" 2>/dev/null; then
