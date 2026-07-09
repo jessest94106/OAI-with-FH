@@ -53,6 +53,10 @@ sed -i 's/phy_log_level    = "warn"/phy_log_level    = "info"/' "$BASE/ru_test.c
 sed -i 's/hw_log_level     = "warn"/hw_log_level     = "info"/' "$BASE/ru_test.conf"  # see vrtsim steering enable/activate
 # mMIMO gNB RX antennas (mMIMO × multi-UE): patch L1 nb_rx after the bak-restore clobbers it.
 [ -n "${NB_ANT_RX:-}" ] && sed -i "s/^\(\s*nb_rx\s*=\s*\)[0-9]\+;/\1${NB_ANT_RX};/" "$BASE/du_test.conf" "$BASE/ru_test.conf"
+# CRITICAL: the gNB's PUSCH RX antenna count = carrier_config.num_rx_ant = pusch_AntennaPorts
+# (config.c:679), NOT nb_rx. Without this the receiver runs nb_rx_ant=1 (rank-1) -> IRC degenerate,
+# MU separation impossible, regardless of nb_rx. Patch pusch_AntennaPorts = NB_ANT_RX too.
+[ -n "${NB_ANT_RX:-}" ] && sed -i "s/^\(\s*pusch_AntennaPorts\s*=\s*\)[0-9]\+/\1${NB_ANT_RX}/" "$BASE/du_test.conf"
 # 2-port fabric rewrite (one device per side)
 sed -i 's|dpdk_devices = ("0000:06:02.2", "0000:06:02.3")|dpdk_devices = ("0000:06:0a.0")|' "$BASE/du_test.conf"
 sed -i 's|ru_addr      = ("00:11:22:33:64:66", "00:11:22:33:64:67")|ru_addr      = ("00:11:22:33:64:66")|' "$BASE/du_test.conf"
