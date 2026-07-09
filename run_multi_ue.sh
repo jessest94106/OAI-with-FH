@@ -22,9 +22,9 @@ log(){ echo "[multiue $(date +%H:%M:%S)] $*"; }
 
 cleanup(){
   log "cleanup"
-  sudo pkill -9 -x nr-uesoftmodem 2>/dev/null
-  sudo pkill -9 -x nr-softmodem 2>/dev/null
-  sudo pkill -9 -x nr-oru 2>/dev/null
+  sudo pkill -9 -f nr-uesoftmodem 2>/dev/null
+  sudo pkill -9 -f nr-softmodem 2>/dev/null
+  sudo pkill -9 -f nr-oru 2>/dev/null  # -f (not -x): stray nr-oru escaping -x leaks ALL hugepages
   sudo pkill -9 iperf3 2>/dev/null
   sudo pkill -9 -f ul_saturate.py 2>/dev/null
   for i in $(seq 0 $((N_UE-1))); do sudo ip netns del ue$i 2>/dev/null; done
@@ -33,7 +33,7 @@ trap cleanup EXIT
 
 # ---------------- preflight (from run_iq_2port.sh) ----------------
 log "preflight (N_UE=$N_UE BW=$BW TS=$TS)"
-sudo pkill -9 -x nr-softmodem 2>/dev/null; sudo pkill -9 -x nr-oru 2>/dev/null; sudo pkill -9 -x nr-uesoftmodem 2>/dev/null; sleep 2
+sudo pkill -9 -f nr-softmodem 2>/dev/null; sudo pkill -9 -f nr-oru 2>/dev/null; sudo pkill -9 -f nr-uesoftmodem 2>/dev/null; sleep 2
 sudo find /dev/hugepages -type f -delete
 sudo find /dev/shm -maxdepth 1 -name 'vrtsim*' -delete
 sudo rm -f /tmp/vrtsim_connection
@@ -151,6 +151,19 @@ log "=== SEQUENTIAL ATTACH RESULT: $ok/$N_UE  ips=[${UE_IP[*]:-}] ==="
 # MU steering attach-first trigger: only NOW that all UEs are connected does the RU switch on the
 # per-UE steering signatures for the same-PRB MU-MIMO phase (steering during attach storms PRACH).
 if [ "$ok" = "$N_UE" ]; then touch /tmp/vrtsim_mu_steer_on; log "MU steering trigger SET (all $N_UE attached)"; fi
+
+# DIAG (MU_DATAPATH_DIAG=1): is the UL data path live? route + tun tx counters before/after a probe.
+if [ "${MU_DATAPATH_DIAG:-0}" = "1" ]; then
+  for i in $(seq 0 $((N_UE-1))); do
+    [ -z "${UE_IP[$i]:-}" ] && continue
+    tif=$(sudo ip netns exec ue$i sh -c 'ls /sys/class/net | grep -i oaitun | head -1')
+    log "UE$i tun=$tif route:"; sudo ip netns exec ue$i ip route 2>&1 | sed 's/^/      /'
+    b=$(sudo ip netns exec ue$i cat /sys/class/net/$tif/statistics/tx_packets 2>/dev/null)
+    sudo ip netns exec ue$i python3 "$BASE/ul_saturate.py" 10.0.0.1 3 20 >/dev/null 2>&1
+    a=$(sudo ip netns exec ue$i cat /sys/class/net/$tif/statistics/tx_packets 2>/dev/null)
+    log "UE$i $tif tx_packets: before=$b after=$a (delta=$((a-b)) => packets that reached the tun)"
+  done
+fi
 
 # ---------------- sustained simultaneous UL load (server-less) + gNB-side goodput sampler ----------------
 # iperf3 -u needs a TCP control channel to a reachable UPF; when that path is flaky the client dies
