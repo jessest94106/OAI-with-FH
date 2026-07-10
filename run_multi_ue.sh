@@ -22,6 +22,7 @@ log(){ echo "[multiue $(date +%H:%M:%S)] $*"; }
 
 cleanup(){
   log "cleanup"
+  cp "$MAC" "$OUT/nrMAC_stats_final.log" 2>/dev/null  # snapshot per-UE MAC rows before next run overwrites
   sudo pkill -9 -f nr-uesoftmodem 2>/dev/null
   sudo pkill -9 -f nr-softmodem 2>/dev/null
   sudo pkill -9 -f nr-oru 2>/dev/null  # -f (not -x): stray nr-oru escaping -x leaks ALL hugepages
