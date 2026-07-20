@@ -58,10 +58,18 @@ cp "$BASE/du_test.conf.preNoBFPprach_bak" "$BASE/du_test.conf"
 cp "$BASE/ru_test.conf.preNoBFPprach_bak" "$BASE/ru_test.conf"
 cp "$BASE/ue_test.conf.good_bak" "$BASE/ue_test.conf"
 rm -f "$BASE/channelmod_sweep.conf"
-sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1${BW}/" "$BASE/du_test.conf"
+# min_grant_prb: floor that keeps MU same-PRB overlap engaged (sub-full grants fall back to
+# disjoint FDM splits). 273 = proven full-band MU behavior; costs slot 19 (261 free after
+# PRACH). MIN_GRANT_PRB=24/261 for slot-19 experiments — see memory rev-200..205.
+sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1${MIN_GRANT_PRB:-273}/" "$BASE/du_test.conf"
+# SRS enablement (default off; SRS_WORK_SCOPE.md Phase 0+)
+sed -i "s/^\(\s*do_SRS\s*=\s*\)[0-9]/\1${DO_SRS:-0}/" "$BASE/du_test.conf"
+# OLLA link-adaptation band (defaults keep the conf's .15/.05); override for goodput experiments
+sed -i "s/^\(\s*ul_bler_target_upper\s*=\s*\).*/\1${UL_BLER_UPPER:-.15};/" "$BASE/du_test.conf"
+sed -i "s/^\(\s*ul_bler_target_lower\s*=\s*\).*/\1${UL_BLER_LOWER:-.05};/" "$BASE/du_test.conf"
 sed -i 's/\(preambleTransMax\s*=\s*\)7/\19/' "$BASE/du_test.conf"
 sed -i 's/\(prach_dtx_threshold\s*=\s*\)150/\1100/' "$BASE/du_test.conf"
-sed -i 's/Ta4       = (400, 440)/Ta4       = (100, 1760)/' "$BASE/du_test.conf"
+sed -i 's/Ta4       = (400, 440)/Ta4       = (0, 1760)/' "$BASE/du_test.conf"
 sed -i 's/phy_log_level    = "warn"/phy_log_level    = "info"/' "$BASE/ru_test.conf"
 sed -i 's/hw_log_level     = "warn"/hw_log_level     = "info"/' "$BASE/ru_test.conf"  # see vrtsim steering enable/activate
 # mMIMO gNB RX antennas (mMIMO × multi-UE): patch L1 nb_rx after the bak-restore clobbers it.
@@ -70,6 +78,16 @@ sed -i 's/hw_log_level     = "warn"/hw_log_level     = "info"/' "$BASE/ru_test.c
 # (config.c:679), NOT nb_rx. Without this the receiver runs nb_rx_ant=1 (rank-1) -> IRC degenerate,
 # MU separation impossible, regardless of nb_rx. Patch pusch_AntennaPorts = NB_ANT_RX too.
 [ -n "${NB_ANT_RX:-}" ] && sed -i "s/^\(\s*pusch_AntennaPorts\s*=\s*\)[0-9]\+/\1${NB_ANT_RX}/" "$BASE/du_test.conf"
+# NB_ANT_TX: gNB/RU DL antenna count (DL eAxC = nb_tx with the asymmetric-eAxC libxran)
+[ -n "${NB_ANT_TX:-}" ] && sed -i "s/^\(\s*nb_tx\s*=\s*\)[0-9]\+;/\1${NB_ANT_TX};/" "$BASE/du_test.conf" "$BASE/ru_test.conf"
+# PUSCH_TSNR10: gNB UL power-control target (SNRx10). Under vrtsim AGC-pinned SNR the gNB's
+# closed-loop PC fights the AGC when targets differ (TPC steps -> slow-EWMA lag -> SNR craters);
+# set >= test SNR (e.g. 400) so the UE pegs at PCMAX = conformance-style pinned UL power.
+[ -n "${PUSCH_TSNR10:-}" ] && sed -i "s/^\(\s*pusch_TargetSNRx10\s*=\s*\)[0-9]\+;/\1${PUSCH_TSNR10};/" "$BASE/du_test.conf"
+# SL_AHEAD: DL scheduling advance (slots). OAI_FH_UL_SLOT_DELAY shifts the WHOLE L1 clock back,
+# which delays DL generation in wall-clock and breaks UE sync; raising sl_ahead by the same amount
+# restores DL wall-clock timing while the UL still reads later (needed at 8 RX).
+[ -n "${SL_AHEAD:-}" ] && sed -i "s/^\(\s*sl_ahead\s*=\s*\)[0-9]\+/\1${SL_AHEAD}/" "$BASE/du_test.conf"
 # 2-port fabric rewrite (one device per side)
 sed -i 's|dpdk_devices = ("0000:06:02.2", "0000:06:02.3")|dpdk_devices = ("0000:06:0a.0")|' "$BASE/du_test.conf"
 sed -i 's|ru_addr      = ("00:11:22:33:64:66", "00:11:22:33:64:67")|ru_addr      = ("00:11:22:33:64:66")|' "$BASE/du_test.conf"
@@ -91,20 +109,22 @@ perl -0pi -e 's/(prach_msg1_start\s*=\s*)\d+/${1}'"$prach_start"'/g;' "$BASE/ru_
 # candidates -> more DCIs fit/slot. gNBs-section param -> anchor after pusch_AntennaPorts.
 # Element i = #candidates at AL(2^i): [L1,L2,L4,L8,L16].
 [ -n "${UESS_AGG:-}" ] && sed -i "/pusch_AntennaPorts/a\\    uess_agg_levels = [${UESS_AGG}];" "$BASE/du_test.conf"
+# UL_MCS_PIN: pin the UL MCS (ul_min_mcs=ul_max_mcs) for controlled A/B at fixed Qm
+[ -n "${UL_MCS_PIN:-}" ] && sed -i "/pusch_TargetSNRx10/a\\    ul_max_mcs           = ${UL_MCS_PIN};\n    ul_min_mcs           = ${UL_MCS_PIN};" "$BASE/du_test.conf"
 log "273 conf: riv=$riv pointA=$pointa prach_start=$prach_start UE_SSB=$UE_SSB uess_agg=[${UESS_AGG:-default}]"
 
 export XRAN_TIME_EPOCH=$(date +%s)
 export XRAN_TIMESCALE=$TS
 export VRTSIM_RU_EXTRA_ARGS="--vrtsim.timescale $TS --vrtsim.tx-sample-advance $ADV --vrtsim.num_ues ${RU_NUM_UES:-$N_UE}"
-VRTSIM_UE_BASE="--vrtsim.timescale $TS --vrtsim.tx-sample-advance $ADV"
+VRTSIM_UE_BASE="--vrtsim.timescale $TS --vrtsim.tx-sample-advance $ADV${VRTSIM_UE_XARGS:+ $VRTSIM_UE_XARGS}"
 # CHANMOD=1: no-chanmod multi-UE DL fails (UEs sync to SSB but NACK SIB1 -> never RACH).
 # chanmod gives the server per-UE channel descriptors so the DL/UL is properly modelled per UE.
 # Emit AWGN passthrough (ploss 0, low noise) + a ue_config listing N 1x1 UEs.
 if [ "${CHANMOD:-0}" = "1" ]; then
   CM="$BASE/channelmod_mue_active.conf"
   { echo "channelmod = {"; echo "  max_chan = 10;"; echo "  modellist = \"vrtsim_mue_list\";"; echo "  vrtsim_mue_list = (";
-    echo "    { model_name = \"server_tx_channel_model\"; type = \"AWGN\"; ploss_dB = 0; noise_power_dB = ${CHAN_NOISE:--30}; forgetfact = 0; offset = 0; ds_tdl = 0; },";
-    echo "    { model_name = \"client_tx_channel_model\"; type = \"AWGN\"; ploss_dB = 0; noise_power_dB = ${CHAN_NOISE:--30}; forgetfact = 0; offset = 0; ds_tdl = 0; }";
+    echo "    { model_name = \"server_tx_channel_model\"; type = \"${CHAN_TYPE:-AWGN}\"; ploss_dB = 0; noise_power_dB = ${CHAN_NOISE:--30}; forgetfact = 0; offset = 0; ds_tdl = $(awk "BEGIN{printf \"%.9g\", ${CHAN_DS_US:-0}*1e-6}"); },";
+    echo "    { model_name = \"client_tx_channel_model\"; type = \"${CHAN_TYPE:-AWGN}\"; ploss_dB = 0; noise_power_dB = ${CHAN_NOISE:--30}; forgetfact = 0; offset = 0; ds_tdl = $(awk "BEGIN{printf \"%.9g\", ${CHAN_DS_US:-0}*1e-6}"); }";
     echo "  );"; echo "};"; echo "vrtsim = { ue_config = (";
     for j in $(seq 1 $N_UE); do printf '    { antennas = "1x1"; }%s\n' "$([ $j -lt $N_UE ] && echo ,)"; done
     echo "); };"; } > "$CM"
@@ -139,7 +159,7 @@ log "DU up (FH flowing)"
 # N UE UL streams; an un-synced UE pumps garbage into the shared UL and corrupts an attaching
 # UE's larger PUSCH (PDU-session request) -> SMF never sees it. Bringing UEs up one at a time
 # keeps the not-yet-launched slots silent so each UE attaches against a clean UL.
-UE_CORES_ARR=("20,21" "22,23" "24,25" "26,27")
+UE_CORES_ARR=("20,21,28,29" "22,23,30,31" "24,25" "26,27")
 declare -a UE_IP
 PER_UE_WAIT="${PER_UE_WAIT:-100}"
 for i in $(seq 0 $((N_UE-1))); do
@@ -153,7 +173,9 @@ for i in $(seq 0 $((N_UE-1))); do
   UE_NETNS=$NS UE_CONF="$conf" UE_CORES="${UE_CORES_ARR[$i]}" RUN_UE_RB=$BW RUN_UE_SSB=$UE_SSB \
     VRTSIM_UE_EXTRA_ARGS="$VRTSIM_UE_BASE --vrtsim.ue_id $i" \
     OAI_UE_FORCE_SCID="${MU_UE_FORCE:+$((i % 2))}" \
-    OAI_UE_FORCE_DMRS_PORT="${MU_UE_FORCE:+$((i % 2))}" \
+    OAI_UE_FORCE_DMRS_PORT="$( # match the gNB's per-UE port assignment (OAI_UL_MU_PORTS stage); MU_PORT_LIST="0,2" overrides for CDM-group separation
+      if [ -n "${MU_PORT_LIST:-}" ]; then echo "$MU_PORT_LIST" | cut -d, -f$((i+1));
+      elif [ -n "${OAI_UL_MU_PORTS:-}" ] || [ -n "${MU_UE_FORCE:-}" ]; then echo $((i % 2)); fi)" \
     setsid bash "$BASE/run_ue.sh" >"$OUT/ue$i.log" 2>&1 &
   for s in $(seq 1 $((PER_UE_WAIT/5))); do
     if grep -qaE 'TUN Interface .*successfully configured|PDU Session Establishment Accept' "$OUT/ue$i.log" 2>/dev/null; then
@@ -192,8 +214,14 @@ fi
 log "starting server-less UDP UL saturation on all attached UEs (rate=${UL_RATE_MBPS:-60}Mbps each)"
 for i in $(seq 0 $((N_UE-1))); do
   [ -z "${UE_IP[$i]:-}" ] && { log "  UE$i has no IP -> no traffic"; continue; }
-  sudo ip netns exec ue$i python3 "$BASE/ul_saturate.py" 10.0.0.1 "$IPERF_SECONDS" "${UL_RATE_MBPS:-60}" >"$OUT/ul_ue$i.log" 2>&1 &
-  log "  UE$i UL saturation started (ip=${UE_IP[$i]})"
+  # UL_PAYLOAD > 1400 needs a matching tun MTU (per-packet cost in the UE tun->PDCP path
+  # caps the feed ~192 sim-Mbps/UE at 1200B; bigger packets = fewer per-packet trips)
+  if [ -n "${UE_TUN_MTU:-}" ]; then
+    TUN=$(sudo ip netns exec ue$i ip -o link show 2>/dev/null | awk -F': ' '/oaitun/{print $2; exit}')
+    [ -n "$TUN" ] && sudo ip netns exec ue$i ip link set "$TUN" mtu "$UE_TUN_MTU" 2>/dev/null
+  fi
+  sudo ip netns exec ue$i python3 "$BASE/ul_saturate.py" 10.0.0.1 "$IPERF_SECONDS" "${UL_RATE_MBPS:-60}" "${UL_PAYLOAD:-1200}" >"$OUT/ul_ue$i.log" 2>&1 &
+  log "  UE$i UL saturation started (ip=${UE_IP[$i]} payload=${UL_PAYLOAD:-1200})"
 done
 
 # aggregate gNB-side goodput: sum LCID4 RX over all UE lines each 4s

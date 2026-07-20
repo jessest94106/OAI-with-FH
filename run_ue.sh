@@ -54,6 +54,8 @@ exec sudo -E ${UE_NETNS:+ip netns exec "${UE_NETNS}"} taskset -c "${UE_CORES}" e
   OAI_UE_FORCE_SCID="${OAI_UE_FORCE_SCID:-}" \
   OAI_UE_FORCE_DMRS_PORT="${OAI_UE_FORCE_DMRS_PORT:-}" \
   VRTSIM_TX_LATE_GRACE="${VRTSIM_TX_LATE_GRACE:-}" \
+  VRTSIM_AGC_FREEZE="${VRTSIM_AGC_FREEZE:-}" \
+  OAI_UE_TUN_PROF="${OAI_UE_TUN_PROF:-}" \
   ${UE_GDB:+gdb -batch -ex run -ex "bt full" -ex "thread apply all bt" --args} \
   ./nr-uesoftmodem \
     -O "${UE_CONF:-${BASE_DIR}/ue_test.conf}" \
