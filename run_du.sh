@@ -106,6 +106,7 @@ exec sudo -E chrt -f 70 taskset -c "${DU_CORES}" env \
   OAI_UL_TDA14="${OAI_UL_TDA14:-}" \
   OAI_UL_MU_CH_AVG="${OAI_UL_MU_CH_AVG:-}" \
   OAI_MU_PAIR_SCREEN="${OAI_MU_PAIR_SCREEN:-}" \
+  OAI_MSG3_PRB="${OAI_MSG3_PRB:-}" \
   OAI_UL_CHEST_GUARD="${OAI_UL_CHEST_GUARD:-}" \
   OAI_UL_FORCE_LAYERS="${OAI_UL_FORCE_LAYERS:-}" \
   ./nr-softmodem \

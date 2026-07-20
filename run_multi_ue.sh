@@ -67,6 +67,8 @@ sed -i "s/^\(\s*do_SRS\s*=\s*\)[0-9]/\1${DO_SRS:-0}/" "$BASE/du_test.conf"
 # OLLA link-adaptation band (defaults keep the conf's .15/.05); override for goodput experiments
 sed -i "s/^\(\s*ul_bler_target_upper\s*=\s*\).*/\1${UL_BLER_UPPER:-.15};/" "$BASE/du_test.conf"
 sed -i "s/^\(\s*ul_bler_target_lower\s*=\s*\).*/\1${UL_BLER_LOWER:-.05};/" "$BASE/du_test.conf"
+# OLLA MCS floor (lever-1b): stops deep crashes / long climb-backs. Unset = stock (0).
+[ -n "${UL_MIN_MCS:-}" ] && sed -i "s/^\(\s*\)#\?\s*ul_min_mcs.*/\1ul_min_mcs = ${UL_MIN_MCS};/" "$BASE/du_test.conf"
 sed -i 's/\(preambleTransMax\s*=\s*\)7/\19/' "$BASE/du_test.conf"
 sed -i 's/\(prach_dtx_threshold\s*=\s*\)150/\1100/' "$BASE/du_test.conf"
 sed -i 's/Ta4       = (400, 440)/Ta4       = (0, 1760)/' "$BASE/du_test.conf"
@@ -96,7 +98,11 @@ sed -i 's|du_addr      = ("00:11:22:33:64:68", "00:11:22:33:64:69")|du_addr     
 # 273-PRB carrier (SSB-centered), from sweep_iq_width.sh
 riv=$(( 275 * (275 - BW + 1) + 274 ))           # >138 PRB branch
 pointa=$(( 669984 - (BW/2)*24 ))
-prach_start=$(( BW/2 - 6 ))
+# PRACH frequency position. Default centers it (BW/2-6), which FRAGMENTS the PUSCH band in
+# the PRACH slot into two ~130-PRB halves -> that slot can never carry a full-band MU grant.
+# PRACH_START=0 (or BW-12) parks it at a band edge, leaving 261 contiguous PRBs. The RU's
+# prach_msg1_start is synced to this value below - both sides must match or PRACH reads 0 dB.
+prach_start=${PRACH_START:-$(( BW/2 - 6 ))}
 UE_SSB=$(( (BW/2 - 10) * 12 ))
 perl -0pi -e 's/(\b(?:dl|ul)_carrierBandwidth\s*=\s*)\d+/${1}'"$BW"'/g; s/(initial(?:DL|UL)BWPlocationAndBandwidth\s*=\s*)\d+/${1}'"$riv"'/g; s/(dl_absoluteFrequencyPointA\s*=\s*)\d+/${1}'"$pointa"'/g; s/(prach_msg1_FrequencyStart\s*=\s*)\d+/${1}'"$prach_start"'/g;' "$BASE/du_test.conf"
 perl -0pi -e 's/(tx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"$BW"'${2}/g; s/(rx_bw\s*=\s*\[)\s*\d+\s*(\])/${1}'"$BW"'${2}/g;' "$BASE/ru_test.conf"
