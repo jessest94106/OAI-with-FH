@@ -31,6 +31,35 @@ latency, exactly as wall bandwidth could not represent real FH capacity (25 Gb/s
 Getting this wrong makes every number meaningless — it is the same class of error as the
 TDD-duty and 60 s-OLLA traps already in the ledger.
 
+## EXISTING Cat-B CODE — already on this branch (checked 2026-07-27)
+
+`e390c16356` (Jesse, 2026-07-08, ported from `duranta-project/oru_new_beamforming ebb57947`)
+is an ancestor of HEAD on `compression-plus-timing-fix`. It adds **DL codebook Cat-B**:
+
+- `executables/nr-oru.h:29-41` — `oru_codebook_t { nb_fh_streams, nb_beams,
+  c16_t w[64 beams][8 txru][8 streams] }`, held in `ORU_t`.
+- `executables/nr-oru.c:600` — `apply_codebook_weights()`:
+  `tx_out[txru][re] = SUM_s W[beam][txru][s] * fh_in[s][re]`, Q15 complex MAC.
+- Wired into `oru_north_read_thread` (DU->RU, TX path). `nb_fh_streams==0` => passthrough,
+  the default. Beam selected by C-plane `beam_id`.
+
+**What this buys us** (P3/P4 are extensions, not greenfield):
+- the Q15 complex MAC kernel — identical math, transposed dimensions;
+- the dual-buffer pattern (logical FH streams vs physical antennas) with clean
+  passthrough when disabled — reuse the same env-gated-off-by-default discipline;
+- config plumbing for weights living in `ORU_t`.
+
+**What it does NOT cover — the real work:**
+| | existing | needed |
+|---|---|---|
+| direction | DL / TX (`north_read`, precode streams -> antennas) | **UL / RX** (combine 16 antennas -> layers, south path) |
+| weight source | static 64-entry codebook, picked by `beam_id` | **explicit MMSE weights** computed per update in the DU |
+| frequency granularity | one weight set per symbol | **per-PRB / per-RBG** (MMSE weights are frequency-selective) |
+| size limits | `MAX_NB_TX 8`, `MAX_STREAMS 8` | 16 RX antennas => raise; weight store becomes 106 PRB x 16 x 2 = 13.6 kB per update, not 64 beams |
+
+RU apply cost for UL: `nb_rx x nb_layers` MACs per RE = 32/RE at 16x2, x1272 RE x 14 sym
+per slot in scalar Q15 — real but bounded; must be measured against the RU budget (P4 gate c).
+
 ## Phases (each with its own gate; stop if a gate fails)
 
 **P0 — instrument before changing anything.** RU-side timing/quality counters
