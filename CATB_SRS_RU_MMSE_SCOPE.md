@@ -24,6 +24,62 @@ reference*. Three ways, and this choice is the plan's main fork:
 (b) is not standards-conformant (eAxC count would vary by symbol), but it is legal inside
 vrtsim, which is our own shim. It de-risks the physics cheaply. (a) is the real answer.
 
+## THE CONTROL CHAIN (what we are actually measuring)
+
+```
+  slot N                                                      slot N+d
+  ------                                                      --------
+  [1] UE transmits PUSCH (DMRS + data), 1 TX
+  [2] RU captures 16 antennas                       vrtsim.c ul_combine_buffer :262
+  [3] RU -> DU  U-plane, REFERENCE symbols per-antenna
+        arrival window Ta3_up = 200-470 us                    ru_test.conf:62
+  [4] DU channel estimation  H_hat (16x1 per UE per PRB)      nr_ul_channel_estimation.c
+  [5] DU weight computation  W = (H H^H + R)^-1 h             nr_ulsch_demodulation.c:978
+  [6] DU -> RU  weights (C-plane BFW in real Cat-B; shm ring here)
+        MUST land in T1a_cp_ul = 285-535 us BEFORE the target symbol   du_test.conf:174
+  [7] RU applies W to DATA symbols  ---------------------->  combined 2 layers
+  [8] RU -> DU  U-plane, 2 layers instead of 16 antennas
+  [9] DU demodulate + decode
+ [10] OLLA adjusts MCS from the decode outcome  ----------->  affects later slots
+```
+
+### Loop budget from OUR configured timings (not a textbook number)
+`Ta3_up_min 200 us` (measurement reaches the DU) + `T_proc` (chest + inversion)
++ `T1a_cp_ul_min 285 us` (weights must arrive that early) = **485 us + T_proc**.
+One slot at 30 kHz = 500 us, so **d_min ~ 1 slot with zero processing, realistically 2**.
+The sweep's interesting region is therefore **d = 1-4 slots**; 8-64 measures the asymptote.
+
+### The delivery window is only ~250 us wide
+Weights must arrive **no earlier than** `T1a_cp_ul_max` (429-535 us) and **no later than**
+285 us before use. That is a quarter-millisecond slot of opportunity — and today's cliff
+work measured **12.7 ms of queueing delay** on a fronthaul at its cap. A congested FH would
+miss the BFW window by ~25x. **So FH congestion breaks the weight loop before it breaks the
+data path** — the control plane is the more fragile of the two. Worth testing explicitly
+once STEP 4 has a baseline: run the Cat-B loop at 97% FH utilisation, where Cat-A was still
+perfectly healthy.
+
+### Two NESTED loops — do not confuse them
+| loop | path | period | role |
+|------|------|--------|------|
+| **inner: weight loop** | [3]-[7] | **1-2 slots (0.5-1 ms)** | what this study measures |
+| **outer: OLLA / link adaptation** | [9]-[10] | **~160 s to converge (measured)** | confound |
+
+The outer loop is ~5 orders of magnitude slower. Stale weights lower SINR, OLLA then walks
+MCS down over minutes — so a weight-loop problem SHOWS UP as a throughput number that is
+still moving. This is why every point needs 180 s and why weight age and SINR must be
+logged beside throughput: otherwise the two loops are indistinguishable in the output.
+
+### Where the staleness actually comes from
+| weight source | staleness terms | dominant term |
+|---------------|-----------------|---------------|
+| **DMRS** (Track A) | FH loop delay only (weights available every slot) | **FH latency** |
+| **SRS** (Track B) | sounding period (10-80 ms = 20-160 slots) + FH loop delay | **sounding period** |
+
+This is the strongest argument for the two-track split: with SRS, a 20 ms sounding period is
+40 slots of staleness and the 1-2 slot FH contribution is ~5% of it — the FH latency effect
+would be buried. **Track A (DMRS) is the only configuration in which FH latency is the
+dominant term and can be cleanly measured.**
+
 ## Two tracks
 
 **Track A — the physics, using (b). This is the critical path.**
