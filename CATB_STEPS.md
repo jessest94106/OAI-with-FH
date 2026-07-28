@@ -120,6 +120,59 @@ so if SU and MU degrade identically, suspect a bug rather than physics.
 
 ---
 
+## NEW FEATURE INVENTORY (what this plan actually adds)
+
+### vrtsim — RU side (`radio/vrtsim/vrtsim.c`)
+| # | feature | knob | step |
+|---|---------|------|------|
+| 1 | RU instrumentation: per-slot combine time (min/avg/max), weight age in slots | `VRTSIM_CATB_STATS=1` | 0 |
+| 2 | Symbol classification REF vs DATA within the UL slot | `VRTSIM_CATB_REF_SYMS="2,7,11"` | 1 |
+| 3 | **UL Cat-B master enable** — RU-side combining instead of DU-side | `VRTSIM_CATB_UL=1` | 3 |
+| 4 | **Weight staleness knob, in SLOTS** (the experiment's independent variable) | `VRTSIM_BFW_DELAY_SLOTS=d` | 3 |
+| 5 | Weight-ring consumer (shm reader + age tracking) | — | 3 |
+| 6 | Per-PRB Q15 UL combining kernel, 16 antennas -> 2 layers | — | 3 |
+| 7 | **Mixed-mode FH**: REF symbols at 16 streams, DATA symbols at 2 streams | — | 3 |
+| 8 | SRS symbol handling on the RU FH path | — | 5 |
+
+### OAI DU PHY (`openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c`)
+| # | feature | knob | step |
+|---|---------|------|------|
+| 9 | Export MMSE-IRC weights (passive; applies nothing) | `OAI_CATB_WEIGHT_EXPORT=1` | 2 |
+| 10 | Weight wire format `{frame, slot, n_layers, n_ant, n_prb, W[prb][l][ant]}` = 13.6 kB | — | 2 |
+| 11 | shm weight ring, producer side, 8 deep | — | 2 |
+| 12 | Weight computation sourced from SRS instead of DMRS | `OAI_CATB_WEIGHT_SRC=srs\|dmrs` | 6 |
+
+### O-RU executable (`executables/nr-oru.{c,h}`)
+| # | feature | step |
+|---|---------|------|
+| 13 | UL direction added to the Q15 kernel (today DL-only, `nr-oru.c:600`) | 3 |
+| 14 | `ORU_CODEBOOK_MAX_NB_TX` 8 -> 16 | 3 |
+| 15 | Explicit per-PRB weight storage alongside the 64-entry codebook | 3 |
+
+### SRS enablement (`radio/fhi_72/`, `du_test.conf`)
+| # | feature | step |
+|---|---------|------|
+| 16 | `srsEnable` / `srsEnableCp` in the fhi_72 config | 5 |
+| 17 | SRS eAxC allocation | 5 |
+| 18 | SRS extract/deposit path in `oaioran.c` (mirror of the PRACH path) | 5 |
+| 19 | `du_test.conf:18 do_SRS = 0 -> 1` | 5 |
+
+### Harness / analysis
+| # | feature | step |
+|---|---------|------|
+| 20 | Sweep driver: delay x speed, 180 s runs, CN preflight, N>=2 at bends | 4 |
+| 21 | Weight-age and per-layer SINR extraction from logs | 4 |
+| 22 | SU control arm (`N_UE=1`) alongside the MU arm | 4 |
+
+### Reused, NOT rebuilt
+Q15 complex MAC kernel (`nr-oru.c:600`); logical-streams-vs-physical-antennas dual-buffer
+passthrough pattern; env-gated-off-by-default discipline (`vrtsim.c:478`); the shm ring
+pattern vrtsim already uses; `VRTSIM_UE_SPEED_KMH` (exists); FH load measurement via
+`ethtool -S eno1np0 | grep port.tx_bytes`; the VF cap as an FH capacity knob.
+
+**Totals: 6 new env knobs, 1 new IPC channel, 1 new signal-processing kernel, 4 SRS
+integration points.** vrtsim currently has 19 env knobs; this adds 4 to it.
+
 ## Standing rules for every step
 
 - Env-gated OFF by default; disabled path must be byte-identical to today.
