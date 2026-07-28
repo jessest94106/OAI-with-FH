@@ -111,6 +111,38 @@ here, where it is free, not in STEP 3 where it will look like a beamforming bug.
 
 ---
 
+## STEP 2 — DONE 2026-07-28 (PASSED)
+
+**Gate:** 177.5 Mbps / MCS 28/28 (baseline 177.8, within 0.2%) => export is passive.
+Ring `/dev/shm/catb_weights` 273.1 KB, 9056 records published, one per (frame, slot, rnti)
+with the two RNTIs alternating = one weight set per UL slot per UE.
+
+### OAI HAS NO WEIGHT MATRIX TO EXPORT — STEP 2 had to COMPUTE it
+`nr_ulsch_mmse_2layers()` builds the 2x2 Gram `H^H H` and applies its inverse to
+matched-filtered data; the N_ant x 2 combiner is never materialised. So the DU now forms it
+explicitly, per PRB: `G = H^H H + nvar*I`, `W = G^-1 H^H`. This is architecturally right
+(R2.2 puts weight computation in the DU) but it is a real addition, not a tap.
+
+New: `openair1/PHY/NR_TRANSPORT/catb_weight_ring.h` — header-only so DU and RU share one
+definition with no build change. Seqlock per record (a torn set is never consumed),
+`CATB_RING_DEPTH 8`, and `catb_ring_read(age_back)` deliberately exposes STALE records —
+that is the mechanism STEP 3's `VRTSIM_BFW_DELAY_SLOTS` will use.
+Published once per (frame,slot,rnti), not per symbol: the block runs on every data symbol
+but the estimate is per slot, so per-symbol export would be 11x redundant hot-path work.
+
+### The acceptance check I wrote was wrong; here is the right one
+Planned: "per-antenna phase matches the configured CDL angles 0/90 deg." **Wrong by
+construction** — MMSE weights are NOT steering vectors. `w_0 ~= P_perp(h_1) h_0`, so nulling
+rotates the weight off the matched-filter direction, and CDL-A's angular spread destroys any
+clean phase ramp (measured phase coherence 0.4-0.5, exactly what multipath gives).
+What actually validates them:
+| check | meaning | measured |
+|-------|---------|----------|
+| inter-layer correlation | 0 = the two layers point differently = separator works | **0.028-0.032** |
+| adjacent-PRB correlation | <1 = frequency-selective; >>0 = smooth enough to sample at PRB centre | **0.91-0.96** |
+
+---
+
 ## STEP 2 — DU exports its MMSE weights (passive, applies nothing)
 
 **Do:** in `openair1/PHY/NR_TRANSPORT/nr_ulsch_demodulation.c`, at the existing MMSE-IRC

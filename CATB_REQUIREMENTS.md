@@ -77,8 +77,16 @@ no per-antenna PUSCH data reaches the DU.
 *Acceptance:* code review — no matrix inversion in the RU path.
 
 **R2.5 [M]** Weights SHALL be per-PRB (frequency-selective), not per-slot-wideband.
-*Acceptance:* weight export contains `n_prb` distinct sets; a frequency-selective CDL
-channel shows per-PRB variation above quantisation noise.
+*Acceptance (REVISED 2026-07-28 — the original "per-antenna phase matches the configured CDL
+arrival angles" is WRONG BY CONSTRUCTION: MMSE weights are not steering vectors. w_0 is
+approximately the projection of h_0 onto the null space of h_1, so nulling deliberately rotates
+the weight away from the matched-filter direction; CDL-A's angular spread removes any clean
+phase ramp as well — measured phase coherence 0.4-0.5, exactly as multipath predicts):*
+ (a) **inter-layer orthogonality** `|<w0,w1>|^2/(|w0|^2 |w1|^2)` near 0 — the defining property
+ of a spatial separator. MEASURED 0.028-0.032.
+ (b) **frequency selectivity** — adjacent-PRB weight correlation below 1 but well above 0,
+ proving per-PRB weights carry information a wideband set would flatten. MEASURED 0.91-0.96,
+ which also justifies sampling at the PRB centre.
 
 ---
 
