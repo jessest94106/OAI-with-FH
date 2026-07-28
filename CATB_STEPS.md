@@ -233,6 +233,46 @@ vectorised with SIMDe; 4-8x would drop MMSE to ~50 us. Do it in STEP 3, not afte
 
 ---
 
+## STEP 3a.1 STATUS 2026-07-28 — **BLOCKED: attaching BFW kills the DU. Feature gated OFF.**
+
+Three attempts, each uncovering a deeper contract requirement. Current state: with
+`OAI_CATB_BFW=1` the **DU dies** — its log ends at the pool-allocation line, DU->RU wire
+drops to 0 Mbps, throughput 0, MCS 1,0. Default (flag unset) is unaffected and healthy.
+
+**What is correct now**
+- Weights computed and published by PHY (STEP 2), read by the fhi_72 layer.
+- `xran_cp_populate_section_ext_1()` succeeds, returns **76 B** = 16 ant x 4 B IQ + 12 B header.
+- Ext buffers from **`rte_malloc`** (mandatory: `xran_attach_cp_ext_buf()` calls
+  `rte_malloc_virt2iova()` and `rte_panic()`s on a bad IOVA — a static array ABORTS the DU).
+- `iqWidth`/`compMethod` set on the **PRB element**, which is where the TX path reads them
+  (`xran_cp_proc.c:522-523`), not on `bf_weight`.
+- Rotating 128-buffer pool (xran's `extbuf_free_callback` is a no-op, so xran does NOT free
+  them — buffer lifetime is the application's problem).
+
+**Suspected remaining causes (untested, in order)**
+1. **Layout mismatch.** `ONE_EXT_LEN = ext_section_sz/numSetBFWs - sizeof(section1)` and
+   `ext_offset = idx*ONE_CPSEC_EXT_LEN + sizeof(section1)` mean the TX path expects
+   `p_ext_section` laid out as `[section1 header][BFW IQ]` per set. We pass the raw 76 B
+   returned by populate, so xran may index past the buffer.
+2. **Headroom back-step.** `ext_buff = p_ext_section - (RTE_PKTMBUF_HEADROOM + ecpri_hdr +
+   section1_header)`; our gap is `RTE_PKTMBUF_HEADROOM + 64`. If the two headers exceed 64 B
+   the IOVA precedes the allocation -> DMA into unowned memory.
+3. **Concurrency.** `pool_idx` is a plain `static int` and the C-plane loop runs per antenna
+   per symbol, possibly on several threads — two sections could share a buffer while both
+   mbufs are in flight.
+
+**Honest assessment.** This is a real integration against an undocumented, strict buffer
+contract in a vendor library, where mistakes abort the process rather than fail softly. Each
+attempt has revealed one more requirement. It is not a one-sitting task.
+
+**Also worth confronting before STEP 4:** run-to-run spread at the fixed 106/w9 baseline was
+**155-200 Mbps (+-13%)** across today's runs, with the asymmetric-MCS intermittent fault
+appearing repeatedly. Step 4 aims to detect throughput degradation from weight staleness; if
+that effect is comparable to +-13% noise, the planned N>=2 will not resolve it. **The variance
+needs a root cause, or many more repetitions, before the sweep is worth running.**
+
+---
+
 ## STEP 3a.1 ATTEMPT 2026-07-28 — extension BUILDS correctly, is NOT transmitted
 
 **Working:** `catb_bfw_attach()` in the UL C-plane loop (`oaioran.c`, env `OAI_CATB_BFW=1`,
