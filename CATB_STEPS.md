@@ -162,7 +162,28 @@ Simplest transport: a POSIX shm ring (same pattern vrtsim already uses), 8 slots
 
 ---
 
-## Cat-B PROBE RESULT 2026-07-28 — **Cat-B mode does NOT work in this tree. BLOCKER.**
+## Cat-B eAxC FIX 2026-07-28 — **BLOCKER CLEARED, Cat-B runs at Cat-A parity**
+
+One line: `mask_ruPortId` 0x000f -> **0x00ff** for `XRAN_CATEGORY_B` (both the plain and
+M-plane variants of `set_fh_eaxcid_conf`). Bits 4-7 were unallocated in that layout
+(union 0xff0f, gap 0x00f0), so widening RU_Port_ID to 8 bits / 256 flows fills the hole and
+**disturbs no other field** — no re-packing of cuPortId/bandSectorId/ccId.
+
+| check | result |
+|-------|--------|
+| Cat-B active both ends | yes (du.log + ru.log) |
+| negative `aarx` errors | **0** (was flooding) |
+| attach | **2/2** |
+| PRACH | **56.4 dB** |
+| throughput | **177.8 Mbps @ MCS 28/28** = Cat-A baseline exactly |
+
+Parity is the point: with beamforming untouched, Cat-B must change nothing. It doesn't.
+The category switch is therefore a clean substrate for the C-plane BFW work.
+
+Likely upstream-worthy: OAI's Cat-B RU_Port_ID mask is too narrow for ANY deployment whose
+PRACH eAxC offset is >= 16, independent of this lab.
+
+## Cat-B PROBE RESULT (superseded by the fix above) — how it failed
 
 `OAI_XRAN_CAT=B` (new env override of the hardcoded `XRAN_CATEGORY_A` at `oran-config.c:1127`).
 Confirmed active on both ends (message in du.log AND ru.log). Result: **attach 0/2, PRACH 0.0**
