@@ -10,7 +10,7 @@ BASE=/home/jesse/oran_lab
 BUILD=$BASE/oaicicd/test_dir/openairinterface5g/build
 MAC=$BUILD/nrMAC_stats.log
 N_UE="${N_UE:-2}"
-BW=273
+BW="${BW:-273}"   # carrier PRBs; all derived params (riv/pointA/prach_start/SSB) computed below
 TS="${TS:-0.25}"
 ADV="${ADV:-65536}"
 IPERF_SECONDS="${IPERF_SECONDS:-60}"
@@ -61,7 +61,19 @@ rm -f "$BASE/channelmod_sweep.conf"
 # min_grant_prb: floor that keeps MU same-PRB overlap engaged (sub-full grants fall back to
 # disjoint FDM splits). 273 = proven full-band MU behavior; costs slot 19 (261 free after
 # PRACH). MIN_GRANT_PRB=24/261 for slot-19 experiments — see memory rev-200..205.
-sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1${MIN_GRANT_PRB:-273}/" "$BASE/du_test.conf"
+# Default to the carrier width, NOT a hard-coded 273: nr_get_Msg3alloc sizes the Msg3 grant as
+# max(8, min_grant_prb) and rejects it when rbStart + that > initial UL BWP size, so a
+# min_grant_prb larger than BW makes EVERY Msg2 fail ("No space to allocate Msg 3", logged at
+# LOG_D so it is invisible) and attach dies with nothing but "exceeded RA window".
+sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1${MIN_GRANT_PRB:-$BW}/" "$BASE/du_test.conf"
+# Fronthaul IQ width / compression. IQ_WIDTH sets both data and PRACH width on DU *and* RU
+# (they must match). COMP_METH: 1 = BFP (default), 0 = no compression (raw 16-bit).
+if [ -n "${IQ_WIDTH:-}" ] || [ -n "${COMP_METH:-}" ]; then
+  for _c in "$BASE/du_test.conf" "$BASE/ru_test.conf"; do
+    [ -n "${IQ_WIDTH:-}" ] && perl -0pi -e 's/(iq_width\s*=\s*)\d+(\s*;)/${1}'"${IQ_WIDTH}"'${2}/g; s/(iq_width_prach\s*=\s*)\d+(\s*;)/${1}'"${IQ_WIDTH}"'${2}/g;' "$_c"
+    [ -n "${COMP_METH:-}" ] && perl -0pi -e 's/(compMeth\s*=\s*)\d+(\s*;)/${1}'"${COMP_METH}"'${2}/g; s/(compMeth_prach\s*=\s*)\d+(\s*;)/${1}'"${COMP_METH}"'${2}/g;' "$_c"
+  done
+fi
 # SRS enablement (default off; SRS_WORK_SCOPE.md Phase 0+)
 sed -i "s/^\(\s*do_SRS\s*=\s*\)[0-9]/\1${DO_SRS:-0}/" "$BASE/du_test.conf"
 # OLLA link-adaptation band (defaults keep the conf's .15/.05); override for goodput experiments
@@ -95,8 +107,14 @@ sed -i 's|dpdk_devices = ("0000:06:02.2", "0000:06:02.3")|dpdk_devices = ("0000:
 sed -i 's|ru_addr      = ("00:11:22:33:64:66", "00:11:22:33:64:67")|ru_addr      = ("00:11:22:33:64:66")|' "$BASE/du_test.conf"
 sed -i 's|dpdk_devices = ("0000:06:02.0", "0000:06:02.1")|dpdk_devices = ("0000:06:02.0")|' "$BASE/ru_test.conf"
 sed -i 's|du_addr      = ("00:11:22:33:64:68", "00:11:22:33:64:69")|du_addr      = ("00:11:22:33:64:68")|' "$BASE/ru_test.conf"
-# 273-PRB carrier (SSB-centered), from sweep_iq_width.sh
-riv=$(( 275 * (275 - BW + 1) + 274 ))           # >138 PRB branch
+# Carrier (SSB-centered), from sweep_iq_width.sh. RIV per 38.214 5.1.2.2.2 with RB_start=0:
+# L-1 <= floor(275/2)=137 -> 275*(L-1); else -> 275*(275-L+1)+274. Using the wrong branch
+# encodes an out-of-range BWP length and the DU dies in encode_SIB_NR (ASN1 INTEGER assert).
+if [ $(( BW - 1 )) -le 137 ]; then
+  riv=$(( 275 * (BW - 1) ))                     # <=138 PRB branch
+else
+  riv=$(( 275 * (275 - BW + 1) + 274 ))         # >138 PRB branch
+fi
 pointa=$(( 669984 - (BW/2)*24 ))
 # PRACH frequency position. Default centers it (BW/2-6), which FRAGMENTS the PUSCH band in
 # the PRACH slot into two ~130-PRB halves -> that slot can never carry a full-band MU grant.
@@ -154,7 +172,7 @@ log "RU up (vrtsim ready)"
 
 # ---------------- DU ----------------
 log "launching DU"
-OAI_FH_MAX_QUEUE_NO_JUMP=8 OAI_FH_SPIN_CAP=2000 setsid bash "$BASE/run_du.sh" >"$OUT/du.log" 2>&1 &
+OAI_FH_MAX_QUEUE_NO_JUMP=8 OAI_FH_SPIN_CAP="${OAI_FH_SPIN_CAP:-2000}" OAI_FH_EXPECT_FRAGS="${OAI_FH_EXPECT_FRAGS:-}" setsid bash "$BASE/run_du.sh" >"$OUT/du.log" 2>&1 &
 for s in $(seq 1 120); do { pgrep -x nr-softmodem >/dev/null && grep -qaE 'got sync|Port 1 Link Up' "$OUT/du.log" 2>/dev/null; } && break; sleep 2; done
 sleep 8
 pgrep -x nr-softmodem >/dev/null || { log "DU FAILED"; tail -8 "$OUT/du.log"; exit 1; }

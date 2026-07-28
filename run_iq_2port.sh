@@ -29,7 +29,36 @@ preflight() {
   cp "$BASE/ru_test.conf.preNoBFPprach_bak" "$BASE/ru_test.conf"
   cp "$BASE/ue_test.conf.good_bak" "$BASE/ue_test.conf"
   rm -f "$BASE/channelmod_sweep.conf"
-  sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1$BW/" "$BASE/du_test.conf"
+  sed -i "s/^\(\s*min_grant_prb\s*=\s*\)[0-9]\+/\1${MIN_GRANT_PRB:-$BW}/" "$BASE/du_test.conf"
+  # UL-throughput fix #2 (the CCE-starvation fix): the default UESS has candidates ONLY at
+  # AL2 (n2). For a single UE, its DL DCI (scheduled first) and UL DCI share rnti/SS/Y ->
+  # same 2 candidate CCEs; the DL DCI wins the slot and the UL DCI collides -> ul_cce_fail
+  # (5948 vs DL 10), which starves UL scheduling AND knocks the UL BLER-OLLA down
+  # (num_sched<=3 windows) so UL MCS sticks at 17. More candidates -> DL+UL both fit.
+  # NOTE: uess_agg_levels is a gNBs-section param (GNBParamList) -> must anchor in the gNBs
+  # block (after pusch_AntennaPorts), NOT MACRLCs, or libconfig silently drops it.
+  # Element i = #candidates at AL(2^i): [L1,L2,L4,L8,L16].
+  [ -n "${UESS_AGG:-}" ] && sed -i "/pusch_AntennaPorts/a\\    uess_agg_levels = [${UESS_AGG}];" "$BASE/du_test.conf"
+  # UL-throughput fix #5 (the MCS-cap fix): nr_ue_max_mcs_min_rb (gNB_scheduler_ulsch.c:1714)
+  # caps UL MCS so tx_power=compute_ph_factor <= ph. tx_power = bw_factor(=10log10(Rb*2^mu)
+  # =27.4 dB @273RB) + delta_tf. delta_tf is only added when use_deltaMCS is on, and it
+  # explodes with MCS (~20 dB @MCS28) -> demands ph~48 dB (> PHR range) -> MCS28 unreachable
+  # at full band. deltaMCS power-boost is FICTIONAL under vrtsim AGC (RX SNR pinned 38.5 dB
+  # regardless of tx power). Turning it off -> tx_power=bw_factor only -> a modest ph clears
+  # it and OLLA climbs to 28. (Line 2240 writes any reduction back into the OLLA state.)
+  [ -n "${USE_DELTAMCS:-}" ] && sed -i "/pusch_AntennaPorts/a\\    use_deltaMCS = ${USE_DELTAMCS};" "$BASE/du_test.conf"
+  # UL-throughput fix #3 (power headroom): vrtsim pins RX SNR via AGC independent of tx
+  # power, so the p0 target only drives PHR bookkeeping. At p0=-100 the UE reports PH 10 dB
+  # and the PHR limiter (gNB_scheduler_ulsch.c:2237) caps MCS to fit PCMAX. Lowering
+  # p0_NominalWithGrant -> PH +27 dB -> PHR limiter no longer binds (RX SNR still 38.5 dB).
+  [ -n "${P0_GRANT:-}" ] && sed -i "s/\(p0_NominalWithGrant\s*=\s*\)-\?[0-9]\+/\1${P0_GRANT}/" "$BASE/du_test.conf"
+  # UL-throughput fix #4 (MCS selection): with harq_round_max=4 the UL MCS comes from the
+  # BLER-OLLA loop (get_mcs_from_bler), which is suppressed by the UL CCE starvation
+  # (num_sched<=3 windows knock MCS down) -> stuck at 17 despite 38.5 dB / BLER 0. Setting
+  # ul_harq_round_max=1 switches to the SINR branch (gNB_scheduler_ulsch.c:2090) ->
+  # get_mcs_from_SINRx10(38.5 dB) -> MCS28, bypassing the CCE-suppressed OLLA. Clean channel
+  # (BLER 0) means the lost HARQ retransmissions are never needed.
+  [ -n "${UL_HARQ_RR:-}" ] && sed -i "/ul_bler_target_lower/a\\  ul_harq_round_max = ${UL_HARQ_RR};" "$BASE/du_test.conf"
   sed -i 's/\(preambleTransMax\s*=\s*\)7/\19/' "$BASE/du_test.conf"
   sed -i 's/\(prach_dtx_threshold\s*=\s*\)150/\1100/' "$BASE/du_test.conf"
   sed -i 's/Ta4       = (400, 440)/Ta4       = (100, 1760)/' "$BASE/du_test.conf"

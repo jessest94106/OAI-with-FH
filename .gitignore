@@ -1,5 +1,13 @@
+# Run artefacts (logs/ alone is ~136 GB) — never commit.
 logs/
 *.log
-oaicicd/
-oai_rfsim_clean/
+
+# Live CN state: docker volumes, DB dumps.
 oai-cn5g/
+
+# Working copy of the rfsim tree (not a submodule).
+oai_rfsim_clean/
+
+# NOTE: oaicicd/test_dir/{openairinterface5g,phy-f-1.0} are SUBMODULES — do NOT
+# ignore them. Git tracks only the commit pointer, and that pointer records which
+# OAI build produced a given result.
