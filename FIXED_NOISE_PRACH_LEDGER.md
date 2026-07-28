@@ -343,7 +343,23 @@ Additionally eliminated by the `wf_857fc409-f6b` workflow (6 threads, adversaria
     Corollary: 273 PRB -> 32.52 x (273/189) x 0.657 = **30.9 Gb/s > 25** (wall 618 Mbps), so
     cap 500 binds there. A 100%-UL pattern at 189 would also exceed 25 (32.5).
 - **Intermittent single-UE degradation** (w10 UE0 285.3, w12 UE1 258.1; load-independent;
-  w12 ≈ AGC 56%-load run within 1 Mbps) — dominant error term; needs N=3 at one width.
+  w12 ≈ AGC 56%-load run within 1 Mbps) — dominant error term.
+  **N=3 DONE 2026-07-28 @106/w9: 155.5 (MCS 23,28) / 177.7 (28,28) / 177.6 (28,28)
+  => occurrence rate 1 in 3, cost -12.5%.** Signature: ONE UE pinned several MCS below
+  the other, load-independent, no PRACH/FH symptom (PRACH 55.7-56.4 dB in all three).
+  Root cause still unknown. Practical rule: any single run showing an asymmetric MCS pair
+  is suspect — repeat before recording. This has now impersonated a real effect 3x.
+- **vrtsim RU diagnostics were broken three ways** — FIXED 2026-07-28 (`vrtsim.c`,
+  submodule commit bce1e222fe): (1) `vrtsim_read` returns early in the multi-UE branch
+  (`:1915`) skipping `rx_samples_total`, so on the ONLY path this lab runs the realtime
+  denominator was **zero**; (2) `rx_samples_late` counts per sub-read vs total per call =
+  32x unit mismatch at 2 UEs x 16 ant (added `rx_subreads`); (3) the end-of-run summary is
+  in `vrtsim_end()`, which never executes because the harness SIGKILLs — vrtsim's final
+  statistics have never been visible in any run to date. Any past reasoning that cited the
+  RX realtime percentage is void.
+- **TRAP: `run_ru.sh:112` passes an explicit env allowlist** (`sudo -E ... env VAR=...`).
+  Unlisted variables are dropped **silently** — the feature does nothing while the run looks
+  healthy. Add every new RU-side knob to that list.
 - ~~273 + fixed noise never verified post-fix~~ **CLOSED 2026-07-27**: 273 w9 fixed noise
   (sigma=7) ATTACHES post noise-table fix — UEs up, UL saturation running (pre-fix it failed
   4/4 with PRACH peak 23.5 vs floor 23.0). Wire load **364 Mbps = 18.2 Gbps eff, 12164 pps,
