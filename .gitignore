@@ -1,0 +1,5 @@
+logs/
+*.log
+oaicicd/
+oai_rfsim_clean/
+oai-cn5g/
