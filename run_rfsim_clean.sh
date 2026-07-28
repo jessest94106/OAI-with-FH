@@ -18,14 +18,14 @@ for try in $(seq 1 $MAX_TRIES); do
   sudo pkill -9 -x nr-softmodem 2>/dev/null; sudo pkill -9 -x nr-uesoftmodem 2>/dev/null; sleep 2
   : > "$GLOG"; : > "$ULOG"
   sudo -E taskset -c 4,5,6,7,8,9,10,11,12,13,14,15 env LD_LIBRARY_PATH="$LD_LIBRARY_PATH" ASAN_OPTIONS="$ASAN_OPTIONS" \
-    "$BUILD/nr-softmodem" -O "$GNB_CONF" --rfsim >"$GLOG" 2>&1 &
+    "$BUILD/nr-softmodem" -O "$GNB_CONF" --rfsim ${GNB_EXTRA:-} >"$GLOG" 2>&1 &
   ok=0; for i in $(seq 1 30); do sleep 1; grep -qE "Received NGSetupResponse" "$GLOG" && { ok=1; break; }
     grep -qE "Exiting OAI" "$GLOG" && break; done
   [[ $ok = 1 ]] || { echo "  gNB no NGSetup; retry"; continue; }
   echo "  gNB up (NGSetup). starting UE..."
   sleep 2
   sudo taskset -c 16,17,18,19,20,21,22,23,24,25,26,27 env LD_LIBRARY_PATH="$LD_LIBRARY_PATH" ASAN_OPTIONS="$ASAN_OPTIONS" \
-    "$BUILD/nr-uesoftmodem" -O "$UE_CONF" --rfsim -C "$UE_C" -r "$BW_RB" --numerology 1 >"$ULOG" 2>&1 &
+    "$BUILD/nr-uesoftmodem" -O "$UE_CONF" --rfsim -C "$UE_C" -r "$BW_RB" --numerology 1 ${UE_EXTRA:-} >"$ULOG" 2>&1 &
   UPID=$!
   for i in $(seq 1 $UE_WAIT); do sleep 1
     UE_IP=$(ip -4 -o addr show oaitun_ue1 2>/dev/null | awk '{print $4}' | cut -d/ -f1 | head -1)
