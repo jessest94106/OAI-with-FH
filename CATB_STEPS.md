@@ -233,6 +233,49 @@ vectorised with SIMDe; 4-8x would drop MMSE to ~50 us. Do it in STEP 3, not afte
 
 ---
 
+## STEP 3 FEASIBILITY SPIKE 2026-07-28 — staged, and the first stage is much smaller than feared
+
+**xran supports BFW on the wire, both directions.** TX builds ext-1 with the IQ appended to
+the mbuf (`xran_cp_api.c:681-690`); RX parses it and points `extinfo->p_bfwIQ` at the payload
+(`:2001`). The transport is not the problem.
+
+**OAI wires NEITHER end.** The DU sets `nBeamIndex` only (index-based, Cat-A style,
+`oaioran.c:1201`) and never `bf_weight`; the RU has no reference to `bf_weight`/`ext11`/
+`sectionext` anywhere in `oaioran_ru.c` or `nr-oru.c`. Both sides are new integration.
+
+**Constraint found: `XRAN_MAX_SET_BFWS = 1`** (`xran_fh_o_du.h:145`, with the original `(64)`
+commented out). One BFW set per section. Per-PRB weights therefore need one section per PRB
+or per bundle — a large multiplication of C-plane sections, or an xran rebuild.
+
+### THE DE-RISK: the experiment does not need per-PRB weights
+The deliverable is **throughput vs loop delay x UE speed**. Weight *staleness* is what we are
+measuring; weight *granularity* affects absolute performance, not the shape of the staleness
+curve. So stage it:
+
+**3a — WIDEBAND weights, one BFW set per allocation.** Fits `MAX_SET_BFWS=1` and one section
+naturally, no xran change, no section explosion. Proves the whole loop end to end: DU
+populates `bf_weight` -> xran emits ext-1 -> RU reads `p_bfwIQ` -> applies at `nr-oru`'s
+post-FFT point -> `VRTSIM_BFW_DELAY_SLOTS` makes it stale. **Gate: d=0 within 1% of the
+Cat-A baseline.**
+Step 2 measured adjacent-PRB weight correlation at 0.91-0.96, so wideband gives up real but
+bounded accuracy — acceptable for a mechanism test, and quantifiable later.
+
+**3b — per-PRB / per-bundle refinement.** Only after 3a's loop works. Either raise
+`XRAN_MAX_SET_BFWS` (xran rebuild) or use ext-11 bundling across several sections. This is an
+absolute-performance improvement, not a prerequisite for the experiment.
+
+**3c — SIMD the combine kernel.** 273 PRB projects to 75-85% of RU budget with scalar Q15
+(measured 63% before MMSE). The neighbouring Gram-matrix code is already SIMDe-vectorised.
+
+### Apply point (correction carried from earlier)
+`nr-oru.c:1183-1192`: `nr_symbol_fep_ul()` produces `rxdataF` per antenna per symbol, then
+`write_pusch(rxdataF, aarx, ...)`. Combine 16 antenna FFTs into 2 layers there and call
+`write_pusch` twice instead of sixteen. Frequency domain => PRB index falls out of subcarrier
+index, symbol number is explicit, and **the 100% span-read problem disappears** (FFT boundary
+IS the symbol boundary). This is why the apply belongs in `nr-oru`, not vrtsim.
+
+---
+
 ## STEP 3 — REVISED 2026-07-28: weights travel the C-PLANE, not shared memory
 
 **Requirement (user): every RU<->DU exchange goes over xran/FH.** DU->RU is the **C-plane
