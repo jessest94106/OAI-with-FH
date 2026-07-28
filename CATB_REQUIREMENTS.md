@@ -110,6 +110,18 @@ at 106 PRB / w9 / 180 s).
 *Rationale:* a broken receiver still produces a smooth, convincing, meaningless degradation
 curve. This gate is the only thing separating the two.
 
+**R3.5 [M — ADDED 2026-07-28, user requirement] Every RU<->DU exchange SHALL traverse
+xran/FH.** Weights go DU->RU on the **C-plane** as section extension 1/11 on the existing UL
+C-plane messages — not shared memory, not a side channel. `catb_weight_ring.h` is demoted to
+an intra-DU handoff between PHY (where W is computed) and `radio/fhi_72/` (where the C-plane
+is built); it is no longer a transport.
+*Acceptance:* BFW bytes are visible on the wire (`ethtool -S` DL-direction counter rises by
+the expected per-slot amount), and disabling the shm path entirely does not stop weights
+reaching the RU.
+*Consequence:* `xranCat` must become `XRAN_CATEGORY_B`, which changes the eAxC ID bit layout
+on both ends (`oran-config.c:582`) — a fronthaul-wide change, not a local toggle. Verify
+attach under Cat-B with weights untouched before any weight work.
+
 **R3.4 [S]** The weight delivery path SHOULD respect the real C-plane window
 (`T1a_cp_ul = 285-535 us` before the target symbol, `du_test.conf:174`) when the emulation
 is later compared against a standards-conformant implementation.

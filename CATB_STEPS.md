@@ -162,6 +162,57 @@ Simplest transport: a POSIX shm ring (same pattern vrtsim already uses), 8 slots
 
 ---
 
+## STEP 3 — REVISED 2026-07-28: weights travel the C-PLANE, not shared memory
+
+**Requirement (user): every RU<->DU exchange goes over xran/FH.** DU->RU is the **C-plane
+path** — so BFW rides section extension 1/11 on the existing UL C-plane messages, which the
+DU already sends every slot to tell the RU what sections to expect. We are ADDING AN
+EXTENSION to an existing message, not inventing a flow.
+
+### What xran already provides (verified in-tree, no invention needed)
+| facility | location |
+|---|---|
+| `XRAN_CP_SECTIONEXTCMD_1` = beamforming weights | `xran_cp_api.h:148` |
+| `xran_sectionext1_info { rbNumber, p_bfwIQ, bfwIQ_sz }` | `:252` |
+| **ext-11 per-PRB-bundle BFW**, own `bfwCompMeth` / `bfwIqWidth` | `:336` |
+| receive-side decode `xran_sectionext11_recv_info` | `:364` |
+| **`xran_prb_elm.bf_weight` / `bf_weight_update` / `BeamFormingType`** — per-PRB slot in the PRB map OAI ALREADY populates | `xran_fh_o_du.h:522` |
+| BFW compression hooks | `radio/fhi_72/oai_bfp_compression.c:367` |
+
+OAI's fhi_72 never sets `bf_weight`; only the compression stubs are wired. That gap is the work.
+
+### The shm ring is NOT wasted — its role changes
+`catb_weight_ring.h` was wrong as the DU->RU **transport**. But weights are computed in PHY
+(`nr_ulsch_demodulation.c`) while the C-plane is built in the radio layer (`radio/fhi_72/`),
+so an **intra-DU handoff across those layers is still needed**. The ring becomes that
+internal staging buffer. Same code, different job; the seqlock and depth still apply.
+
+### Revised STEP 3
+1. **Prerequisite / first check:** `xranCat` must be `XRAN_CATEGORY_B`. This is NOT a local
+   toggle — `set_fh_eaxcid_conf` (`oran-config.c:582`) gives Cat-B a DIFFERENT eAxC ID bit
+   layout (`mask_ruPortId 0x000f`, `bit_cuPortId 12`...) than Cat-A, so eAxC addressing
+   changes on both ends and every existing flow is affected. **Verify attach under Cat-B with
+   weights untouched BEFORE any weight work** — one config change, one run. If the link does
+   not come up in Cat-B mode, nothing downstream matters.
+2. **DU:** PHY publishes W to the internal ring (STEP 2, done); the fhi_72 layer copies it
+   into `xran_prb_elm.bf_weight` for the UL sections and sets `bf_weight_update`.
+3. **xran** emits ext-1/ext-11 on the UL C-plane, inside the real `T1a_cp_ul` window
+   (**285-535 us before the symbols it governs**, `du_test.conf:174`).
+4. **RU:** take the decoded BFW from xran and apply to DATA symbols only; REF symbols stay
+   per-antenna. Reads must be **split at symbol boundaries** (STEP 1: 100% of reads straddle).
+5. **Delay knob:** loop latency is now PARTLY REAL (actual C-plane timing) with
+   `VRTSIM_BFW_DELAY_SLOTS` layered on top to reach the sweep range.
+
+### What this buys, beyond conformance
+- **FH load accounting becomes real** — no synthetic BFW term; the bytes are on the wire.
+- **R4.3 becomes testable.** With BFW on the C-plane, the ~250 us delivery window meets a
+  fronthaul that adds 12.7 ms of queueing at its cap. The prediction that congestion breaks
+  the CONTROL plane ~25x before the data plane can now be falsified. Over shm it could not.
+- **BFW compression becomes a real knob** (`bfwCompMeth`/`bfwIqWidth`, ext-11). Same logic as
+  the SRS discussion: BFW multiplies every data symbol, so it is the wrong place to save bits.
+
+---
+
 ## STEP 3 — RU applies the weights, with a delay knob
 
 **Do:**
