@@ -36,9 +36,26 @@ the PRACH pair, defaulting to 16/none.
 *Acceptance:* setting `IQ_WIDTH=4` leaves SRS at 16-bit; a unit assertion fails the build
 if the SRS width is ever taken from the data width.
 
-**R1.4 [S]** Reference symbols on the Track-A (DMRS-forwarding) path SHALL follow the same
-rule — uncompressed — so Track A and Track B differ only in *which* reference signal is
-used, not in its fidelity.
+**R1.4 [S] — REVISED.** Track-A reference symbols (forwarded DMRS) MAY carry the same BFP
+compression as the data. Making them uncompressed would require compression to vary **per
+symbol within one flow**, which is far harder than the per-flow SRS case in R1.1 and is not
+justified: quantisation noise only matters when it approaches thermal noise, and at w9 BFP
+the quantisation SNR (~40-50 dB) sits ~20 dB below an operating SNR of 20-30 dB. It applies
+identically to every point in the delay sweep, so it is a constant, not a confound.
+**The real rule is R1.5, of which R1.1 is the safe implementation.**
+
+**R1.5 [M] Reference-signal quantisation SNR SHALL stay well clear of operating SNR**
+(target >=15 dB margin). This is the physical requirement; "16-bit uncompressed" (R1.1) is
+simply the setting that always satisfies it. Consequence: at narrow widths (~w4-w6) the
+margin closes and reference-signal compression starts to degrade weights — if a future
+sweep goes there, R1.1 becomes load-bearing rather than belt-and-braces.
+*Acceptance:* for any configured width, report reference-signal quantisation SNR and
+measured operating SNR side by side; flag any point with <15 dB margin.
+
+**R1.6 [S] Sequencing.** The SRS compression path (R1.3) is only reachable at STEP 5
+(Track B) — Track A uses DMRS and never transports SRS. Do NOT build the SRS config path
+before it is needed; compressing SRS is the zero-work default, so the work only buys value
+once SRS actually carries the weights.
 
 ---
 
