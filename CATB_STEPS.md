@@ -162,6 +162,56 @@ Simplest transport: a POSIX shm ring (same pattern vrtsim already uses), 8 slots
 
 ---
 
+## Cat-B PROBE RESULT 2026-07-28 — **Cat-B mode does NOT work in this tree. BLOCKER.**
+
+`OAI_XRAN_CAT=B` (new env override of the hardcoded `XRAN_CATEGORY_A` at `oran-config.c:1127`).
+Confirmed active on both ends (message in du.log AND ru.log). Result: **attach 0/2, PRACH 0.0**
+(not the 20 dB floor — zero, i.e. PRACH never processed at all).
+
+**Root cause — the Cat-B eAxC ID layout cannot address our flows:**
+```
+Invalid PRACH C-plane config: ... aarx=-4  eAxC_offset=16
+```
+`aarx` is NEGATIVE. eAxC IDs decode to antenna via `eaxc - offset`, and:
+
+| field | Cat-A | Cat-B | bits |
+|-------|-------|-------|------|
+| `mask_ruPortId` | **0x001f** | **0x000f** | 5 -> **4** |
+
+Cat-B gives RU_Port_ID only 4 bits = 16 flows. We need **32**: 16 data eAxC (one per RX
+antenna) + 16 PRACH eAxC at `eAxC_offset=16`. PRACH eAxCs 16-31 truncate to 0-15, so
+`aarx = eaxc - 16` lands at -16..-1. Exactly the negative indices observed.
+
+This is precisely what upstream warns about at `oran-config.c:1124`: *"each FH parameter is
+hardcoded to CAT A... for CAT B, parameters of fh_init and fh_config structs must be modified
+accordingly."*
+
+**Fix is concrete, not open-ended:** widen `mask_ruPortId` for Cat-B (e.g. 0x00ff / 8 bits =
+256 flows) and re-pack `ccId`/`bandSectorId`/`cuPortId` around it within the fixed 16-bit eAxC
+ID. Both ends compute this identically from the same function, so they stay consistent.
+**Do this BEFORE any weight plumbing** — the C-plane BFW path (R3.5) needs Cat-B, and Cat-B
+needs working eAxC addressing first.
+
+## 273 PRB RU HEADROOM 2026-07-28 (Cat-A baseline for the new target carrier)
+
+Throughput **398.2 Mbps @ MCS 28/28**, PRACH 55.7 dB.
+`combine avg 285.1 us, max 1124.2 us` over 389000 calls, `nsamps 4384` = one symbol at
+122.88 Msps (double 106's 2192, confirming the sample-rate scaling).
+
+Against the 1.786 ms per-symbol wall budget:
+| | 106 PRB | 273 PRB |
+|---|---|---|
+| average | 10% | **16%** |
+| worst case | 34% | **63%** |
+
+RU-side MMSE adds ~32 complex MACs/subcarrier x 3276 subcarriers ~= 105k complex MACs/symbol.
+Scalar Q15 (what the existing DL codebook kernel uses) projects to 200-400 us => **75-85%
+worst case**. Feasible but thin, and RU overrun mimics latency degradation.
+**Mitigation: SIMD the combine kernel** — the neighbouring Gram-matrix code is already
+vectorised with SIMDe; 4-8x would drop MMSE to ~50 us. Do it in STEP 3, not after.
+
+---
+
 ## STEP 3 — REVISED 2026-07-28: weights travel the C-PLANE, not shared memory
 
 **Requirement (user): every RU<->DU exchange goes over xran/FH.** DU->RU is the **C-plane
