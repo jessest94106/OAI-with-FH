@@ -68,6 +68,34 @@ denominator for STEP 3's real-time gate.
 
 ---
 
+## STEP 1 — DONE 2026-07-28 (PASSED)
+
+**Gate:** 177.8 Mbps, MCS 28/28, PRACH 56.4 dB — bit-identical to STEP 0. Classification
+`ref 21.2-21.4%` = **3 of every 14 symbols**, i.e. DMRS at 2/7/11 exactly as configured.
+
+### THE FINDING — reads never align to symbol boundaries
+**span-reads = 400000 / 400000 (100%).** A slot is 30720 samples but 14 reads of 2192 cover
+only 30688, so reads drift 32 samples per slot and never re-align. Symbol 0 carries the long
+CP (2224) while the rest are 2192, so fixed-size reads cannot land on boundaries.
+
+**Consequence for STEP 3 (design change, not a detail):** a read CANNOT be classified
+wholesale as reference-or-data. Each read must be **split at the symbol boundary** and its
+two parts treated differently. Applying weights to a whole read would leak them onto DMRS
+symbols and corrupt the very channel estimates that produce the weights — a self-reinforcing
+error that would have presented as a smooth, plausible, entirely wrong degradation curve.
+
+### METHOD ERROR (mine, recorded so it is not repeated)
+The first Step-1 run failed outright (UE0 `synch Failed`, 0/2 attach, PRACH at the 20.7 dB
+floor). To test whether the new code caused it I ran stats-on vs stats-off — **but shortened
+`PER_UE_WAIT` 700->300 and `IPERF_SECONDS` 180->120 to save time.** Both arms then read
+60 Mbps / MCS 0,23. The on-vs-off comparison was still valid (identical within 0.2%, so the
+code is exonerated), but the absolute numbers were meaningless: `PER_UE_WAIT` scaling is a
+known trap and 120 s is below the ~160 s MCS needs to converge. **Never change run
+parameters in a run whose purpose is comparison against a baseline.** Re-running the exact
+recipe gave the clean pass above.
+
+---
+
 ## STEP 1 — symbol classification (functional no-op)
 
 **Do:** teach vrtsim which symbols are reference symbols. Add
