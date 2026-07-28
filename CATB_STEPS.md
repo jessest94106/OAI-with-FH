@@ -233,6 +233,42 @@ vectorised with SIMDe; 4-8x would drop MMSE to ~50 us. Do it in STEP 3, not afte
 
 ---
 
+## STEP 3a.1 ATTEMPT 2026-07-28 — extension BUILDS correctly, is NOT transmitted
+
+**Working:** `catb_bfw_attach()` in the UL C-plane loop (`oaioran.c`, env `OAI_CATB_BFW=1`,
+off by default) reads the STEP 2 ring and calls `xran_cp_populate_section_ext_1()`, which
+**succeeds and returns 76 bytes** = 16 ant x 4 B of IQ + a 12 B ext-1 header. Exactly right.
+Attach 2/2, MCS 28/28, no regression.
+
+**Not working:** DU->RU wire is **7 Mbps with the flag on AND off** — the bytes never reach
+the wire. `Alloc fail!` count is **0**, so xran's `if(bf_weight.extType == 1)` TX branch
+(`xran_cp_proc.c:570`) never executed for our sections at all. The extension is built and
+then ignored.
+
+**Two bugs fixed along the way (both were "feature silently not running"):**
+1. One-shot ring init ran at the FIRST UL C-plane build — before any UE attached, hence
+   before PHY creates the ring. It latched OFF forever. Now retries; log shows
+   `ring mapped after 66001 attempts`. **Both arms of the first paired test therefore had
+   the feature OFF**, which is why that run's 200.2 vs 171.4 Mbps was pure variance.
+2. `BeamFormingType` was never set to `XRAN_BEAM_WEIGHT` (1), leaving sections
+   `XRAN_BEAM_ID_BASED` (0).
+
+**Remaining blocker — the real TX contract (`xran_cp_proc.c:518-582`):**
+- `ext1.bfwIqWidth` / `ext1.bfwCompMeth` are taken from `pPrbMapElem->iqWidth` /
+  `->compMethod`, **NOT** from `bf_weight` — setting the bf_weight copies alone is not enough.
+- `p_ext_start` must be non-NULL and is passed to `xran_attach_cp_ext_buf()`, i.e. it must be
+  a **DPDK external buffer** (DMA-capable, mbuf-attachable) — a static array cannot work.
+- `ONE_EXT_LEN = ext_section_sz/numSetBFWs - sizeof(section1)` shows `p_ext_section` is
+  expected to be laid out as full C-plane sections with the IQ at an offset inside.
+
+**Next investigation (not yet done):** why the `extType==1` branch never runs. Either the
+prbMap written at `oaioran.c` is a different instance from the one the C-plane generator
+reads, or UL C-plane generation happens at a different time than this loop (the code comment
+at `oaioran.c:1165` notes this loop is deliberately offset from `xran_fh_rx_read_slot()` by
+4 slots). Establish which before writing DPDK buffer allocation.
+
+---
+
 ## STEP 3a IMPLEMENTATION CONTRACT (traced 2026-07-28) — exact API, both ends
 
 ### DU side (emit)
