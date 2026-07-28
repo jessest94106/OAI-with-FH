@@ -8,9 +8,15 @@ Legend: **[M]** mandatory · **[S]** should · **[N]** non-goal
 
 ---
 
-## R1 — Compression policy (HARD CONSTRAINT)
+## R1 — Compression policy
 
-**R1.1 [M] SRS symbols SHALL NOT be compressed.** SRS travels at full int16 I/Q
+> **STATUS 2026-07-27: R1.1 and R1.3 are PAUSED (not cancelled).** Decision reversed to
+> **compress SRS** at the PUSCH width — see `CATB_SRS_COMPRESSION_PLAN.md` for the scope,
+> validation plan (V1-V4) and un-pause triggers (T1-T4). R1.2, R1.5, R1.6 remain active;
+> R1.5 (quantisation-SNR margin) is now the governing rule, and V4's uncompressed control
+> point is what retires the question.
+
+**R1.1 [M — PAUSED] SRS symbols SHALL NOT be compressed.** SRS travels at full int16 I/Q
 (`iqWidth=16`, `compMeth=0` / no compression) on its own eAxC, always, regardless of the
 PUSCH compression setting.
 *Rationale:* SRS quantisation noise propagates into the beamforming weights and therefore
@@ -28,7 +34,7 @@ configurable and SHALL NOT be coupled in code.
 *Acceptance:* a run with `IQ_WIDTH=9` shows 9-bit BFP on the PUSCH eAxC and 16-bit
 uncompressed on the SRS eAxC in the same slot.
 
-**R1.3 [M] The implementation SHALL add an explicit SRS compression config path.**
+**R1.3 [M — PAUSED] The implementation SHALL add an explicit SRS compression config path.**
 The xran in this tree has `iqWidth`/`compMeth` (data) and `iqWidth_PRACH`/`compMeth_PRACH`
 (PRACH) but **no SRS equivalent** (`xran_fh_o_du.h:634-637`, `struct xran_srs_config:591`),
 so SRS would silently inherit the PUSCH width. Add `iqWidth_SRS`/`compMeth_SRS` mirroring
