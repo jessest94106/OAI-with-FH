@@ -233,6 +233,50 @@ vectorised with SIMDe; 4-8x would drop MMSE to ~50 us. Do it in STEP 3, not afte
 
 ---
 
+## STEP 3a IMPLEMENTATION CONTRACT (traced 2026-07-28) — exact API, both ends
+
+### DU side (emit)
+`xran_cp_populate_section_ext_1()` is **declared in the xran API and never called inside
+xran** (`xran_cp_api.c:505` definition, `xran_cp_api.h:545` declaration, no internal callers).
+It is an API the APPLICATION calls. Signature:
+```c
+int32_t xran_cp_populate_section_ext_1(int8_t *p_ext1_dst,     // destination buffer (we allocate)
+                                       uint16_t ext1_dst_len,  // its size
+                                       int16_t *p_bfw_iq_src,  // OUR weights, interleaved I/Q
+                                       struct xran_prb_elm *p_pRbMapElm);
+```
+It reads these from `p_pRbMapElm->bf_weight` (so set them first):
+| field | value for 3a |
+|-------|--------------|
+| `nAntElmTRx` | **16** (= `bfwNumPerRb`; source must hold `nAntElmTRx` complex int16 per RB, `len = nAntElmTRx*4` bytes) |
+| `bfwIqWidth` | 16 to start (uncompressed), later the compression knob |
+| `bfwCompMeth` | `XRAN_BFWCOMPMETHOD_NONE` (0) first; `BLKFLOAT` (1) works. **BLKSCALE/ULAW/BEAMSPACE `rte_panic()`** — do not select them |
+| `numSetBFWs` | 0 or 1 => `numCPSections = 1`, i.e. ONE section = wideband. Exactly what 3a wants |
+| `extType` | 1 |
+Then set `bf_weight.p_ext_section` to the filled buffer and `ext_section_sz` to the returned
+length so the C-plane builder includes it.
+**Insertion point:** `radio/fhi_72/oaioran.c:1188-1210`, the `prbMap[idxElm]` loop that today
+sets only `nBeamIndex`. Weights come from the STEP 2 ring (now an intra-DU handoff).
+
+### RU side (consume) — easier than expected, no packet parsing
+On C-plane receive xran stores the BFW for the application (`xran_cp_api.c:2756-2762`):
+```c
+prbMapElm->bf_weight.p_ext_start   = mbuf;      // and keeps it: *mb_free = MBUF_KEEP
+prbMapElm->bf_weight.p_ext_section = section;   // -> the ext-1 content
+```
+So the RU **reads its own prbMap** rather than decoding packets. Apply at
+`nr-oru.c:1183-1192`, between `nr_symbol_fep_ul()` and `write_pusch()`.
+
+### Order of work for 3a
+1. DU: allocate ext buffer + populate `bf_weight` + call the API. **Verify on the wire first**
+   — C-plane packets must grow by ~`16 ant x 4 B` per section. Measurable with the DL-direction
+   `ethtool -S` counters we already trust. Do NOT touch the RU until this is visible.
+2. RU: read `bf_weight.p_ext_section`, log that weights arrive and match what was sent.
+3. RU: apply to DATA symbols, `write_pusch` 2 layers instead of 16. **Gate: d=0 within 1%.**
+4. Add `VRTSIM_BFW_DELAY_SLOTS` (ring already supports stale reads via `catb_ring_read(age_back)`).
+
+---
+
 ## STEP 3 FEASIBILITY SPIKE 2026-07-28 — staged, and the first stage is much smaller than feared
 
 **xran supports BFW on the wire, both directions.** TX builds ext-1 with the IQ appended to
