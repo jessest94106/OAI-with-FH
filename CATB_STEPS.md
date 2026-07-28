@@ -15,6 +15,42 @@ Throughput needs 180 s (MCS converges at ~160 s); 60 s reads ~1/3 and is invalid
 
 ---
 
+## STEP 0 — DONE 2026-07-28 (PASSED)
+
+**Result:** `VRTSIM_CATB_STATS=1` live; baseline reproduced.
+
+| run | agg sim Mbps | MCS | combine avg | combine max |
+|-----|--------------|-----|-------------|-------------|
+| 1 | 155.5 | 23,28 | 194.8 us | 581.4 us |
+| 2 | **177.7** | 28,28 | 183.2 us | 618.0 us |
+| 3 | **177.6** | 28,28 | 185.4 us | 568.3 us |
+
+**RU headroom (the number STEP 3 must fit inside):** combine costs **183-195 us average,
+568-618 us max** per read call. A call is `nsamps=2192` ~= one OFDM symbol at 61.44 Msps,
+which gets ~1.79 ms of wall budget at TS=0.02 => **~10% of budget average, ~34% worst case**.
+The max matters more than the average: a third of budget is already gone before any spatial
+combining moves into the RU.
+
+**Run 1 was the intermittent single-UE fault, NOT the instrumentation.** Signature matches
+(UE0 pinned at MCS 23 while UE1 reached 28); runs 2-3 reproduce baseline within 0.1%; and
+two `clock_gettime` vDSO calls (~100 ns) against a 194,800 ns combine is 0.05%, which cannot
+produce -12.5%. **First measured occurrence rate for this fault: 1 in 3 at 106/w9.**
+
+### Three defects found while instrumenting — all would have voided STEP 3's gate
+1. **`run_ru.sh:112` passes an explicit env allowlist** (`sudo -E ... env VAR=...`). Anything
+   not listed is dropped **silently** — the feature does nothing and the run looks healthy.
+   Every new RU knob needs a line there: `VRTSIM_CATB_REF_SYMS`, `VRTSIM_CATB_UL`,
+   `VRTSIM_BFW_DELAY_SLOTS` still to be added.
+2. **`vrtsim_read` returns early inside the multi-UE branch** (`vrtsim.c:1915`), skipping
+   `rx_samples_total`. That is the only path this lab runs, so the realtime denominator was
+   **zero**, not merely mis-scaled. Fixed; accounting now runs at both exits.
+3. **`rx_samples_late` counts per sub-read** (UEs x antennas x layers) vs total per call —
+   32x mismatch at 2 UEs x 16 antennas. Added `rx_subreads`; report raw counts, not just a %.
+   Bonus: the end-of-run summary lives in `vrtsim_end()`, which never runs (harness SIGKILLs),
+   so vrtsim's final statistics have never been visible in ANY run.
+
+---
+
 ## STEP 0 — instrument the RU before changing anything
 
 **Why first:** moving combining into the RU deletes the DU-side instrumented receiver that
