@@ -1,3 +1,34 @@
+## 3a.2 IMPLEMENTED + 3a.3 DESIGN (2026-07-28, from existing code)
+
+**3a.2:** `xran_5g_bfw_config()` now called in `oran-init.c` beside the existing fronthaul and
+PRACH registrations, gated `OAI_CATB_BFW_RX=1`, with a receive callback. Same buffer arrays as
+`xran_5g_fronthault_config` (RX C-plane `dstcp`, TX `srccp`) — exactly what the sample app does
+at `app_io_fh_xran.c:994`. OAI had never called it, which is why received weights were
+discarded no matter what the DU sent. Test in flight at time of writing.
+
+**3a.3 DESIGN — reuse the existing structure, do not invent one.**
+The DL direction already does the mirror operation: `oru_north_read_thread` reads `nb_fh`
+logical streams and precodes them onto `nb_tx` antennas via `apply_codebook_weights`
+(`nr-oru.c:600`). UL is the transpose: read `nb_rx` antennas, combine to `nb_fh` layers.
+
+Current UL structure (`nr-oru.c:892`): per symbol, the dispatcher pushes **one job per
+antenna**; each job does `nr_symbol_fep_ul` (FFT) -> rotate -> `write_pusch(aarx)`.
+
+**Chosen approach — change job granularity, not add synchronisation.** Replace the inner
+per-antenna loop with **one job per symbol** that FFTs all antennas internally, combines with
+the received weights, and calls `write_pusch` twice (layers) instead of sixteen times.
+- Avoids an atomic counter + staging buffer + join barrier entirely.
+- Reuses the existing `receive_pusch` body almost unchanged.
+- Cost: loses antenna-level parallelism within a symbol; symbols still run in parallel.
+  Acceptable given measured RU headroom (10-16% average, 34-63% worst case), but **must be
+  re-measured** — `VRTSIM_CATB_STATS` reports combine cost per call.
+- Weights come from `prbMapElm->bf_weight.p_ext_section` (deposited by xran after 3a.2).
+
+**Gate for 3a.3:** throughput returns to ~177 Mbps with BFW end-to-end enabled. Currently 0
+with emission on, which is expected while no consumer exists.
+
+---
+
 ## 3a.1 DONE + 3a.2 PATH FOUND (2026-07-28)
 
 **3a.1 WORKS.** DU->RU wire 7 -> 8 Mbps with BFW on, attach 2/2, no crash. Fix was to copy
