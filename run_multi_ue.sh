@@ -49,6 +49,11 @@ HPFREE=$(grep HugePages_Free /proc/meminfo | awk '{print $2}')
 log "hugepages reclaimed: Free=$HPFREE"
 [ "${HPFREE:-0}" -lt 4096 ] && log "WARN: only $HPFREE hugepages free after reset (leak may persist)"
 sudo find /dev/shm -maxdepth 1 -name 'vrtsim*' -delete
+# Cat-B weight ring MUST go too. It is not vrtsim*, so it survived every run: the DU's BFW
+# emission (oaioran.c catb_bfw_attach) maps it in the first UL slots, reads a PREVIOUS run's
+# weights, and attaches BFW to every UL C-plane section including Msg3 -> RA dies, attach 0/2.
+# 3a.1 measured "attach 2/2" only because on its first run this file did not exist yet.
+sudo rm -f /dev/shm/catb_weights
 sudo rm -f /tmp/vrtsim_connection
 rm -f /tmp/vrtsim_mu_steer_on
 sudo ip link set eno1np0 vf 0 mac 00:11:22:33:64:66 spoofchk off 2>/dev/null
