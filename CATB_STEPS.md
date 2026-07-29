@@ -1,3 +1,39 @@
+## 3a.1 DONE + 3a.2 PATH FOUND (2026-07-28)
+
+**3a.1 WORKS.** DU->RU wire 7 -> 8 Mbps with BFW on, attach 2/2, no crash. Fix was to copy
+the xran sample app's caller verbatim (`app/src/app_io_fh_xran.c:1042`) instead of deducing
+the contract from xran internals. It differs on every point that mattered: `xran_malloc` not
+`rte_malloc`, MTU-sized buffer, headroom exactly `RTE_PKTMBUF_HEADROOM + ecpri_hdr +
+section1_header`, `p_ext_section = start + headroom`, and `ext_section_sz` = populate's RAW
+return (an earlier attempt added `sizeof(section1)` — a misreading of ONE_EXT_LEN).
+UL throughput is 0 with the flag on: expected, since sections are marked weight-based while
+the RU has no consumer. That is 3a.2/3a.3.
+
+**LESSON (now in memory): find an existing caller before implementing.** Six attempts and
+~2.5 h of runtime were spent reverse-engineering a contract whose correct caller was in the
+sample app all along. `xran_cp_populate_section_ext_1()` is declared in the API and called
+from NOWHERE in the tree — an untested path whose failure mode is a segfault, not an error.
+
+**3a.2 API IDENTIFIED — `xran_5g_bfw_config()`**, declared in `lib/api/xran_fh_o_ru.h:94`:
+```c
+int32_t xran_5g_bfw_config(void *pHandle,
+        struct xran_buffer_list *pSrcRxCpBuffer[XRAN_MAX_ANTENNA_NR][XRAN_N_FE_BUF_LEN],
+        struct xran_buffer_list *pSrcTxCpBuffer[XRAN_MAX_ANTENNA_NR][XRAN_N_FE_BUF_LEN],
+        xran_transport_callback_fn pCallback, void *pCallbackTag);
+```
+- Same shape as `xran_5g_fronthault_config`, which OAI already calls at `oran-init.c:414`
+  with `srccp`/`dstcp` already built — so this is ONE extra call plus a callback.
+- **OAI never calls it.** That is why the RU has no BFW: nothing tells xran where to deposit it.
+- Working reference: registration at `app_io_fh_xran.c:994`, callback at `:297`.
+- After registration, received BFW lands in `prbMapElm->bf_weight.p_ext_section`
+  (`xran_cp_api.c:2756-2762`, mbuf kept) — the RU reads its own PRB map, no packet parsing.
+
+**3a.3 remains structural:** `nr-oru.c:1183-1192` runs one antenna per job (FFT -> rotate ->
+`write_pusch`). Combining needs all 16 antennas' FFTs joined per symbol before emitting
+2 layers — atomic counter + staging buffer, then `write_pusch` twice instead of sixteen times.
+
+---
+
 # Cat-B UL — STEP BY STEP
 Execution steps for `CATB_SRS_RU_MMSE_SCOPE.md`. Branch `catb-srs-ru-mmse`.
 Every step: env-gated OFF by default, one gate, stop if the gate fails.
