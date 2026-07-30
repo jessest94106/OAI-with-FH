@@ -501,3 +501,61 @@ Do NOT sweep at sigma=7 and read the result as coherence-time physics.
   strongly suggests it is).
 - `VRTSIM_UE_SPEED_KMH` was NOT in any run-script allowlist (§6 trap) — now added to `run_ru.sh`.
   It is still NOT in `run_ue.sh`; check whether the UE side needs it before trusting a speed sweep.
+
+---
+
+## 17. STEP 3 FIRST DECODE (2026-07-30) — 0 -> 3.1 Mbps. Six more bugs, one big lesson.
+
+**Result: 3.1 Mbps, MCS 7,0** (target ~174). First time the Cat-B combined path decoded ANYTHING.
+
+### Bugs found and fixed this round, in order
+1. **Dependency cycle.** Weight computation lived inside the MU-IRC block, whose gate needs
+   `nb_rx_ant >= 2`. Cat-B sets `nb_rx_ant = 1` on data symbols -> IRC never engages -> no weights
+   -> no combining -> no throughput -> `g_mu_mimo_active` goes 0 -> even more locked out.
+   FIX: standalone weight computation on DMRS symbols, gated on nothing but "both UEs have an
+   estimate stamped for this slot". Independent of `g_mu_mimo_active` and `log2_maxh`.
+2. **Vintage hack removed** (`catb_bfw_latest`, `catb_read_last_weights`). Both sides now key
+   weights by the section's slot via a new seqlocked `applied[20]` table in the shm ring.
+3. **THE REFERENCE SYMBOLS WERE WRONG.** Hardcoded 2,7,11. Measured `dmrs=0` at 2 and 7; the real
+   DMRS mask is **0x0421 = symbols 0, 5, 10**. So the RU forwarded 16 antennas on PILOT-FREE
+   symbols while COMBINING the ones carrying DMRS — destroying the DU's channel estimate, which
+   is why every published weight was zero (`self_sum` 0 or 8 instead of ~1e6).
+   FIX: PHY publishes `ul_dmrs_symb_pos` into the ring; the fronthaul layer (which has no PUSCH
+   PDU) reads it and attaches BFW to DATA symbols only. **The RU then decides purely on weight
+   presence — O-RAN's `ef` bit carries the framing, so the two sides cannot disagree.**
+   `VRTSIM_CATB_REF_SYMS` is dead as a correctness knob.
+4. **Weight-validity gate too weak** — `s0sum > 0` let a channel sum of 8 (noise) publish garbage.
+   Now `> 1000`; a real channel is ~1e6.
+5. **RE stride** — `catb_publish_weights` hardcoded `re = prb*12+6`, valid on data symbols but
+   DMRS symbols pack only 6 REs/PRB. Now takes `re_per_prb`.
+6. **BFW not normalised.** MMSE weights `w = (H^H H + nvar I)^-1 h` are unnormalised; measured
+   |w| ~ 0.7 in Q15 per antenna. The RU sums 16 such terms and saturates int16 -> every sample
+   clipped. FIX: rescale to `sum(|I|+|Q|) <= 32767` in `catb_bfw_attach`, BEFORE both the ext-1
+   and `catb_applied_write`, so wire and `h_eff` share the identical vector. Only the DIRECTION of
+   w matters (a common scale cancels between `y = w^H x` and `h_eff = w^H H`), so this is free.
+
+### THE LESSON THAT ACTUALLY MATTERED
+Every diagnosis made by READING code and inferring was wrong (vintage, RE stride, buffer
+placement, noise decorrelation — four in a row, ~25 min each). Every diagnosis made after logging
+an actual VALUE was right. The two decisive fields were `self_sum/partner_sum` (found the wrong
+DMRS symbols) and `w[0..3]` (found the zero weights, then the saturation). **Log magnitudes, not
+presence flags.** `n_ant=16` looked healthy the entire time the vector was all zeros.
+
+### STILL OPEN — the 3.1 vs 174 Mbps gap
+- **Coverage:** RU `combined=4713 / no_weights=89201` — only ~5% of data symbols get weights. A TB
+  whose symbols are partly combined and partly per-antenna mixes two effective channels and dies.
+  Find why 95% of data symbols still have no ext-1.
+- **Zeros still appear on the wire** in sampled sections (`w[0..3]=(0,0)`) — some slots publish
+  nothing. Likely the same coverage issue.
+- **Asymmetric MCS 7,0** — one UE decodes, the other does not. Suspect the single-layer limitation:
+  only layer 0's weights are ever emitted (`oaioran.c` hardcodes layer 0), so UE1 has no beam.
+- **Wideband vs per-PRB:** 3a uses one vector for the whole allocation; Step 2 measured
+  adjacent-PRB weight correlation 0.91-0.96, so expect a real but bounded loss even when correct.
+- **Global DMRS mask:** observed `0x0400` then `0x0421` — different PDUs carry different DMRS
+  configs. The ring holds ONE mask, last-writer-wins. Fine for 2 symmetric UEs, wrong in general.
+
+### NEXT (do these in order, and MEASURE first)
+1. Instrument WHY 95% of data symbols lack an ext-1 — count `catb_bfw_attach` early-returns by
+   reason (ring unmapped / ring_read fail / dmrs skip). One run, decides everything else.
+2. Then per-layer BFW so UE1 gets a beam (currently layer 0 only).
+3. Only then chase the remaining gap to ~174.
