@@ -559,3 +559,54 @@ presence flags.** `n_ant=16` looked healthy the entire time the vector was all z
    reason (ring unmapped / ring_read fail / dmrs skip). One run, decides everything else.
 2. Then per-layer BFW so UE1 gets a beam (currently layer 0 only).
 3. Only then chase the remaining gap to ~174.
+
+---
+
+## 18. COVERAGE BUG LOCATED BY CENSUS (2026-07-30) — slot-key mismatch, NOT the DU
+
+### The census (add counters to every exit path — this is what finally located it)
+`[CATB ATTACH] calls=160000 off=0 nomap=30000 dmrs_skip=32500 read_fail=24828 attached=72672`
+Steady-state deltas over the last 40k calls: **nomap=0, read_fail=0, dmrs_skip=25%, attached=75%.**
+=> **The DU weight pipeline is HEALTHY.** Ring mapping and seqlock reads were both suspects; both
+are now excluded by measurement rather than by inspection.
+
+### The loss is downstream, in two stages
+| stage | rate |
+|-------|------|
+| DU attaches BFW | **75%** of sections |
+| RU sees `ef` on the wire | 26001/167297 = **15.5%** |
+| RU actually combines | 4758/93914 = **5%** |
+
+**Stage 1 (75% -> 15.5%) IS UNDERSTOOD:** the DU's PRB map is per **(antenna, SLOT)**, not per
+symbol. `catb_bfw_attach` is called inside a symbol loop, so all 14 calls land on the SAME
+`pRbElm` and overwrite each other's `bf_weight` — only ONE ext-1 per element survives to the wire
+per slot. Any future per-symbol beamforming (3b) needs multiple prbMap elements or ext-11
+bundling, not more calls to the same element.
+
+**Stage 2 (15.5% -> 5%) IS NOT FIXED.** A same-slot lookup was added to `catb_bfw_get()` (use any
+symbol of the SAME slot — exact, not an approximation, because 3a publishes one wideband vector
+per slot and every symbol in slot N shares one vintage). It did NOT move coverage:
+`combined=4758 no_weights=89156`, unchanged.
+
+### PRIME SUSPECT for stage 2 — slot-key mismatch under timescale dilation
+The RU STORES weights under the slot parsed from the C-plane header
+(`hdr->cmnhdr.field.slotId + subframeId * (1 << mu)`, `oaioran_ru.c` section-1 parser) but LOOKS
+THEM UP under the RU's own free-running air slot in `receive_pusch_catb`. **`oaioran_ru.c` already
+documents this exact hazard for PRACH:** "under XRAN_TIMESCALE dilation the DU's xran SFN is
+GPS-second-anchored while the RU's vrtsim air frame free-runs, so the two frame counters drift and
+the frame key won't match" — and it carries a `prach_config_latest_by_slot` fallback for it.
+Cat-B has no equivalent. TS=0.02 means we are always under dilation.
+**Next action: log both keys side by side for the same section (stored slot vs lookup slot) —
+one run, and it either confirms the drift or eliminates it.** Do NOT infer; measure.
+
+### Status
+- Cat-B end-to-end: decodes (0 -> 3.1 Mbps in the previous run), still far below the ~174 target.
+- This run: attach 2/2, 0.0 Mbps — coverage still 5%, so partial TBs still dominate.
+- Cat-A regression control: unaffected, every knob defaults off.
+
+### Two operational errors cost ~50 min (do not repeat)
+1. `bash run_multi_ue.sh ... &` chained INSIDE an already-backgrounded call orphans the run; the
+   log dir is created then stays EMPTY. One long-running action per invocation.
+2. Purging hugepages 1 s after killing the previous run makes the next `rte_eal_init` panic
+   (`xran_ethdi_init_dpdk_io -> __rte_panic`). Reproduce the harness ordering: kill, WAIT ~4 s,
+   then purge `/dev/hugepages`, `/dev/shm/vrtsim*`, `/var/run/dpdk`.
