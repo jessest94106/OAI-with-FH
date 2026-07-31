@@ -610,3 +610,46 @@ one run, and it either confirms the drift or eliminates it.** Do NOT infer; meas
 2. Purging hugepages 1 s after killing the previous run makes the next `rte_eal_init` panic
    (`xran_ethdi_init_dpdk_io -> __rte_panic`). Reproduce the harness ordering: kill, WAIT ~4 s,
    then purge `/dev/hugepages`, `/dev/shm/vrtsim*`, `/var/run/dpdk`.
+
+---
+
+## 19. COVERAGE ROOT CAUSE — C-plane is PER-PERIOD, not per-slot (2026-07-31)
+
+### Slot-key census: keys do NOT drift. The distributions align exactly.
+```
+[CATB KEY store]  per-slot: 0,5008,0,0,0, 0,5008,0,0,0, 0,4993,0,0,0, 0,4992,0,0,0
+[CATB KEY lookup] hit/ask:  0/0,1580/2608,0/9128,0/9128,0/9128, 0/0,1580/2608,...
+```
+Weights are stored ONLY at slots **1, 6, 11, 16** — the FIRST UL slot of each TDD period.
+Slots 2,3,4 / 7,8,9 / ... are asked **9128 times each and hit 0**.
+4 stored slots x 2608 asks ~ 10k of ~93k total = **exactly the observed 5% coverage**.
+
+### The DU is NOT the problem — measured, twice
+`[CATB ATTACH] calls=160000 off=0 nomap=30000 dmrs_skip=32500 read_fail=26892 attached=70608`
+`read_fail` is FROZEN (the §19 cache works), `attached` ~75%. The DU attaches BFW across all UL
+slots. **The RU still only ever receives them for 1, 6, 11, 16.**
+
+### ROOT CAUSE
+**The UL C-plane is emitted ONE SECTION PER TDD PERIOD, whose header carries the FIRST UL slot of
+that period and which covers the period's whole UL allocation.** The RU parses
+`slot = hdr->cmnhdr.field.slotId + subframeId * (1 << mu)` and stores under that single slot, so
+slots 2,3,4 never get an entry no matter what the DU attaches. This also explains §18's
+"75% -> 15.5% on the wire": most attach calls write a `bf_weight` that is never separately
+transmitted, because there is no separate section for those slots.
+
+### THE FIX (RU side, not yet implemented)
+`catb_bfw_get(slot, symbol)` must resolve to the **period's first UL slot**, not the exact slot:
+the section that carried the weights is scoped to the PERIOD. With `nTddPeriod = 5` and UL slots
+1-4, slots 2,3,4 must read the entry stored at slot 1. This is exact, not an approximation — it is
+the same C-plane section, so the same vintage. Derive the period start from
+`fh_cfg->frame_conf.nTddPeriod` rather than hardcoding 5.
+Expect coverage 5% -> ~63%; the residual is §18's per-symbol overwrite (measured 1580/2608 hits
+even on stored slots), which needs multiple prbMap elements or ext-11 bundling (3b).
+
+### What was fixed this round (correct, keep it)
+`catb_bfw_attach` now CACHES the last good ring record. PHY writes the ring during DECODE once per
+(frame,slot,rnti), but the C-plane for every UL slot of a period is built BEFORE those decodes:
+production is 1 record/period, consumption needs 1 per UL slot. Requiring a same-slot record
+modelled a zero-delay loop, which cannot exist — §1's budget forces 1-2 slots of staleness.
+Vintage is preserved: `rec.frame/rec.slot` flow into `catb_applied_write()`, so the DU still
+equalises with exactly the vector the RU applied and the true age is recorded.
