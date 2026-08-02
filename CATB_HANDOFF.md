@@ -653,3 +653,460 @@ production is 1 record/period, consumption needs 1 per UL slot. Requiring a same
 modelled a zero-delay loop, which cannot exist — §1's budget forces 1-2 slots of staleness.
 Vintage is preserved: `rec.frame/rec.slot` flow into `catb_applied_write()`, so the DU still
 equalises with exactly the vector the RU applied and the true age is recorded.
+
+---
+
+## 20. COVERAGE SOLVED (5% -> 100%). Throughput still 0 — production deadlock found (2026-07-31)
+
+### §19's fix works, and beats its own prediction
+`catb_bfw_get()` now resolves the lookup slot to the period's FIRST UL slot, derived from
+`fh_cfg->frame_conf.nTddPeriod` + `sSlotConfig[].nSymbolType[]` (`catb_period_first_ul_slot()` in
+`oaioran_ru.c`, shared with the DU side via `oaioran_ru.h`). Proof it ran, on both DU and RU:
+`[CATB BFW] period scoping: nTddPeriod=5 first_ul_slot_in_pattern=1` — matching the measured store
+slots 1,6,11,16 exactly, and derived rather than hardcoded.
+
+Per-slot lookup went `0/9128` -> `5754/9128` on precisely the three dead slots.
+
+### Coverage is 100%, not the predicted 63% — read the census as DELTAS, not totals
+The `[CATB UL]` census is CUMULATIVE, so its final line understates steady state. Differencing
+consecutive prints (no new run needed — the data is already in `ru.log`):
+```
+dcomb=0      dnow=15652   coverage=0.0%     <- pre-traffic
+dcomb=10093  dnow=5559    coverage=64.5%    <- first weights land
+dcomb=15652  dnow=0       coverage=100.0%
+dcomb=15653  dnow=0       coverage=100.0%
+```
+`no_weights` FREEZES. Every miss is startup. §19 expected ~63% residual from §18's per-symbol
+overwrite; that residual does not exist, because the same-slot fallback plus a sticky `valid` flag
+means once ANY symbol of the period has weights, every symbol hits. **§18 item 2 (per-symbol
+overwrite) is therefore NOT a coverage problem and can be dropped from the work queue.**
+
+### A hypothesis was killed by measurement instead of by a debug session
+Suspected next: the DU records `applied[]` per slot while the RU applies one vector per period, so
+the two would disagree on slots 2,3,4. A counter added to measure it (`[CATB PERIOD] same=/diff=`)
+**never fired even once** — proving `catb_bfw_attach` is only ever called with the period's first UL
+slot, so the DU never wrote divergent per-slot vectors. Hypothesis wrong, cost ~1 run instead of a
+session. The period fan-out added to `catb_bfw_attach` is harmless and correct; keep it.
+
+### THE REAL BLOCKER: weight production deadlocks at high coverage
+| counter | print rule | prints seen | implied rate |
+|---|---|---|---|
+| `[CATB] ref-symbol weight publish` | every 500 | **1** (at #1) | < 501 publishes/run |
+| `[CATB WDIAG]` | every 500 | **1** | < 1000 partner-found |
+| `[CATB DU] effective-channel` | every 20000 | **1** | < 20001 combined symbols |
+| RU `[CATB KEY lookup]` asks | — | — | **120001** |
+| RU sections with ef | — | — | **26001** |
+
+The DU computes weights ~once per run, at startup. `catb_bfw_attach` caches the last good record,
+so it re-serves that ONE pre-traffic vector forever — confirmed on the wire: the RU received
+byte-identical `w[0..3]=(266,537)(-188,987)` at slots 6, 11 and 16, thousands of sections apart.
+`sum_lcid4` frozen for the whole run => zero UL bytes. Throughput 0.0 Mbps, MCS 0,0.
+
+**This is §17 bug 1 surviving one level up.** That fix made weight computation independent of
+`g_mu_mimo_active` and `log2_maxh`, but NOT independent of co-scheduling: the partner scan
+(`nr_ulsch_demodulation.c:1251-1266`) still requires two UEs on byte-identical PRBs in the same
+slot, both with `mu_chest_frame/slot` stamped. So:
+
+```
+weights -> data decodes -> throughput -> scheduler co-schedules both UEs -> weights
+```
+
+At 5% coverage the loop limped (3.1 Mbps). At 100% coverage the DU is a 1-antenna receiver on
+EVERY data symbol using one stale pre-traffic vector, decoding dies, the scheduler stops pairing
+the UEs, the partner scan fails, and no new weights are ever produced. Higher coverage made it
+strictly worse — 3.1 -> 0.0 Mbps. **The fix that closed the coverage bug is what exposed this.**
+
+### Wire is proven healthy — the fault is above it, not in the fronthaul
+`self_sum=828781 partner_sum=884850` (~1e6, the §17 bug-4 healthy magnitude), DU emits
+`w[0]=(419,522)`, RU parses `extType=1 extLen=17 compMeth=0 iqWidth=0 n_ant=16`. Nothing zero,
+nothing saturated. Do not re-investigate the fronthaul.
+
+### NEXT — census FIRST, then fix
+Do NOT jump to the fix. `[CATB WDIAG]` sits INSIDE `if (wpart >= 0)`, so its single print bounds the
+partner-found path but says nothing about which earlier gate rejects. Add an exit-path census to the
+weight-production block (the artifact that cracked §18 and §19): count `catb_comb` / not-a-DMRS-
+symbol / `nb_rx_ant != nb_rx_ant_true` / ring null / already-published-this-slot / no partner /
+buffer fail / sum-too-low / published. One run names the gate.
+
+Expected answer is "no partner", and the standard fix is an SU fallback: with no partner, publish
+matched-filter weights `w = h` for the single UE — the degenerate one-user case of the same MMSE
+formula, not a hack. That bootstraps the loop (SU weights -> decodes -> throughput -> co-scheduling
+-> MU weights). But CONFIRM WITH THE CENSUS FIRST.
+
+### Still open, unchanged
+- **Layer 0 only.** `oaioran.c` hardcodes layer 0, so UE1 is nulled by the combiner. Caps
+  throughput regardless of the above.
+- Cat-A control not re-run: no shared decode code was touched (`catb_weight_ring.h` untouched, all
+  changes behind `OAI_CATB_BFW`), so only `liboran_fhlib_5g.so` rebuilt.
+
+---
+
+## 21. THE COMBINED PATH HAS NEVER DECODED (2026-07-31, later)
+
+### Headline
+Single UE, valid non-zero weights, `singular_prb=0/106`, **100% steady-state coverage** — and the
+DU decodes NOTHING: `[FAILCLASS] dtx 1 ... llr 0 ... pwr 624 npwr 624`. Signal power EQUALS noise
+power (0 dB). The DU is receiving noise on the combined stream.
+
+**Therefore: §17's "first decode, 3.1 Mbps" was decoding the 95% of data symbols that were
+forwarded UNCOMBINED, via the DU's ordinary per-antenna path — not the Cat-B combined path.**
+Closing the coverage bug removed that residue and revealed that the combined path contributes zero.
+Do not treat "3.1 Mbps" as evidence the combiner ever worked.
+
+### Run ledger this session (106 PRB, CDL_A, 16 RX, TS=0.02)
+| run | change | attach | coverage (steady) | Mbps | MCS |
+|---|---|---|---|---|---|
+| 1 | period-scoped `catb_bfw_get()` | 2/2 | **100%** | 0.0 | 2,0 |
+| 2 | + DU period fan-out in `catb_bfw_attach` | 2/2 | 100% | 0.0 | 0,0 |
+| 3 | + `[CATB PROD]` exit census | 2/2 | 100% | 0.0 | 0,0 |
+| 4 | + SU fallback | **1/2** | 100% | 0.0 | 0 |
+| 5 | (retry of 4) | **1/2** | 100% | 0.0 | 0 |
+| 6 | + regulariser floor (weights now valid) | **1/2** | 100% | 0.0 | 0 |
+| 7 | **N_UE=1** | 1/1 | 100% | **0.0** | 0 |
+
+### CLOSED this session
+1. **Coverage 5% -> 100%.** `catb_bfw_get()` resolves to the period's first UL slot via
+   `catb_period_first_ul_slot()` (`oaioran_ru.c`, shared with `oaioran.c` through `oaioran_ru.h`),
+   derived from `nTddPeriod` + `sSlotConfig[].nSymbolType[]`. Proof: `[CATB BFW] period scoping:
+   nTddPeriod=5 first_ul_slot_in_pattern=1`; lookup `0/9128 -> 5754/9128`.
+   **Read the `[CATB UL]` census as DELTAS between prints, not totals** — cumulative totals said
+   63% while steady state was 100% (`no_weights` freezes after the first weights land).
+2. **Weight-production deadlock.** Census named it: `nopartner=4317` vs `PUBLISHED=114` (97.4%
+   failure); every other exit zero. The partner scan needs two UEs on byte-identical PRBs in the
+   same slot, so production depended on the throughput it produces. SU fallback (zero the partner
+   channel; the 2x2 MMSE reduces to `w[0]=conj(h0)`) took publishes 114 -> 1501+.
+3. **All-zero weights on the wire.** With `h1=0` the Gram is Hermitian-diagonal so
+   `det = (|h0|^2+nvar)*nvar` — PROPORTIONAL to nvar. Measured `nvar=0`, so the `dd<1e-9` guard
+   zeroed all 106 PRBs. Floored the regulariser at 1. Confirmed: `singular_prb 106/106 -> 0/106`,
+   wire vector `(0,0)(0,0) -> (0,82)(-2829,3209)`.
+
+### OPEN
+- **[BLOCKER] The combined stream carries no signal.** Run 7 isolates it: single UE, everything
+  upstream healthy, `pwr == npwr` exactly. NEXT MEASUREMENT, and do not skip it: log the MAGNITUDE
+  of the combined buffer at the RU immediately after `catb_combine_ul()`, and the magnitude of what
+  the DU reads back on antenna 0. One of those is ~0 and it says which side is at fault.
+  Suspect list, all UNVERIFIED: (a) combined buffer written to the wrong antenna/eAxC so the DU
+  reads an empty buffer; (b) `>> 15` scaling — |w_a| ~ 2048 after L1 normalisation over 16
+  antennas, so each term is x/16 and BFP at IQ_WIDTH=9 may quantise it to nothing; (c) h_eff
+  computed against a different vector than the RU applied.
+- **[BLOCKER for 2 UEs] One combined stream cannot serve two co-scheduled UEs.** SU weights beam at
+  UE0 and null UE1 at 90 deg azimuth, so UE1's Msg3 dies (`MSG3 ULSCH with no signal`) and attach
+  goes 2/2 -> 1/2, reproducible 3/3 (runs 4,5,6) and independent of weight quality (run 6 had valid
+  weights). This is `oaioran.c:135` emitting layer 0 only. Per-layer BFW on distinct eAxC is
+  REQUIRED for any 2-UE Cat-B number, not an optimisation.
+- **SU fallback must not stay unconditionally on for multi-UE runs** in its current form: it
+  beamforms the whole UL allocation, including the contention channel Msg3 arrives on.
+
+### Method notes worth keeping
+- A modulus-print counter's PRINT COUNT bounds the underlying rate for free: `[CATB] ref-symbol
+  weight publish` prints every 500 and printed once => <501 publishes/run, against 26001 sections.
+  No new run needed.
+- The `[CATB PERIOD] same=/diff=` counter NEVER FIRING refuted a hypothesis (DU/RU per-slot vector
+  mismatch) in one run instead of a session. Instrument hypotheses so they can be falsified.
+- Cat-A control still owed: `nr_ulsch_demodulation.c` is shared decode code and the regulariser
+  floor touches the MU arithmetic (by ~1e-5, but show it, do not assume it).
+
+---
+
+## 22. ROOT CAUSE OF "NEVER DECODED": the DU's receive ring was NEVER MAPPED (2026-07-31)
+
+### The find
+`catb_read_applied_weights()` mapped its OWN private handle behind `if ((tries++ % 2000) != 0)
+return 0;`. First attempt at call 0 — before the export path has created the ring. Next attempt at
+call **2000**. But that function is reached only a few hundred times per run when nothing decodes.
+
+**A third deadlock: the ring maps only after 2000 combined-receive calls, but there are only a few
+hundred such calls because nothing decodes, because the ring isn't mapped.**
+
+So for every run in this project's history the DU sat on its antenna-0 fallback
+(`wr=32767, wi=0`) while the RU combined with real 16-antenna weights. The two sides were never
+running the same algorithm. Proof, from run 9 (single UE):
+```
+[CATB MAG-B] n_w=0 |rx_combined|=108336 |h_eff|=167454 |H_ant0|=168730 heff/H=0.992
+```
+`heff/H = 0.99` is the FALLBACK IDENTITY (h_eff == H_ant0). And `weight ring mapped for receive`
+is absent from the log entirely. In 2-UE runs it did cross 2000 ("after 2005 attempts"), which is
+why this hid for so long.
+
+### Fix — deletion, not addition
+`catb_get_ring()` already holds a mapped handle IN THE SAME PROCESS. The second private mapping was
+never needed. Removed it and its retry schedule; added `[CATB DU] applied_read hit/call` so the path
+can never be silently dead again.
+
+**Result: hit/call 0 -> 1811/2001 (90.5%), and Probe B now reports `n_w=16` on every sample.**
+
+### The probes that found it (keep both)
+- `[CATB MAG-A]` in `nr-oru.c` after `catb_combine_ul()`: `|combined|` vs `|ant0|`.
+- `[CATB MAG-B]` in `nr_ulsch_demodulation.c` in the `catb_comb` branch: `|rx_combined|`, `|h_eff|`,
+  `|H_ant0|` (the control accumulated from `tmp` INSIDE the extraction loop — reading
+  `ul_ch_estimates` directly is the raw frequency-domain buffer and gives zeros).
+- **Gate probes on signal being present** (`m0 > 0`), or they mostly sample IDLE UL slots and read 0.
+- **Cadence matters**: at `% 20000` Probe B fired ONCE per run, on an `n_w=0` fallback symbol. Use
+  `% 200`. A probe that samples the wrong path is worse than no probe.
+
+### STILL 0 Mbps — two new measured leads, both open
+1. **The two ratios do not track each other.** `|combined|/|ant0| ~= 0.14` (RU) vs
+   `|h_eff|/|H_ant0| ~= 0.019-0.098` (DU), one sample 0.778. `y = w^H x` and `h_eff = w^H H` are the
+   SAME projection, so if both sides applied the same w these must agree. A ~7x discrepancy means
+   they do not. NEXT: log the applied vector on both sides FOR THE SAME (slot, symbol) and diff it
+   element-by-element — not magnitudes, the actual 16 values.
+2. **Double normalisation crushes weights to zero.** `catb_publish_weights` scales to
+   `29000/sqrt(wmax)`, then `catb_bfw_attach` L1-rescales by `32767/272350 ~= 0.12`. Typical Q15
+   components land ~1000 and the weakest antennas quantise to `(0,0)` — observed `w[0]=(0,0)` on
+   both sides. Then `catb_combine_ul` and the h_eff loop truncate `>>15` PER TERM inside the
+   accumulation, losing precision 16 times instead of once. Suspect, not proven.
+3. **hit/call is 90.5%, not 100%.** The ~9.5% miss makes those symbols use the fallback while the RU
+   combines them — the partial-coverage failure mode from §17 (a TB spanning both dies). Check
+   whether the misses are a startup transient (as the coverage census turned out to be) by
+   differencing successive `hit/call` prints.
+
+### Run ledger, this session
+| run | change | attach | coverage | applied_read | Mbps |
+|---|---|---|---|---|---|
+| 1-3 | period-scoped lookup + census | 2/2 | 100% | 0 (broken, unknown) | 0.0 |
+| 4-6 | SU fallback, regulariser floor | 1/2 | 100% | 0 (broken, unknown) | 0.0 |
+| 7-9 | N_UE=1 isolation + magnitude probes | 1/1 | 100% | **0 (PROVEN broken)** | 0.0 |
+| 10 | shared ring handle | 1/1 | 100% | **1811/2001** | 0.0 |
+
+---
+
+## 23. TWO PUBLISHERS, ONE RING — the zero-weight source (2026-07-31, later)
+
+### Headline
+`catb_publish_weights` has TWO call sites writing the SAME ring. Measured side by side in one run:
+```
+src=1 (ref-symbol): WRITER nonzero=3392/3392 first=0 last=3391            <- healthy
+src=2 (MU-IRC):     WRITER nonzero=1696/3392 first=0 last=1695 q=(0,0)    <- half zeros
+reader (attach):    nonzero=1590/3392        last_nz=1695 iq=(0,0) l1=0   <- got src=2's
+```
+src=2 was clobbering src=1's good records. **This is why the wire carried w=(0,0) and the combined
+path produced nothing.**
+
+**Cause:** `chF2` is packed at 6 REs/PRB on a DMRS symbol (extent 636) while `buffer_length` says
+1272 (12/PRB). So `re = prb*12 + 6` runs past the populated region from prb 53 up
+(53*12+6 = 642 > 636) and reads uninitialised ZEROS — no break, no truncation, silent garbage.
+
+**Fix:** src=2 OFF by default (`OAI_CATB_PUB_IRC=1` to re-enable). §17 already made the ref-symbol
+path the first-class producer; the passive Step-2 exporter is vestigial. One producer, one ring.
+
+**Result:** reader now sees `nonzero=3392/3392 last_nz=3391 iq[0..3]=(-52,77)(-1889,589) l1=32768`,
+and the RU combines for real: `[CATB MAG-A] |combined|=32303 |ant0|=23489 ratio=1.375`.
+
+### Also fixed this round
+- **SU fallback OFF by default** (`OAI_CATB_SU_BFW`). It was never needed: with no weights the RU
+  forwards all 16 antennas and the DU decodes per-antenna, which is how the loop bootstraps.
+  It was also harmful — one wideband beam serves one UE, so it nulled the co-scheduled UE and
+  killed its Msg3. **attach 1/2 -> 2/2** the moment it was disabled. NOTE: `nopartner` is still
+  ~97% (4321 vs PUB_MU=118) even with §22 fixed, so the partner scan genuinely does fail most of
+  the time — the deadlock was NOT purely a symptom of §22. But ~118 publishes/20000 calls is
+  plenty; it never needed the SU crutch.
+- **ONE normalisation, not two.** `catb_publish_weights` now normalises per (PRB, layer) straight
+  to the L1 budget `sum(|wr|+|wi|) = 32767` — the only constraint that matters, since the RU's
+  `y = sum_a x_a*conj(w_a) >> 15` saturates above it. The old max-component `29000/sqrt(wmax)`
+  followed by an L1 rescale of ~0.12 in `catb_bfw_attach` quantised to Q15 TWICE. The attach-side
+  rescale now never fires (`BFW normalised` logged 0 times).
+- **applied_read hit/call = 100% steady state.** The 90.5% in §22 was a startup transient — same
+  trap as the coverage census. Difference successive prints; never read a cumulative total.
+
+### DEAD ENDS (do not re-run these)
+- "L1 normalisation starves weak antennas below the Q15 floor" — REFUTED by `[CATB QUANT]`:
+  `scale=2.669e6`, `w_raw=(2.779e-04,-2.215e-04) -> q=(742,-591)`. Quantisation is fine.
+- "8-antenna layout" — `last_nz=1695` equals `(105*2+1)*8+7` exactly, but BOTH sites log
+  `n_ant=16`. Coincidence. Print the field, do not solve the arithmetic backwards.
+- "RE stride at src=2, derive it from buffer_length" — `buffer_length/rb_size = 1272/106 = 12`,
+  which is what it already was. `buffer_length` is ITSELF the over-stated quantity.
+- "Stale mmap / incoherent ring" — `widx=1` (PHY, at publish #2) vs `widx=150` (attach, later) is
+  consistent, not a discrepancy. The ring is shared and advancing. §22's failure mode is not back.
+
+### STILL 0 Mbps — the remaining gap is SCALING, not correctness
+Everything upstream is now measured healthy: attach 2/2, coverage 100%, applied_read 100%,
+full non-zero records, RU combine ratio 1.375, `n_w=16` on both sides with matching `w[0..3]`.
+What is left:
+```
+[CATB MAG-B] |rx_combined|=5917  |h_eff|=61328  |H_ant0|=179805  heff/H=0.341
+[FAILCLASS]  dtx 1 ... pwr 663 npwr 663 llr 0        (0 dB: signal == noise)
+```
+1. **`|rx_combined|` is ~5900 in EVERY sample** (5917/6021/5957/5934/5949) while `|H_ant0|` varies
+   (167k-180k). A received magnitude independent of the channel is the signature of NOISE, not
+   signal. The RU sent `|combined|=32303`; the DU sees ~5900 over a comparable RE count.
+2. **`heff/H = 0.22-0.36`**, where a coherent MRC sum with L1-normalised w should land near 1.
+   Suspect per-term `>>15` truncation: with `|x_a| ~ 18/RE` and `|w_a| ~ 2048`, each term is
+   `18*2048 >> 15 = 1.125 -> 1`. Sixteen terms of ~1 instead of ~25. **Accumulate in int32 and
+   shift ONCE at the end**, on both the RU combine and the DU h_eff loop. UNVERIFIED.
+3. Dynamic range: the combined stream is ~25/RE (5 bits) before BFP at IQ_WIDTH=9.
+
+NEXT MEASUREMENT: log `|rx_combined|` on a REFERENCE symbol (uncombined, known-good) in the same
+units as a data symbol. If reference is ~30x larger, the combined stream is being crushed in the
+RU->DU path and item 3 is the cause; if they match, the fault is in h_eff (item 2).
+
+### Run ledger
+| run | change | attach | coverage | applied_read | record | Mbps |
+|---|---|---|---|---|---|---|
+| 1-3 | period-scoped lookup, census | 2/2 | 100% | broken (unknown) | zeros | 0.0 |
+| 4-6 | SU fallback, regulariser floor | 1/2 | 100% | broken | zeros | 0.0 |
+| 7-9 | N_UE=1, magnitude probes | 1/1 | 100% | **proven broken** | zeros | 0.0 |
+| 10 | shared ring handle (§22) | 1/1 | 100% | 1811/2001 | zeros | 0.0 |
+| 11-19 | MU-only, 1 norm, layout probes | 2/2 | 100% | 100% | **half zeros (src=2)** | 0.0 |
+| 20 | src=2 OFF | 2/2 | 100% | 100% | **3392/3392 full** | 0.0 |
+
+---
+
+## 24. FIRST DATA THROUGH THE COMBINED PATH — wideband BFW is the blocker (2026-07-31)
+
+### Headline
+**`sum_lcid4` CLIMBS for the first time: 15839 -> 20931 -> 34898 -> 40397 -> 47963.**
+0.086 Mbps (sim), MCS 0,0. Tiny, but the Cat-B COMBINED path has never passed a byte before —
+§17's 3.1 Mbps was the uncombined residue (see §21). This is the first real one.
+
+### Two fixes got there
+1. **Fixed-point: accumulate full precision, shift ONCE.** Both combiners had `>>15` INSIDE the
+   16-term antenna loop (`nr-oru.c` catb_combine_ul, `nr_ulsch_demodulation.c` h_eff loop).
+   On the RU side the operands are small — `|x| ~ 18/RE`, `|w_a| ~ 2048` — so each term was
+   `18*2048 >> 15 = 1.125 -> 1` and weaker antennas truncated to ZERO. Safe to accumulate
+   unshifted because w is L1-normalised (`sum_a |w_a| <= 32768`), bounding the sum at
+   `32767*32768 = 1.07e9 < INT32_MAX`. **The single-normalisation change (§23) is what makes the
+   int32 accumulator legal** — int64 would need 64 kB of VLA on a decode thread that has already
+   overflowed its stack twice.
+2. **src=2 disabled** (§23) so the ring holds one producer's records.
+
+### THE COUNTERINTUITIVE RESULT THAT LOCATED THE BLOCKER
+Removing the truncation made the combined output SMALLER: RU ratio **1.375 -> 0.209**,
+`|rx_combined|` 5917 -> 1286. Truncation can only LOSE magnitude in a coherent sum, so the larger
+old number was rounding residue, not signal. The true coherent sum is small => **the 16 terms
+CANCEL**, i.e. w is not aligned with the H it is applied to. Two independent measurements agreed:
+RU `|combined|/|ant0| = 0.209` and DU `heff/H = 0.15-0.31`, both of which should be ~1.
+
+### CONFIRMED: the wideband single-vector approximation is the cause
+`catb_bfw_attach` takes ONE vector from the mid-band PRB and applies it across all 106 PRBs. That
+requires a flat channel:
+```
+coherence BW ~ 1/(2*pi*DS) = 1/(2*pi*0.1us) ~ 1.6 MHz
+occupied BW  = 106 PRB * 30 kHz            = 38 MHz     <- ~24x wider
+```
+Control run with `CHANMOD=0` (flat channel), everything else identical:
+| metric | CDL_A DS=0.1us | flat | expected |
+|---|---|---|---|
+| RU `\|combined\|/\|ant0\|` | 0.209 | **0.735-0.874** | ~1 |
+| DU `heff/H` | 0.15-0.31 | **0.759-0.887** | ~1 |
+| throughput | 0.0 | **0.086 Mbps, climbing** | - |
+
+**§17's "adjacent-PRB weight correlation 0.91-0.96, so wideband costs a real but bounded amount"
+is WRONG as applied.** That measured ADJACENT PRBs; the wideband vector is applied +/-53 PRBs from
+where it was computed. Across the band the correlation collapses. **Per-PRB / bundled BFW (ext-11,
+Step 3b) is REQUIRED for any channel-model run, not a refinement.**
+
+### Why MCS is still 0,0 even in the flat control
+The published vector is dominated by ONE antenna: `w[0..3]=(28380,4352)(0,0)(0,0)(0,0)`, and
+`(14529,10498)(512,2)(512,2)(512,2)`. With `CHANMOD=0` every antenna sees an identical signal, so
+H is effectively rank-1 and the MMSE solution is degenerate — no array gain is available to find.
+The flat control validates the MECHANISM; it is not a throughput test.
+
+### NEXT
+Run a channel that is frequency-FLAT but spatially RICH: CDL_A with `CHAN_DS_US=0.005`
+(coherence BW ~32 MHz, comparable to the 38 MHz band) or a small-DS TDL. That isolates array gain
+from frequency selectivity. Expect ratio ~1 AND real array gain AND MCS above 0. If that works,
+the remaining agenda is per-PRB BFW (3b) and per-layer BFW for the 2-UE case.
+
+### Run ledger addendum
+| run | change | ratio | heff/H | Mbps |
+|---|---|---|---|---|
+| 20 | src=2 OFF | 1.375 (residue) | 0.34 | 0.0 |
+| 21 | accumulate-then-shift | 0.209 (true) | 0.15-0.31 | 0.0 |
+| 22 | + CHANMOD=0 flat control | **0.735-0.874** | **0.759-0.887** | **0.086, climbing** |
+
+### §24 CORRECTION (2026-08-01): the flat-channel result was N=1 and did NOT reproduce
+| run | XRAN_MAX_SET_BFWS | sum_lcid4 | RU ratio |
+|---|---|---|---|
+| 22 | 1 | climbed 15839 -> 47963 | 0.735-0.874 |
+| 23 | 64 | 4418, UEs dropped | 0.532 |
+| 24 | 64 | froze at 5791 | 0.212 |
+| 25 | **1 (reverted)** | froze at 4693 | 0.175 |
+
+Run 25 reverts the ABI change and STILL stalls => **the XRAN_MAX_SET_BFWS 1->64 enlargement is
+EXONERATED** (rebuild recipe below, it is safe to re-apply). But it also means **run 22 was the
+outlier, not runs 23-25.** `CHANMOD=0` makes every antenna see an identical signal, so H is
+effectively rank-1, the MMSE solution is degenerate and UNSTABLE: ratio spans 0.175-0.874 across
+four runs of an IDENTICAL config. **CHANMOD=0 is not a usable control.** §24's "first data through
+the combined path, 0.086 Mbps climbing" stands as an observation but NOT as a reproducible result.
+
+The wideband diagnosis itself is unaffected — it rests on CDL_A ratio 0.209 vs the coherence-BW
+arithmetic, not on the flat-channel number. But the CONTROL must be re-done with a channel that is
+frequency-flat AND spatially rich: CDL_A with a small delay spread (`CHAN_DS_US=0.005` =>
+coherence BW ~32 MHz against the 38 MHz band), NOT CHANMOD=0.
+
+**libxran rebuild recipe** (needed for 3b; both §7 traps hit):
+```bash
+cd oaicicd/test_dir/phy-f-1.0/fhi_lib/lib
+export RTE_SDK=.../dpdk-stable-20.11.9
+export XRAN_DIR=.../phy-f-1.0/fhi_lib      # NOT phy-f-1.0 — Makefile wants $XRAN_DIR/lib/src
+export WIRELESS_SDK_TOOLCHAIN=gcc XRAN_LIB_SO=1   # without XRAN_LIB_SO it builds only .a
+make -j$(nproc)
+# then rebuild oran_fhlib_5g — libxran and liboran_fhlib_5g share the struct layout
+```
+Backup of the pre-change .so: `build/libxran.so.bak_prebundle`.
+
+---
+
+## 25. WHAT RUNS 25-34 ACTUALLY ESTABLISHED (2026-08-01) — read the retractions first
+
+### RETRACTIONS — three of my own conclusions were wrong. Do not act on them.
+1. **"Wideband BFW is the blocker" (§24) — REFUTED.** Control: CDL_A `CHAN_DS_US=0.005`
+   (coherence BW ~32 MHz vs the 38 MHz band, i.e. 20x flatter) gives ratio **0.211** against
+   **0.209** at DS=0.1us. Frequency selectivity changes NOTHING. Per-PRB BFW (3b) is NOT the fix,
+   and `XRAN_MAX_SET_BFWS` was the wrong tree. It is reverted to 1.
+2. **"Coherence = 0.25 = 1/sqrt(16) proves incoherent combining" — INVALID MEASUREMENT.** The probe
+   sampled ONE RE at `fp->ofdm_symbol_size/2`. In OAI's rxdataF, DC is index 0 and the spectrum
+   WRAPS, so the middle index is the GUARD BAND. It was comparing weights against noise, which
+   returns ~1/sqrt(16) BY CONSTRUCTION — which is exactly why the number never moved.
+   **Corrected probe (low positive-frequency bins, averaged over ~18 REs): coherence 0.66-0.89.**
+   The combining was largely coherent all along.
+3. **"CHANMOD=0 is a usable flat-channel control" — NO.** All antennas see an identical signal, H
+   is rank-1, the MMSE solution is degenerate and unstable: ratio spanned 0.175-0.874 over four
+   runs of an IDENTICAL config. §24's "first data through the combined path, 0.086 Mbps" was N=1
+   and did not reproduce.
+
+### THE RIG WAS BROKEN FOR RUNS 28-31 — and the documented preflight did not catch it
+Cat-A control (all Cat-B knobs off) failed at **attach 0/2**. After `docker restart oai-smf
+oai-upf oai-amf` + 35 s, Cat-A gave **175.2 Mbps, MCS 28,28, attach 2/2** — clean convergence
+0 -> 10,5 -> 23,17 -> 28,28. So:
+- **Cat-A is UNREGRESSED** by every change this session to shared decode code. Control satisfied.
+- Runs 28-31 are VOID (stale CN contexts after ~30 runs of abrupt UE kills).
+- **`grep -c "no SMF candidate"` returned 0 THROUGHOUT the failure.** The §8 CN preflight cannot
+  see this mode. **NEW RULE: run the Cat-A control the moment runs start behaving oddly — it is
+  the rig check, not just a regression guard.** I ran it three runs too late.
+- **§8's "dead + ~20 dB PRACH = fronthaul" does not discriminate here.** Measured 19.9/20.0/20.3/
+  20.3 dB across runs 26-29 — identical for the two that attached and the two that did not.
+
+### KEPT (algebraically justified, still UNVERIFIED by measurement)
+`catb_publish_weights` emits `W = G^-1 H^H`, so `w[l][a] = sum_i invG[l][i]*conj(h_i[a])` — the
+conjugate is ALREADY in w, and the MMSE estimate is `s_l = sum_a W[l][a] * x_a`, a PLAIN product.
+Both combiners were applying `x*conj(w)`, conjugating twice. Fixed in `nr-oru.c
+catb_combine_ul` and the `nr_ulsch_demodulation.c` h_eff loop. Throughput did not move, so this is
+correct-by-derivation but not demonstrated.
+
+### ALSO KEPT (correct, low risk)
+- **Accumulate full precision, shift ONCE** in both combiners. The `>>15` was INSIDE the 16-term
+  loop; on the RU side `|x| ~ 18/RE` against `|w_a| ~ 2048` truncated every term to 1 and weaker
+  antennas to 0. Legal in int32 only because w is L1-normalised (`sum|w| <= 32768` bounds the sum
+  at 1.07e9). Removing the truncation made |combined| SMALLER, which proved the old larger figure
+  was rounding residue.
+- **ONE normalisation** (per PRB+layer, straight to the L1 budget) instead of max-component then
+  L1-rescale. `BFW normalised` now never fires.
+- **src=2 (MU-IRC passive export) OFF** by default — it published half-zero records over src=1's
+  good ones. `OAI_CATB_PUB_IRC=1` to re-enable.
+- **SU fallback OFF** by default (`OAI_CATB_SU_BFW=1` to enable) — it beamformed during attach and
+  nulled the co-scheduled UE's Msg3 (attach 2/2 -> 1/2, reproducible 3/3).
+
+### STATE: still 0 Mbps on Cat-B, and the NEW lead
+Run 34 (valid rig, corrected probe): attach 2/2, coherence 0.66-0.89, ratio 0.764 — but
+`w[0..3]=(22380,-768)(0,0)(0,0)(0,0)`. **The weight vector is DEGENERATE — all energy on antenna 0,
+the other 15 quantised to zero.** A single-antenna vector is trivially "coherent" (one term) and
+delivers NO array gain: ratio 0.764 ~= 22380/32768. Earlier runs showed spread vectors
+`(1565,5)(1293,-1535)(1288,-973)(512,1503)`, so this varies run to run.
+**NEXT: find why the MMSE solution collapses onto one antenna.** Log the per-antenna |h| spread and
+the Gram condition number at publish time. Suspects, all unverified: ill-conditioned G, a channel
+estimate populated on only one antenna, or the L1 normalisation crushing 15 antennas after one
+dominates. Measure before fixing — three hypotheses died this session, all from reasoning ahead of
+a probe, and TWO of the probes themselves were buggy (blind sampling; wrong control array; guard
+band). **When a probe returns a suspiciously round number (0.25 = 1/sqrt(16)), check the sampling
+point BEFORE believing it.**
