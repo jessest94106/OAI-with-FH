@@ -1110,3 +1110,151 @@ dominates. Measure before fixing — three hypotheses died this session, all fro
 a probe, and TWO of the probes themselves were buggy (blind sampling; wrong control array; guard
 band). **When a probe returns a suspiciously round number (0.25 = 1/sqrt(16)), check the sampling
 point BEFORE believing it.**
+
+---
+
+## 26. THE ANTENNA AXIS — what runs 35-43 measured (2026-08-01)
+
+### Degeneracy is NOT the problem (runs 35-36)
+`DEGEN h_spread=6.62 w_spread=7.99 w_zeroed=0/16 dd=4.569e+20`
+Weights are well-formed: spread across antennas, NONE quantised to zero, Gram nowhere near
+singular, and w_spread tracks h_spread as MMSE predicts. Run 34's degenerate
+`w=(22380,-768)(0,0)(0,0)` was a transient — and note a one-antenna vector makes "coherence"
+trivially 1.0, which is why run 34 read 0.66-0.89. Not evidence of anything.
+
+### Wideband REFUTED a second time, with the right metric (run 38)
+Per-PRB coherence with the weights taken from PRB 53:
+`prb0=0.264 prb26=0.440 prb53=0.218 prb79=0.154` — **no peak at the weights' own PRB.**
+Combined with §25's DS sweep (0.209 at 0.1us vs 0.211 at 0.005us), frequency is fully excluded.
+
+### Conjugation REFUTED (run 37)
+Both conventions evaluated on identical samples: `coh_xw=0.202-0.289`, `coh_xconjw=0.237-0.324`.
+Neither is coherent. The §25 fix (plain product, W = G^-1 H^H already carries the conjugate) is
+algebraically right and is KEPT, but it is not the loss.
+
+### FIVE probe defects — the real lesson of this stretch
+1. Blind sampling (fired on idle slots) -> gate on signal present.
+2. Wrong control array (`ul_ch_estimates` raw vs `chFext` post-extraction) -> read zeros.
+3. `ofdm_symbol_size/2` is the GUARD BAND in OAI's rxdataF (DC at index 0, spectrum wraps).
+4. PRB 53 maps to raw subcarriers 0..11 — straddling DC — for 106 PRB
+   (`first_carrier_offset=900`, `900 + 53*12 = 1536 == 0`).
+5. Absolute PRB (RU) vs ALLOCATION-RELATIVE PRB (DU, `nr_ulsch_extract_rbs` packs from rb_start).
+   Harmless here only because `rb_start=0, rb_size=106` — measured, not assumed.
+**When a probe returns a suspiciously round number (0.25 = 1/sqrt(16)), check the SAMPLING POINT
+before believing it.** Four of these five produced a plausible-looking wrong answer.
+
+### WHAT IS ACTUALLY TRUE, measured on a clean rig (run 43)
+- Allocation is the full band: `rb_start=0 rb_size=106`. RU and DU PRB indices DO correspond.
+- DU `|h_a|` at PRB 26 is strongly structured and STABLE across samples:
+  `55,74,122,129,98,136,106,5,97,69,161,106,58,129,146,38` (32x spread, repeats to +/-3%).
+- RU `rms|x_a|` at its strongest PRB is FLAT: `18-25` against a thermal floor of
+  `sqrt(2)*sigma = 9.9` at `VRTSIM_RX_NOISE_SIGMA=7`. So **per-RE per-antenna SNR is only ~4.6 dB**
+  and the per-antenna magnitude is noise-dominated — a magnitude fingerprint CANNOT resolve the
+  channel at this SNR. That is why the profiles never matched; it is not proof of a permutation.
+- **~6% of channel estimates are degenerate**: 7 of 114 `HPROF` samples read
+  `65,0,0,0,0,...` — antenna 0 only, 15 EXACT zeros. Exact zeros are an unpopulated buffer, not
+  fading. Weights published from those are worthless. OPEN, and worth fixing on its own.
+
+### Why the coherence number still means something
+At ~4.6 dB per-antenna SNR, PERFECT weights would give coherence ~0.63, not 1.0
+(signal sums coherently as 16|h|^2, noise as sqrt(16)|h||n|). Measured is 0.20-0.32 — at the
+random-walk floor, far below the 0.63 achievable. So the weights genuinely are not aligning with x.
+
+### AGC was never involved — checked, not assumed
+`rx-target-snr-db` is a COMMAND-LINE option defaulting to `VRTSIM_RX_SNR_DISABLED (-1000)`, and no
+run script passes it. The run log confirms the fixed path: `RX thermal noise sigma 7.000
+LSB/component, fixed, per-antenna, all slots (env)`. `VRTSIM_AGC_FREEZE` is forwarded by
+`run_ue.sh` ONLY, not `run_ru.sh` — so it could not have affected the RU regardless.
+
+### NEXT — magnitude fingerprinting is exhausted, use an INJECTED reference
+Per-antenna magnitudes cannot resolve the mapping at 4.6 dB. Instead publish a KNOWN synthetic
+weight vector (e.g. `w_a = (1000*(a+1), 0)`), env-gated, and log what the RU receives. If the RU
+sees the ramp in order, the wire and the antenna mapping are 1:1 and the fault is in WHICH channel
+the DU solved against (timing/vintage, or the 6% degenerate estimates). If the ramp arrives
+permuted or scrambled, the mapping is the bug. This is decisive and costs one run.
+Also fix the degenerate-estimate case independently — it is a real defect at 6%.
+
+### Rig protocol additions (both cost runs this session)
+- **Run the Cat-A control the moment behaviour gets odd.** Runs 28-31 were void on stale CN
+  contexts; `grep -c "no SMF candidate"` read 0 throughout and PRACH sat at ~20 dB for BOTH the
+  runs that attached and those that did not. Neither documented preflight sees this mode.
+  Fix: `docker restart oai-smf oai-upf oai-amf`, wait 35 s. Cat-A then gave 175.2 Mbps MCS 28/28.
+- **Verify the cleanup, do not just issue it.** `HugePages_Free: 8192` is the gate. A cleanup
+  command that exits early (e.g. a `docker ps | grep` that matches nothing mid-sequence) looks
+  identical to one that worked, and the next run dies in `rte_eal_init`.
+- CN staleness tracks ELAPSED TIME, not just run count — it recurred after a ~15 h idle gap.
+
+---
+
+## 27. TWO REAL BFW TRANSPORT BUGS — FOUND, FIXED, VERIFIED BIT-EXACT (2026-08-02)
+
+### The technique that cracked it: a SYNTHETIC REFERENCE VECTOR
+Magnitude probes were exhausted — per-antenna per-RE SNR is only ~4.6 dB, so any measurement
+derived from received magnitudes is noise-limited (that is why FIVE probes in a row gave
+plausible-but-wrong answers). Instead publish a vector whose ANTENNA ORDER is unmistakable:
+`w_a = (240*(a+1), 0)` -> 240,480,...,3840, L1 = 240*136 = 32640 <= 32767 so the normaliser is a
+no-op and cannot rescale or reorder it. `OAI_CATB_WSYNTH=1`, default off. **A known input turns a
+diagnosis problem into a comparison, and the answer no longer depends on signal quality.**
+
+### What it showed
+```
+sent:  240, 480, 720, 960,1200,1440,1680,1920
+recv:    0, 256, 512, 768,1024,1280,1536,1792     == sent & 0xFF00
+```
+Order preserved (so the antenna mapping was NEVER the bug), values floored to 8 bits. Raw bytes:
+```
+DU sent: f0 00 00 00 e0 01 00 00      (host little-endian 240,0,480,0)
+RU saw:  00 00 00 e0 01 00 00 d0      (the same bytes, shifted by ONE)
+```
+
+### TWO bugs, compounding
+1. **BYTE ORDER.** `xran_cp_populate_section_ext_1()` just memcpy's the caller's buffer, so the
+   DU's host little-endian int16 array went straight onto the wire. O-RAN carries BFW IQ in
+   NETWORK byte order and the RU parses big-endian. FIX: swap into `iq_be[]` before populate.
+   `iq[]` itself stays host-order — `catb_applied_write()` records it for the DU's own h_eff,
+   which never crosses the wire.
+2. **PAYLOAD OFFSET.** The RU read at `ext + 4`. The ext-1 header is THREE bytes (extType:7+ef:1,
+   extLen, bfwCompMeth:4+bfwIqWidth:4) and compMeth=0 has NO bfwCompParam octet. Confirmed twice:
+   the struct is three uint8_t with the comment "does not need to convert first 3 bytes", and
+   extLen=17 => 68 = 3 hdr + 64 IQ (16 ant x 4 B) + 1 pad. FIX: `ext + sizeof(*ext)`.
+
+**Each bug alone would have produced obvious garbage. TOGETHER they yielded a clean
+`value & 0xFF00`, which reads as a legitimate 8-bit precision limit** — which is why it survived
+so long and sent me chasing `bfwIqWidth` and `XRAN_MAX_SET_BFWS` (neither was involved).
+
+### VERIFIED
+```
+RU bytes:   00 f0 00 00 01 e0 00 00                    <- correct big-endian
+RU decodes: 240,480,720,960,1200,1440,1680,1920        <- bit-exact match to sent
+```
+Cat-A control after the fix: **174.3 Mbps, MCS 28/28, attach 2/2** — unregressed.
+
+### BUT THE FIX IS NOT SUFFICIENT — still 0 Mbps (run 54, clean rig, attach 2/2)
+```
+[CATB COH] prb0=0.413 prb26=0.336 prb53=0.136 prb79=0.205
+[CATB COH] prb0=0.449 prb26=0.351 prb53=0.111 prb79=0.268
+[CATB MAG-A] ratio=0.232  w_re[0..7]=-1235,-2390,1238,-13,-1597,2183,-2010,492
+```
+Weights on the wire are now real and varied. Coherence at REAL PRBs rose from ~0.25 to 0.34-0.45
+(prb0/prb26) — a genuine improvement — but the ceiling at 4.6 dB per-antenna SNR is ~0.63, and
+ratio is still 0.23 against ~1.4 expected. **So the transposition was one loss term, not the only
+one.** Note prb53 reads LOWEST (0.11-0.18): it straddles DC (raw 0..11), so there is little signal
+there — and that is also the PRB `catb_bfw_attach` harvests weights from (`rec.n_prb/2`).
+**NEXT SUSPECT, cheap to test: harvest the wideband vector from a PRB that is not the DC one —
+`n_prb/4` instead of `n_prb/2`.**
+
+### Still open, unchanged
+- ~6% of channel estimates are degenerate (`|h_a| = 65,0,0,0,...`, 15 EXACT zeros).
+- Layer-0-only BFW: one combined stream cannot serve two co-scheduled UEs.
+
+### HARNESS TRAP THAT COST ~6 RUNS — read this before blaming the rig
+`run_multi_ue.sh`'s preflight runs `sudo pkill -9 -f nr-softmodem`. **`-f` matches the ENTIRE
+command line**, so any shell whose argv merely MENTIONS the binary name is killed — including the
+one launching the script. Runs 30/41/48/51 all combined a `pgrep -x nr-softmodem` cleanup loop with
+the launch in ONE command and died before creating logs; runs 46/47/50 kept cleanup in a SEPARATE
+call and all succeeded. **Never put `nr-softmodem`/`nr-oru`/`nr-uesoftmodem`/`ul_saturate.py` in the
+same command line that invokes the harness.** The script does its own pkill + hugepage purge +
+`nr_hugepages` 8192->0->8192 cycle, so a manual cleanup is redundant anyway.
+Related: `pgrep -c -f "run_multi_ue.sh"` returns 1 with no orphan — your own shell self-matches.
+And `find /dev/hugepages -type f -delete` cannot remove mapped entries; cycling `nr_hugepages`
+0 then 8192 is what actually reclaims them.
