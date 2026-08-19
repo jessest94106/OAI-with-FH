@@ -1,7 +1,7 @@
 [submodule "oaicicd/test_dir/openairinterface5g"]
 	path = oaicicd/test_dir/openairinterface5g
 	url = https://github.com/jessest94106/openairinterface5g.git
-	branch = compression-plus-timing-fix
+	branch = catb-instrumentation
 [submodule "oaicicd/test_dir/phy-f-1.0"]
 	path = oaicicd/test_dir/phy-f-1.0
 	url = https://github.com/jessest94106/phy-f-1.0.git
